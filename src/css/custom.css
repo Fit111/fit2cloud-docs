@@ -109,6 +109,18 @@
   --ifm-alert-border-color: #00c853;
 }
 
+/* JumpServer 文档页：提示框左边框用官方文档主色（深青绿 #2b937c） */
+html[data-docs-product='jumpserver'] .alert--secondary,
+html[data-docs-product='jumpserver'] .alert--success,
+html[data-docs-product='jumpserver'] .alert--info {
+  --ifm-alert-border-color: #2b937c;
+}
+[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--secondary,
+[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--success,
+[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--info {
+  --ifm-alert-border-color: #2b937c;
+}
+
 /* navbar 只显示 logo, 隐藏 logo 旁的文字标题(navbar.title 留空时 Docusaurus 会 fallback 站点标题, 这里一并隐藏) */
 .navbar__title {
   display: none;

@@ -31,18 +31,21 @@ const config = {
 
   // 各产品图片自包含: 图片放在各自产品目录的 static/ 里, 统一平铺映射到 /（URL 保持 /img/<ns>/...）
   // 注意: 'static'(门户自身, favicon/social-card/undraw)必须放在第一位, 避免同路径被产品目录覆盖。
-  // 1Panel 已按自包含架构迁移; dataease/maxkb/jumpserver 当前为单 index.md 占位(无图片), 预留注册项(建立后自动生效)。
-  // sqlbot: 已按自包含架构迁入, namespace=sqlbot。
+  // 1Panel / SQLBot / JumpServer 已按自包含架构迁移; dataease/maxkb 当前为单 index.md 占位(无图片), 预留注册项(建立后自动生效)。
   staticDirectories: [
     'static',
     '1panel-docs/static',
     '1panel_versioned_docs/version-v1/static',
     'sqlbot-docs/static',
+    'jumpserver-docs/static',
+    'jumpserver_versioned_docs/version-v3/static',
     // 以下为预留(当前无图片, 建立后自动生效)
     'dataease-docs/static',
     'maxkb-docs/static',
     'ai-gateway-docs/static',
   ],
+
+  clientModules: ['./src/clientModules/docsProduct.js'],
 
   url: 'https://docs.fit2cloud.com',
   baseUrl: '/',

@@ -14,7 +14,7 @@
 |------|------|----------|
 | 1Panel · AI 网关 | 1Panel AI 网关 | https://docs.fit2cloud.com/ai-gateway/ |
 | 1Panel | 现代化、开源的 Linux 服务器运维面板 | https://docs.fit2cloud.com/1panel/ |
-| JumpServer | 广受欢迎的开源堡垒机（运维安全审计系统） | https://docs.jumpserver.org/zh/v4/ |
+| JumpServer | 广受欢迎的开源堡垒机（运维安全审计系统） | https://docs.fit2cloud.com/jumpserver/ |
 | DataEase | 人人可用的开源 BI 数据分析工具 | https://dataease.cn/docs/v2/ |
 | MaxKB | 强大易用的企业级智能体平台 | https://maxkb.cn/docs/v2/ |
 | SQLBot | 基于大模型的智能问数系统 | https://sqlbot.org/docs/v1/ |
