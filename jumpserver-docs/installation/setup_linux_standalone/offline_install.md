@@ -7,7 +7,7 @@ title: 安装指南
 :::
 | OS/Arch       | Architecture | Linux Kernel | Offline Name                                     |
 | :------------ | :----------- | :----------- | :----------------------------------------------- |
-| linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-ce--x86_64.tar.gz |
+| linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-ce-v4.10.17-x86_64.tar.gz |
 
 ## 1. 安装部署
 
@@ -27,8 +27,8 @@ title: 安装指南
 
 ```sh
 cd /opt
-tar -xf jumpserver-ce--x86_64.tar.gz
-cd jumpserver-ce--x86_64
+tar -xf jumpserver-ce-v4.10.17-x86_64.tar.gz
+cd jumpserver-ce-v4.10.17-x86_64
 ```
 ```sh
 # 根据需要修改配置文件模板, 如果不清楚用途可以跳过修改
@@ -213,7 +213,7 @@ CURRENT_VERSION=
 :::note
 
 ```sh
-cd jumpserver-ce--x86_64
+cd jumpserver-ce-v4.10.17-x86_64
 
 # 启动
 ./jmsctl.sh start

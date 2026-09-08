@@ -34,11 +34,11 @@ server {
   # Core data 静态资源
   location /media/replay/ {
     add_header Content-Encoding gzip;
-    root /opt/jumpserver-/data/;
+    root /opt/jumpserver-v4.10.17/data/;
   }
 
   location /static/ {
-    root /opt/jumpserver-/data/;
+    root /opt/jumpserver-v4.10.17/data/;
   }
 
   # KoKo Lion 配置
@@ -136,11 +136,11 @@ server {
   # Core data 静态资源
   location /media/replay/ {
     add_header Content-Encoding gzip;
-    root /opt/jumpserver-/data/;
+    root /opt/jumpserver-v4.10.17/data/;
   }
 
   location /static/ {
-    root /opt/jumpserver-/data/;
+    root /opt/jumpserver-v4.10.17/data/;
     expires 24h;
   }
 

@@ -18,8 +18,8 @@ title: Lion 环境部署
 - 可以从 [Github][guacamole-server] 网站上获取对应的 guacd 副本。这些版本是最新代码的稳定快照，从项目网站下载 Source code.tar.gz 源代码，通过命令行中提取该存档：
 
 ```bash
-mkdir /opt/guacamole-
-cd /opt/guacamole-
+mkdir /opt/guacamole-v4.10.17
+cd /opt/guacamole-v4.10.17
 wget http://download.jumpserver.org/public/guacamole-server-1.4.0.tar.gz
 tar -xzf guacamole-server-1.4.0.tar.gz
 cd guacamole-server-1.4.0/

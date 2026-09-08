@@ -23,10 +23,10 @@ title: Core 环境部署
 
 ```bash
 cd /opt
-mkdir /opt/jumpserver-
-wget -O /opt/jumpserver-.tar.gz https://github.com/jumpserver/jumpserver/archive/refs/tags/v4.10.17.tar.gz
-tar -xf jumpserver-.tar.gz -C /opt/jumpserver- --strip-components 1
-cd jumpserver-
+mkdir /opt/jumpserver-v4.10.17
+wget -O /opt/jumpserver-v4.10.17.tar.gz https://github.com/jumpserver/jumpserver/archive/refs/tags/v4.10.17.tar.gz
+tar -xf jumpserver-v4.10.17.tar.gz -C /opt/jumpserver-v4.10.17 --strip-components 1
+cd jumpserver-v4.10.17
 rm -f apps/common/utils/ip/geoip/GeoLite2-City.mmdb apps/common/utils/ip/ipip/ipipfree.ipdb
 wget https://download.jumpserver.org/files/ip/GeoLite2-City.mmdb -O apps/common/utils/ip/geoip/GeoLite2-City.mmdb
 wget https://download.jumpserver.org/files/ip/ipipfree.ipdb -O apps/common/utils/ip/ipip/ipipfree.ipdb

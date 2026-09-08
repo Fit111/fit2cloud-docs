@@ -246,7 +246,7 @@ DB_PASSWORD=rBi41SrDqlX4zsx9e1L0cqTP
 DB_NAME=jumpserver
 ```
 ```sh
-cd /opt/jumpserver-installerer-v3.10.21
+cd /opt/jumpserver-installer-v3.10.21
 ./jmsctl.sh start
 ```
 ```sh

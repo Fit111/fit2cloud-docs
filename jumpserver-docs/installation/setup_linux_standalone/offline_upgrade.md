@@ -7,7 +7,7 @@ title: 升级指南
 :::
 | OS/Arch       | Architecture | Linux Kernel | Offline Name                                     |
 | :------------ | :----------- | :----------- | :----------------------------------------------- |
-| linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-ce--x86_64.tar.gz |
+| linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-ce-v4.10.17-x86_64.tar.gz |
 
 ## 1. 升级部署
 
@@ -22,8 +22,8 @@ title: 升级指南
 
 ```sh
 cd /opt
-tar -xf jumpserver-ce--x86_64.tar.gz
-cd jumpserver-ce--x86_64
+tar -xf jumpserver-ce-v4.10.17-x86_64.tar.gz
+cd jumpserver-ce-v4.10.17-x86_64
 ```
 ```sh
 ./jmsctl.sh upgrade

@@ -24,9 +24,9 @@ Koko 是 Go 版本的 coco，重构了 coco 的 SSH/SFTP 服务和 Web Terminal 
 
 ```bash
 cd /opt
-mkdir /opt/koko-
-wget -O /opt/koko-.tar.gz https://github.com/jumpserver/koko/archive/refs/tags/v4.10.17.tar.gz
-tar -xf koko-.tar.gz -C /opt/koko- --strip-components 1
+mkdir /opt/koko-v4.10.17
+wget -O /opt/koko-v4.10.17.tar.gz https://github.com/jumpserver/koko/archive/refs/tags/v4.10.17.tar.gz
+tar -xf koko-v4.10.17.tar.gz -C /opt/koko-v4.10.17 --strip-components 1
 ```
 
 - 安装 Node。
@@ -76,7 +76,7 @@ echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
         | macOS | amd64 | make darwin |
 
         ```bash
-        cd /opt/koko-
+        cd /opt/koko-v4.10.17
         make
         cp build/koko-v4.10.17-linux-amd64.tar.gz /opt
         ```
