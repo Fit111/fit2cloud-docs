@@ -17,8 +17,6 @@ helm repo list
 ```
 :::
 
-:::note
-
 | Name                      | Description                                     | Value                   |
 | :------------------------ | :---------------------------------------------- | :---------------------- |
 | global.imageRegistry      | Global Docker image registry                    | docker.io               |
@@ -39,7 +37,6 @@ helm repo list
 | core.config.secretKey     | Core secret key                                 | ""                      |
 | core.config.bootstrapToken| Core bootstrap token                            | ""                      |
 | core.env.DOMAINS          | CSRF_TRUSTED_ORIGINS                            | "test.jumpserver.org    |
-:::
 
 ### 2.2 编辑 JumpServer values.yaml 文件
 :::note

@@ -34,6 +34,7 @@ RADIUS_SECRET=radius_secret
 :::note
 
 - Radius 参数说明如下：
+:::
 
 | name            | explain                                                    |
 | --------------- | ---------------------------------------------------------- |
@@ -41,7 +42,6 @@ RADIUS_SECRET=radius_secret
 | `RADIUS_PORT`   | Radius 服务器的端口                                         |
 | `RADIUS_SECRET` | Radius 服务器的预共享秘钥                                   |
 | `OTP_IN_RADIUS` | 使用动态密码认证，可以配合 ldap 使用，注意需要关闭 radius 认证 |
-:::
 
 :::note
 

@@ -8,14 +8,11 @@ API 文档默认已经集成在代码里面，部署完成后可以通过下面�
 :::
 
 ## 1 API 访问
-:::note
-
 |  Version  |       Access method      |               example              |
 | --------- | ------------------------ | ---------------------------------- |
 |  &lt; 2.0.0  |   `http://&lt;url&gt;/docs`    |   `http://192.168.244.144/docs`    |
 |  &gt;=2.0.0  | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
 |  &gt;=2.6.0  | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
-:::
 
 :::note[版本小于 v2.6 需要打开 DEBUG 模式]
 

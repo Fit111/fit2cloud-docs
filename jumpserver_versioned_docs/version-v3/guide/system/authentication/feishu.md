@@ -48,12 +48,12 @@ title: 飞书 (X-Pack)
 :::note
 
 - 详细参数说明：
+:::
 
 | 参数     | 说明                  |
 | ------- | --------------------- |
 | 重定向 URL | 注：jumpserver_host 改成你自己的 JumpServer 域名。 <br /> https://`jumpserver_host`/core/auth/feishu/qr/bind/callback/ <br /> https://`jumpserver_host`/core/auth/feishu/qr/login/callback/ |
 | IP 白名单 | JumpServer 服务器的公网 IP。 |
-:::
 
 ### 2.3 配置权限管理
 :::note

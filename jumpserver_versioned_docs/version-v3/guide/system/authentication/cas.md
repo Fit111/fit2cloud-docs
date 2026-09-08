@@ -41,6 +41,7 @@ CAS_CREATE_USER=True
 :::note
 
 - CAS 参数说明如下：
+:::
 
 | name                           | explain                                                                                                                                                                            |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +54,6 @@ CAS_CREATE_USER=True
 | `CAS_APPLY_ATTRIBUTES_TO_USER` | If True any attributes returned by the CAS provider included in the ticket will be applied to the User model returned by authentication. This is useful if your provider is including details about the User which should be reflected in your model. |
 | `CAS_RENAME_ATTRIBUTES`        | 	A dict used to rename the (key of the) attributes that the CAS server may retrun. For example, if CAS_RENAME_ATTRIBUTES = &#123;"casUserUid": "username", "casUser": "name", "casUserEmail", "email"&#125; the ln attribute returned by the cas server will be renamed as last_name. Used with CAS_APPLY_ATTRIBUTES_TO_USER = True, this provides an easy way to fill in Django Users’ info independently from the attributes’ keys returned by the CAS server. |
 | `CAS_CREATE_USER`              | Create a user when the CAS authentication is successful. The default is True. |
-:::
 
 :::warning[注意]
 

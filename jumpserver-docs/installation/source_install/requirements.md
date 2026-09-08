@@ -16,11 +16,11 @@ title: 环境说明
 :::note
 
 - MySQL 和 MariaDB 二选一即可, JumpServer 需要使用 MySQL 或 MariaDB 存储数据。
+:::
 
 | Name    | Core                     | MySQL  | MariaDB | Redis |
 | :------ | :----------------------- | :----- | :------ | :---- |
 | Version | v4.10.17 | &gt;= 5.7 | &gt;= 10.3 | &gt;= 6.0  |
-:::
 
 ## 3 部署顺序
 :::note

@@ -77,6 +77,7 @@ sudo mkdir -p /opt/jumpserver/minio/data /opt/jumpserver/minio/config
 - 访问 JumpServer Web 页面并使用管理员账号进行登录。
 - 点击左侧菜单栏的 [终端管理]，在页面的上方选择 [存储配置]，在 [录像存储] 下方选择 [创建] 选择 [Ceph]
 - 根据下方的说明进行填写，保存后在 [终端管理] 页面对所有组件进行 [更新]，录像存储选择 [jms-mino]，提交。
+:::
 
 | 选项            | 参考值                      | 说明                |
 | :-------------  | :------------------------- | :------------------ |
@@ -87,5 +88,4 @@ sudo mkdir -p /opt/jumpserver/minio/data /opt/jumpserver/minio/config
 | Access key secret(SK)     | KXOeyNgDeTdpeu9q           | MINIO_ROOT_PASSWORD |
 | 端点 (Endpoint) | `http://192.168.100.41:9000` | minio 服务访问地址   |
 | 默认        |                            | 新组件将自动使用该存储 |
-:::
 

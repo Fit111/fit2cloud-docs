@@ -98,8 +98,6 @@ title: Web 终端
 - 数据库类型连接支持说明：
 :::
 
-:::note
-
 | 数据库类型\连接方式 | Web CLI | Web GUI | DB Client |
 | -------| ------- | ------- | ------- |
 | MySQL | ✓  | ✓ | ✓  |
@@ -111,7 +109,6 @@ title: Web 终端
 | MongoDB | ✓  | ✗ | ✗ |
 | ClickHouse | ✓ (X-Pack) | ✗ | ✗ |
 | DB2 | ✗ | ✓ (X-Pack) | ✗ |
-:::
 
 ### 4.4 会话分享
 :::note

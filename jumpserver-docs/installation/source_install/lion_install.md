@@ -9,11 +9,11 @@ title: Lion 环境部署
 :::
 
 ### 1.1 环境要求
-:::note
-
 | Name    | JumpServer               | Guacd                  |  Lion                    |
 | :------ | :----------------------- | :--------------------- | :----------------------- |
 | Version | v4.10.17 | [1.4.0][guacd-1.4.0]   |  |
+
+:::note
 
 - 可以从 [Github][guacamole-server] 网站上获取对应的 guacd 副本。这些版本是最新代码的稳定快照，从项目网站下载 Source code.tar.gz 源代码，通过命令行中提取该存档：
 
@@ -51,6 +51,7 @@ ldconfig
 :::note
 
 - 可以从 [Github][lion] 网站上获取最新的 [Release][lion_release] 副本。
+:::
 
 | OS      | Arch    | Name                                                                                              |
 | :------ | :------ | :------------------------------------------------------------------------------------------------ |
@@ -59,7 +60,6 @@ ldconfig
 | Linux   | loong64 | [lion-v4.10.17-linux-loong64.tar.gz][lion-v4.10.17-linux-loong64] |
 | Darwin  | amd64   | [lion-v4.10.17-darwin-amd64.tar.gz][lion-v4.10.17-darwin-amd64]   |
 | Windows | amd64   | [lion-v4.10.17-windows-amd64.tar.gz][lion-v4.10.17-windows-amd64] |
-:::
 
 :::note
 

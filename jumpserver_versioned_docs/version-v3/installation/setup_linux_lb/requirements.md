@@ -13,8 +13,6 @@ title: 准备工作
 :::
 
 ### 1.1 数据库要求
-:::note
-
 | 名称    | 版本 | 默认字符集  | 默认字符编码  | TLS/SSL          |
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
 | MySQL   | &gt;= 5.7  | utf8             | utf8_general_ci    | ✓ |
@@ -23,11 +21,8 @@ title: 准备工作
 | Name    | Version | Sentinel         | Cluster            | TLS/SSL          |
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
 | Redis   | &gt;= 6.0  | ✓ | ✗   | ✓ |
-:::
     
 ### 1.2 服务器要求
-:::note
-
 | 服务名称   |      IP 地址        |  端口                   |     使用涉及组件/服务     |   最小化硬件配置    |   标准化硬件配置     |
 | ------------- | ---------------- | ----------------------- | ---------------- | ---------------------- | ----------------------- |
 | NFS           |  192.168.100.11  |  -                      | Core             | 2Core/8GB RAM/100G HDD | 4Core/16GB RAM/1T   SSD |
@@ -40,17 +35,13 @@ title: 准备工作
 | JumpServer 04 |  192.168.100.24  | 80,2222,33060,33061     | HAProxy          | 2Core/8GB RAM/60G  HDD | 4Core/8GB  RAM/90G  SSD |
 | MinIO         |  192.168.100.41  | 9000,9001               | Core, KoKo, Lion | 2Core/4GB RAM/100G HDD | 4Core/8GB  RAM/1T   SSD |
 | Elasticsearch |  192.168.100.51  | 9200,9300               | Core, KoKo       | 2Core/4GB RAM/100G HDD | 4Core/8GB  RAM/1T   SSD |
-:::
     
 ### 1.3 组件容器健康检查
-:::note
-
 | 服务名称   | 健康检查                   | 实例                                   |
 | ------------- | ------------------------------ | ----------------------------------------- |
 | Core          | `http://core:8080/api/health/`   | `https://demo.jumpserver.org/api/health/`   |
 | KoKo          | `http://koko:5000/koko/health/`  | `https://demo.jumpserver.org/koko/health/`  |
 | Lion          | `http://lion:8081/lion/health/`  | `https://demo.jumpserver.org/lion/health/`  |
-:::
 
 ## 2 部署顺序
 :::note

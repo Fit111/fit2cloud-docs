@@ -9,12 +9,9 @@ Koko 是 Go 版本的 coco，重构了 coco 的 SSH/SFTP 服务和 Web Terminal 
 :::
 
 ### 1.1 环境要求
-:::note
-
 | Name    | KoKo                     | Go   | Node  | Redis Client |
 | :------ | :----------------------- | :--  | :---- | :----------- |
 | Version | v3.10.21     | 1.18 | 16.5  | &gt;= 6.0       |
-:::
 
 ### 1.2 选择部署方式
 :::note

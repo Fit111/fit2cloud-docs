@@ -92,6 +92,7 @@ mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 - 访问 JumpServer Web 页面并使用管理员账号进行登录。
 - 点击左侧菜单栏的 [终端管理]，在页面的上方选择 [存储配置]，在 [命令存储] 下方选择 [创建] 选择 [Elasticsearch]
 - 根据下方的说明进行填写，保存后在 [终端管理] 页面对所有组件进行 [更新]，命令存储选择 [jms-es]，提交。
+:::
 
 | 选项            | 参考值                                               | 说明                   |
 | :-------------  | :-------------------------------------------------  | :--------------------- |
@@ -102,4 +103,3 @@ mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 | 索引 (Index)    | jumpserver                                          | 索引                   |
 | 忽略证书认证    |                                                     | https 自签 ssl 需要勾选 |
 | 默认       |                                                     | 新组件将自动使用该存储   |
-:::
