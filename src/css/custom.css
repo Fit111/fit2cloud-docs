@@ -43,6 +43,34 @@
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
+/* ===== footer 文字大小与侧边栏一致(14px) =====
+   侧边栏菜单(.theme-doc-sidebar-container .menu__link)和文档正文
+   (.theme-doc-markdown)都是 14px, 这里把 footer 的三列链接与版权区文字
+   也统一到 14px, 保持全站正文同字号。列标题(.footer__title)保留粗体
+   h4 样式作为标题, 仅字号压到 14.5px 与正文接近衔接。 */
+.footer__link-item,
+.footer__copyright {
+  font-size: 14px;
+}
+.footer__title {
+  font-size: 14.5px;
+}
+
+/* footer 链接项: 用 flex 让「图标 + 文字 + 外链箭头」水平排成一行并垂直居中。
+   默认 .footer__link-item 是 inline, 改为 flex 后图标尺寸用 1em 跟随文字字号(14px),
+   间距用 gap 统一控制。图标颜色继承 currentColor(白色半透明), 与文字一致。 */
+.footer__link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.footer__link-item > span {
+  line-height: 1.6;
+}
+.footer-link-icon {
+  flex-shrink: 0;
+}
+
 /* ===== footer 版权区(照搬 www.fit2cloud.com 的三行结构) =====
    copyright 是 dangerouslySetInnerHTML 渲染的, 里面是「备案号 / 版权所有 / 隐私政策|许可协议」
    三行。Infima 完全没有为 .footer__copyright 定义规则, 默认 line-height 会让三行挤在一起,
@@ -130,14 +158,17 @@ html[data-docs-product='jumpserver'] .alert--info {
    用 href 定义的外部链接, Docusaurus 的 NavbarNavLink / FooterLinkItem 会自动给文字旁
    加一个 ↗ 外链小图标(<svg class="iconExternalLink_...">, 见 NavbarNavLink.js 里
    isExternalLink && <IconExternalLink/>)。
-   分别在 .navbar 与 .footer 范围内把所有 target="_blank" 外链里的这个 svg 隐藏掉,
-   只去掉视觉箭头、保留「新窗口打开」行为。
+   分别在 .navbar 与 .footer 范围内把它隐藏掉, 只去掉视觉箭头、保留「新窗口打开」行为。
    - .navbar: 右侧官网/论坛/开源社区/培训认证, 及「产品文档/开源产品」下拉里的外链
    - .footer: 三列链接(常用链接/联系我们/资料下载)里的外链
-   限定 a[target="_blank"], 不影响首页产品卡片「进入文档 →」文字、搜索/语言图标,
-   也不影响 footer 版权区(那是手写 <a>, 无外链图标)。 */
-.navbar a[target="_blank"] svg,
-.footer a[target="_blank"] svg {
+
+   注意: 选择器必须限定在 .iconExternalLink 这个类(外链箭头组件), BUG 历史:
+   最初写成 `.footer a[target="_blank"] svg`, 会把 footer 外链里的【所有】svg 隐藏,
+   包括我们给 footer 链接自加的 Carbon 图标(见 src/theme/Footer/LinkItem), 导致图标不显示。
+   故改为只匹配 IconExternalLink 渲染的 svg(其类名带 iconExternalLink 哈希前缀),
+   不影响普通外链、以及 footer 链接前的 Carbon 图标。 */
+.navbar a[target="_blank"] svg[class*="iconExternalLink"],
+.footer a[target="_blank"] svg[class*="iconExternalLink"] {
   display: none;
 }
 

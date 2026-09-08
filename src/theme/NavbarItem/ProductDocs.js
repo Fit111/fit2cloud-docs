@@ -1,33 +1,37 @@
 /**
- * 自定义 navbar 项: 「产品文档」下拉, 仿 fit2cloud 官网顶部菜单。
- * 每个产品一条: 左侧 logo 小图标 + 右侧(加粗产品名 + 灰色一行描述), 整条链接跳转到对应产品**文档站**。
+ * 自定义 navbar 项: 「开源产品」下拉, 仿 fit2cloud 官网顶部菜单。
+ * 每个产品一条: 左侧 logo 小图标 + 右侧(加粗产品名 + 灰色一行描述), 整条链接跳转到对应产品**官网**。
  *
  * 实现说明:
  * - 外层容器复用 theme 的全局下拉类(.navbar__item/.dropdown/.dropdown--hoverable/
  *   .dropdown__menu/.dropdown__link), 所以 hover 展开、菜单样式、链接高亮等原生行为无需手写。
  * - 产品 logo 放在 static/img/logo/ 下, 亮色/暗色主题统一用彩色版(不随主题切换黑版)。
- * - 链接: 站内文档(本门户)用 `to` + <Link>(同站跳转); 独立文档站用 `link` + <a target="_blank">。
+ * - 本下拉全部跳官网外链, 统一用 <a target="_blank"> 新窗口打开(与首页卡片跳文档站不同)。
  * - 与右上角 navbar 外链不同: 这里的 item 是自己渲染的, 不受
  *   custom.css 里"隐藏 navbar 外链小箭头"影响, 也就不会有 ↗ 图标。
  */
 import React from 'react';
-import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './ProductDocs.module.css';
 
-// 开源产品集中维护在这张表: 改名称/链接/描述/logo 只动这里。
-// 与首页 PRODUCT_GROUPS(src/pages/index.js) 同源的 8 个产品, 链接指向各自文档站。
-// export 出来供首页引用(首页卡片的第一二行名称/简介共用这份数据)。
-export const PRODUCTS = [
-  {name: '1Panel AI 网关', to: '/ai-gateway/', desc: '企业级 AI 网关', logo: 'AI网关logo.png'},
-  {name: '1Panel', to: '/1panel/', desc: '现代化、开源的 Linux 面板', logo: '1panel-07-蓝色.png'},
-  {name: 'JumpServer', to: '/jumpserver/', desc: '广受欢迎的开源堡垒机', logo: 'JumpServer-辅助图形-绿色.png'},
-  {name: 'DataEase', link: 'https://dataease.cn/docs/v2/', desc: '人人可用的开源 BI 工具', logo: 'DataEase-07-蓝色.png'},
-  {name: 'MaxKB', link: 'https://maxkb.cn/docs/v2/', desc: '强大易用的企业级智能体平台', logo: 'MaxKB-03.png'},
-  {name: 'SQLBot', to: '/sqlbot/', desc: '基于大模型的智能问数系统', logo: '【辅助图形】SQLBot.png'},
-  {name: 'Cordys CRM', link: 'https://cordys.cn/docs/', desc: '新一代的开源 AI CRM 系统', logo: 'CORDYS-辅助图形.png'},
-  {name: 'MeterSphere', link: 'https://metersphere.io/docs/v3.x/', desc: '新一代的开源持续测试工具', logo: 'MeterSphere-辅助图形-紫色.png'},
-  {name: 'Halo', link: 'https://docs.halo.run/', desc: '强大易用的开源建站工具', logo: 'Halo-03.png'},
+// 「开源产品」下拉的自有数据。
+//
+// 背景: 本下拉最初与首页产品卡片共用一份 PRODUCTS 表, 且链接指向各产品「文档站」。
+// 现改为「开源产品」并跳各产品「官方官网」, 与首页卡片(仍指文档站)目的不同,
+// 故由 src/data/products.js 承接首页那份数据, 本文件只保留下拉专用数据, 两处彻底解耦。
+//
+// 官网地址对齐 https://www.fit2cloud.com/ 官网首页展示的开源产品入口。
+// 1Panel AI 网关在官网无独立产品页, 指向 1Panel AI 一体机页(定位最接近)。
+const PRODUCTS = [
+  {name: '1Panel AI 网关', link: 'https://1panel.cn/ai-appliance.html', desc: '企业级 AI 网关', logo: 'AI网关logo.png'},
+  {name: '1Panel 面板', link: 'https://1panel.cn/', desc: '现代化、开源的 Linux 面板', logo: '1panel-07-蓝色.png'},
+  {name: 'JumpServer', link: 'https://www.jumpserver.org/', desc: '广受欢迎的开源堡垒机', logo: 'JumpServer-辅助图形-绿色.png'},
+  {name: 'DataEase', link: 'https://dataease.cn/', desc: '人人可用的开源 BI 工具', logo: 'DataEase-07-蓝色.png'},
+  {name: 'MaxKB', link: 'https://maxkb.cn/', desc: '强大易用的企业级智能体平台', logo: 'MaxKB-03.png'},
+  {name: 'SQLBot', link: 'https://sqlbot.org/', desc: '基于大模型的智能问数系统', logo: '【辅助图形】SQLBot.png'},
+  {name: 'Cordys CRM', link: 'https://cordys.cn/', desc: '新一代的开源 AI CRM 系统', logo: 'CORDYS-辅助图形.png'},
+  {name: 'MeterSphere', link: 'https://metersphere.io/', desc: '新一代的开源持续测试工具', logo: 'MeterSphere-辅助图形-紫色.png'},
+  {name: 'Halo', link: 'https://halo.run/', desc: '强大易用的开源建站工具', logo: 'Halo-03.png'},
 ];
 
 function ProductItem({p, imgSrc}) {
@@ -43,14 +47,7 @@ function ProductItem({p, imgSrc}) {
       </span>
     </>
   );
-  // 站内文档用 Link 同站跳转; 独立文档站用 <a> 新窗口打开。
-  if (p.to) {
-    return (
-      <Link className={className} to={p.to}>
-        {inner}
-      </Link>
-    );
-  }
+  // 全部为官网外链, 统一用 <a> 新窗口打开。
   return (
     <a className={className} href={p.link} target="_blank" rel="noopener noreferrer">
       {inner}
@@ -71,7 +68,7 @@ export default function ProductDocs() {
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        产品文档
+        开源产品
         {/* 下拉箭头, 参考 docs.halo.run 顶部「版本」旁的 chevron 图标 */}
         <svg
           className={styles.caretIcon}

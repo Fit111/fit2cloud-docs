@@ -55,6 +55,8 @@ const sidebars = {
     },
 
     { type: "doc", id: "integrate_third_party", label: "接入第三方" },
+
+    { type: "doc", id: "contact", label: "联系我们" },
   ],
 };
 

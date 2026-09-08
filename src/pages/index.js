@@ -6,14 +6,15 @@ import Heading from '@theme/Heading';
 // 与右上角同一个搜索框组件(由 @easyops-cn/docusaurus-search-local 提供)。
 // 首页不是文档页, 这里没有 activePlugin / searchContext, 因此会检索全部产品的全部文档。
 import SearchBar from '@theme/SearchBar';
-// 产品名称/简介/logo/文档链接复用左侧「产品文档」下拉那份数据(单一数据源, 避免两处不一致)。
-import {PRODUCTS as DOC_PRODUCTS} from '../theme/NavbarItem/ProductDocs';
+// 首页产品卡片的数据已从顶部「开源产品」下拉那份数据中拆出, 由 src/data/products.js
+// 独立维护(卡片仍指向各自文档站, 与顶部下拉的公司官网互不影响)。
+import HOME_PRODUCTS from '../data/products';
 import styles from './index.module.css';
 
-// 首页卡片在中英文下要显示产品名/简介: 下拉 PRODUCTS 只有中文 name/desc,
+// 首页卡片在中英文下要显示产品名/简介: HOME_PRODUCTS 只有中文 name/desc,
 // 这里补一份英文(nameEn/descEn), 按中文 name 匹配; 没有英文的 fallback 到中文。
 const EN_INFO = {
-  '1Panel': ['1Panel', 'Modern, open-source Linux panel'],
+  '1Panel 面板': ['1Panel', 'Modern, open-source Linux panel'],
   'JumpServer': ['JumpServer', 'The most popular open-source bastion host'],
   'DataEase': ['DataEase', 'Open-source BI tool for everyone'],
   'MeterSphere': ['MeterSphere', 'Next-gen open-source continuous testing tool'],
@@ -23,13 +24,13 @@ const EN_INFO = {
   'Cordys CRM': ['Cordys CRM', 'Next-generation open-source AI CRM'],
 };
 
-// 按中文名查下拉数据, 拿到 {name, desc, logo, to/link} 作为卡片第一二行的统一信息来源。
-const docByName = Object.fromEntries(DOC_PRODUCTS.map((p) => [p.name, p]));
+// 按中文名查首页自有数据, 拿到 {name, desc, logo, to/link} 作为卡片第一二行的信息来源。
+const docByName = Object.fromEntries(HOME_PRODUCTS.map((p) => [p.name, p]));
 
-// 所有产品按分类集中在这张表, 每个产品对象来自 docByName(与「产品文档」下拉同源)。
+// 所有产品按分类集中在这张表, 每个产品对象来自 HOME_PRODUCTS(首页自有数据)。
 const PRODUCT_GROUPS = [
   {title: 'AI 原生', titleEn: 'AI Native', items: [docByName['1Panel AI 网关'], docByName['MaxKB']]},
-  {title: '运维管理', titleEn: 'Ops Management', items: [docByName['1Panel'], docByName['JumpServer']]},
+  {title: '运维管理', titleEn: 'Ops Management', items: [docByName['1Panel 面板'], docByName['JumpServer']]},
   {title: 'BI 数据分析', titleEn: 'BI & Analytics', items: [docByName['DataEase'], docByName['SQLBot']]},
   {title: 'CRM、建站及测试', titleEn: 'CRM, Website & Testing', items: [docByName['Cordys CRM'], docByName['MeterSphere'], docByName['Halo']]},
 ];
