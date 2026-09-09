@@ -4,17 +4,13 @@ description: 介绍使用 1Panel-appstore-skills 将官方 Docker 部署方案�
 keywords: [1Panel-appstore-skills, 1Panel 应用商店, 应用安装包, Docker Compose, AppSpec]
 ---
 
-:::note
-    本文档介绍如何使用 `1panel-appstore-skills`，将已经支持 Docker 部署的应用转换为符合 1Panel 应用商店格式的应用安装包。
-    项目仓库地址：[[https://github.com/1Panel-dev/1Panel-appstore-skills](https://github.com/1Panel-dev/1Panel-appstore-skills)](https://github.com/1Panel-dev/1Panel-appstore-skills)
+本文档介绍如何使用 `1panel-appstore-skills`，将已经支持 Docker 部署的应用转换为符合 1Panel 应用商店格式的应用安装包。
+项目仓库地址：[[https://github.com/1Panel-dev/1Panel-appstore-skills](https://github.com/1Panel-dev/1Panel-appstore-skills)](https://github.com/1Panel-dev/1Panel-appstore-skills)
 
-:::
 ## 1 功能概述
 
-:::note
-    `1panel-appstore-skills` 可以根据应用官方仓库、官方文档、Docker 镜像、Compose 文件或中间 spec，整理应用元数据和容器部署参数，并生成 1Panel 应用包目录。
+`1panel-appstore-skills` 可以根据应用官方仓库、官方文档、Docker 镜像、Compose 文件或中间 spec，整理应用元数据和容器部署参数，并生成 1Panel 应用包目录。
 
-:::
 该 Skill 主要处理以下内容：
 
 - 应用名称、版本、类型、标签、官网、文档和源码仓库；
@@ -56,6 +52,8 @@ git clone https://github.com/1Panel-dev/1Panel-appstore-skills.git
 - 需要直接发布到远程应用商店仓库。该 Skill 只生成应用包，不执行远程发布。
 
 ## 4 支持的输入
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 支持的输入类型说明</div>
 
 | 输入类型 | 说明 |
 | --- | --- |
@@ -132,10 +130,8 @@ apps/<app-key>/
 python3 scripts/validate_app_package.py apps/<app-key>
 ```
 
-:::note[校验范围]
-    校验脚本只检查应用包目录和基础字段，不能替代 `docker compose config`、镜像可用性检查以及真实安装、启动、停止、重启和卸载测试。
+**校验范围**：校验脚本只检查应用包目录和基础字段，不能替代 `docker compose config`、镜像可用性检查以及真实安装、启动、停止、重启和卸载测试。
 
-:::
 ## 8 本地测试
 
 将生成的应用目录复制到 1Panel 本地应用目录：

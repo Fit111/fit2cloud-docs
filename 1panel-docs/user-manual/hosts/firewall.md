@@ -6,14 +6,12 @@ keywords: [1Panel 防火墙, 端口规则, 端口转发, IP 规则, iptables, fi
 
 # 防火墙
 
-:::note
-    1Panel 可管理 Firewalld、UFW 和 iptables。页面包含 **端口规则**、**端口转发**、**IP 规则** 和 **iptables 高级控制**；实际可用能力取决于当前节点检测到的防火墙类型。
+1Panel 可管理 Firewalld、UFW 和 iptables。页面包含 **端口规则**、**端口转发**、**IP 规则** 和 **iptables 高级控制**；实际可用能力取决于当前节点检测到的防火墙类型。
 
-    - RedHat/CentOS 使用的是 Firewall 防火墙
-    - Debian/Ubuntu 常用 UFW 防火墙
-    - 使用 iptables 时，可使用 1Panel 的高级控制页面
+- RedHat/CentOS 使用的是 Firewall 防火墙
+- Debian/Ubuntu 常用 UFW 防火墙
+- 使用 iptables 时，可使用 1Panel 的高级控制页面
 
-:::
 ## 1 安装
 
 
@@ -104,23 +102,20 @@ sudo ufw enable
 
 ## 2 防火墙状态
 
-:::note
 **点击防火墙开关按钮，即可开启或关闭防火墙。**
 
-:::
 ![img.png](/img/1panel/hosts/firewall_switch.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 防火墙状态界面</div>
 
-:::note
 **点击禁 ping 按钮，即可开启或关闭 PING 命令。**
 
 - 禁用 PING 命令的主要功能是：为了防止用户频繁 PING 服务器而导致服务器性能下降
 
-:::
 ![img.png](/img/1panel/hosts/firewall_ping.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 防火墙状态界面（续）</div>
 
 ## 3 端口规则
 
-:::note
 **点击创建端口规则按钮，即可设置端口规则。**
 
 - 协议：默认为 TCP 协议，有 TCP、UDP、TCP/UDP 协议，根据你的实际情况选择
@@ -128,20 +123,16 @@ sudo ufw enable
 - 来源：默认为所有 IP，选择有：所有 IP、指定 IP
 - 策略：默认为允许，有允许、拒绝
 
-
-:::
-
-:::note
 **端口放行成功后，可以查看防火墙列表查看当前端口的运行情况。**
 
-:::
 ![img.png](/img/1panel/hosts/firewall_port_list.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 端口规则——应用卡片</div>
 
 ![img.png](/img/1panel/hosts/firewall_port_create.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 端口规则</div>
 
 ## 4 端口转发
 
-:::note
 **点击创建端口转发按钮，即可设置端口转发规则。**
 
 - 协议：默认为 TCP 协议，有 TCP、UDP、TCP/UDP 协议，根据你的实际情况选择
@@ -149,21 +140,21 @@ sudo ufw enable
 - 目标 IP：如果是本机端口转发，目标IP为：127.0.0.1；如果目标IP不填写，则默认为本机端口转发
 - 目标端口：接收转发报文的目标端口
 
-:::
 ![img.png](/img/1panel/hosts/firewall_port_forward.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 端口转发界面</div>
 
 ## 5 IP 规则
 
-:::note
 **点击创建 IP 规则按钮，即可设置IP规则**
 
 - 指定 IP
 - 策略：默认为放行，有放行、屏蔽
 
-:::
 ![img.png](/img/1panel/hosts/firewall_ip_list.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 IP 规则——应用卡片</div>
 
 ![img.png](/img/1panel/hosts/firewall_ip_create.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 IP 规则</div>
 
 ## 6 iptables 高级控制
 
