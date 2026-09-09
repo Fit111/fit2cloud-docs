@@ -2,12 +2,9 @@
 title: 对话用户
 ---
 
-:::note
 
 支持设置允许进入当前应用问答页面进行提问的用户组及用户。
-:::
 
-:::note
 
 若对话用户属于多个用户组，任一用户组被授权即可进入应用提问。 用户被移出用户组后，对应授权将被取消。  
 自动授权规则：
@@ -20,7 +17,7 @@ title: 对话用户
 - 在应用中仅支持查看和授权用户组，用户组和成员管理需要空间管理员或系统管理员在【系统管理】中进行。
 - 应用未在【身份验证】中启用登录认证，应用关联的全部知识库可被任意用户检索。
 - **应用开启登录认证后，若应用中的知识库未配置对话用户，将无法获取知识库的内容，需在知识库中授权指定对话用户。**
-:::
 
-![对话用户](/img/maxkb/app/userteam_auth.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/userteam_auth.png" alt="图 1  对话用户" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  对话用户</div>

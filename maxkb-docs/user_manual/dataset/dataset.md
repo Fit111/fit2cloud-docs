@@ -2,7 +2,6 @@
 title: 知识库
 ---
 
-:::note
 
 企业私有的专业知识库，包含各种类型的数据。支持创建和管理知识库，为问答对话提供知识来源，助力智能问答。
 
@@ -12,12 +11,12 @@ title: 知识库
 知识库通过文件夹进行管理，根目录下可建立最多三级的子文件夹。每一级文件夹内均可创建相应的知识库。文件夹支持资源授权，普通用户仅可查看被授权的文件夹，授权文件夹时支持授权文件夹下已有的子资源。
 
 **注意**：共享资源为企业版 X-Pack 功能。
-:::
-![dataset](/img/maxkb/dataset/dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset.png" alt="图 1  知识库列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  知识库列表</div>
 
 ## 1 创建知识库
 
-:::note
 
 打开【知识库】页面，点击【创建知识库】，进入创建知识库页面。   
 知识库类型：
@@ -28,28 +27,28 @@ title: 知识库
 * 工作流知识库：允许用户通过拖拽节点的方式自主编排从不同数据源到知识库写入的全流程，满足企业个性化知识管理需求。
 
 **注意**：飞书知识库 X-Pack 功能，具体使用可参考[**飞书文档**](../X-Pack/feishu_doc)。
-:::
-![dataset](/img/maxkb/dataset/create_dataeset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_dataeset.png" alt="图 2  新建知识库-选择知识库类型" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  新建知识库-选择知识库类型</div>
 
 ###  1.1 通用型知识库
 
-:::note
 
 选择知识库类型为通用型，输入知识库名称、知识库描述，选择向量模型。
-:::
 
-![创建通用型知识库](/img/maxkb/dataset/create_offline_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_offline_dataset.png" alt="图 3  创建通用型知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  创建通用型知识库</div>
+
 
 创建知识库后，支持新建文档和上传离线文档。
 
     注意：对话用户为 X-Pack 功能。
-:::
 
-![上传文档](/img/maxkb/dataset/dataset_office_document.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_office_document.png" alt="图 4  新建文档上传" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  新建文档上传</div>
+
 
 可离线文档通过拖拽或选择文件方式进行上传。 上传文档要求：
 
@@ -62,12 +61,11 @@ title: 知识库
 
     *  Markdown 文档 + 图片文件，MarkDown 文档中引入对应的图片，并将两者打包在 ZIP 中。
     *  XLS/XLSX 文件 + 图片文件，XLS/XLSX 文件中引入对应的图片，并将两者打包在 ZIP 中。
-:::
 
-![上传文档](/img/maxkb/dataset/upload_document.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/upload_document.png" alt="图 5  上传文档类型说明" />
 
-    
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  上传文档类型说明</div>
+
 
 文档分段：
 
@@ -80,11 +78,11 @@ title: 知识库
 - **分段预览**：根据分段规则和设置，查看分段效果。
 - **分段操作**：在分段预览中对不合理的分段进行再次编辑以及删除无意义分段。
 - **步骤操作**：可返回上一步重新上传文档，或者确认上传开始向量化。
-:::
 
-![上传文档](/img/maxkb/dataset/upload_document2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/upload_document2.png" alt="图 6  文档分段预览" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  文档分段预览</div>
+
 
 **智能分段与高级分段**：
 
@@ -112,61 +110,64 @@ title: 知识库
  * **文档规范建议**：
      * 标识规范：离线文档的分段标识要有一定规范，否则拆分出来的段落不规整。   
      * 段落完整：在一个分段中集中描述一个完整的内容。
-:::
 
-![高级分段](/img/maxkb/dataset/advanced_segmentation.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/advanced_segmentation.png" alt="图 7  高级分段" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  高级分段</div>
+
 
 **导入时添加分段标题为关联问题:** 勾选后会把所有分段的标题设置为分段的关联问题。
-:::
-![设置标题为关联问题](/img/maxkb/dataset/titel_set_question.png)
-   
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/titel_set_question.png" alt="图 8  设置标题为关联问题" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  设置标题为关联问题</div>
+
 
 点击【开始导入】后，系统后台会对文档进行自动分段 -&gt; 存储 -&gt; 向量化操作，处理结束后，文件状态将显示为完成。
-:::
-![编辑分段](/img/maxkb/dataset/processing.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/processing.png" alt="图 9  编辑分段" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  编辑分段</div>
 
 ### 1.2 Web 站点知识库
 
-:::note
 
 选择创建知识库类型为 Web 站点，输入知识库名称、知识库描述，选择向量模型并输入 Web 根地址。
 
 * Web 根地址：为在线静态网页站点的根节点地址，系统会自动获取 Web 根地址及子级地址的数据资料。以 DataEase V2 在线文档为例，可在 Web 根地址为：https://dataease.io/docs/v2/ 。  
 * 选择器：针对 Web 页面的数据可以设置定获取某个div内的数据，默认获取 body 数据。如 DataEase 在线文档仅获取中间内容部分，可以右键检查网页，定位到中间内部区域找到 div 为 md-content，则选择器输入为：.md-content 。
-:::
 
-![Web知识库](/img/maxkb/dataset/web_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/web_dataset.png" alt="图 10  Web知识库" />
 
-![Alt text](/img/maxkb/dataset/DataEase_doc.png)
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  Web知识库</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/DataEase_doc.png" alt="图 11  DataEase 站点数据抽取预览" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  DataEase 站点数据抽取预览</div>
+
 
 点击【创建】后，跳转到文档列表页面查看当前 Web 站点下文档的详细信息，处理结束后，文件状态将显示为完成。
-:::
 
-![Alt text](/img/maxkb/dataset/web_doc.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/web_doc.png" alt="图 12  Web 站点知识库文档列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  Web 站点知识库文档列表</div>
 
 ### 1.3 工作流知识库
-:::note
 
 支持用户通过节点拖拽方式自主编排不同数据源到知识库写入的全流程，适配企业个性化知识管理需求。
 
 选择知识库类型为工作流知识库，输入知识库名称、知识库描述，选择向量模型。
-:::
 
-![创建工作流知识库](/img/maxkb/dataset/create_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_workflow_dataset.png" alt="图 13  创建工作流知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  创建工作流知识库</div>
 
 #### 1.3.1 工作流编排
-:::note
 
 知识库工作流编排基本流程：数据源 -&gt; 文档解析 -&gt; 文档分段 -&gt; 知识库写入。
-:::
 
-![设置工作流知识库](/img/maxkb/dataset/set_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/set_workflow_dataset.png" alt="图 14  设置工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  设置工作流知识库</div>
+
 
 **数据源** ：
     
@@ -174,11 +175,11 @@ title: 知识库
 - 设置：
     * 内置数据源：支持本地文件和 Web 站点；
     * 工具扩展：支持数据源工具介入其他企业级数据源。
-:::
 
-![数据源工作流知识库](/img/maxkb/dataset/api_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/api_workflow_dataset.png" alt="图 15  数据源工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  数据源工作流知识库</div>
+
 
 **文档解析** ：
 
@@ -186,11 +187,11 @@ title: 知识库
 - 设置：
     * 支持 TXT、Markdown、DOCX、XLSX、CSV、PDF、ZIP 等主流格式自动解析。
     * 支持通过工具介入其他解析工具，如OCR工具、MinerU以及其他专业解析工具。
-:::
 
-<img alt="文档解析工作流知识库" src="/img/maxkb/dataset/doc_workflow_dataset.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/doc_workflow_dataset.png" alt="图 16  文档解析工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  文档解析工作流知识库</div>
+
 
 **文档分段** ：
 
@@ -202,225 +203,229 @@ title: 知识库
         * QA 问答对分段：提取“问题-答案”对进行入库。
     * 不分段入库：删除“文档分段”节点实现不分段入库。
     * 自主引入第三方分段工具，适配复杂内容拆分需求。
-:::
-<img alt="文档分段工作流知识库" src="/img/maxkb/dataset/docsegmente_workflow_dataset.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/docsegmente_workflow_dataset.png" alt="图 17  文档分段工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  文档分段工作流知识库</div>
+
 
 **知识库写入** ：
 
 - 说明：工作流终结节点，完成数据持久化与向量化。
 - 设置：经过文档解析、文档分段等节点，将自动写入知识库并执行向量化操作。
-:::
 
-<img alt="知识库写入工作流知识库" src="/img/maxkb/dataset/input_workflow_dataset.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/input_workflow_dataset.png" alt="图 18  知识库写入工作流知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  知识库写入工作流知识库</div>
 
 #### 1.3.2 调试发布
-:::note
 
 编排完成后，点击界面【调试】按钮，系统将按流程执行工作流。
-:::
 
-![调试工作流知识库](/img/maxkb/dataset/debug_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/debug_workflow_dataset.png" alt="图 19  调试工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  调试工作流知识库</div>
+
 
 用户可在【执行详情】中可查看各节点运行状态，例如数据源是否成功获取文档、解析工具是否正常提取内容、分段结果是否符合预期、写入是否成功。
 
 调试无误后，点击【发布】，使该工作流将正式生效。
-:::
 
-![执行详情工作流知识库](/img/maxkb/dataset/debug_workflow_dataset1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/debug_workflow_dataset1.png" alt="图 20  执行详情工作流知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  执行详情工作流知识库</div>
 
 #### 1.3.3 导入文档
-:::note
 
 工作流发布后，用户可以在文档列表中执行【导入文档】操作，【导入文档】与在工作流页面的【调试】功能一致。
-:::
 
-![工作流知识库页面](/img/maxkb/dataset/main_workflow_dataset.png)
-![导入文档工作流知识库](/img/maxkb/dataset/import_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/main_workflow_dataset.png" alt="图 21  工作流知识库页面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  工作流知识库页面</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/import_workflow_dataset.png" alt="图 22  导入文档工作流知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22  导入文档工作流知识库</div>
 
 #### 1.3.4 其他操作
-:::note
 
 **模板中心**
 
 在工作流知识库中可直接在【模板中心】选择所需的知识库工作流，仅需在编排界面配置模型、知识库等基础参数，即可快速完成知识库的工作流部署，实现典型业务场景的智能化落地。
-:::
 
-![模板中心](/img/maxkb/dataset/template_center.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/template_center.png" alt="图 23  模板中心" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  模板中心</div>
+
 
 为了丰富模板资源，推动产品生态持续发展，MaxKB诚挚邀请广大社区用户参与模板中心的建设，共享技术成果；
 
 贡献路径：参照官方提供的模板开发规范，开发适用于MaxKB的智能体或者知识库工作流模板；
 
 提交方式：完成开发后，将模板提交至[GitHub官方仓库](https://github.com/1Panel-dev/MaxKB-toolstore)，项目团队将按流程审核，通过后即可上架至 MaxKB 模板中心，供全体社区用户使用。
-:::
 
-:::note
 
 **导入/导出工作流**
 
 工作流知识库支持导出和导入，导出的文件后缀为 `.kbwf`，导入工作流则选择相应后缀的文件导入即可。
-:::
 
-![导出工作流](/img/maxkb/dataset/export_flowdataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/export_flowdataset.png" alt="图 24  导出工作流" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  导出工作流</div>
+
 
 **执行记录**
 
 每次导入文档的操作会记录在工作流的【执行记录】中，用户可按发起人或状态，搜索指定执行记录，实现对所有导入操作的全链路追溯。
-:::
-![执行记录工作流知识库](/img/maxkb/dataset/record_workflow_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/record_workflow_dataset.png" alt="图 25  执行记录工作流知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  执行记录工作流知识库</div>
+
 
 **发布历史**
 
 工作流知识库中，支持查看发布历史版本的工作流、时间和用户等信息。
-:::
-![发布历史](/img/maxkb/dataset/release_history.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/release_history.png" alt="图 26  发布历史" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  发布历史</div>
+
 
 **自动保存**
 
 工作流知识库中，默认手动保存，也可设置自动保存，开启自动保存后将每隔 1 分钟保存到本地，并在发布成功后将配置同步到后台数据库。
-:::
 
-![自动保存](/img/maxkb/dataset/auto_save.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/auto_save.png" alt="图 27  自动保存" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  自动保存</div>
 
 ## 2 知识库操作
 
-:::note
 
 MaxKB 知识库支持同步、重新向量化、生成问题、资源授权、查看关联资源、转移到、设置、导出以及删除操作。
-:::
 
-![知识库导出](/img/maxkb/dataset/dataset_actions.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_actions.png" alt="图 28  知识库操作面板" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  知识库操作面板</div>
 
 ### 2.1 同步 Web 知识库
 
-:::note
 
 对于 Web 站点类型知识库，点击知识库面板的【同步】，支持对 Web 知识库的内容进行同步更新。
 
 * 同步替换：重新获取 Web 站点文档，覆盖替换本地知识库中的文档。  
 * 整体同步：先删除本地知识库的所有文档，重新获取 Web 站点文档。
-:::
 
-![知识库导出](/img/maxkb/dataset/web_sync.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/web_sync.png" alt="图 29  同步 Web 知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  同步 Web 知识库</div>
 
 ### 2.2 重新向量化
 
-:::note
 
 如果在知识库设置中选择了不同的向量模型，对于新增的文档将使用新设置的向量模型进行向量化，如果要对已有的知识库进行重新向量化，可在知识库卡片网格中，点击知识库面板的【重新向量化】，对知识库中已有的分段进行重新向量化。
-:::
 
-![重新向量化](/img/maxkb/dataset/dataset_embedding.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_embedding.png" alt="图 30  重新向量化" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  重新向量化</div>
 
 ### 2.3 生成问题
 
-:::note
 
 通过 AI 模型（支持设置模型参数），根据提示词对文件内容总结生成对应的问题，并自动关联分段。
-:::
 
-![生成问题](/img/maxkb/dataset/dataset_create_problem.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_create_problem.png" alt="图 31  生成问题" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  生成问题</div>
 
 ### 2.4 资源授权
 
-:::note
 
 点击知识库面板的【资源授权】，可以将该知识库授权给相应的用户。
-:::
 
-![资源授权](/img/maxkb/dataset/dataset_resources.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_resources.png" alt="图 32  资源授权" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 32  资源授权</div>
 
 ### 2.5 查看关联资源
 
-:::note
 
 在知识库列表，点击知识库面板的【查看关联资源】，可查看该知识库关联资源情况，支持根据名称、创建者和类型进行搜索。
 
 - 依赖：查看当前资源所依赖的其他资源（智能体、模型、知识库、工具）；
 - 被依赖：查看当前资源被其他资源（智能体、模型、知识库、工具）依赖。
-:::
 
-![关联资源](/img/maxkb/dataset/dataset_related_resources.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_related_resources.png" alt="图 33  查看关联资源" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  查看关联资源</div>
 
 ### 2.6 转移到
 
-:::note
 
 在知识库列表，点击知识库面板的【转移到】，可以将知识库移动到同一工作空间下工具的其他文件夹中。
-:::
 
-![关联资源](/img/maxkb/dataset/dataset_move.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_move.png" alt="图 34  转移到文件夹" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 34  转移到文件夹</div>
 
 ### 2.7 设置知识库
 
-:::note
 
 在知识库列表，点击知识库面板的【设置】进入知识库设置页面，可修改知识库基本信息（名称、描述、向量模型）及上传规则：每次上传最多文件数与单个文档大小上限值（MB）。
-:::
-![知识库设置页面](/img/maxkb/dataset/dataset_setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_setting.png" alt="图 35  知识库设置页面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  知识库设置页面</div>
 
 ### 2.8 导出文档 Excel/ZIP
 
-:::note
 
 在知识库列表，点击知识库面板的【导出 Excel】/【导出 ZIP】。将知识库的分段内容以 Excel 或 ZIP 文件格式导出。  
 每个文档为 Excel 文件的一个 Sheet，Sheet 每一行展示一个分段。导出 ZIP 文件时，会将引用的图片一起导出，且以 guid 的方式进行命名，且没有格式扩展名。
-:::
 
-![知识库导出](/img/maxkb/dataset/dataset_export.png)
-![知识库导出](/img/maxkb/dataset/dataset_zip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_export.png" alt="图 36  导出 Excel 文档" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 36  导出 Excel 文档</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_zip.png" alt="图 37  导出 ZIP 文档" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 37  导出 ZIP 文档</div>
+
 
 导入文档 Excel/ZIP 知识库时，需先创建一个通用知识库，点击【上传文档】，选择【QA 问答对】，上传知识库导出的文档，点击【开始导入】。
-:::
 
-![知识库导出](/img/maxkb/dataset/dataset_input.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_input.png" alt="图 38  导入 Excel/ZIP 文档" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 38  导入 Excel/ZIP 文档</div>
 
 ### 2.9 导出知识库
 
-:::note
 
 支持导出知识库所有元数据（文档、标签、问题、工作流）及其关联关系，支持跨环境迁移与批量复用，导出的文件后缀为 `.zip`。
-:::
 
-![知识库导出](/img/maxkb/dataset/export_all_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/export_all_dataset.png" alt="图 39  导出知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 39  导出知识库</div>
+
 
 点击【创建】-&gt;【导入创建】，选择导出知识库的文件并打开。
-:::
 
-![知识库导入](/img/maxkb/dataset/input_all_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/input_all_dataset.png" alt="图 40  知识库导入" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 40  知识库导入</div>
 
 ### 2.10 删除知识库
 
-:::note
 
 在知识库列表，点击知识库面板的【删除】对知识库进行删除操作。
 
 **注意**：知识库删除后无法恢复，请谨慎操作。
-:::
-![知识库删除](/img/maxkb/dataset/dataset_del.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_del.png" alt="图 41  知识库删除" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  知识库删除</div>
 
 ## 3 批量选择
 
-:::note
 
 点击批量选择，可以批量选择知识库进行移动或删除操作。
-:::
 
-![批量操作](/img/maxkb/dataset/batch_operation_dataset.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/batch_operation_dataset.png" alt="图 42  批量操作" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 42  批量操作</div>

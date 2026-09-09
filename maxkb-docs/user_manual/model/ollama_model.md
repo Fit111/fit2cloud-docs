@@ -4,14 +4,11 @@ title: 对接Ollama
 
 ## 1 添加模型
 
-:::note
 
 **说明：** Ollama 允许用户在本地计算机上运行和部署大型语言模型。在添加 Ollama 模型之前需要先自行安装部署 Ollama 并运行模型。
 
 可详参考：[Ollama 离线部署LLM模型](../../faq/Offline_install_OllamaModel)。
-:::
 
-:::note
 
 模型供应商为`Ollama`，并在模型添加对话框中输入如下必要信息：
 
@@ -25,34 +22,33 @@ title: 对接Ollama
 * API Key：若没有配置API Key，可以输入任意字符。
 
 点击【添加】，校验通过则添加成功，便可以在应用的 AI 模型列表选择该模型。
-:::
 
 ## 2 配置样例
 
-:::note
 
 ollama-大语言模型配置样例图示：
-:::
 
-<img alt="ollama 大语言模型" src="/img/maxkb/model/ollama_model.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/ollama_model.png" alt="图 1  ollama 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  ollama 大语言模型 配置样例图</div>
+
 
 ollama-向量模型配置样例图示：
-:::
 
-<img alt="ollama 向量模型" src="/img/maxkb/model/ollama_embedding_model.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/ollama_embedding_model.png" alt="图 2  ollama 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  ollama 向量模型 配置样例图</div>
+
 
 ollama-视觉模型配置样例图示：
-:::
 
-<img alt="ollama 视觉模型模型" src="/img/maxkb/model/ollama_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/ollama_vision.png" alt="图 3  ollama 视觉模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  ollama 视觉模型 配置样例图</div>
+
 
 ollama-重排模型配置样例图示：
-:::
 
-<img alt="ollama 重排模型模型" src="/img/maxkb/model/ollama_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/ollama_reranker.png" alt="图 4  ollama 重排模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  ollama 重排模型 配置样例图</div>

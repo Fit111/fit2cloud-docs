@@ -4,7 +4,6 @@ title: 对接智谱AI
 
 ## 1 添加模型
 
-:::note
 
 添加讯智谱AI模型之前，需要先在 [智谱AI开放平台](https://open.bigmodel.cn/) 中进行注册并创建 API Key。
 
@@ -14,31 +13,34 @@ title: 对接智谱AI
 * 模型类型：大语言模型/视觉模型/图片生成。   
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。    
 * API Key：在智谱 AI 开放平台创建的 API Key。
-:::
 
-![智普APIkey](/img/maxkb/model/zhipu_apikey.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/zhipu_apikey.png" alt="图 1  智谱AI API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  智谱AI API Key</div>
 
 ## 2 配置样例
 
-:::note
 
 智谱AI-大语言模型配置样例图示如下：
-:::
 
-<img alt="智普_大语言模型" src="/img/maxkb/model/zhipu_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/zhipu_llm.png" alt="图 2  智谱AI 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  智谱AI 大语言模型 配置样例图</div>
+
 
 智谱AI-视觉模型模型配置样例图示如下：
-:::
 
-<img alt="智普_视觉模型模型" src="/img/maxkb/model/zhipu_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/zhipu_vision.png" alt="图 3  智谱AI 视觉模型模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  智谱AI 视觉模型模型 配置样例图</div>
+
 
 智谱AI-图片生成模型配置样例图示如下：
-:::
 
-<img alt="智普_图片生成模型" src="/img/maxkb/model/zhipu_vision_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/zhipu_vision_gen1.png" alt="图 4  智谱AI 图片生成模型 配置样例图" />
 
-<img alt="智普_图片生成模型" src="/img/maxkb/model/zhipu_vision_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智谱AI 图片生成模型 配置样例图</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/zhipu_vision_gen2.png" alt="图 5  智谱AI 图片生成模型配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  智谱AI 图片生成模型配置样例图</div>

@@ -4,23 +4,22 @@ title: 1Panel 安装
 
 ## 1 安装 1Panel
 
-:::note
 
 关于 1Panel 的安装部署与基础功能介绍，请参考 [1Panel 官方文档](/1panel/) 。在完成了 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，界面如下。
-:::
 
-![1panel](/img/maxkb/index/1panel.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/1panel.jpg" alt="图 1  1Panel 管理界面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  1Panel 管理界面</div>
 
 ## 2 安装 MaxKB 
 
-:::note
 
 进入应用商店应用列表，在【AI/大模型】分类下找到 MaxKB 应用进行安装。
-:::
 
-![1panel-maxkb](/img/maxkb/index/1panel_maxkb.jpg)    
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/1panel_maxkb.jpg" alt="图 2  1Panel 应用商店中的 MaxKB 应用" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  1Panel 应用商店中的 MaxKB 应用</div>
+
 
 在安装页面配置 MaxKB 应用参数：
 
@@ -31,20 +30,20 @@ title: 1Panel 安装
 - CPU 限制：MaxKB 应用可以使用的 CPU 核心数。   
 - 内存限制：MaxKB 应用可以使用的内存大小。    
 - 端口外部访问：MaxKB 应用可以使用 IP:PORT 进行访问（MaxKB 应用必须勾选外部端口访问）。
-:::
 
-![maxkb-setting](/img/maxkb/index/maxkb_setting.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/maxkb_setting.jpg" alt="图 3  MaxKB 应用安装参数设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  MaxKB 应用安装参数设置</div>
+
 
 点击确认开始安装，页面自将动跳转到已安装应用列表，等待 MaxKB 应用状态变为已启动。
-:::
 
-![maxkb启动](/img/maxkb/index/maxkb-start.jpg)    
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/maxkb-start.jpg" alt="图 4  maxkb启动" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  maxkb启动</div>
 
 ## 3 访问 MaxKB 
 
-:::note
 
 安装成功后，通过浏览器访问如下页面登录 MaxKB：   
 
@@ -55,6 +54,7 @@ title: 1Panel 安装
 ``` 
 
 为了安全，admin 第一次登录时将要求修改默认密码，修改密码后，重新登录系统即可使用 MaxKB。
-:::
 
-![登录成功](/img/maxkb/index/login.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/login.jpg" alt="图 5  登录成功" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  登录成功</div>

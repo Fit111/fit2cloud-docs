@@ -4,14 +4,11 @@ title: 在线安装
 
 ## 1 部署要求
     
-:::note
 
 如果用于生产环境，离线安装是官方推荐的安装方式。
-:::
 
 ### 1.1 服务器配置
 
-:::note
 
 **部署服务器要求：**
 
@@ -20,14 +17,14 @@ title: 在线安装
 * 磁盘空间：100GB
 
 **提示：Docker 版本太低可能会导致安装失败，建议使用安装包内的 Docker，或者使用 v26.0.0 版本及以上的 Docker。**
-:::
 
 ### 1.2 端口要求
 
-:::note
 
 在线部署 MaxKB 需要开通的访问端口说明如下：
-:::
+
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  在线部署访问端口说明</div>
 
 | 端口     | 作用       | 说明                        |
 |--------|:---------|:--------------------------|
@@ -36,7 +33,6 @@ title: 在线安装
 
 ## 2 在线快速部署
 
-:::note
 
 在配置 Docker 环境的操作系统中，仅需执行以下命令即可一键完成 MaxKB 的安装：
 ```
@@ -55,11 +51,9 @@ http://目标服务器 IP 地址:8080
 用户名：admin
 默认密码：MaxKB@123..
 ```
-:::
 
 ## 3 在线升级
 
-:::note
 
 **注意：升级前请先对数据[进行备份](./backup)。**
 
@@ -73,11 +67,11 @@ docker pull registry.fit2cloud.com/maxkb/maxkb
 ```
 docker inspect maxkb
 ```
-:::
 
-![获取pgsql目录](/img/maxkb/index/mount_pgsqldir2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/mount_pgsqldir2.png" alt="图 1  获取pgsql目录" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  获取pgsql目录</div>
+
 
 （3）删除正在运行的、旧版本的 MaxKB 容器
 
@@ -92,4 +86,7 @@ docker rm -f maxkb
 ```
  docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb registry.fit2cloud.com/maxkb/maxkb
 ```
-:::
+
+
+
+

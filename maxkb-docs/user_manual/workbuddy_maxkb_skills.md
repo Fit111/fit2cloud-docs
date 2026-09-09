@@ -3,12 +3,13 @@ title: WorkBuddy + MaxKB 技能
 ---
 
 ## 一、介绍
-:::note
 
 WorkBuddy 是 AI 智能体开发平台，通过「MaxKB 技能」（maxkb-platform-pro），可将 MaxKB 平台的常见操作收敛为自然语言指令。用户在 WorkBuddy 对话框中以一句话描述需求，技能自动识别意图并调用 MaxKB 接口完成操作，无需记忆命令或 API 细节。
 
 本技能将 MaxKB 常见运维操作收敛为四大能力：
-:::
+
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  技能四大能力说明</div>
 
 | 能力 | 说明 |
 |------|------|
@@ -34,7 +35,6 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 
 ### 2.1 前置条件
 
-:::note
 
 安装并执行本指南任一项操作前，应确认下列条件均已满足：
 
@@ -42,11 +42,9 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 - 本机可正常访问内网 MaxKB 地址；
 - 操作人员持有 MaxKB 平台账号（用于在后台核对结果）。
 - MaxKB 连接信息（地址与 API Key）通常由管理员预先配置到技能中。如未配置，首次使用时 WorkBuddy 会提示提供。
-:::
 
 ### 2.2 下载与安装
 
-:::note
 
 本技能以 ZIP 安装包形式提供：[maxkb-platform-pro-skills](https://maxkb-apps-1323865188.cos.ap-shanghai.myqcloud.com/maxkb-platform-pro.zip)
 
@@ -59,26 +57,25 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 5. 等待安装完成，在「我安装的」列表中确认技能已出现。
 
 **预期结果**：「我安装的」技能列表中可见 maxkb-platform-pro，技能描述显示「WorkBuddy 与 MaxKB v2 对接的统一操作入口」。
-:::
 
-![导入技能](/img/maxkb/Skills/workbuddy_import_skill.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_import_skill.png" alt="图 1  导入技能" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  导入技能</div>
 
 ## 三、使用 Skill
 
 ### 3.1 调用方式
 
-:::note
 
 安装完成后，在对话窗口中通过 + 技能即可调用。
-:::
-![调用技能](/img/maxkb/Skills/workbuddy_invoke_skill.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_invoke_skill.png" alt="图 2  调用技能" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  调用技能</div>
 
 ## 四、典型场景
 
-:::note
 
 以下列出 4 个典型场景，作为指令编写参考。实际操作时按需求调整指令即可，以下为示例而非固定模板。
-:::
 
 ### 4.1 把文件上传到知识库
 
@@ -88,36 +85,47 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 
     执行效果：自动新建知识库 → 上传文档 → 智能分段 → 写入知识库。
 
-![WorkBuddy 侧：上传完成，显示新建知识库信息](/img/maxkb/Skills/workbuddy_kb_upload.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_kb_upload.png" alt="图 3  WorkBuddy 侧：上传完成，显示新建知识库信息" />
 
-![MaxKB 后台：确认文档已入库](/img/maxkb/Skills/workbuddy_kb_doc.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  WorkBuddy 侧：上传完成，显示新建知识库信息</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_kb_doc.png" alt="图 4  MaxKB 后台：确认文档已入库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  MaxKB 后台：确认文档已入库</div>
 
 ### 4.2 生成使用报表
 
     执行效果：从 MaxKB 后台采集统计 → 生成 HTML 看板 + Excel 明细 → 在 WorkBuddy 中呈现。
 
-![MaxKB 报表显示](/img/maxkb/Skills/workbuddy_show.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_show.png" alt="图 5  MaxKB 报表显示" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  MaxKB 报表显示</div>
 
 ### 4.3 创建智能体
 
     执行效果：创建 WORK_FLOW 工作流智能体 → 绑定知识库 → 发布上线。
 
-![创建高级（工作流）智能体（WorkBuddy 侧）](/img/maxkb/Skills/workbuddy_create_agent.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_create_agent.png" alt="图 6  创建高级（工作流）智能体（WorkBuddy 侧）" />
 
-![MaxKB 后台：新建智能体的工作流画布](/img/maxkb/Skills/workbuddy_workflow_editor.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  创建高级（工作流）智能体（WorkBuddy 侧）</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_workflow_editor.png" alt="图 7  MaxKB 后台：新建智能体的工作流画布" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  MaxKB 后台：新建智能体的工作流画布</div>
 
 ### 4.4 向智能体提问
 
     执行效果：智能体检索知识库 → AI 生成回答 → 回答标注引用来源。
 
-![MaxKB 后台：向智能体提问并查看回答](/img/maxkb/Skills/workbuddy_maxkb_chat1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_maxkb_chat1.png" alt="图 8  MaxKB 后台：向智能体提问并查看回答" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  MaxKB 后台：向智能体提问并查看回答</div>
 
 ## 五、总结
 
-:::note
 
 本技能将 MaxKB 平台的常见运维操作收敛为自然语言指令，用户无需记忆命令或 API 细节，只需在 WorkBuddy 对话框中描述需求即可。以下是常用指令速查表：
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  常用指令速查</div>
 
 | 需求 | 推荐指令（示例） |
 |------|----------------|
@@ -128,8 +136,10 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 | 创建可查文档的智能体 | `@maxkb-platform-pro 创建一个高级智能体，用于查询 XX 文档` |
 | 向智能体提问 | `@maxkb-platform-pro XX 要求是什么` |
 
-:::note
 
 在指令中应使用自然、明确的语言描述「要做什么」（含目标对象与期望结果），由 WorkBuddy 将其转化为对 MaxKB 的具体操作。指令越明确，执行结果越准确。
-:::
+
+
+
+
 

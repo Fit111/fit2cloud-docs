@@ -4,16 +4,15 @@ title: 用户管理
 
 ## 1 用户列表
 
-:::note
 
 支持多用户体系，系统管理员可以创建及管理用户。
-:::
 
-![用户列表](/img/maxkb/system/userlist.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/userlist.png" alt="图 1  用户管理列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  用户管理列表</div>
 
 ## 2 创建用户
 
-:::note
 
 支持系统管理员创建用户：
 
@@ -26,72 +25,73 @@ title: 用户管理
     - 用户可以设置多个角色，至少设置 1 个角色；
     - 选择普通用户和工作空间角色时需要设置工作空间；
     - 选择系统管理员角色无工作空间选项。
-:::
 
-![用户列表](/img/maxkb/system/create_user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_user.png" alt="图 2  创建用户对话框" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建用户对话框</div>
+
 
 当创建用户为普通用户或继承普通用户的角色时，支持设置默认权限，即对所选工作空间下所有资源的默认权限进行设置。
-:::
-![用户列表](/img/maxkb/system/create_user1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_user1.png" alt="图 3  创建用户默认权限" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  创建用户默认权限</div>
 
 ## 3 设置角色
 
-:::note
 
 勾选用户，点击【设置角色】，可批量给用户设置角色。
-:::
 
-![设置角色](/img/maxkb/system/set_user_role.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/set_user_role.png" alt="图 4  设置角色" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  设置角色</div>
 
 ## 4 编辑用户
 
-:::note
 
 用户名不可以编辑，其他属性均可以编辑。
-:::
 
-![用户列表](/img/maxkb/system/edit_userinfo.png)
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/edit_userinfo.png" alt="图 5  编辑用户信息" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  编辑用户信息</div>
+
 
 用户状态已禁用，则用户无法登录 MaxKB。
-:::
 
-![用户列表](/img/maxkb/system/forbid_user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/forbid_user.png" alt="图 6  禁用用户状态" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  禁用用户状态</div>
 
 ## 5 重置密码
 
-:::note
 
 系统管理员可以给每个用户修改密码，在用户列表中，点击【修改密码】，弹出修改密码对话框，保存后修改成功。
-:::
 
-![用户列表](/img/maxkb/system/edit_usermessges.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/edit_usermessges.png" alt="图 7  重置用户密码" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  重置用户密码</div>
 
 ## 6 删除用户
 
-:::note
 
 在用户列表中，单独点击【删除】按钮，弹出提示框，确认后仅删除当前用户，不影响其创建的工作空间资源。  
 **注意**：系统内置 admin 用户不能被删除。
-:::
 
-![用户列表](/img/maxkb/system/delete_user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/delete_user.png" alt="图 8  删除单个用户" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  删除单个用户</div>
+
 
 勾选用户，点击【删除】按钮，弹出提示框，确认可批量删除用户，不影响其创建的工作空间资源。
-:::
 
-![用户列表](/img/maxkb/system/delete_user1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/delete_user1.png" alt="图 9  批量删除用户" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  批量删除用户</div>
 
 ## 7 查询用户
 
-:::note
 
 支持通过用户名、姓名、邮箱、状态以及用户来源进行用户搜索。
-:::
 
-![用户列表](/img/maxkb/system/search_user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/search_user.png" alt="图 10  查询用户" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  查询用户</div>

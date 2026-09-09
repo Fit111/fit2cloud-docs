@@ -2,15 +2,12 @@
 title: 通过知识库工作流构建MaxKB图、音、视多模态知识
 ---
 
-:::note
 
 借助 MaxKB 开源企业级智能体平台的工作流知识库功能，企业可以构建端到端的多模态知识处理流水线，让业务系统自动识别文件类型并调用相应的处理流程。
 
 系统从多模态文件中提取结构化信息，根据内容逻辑自动切分知识片段，进一步将文本及对应的图片、音频、视频源文件统一存储，最终实现跨模态的语义相似度检索，使非结构化的知识得以高效整合与复用。
-:::
 
 ## 1 方案设计
-:::note
 
 图、音、视多模态工作流知识库的核心是实现用户上传多类型文件（图片/音频/视频）的循环处理、内容提取与知识库导入。
 
@@ -33,29 +30,29 @@ title: 通过知识库工作流构建MaxKB图、音、视多模态知识
  ④ 编写 Python 函数，将上述内容提取结果、原件资源信息传入函数，汇总生成符合知识库导入规范的分段文本/数据结构。
 
 （5）知识库导入：调用MaxKB知识库导入节点，将数据导入知识库，完成文件的最终处理任务。
-:::
 
-![multimodal](/img/maxkb/FAQ/MaxKB%E7%9F%A5%E8%AF%86%E5%BA%93%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9F%A5%E8%AF%86%E5%BA%93.jpeg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%E7%9F%A5%E8%AF%86%E5%BA%93%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%A8%A1%E6%80%81%E7%9F%A5%E8%AF%86%E5%BA%93.jpeg" alt="图 1  MaxKB 知识库工作流构建多模态知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  MaxKB 知识库工作流构建多模态知识库</div>
 
 ## 2 实现逻辑
 
-:::note
 
 MaxKB 图、音、视多模态工作流知识库完整逻辑如图所示：
-:::
 
-![workflow](/img/maxkb/FAQ/workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/workflow.png" alt="图 2  多模态工作流知识库完整实现逻辑" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  多模态工作流知识库完整实现逻辑</div>
 
 ### 2.1 图片工作流内部逻辑
 
-:::note
 
 在循环体中，通过函数获得提取图片文件的 data 参数，用图片理解节点理解图片内容，并用函数为该文件生成可直接渲染的图片路径标签。用指定回复节点将二者拼接，通过函数将提取结果与 file_id、name 整合为标准化的结构，在分段节点中按需求分段后写入知识库。
-:::
 
-![picture](/img/maxkb/FAQ/picture_workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/picture_workflow.png" alt="图 3  图片工作流内部逻辑" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  图片工作流内部逻辑</div>
+
 
 原图路径生成及渲染函数：
 
@@ -70,9 +67,7 @@ def image(data):
         # 3. 异常处理，返回错误信息
         return [f"【错误】处理图片URL失败：{str(e)}"]
 ```
-:::
 
-:::note
 
 图片理解组件提示词:
 ```
@@ -90,9 +85,7 @@ def image(data):
 *   将第二步中生成的“核心主题”句子，作为该分段的**一级标题**（使用一个 `#`）。
 *   在标题下方，依次呈现“图片内容”和“图片目的说明”作为正文内容。
 ```
-:::
 
-:::note
 
 生成“文档分段”组件所能接收的格式:
 ``` 
@@ -106,18 +99,16 @@ def all_content(content: str,content_name: str,content_id: str) -> str:
     # 添加返回语句，将构造的列表返回
     return result
 ```
-:::
 
 ### 2.2 音频工作流内部逻辑
 
-:::note
 
 在循环体中，通过函数获取语音文件的 data 参数，用语音转文本节点将语音转为文本，并用函数为该文件生成 Markdown 语法的路径字符串。用指定回复节点将二者进行拼接，通过函数将提取结果与元数据信息 file_id、name整合为标准化结构，在分段节点中按需求分段后写入知识库。
-:::
 
-![voice](/img/maxkb/FAQ/voice_workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/voice_workflow.png" alt="图 4  音频工作流内部逻辑" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  音频工作流内部逻辑</div>
+
 
 语音源文件生成及渲染函数：
 ``` 
@@ -131,18 +122,16 @@ def voice(data):
         # 2. 异常处理，返回错误信息
         return [f"【错误】处理语音URL失败：{str(e)}"]
 ```
-:::
 
 ### 2.3 视频工作流内部逻辑
 
-:::note
 
 在循环体中，通过函数获取视频文件的 data 参数，用视频理解节点理解视频内容，并且用函数为该文件生成 Markdown 语法的路径字符串。用指定回复节点将二者进行拼接，通过函数将提取结果与元数据信息 file_id、name 整合为标准化结构，在分段节点中按需求分段后写入知识库。
-:::
 
-![video](/img/maxkb/FAQ/video_workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/video_workflow.png" alt="图 5  视频工作流内部逻辑" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  视频工作流内部逻辑</div>
+
 
 视频源文件生成及渲染函数：
 ```
@@ -157,45 +146,42 @@ def video(data):
         # 2. 异常处理，返回错误信息
         return [f"【错误】处理视频URL失败：{str(e)}"]
 ```
-:::
 
 ## 3 效果展示
 
 ### 3.1 知识库导入效果展示
 
-:::note
 
 在MaxKB图、音、视多模态知识库工作流搭建完成后，以上传图片、音频、视频三种格式文件为例，验证最终实现效果。
 
 任务执行完成后，进入 MaxKB 知识库后台进行查看，可以观察到三种类型文件均实现了“内容提取+源文件关联”的完整导入效果。
-:::
 
-:::note
 
 图片文件：知识库中清晰呈现图片理解生成的图片内容解读，下方附带图片预览。
-:::
 
-![picture](/img/maxkb/FAQ/picture_result.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/picture_result.png" alt="图 6  图片文件导入知识库效果" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  图片文件导入知识库效果</div>
+
 
 音频文件：知识库中呈现完整的语音转文本结果，下方附有显示可直接播放的音频控件。
-:::
 
-![voice](/img/maxkb/FAQ/voice_result.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/voice_result.png" alt="图 7  音频文件导入知识库效果" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  音频文件导入知识库效果</div>
+
 
 视频文件：知识库中包含视频简介和展示固定尺寸的视频播放窗口，支持播放、暂停、进度调节等基础操作。
-:::
 
-![video](/img/maxkb/FAQ/video_result.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/video_result.png" alt="图 8  视频文件导入知识库效果" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  视频文件导入知识库效果</div>
 
 ### 3.2 应用问答效果展示
 
-:::note
 
 为进一步验证多模态知识库的实用价值，我们搭建简单的智能问答应用，并关联此多模态知识库，通过自然语言提问测试回答效果。
-:::
 
-![video](/img/maxkb/FAQ/qa_result.jpeg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/qa_result.jpeg" alt="图 9  多模态知识库问答效果展示" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  多模态知识库问答效果展示</div>

@@ -2,14 +2,13 @@
 title: 命中测试
 ---
 
-:::note
 
 知识库命中测试是对提问进行提前验证，点击【命中测试】，输入测试问题，系统在当前知识库中向量检索与问题相关的分段，然后按照相似度和返回 Top 分段数等参数返回命中结果，可以根据命中测试返回分段内容，对分段进行再次编辑或添加关联问题，以进一步提升和优化回答效果。
-:::
 
-![命中测试](/img/maxkb/dataset/hittesting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/hittesting.png" alt="图 1  命中测试主界面" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  命中测试主界面</div>
+
 
 **参数设置说明**
 
@@ -19,7 +18,7 @@ title: 命中测试
     - 混合检索：同时执行全文检索和向量检索，再进行重排序，从两类查询结果中选择匹配用户问题的最佳结果。
 * **相似度**：相似度越高代表问题和分段的相关性越强。    
 * **返回分段数 TOP** ： 返回符合条件的 Top N 个分段。
-:::
 
-<img alt="命中测试" src="/img/maxkb/dataset/hittesting_rule.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/hittesting_rule.png" alt="图 2  命中测试参数配置" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  命中测试参数配置</div>
