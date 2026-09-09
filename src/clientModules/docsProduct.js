@@ -1,3 +1,5 @@
+const DE_CAPTION_RE = /^(图|表)\s+\d+/;
+
 function setDocsProduct(pathname) {
   const p = pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
   let product = '';
@@ -20,8 +22,31 @@ function setDocsProduct(pathname) {
   }
 }
 
+function markDeCaptions() {
+  if (typeof document === 'undefined') {
+    return;
+  }
+  if (document.documentElement.dataset.docsProduct !== 'dataease') {
+    return;
+  }
+  document.querySelectorAll('.theme-doc-markdown p').forEach((p) => {
+    if (p.childElementCount !== 0) {
+      return;
+    }
+    const text = (p.textContent || '').trim();
+    if (DE_CAPTION_RE.test(text)) {
+      p.classList.add('de-caption');
+    }
+  });
+}
+
 export function onRouteDidUpdate({location}) {
   setDocsProduct(location.pathname);
+  markDeCaptions();
+  if (typeof requestAnimationFrame === 'function') {
+    requestAnimationFrame(markDeCaptions);
+  }
 }
 
 setDocsProduct();
+markDeCaptions();

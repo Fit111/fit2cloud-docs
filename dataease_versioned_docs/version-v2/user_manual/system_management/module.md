@@ -2,7 +2,7 @@
 title: 工具箱
 ---
 
-<img alt="百宝箱入口" src="/img/dataease-v2/system_management/百宝箱.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![百宝箱入口](/img/dataease-v2/system_management/百宝箱.png)
 
 ##  1 模板管理
 
@@ -14,13 +14,13 @@ title: 工具箱
 可以通过点击【添加分类】按钮，给模板新建分类，为模板进行分组分类，可以更方便的对模板进行管理和查找。
 :::
 
-<img alt="模板管理界面" src="/img/dataease-v2/system_management/模板管理界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板管理界面](/img/dataease-v2/system_management/模板管理界面.png)
 :::note
 
 - 支持批量修改模板分类。
 - 支持批量删除模板。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-1.PNG)
 
 ### 1.2 添加模板
 
@@ -29,9 +29,9 @@ title: 工具箱
 模板来源于仪表板、数据大屏的转换，可在仪表板、数据大屏预览界面"保存为模板"。如下图所示，也可点击【导入模板】，上传 .DET 结尾模板文件，添加模板。
 :::
 
-<img alt="导出为模板" src="/img/dataease-v2/system_management/导出为模板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="上传模板" src="/img/dataease-v2/system_management/上传模板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/> 
-<img alt="模板导入成功" src="/img/dataease-v2/system_management/模板导入成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![导出为模板](/img/dataease-v2/system_management/导出为模板.png)
+![上传模板](/img/dataease-v2/system_management/上传模板.png) 
+![模板导入成功](/img/dataease-v2/system_management/模板导入成功.png)
 
 ### 1.3 添加应用
 
@@ -46,28 +46,28 @@ title: 工具箱
 关于模板文件与应用文件的区别可参考：https://kb.fit2cloud.com/?p=211。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能2.png)
 :::note
 
 可在【模板管理】中上传应用。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能3.png)
 :::note
 
 使用模板新建仪表板或数据大屏时可选择使用存在的应用文件。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能4.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能5.png)
 :::note
 
 使用应用创建的资源，会自动弹出相关配置项，需要用户进一步填写。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能6.png)
 
 ## 2 操作日志
 
@@ -75,12 +75,12 @@ title: 工具箱
 
 系统管理员可以查看所有日志，包括组织管理员在内的其他用户只能查看自己的所有日志，包括该用户所在的所有组织下的操作日志。
 :::
-<img alt="操作日志入口" src="/img/dataease-v2/newimg/操作日志入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志入口](/img/dataease-v2/newimg/操作日志入口.png)
 
 :::note
 
 可根据操作类型、操作用户、所属组织、操作时间等查询系统操作日志。
 :::
-<img alt="操作日志入口" src="/img/dataease-v2/newimg/操作日志1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志入口](/img/dataease-v2/newimg/操作日志1.png)
 
-<img alt="操作日志入口" src="/img/dataease-v2/newimg/操作日志2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志入口](/img/dataease-v2/newimg/操作日志2.png)

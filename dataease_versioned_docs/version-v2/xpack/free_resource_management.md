@@ -14,6 +14,6 @@ title: 游离资源管理
 - 资源删除：支持一键删除和单资源删除操作。删除前会弹出确认提示，避免误操作；删除单个资源时，会显示该资源的血缘关系。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增游离资源管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增游离资源管理.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增游离资源管理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增游离资源管理2.png)

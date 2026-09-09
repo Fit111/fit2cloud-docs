@@ -9,15 +9,15 @@ title: v2.10.2
 
 新增了新加坡和深圳大鹏新区等地区的详细地图支持。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/更新地图文件1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/更新地图文件1.PNG)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/更新地图文件2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/更新地图文件2.PNG)
 
 ### 1.2 表格条件样式支持动态值设定
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表格条件样式支持动态值设定1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表格条件样式支持动态值设定1.PNG)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表格条件样式支持动态值设定2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表格条件样式支持动态值设定2.PNG)
 
 ### 1.3 表格自适应模式铺满组件
 :::note
@@ -25,15 +25,15 @@ title: v2.10.2
 明细表和汇总表列宽的【自适应】选项，会根据内容宽度比例自动调整组件容器宽度，实现组件的全宽铺满显示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表格自适应模式铺满组件.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表格自适应模式铺满组件.PNG)
 
 ### 1.4 查询组件支持自定义背景图片
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持自定义背景图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持自定义背景图片.png)
 
 ### 1.5 查询组件支持在年月日时间参数下选择时间粒度为年、年月或年月日
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持在年月日时间参数下选择时间粒度为年、年月或年月日.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持在年月日时间参数下选择时间粒度为年、年月或年月日.png)
 
 ### 1.6 时间范围组件支持分别绑定开始时间和结束时间参数
 :::note
@@ -41,13 +41,13 @@ title: v2.10.2
 当选择时间类型参数时，系统默认设置为时间类型。点击【时间】后的编辑按钮，可以进一步选择该参数为开始时间或结束时间。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png)
 
 ### 1.7 查询组件支持配置外部显示或隐藏精确匹配和模糊匹配
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持配置外部显示或隐藏精确匹配和模糊匹配%20[图片].png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持配置外部显示或隐藏精确匹配和模糊匹配%20[图片].png)
 
 ### 1.8 查询组件支持数值区间
 :::note
@@ -57,13 +57,13 @@ title: v2.10.2
 - 应用场景：适用于需要在特定数值范围内进行数据筛选的场景，例如筛选预算、实际金额等数值类型字段。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持数值区间1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持数值区间1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持数值区间2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持数值区间2.png)
 
 ### 1.9 查询组件支持配置清空和重置按钮的颜色
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持配置清空和重置按钮的颜色%20[图片].png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持配置清空和重置按钮的颜色%20[图片].png)
 
 ### 1.10 查询组件支持自定义提示词内容设置
 :::note
@@ -71,21 +71,21 @@ title: v2.10.2
 可以针对每个查询条件设置不同的提示词，同时支持文字颜色和大小的自定义设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持自定义提示词内容设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持自定义提示词内容设置.png)
 
 ### 1.11 图表过滤条件的日期字段新增“为空/不为空”筛选选项
 
-<img alt="更新1" src="/img/dataease-v2/newimg/图表过滤条件的日期字段新增为空不为空筛选选项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/图表过滤条件的日期字段新增为空不为空筛选选项.png)
 
 ### 1.12 柱状图均支持圆角设置（不包括瀑布图、K 线图）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/柱状图均支持圆角设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/柱状图均支持圆角设置.png)
 
 ### 1.13 堆叠柱状图的总计标签与主标签支持单独控制
 
-<img alt="更新1" src="/img/dataease-v2/newimg/堆叠柱状图的总计标签与主标签支持单独控制1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/堆叠柱状图的总计标签与主标签支持单独控制1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/堆叠柱状图的总计标签与主标签支持单独控制2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/堆叠柱状图的总计标签与主标签支持单独控制2.png)
 
 ### 1.14 符号地图现支持自定义气泡大小范围
 :::note
@@ -94,7 +94,7 @@ title: v2.10.2
 - 【气泡大小】中未拖入字段时，【样式】中的【大小】滑块将保持启用，允许手动统一调整气泡大小。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/符号地图现支持自定义气泡大小范围.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/符号地图现支持自定义气泡大小范围.png)
 
 ### 1.15 Tab 组件操作优化
 :::note
@@ -102,32 +102,32 @@ title: v2.10.2
 支持从上部拖动组件移出 Tab 组件。当图表从 Tab 组件中移出后，图表将自动放置在鼠标当前位置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/Tab%20组件操作优化.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/Tab%20组件操作优化.gif)
 
 ### 1.16 地图和气泡地图支持区域填充功能
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图和气泡地图支持区域填充功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图和气泡地图支持区域填充功能.png)
 
 ### 1.17 新增图片组组件
 :::note
 
 支持简单的图片上传和轮播功能。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增图片组组件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增图片组组件1.png)
 
 :::note
 
 图片组还支持与指定数据集关联设置条件样式，根据数据集的变化展示不同的图片。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增图片组组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/新增图片组组件.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增图片组组件2.png)
+![更新1](/img/dataease-v2/newimg/新增图片组组件.gif)
 
 ### 1.18 明细表和汇总表支持行列冻结
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表和汇总表支持行列冻结.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表和汇总表支持行列冻结.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表和汇总表支持行列冻结.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表和汇总表支持行列冻结.gif)
 
 ### 1.19 明细表和汇总表支持隐藏字段
 :::note
@@ -136,7 +136,7 @@ title: v2.10.2
 
 - 适用于当用户需要使用特定字段进行排序，但又不希望这些字段在表中显示的情况。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表和汇总表支持隐藏字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表和汇总表支持隐藏字段.png)
 
 ### 1.20 地图支持自定义图例区间
 :::note
@@ -147,9 +147,9 @@ title: v2.10.2
 - 自定义区间：用户可以手动设置每个图例的区间值，实现更灵活的展示效果。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义图例区间1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义图例区间1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义图例区间2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义图例区间2.png)
 
 ### 1.21 支持自定义地图风格
 :::note
@@ -158,51 +158,51 @@ title: v2.10.2
 登录高德地图网站，访问高德地图的样式编辑页面：https://geohub.amap.com/mapstyle/index。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格1.png)
 
 :::note
 
 创建自定义地图：在已有地图的基础上，选择“标准地图”作为模板，进入编辑界面。可在地图编辑界面中找到相应的资源选项，通过改变显隐、颜色纹理等来更改地图元素。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格2.png)
 
 :::note
 
 在发布后的自定义地图页面，点击“分享”按钮。复制生成的地图访问 URL，用于后续的地图配置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格4.png)
 
 :::note
 
 登录高德地图开发者控制台：https://console.amap.com/dev/key/app。在【我的应用】中找到对应的 API Key 和安全密钥。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格5.png)
 
 :::note
 
 如果没有应用，可以新建应用和添加 Web 端(JS API) 的 Key 获取。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格6.png)
 
 :::note
 
 在 DataEase 的【系统设置】页面，将从高德地图获取的 API Key 和安全密钥填入相应位置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格7.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格7.png)
 
 :::note
 
 在制作在线地图时，地图风格选择【自定义】，URL 填入高德自定义地图分享的 URL 即可。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/自定义地图风格8.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/自定义地图风格8.png)
 
 ### 1.22 在线地图功能增强，支持设置标签控制、默认缩放等级和中心点
 :::note
@@ -212,11 +212,11 @@ title: v2.10.2
 - 中心点：支持设置地图的默认中心点经纬度（取消自适应缩放后生效），便于地图聚焦于特定区域。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/在线地图功能增强.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/在线地图功能增强.png)
 
 ### 1.23 下钻字段支持自定义显示名称和排序设置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/下钻字段支持自定义显示名称和排序设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/下钻字段支持自定义显示名称和排序设置.png)
 
 ### 1.24 标签显示支持全量和自适应两种模式
 :::note
@@ -225,11 +225,11 @@ title: v2.10.2
 - 自适应显示：标签根据布局自动调整显示，避免重叠，确保清晰度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/标签显示支持全量和自适应两种模式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/标签显示支持全量和自适应两种模式.png)
 
 ### 1.25 符号地图支持自定义符号形状
 
-<img alt="更新1" src="/img/dataease-v2/newimg/符号地图支持自定义符号形状.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/符号地图支持自定义符号形状.png)
 
 ### 1.26 表格支持用复制多个单元格的数据
 :::note
@@ -237,9 +237,9 @@ title: v2.10.2
 可通过鼠标拖动选择表格中的多个数据单元格，右键点击后即可快速复制所选数据。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表格支持用复制多个单元格的数据.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表格支持用复制多个单元格的数据.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表格支持用复制多个单元格的数据.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表格支持用复制多个单元格的数据.gif)
 
 ### 1.27 移动端支持独立样式配置
 :::note
@@ -247,37 +247,37 @@ title: v2.10.2
 仪表板组件在移动端支持独立样式配置，便于与PC端样式区分，更好地适配移动端展示需求。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持独立样式配置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持独立样式配置1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持独立样式配置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持独立样式配置2.png)
 
 ### 1.28 图表、仪表板、数据大屏支持查看资源 ID
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查看资源%20ID1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查看资源%20ID1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查看资源%20ID2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查看资源%20ID2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查看资源%20ID3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查看资源%20ID3.png)
 
 ### 1.29 明细表支持单元格合并
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持单元格合并.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持单元格合并.png)
 
 ## 2 数据准备
 
 ### 2.1 数据集的批量管理中字段增加表名列
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据集的批量管理中字段增加表名列.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据集的批量管理中字段增加表名列.png)
 
 ### 2.2 支持 Elasticsearch 数据源
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持%20Elasticsearch%20数据源1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持%20Elasticsearch%20数据源1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持%20Elasticsearch%20数据源2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持%20Elasticsearch%20数据源2.png)
 
 ### 2.3 增加数据源状态显示
 
-<img alt="更新1" src="/img/dataease-v2/newimg/增加数据源状态显示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/增加数据源状态显示.png)
 
 ### 2.4 调整替换 Excel 数据源时 sheet 变化的处理方式
 
@@ -297,19 +297,19 @@ title: v2.10.2
 在创建或更新数据类型的填报任务时，在填报任务的【模板设置】中支持设置校验字段及其规则。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则2.png)
 
 :::note
 
 目前支持的规则之间的逻辑关系为“与”（AND）。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则1.png)
 
 :::note
 
 当用户在界面中填写数据时，系统会实时检查每个字段的输入是否符合已设置的校验规则。如果发现不符合要求的输入，系统会进行提示。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报添加任务时支持设置校验字段及相应的规则3.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 阈值告警规则支持动态值设置
@@ -317,13 +317,13 @@ title: v2.10.2
 
 数值类型字段则支持二次计算选项，例如最小值、最大值和平均值。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/阈值告警规则支持动态值设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/阈值告警规则支持动态值设置1.png)
 
 :::note
 
 时间类型字段的动态值类似于查询组件中的时间组件，能够根据图表中时间字段的显示格式自动设定时间粒度。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/阈值告警规则支持动态值设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/阈值告警规则支持动态值设置2.png)
 
 ## 4 系统设置
 ### 4.1 新增全局禁用分享链接设置
@@ -331,37 +331,37 @@ title: v2.10.2
 
 系统设置支持全局禁用分享链接功能。禁用后，所有在此之前创建的分享链接将无法访问。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增全局禁用分享链接设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增全局禁用分享链接设置1.png)
 
 :::note
 
 禁用分享后访问分享链接将显示以下页面：
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增全局禁用分享链接设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增全局禁用分享链接设置2.png)
 
 ### 4.2 新增全局分享链接有效期和密码必填设置
 :::note
 
 系统设置支持分享链接的有效期和密码必填设置。开启该选项后，之前创建的所有分享链接将无法访问。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置1.png)
 
 :::note
 
 创建分享链接时，系统将提示有效期和密码为必填项。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置2.png)
 
 :::note
 
 未设置有效期和密码的分享链接访问时会显示以下页面：
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增全局分享链接有效期和密码必填设置3.png)
 
 ### 4.3 默认文案跟随外观配置网站名称（XPack）
 :::note
 
 页面相关文案也跟随网站名称设置。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/默认文案跟随外观配置网站名称.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/默认文案跟随外观配置网站名称.png)
 

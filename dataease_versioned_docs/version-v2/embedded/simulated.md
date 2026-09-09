@@ -26,7 +26,7 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 ## 2 同域模拟登陆
 
 ### 2.1 流程描述
-<img alt="同域.pic.jpg" src="/img/dataease-v2/embedded/同域.pic.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![同域.pic.jpg](/img/dataease-v2/embedded/同域.pic.jpg)
 :::note
 
 1. 用户登录 A 系统
@@ -44,14 +44,14 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 
  参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 :::
-<img alt="5.2模拟登录（2）.png" src="/img/dataease-v2/embedded/5.2模拟登录（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="5.2模拟登录（3）.png" src="/img/dataease-v2/embedded/5.2模拟登录（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.2模拟登录（2）.png](/img/dataease-v2/embedded/5.2模拟登录（2）.png)
+![5.2模拟登录（3）.png](/img/dataease-v2/embedded/5.2模拟登录（3）.png)
 
 ## 3  跨域模拟登陆
 
 ### 3.1  流程描述
 
-<img alt="跨域.pic.jpg" src="/img/dataease-v2/embedded/跨域.pic.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跨域.pic.jpg](/img/dataease-v2/embedded/跨域.pic.jpg)
 :::note
 
 1. 用户登录 A 系统
@@ -72,8 +72,8 @@ Nginx 通过特定路径拦截到请求重定向至自定义的 HTML 页面，�
    
 参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 :::
-<img alt="5.2模拟登录（5）.png" src="/img/dataease-v2/embedded/5.2模拟登录（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="5.2模拟登录（6）.png" src="/img/dataease-v2/embedded/5.2模拟登录（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.2模拟登录（5）.png](/img/dataease-v2/embedded/5.2模拟登录（5）.png)
+![5.2模拟登录（6）.png](/img/dataease-v2/embedded/5.2模拟登录（6）.png)
 
 ### 3.3  Nginx配置
 :::note

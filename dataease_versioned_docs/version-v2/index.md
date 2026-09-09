@@ -19,7 +19,7 @@ title: 产品介绍
 **点击购买：**
 [《数据可视化分析与实践》](https://item.jd.com/10207058297099.html?spmTag=YTAyMTkuYjAwMjM1Ni5jMDAwMDQ2ODkuc2VhcmNoX2NvbmZpcm0lMkNhMDI0MC5iMDAyNDkzLmMwMDAwNDAyNy4xNiUyM3NrdV9jYXJk&pvid=cca9a55613874d1c8bcb78f3bf337f5a)
 <br />
-<img alt="书籍封面" src="/img/dataease-v2/newimg/ad/数据可视化分析与实践书籍封面.jpg" width="1024" style={{maxWidth:'100%', height:'auto'}}/>
+![书籍封面](/img/dataease-v2/newimg/ad/数据可视化分析与实践书籍封面.jpg)
 :::
 
 :::note
@@ -28,11 +28,11 @@ DataEase 是开源的数据可视化分析工具，帮助用户快速分析数�
 DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
 :::
 
-<img alt="功能架构图" src="/img/dataease-v2/newimg/product_acceptance/功能架构图.jpg" width="1024" style={{maxWidth:'100%', height:'auto'}}/>
+![功能架构图](/img/dataease-v2/newimg/product_acceptance/功能架构图.jpg)
 
 ## 1 界面展示
 
-<img alt="界面展示图" src="/img/dataease-v2/newimg/product_acceptance/界面介绍.gif" width="1024" style={{maxWidth:'100%', height:'auto'}}/>
+![界面展示图](/img/dataease-v2/newimg/product_acceptance/界面介绍.gif)
 
 ## 2 模板市场
 
@@ -41,7 +41,7 @@ DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制�
 模板市场链接地址：https://templates.dataease.cn 。
 :::
 
-<img alt="模板市场图" src="/img/dataease-v2/newimg/product_acceptance/模板市场.png" width="1024" style={{maxWidth:'100%', height:'auto'}}/>
+![模板市场图](/img/dataease-v2/newimg/product_acceptance/模板市场.png)
 
 ## 3 产品优势
 
@@ -65,7 +65,7 @@ DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制�
 
 ## 5 版本对比
 
-<img alt="版本对比图" src="/img/dataease-v2/newimg/product_acceptance/版本对比.jpg" width="1024" style={{maxWidth:'100%', height:'auto'}}/>
+![版本对比图](/img/dataease-v2/newimg/product_acceptance/版本对比.jpg)
 
 ## 6 了解更多 
 

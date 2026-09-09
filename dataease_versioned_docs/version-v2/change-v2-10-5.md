@@ -13,7 +13,7 @@ title: v2.10.5
 - 按组件比例缩放：保持组件高度与宽度的比例固定。设计阶段设置的组件高度与宽度的比例将在预览阶段严格保持不变，确保视觉一致性。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板支持画布比例和组件比例两种缩放方式设置.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板支持画布比例和组件比例两种缩放方式设置.PNG)
 
 ### 1.2 仪表板和数据大屏支持更多组件修改名称
 :::note
@@ -21,7 +21,7 @@ title: v2.10.5
 所有组件均支持通过双击组件编辑区域的名称进行改名操作。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持更多组件修改名称.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持更多组件修改名称.gif)
 
 ### 1.3 数据大屏新建图表后自动定位到屏幕中心
 :::note
@@ -29,7 +29,7 @@ title: v2.10.5
 在数据大屏中新建组件时，新组件将自动显示在屏幕中心位置，同时画布区域也会同步定位到屏幕中心。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏新建图表后自动定位到屏幕中心.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏新建图表后自动定位到屏幕中心.gif)
 
 ### 1.4  跳转设置的弹窗页面样式变更为内嵌式弹窗
 :::note
@@ -37,7 +37,7 @@ title: v2.10.5
 跳转设置的弹窗页面已优化为内嵌式 DIV 弹窗样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/跳转设置的弹窗页面样式变更为内嵌式弹窗.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/跳转设置的弹窗页面样式变更为内嵌式弹窗.gif)
 
 ### 1.5  富文本支持指标同环比功能
 :::note
@@ -45,7 +45,7 @@ title: v2.10.5
 富文本组件现已支持同环比功能，但使用该功能时需确保维度字段类型为日期类型。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/富文本支持指标同环比功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/富文本支持指标同环比功能.png)
 
 ## 2 数据准备
 
@@ -56,9 +56,9 @@ title: v2.10.5
 在计算字段编辑页面新增校验按钮，用户可在保存前对计算字段的语法有效性进行校验，确保配置正确。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/计算字段编辑页面支持语法校验功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/计算字段编辑页面支持语法校验功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/计算字段编辑页面支持语法校验功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/计算字段编辑页面支持语法校验功能2.png)
 
 ### 2.2 PostgreSQL 支持外部表功能
 :::note
@@ -86,7 +86,7 @@ OPTIONS (schema_name 'public', table_name 'books');
 
 支持对外部表数据进行单源查询及跨源查询，同时支持外部表数据的图形化展示。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/PostgreSQL%20支持外部表功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/PostgreSQL%20支持外部表功能.png)
 
 ### 2.3 数据填报单选和单选框组件支持额外关联字段查询与展示功能（XPack）
 :::note
@@ -94,18 +94,18 @@ OPTIONS (schema_name 'public', table_name 'books');
 单选和单选框组件在绑定数据源时，现支持选择添加字段描述。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能2.png)
 
 :::note
 
 在单选或下拉框中选择选项后，设置的字段描述将显示在下方。如果描述内容超过 6 个，可以点击【查看更多】以查看完整描述。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能3.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 禁止用户将资源移入【迁移资源】目录
 
-<img alt="更新1" src="/img/dataease-v2/newimg/禁止用户将资源移入【迁移资源】目录.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/禁止用户将资源移入【迁移资源】目录.png)

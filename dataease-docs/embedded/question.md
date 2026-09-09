@@ -3,24 +3,35 @@ title: 嵌入式常见问题
 ---
 
 ## 1 DIV 嵌入后，页面打开空白，浏览器控制台有跨域相关的异常报错
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（1）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（1）.png](/img/dataease/embedded/4.%20嵌入式常见问题（1）.png)
+
+图 1  嵌入式常见问题
 
 :::note
 
 解决方案：检查嵌入式应用的跨域设置，与提示报错的 origin 是否相同。
 :::
-<img alt="4. 嵌入式常见问题（2）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（2）.png](/img/dataease/embedded/4.%20嵌入式常见问题（2）.png)
+
+图 2  嵌入式常见问题
 
 ## 2 Iframe DIV 嵌入后，提示域名匹配错误
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（3）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（3）.png](/img/dataease/embedded/4.%20嵌入式常见问题（3）.png)
+
+图 3  嵌入式常见问题
 
 :::note
 
@@ -35,7 +46,10 @@ origin-list: http://localhost:8000，访问 DataEase 地址1（9080）,访问 Da
 dectl restart
 ```
 :::
-<img alt="4. 嵌入式常见问题（4）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（4）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（4）.png](/img/dataease/embedded/4.%20嵌入式常见问题（4）.png)
+
+图 4  嵌入式常见问题
 
 :::note
 
@@ -44,11 +58,15 @@ dectl restart
 :::
 
 ## 3 DIV 嵌入后，页面打开空白，浏览器控制台提示 DataEaseBi is not defined
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（5）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（5）.png](/img/dataease/embedded/4.%20嵌入式常见问题（5）.png)
+
+图 5  嵌入式常见问题
 
 :::note
 
@@ -58,7 +76,10 @@ dectl restart
 
 情况一：DataEase JS 未正确引入，如下所示，打开浏览器控制台，在 Network 页签选择 JS ，搜索 dataease 查看是否存在相关 JS 即可判断。
 :::
-<img alt="4. 嵌入式常见问题（6）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（6）.png](/img/dataease/embedded/4.%20嵌入式常见问题（6）.png)
+
+图 6  嵌入式常见问题
 
 :::note
 
@@ -66,12 +87,19 @@ dectl restart
 :::
 
 ## 4 页面提示 500，查看 DataEase 容器日志提示 token is empty for uri
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（7）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（7）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="4. 嵌入式常见问题（8）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（8）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（7）.png](/img/dataease/embedded/4.%20嵌入式常见问题（7）.png)
+
+图 7  嵌入式常见问题
+
+![4. 嵌入式常见问题（8）.png](/img/dataease/embedded/4.%20嵌入式常见问题（8）.png)
+
+图 8  嵌入式常见问题
 
 :::note
 
@@ -79,11 +107,15 @@ dectl restart
 :::
 
 ## 5 DIV 嵌入后，页面打开空白，浏览器控制台无任何报错，且 JS 加载等均正常
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（9）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（9）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（9）.png](/img/dataease/embedded/4.%20嵌入式常见问题（9）.png)
+
+图 9  嵌入式常见问题
 
 :::note
 
@@ -91,11 +123,15 @@ dectl restart
 :::
 
 ## 6 DIV 嵌入时创建数据源弹框超出 DIV 范围
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（10）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（10）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（10）.png](/img/dataease/embedded/4.%20嵌入式常见问题（10）.png)
+
+图 10  嵌入式常见问题
 
 :::note
 
@@ -106,11 +142,15 @@ dectl restart
 :::
 
 ## 7 DIV 嵌入时点击预览按钮提示域名匹配错误
+
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（11）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（11）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（11）.png](/img/dataease/embedded/4.%20嵌入式常见问题（11）.png)
+
+图 11  嵌入式常见问题
 
 :::note
 
@@ -118,13 +158,17 @@ dectl restart
 :::
 
 ## 8 DIV 嵌入白屏，网络请求 401，iFrame 嵌入网络请求状态码 400
+
 :::note
 
 如下所示：
 
 DIV 嵌入时页面白屏，或列表为空，浏览器控制台查看网络请求状态有 401 状态码
 :::
-<img alt="4. 嵌入式常见问题（12）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（12）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（12）.png](/img/dataease/embedded/4.%20嵌入式常见问题（12）.png)
+
+图 12  嵌入式常见问题
 
 :::note
 
@@ -132,7 +176,10 @@ iFrame 嵌入时提示 Request failed with status code 400
 
 网络请求返回异常：Request processing failed: com.auth0.jwt.exceptions.InvalidClaimException: The Token can't be used before Wed Jan 08 13:42:29 CST 2025.
 :::
-<img alt="4. 嵌入式常见问题（13）.png" src="/img/dataease/embedded/4.%20嵌入式常见问题（13）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![4. 嵌入式常见问题（13）.png](/img/dataease/embedded/4.%20嵌入式常见问题（13）.png)
+
+图 13  嵌入式常见问题
 
 :::note
 
@@ -141,7 +188,9 @@ iFrame 嵌入时提示 Request failed with status code 400
 - 保证要嵌入的目标系统和 DataEase 服务器时间保持一致。
 - 嵌入式 Token 生成的时间需要与 DataEase 服务器时间保持一致，根据异常信息可知，Token 生成的时间是 Wed Jan 08 13:42:29 CST 2025，所以如果 DataEase 服务器时间早于此时间就会出现此问题。
 :::
+
 ## 9 嵌入时，切换 id 实例化不同资源，出现白屏
+
 :::note
 
 解决方法： 切换 id 重新实例化前，先调用一下 destroy 方法，然后再实例化。

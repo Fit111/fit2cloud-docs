@@ -9,7 +9,7 @@ title: 系统 API
 对 API Keys 的管理包括"创建"、"复制"、"显示" Secret Key、选择"状态"是否可用和"删除"的操作。
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/APIKEY.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
 ## 2 系统 API 查看
 
@@ -18,14 +18,14 @@ title: 系统 API
 用户可通过【创建】获取到 API Key，可供调试的接口如下图所示。
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/API查看.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/API查看.png)
 
 :::note
 
 支持查看 API 文档，如下图所示。
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/API文档.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/API文档.png)
 
 ## 3 系统 API 在线调试
 
@@ -34,7 +34,7 @@ title: 系统 API
 系统提供了丰富的接口调试功能，用户可以依据下图的操作进行接口的调试。
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/API-KEY.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/API-KEY.png)
 
 ## 4 系统 API 调用示例（Java）
 
@@ -45,7 +45,7 @@ title: 系统 API
 进入 API Key 页面，创建 API Key，创建后获取到 accessKey 和 secretKey（API Key 是访问 DataEase API 的密钥，具有账户的完全权限）。
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/APIKEY.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
 ### 4.2 Java 示例代码
 
@@ -166,20 +166,20 @@ public class Main {
 方式一：查看API文档
 :::
 
-<img alt="组件置底_基础功能" src="/img/dataease-v2/xpack/APIKEY.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
-<img alt="API key Postman-2.png" src="/img/dataease-v2/xpack/API%20key%20Postman-2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![API key Postman-2.png](/img/dataease-v2/xpack/API%20key%20Postman-2.png)
 
 :::note
 
 方式二：通过浏览器控制台查看网络请求。
 :::
 
-<img alt="API key Postman浏览器.png" src="/img/dataease-v2/xpack/API%20key%20Postman浏览器.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![API key Postman浏览器.png](/img/dataease-v2/xpack/API%20key%20Postman浏览器.png)
 
 ### 5.2 配置 Pre-script
 
-<img alt="Postman 配置 Pre-script.png" src="/img/dataease-v2/xpack/Postman%20配置%20Pre-script.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Postman 配置 Pre-script.png](/img/dataease-v2/xpack/Postman%20配置%20Pre-script.png)
 
 :::note
 
@@ -250,7 +250,7 @@ pm.environment.set("x-de-ask-token", token);
 Headers 按照图示配置，无需修改
 :::
 
-<img alt="Postman 配置 Headers.png" src="/img/dataease-v2/xpack/Postman%20配置%20Headers.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Postman 配置 Headers.png](/img/dataease-v2/xpack/Postman%20配置%20Headers.png)
 
 ```text
 accessKey: {{accessKey}}
@@ -265,8 +265,8 @@ x-de-ask-token: {{x-de-ask-token}}
 Body 按照 API 请求要求填写，此处以获取仪表板列表树为例
 :::
 
-<img alt="Postmax 配置请求体.png" src="/img/dataease-v2/xpack/Postmax%20配置请求体.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Postmax 配置请求体.png](/img/dataease-v2/xpack/Postmax%20配置请求体.png)
 
 ### 5.5 测试验证
 
-<img alt="Postman 测试验证.png" src="/img/dataease-v2/xpack/Postman%20测试验证.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Postman 测试验证.png](/img/dataease-v2/xpack/Postman%20测试验证.png)

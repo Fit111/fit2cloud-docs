@@ -4,7 +4,9 @@ title: 系统架构
 
 ## 1 整体架构
 
-<img alt="整体架构" src="/img/dataease/newimg/product_acceptance/功能架构图.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![整体架构](/img/dataease/newimg/product_acceptance/功能架构图.jpg)
+
+图 1  功能架构图
 
 ## 2 组件说明
 
@@ -19,7 +21,10 @@ title: 系统架构
 :::
 
 各个组件间的关系可参考下图  
-<img alt="组件说明" src="/img/dataease/newimg/product_acceptance/2.0组件关系图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![组件说明](/img/dataease/newimg/product_acceptance/组件关系图.png)
+
+图 2  组件关系图
 
 ## 3 关键术语
 
@@ -36,7 +41,7 @@ title: 系统架构
 - **数据填报**: 企业级数据采集模块，支持可视化制作填报表单，填报数据可直接回写数据库，具备数据校验、批量录入与移动端填报能力；
 - **组件**: 仪表板或数据大屏中各种元素的统称，例如图表组件、图片组件、筛选组件等。
 :::
-    
+
 ## 4 技术栈
 
 :::note

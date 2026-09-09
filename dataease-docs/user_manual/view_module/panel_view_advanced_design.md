@@ -7,7 +7,9 @@ title: 图表高级设计
 图表编辑区【高级】模块，不同图表存在差异，根据各图表特性具备不同的高级功能。
 :::
 
-<img alt="高级设置" src="/img/dataease/view_generation/3.0数据大屏高级功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置](/img/dataease/view_generation/数据大屏高级功能.png)
+
+图 1  数据大屏高级
 
 ## 1 缩略轴
 
@@ -18,7 +20,9 @@ title: 图表高级设计
 缩略轴支持样式配置，支持背景、选中背景、字体颜色三个样式配置项。
 :::
 
-<img alt="高级设置_缩略轴" src="/img/dataease/view_generation/3.0数据大屏缩略.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_缩略轴](/img/dataease/view_generation/数据大屏缩略.png)
+
+图 2  数据大屏缩略
 
 ## 2 空值处理
 
@@ -27,7 +31,9 @@ title: 图表高级设计
 如下图所示，在柱状图、折线图中均加入了空值处理的设置。
 :::
 
-<img alt="空值处理" src="/img/dataease/view_generation/3.0数据大屏空值处理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![空值处理](/img/dataease/view_generation/数据大屏空值处理.png)
+
+图 3  数据大屏空值处理
 
 :::note
 
@@ -40,27 +46,39 @@ title: 图表高级设计
 空值的三种处理示例如下:
 :::
 
-<img alt="高级设置_折线图空值处理" src="/img/dataease/view_generation/3.0数据大屏空值处理保持为空.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_折线图空值处理](/img/dataease/view_generation/数据大屏空值处理保持为空.png)
 
-<img alt="高级设置_折线图空值处理" src="/img/dataease/view_generation/3.0数据大屏空值处理置为0.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 4  数据大屏空值处理保持为空
 
-<img alt="高级设置_折线图空值处理" src="/img/dataease/view_generation/3.0数据大屏隐藏空值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_折线图空值处理](/img/dataease/view_generation/数据大屏空值处理置为0.png)
+
+图 5  数据大屏空值处理置为
+
+![高级设置_折线图空值处理](/img/dataease/view_generation/数据大屏隐藏空值.png)
+
+图 6  数据大屏隐藏空值
 
 :::note
 
 除了柱状图和折线图支持空值处理，在表格、地图中均加入了空值处理的设置。
 :::
 
-<img alt="高级设置_折线图空值处理" src="/img/dataease/view_generation/3.0数据大屏表格空值处理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_折线图空值处理](/img/dataease/view_generation/数据大屏表格空值处理.png)
 
-<img alt="高级设置_折线图空值处理" src="/img/dataease/view_generation/3.0数据大屏地图空值处理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 7  数据大屏表格空值处理
+
+![高级设置_折线图空值处理](/img/dataease/view_generation/数据大屏地图空值处理.png)
+
+图 8  数据大屏地图空值处理
 
 :::note
 
 富文本空值默认置为 "-"，也可以自定义为任意内容，比如 0。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/富文本空值处理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![富文本空值处理](/img/dataease/newimg/富文本空值处理.png)
+
+图 9  富文本空值处理
 
 ## 3 辅助线
 
@@ -78,18 +96,27 @@ title: 图表高级设计
 如下图所示，切换至【高级】，点击【编辑】辅助线，弹出辅助线设置框，填写预警值名称及其他参数，点击【确定】即可。
 :::
 
-<img alt="高级设置_辅助线" src="/img/dataease/view_generation/数据大屏3.0设置辅助线.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_辅助线](/img/dataease/view_generation/数据大屏设置辅助线.png)
 
-<img alt="高级设置_辅助线显示效果" src="/img/dataease/view_generation/数据大屏3.0设置辅助线效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 10  设置辅助线
+
+![高级设置_辅助线显示效果](/img/dataease/view_generation/数据大屏设置辅助线效果.png)
+
+图 11  辅助线效果
 
 :::note
 
 辅助线新增【最后一项】选项适用图表类型：线面图、双轴图、柱条图（瀑布图、百分比柱条图、区间条形图、对称条形图、子弹图除外）。  
 **注意：为确保【最后一项】值（即尾值）的稳定性，需要设置字段排序，从而有稳定的排序规则。**
 :::
-<img alt="更新1" src="/img/dataease/view_generation/数据大屏辅助线新增【最后一项】选项1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-<img alt="更新1" src="/img/dataease/view_generation/数据大屏辅助线新增【最后一项】选项2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏辅助线【最后一项】选项](/img/dataease/view_generation/数据大屏辅助线新增【最后一项】选项1.png)
+
+图 12  数据大屏辅助线【最后一项】选项
+
+![数据大屏辅助线【最后一项】选项](/img/dataease/view_generation/数据大屏辅助线新增【最后一项】选项2.png)
+
+图 13  数据大屏辅助线【最后一项】选项
 
 ## 4 条件样式
 
@@ -100,22 +127,31 @@ title: 图表高级设计
 目前汇总表、明细表、仪表盘、折线图、柱状图、符号地图以及面积图支持设置，支持配置文字颜色、背景颜色、默认背景色透明度调整等。
 :::
 
-<img alt="高级设置_阈值设置" src="/img/dataease/view_generation/数据大屏设置条件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="高级设置_阈值设置显示" src="/img/dataease/view_generation/数据大屏条件样式效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_阈值设置](/img/dataease/view_generation/数据大屏设置条件样式.png)
+
+图 14  数据大屏设置条件样式
+
+![高级设置_阈值设置显示](/img/dataease/view_generation/数据大屏条件样式效果.png)
+
+图 15  数据大屏条件样式效果
 
 :::note
 
 仪表盘支持范围（0-100），逐级递增，若为空则不开启阈值，示例输入 30，70，表示分 3 段，分别为[0,30]，(30,70]，(70,100]。
 :::
 
-<img alt="高级设置_阈值设置仪表盘" src="/img/dataease/view_generation/3.0数据大屏仪表盘阈值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_阈值设置仪表盘](/img/dataease/view_generation/数据大屏仪表盘阈值.png)
+
+图 16  数据大屏仪表盘阈值
 
 :::note
 
 设置的条件样式将影响折线图的线条（或面积）和标签文字的颜色。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏折线图和面积图支持设置条件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![折线面积图条件样式](/img/dataease/newimg/数据大屏折线图和面积图支持设置条件样式.png)
+
+图 17  折线面积图条件样式
 
 ## 5 滚动
 
@@ -126,8 +162,13 @@ title: 图表高级设计
 **注意：** 透视表不支持滚动，明细表需设置分页模式为下拉时滚动才能生效。
 :::
 
-<img alt="高级设置_表格滚动" src="/img/dataease/view_generation/3.0数据大屏下拉模式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="高级设置_表格滚动" src="/img/dataease/view_generation/3.0数据大屏设置滚动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级设置_表格滚动](/img/dataease/view_generation/数据大屏下拉模式.png)
+
+图 18  数据大屏下拉模式
+
+![高级设置_表格滚动](/img/dataease/view_generation/数据大屏设置滚动.png)
+
+图 19  数据大屏设置滚动
 
 ## 6 气泡动效
 
@@ -137,5 +178,6 @@ title: 图表高级设计
 **注意：流向地图需先在【样式】中设置标注点气泡大小。此外，流向地图为在线地图需要[配置地图 Key](../system_management/param#33)。**
 :::
 
-<img alt="气泡动效" src="/img/dataease/newimg/数据大屏流向地图动态效果.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![气泡动效](/img/dataease/newimg/数据大屏流向地图动态效果.gif)
 
+图 20  数据大屏流向地图动态效果

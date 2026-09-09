@@ -9,14 +9,22 @@ title: 数据填报
 【数据填报】模块可以管理填报表单并下发填报任务。可在【权限管理】中【菜单和操作】，给对应的用户开通对应权限。
 :::
 
-<img alt="告警通知" src="/img/dataease/xpack/数据填报模块.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![告警通知](/img/dataease/xpack/数据填报模块.png)
+
+图 1  数据填报模块
 
 :::note
 
 数据填报支持移动端支持展示，并支持移动端进行填报数据。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>  <img alt="更新1" src="/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+![移动端数据填报](/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png)
+
+图 2  移动端数据填报
+
+![移动端展示数据填报](/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png)
+
+图 3  移动端展示数据填报
 
 ## 2 表单管理
 
@@ -27,101 +35,140 @@ title: 数据填报
 点击【新建表单】，根据下图所示操作，在目录下自定义表单。
 :::
 
-<img alt="创建表单" src="/img/dataease/xpack/新建表单.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建表单](/img/dataease/xpack/新建表单.png)
+
+图 4  新建表单
 
 :::note
 
 表单配置：配置表单各个字段。
 :::
-<img alt="创建表单" src="/img/dataease/xpack/配置表单.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![创建表单](/img/dataease/xpack/配置表单.png)
+
+图 5  配置表单
 
 :::note
 
 选择和下拉框组件在绑定数据源时，支持选择添加字段描述和添加筛选条件。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![单选组件关联字段](/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 6  单选组件关联字段
+
+![单选组件关联字段](/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能2.png)
+
+图 7  单选组件关联字段
 
 :::note
 
 数据填报的表单中的下拉框和选择组件支持关联所有有效数据源。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单中的下拉框和多选框组件支持关联所有有效数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![下拉与多选组件](/img/dataease/newimg/数据填报的表单中的下拉框和多选框组件支持关联所有有效数据源.png)
+
+图 8  下拉与多选组件
 
 :::note
 
 在选择或下拉框中选择选项后，设置的字段描述将显示在下方。如果描述内容超过 6 个，可以点击【查看更多】以查看完整描述。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![单选组件关联字段](/img/dataease/newimg/数据填表单选和单选框组件支持额外关联字段查询与展示功能3.png)
+
+图 9  单选组件关联字段
 
 :::note
 
 数据填报的日期组件支持设置默认值，默认填充当前日期时间。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的日期组件支持设置默认值，默认填充当前日期时间.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报的日期组件设置默认值](/img/dataease/newimg/数据填报的日期组件支持设置默认值，默认填充当前日期时间.png)
+
+图 10  数据填报的日期组件设置默认值
 
 :::note
 
 数据填报表单可绑定现有数据库表，表单字段可选择与数据库表字段绑定，系统将自动匹配字段类型。对于未绑定的新增字段，系统将在目标数据表中创建对应的数据库字段，填报数据也将同步插入原数据表。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报支持绑定已有数据表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报绑定已有数据表](/img/dataease/newimg/数据填报支持绑定已有数据表.png)
+
+图 11  数据填报绑定已有数据表
 
 :::note
 
 **注意：若需要将数据存储在其他数据库，需先创建数据源并开启数据填报。**
 :::
 
-<img alt="创建表单" src="/img/dataease/xpack/数据源开启数据填报.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建表单](/img/dataease/xpack/数据源开启数据填报.png)
+
+图 12  数据源开启数据填报
 
 :::note
 
 支持对已经创建的表单进行复制操作。
 :::
 
-<img alt="创建表单" src="/img/dataease/xpack/表单复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建表单](/img/dataease/xpack/表单复制.png)
+
+图 13  表单复制
 
 ### 2.2 表单数据
+
 :::note
 
 选择对应对表单，可以查看表单的填报数据以及对应的填报时间、填报人，并且可对表单记录进行修改、查看、删除。  
 支持下载表单模板、通过 Excel 批量上传数据。
 :::
-<img alt="创建表单" src="/img/dataease/xpack/表单数据新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![创建表单](/img/dataease/xpack/表单数据.png)
+
+图 14  表单数据
 
 :::note
 
 数据填报的表单数据支持按字段过滤查询。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单数据支持按字段过滤查询1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报的表单数据按字段过滤查询](/img/dataease/newimg/数据填报的表单数据支持按字段过滤查询1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单数据支持按字段过滤查询2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 15  数据填报的表单数据按字段过滤查询
+
+![数据填报的表单数据按字段过滤查询](/img/dataease/newimg/数据填报的表单数据支持按字段过滤查询2.png)
+
+图 16  数据填报的表单数据按字段过滤查询
 
 :::note
 
 数据填报的表单数据支持一键清空。一键清空时会弹出删除确认，确认后成功删除数据。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单数据支持一键清空1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报的表单数据一键清空](/img/dataease/newimg/数据填报的表单数据支持一键清空1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单数据支持一键清空2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 17  数据填报的表单数据一键清空
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的表单数据支持一键清空3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报的表单数据一键清空](/img/dataease/newimg/数据填报的表单数据支持一键清空2.png)
+
+图 18  数据填报的表单数据一键清空
+
+![数据填报的表单数据一键清空](/img/dataease/newimg/数据填报的表单数据支持一键清空3.png)
+
+图 19  数据填报的表单数据一键清空
 
 :::note
 
 切换至【提交记录】，可查看对应提交人的操作动作。同时，支持提交记录日志支持清理。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的提交记录日志支持清理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据填报的提交记录日志清理](/img/dataease/newimg/数据填报的提交记录日志支持清理.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报的提交记录日志支持清理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 20  数据填报的提交记录日志清理
+
+![数据填报的提交记录日志清理](/img/dataease/newimg/数据填报的提交记录日志支持清理2.png)
+
+图 21  数据填报的提交记录日志清理
 
 ### 2.3 表单修改
 
@@ -131,15 +178,22 @@ title: 数据填报
 数字不能切换为其他类型，其他格式类型也不允许切换为数字。
 :::
 
-<img alt="创建表单" src="/img/dataease/xpack/表单修改1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建表单](/img/dataease/xpack/表单修改1.png)
 
-<img alt="创建表单" src="/img/dataease/xpack/表单修改数字类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 22  表单修改
+
+![创建表单](/img/dataease/xpack/表单修改数字类型.png)
+
+图 23  表单修改数字类型
+
 :::note
 
 原组件若允许多选，在编辑时无法修改为非允许多选，该选项为置灰状态。
 :::
 
-<img alt="创建表单" src="/img/dataease/xpack/允许修改不能编辑.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建表单](/img/dataease/xpack/允许修改不能编辑.png)
+
+图 24  允许修改不能编辑
 
 :::note
 
@@ -149,41 +203,57 @@ title: 数据填报
 :::
 
 ### 2.4 任务管理
+
 :::note
 
 切换至任务管理页面，可设置表单任务。支持对历史对表单任务进行编辑、启动和删除。
 :::
-<img alt="创建表单" src="/img/dataease/xpack/创建任务.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![创建表单](/img/dataease/xpack/创建任务.png)
+
+图 25  创建任务
+
 :::note
 
 表单任务可设置数据提交方式为数据追加或者数据更新。接收对象支持按照用户、角色选择。当数据提交方式为“数据更新”时，会出现【表单模板设置】，【表单过滤设置】选项。
 :::
-<img alt="创建表单" src="/img/dataease/xpack/表单模板设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![创建表单](/img/dataease/xpack/表单模板设置.png)
+
+图 26  表单模板设置
 
 :::note
 
 【表单模板设置】可以设置表单中的表单项是否允许被修改。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报添加任务时支持设置校验字段及相应的规则2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![任务校验字段](/img/dataease/newimg/数据填报添加任务时支持设置校验字段及相应的规则2.png)
+
+图 27  任务校验字段
 
 :::note
 
 【表单过滤设置】可以对字段内容进行过滤。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/任务管理过滤条件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![任务管理过滤条件](/img/dataease/newimg/任务管理过滤条件.png)
+
+图 28  任务管理过滤条件
 
 :::note
 
 当用户在界面中填写数据时，系统会实时检查每个字段的输入是否符合已设置的校验规则。如果发现不符合要求的输入，系统会进行提示。
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据填报添加任务时支持设置校验字段及相应的规则3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![校验成功](/img/dataease/newimg/数据填报添加任务时支持设置校验字段及相应的规则3.png)
+
+图 29  校验成功
 
 :::note
 
 用户可以在同一界面填写多条记录并提交，增加每条记录的状态标签。可通过“快速确认完成”按钮，快速修改单条记录状态或批量设置为完成。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据填报支持多条录入并新增“快速确认完成”按钮.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![快速确认完成](/img/dataease/newimg/数据填报支持多条录入并新增“快速确认完成”按钮.png)
 
+图 30  快速确认完成

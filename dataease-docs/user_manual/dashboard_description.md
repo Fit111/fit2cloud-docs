@@ -22,4 +22,6 @@ title: 仪表板概述
 - 【序号 5】查看仪表板信息，可在此界面浏览已发布的仪表板。
 :::
 
-<img alt="3.0仪表板概览" src="/img/dataease/dashboard_generation/3.0仪表板概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板概览](/img/dataease/dashboard_generation/仪表板概览.png)
+
+图 1  仪表板概览

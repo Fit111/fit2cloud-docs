@@ -66,7 +66,7 @@ public class IndexController {
 
 account 获取方式，见下图，可以使用任意符合业务需求的账号，不仅限于 admin 账户，也不推荐使用 admin 账户进行嵌入。
 :::
-<img alt="3.1嵌入式 Token.png" src="/img/dataease-v2/embedded/3.1嵌入式%20Token.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![3.1嵌入式 Token.png](/img/dataease-v2/embedded/3.1嵌入式%20Token.png)
 
 ##  2 DataEase 嵌入式 JS
 :::note

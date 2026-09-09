@@ -14,38 +14,54 @@ title: 水印管理
 - 当前时间
 :::
 
-<img alt="水印管理" src="/img/dataease/xpack/水印管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/水印管理.png)
+
+图 1  水印管理
 
 :::note
 
 自定义公式可参考系统提示的参数。
 :::
 
-<img alt="水印管理" src="/img/dataease/xpack/水印参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/水印参数.png)
+
+图 2  水印参数
 
 :::note
 
 完成设置后可点击预览进行确认。
 :::
 
-<img alt="水印管理" src="/img/dataease/xpack/水印预览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/水印预览.png)
+
+图 3  水印预览
 
 :::note
 
 若开启导出数据文件开启水印，导出的 Excel 数据也会携带水印。
 :::
 
-<img alt="水印管理" src="/img/dataease/xpack/文件携带水印1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/文件携带水印1.png)
 
-<img alt="水印管理" src="/img/dataease/xpack/文件携带水印2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 4  文件携带水印
 
-<img alt="水印管理" src="/img/dataease/xpack/文件携带水印3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/文件携带水印2.png)
+
+图 5  文件携带水印
+
+![水印管理](/img/dataease/xpack/文件携带水印3.png)
+
+图 6  文件携带水印
 
 :::note
 
 若开启允许仪表板和数据大屏单独打开或者关闭水印，则在仪表板和数据大屏编辑界面中可选择水印开关。
 :::
 
-<img alt="水印管理" src="/img/dataease/xpack/单独开水印.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![水印管理](/img/dataease/xpack/单独开水印.png)
 
-<img alt="水印管理" src="/img/dataease/xpack/2.0水印开关.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 7  单独开水印
+
+![水印管理](/img/dataease/xpack/水印开关.png)
+
+图 8  水印开关

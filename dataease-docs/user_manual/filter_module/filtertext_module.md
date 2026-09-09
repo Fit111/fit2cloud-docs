@@ -9,8 +9,13 @@ title: 文本查询组件
 可通过与图表的文本型字段绑定，点击文本下拉组件，即弹出下拉选项框，选定下拉框内的文本，点击【查询】按钮，过滤图表的数据。
 :::
 
-<img alt="文本下拉组件入口" src="/img/dataease/dashboard_generation/2.0设置文本下拉过滤.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="仪表盘编辑_查询组件" src="/img/dataease/dashboard_generation/2.0文本下拉过滤结果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![文本下拉组件入口](/img/dataease/dashboard_generation/设置文本下拉过滤.png)
+
+图 1  设置文本下拉过滤
+
+![仪表盘编辑_查询组件](/img/dataease/dashboard_generation/文本下拉过滤结果.png)
+
+图 2  文本下拉过滤结果
 
 :::note
 
@@ -21,16 +26,23 @@ title: 文本查询组件
 - 显示字段：用作前端显示内容。
 - 排序字段：影响前端展示的排序顺序。
 :::
-<img alt="更新1" src="/img/dataease/newimg/文本下拉和数字下拉查询组件支持设置显示字段和排序字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![下拉组件显示字段](/img/dataease/newimg/文本下拉和数字下拉查询组件支持设置显示字段和排序字段.png)
+
+图 3  下拉组件显示字段
 
 :::note
 
 查询组件中的展示形式选项支持下拉展示和平铺展示两种选择。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/展示形式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![展示形式](/img/dataease/newimg/展示形式.png)
 
-<img alt="更新1" src="/img/dataease/newimg/下拉展示和平铺展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 4  展示形式
+
+![下拉展示和平铺展示](/img/dataease/newimg/下拉展示和平铺展示.png)
+
+图 5  下拉展示和平铺展示
 
 :::note
 
@@ -40,18 +52,26 @@ title: 文本查询组件
 - 全部：对所有数据进行查询并返回，在数据量大的情况下，可能会存在性能问题，如等待时间长，加载慢，甚至浏览器内存不足，故使用时需注意。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件中的文本下拉选项支持全部和默认两种选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![下拉选项全部与默认](/img/dataease/newimg/查询组件中的文本下拉选项支持全部和默认两种选择.png)
+
+图 6  下拉选项全部与默认
 
 :::note
 
 当显示字段与排序字段相同时，文本下拉和数值下拉支持选择自定义排序规则。且勾选后，下拉查询组件的默认值选项将按照自定义排序显示。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持自定义排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件自定义排序](/img/dataease/newimg/查询组件支持自定义排序1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持自定义排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 7  查询组件自定义排序
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持自定义排序3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件自定义排序](/img/dataease/newimg/查询组件支持自定义排序2.png)
+
+图 8  查询组件自定义排序
+
+![查询组件自定义排序](/img/dataease/newimg/查询组件支持自定义排序3.png)
+
+图 9  查询组件自定义排序
 
 ## 2 文本搜索组件
 
@@ -60,30 +80,47 @@ title: 文本查询组件
 - 条件类型：单条件、与条件、或条件
 - 搜索模式：精确匹配、模糊匹配
 :::
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持设置文本搜索1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/1.12%20查询组件支持设置文本搜索2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![查询组件设置文本搜索](/img/dataease/newimg/查询组件支持设置文本搜索1.png)
+
+图 10  查询组件设置文本搜索
+
+![查询组件支持设置文本搜索2](/img/dataease/newimg/查询组件支持设置文本搜索2.png)
+
+图 11  查询组件设置文本搜索
 
 :::note
 
 查询组件支持配置外部显示或隐藏精确匹配和模糊匹配。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持配置外部显示或隐藏精确匹配和模糊匹配图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![精确匹配显示与隐藏](/img/dataease/newimg/查询组件支持配置外部显示或隐藏精确匹配和模糊匹配图片.png)
+
+图 12  精确匹配显示与隐藏
 
 :::note
 
 查询组件支持文本搜索时按回车键触发查询。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件支持文本搜索时按回车键触发查询.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![回车触发查询](/img/dataease/newimg/查询组件支持文本搜索时按回车键触发查询.gif)
+
+图 13  回车触发查询
+
 ## 3 下拉树组件
 
 :::note
 
 下拉树组件允许用户在多级分类中逐级选择，如图所示，组件结构设计为“省份-城市-区县”三级分类。
 :::
-<img alt="更新1" src="/img/dataease/newimg/1.21%20查询组件支持下拉树.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/1.21%20查询组件支持下拉树2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![查询组件支持下拉树](/img/dataease/newimg/查询组件支持下拉树.png)
+
+图 14  查询组件下拉树
+
+![查询组件支持下拉树2](/img/dataease/newimg/查询组件支持下拉树2.png)
+
+图 15  查询组件下拉树
 
 :::note
 
@@ -94,7 +131,10 @@ title: 文本查询组件
 **注意：切换下拉树类型时，已配置的层级信息将被清空，请谨慎操作。**
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件下拉树支持选择数据集并配置图表关联1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![下拉树绑定数据集](/img/dataease/newimg/查询组件下拉树支持选择数据集并配置图表关联1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/查询组件下拉树支持选择数据集并配置图表关联2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 16  下拉树绑定数据集
 
+![下拉树绑定数据集](/img/dataease/newimg/查询组件下拉树支持选择数据集并配置图表关联2.png)
+
+图 17  下拉树绑定数据集

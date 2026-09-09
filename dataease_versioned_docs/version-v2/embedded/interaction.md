@@ -23,7 +23,7 @@ title: 嵌入式数据交互
 
 使用外部参数，需要先在 DataEase 系统中设置好数据大屏或者仪表板外部参数，具体设置可见[操作手册](https://dataease.cn/docs/v2/user_manual/dashboard_basicfunctions/#6)。
 :::
-<img alt="3.3.2 外部参数设置.png" src="/img/dataease-v2/embedded/3.3.2%20外部参数设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![3.3.2 外部参数设置.png](/img/dataease-v2/embedded/3.3.2%20外部参数设置.png)
 
 ## 3 嵌入式参数以及外部参数说明
 :::note

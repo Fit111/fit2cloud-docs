@@ -12,28 +12,28 @@ title: 数据集概述
 :::
     
 
-<img alt="数据集概览" src="/img/dataease-v2/newimg/user_manual/数据集概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据集概览](/img/dataease-v2/newimg/user_manual/数据集概览.png)
 
 :::note
 
 支持对已创建的数据集进行复制、移动、重命名和删除。
 :::
 
-<img alt="数据集概览" src="/img/dataease-v2/newimg/user_manual/数据集复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据集概览](/img/dataease-v2/newimg/user_manual/数据集复制.png)
 
 :::note
 
 数据集数据支持导出。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.4%20支持数据集数据导出1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.4%20支持数据集数据导出1.png)
 
 ## 2 新建数据集
 :::note
 
 如下图所示，点击序号位置【添加数据集】，跳转到添加数据集页面。
 :::
-<img alt="新建数据集" src="/img/dataease-v2/dataset_configuration/新建数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建数据集](/img/dataease-v2/dataset_configuration/新建数据集.png)
 
 :::note
 
@@ -44,29 +44,29 @@ title: 数据集概述
 - 当数据集选择为不同数据源时，多个节点实际构成跨源（跨库），应把选项切换为【跨源】模式。
 :::
 
-<img alt="新建数据库数据集" src="/img/dataease-v2/dataset_configuration/单源跨源选项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建数据库数据集](/img/dataease-v2/dataset_configuration/单源跨源选项.png)
 
 :::note
 
 数据集编辑界面支持下拉框搜索。
 :::
-<img alt="更新1" src="/img/dataease-v2/dataset_configuration/数据集选择数据源和数据表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/dataset_configuration/数据集选择数据源和数据表.png)
 
 :::note
 
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧数据库数据表（可利用搜索功能进行快速筛选）后拖拽到右侧数据集编辑区。
 :::
 
-<img alt="新建数据库数据集" src="/img/dataease-v2/dataset_configuration/新建数据库数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建数据库数据集](/img/dataease-v2/dataset_configuration/新建数据库数据集.png)
 
 :::note
 
 如下图所示，点击【保存】，设置对应名称以及保存文件夹位置，点击【确认】即成功添加数据集。
 :::
 
-<img alt="保存数据库数据集" src="/img/dataease-v2/dataset_configuration/保存数据库数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![保存数据库数据集](/img/dataease-v2/dataset_configuration/保存数据库数据集.png)
 
-<img alt="数据库数据集保存成功" src="/img/dataease-v2/dataset_configuration/数据库数据集保存成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据库数据集保存成功](/img/dataease-v2/dataset_configuration/数据库数据集保存成功.png)
 
 ## 3 编写 SQL 查询
 :::note
@@ -74,9 +74,9 @@ title: 数据集概述
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧【自定义 SQL 】拖拽到右侧数据集编辑区，进入到 SQL 编辑界面。
 :::
 
-<img alt="选择SQL数据集" src="/img/dataease-v2/dataset_configuration/选择SQL数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![选择SQL数据集](/img/dataease-v2/dataset_configuration/选择SQL数据集.png)
 
-<img alt="SQL编辑界面" src="/img/dataease-v2/dataset_configuration/SQL编辑界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL编辑界面](/img/dataease-v2/dataset_configuration/SQL编辑界面.png)
 
 :::note
 
@@ -86,21 +86,21 @@ title: 数据集概述
 **注意：当数据集选择为【单源】时，自定义 SQL 采用数据源自身的 JDBC 语法进行运行校验；若为【跨源】则使用 Calcite 语法进行运行校验。**
 :::
 
-<img alt="SQL语句编写" src="/img/dataease-v2/dataset_configuration/SQL语句编写.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL语句编写](/img/dataease-v2/dataset_configuration/SQL语句编写.png)
 
 :::note
 
 SQL 片段支持注释。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/dataset_configuration/SQL片段支持注释.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/dataset_configuration/SQL片段支持注释.png)
 
 :::note
 
 如下图所示，点击【保存】，SQL 查询添加成功。
 :::
 
-<img alt="保存SQL数据集" src="/img/dataease-v2/dataset_configuration/保存SQL数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![保存SQL数据集](/img/dataease-v2/dataset_configuration/保存SQL数据集.png)
 
 ## 4 SQL 语句动态传参设置
 
@@ -113,7 +113,7 @@ SQL 片段支持注释。
 - 在仪表板的过滤组件中（文本下拉和数字下拉组件）勾选【参数选项】，并将下拉字段与 SQL 数据集中的变量关联，如下示例以 MySQL 数据库 SQL 语法为例，不同数据库请根据实际情况调整。
 :::
 
-<img alt="SQL参数设置" src="/img/dataease-v2/dataset_configuration/SQL%20参数设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL参数设置](/img/dataease-v2/dataset_configuration/SQL%20参数设置.png)
 
 :::note
 
@@ -121,7 +121,7 @@ SQL 片段支持注释。
 若该变量为时间类型，请手动调整该参数类型的时间类型及时间格式。
 :::
 
-<img alt="SQL参数变量类型" src="/img/dataease-v2/dataset_configuration/SQL%20参数设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL参数变量类型](/img/dataease-v2/dataset_configuration/SQL%20参数设置2.png)
 
 :::note
 
@@ -129,14 +129,14 @@ SQL 片段支持注释。
 区别：仅编辑时生效在SQL数据集编辑界面有效，数据集预览时全局生效在数据集预览界面有效 。
 :::
 
-<img alt="SQL参数生效模式" src="/img/dataease-v2/dataset_configuration/SQL%20参数设置3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL参数生效模式](/img/dataease-v2/dataset_configuration/SQL%20参数设置3.png)
 
 :::note
 
 在仪表板过滤组件绑定 SQL 传参：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化.png)
 
 :::note
 
@@ -185,7 +185,7 @@ select * from table where $DE_PARAM{name = '$[p]'}
 4. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
 :::
 
-<img alt="过滤组件设置参数设置" src="/img/dataease-v2/dataset_configuration/时间传参搭配过滤组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件设置参数设置](/img/dataease-v2/dataset_configuration/时间传参搭配过滤组件.png)
 
 :::note
 
@@ -197,14 +197,14 @@ select * from table where $DE_PARAM{name = '$[p]'}
 SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，系统会对 SQL 数据集在查询时的 SQL 进行 Base64 加密处理。
 :::
 
-<img alt="SQL传参安全" src="/img/dataease-v2/dataset_configuration/SQL传参安全.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL传参安全](/img/dataease-v2/dataset_configuration/SQL传参安全.png)
 
 :::note
 
 数据集自定义 SQL 时支持选择系统变量（企业版 X-Pack 功能）作为查询条件。在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)
 
 ## 5 设置数据表间关联关系
 :::note
@@ -214,7 +214,7 @@ SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，�
 **注意：如果是跨数据库关联，对应的自定义 SQL 需要使用的是 Calcite 语法。**
 :::
 
-<img alt="拖拽关联表" src="/img/dataease-v2/dataset_configuration/拖拽关联表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![拖拽关联表](/img/dataease-v2/dataset_configuration/拖拽关联表.png)
 
 :::note
 
@@ -225,11 +225,11 @@ SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，�
 -  序号 3 ：选择输出字段。
 :::
 
-<img alt="创建关联关系" src="/img/dataease-v2/dataset_configuration/创建关联关系.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建关联关系](/img/dataease-v2/dataset_configuration/创建关联关系.png)
 
 :::note
 
 创建数据集时，同一个数据表可被多次引用。
 :::
 
-<img alt="拖拽关联表" src="/img/dataease-v2/dataset_configuration/多次引用.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![拖拽关联表](/img/dataease-v2/dataset_configuration/多次引用.png)

@@ -7,7 +7,7 @@ title: 图表样式设计
 点击【样式】，切换至样式设计界面，该界面主要针对【背景】、【基础样式】、【标签】、【提示】、【标题】等进行调整，**不同的图表类型可支持的样式会有所差异。**
 :::
 
-<img alt="视图可选维度列表" src="/img/dataease-v2/view_generation/2.0数据大屏图表样式界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图可选维度列表](/img/dataease-v2/view_generation/2.0数据大屏图表样式界面.png)
 
 ## 1 背景
 :::note
@@ -16,9 +16,9 @@ title: 图表样式设计
 - 图表背景颜色设置；
 - 背景图片和边框设置。
 :::
-<img alt="视图可选维度列表" src="/img/dataease-v2/view_generation/2.0数据大屏样式背景.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图可选维度列表](/img/dataease-v2/view_generation/2.0数据大屏样式背景.png)
 
-<img alt="视图可选维度列表" src="/img/dataease-v2/view_generation/2.0数据大屏样式背景设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图可选维度列表](/img/dataease-v2/view_generation/2.0数据大屏样式背景设置.png)
 
 ## 2 基础样式
 
@@ -28,49 +28,49 @@ title: 图表样式设计
 如下图所示，点击，也可以自定义配色。
 :::
 
-<img alt="图形属性_修改颜色" src="/img/dataease-v2/view_generation/2.0数据大屏样式基础样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图形属性_修改颜色](/img/dataease-v2/view_generation/2.0数据大屏样式基础样式.png)
 
 :::note
 
 应用配色方案后，仍然可以进一步调整颜色，如下图所示，整个图表应用到的颜色都会在下方列出来，修改时不需要再在配色方案中选中，自行修改颜色后，配色方案中所展示的颜色将不会跟着改变。如下图所示。
 :::
 
-<img alt="图形属性_自定义配色" src="/img/dataease-v2/view_generation/2.0数据大屏配色方案.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图形属性_自定义配色](/img/dataease-v2/view_generation/2.0数据大屏配色方案.png)
 
-<img alt="图形属性_自定义配色" src="/img/dataease-v2/view_generation/2.0数据大屏自定义颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图形属性_自定义配色](/img/dataease-v2/view_generation/2.0数据大屏自定义颜色.png)
 
 :::note
 
 地图颜色支持设置渐变色及自定义渐变色
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏地图渐变色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏地图渐变色.png)
 
 :::note
 
 在自定义渐变色时，可以通过设置起始和结束颜色，DataEase 会自动计算中间渐变色。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏地图自动计算渐变色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏地图自动计算渐变色.png)
 
 :::note
 
 如下图所示，支持开启渐变色和透明度调整 。
 :::
 
-<img alt="图形属性" src="/img/dataease-v2/view_generation/2.0数据大屏透明度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图形属性](/img/dataease-v2/view_generation/2.0数据大屏透明度.png)
 
 :::note
 
 饼图和环形图均支持 TopN 设置，即显示 TopN，其余的可以合并为其他。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏饼图TOPN.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏饼图TOPN.png)
 
 :::note
 
 柱状图均支持圆角设置（不包括瀑布图、K 线图）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/柱状图均支持圆角设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/柱状图均支持圆角设置.png)
 
 :::note
 
@@ -78,12 +78,12 @@ title: 图表样式设计
 **注意:在预览界面与编辑界面均支持手动拖拉表格宽度，但只有编辑界面下拖拉完成保存后生效，在预览界面拖拉仅用于临时使用，刷新页面后将还原。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏自定义列宽.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏自定义列宽.png)
 :::note
 
 透视表支持在样式中设置【平铺展示】或【树形展示】，树形展示支持手动点击将下级字段聚合或展开。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表树状展示.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表树状展示.gif)
 
 ## 3 大小
 
@@ -94,20 +94,20 @@ title: 图表样式设计
 指标放置了 ”记录数“ 并且计算方式为 “求和”，目标值使用了设定值，则水波图自动计算出了统计总数占目标值的多少，即占比比例。。
 :::
 
-<img alt="组件样式_值与名称字体样式" src="/img/dataease-v2/view_generation/2.0数据大屏样式大小设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式_值与名称字体样式](/img/dataease-v2/view_generation/2.0数据大屏样式大小设置.png)
 
 :::note
 
 仪表盘支持在组件样式设置最小值、最大值、支持用图表指标来动态设置最大值和最小值，支持起始角度和结束角度设置。
 :::
 
-<img alt="组件样式_AntV" src="/img/dataease-v2/view_generation/2.0数据大屏仪表盘动态值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式_AntV](/img/dataease-v2/view_generation/2.0数据大屏仪表盘动态值.png)
 
 :::note
 
 词云图支持配置字号大小区间和文字间距。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏词云图样式大小.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏词云图样式大小.png)
 
 :::note
 
@@ -117,7 +117,7 @@ title: 图表样式设计
 - 【气泡大小】中未拖入字段时，【样式】中的【大小】滑块将保持启用，允许手动统一调整气泡大小。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/符号地图现支持自定义气泡大小范围.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/符号地图现支持自定义气泡大小范围.png)
 
 ## 4 标签
 
@@ -126,14 +126,14 @@ title: 图表样式设计
 支持修改标签的颜色、大小，根据不同的图表所支持的配置项有所不同，以地图为例，支持通过勾选的方式选择展示的维度、指标，同时支持指标的格式类型和单位设置。
 :::
 
-<img alt="图形属性" src="/img/dataease-v2/view_generation/2.0数据大屏标签设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图形属性](/img/dataease-v2/view_generation/2.0数据大屏标签设置.png)
 
 :::note
 
 漏斗图支持展示转化率
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏漏斗图转化率.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏漏斗图转化率.png)
 
 :::note
 
@@ -143,7 +143,7 @@ title: 图表样式设计
 - 自适应显示：标签根据布局自动调整显示，避免重叠，确保清晰度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏标签显示支持全量和自适应两种模式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏标签显示支持全量和自适应两种模式.png)
 ## 5 提示
 
 :::note
@@ -151,7 +151,7 @@ title: 图表样式设计
 支持调整图表的”提示“字体大小、字体颜色，显示格式设置。
 :::
 
-<img alt="组件样式_背景" src="/img/dataease-v2/view_generation/2.0数据大屏提示设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>、
+![组件样式_背景](/img/dataease-v2/view_generation/2.0数据大屏提示设置.png)、
 
 ## 6 标题
 
@@ -160,7 +160,7 @@ title: 图表样式设计
 支持修改组件的标题（标题名称、字体大小、字体颜色、字体间隔、字体样式、对齐方式）。
 :::
 
-<img alt="组件样式_标题字体样式" src="/img/dataease-v2/view_generation/2.0数据大屏标题设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式_标题字体样式](/img/dataease-v2/view_generation/2.0数据大屏标题设置.png)
 
 ## 7 图例
 
@@ -169,7 +169,7 @@ title: 图表样式设计
 支持修改组件的图例，包括图例的图标、方向、字体大小、字体颜色、水平位置、垂直位置等。
 :::
 
-<img alt="组件样式" src="/img/dataease-v2/view_generation/2.0数据大屏图例设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式](/img/dataease-v2/view_generation/2.0数据大屏图例设置.png)
 
 :::note
 
@@ -179,9 +179,9 @@ title: 图表样式设计
 - 自定义区间：用户可以手动设置每个图例的区间值，实现更灵活的展示效果。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏地图支持自定义图例区间1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏地图支持自定义图例区间1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏地图支持自定义图例区间2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏地图支持自定义图例区间2.png)
 
 ## 8 坐标轴
 
@@ -190,28 +190,28 @@ title: 图表样式设计
 有坐标轴的图表（柱状图、折线图等），轴值支持数值格式化设置，如下图所示，在样式的横轴设置中，可以设置横轴位置、轴名、轴线、标签。
 :::
 
-<img alt="组件样式_设置格式化" src="/img/dataease-v2/view_generation/2.0数据大屏坐标轴横轴.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式_设置格式化](/img/dataease-v2/view_generation/2.0数据大屏坐标轴横轴.png)
 
 :::note
 
 在纵轴设置中，除了坐标轴横轴的设置内容，还可对纵轴指标的显示进行格式和单位设置。
 :::
 
-<img alt="坐标轴轴线显示控制" src="/img/dataease-v2/view_generation/2.0数据大屏坐标轴宗轴.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![坐标轴轴线显示控制](/img/dataease-v2/view_generation/2.0数据大屏坐标轴宗轴.png)
 
 :::note
 
 横纵轴支持快捷启用与禁用轴名称。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏横纵轴支持快捷启用与禁用轴名称.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏横纵轴支持快捷启用与禁用轴名称.png)
 
 :::note
 
 支持自定义轴线的显示，并调整其颜色、形状和宽度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏新增轴线颜色自定义设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏新增轴线颜色自定义设置.png)
 
 ## 9 表格
 
@@ -220,69 +220,69 @@ title: 图表样式设计
 明细表、汇总表和透视表均支持对基础样式、表头、单元格、总计/汇总分别进行设置颜色和背景设置，以及设置列宽调整模式。
 :::
 
-<img alt="组件样式_设置格式化" src="/img/dataease-v2/view_generation/数据大屏表格样式设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式_设置格式化](/img/dataease-v2/view_generation/数据大屏表格样式设置.png)
 
 :::note
 
 明细表和汇总表支持分页设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/view_generation/数据大屏汇总表分页展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/view_generation/数据大屏汇总表分页展示.png)
 
 :::note
 
 透视表支持平铺展示和树形展示，同时支持指标展示支持选择按行头或列头展示，灵活调整展示方式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/view_generation/透视表展示设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/view_generation/透视表展示设置.png)
 
-<img alt="更新1" src="/img/dataease-v2/view_generation/透视表展示形式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/view_generation/透视表展示形式.png)
 
-<img alt="更新1" src="/img/dataease-v2/view_generation/数据大屏透视表新增行列转置功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/view_generation/数据大屏透视表新增行列转置功能.png)
 
 :::note
 
 透视表和明细表在配置数值字段汇总方式时。可根据字段需求选择求和、平均值、最大值、最小值等进行汇总展示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/view_generation/数据大屏汇总表总计支持数值字段汇总方式配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/view_generation/数据大屏汇总表总计支持数值字段汇总方式配置.png)
 
 :::note
 
 透视表汇总支持自定义聚合公式,支持自己编写聚合公式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏透视表自定义函数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏透视表自定义函数.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表聚合函数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表聚合函数.png)
 
 :::note
 
 明细表表头选项支持分组。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表支持表头分组1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表支持表头分组1.png)
 
 :::note
 
 在表头分组设置页，可按住 Ctrl/Cmd  键选择表头列进行合并分组。注意：仅同级别表头可合并。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表支持表头分组2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表支持表头分组2.png)
 
 :::note
 
 已合并的表头可通过左键选中，右键打开操作菜单进行管理。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表支持表头分组3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表支持表头分组3.png)
 
 :::note
 
 明细表支持单元格合并。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持单元格合并.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持单元格合并.png)
 
 :::note
 
@@ -290,16 +290,16 @@ title: 图表样式设计
 注意：自动换行功能启用后，表头的行高无法固定。在开启合并单元格时，自动换行则会失效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表自动换行.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表自动换行.png)
 
 :::note
 
 明细表和汇总表支持行列冻结。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表和汇总表支持行列冻结.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表和汇总表支持行列冻结.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏明细表和汇总表支持行列冻结.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏明细表和汇总表支持行列冻结.gif)
 
 ## 10 提示
 
@@ -315,9 +315,9 @@ title: 图表样式设计
 - 地图（地图、气泡地图、符号地图）
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表支持配置提示信息轮播功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表支持配置提示信息轮播功能.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表支持配置提示信息轮播功能.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表支持配置提示信息轮播功能.gif)
 
 ## 11 边框
 
@@ -326,7 +326,7 @@ title: 图表样式设计
 支持设置组件边框，设置边框的颜色、圆角，同时可以选择线条对样式以及设置线宽。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏边框设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏边框设置.png)
 
 ## 12 地图
 
@@ -337,14 +337,14 @@ title: 图表样式设计
 - 中心点：支持设置地图的默认中心点经纬度（取消自适应缩放后生效），便于地图聚焦于特定区域。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏在线地图功能增强.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏在线地图功能增强.png)
 
 :::note
 
 在制作在线地图时，地图风格选择【自定义】，URL 填入高德自定义地图分享的 URL 即可。详细设置可参考[地图自定义风格设置](../../change-v2-10-2.md/#121-支持自定义地图风格)。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏自定义地图风格.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏自定义地图风格.png)
 
 :::note
 
@@ -357,11 +357,11 @@ title: 图表样式设计
 符号地图支持自定义符号形状。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏符号地图支持自定义符号形状.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏符号地图支持自定义符号形状.png)
 
 :::note
 
 地图和气泡地图支持区域填充功能。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏地图和气泡地图支持区域填充功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏地图和气泡地图支持区域填充功能.png)

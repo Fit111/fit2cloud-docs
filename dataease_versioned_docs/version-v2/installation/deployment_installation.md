@@ -202,14 +202,14 @@ mvn clean package -Pstandalone -U -Dmaven.test.skip=true
 
 如下图所示输出，则编译成功。
 :::
-<img alt="源码部署" src="/img/dataease-v2/installation/成功编译1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/成功编译1.png)
 
-<img alt="源码部署" src="/img/dataease-v2/installation/编译成功2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/编译成功2.png)
 :::note
 
 编译完成后，可以在 core-backend/target 目录下看到编译后的 jar 包 CoreApplication.jar
 :::
-<img alt="源码部署" src="/img/dataease-v2/installation/编译完成.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/编译完成.png)
 :::note
 
 core-backend 源码引用到 calcite-core 依赖，是 DataEase 基于 Apache Calcite 工程修改后的依赖包，不属于开源部分。该依赖包会持续迭代，并上传到公共仓库中，对社区版源码的编译和使用不会造成任何影响。
@@ -319,7 +319,7 @@ java -jar CoreApplication.jar
 
 如下代码准备就绪，说明 DataEase 已成功运行，此时已经可以通过 IP:8100 访问服务。
 :::
-<img alt="源码部署" src="/img/dataease-v2/installation/代码就绪.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/代码就绪.png)
 
 ## 4 镜像制作
 ### 4.1 安装 Docker
@@ -347,7 +347,7 @@ docker build -t registry.cn-qingdao.aliyuncs.com/dataease/dataease:v2.3-rc1 .
 如下输出日志参考，使用 docker images 可查看镜像是否成功打包。
 :::
 
-<img alt="源码部署" src="/img/dataease-v2/installation/输出日志.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/输出日志.png)
 
 ## 5 镜像运行
 ### 5.1 配置运行环境
@@ -406,5 +406,5 @@ docker-compose up -d
 验证 DataEase 服务状态，状态为 health 则正常，浏览器输入 IP:PORTS 访问服务。
 :::
 
-<img alt="源码部署" src="/img/dataease-v2/installation/服务状态.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="源码部署" src="/img/dataease-v2/installation/访问服务.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![源码部署](/img/dataease-v2/installation/服务状态.png)
+![源码部署](/img/dataease-v2/installation/访问服务.png)

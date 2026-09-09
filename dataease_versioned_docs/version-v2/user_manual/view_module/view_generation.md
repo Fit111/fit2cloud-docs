@@ -46,4 +46,4 @@ title: 图表概述
 - 【序号 14】：图表展示
 :::
 
-<img alt="视图主功能区" src="/img/dataease-v2/view_generation/2.0视图概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图主功能区](/img/dataease-v2/view_generation/2.0视图概览.png)

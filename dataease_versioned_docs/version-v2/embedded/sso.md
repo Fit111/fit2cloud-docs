@@ -14,7 +14,7 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 
 点击 OIDC 编辑。即可设置 OIDC，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（1）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（1）.png](/img/dataease-v2/embedded/5.1%20单点登录（1）.png)
 
 :::note
 
@@ -26,7 +26,7 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 - Use Pkce：访问令牌。设置为 true 时，在请求标头中设置访问令牌。
 - Redirect Uri：重定向回的 URL。
 :::
-<img alt="5.1 单点登录（2）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（2）.png](/img/dataease-v2/embedded/5.1%20单点登录（2）.png)
 
 ## 2 CAS
 :::note
@@ -35,14 +35,14 @@ DataEase 企业版支持 CAS 协议，【系统设置】-&gt; 【认证设置】
 
 点击 CAS 编辑。即可设置 CAS，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（3）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（3）.png](/img/dataease-v2/embedded/5.1%20单点登录（3）.png)
 
 :::note
 
 - IdpUri：IdP 的 URI。
 - 回调域名：登录或注销后，回调的重定向 uri。
 :::
-<img alt="5.1 单点登录（4）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（4）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（4）.png](/img/dataease-v2/embedded/5.1%20单点登录（4）.png)
 
 ## 3 LDAP
 :::note
@@ -51,7 +51,7 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 
 点击 LDAP 编辑，即可设置 LDAP，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（5）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（5）.png](/img/dataease-v2/embedded/5.1%20单点登录（5）.png)
 
 :::note
 
@@ -64,7 +64,7 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 :::
 
 ## 4 OAuth2
-<img alt="5.1 单点登录（6）.png" src="/img/dataease-v2/embedded/5.1%20单点登录（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![5.1 单点登录（6）.png](/img/dataease-v2/embedded/5.1%20单点登录（6）.png)
 :::note
 
 - 授权端地址：用户进行授权时访问的 URL，通常用于获取授权码（Authorization Code）。

@@ -11,14 +11,18 @@ title: 数据源概述
 该页面包括数据连接的新增（序号 1）、搜索（序号 2）、复制（序号 3）、移动（序号 4）、重命名（序号 5）、删除（序号 6）等功能。
 :::
 
-<img alt="数据源概览" src="/img/dataease/newimg/user_manual/数据源概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据源概览](/img/dataease/newimg/user_manual/数据源概览.png)
+
+图 1  数据源概览
 
 :::note
 
 成功添加数据源后，支持获取数据源数据表以及数据集字段的描述信息
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/支持获取数据源数据表以及数据集字段的描述信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据表与字段描述](/img/dataease/newimg/支持获取数据源数据表以及数据集字段的描述信息.png)
+
+图 2  数据表与字段描述
 
 ## 2 支持的数据源类型
 
@@ -31,7 +35,9 @@ title: 数据源概述
 - **API 数据源：** API、飞书数据源（插件）
 :::
 
-<img alt="支持数据源类型" src="/img/dataease/newimg/user_manual/支持数据源类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![支持数据源类型](/img/dataease/newimg/user_manual/支持数据源类型.png)
+
+图 3  数据源类型
 
 :::note
 
@@ -52,16 +58,25 @@ title: 数据源概述
 - kingbase - 8.6.0
 :::
 
+
+
 ## 3 数据源设置
+
 :::note
 
 支持 ssh 隧道方式，通过跳板机连接其他网络环境中的数据源。支持密码和密钥两种方式。
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据源支持ssh隧道.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据源ssh隧道](/img/dataease/newimg/数据源支持ssh隧道.png)
+
+图 4  数据源ssh隧道
+
 :::note
 
 支持设置连接数、查询超时。
 如果在数据源校验时成功，但是创建数据集时出现"数据源无效"的报错，请减少连接数的再次尝试。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据源高级设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![校验成功](/img/dataease/newimg/数据源高级设置.png)
+
+图 5  高级设置

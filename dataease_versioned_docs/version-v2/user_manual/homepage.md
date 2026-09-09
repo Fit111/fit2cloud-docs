@@ -31,4 +31,4 @@ title: 工作台
     * 我的分享
 :::
 
-<img alt="工作台展示" src="/img/dataease-v2/newimg/user_manual/工作台展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工作台展示](/img/dataease-v2/newimg/user_manual/工作台展示.png)

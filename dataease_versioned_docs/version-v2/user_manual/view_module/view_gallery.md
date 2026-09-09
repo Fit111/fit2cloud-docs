@@ -19,7 +19,7 @@ title: 图表图库
 
 仪表盘像一个钟表或者可读盘，有刻度和指针，其中刻度表示度量，指针表示维度，指针角度表示数值，指针指向当前数值。
 
-<img alt="echarts仪表盘" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0仪表盘.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts仪表盘](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0仪表盘.png)
 :::
 
 ### 1.2 水波图
@@ -28,7 +28,7 @@ title: 图表图库
 
 水波图的水波高度表示指标值，当水填满或溢出时，代表指标值已经到达目标值。
 
-<img alt="echarts仪表盘" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0水波图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts仪表盘](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0水波图.png)
 :::
 
 ### 1.3 指标卡
@@ -36,7 +36,7 @@ title: 图表图库
 
 指标卡由看板标签和看板指标组成，标签由数据的维度决定，指标由数据的度量决定。
 
-<img alt="echarts明细表" src="/img/dataease-v2/view_generation/view_gallery/ECharts/指标卡.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts明细表](/img/dataease-v2/view_generation/view_gallery/ECharts/指标卡.png)
 :::
 
 ## 2 表格
@@ -50,14 +50,14 @@ title: 图表图库
 
 汇总表
 
-<img alt="echarts汇总表" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0汇总表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts汇总表](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0汇总表.png)
 :::
 ### 2.2 明细表
 :::note
 
 明细表
 
-<img alt="echarts明细表" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0汇总表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts明细表](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0汇总表.png)
 :::
 
 ### 2.3 透视表
@@ -65,7 +65,7 @@ title: 图表图库
 
 透视表
 
-<img alt="echarts明细表" src="/img/dataease-v2/view_generation/view_gallery/ECharts/透视图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts明细表](/img/dataease-v2/view_generation/view_gallery/ECharts/透视图.png)
 :::
 
 ### 2.4 热力图
@@ -73,7 +73,7 @@ title: 图表图库
 
 热力图
 :::
-<img alt="echarts明细表" src="/img/dataease-v2/view_generation/view_gallery/ECharts/热力图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts明细表](/img/dataease-v2/view_generation/view_gallery/ECharts/热力图.png)
 
 ## 3 线/面图
 
@@ -87,9 +87,9 @@ title: 图表图库
 
 基础折线图
 
-<img alt="echarts基础折线图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0折线图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts基础折线图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0折线图.png)
 
-<img alt="echarts基础折线图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0双折线图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts基础折线图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0双折线图.png)
 :::
 
 ### 3.2 堆叠折线图
@@ -97,7 +97,7 @@ title: 图表图库
 
 堆叠折线图在折线图的基础上形成，折线与自变量坐标轴之间的区域使用颜色填充，堆叠折线图每一个数据的起点都是基于前一个数据，最终代表的是所有数据的和，即累计值。
 
-<img alt="echarts堆叠折现图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0堆叠折线图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts堆叠折现图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0堆叠折线图.png)
 :::
 
 ### 3.3 面积图
@@ -105,7 +105,7 @@ title: 图表图库
 
 面积图是通过将折线图下方的区域填充来强调数据的累积变化。
 
-<img alt="echarts堆叠折现图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0面积图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts堆叠折现图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0面积图.png)
 :::
 
 ## 4 柱状图
@@ -121,7 +121,7 @@ title: 图表图库
 
 基础柱状图
 
-<img alt="echarts基础柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0基础柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts基础柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0基础柱状图.png)
 :::
 
 ### 4.2 堆叠柱状图
@@ -130,7 +130,7 @@ title: 图表图库
 
 堆叠柱状图是柱状图的变形，堆叠柱状图将每个柱子进行颜色分割，用于显示同系列下各个数据的大小情况，它不仅可以比较不同维度间总数的差别，还可以显示同类型下子类别的构成以及各数据的大小情况。
 
-<img alt="echarts堆叠柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0堆叠柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts堆叠柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0堆叠柱状图.png)
 :::
 
 ### 4.3 横向柱状图
@@ -138,7 +138,7 @@ title: 图表图库
 
 横向柱状图，用于比较不同类别的数量或数值，而且柱状条是水平排列的。
 
-<img alt="echarts横向柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向柱状图.png)
 :::
 
 ### 4.4 横向堆叠柱状图
@@ -146,7 +146,7 @@ title: 图表图库
 
 横向堆叠柱状图如同字面意思，是堆叠柱状图的横向展示。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向堆叠柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向堆叠柱状图.png)
 :::
 
 ### 4.5 分组柱状图
@@ -154,7 +154,7 @@ title: 图表图库
 
 分组柱状图,是一种用于比较多个组内不同类别的数量关系的图表。每个组有多个并排的柱状条，每个柱状条表示一个类别。
 
-<img alt="echarts横向柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0分组柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0分组柱状图.png)
 :::
 
 ### 4.6 分组堆叠柱状图
@@ -162,7 +162,7 @@ title: 图表图库
 
 分组堆叠柱状图,可以同时展示多个组内的不同类别的数量关系，并且在每个组内，各类别的值可以堆叠在一起。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0分组堆叠柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0分组堆叠柱状图.png)
 :::
 
 ### 4.7 百分比柱状图
@@ -170,7 +170,7 @@ title: 图表图库
 
 百分比柱状图，每个柱状条的总高度表示 100%，而不同颜色段表示不同类别的百分比贡献
 
-<img alt="echarts横向柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0百分比柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0百分比柱状图.png)
 :::
 
 ### 4.8 横向百分比柱状图
@@ -178,7 +178,7 @@ title: 图表图库
 
 横向百分比柱状图
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向百分比柱状图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0横向百分比柱状图.png)
 :::
 
 ### 4.9 瀑布图
@@ -186,7 +186,7 @@ title: 图表图库
 
 瀑布图是一种用于显示累计数值变化的图表，能够清晰展示各个数据点的增减对总值的影响。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/瀑布图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/瀑布图.png)
 :::
 
 ### 4.10 区间条形图
@@ -194,7 +194,7 @@ title: 图表图库
 
 区间条形图用于显示数据集中每个区间内数据分布的图表，通常通过条形的长度表示各个区间的频率或数量。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/区间条形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/区间条形图.png)
 :::
 
 ### 4.11 对称条形图
@@ -202,7 +202,7 @@ title: 图表图库
 
 对称条形图用于比较两个数据集在相同类别下的数值，通过在中轴两侧对称排列的条形来显示数据的差异和分布情况。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/对称条形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/对称条形图.png)
 :::
 
 ### 4.12 进度条
@@ -210,7 +210,7 @@ title: 图表图库
 
 进度条是可直观地表示任务或过程的完成进度，通常通过填充条的长度或百分比来显示进度状态。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/进度条.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/进度条.png)
 :::
 
 ### 4.13 K 线图
@@ -218,7 +218,7 @@ title: 图表图库
 
 K 线图是一种金融图表，用于显示特定时间段内证券价格的开盘价、收盘价、最高价和最低价。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/股票图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/股票图.png)
 :::
 
 ### 4.14 子弹图
@@ -226,7 +226,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 弹图支持在同一图形中展示实际值、目标值与参考值，用于衡量业务完成情况，常用于 KPI 监控等场景。
 
-<img alt="echarts横向堆叠柱状图" src="/img/dataease-v2/view_generation/子弹图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts横向堆叠柱状图](/img/dataease-v2/view_generation/子弹图.png)
 :::
 
 ## 5 分布图
@@ -237,7 +237,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 饼图以饼状图形显示一个数据系列中各项的大小与各项总和的比例，也称作扇形统计图。
 
-<img alt="echarts基础饼图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0饼图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts基础饼图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0饼图.png)
 :::
 
 ### 5.2 环形饼图
@@ -246,7 +246,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 环形图（环形饼图）
 
-<img alt="echarts环形饼图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0环形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts环形饼图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0环形图.png)
 :::
 
 ### 5.3 南丁格尔玫瑰图
@@ -255,14 +255,14 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 南丁格尔玫瑰图又称鸡冠花图、极坐标区域图，是由弗罗伦斯·南丁格尔所发明，其实是一种圆形的直方图，以圆弧的半径长短表示数据的大小。
 
-<img alt="echarts南丁格尔玫瑰图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0玫瑰图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts南丁格尔玫瑰图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0玫瑰图.png)
 :::
 
 ### 5.4 玫瑰环形图
 
 :::note
 
-<img alt="echarts玫瑰环形图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0玫瑰环形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts玫瑰环形图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0玫瑰环形图.png)
 :::
 
 ### 5.5 矩形树图
@@ -271,7 +271,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 矩形树图是一种常见的表达『层级数据』『树状数据』的可视化形式。它主要用面积的方式，便于突出展现出『树』的各层级中重要的节点。
 
-<img alt="echarts矩形树图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0矩形树图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts矩形树图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0矩形树图.png)
 :::
 
 ### 5.6 雷达图
@@ -280,7 +280,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 雷达图又称蜘蛛网图，将多个维度的数据量映射到起始于同一个圆心的坐标轴上，结束于圆周边缘，然后将同一组的点使用线连接起来。
 
-<img alt="echarts雷达图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0雷达图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts雷达图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0雷达图.png)
 :::
 
 ### 5.7 词云图
@@ -289,7 +289,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 词云图又称文字云，是文本数据的视觉表示，由词汇组成类似云的彩色图形，用于展示大量文本数据。每个词的重要性以字体大小或颜色显示。
 
-<img alt="echarts仪表盘" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0词云图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts仪表盘](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0词云图.png)
 :::
 
 ## 6 地图
@@ -298,14 +298,14 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 普通地图：用颜色的深浅来展示区域范围的数值大小。
 
-<img alt="普通地图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![普通地图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0地图.png)
 :::
 
 :::note
 
 支持展示世界地图，【地图设置】中选择【世界村】。
 
-<img alt="世界地图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0世界地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![世界地图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0世界地图.png)
 :::
 
 ### 6.2 气泡地图
@@ -313,7 +313,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 气泡地图：用气泡大小展示区域范围的数值大小。
 
-<img alt="普通地图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/气泡地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![普通地图](/img/dataease-v2/view_generation/view_gallery/ECharts/气泡地图.png)
 :::
 
 ### 6.3 流向地图
@@ -323,7 +323,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 流向地图基于高德地图(火星坐标系)，使用流向地图的数据集字段类型需为 “地理位置”，即数据集数据需在标准的经度数值范围与纬度数值范围。示例如：出发经度值为 116.403963，出发纬度值为 39.915119；目的经度值为 114.064552，目的纬度值为 22.550058。   
 **注意：流向地图、符号地图等组件使用的是高德在线地图，需能够连接外网高德服务器，如遇组件白屏，可自行申请在线地图 Key 并配置，参考[在线地图 Key 申请](https://dataease.cn/docs/v2/user_manual/system_management/param/#31)。**
 
-<img alt="普通地图" src="/img/dataease-v2/view_generation/流向地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![普通地图](/img/dataease-v2/view_generation/流向地图.png)
 :::
 
 ### 6.4 热力地图
@@ -331,7 +331,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 热力地图通过颜色渐变来表示地理区域或数据分布密度的地图，通常用于显示数据的浓度和变化趋势。
 
-<img alt="普通地图" src="/img/dataease-v2/view_generation/热力地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![普通地图](/img/dataease-v2/view_generation/热力地图.png)
 :::
 
 ### 6.5 符号地图
@@ -339,7 +339,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 符号地图使用不同大小或形状的符号在地图上表示数据值的地图，用于显示地理位置上的数据分布和相对大小。
 
-<img alt="普通地图" src="/img/dataease-v2/view_generation/符号的图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![普通地图](/img/dataease-v2/view_generation/符号的图.png)
 :::
 
 ## 7 关系图
@@ -350,7 +350,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 散点图是一种用于展示二维数据的图表类型，其中维度和一个额外的指标（通常表示大小）组成。
 
-<img alt="" src="/img/dataease-v2/view_generation/view_gallery/ECharts/散点图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/view_gallery/ECharts/散点图.png)
 :::
 
 ### 7.2 象限图
@@ -358,7 +358,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 象限图是分为四个象限的数据的直观表示。 它用于在二维网格上绘制数据点，其中一个变量表示在x 轴上，另一个变量表示在y 轴上。
 
-<img alt="" src="/img/dataease-v2/view_generation/view_gallery/ECharts/象限图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/view_gallery/ECharts/象限图.png)
 :::
 
 ### 7.3 漏斗图
@@ -367,7 +367,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 漏斗图由多个梯形从上而下叠加而成，从上到下的项有逻辑上的顺序关系，梯形面积表示某个业务量与上一个环节之间的差异。
 
-<img alt="echarts漏斗图" src="/img/dataease-v2/view_generation/view_gallery/ECharts/2.0漏斗图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts漏斗图](/img/dataease-v2/view_generation/view_gallery/ECharts/2.0漏斗图.png)
 :::
 
 ### 7.4 桑基图
@@ -376,7 +376,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 桑基图是通过宽度不同的箭头或流动带表示不同类别之间的流量或比例关系，适用于显示复杂的系统中流动和分配情况。
 
-<img alt="echarts漏斗图" src="/img/dataease-v2/view_generation/桑基图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![echarts漏斗图](/img/dataease-v2/view_generation/桑基图.png)
 :::
 
 ### 7.5 圆形填充图
@@ -385,7 +385,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 圆形填充图通过圆形的填充部分来直观地展示数据的分布、比例或完成度。
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20%20%20新增圆形填充图.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20%20%20新增圆形填充图.PNG)
 :::
 
 ## 8 双轴图
@@ -396,7 +396,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 柱形图和折线图是比较常见的图表，组合后既可以用柱形图比较数据大小，又可以通过折线图查看数据变化趋势。
 
-<img alt="" src="/img/dataease-v2/view_generation/view_gallery/ECharts/组合图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/view_gallery/ECharts/组合图.png)
 :::
 
 ### 8.2 分组柱线组合图
@@ -405,7 +405,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 分组柱线组合图在同一个图表中并排显示多个柱形图组，每组柱形图代表不同类别的数据，便于比较不同类别之间的数据差异。
 
-<img alt="" src="/img/dataease-v2/view_generation/分组柱线组合图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/分组柱线组合图.png)
 :::
 
 ### 8.3 堆叠柱线组合图
@@ -414,7 +414,7 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 堆叠柱线组合图在同一个柱形图中叠加显示多个数据系列，每个数据系列的数值累加在前一个数据系列之上，便于展示总量和各部分的贡献。
 
-<img alt="" src="/img/dataease-v2/view_generation/堆叠柱线组合图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/堆叠柱线组合图.png)
 :::
 
 ### 8.4 双线组合图
@@ -423,6 +423,6 @@ K 线图是一种金融图表，用于显示特定时间段内证券价格的开
 
 双线组合图同时展示两组数据随时间变化的趋势，使用双 Y 轴以表示数据单位不同的两组数据。例如，可左侧 Y 轴可以显示销售额，右侧 Y 轴显示销售量。
 
-<img alt="" src="/img/dataease-v2/view_generation/双线组合图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/view_generation/双线组合图.png)
 :::
 

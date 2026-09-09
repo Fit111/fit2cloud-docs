@@ -14,6 +14,7 @@ title: 模拟登录
 :::
 
 ## 1 模拟登录方案介绍
+
 :::note
 
 DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login/localLogin 接口可以拿到 Token 信息。关键问题在于怎么将 DataEase 的认证信息放到 LocalStorage 里面去。根据处理方案的不同，分为同域模拟登陆和跨域模拟登陆。
@@ -26,7 +27,11 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 ## 2 同域模拟登陆
 
 ### 2.1 流程描述
-<img alt="同域.pic.jpg" src="/img/dataease/embedded/同域.pic.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![同域.pic.jpg](/img/dataease/embedded/同域.pic.jpg)
+
+图 1  同域.pic
+
 :::note
 
 1. 用户登录 A 系统
@@ -38,20 +43,30 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 :::
 
 ### 2.2 开发指南
+
 :::note
 
 此方案需要 A 系统提供一个模拟登录接口，模拟登陆接口中获取用户 Token（如果需要使用动态的用户进行登陆认证，则需要调用获取用户接口和修改用户密码接口来保证模拟登录成功），前端将获取到的token写入当前域名的LocalStorage下，然后再跳转到 DataEase 正常的访问路径，至此完成模拟登录。
 
  参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 :::
-<img alt="5.2模拟登录（2）.png" src="/img/dataease/embedded/5.2模拟登录（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="5.2模拟登录（3）.png" src="/img/dataease/embedded/5.2模拟登录（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-## 3  跨域模拟登陆
+![模拟登录（2）](/img/dataease/embedded/模拟登录（2）.png)
 
-### 3.1  流程描述
+图 2  模拟登录
 
-<img alt="跨域.pic.jpg" src="/img/dataease/embedded/跨域.pic.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模拟登录（3）](/img/dataease/embedded/模拟登录（3）.png)
+
+图 3  模拟登录
+
+## 3 跨域模拟登陆
+
+### 3.1 流程描述
+
+![跨域.pic.jpg](/img/dataease/embedded/跨域.pic.jpg)
+
+图 4  跨域.pic
+
 :::note
 
 1. 用户登录 A 系统
@@ -63,7 +78,8 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 7. Nginx 通过特定路径拦截到请求重定向至自定义的 HTML 页面，然后通过 HTML 页面中的 JS 代码将 Token 信息写入到 LocalStorage 中去，然后再跳转到 DataEase 正常的访问路径
 :::
 
-### 3.2  开发指南
+### 3.2 开发指南
+
 :::note
 
 此方案需要 A 系统提供一个模拟登录接口，模拟登陆接口中获取用户 Token，并返回重定向地址，重定向地址携带 Token 信息重定向到特定路径（如果需要使用动态的用户进行登陆认证，则需要调用获取用户接口和修改用户密码接口来保证模拟登录成功）。
@@ -72,10 +88,17 @@ Nginx 通过特定路径拦截到请求重定向至自定义的 HTML 页面，�
    
 参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 :::
-<img alt="5.2模拟登录（5）.png" src="/img/dataease/embedded/5.2模拟登录（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="5.2模拟登录（6）.png" src="/img/dataease/embedded/5.2模拟登录（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-### 3.3  Nginx配置
+![模拟登录（5）](/img/dataease/embedded/模拟登录（5）.png)
+
+图 5  模拟登录
+
+![模拟登录（6）](/img/dataease/embedded/模拟登录（6）.png)
+
+图 6  模拟登录
+
+### 3.3 Nginx配置
+
 :::note
 
 Nginx 还需要配置一个静态网页，用于设置 LocalStorage 用。Nginx 配置参考如下：

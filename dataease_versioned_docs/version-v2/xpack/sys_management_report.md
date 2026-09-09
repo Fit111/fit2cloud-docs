@@ -10,7 +10,7 @@ title: 定时报告
 系统支持批量删除定时报告任务。
 :::
 
-<img alt="定时报告" src="/img/dataease-v2/xpack/定时报告任务列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![定时报告](/img/dataease-v2/xpack/定时报告任务列表.png)
 
 ## 2 新增任务
 
@@ -20,22 +20,22 @@ title: 定时报告
 输入需发送的仪表板或数据大屏；系统支持发送选定视图的数据。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持定时报告.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持定时报告.png)
 :::note
 
 查询组件参数设置功能，可以覆盖指定仪表板或数据大屏中的查询组件默认值。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.3%20支持定时报告设置查询组件默认值2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.3%20支持定时报告设置查询组件默认值2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.3%20支持定时报告设置查询组件默认值3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.3%20支持定时报告设置查询组件默认值3.png)
 
 :::note
 
 定时报告支持发送失败后自动按照重试设置进行重发尝试。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20定时报告增加出错重试设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20定时报告增加出错重试设置.png)
 
 :::note
 
@@ -43,35 +43,35 @@ title: 定时报告
 支持邮件、企业微信、钉钉和飞书接收通知。推送到群组支持飞书和钉钉。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/定时报告接收配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/定时报告接收配置.png)
 
 :::note
 
 选择内部收件人可以按照角色或用户维度多选。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告3.png)
 
 :::note
 
 需要发送给外部邮箱可以通过【邮件通知】输入框输入，输入完邮箱后点击回车即可。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/定时报告邮件通知.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/定时报告邮件通知.png)
 
 :::note
 
 **第三步：配置发送设置：**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告5.png)
 
 :::note
 
 **定时报告邮件接收示例：**
 :::
 
-<img alt="定时报告" src="/img/dataease-v2/xpack/定时报告示例.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![定时报告](/img/dataease-v2/xpack/定时报告示例.png)
 
 ## 2 执行记录
 
@@ -80,11 +80,11 @@ title: 定时报告
 可根据需要，手动即时做一次单次的执行，点击下图的"立即执行"。
 :::
 
-<img alt="定时报告" src="/img/dataease-v2/xpack/定时报告触发.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![定时报告](/img/dataease-v2/xpack/定时报告触发.png)
 
 :::note
 
 切换菜单至【任务日志】，查看定时报告的执行记录。
 :::
 
-<img alt="定时报告" src="/img/dataease-v2/xpack/定时报告任务日志.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![定时报告](/img/dataease-v2/xpack/定时报告任务日志.png)

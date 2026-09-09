@@ -9,7 +9,9 @@ title: 创建仪表板
 点击【序号 1】 、【序号 2】位置新建仪表板，根据下图所示操作，在目录下新建仪表板；
 :::
 
-<img alt="3.0新建仪表板" src="/img/dataease/dashboard_generation/创建仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![新建仪表板](/img/dataease/dashboard_generation/创建仪表板.png)
+
+图 1  创建仪表板
 
 ## 2 复制仪表板
 
@@ -18,9 +20,13 @@ title: 创建仪表板
 按下图所示，选择对应的仪表板进行复制，保存复制的仪表板。
 :::
 
-<img alt="3.0复制仪表板" src="/img/dataease/dashboard_generation/3.0复制仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![复制仪表板](/img/dataease/dashboard_generation/复制仪表板.png)
 
-<img alt="2.0复制仪表板2" src="/img/dataease/dashboard_generation/3.0复制仪表板2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 2  复制仪表板
+
+![复制仪表板2](/img/dataease/dashboard_generation/复制仪表板2.png)
+
+图 3  复制仪表板
 
 ## 3 使用模板创建
 
@@ -33,19 +39,24 @@ title: 创建仪表板
 - 应用模板提供和数据源相关配置项，自动生成和创建应用所对应的数据集的资源。
 :::
 
-<img alt="3.0模板仪表板" src="/img/dataease/dashboard_generation/点击应用模板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![模板仪表板](/img/dataease/dashboard_generation/点击应用模板.png)
+
+图 4  点击应用模板
 
 :::note
 
 样式模板图表需要更换为自己的数据集。
 :::
 
-<img alt="3.0模板仪表板2" src="/img/dataease/dashboard_generation/使用模板界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板仪表板2](/img/dataease/dashboard_generation/使用模板界面.png)
+
+图 5  使用模板界面
 
 :::note
 
 使用应用创建的资源，会自动弹出相关配置项，需要用户进一步填写。
 :::
 
-<img alt="3.0模板仪表板2" src="/img/dataease/dashboard_generation/仪表板使用应用创建.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板仪表板2](/img/dataease/dashboard_generation/仪表板使用应用创建.png)
 
+图 6  填写应用配置

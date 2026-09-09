@@ -9,30 +9,41 @@ title: 插件管理
 - 新增插件管理模块，支持数据源插件和图表插件；
 - 安装插件时即时生效，但更新与卸载插件需要重启服务后生效。
 :::
-<img alt="更新1" src="/img/dataease/xpack/插件管理新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![插件管理](/img/dataease/xpack/插件管理.png)
+
+图 1  插件管理
 
 :::note
 
 达梦数据源插件对接测试版本为 DM8（dm8_20240715_rev232765_x86_rh6_64）。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.3%20新增达梦数据源插件（XPack）1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增达梦数据源插件（XPack）1](/img/dataease/newimg/新增达梦数据源插件（XPack）1.png)
+
+图 2  达梦数据源插件
 
 :::note
 
 Hive 数据源插件目前不支持该数据源做跨源数据集，且不支持 kerberos 认证方式。开发环境对接的 Hive 版本为 2.3.2。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/6.1%20支持%20Hive%20数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![支持 Hive 数据源](/img/dataease/newimg/支持%20Hive%20数据源.png)
+
+图 3  Hive 数据源
 
 :::note
 
 飞书数据源插件需通过【系统设置】&gt;【平台对接】中的飞书应用进行数据读取。当【平台对接】中的飞书设置无效或被禁用时，飞书数据源插件将无法使用。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增飞书数据源插件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![飞书数据源插件](/img/dataease/newimg/新增飞书数据源插件1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/新增飞书数据源插件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 4  飞书数据源插件
+
+![飞书数据源插件](/img/dataease/newimg/新增飞书数据源插件2.png)
+
+图 5  飞书数据源插件
 
 :::note
 
@@ -45,4 +56,7 @@ Hive 数据源插件目前不支持该数据源做跨源数据集，且不支持
 
 以上仅为部分插件演示，更多插件可到飞致云应用商店获取并导入。
 :::
-<img alt="更新1" src="/img/dataease/newimg/飞致云应用商店.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![飞致云应用商店](/img/dataease/newimg/飞致云应用商店.png)
+
+图 6  飞致云应用商店

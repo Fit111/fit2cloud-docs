@@ -4,7 +4,8 @@ title: 发布运维
 
 <a id="dataset-replace"></a>
 
-## 1 数据集替换 
+## 1 数据集替换
+
 :::note
 
 当数据源或数据集发生变更，可使用【替换数据集】批量切换表格内使用的数据集，并映射字段。替换后，使用旧数据集的明细表 / 透视表及查询控件字段会同步更新。
@@ -18,7 +19,10 @@ title: 发布运维
 
 左侧展示当前表格已使用的数据集及引用次数；右侧为【替换为新数据集】，用于选择目标数据集。
 :::
-<img alt="替换全局数据集入口" src="/img/dataease/newimg/xpack/替换全局数据集入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![替换全局数据集入口](/img/dataease/newimg/xpack/替换全局数据集入口.png)
+
+图 1  选择数据源
 
 ### 1.2 选择目标数据集
 
@@ -26,7 +30,10 @@ title: 发布运维
 
 点击右侧下拉框，搜索或选择要替换到的数据集。列表底部支持【+ 新建数据集】。
 :::
-<img alt="替换全局数据集选择" src="/img/dataease/newimg/xpack/替换全局数据集选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![替换全局数据集选择](/img/dataease/newimg/xpack/替换全局数据集选择.png)
+
+图 2  替换全局数据集选择
 
 ### 1.3 字段映射
 
@@ -36,7 +43,10 @@ title: 发布运维
 
 界面会显示已匹配字段数量（如「已匹配字段: 3/4」）。名称或类型不一致的字段需手动选择；未完成映射时，下拉框会标红，确定按钮不可用。
 :::
-<img alt="替换全局数据集字段映射" src="/img/dataease/newimg/xpack/替换全局数据集字段映射.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![替换全局数据集字段映射](/img/dataease/newimg/xpack/替换全局数据集字段映射.png)
+
+图 3  替换全局数据集字段映射
 
 ### 1.4 确认替换
 
@@ -44,7 +54,10 @@ title: 发布运维
 
 配置完成后点击【确定】，完成数据集替换。
 :::
-<img alt="替换全局数据集确认" src="/img/dataease/newimg/xpack/替换全局数据集确认.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![替换全局数据集确认](/img/dataease/newimg/xpack/替换全局数据集确认.png)
+
+图 4  替换全局数据集确认
 
 :::note
 
@@ -52,18 +65,21 @@ title: 发布运维
 :::
 
 ## 2 预览
-:::note
+
+表 1  预览
 
 | 入口 | 说明 |
 | --- | --- |
 | 目录区【预览】 | 在列表页只读预览 |
 | 目录区【全屏预览】 | 浏览器全屏预览 |
 | 编辑器【预览】 | 编辑态预览；可下拉全屏预览 |
-:::
 
-<img alt="替换全局数据集确认" src="/img/dataease/newimg/xpack/电子表格预览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![替换全局数据集确认](/img/dataease/newimg/xpack/电子表格预览.png)
+
+图 5  电子表格预览
 
 ## 3 发布流程
+
 :::note
 
 1. 编辑完成并【保存】；
@@ -71,4 +87,3 @@ title: 发布运维
 3. 需要下线时，在编辑器或目录菜单选择【取消发布】；
 4. 若发布后又有修改但未再次发布，可通过【恢复到发布版本】回退到上次发布内容。
 :::
-

@@ -9,7 +9,10 @@ title: 图表数据设计
 展示所有可选维度，当选择数据集后，维度与指标由系统自动分配，分配原则：文本型字段默认为维度、数值型字段默认为指标，因此如果需要某个字段作为指标，在数据集中编辑字段，将其设置为维度。  
 支持从图表中复制字段，复制字段适用于同一个字段需要不同计算方式的场景。复制的字段在后台仅存储在特定图表中，只有在该图表中才能看到，因此在数据集中不可见。
 :::
-<img alt="可选指标列表" src="/img/dataease/view_generation/2.0维度列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![可选指标列表](/img/dataease/view_generation/维度列表.png)
+
+图 1  维度列表
 
 ## 2 可选指标列表
 
@@ -18,7 +21,9 @@ title: 图表数据设计
 展示所有可选指标，当选择数据集后，维度与指标由系统自动分配，分配原则：文本型字段默认为维度、数值型字段默认为指标，因此如果需要某个字段作为指标，在数据集中编辑字段，将其设置为指标。
 :::
 
-<img alt="可选指标列表" src="/img/dataease/view_generation/2.0指标列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![可选指标列表](/img/dataease/view_generation/指标列表.png)
+
+图 2  指标列表
 
 ## 3 维度选择
 
@@ -27,30 +32,40 @@ title: 图表数据设计
 **如下图所示，通过拖拉的形式，从"维度可选列表中"拖拉至"维度选择"，图表根据所选择的维度去统计分析数据。**
 :::
 
-<img alt="选择维度" src="/img/dataease/view_generation/2.0选择维度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![选择维度](/img/dataease/view_generation/选择维度.png)
+
+图 3  选择维度
 
 :::note
 
 **如下图所示，点击维度上的下拉，弹出设置窗口，可设置维度排序方式、显示名，日期类型字段还可设置日期显示和日期格式；**
 :::
 
-<img alt="维度属性设置" src="/img/dataease/view_generation/2.0维度排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![维度属性设置](/img/dataease/view_generation/维度排序.png)
+
+图 4  维度排序
 
 :::note
 
 **支持更改维度显示名称，同时保留该字段原始的字段名称，如下图所示。**
 :::
 
-<img alt="维度_更改字段名称入口" src="/img/dataease/view_generation/2.0更改维度名称.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![维度_更改字段名称入口](/img/dataease/view_generation/更改维度名称.png)
+
+图 5  更改维度名称
 
 :::note
 
 排序功能支持配置多个字段（维度和指标）的排序优先级，系统将根据设置的优先级顺序依次进行排序。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/排序支持设置优先级1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![排序设置优先级](/img/dataease/newimg/排序支持设置优先级1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/排序支持设置优先级3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 6  排序设置优先级
+
+![排序设置优先级](/img/dataease/newimg/排序支持设置优先级3.png)
+
+图 7  排序设置优先级
 
 :::note
 
@@ -65,9 +80,13 @@ title: 图表数据设计
 Tips：可以根据前面的图标快速判断当前设置的排序方式。
 :::
 
-<img alt="维度_自定义排序" src="/img/dataease/view_generation/2.0自定义排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![维度_自定义排序](/img/dataease/view_generation/自定义排序.png)
 
-<img alt="维度_自定义排序调整" src="/img/dataease/view_generation/2.0设置自定义排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 8  自定义排序
+
+![维度_自定义排序调整](/img/dataease/view_generation/设置自定义排序.png)
+
+图 9  设置自定义排序
 
 ## 4 指标选择
 
@@ -76,7 +95,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 **如下图所示，通过拖拉的形式，从"指标可选列表中"拖拉至"指标选择"，图表根据所选择的指标进一步分析展示数据。**
 :::
 
-<img alt="选择指标" src="/img/dataease/view_generation/2.0指标选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![选择指标](/img/dataease/view_generation/指标选择.png)
+
+图 10  指标选择
 
 :::note
 
@@ -88,7 +109,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 - 时间类型支持计数、去重统计。
 :::
 
-<img alt="指标设置" src="/img/dataease/view_generation/2.0指标汇总方式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![指标设置](/img/dataease/view_generation/指标汇总方式.png)
+
+图 11  指标汇总方式
 
 :::note
 
@@ -96,7 +119,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 **注意：使用同比环比功能，需字段为日期类型，若【同比环比】不可点击，请检查维度字段是否为日期类型。**
 :::
 
-<img alt="同比环比" src="/img/dataease/view_generation/2.0指标快速计算.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![同比环比](/img/dataease/view_generation/指标快速计算.png)
+
+图 12  指标快速计算
 
 :::note
 
@@ -107,8 +132,13 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 - 而图表过滤器的查询在同环比计算之前，在同时使用图表过滤器时，会存在数据不符合预期的情况。
 :::
 
-<img alt="更新1" src="/img/dataease/view_generation/指标卡支持显示同环比数据1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/同环比增加具体数值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![指标卡显示同环比数据](/img/dataease/view_generation/指标卡支持显示同环比数据1.png)
+
+图 13  指标卡显示同环比数据
+
+![同环比增加具体数值](/img/dataease/newimg/同环比增加具体数值.png)
+
+图 14  同环比增加具体数值
 
 :::note
 
@@ -120,7 +150,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 - 其他图表类型：分布图、地图、关系图。
 :::
 
-<img alt="更新1" src="/img/dataease/view_generation/图表指标支持快速计算累加仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图表指标快速计算累加仪表板](/img/dataease/view_generation/图表指标支持快速计算累加仪表板.png)
+
+图 15  图表指标快速计算累加仪表板
 
 :::note
 
@@ -133,7 +165,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 - 支持打开千分位，即每三位数，以逗号隔开的方式，20,000,000。
 :::
 
-<img alt="设置数值格式_指标卡展示结果" src="/img/dataease/view_generation/2.0数值格式设置.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![设置数值格式_指标卡展示结果](/img/dataease/view_generation/数值格式设置.png)
+
+图 16  数值格式设置
 
 ## 5 更换数据集
 
@@ -143,14 +177,18 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 **提示：若更换后的数据集与原数据集字段发生变化，需重新制作图表，若更换后的数据集与原数据集字段可匹配上，图表数据自动根据更换后的数据集展示，不用再做调整。**
 :::
 
-<img alt="更换数据集入口" src="/img/dataease/view_generation/2.0更换数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更换数据集入口](/img/dataease/view_generation/更换数据集.png)
+
+图 17  更换数据集
 
 :::note
 
 更换数据集，下拉数据集目录，点击数据集名称即可更换的数据集。
 :::
 
-<img alt="更换数据集" src="/img/dataease/view_generation/2.0成功更换数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更换数据集](/img/dataease/view_generation/成功更换数据集.png)
+
+图 18  成功更换数据集
 
 ## 6 下钻
 
@@ -162,28 +200,36 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 **示例数据集如下，维度为地区，同一维度的地区由省、市不同层次（粒度）构成，示例数据集中可通过“省”钻取到“市”。**
 :::
 
-<img alt="添加视图" src="/img/dataease/view_generation/2.0数据明细.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加视图](/img/dataease/view_generation/数据明细.png)
+
+图 19  数据明细
 
 :::note
 
 如下示例，生成全国的 GDP 柱状图后，拖拽钻取字段（钻取字段的第一个维度需要与地区维度内的字段相同）至【钻取/维度】。
 :::
 
-<img alt="添加视图" src="/img/dataease/view_generation/2.0设置钻取.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加视图](/img/dataease/view_generation/设置钻取.png)
+
+图 20  设置钻取
 
 :::note
 
 第一步，点击【福建省】，点击【下钻】。如果图表同时设置了跳转和钻取，那么当点击时由用户选择执行跳转或者钻取，当只设置了钻取时，默认执行钻取。
 :::
 
-<img alt="钻取" src="/img/dataease/view_generation/2.0点击下钻.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![钻取](/img/dataease/view_generation/点击下钻.png)
+
+图 21  点击下钻
 
 :::note
 
 第二步，下钻结果展示，如下图，展示福建省地图。如果想返回上一级，点击图表左下角的【全部】，返回全国地图。
 :::
 
-<img alt="钻取" src="/img/dataease/view_generation/2.0下钻结果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![钻取](/img/dataease/view_generation/下钻结果.png)
+
+图 22  下钻结果
 
 ## 7 过滤器
 
@@ -192,7 +238,9 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 可点击设置过滤条件，对汇总前的数据进行过滤。
 :::
 
-<img alt="图表样式" src="/img/dataease/view_generation/仪表板过滤器.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图表样式](/img/dataease/view_generation/仪表板过滤器.png)
+
+图 23  仪表板过滤器
 
 :::note
 
@@ -202,16 +250,22 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 - 枚举筛选可选择具体字段枚举值过滤。
 :::
 
-<img alt="更新1" src="/img/dataease/view_generation/图表过滤器支持复杂的与或条件设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图表过滤器复杂的与或条件设置](/img/dataease/view_generation/图表过滤器支持复杂的与或条件设置.png)
+
+图 24  图表过滤器复杂的与或条件设置
 
 :::note
 
 图表过滤器支持动态日期，当图表需要依赖动态日期展示内容时，不再完全依赖筛选组件。
 :::
 
-<img alt="更新1" src="/img/dataease/view_generation/仪表板图表过滤器支持动态日期.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板图表过滤器动态日期](/img/dataease/view_generation/仪表板图表过滤器支持动态日期.png)
 
-<img alt="更新1" src="/img/dataease/newimg/图表过滤器支持动态日期2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 25  仪表板图表过滤器动态日期
+
+![图表过滤器动态日期](/img/dataease/newimg/图表过滤器支持动态日期2.png)
+
+图 26  图表过滤器动态日期
 
 ## 8 刷新频率
 
@@ -221,4 +275,6 @@ Tips：可以根据前面的图标快速判断当前设置的排序方式。
 **注意：** 图表刷新频率优先于仪表板刷新频率。
 :::
 
-<img alt="视图刷新频率" src="/img/dataease/view_generation/2.0设置刷新频率1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图刷新频率](/img/dataease/view_generation/设置刷新频率1.png)
+
+图 27  设置刷新频率

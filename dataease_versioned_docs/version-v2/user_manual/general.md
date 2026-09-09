@@ -10,7 +10,7 @@ title: 通用功能
 2. 在当前目录下添加子文件夹（序号2）。
 :::
 
-<img alt="新建文件夹" src="/img/dataease-v2/newimg/user_manual/新建文件夹.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建文件夹](/img/dataease-v2/newimg/user_manual/新建文件夹.png)
 
 ## 2 重命名
 
@@ -20,9 +20,9 @@ title: 通用功能
 2. 在输入框中输入新名称后，点击确认，完成重命名操作。
 :::
 
-<img alt="重命名" src="/img/dataease-v2/newimg/user_manual/重命名.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![重命名](/img/dataease-v2/newimg/user_manual/重命名.png)
 
-<img alt="重命名确认" src="/img/dataease-v2/newimg/user_manual/重命名确认.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![重命名确认](/img/dataease-v2/newimg/user_manual/重命名确认.png)
 
 ## 3 移动
 
@@ -32,9 +32,9 @@ title: 通用功能
 2. 选择目标分组后，点击【确认】提交，分组移动成功。
 :::
 
-<img alt="移动" src="/img/dataease-v2/newimg/user_manual/移动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![移动](/img/dataease-v2/newimg/user_manual/移动.png)
 
-<img alt="移动确认" src="/img/dataease-v2/newimg/user_manual/移动确认.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![移动确认](/img/dataease-v2/newimg/user_manual/移动确认.png)
 
 ## 4 删除
 
@@ -44,9 +44,9 @@ title: 通用功能
 2. 弹出提醒框，如果选择"确认"，那么成功删除；如果选择"取消"，删除操作取消。
 :::
 
-<img alt="删除" src="/img/dataease-v2/newimg/user_manual/删除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![删除](/img/dataease-v2/newimg/user_manual/删除.png)
 
-<img alt="删除确认" src="/img/dataease-v2/newimg/user_manual/删除确认.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![删除确认](/img/dataease-v2/newimg/user_manual/删除确认.png)
 
 ## 5 搜索
 
@@ -60,11 +60,11 @@ title: 通用功能
 **点击图中【筛选】按钮，使用高级筛选功能。**
 :::
 
-<img alt="搜索1" src="/img/dataease-v2/newimg/user_manual/搜索1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![搜索1](/img/dataease-v2/newimg/user_manual/搜索1.png)
 
-<img alt="搜索2" src="/img/dataease-v2/newimg/user_manual/搜索2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![搜索2](/img/dataease-v2/newimg/user_manual/搜索2.png)
 
-<img alt="高级筛选" src="/img/dataease-v2/newimg/user_manual/高级筛选.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![高级筛选](/img/dataease-v2/newimg/user_manual/高级筛选.png)
 
 ## 6 翻页
 
@@ -75,5 +75,5 @@ title: 通用功能
 - 可输入页码，直接展示目标页的数据记录。
 :::
 
-<img alt="翻页" src="/img/dataease-v2/newimg/user_manual/翻页.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![翻页](/img/dataease-v2/newimg/user_manual/翻页.png)
 

@@ -11,14 +11,14 @@ title: 数据源概述
 该页面包括数据连接的新增（序号 1）、搜索（序号 2）、复制（序号 3）、移动（序号 4）、重命名（序号 5）、删除（序号 6）等功能。
 :::
 
-<img alt="数据源概览" src="/img/dataease-v2/newimg/user_manual/数据源概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据源概览](/img/dataease-v2/newimg/user_manual/数据源概览.png)
 
 :::note
 
 成功添加数据源后，支持获取数据源数据表以及数据集字段的描述信息
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息.png)
 
 ## 2 支持的数据源类型
 
@@ -31,7 +31,7 @@ title: 数据源概述
 - **API 数据源**
 :::
 
-<img alt="支持数据源类型" src="/img/dataease-v2/newimg/user_manual/支持数据源类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![支持数据源类型](/img/dataease-v2/newimg/user_manual/支持数据源类型.png)
 
 :::note
 
@@ -55,9 +55,9 @@ title: 数据源概述
 
 支持 ssh 隧道方式，通过跳板机连接其他网络环境中的数据源。支持密码和密钥两种方式。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20数据源支持%20ssh%20隧道.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20数据源支持%20ssh%20隧道.png)
 :::note
 
 支持设置连接数、查询超时。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据源高级设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据源高级设置.png)

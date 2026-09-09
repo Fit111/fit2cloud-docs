@@ -12,7 +12,7 @@ title: 桌面版指南
 - 丰富的业务场景模板：提供 200+ 高质量大屏模板，覆盖制造、零售电商、银行金融、医药健康、交通物流等各行各业。
 :::
 
-<img alt="桌面版介绍" src="/img/dataease-v2/newimg/桌面版效果.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![桌面版介绍](/img/dataease-v2/newimg/桌面版效果.gif)
 
 ## 2 安装指南
 ### 2.1 安装准备

@@ -25,26 +25,34 @@ title: 配置 Oracle 数据源
 步骤二：按照以下步骤，选择 Oracle 图标。
 :::
 
-<img alt="Oracle" src="/img/dataease/datasource_configuration/选择Oracle.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Oracle](/img/dataease/datasource_configuration/选择Oracle.png)
+
+图 1  选择Oracle数据源
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="Oracle" src="/img/dataease/datasource_configuration/Oracle链接信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Oracle](/img/dataease/datasource_configuration/Oracle链接信息.png)
+
+图 2  Oracle连接信息
 
 :::note
 
 步骤四：获取 Schema。
 :::
 
-<img alt="Oracle" src="/img/dataease/datasource_configuration/Oracle获取Schema.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Oracle](/img/dataease/datasource_configuration/Oracle获取Schema.png)
+
+图 3  Oracle获取Schema
 
 :::note
 
 详细说明信息如下：
 :::
+
+表 1  基础属性说明
 
 | 基础属性           | 说明                          |
 |:---------------|:----------------------------|
@@ -67,4 +75,6 @@ title: 配置 Oracle 数据源
 步骤五：数据源检验，校验成功后如下图所示，点击保存即可。
 :::
 
-<img alt="Oracle" src="/img/dataease/datasource_configuration/Oracle校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Oracle](/img/dataease/datasource_configuration/Oracle校验成功.png)
+
+图 4  Oracle校验成功
