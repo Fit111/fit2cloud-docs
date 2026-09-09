@@ -3,15 +3,12 @@ title: 产品 FAQ
 ---
 
 ## 1 常见问题汇总
-:::note
 
 - [JumpServer 常见问题汇总](https://kb.fit2cloud.com/?p=73)
 - [JumpServer 查询日志方法](https://kb.fit2cloud.com/?p=8b420906-c41e-417a-b171-8414213d8f8e)
 - [JumpServer 组件相关的常见问题](https://kb.fit2cloud.com/?p=288bcfe2-c7f6-4954-984c-55c115b524e9)
-:::
 
 ## 2 系统管理相关
-:::note
 
 - [Linux 常见高危命令汇总](https://kb.fit2cloud.com/?p=173)
 - [JumpServer 存储目录迁移](https://kb.fit2cloud.com/?p=d2555b92-6992-4c8d-9282-20ed06f10add)
@@ -24,10 +21,8 @@ title: 产品 FAQ
 - [JumpServer 如何对接 Windows AD 域？](https://kb.fit2cloud.com/?p=167)
 - [如何修改 JumpServer 的上传文件大小的限制并修改上传文件的超时时间？](https://kb.fit2cloud.com/?p=157)
 - [如何解决纳管资产的网段与 JumpServer 后台服务器 Docker 网段重复？](https://kb.fit2cloud.com/?p=163)
-:::
 
 ## 3 功能模块相关
-:::note
 
 - [v3版本远程应用发布与使用](https://kb.fit2cloud.com/?p=9beffa46-3b58-456b-9db0-7a0b2a9cc665)
 - [Windows 资产无法连接](https://kb.fit2cloud.com/?p=13)
@@ -43,10 +38,8 @@ title: 产品 FAQ
 - [Razor 组件证书不可信任导致资产无法连接](https://kb.fit2cloud.com/?p=116)
 - [Windows 资产纳管&连接问题&文件上传下载](https://kb.fit2cloud.com/?p=87)
 - [Linux 资产纳管&登录连接常见错误&文件上传下载](https://kb.fit2cloud.com/?p=86)
-:::
 
 ## 4 身份认证相关
-:::note
 
 - [JumpServer 对接 SSO 身份认证](../guide/system/authentication/sso)
 - [JumpServer 对接 CAS 身份认证](../guide/system/authentication/cas)
@@ -59,18 +52,13 @@ title: 产品 FAQ
 - [JumpServer 对接企业微信](../guide/system/authentication/wechat)
 - [JumpServer 对接飞书](../guide/system/authentication/feishu)
 - [JumpServer 常用的 MFA 工具](https://kb.fit2cloud.com/?p=6)
-:::
 
 ## 5 版本相关
-:::note
 
 - [JumpServer V3 版本解读](https://mp.weixin.qq.com/s/ofN6KUyjabaWw4HVdvLQ8Q)
-:::
 
 ## 6 升级相关
-:::note
 
 - [JumpServer 升级问题](https://kb.fit2cloud.com/?p=9aaf5bc6-7071-4be0-96fd-98295feee3f2)
 - [JumpServer 升级回退说明](https://kb.fit2cloud.com/?p=4ba65333-bf41-42f7-b329-afc855e7789a)
-:::
 

@@ -4,7 +4,6 @@ title: Magnus 环境部署
 
 ## 1 Magnus 环境部署
 ### 1.1 环境要求
-:::note
 
 - 可以从 [Github][magnus] 网站上获取最新的 [Release][magnus_release] 副本。
 
@@ -15,9 +14,7 @@ title: Magnus 环境部署
 | Linux   | loong64 | [magnus-v3.10.21-linux-loong64.tar.gz][magnus-v3.10.21-linux-loong64] |
 | Darwin  | amd64   | [magnus-v3.10.21-darwin-amd64.tar.gz][magnus-v3.10.21-darwin-amd64]   |
 | Darwin  | arm64   | [magnus-v3.10.21-darwin-arm64.tar.gz][magnus-v3.10.21-darwin-arm64]   |
-:::
 
-:::note
 
 - Magnus 需要使用 Wisp 与 JumpServer 通信，从 [Github][wisp] 网站上获取最新的 [Release][wisp_release] 副本。
 
@@ -29,13 +26,10 @@ title: Magnus 环境部署
 | Darwin  | amd64   | [wisp-v0.1.16-darwin-amd64.tar.gz][wisp-v0.1.16-darwin-amd64]   |
 | Darwin  | arm64   | [wisp-v0.1.16-darwin-arm64.tar.gz][wisp-v0.1.16-darwin-arm64]   |
 | Windows | amd64   | [wisp-v0.1.16-windows-amd64.tar.gz][wisp-v0.1.16-windows-amd64] |
-:::
 
 ### 1.2 选择部署方式
-:::note
 
 ### Linux/amd64
-:::
 
 - 解压缩包。
 

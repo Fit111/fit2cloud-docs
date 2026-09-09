@@ -9,16 +9,13 @@ title: 迁移文档
 
 ## 1 迁移说明
 
-:::note[v2.6 版本升级说明]
 
 - 统一企业版本与开源版本安装方式，社区版可以无缝切换到企业版。
 - 今后只会维护此安装方式，其他安装方式不再提供技术支持。
 - 安装完成后配置文件在 /opt/jumpserver/config/config.txt
-:::
 
 ## 2 迁移步骤
 ### 2.1 数据库备份
-:::note
 
 - 在 jumpserver/config.txt 文件中获取数据库信息如下：
 
@@ -30,14 +27,11 @@ DB_PASSWORD: ******  # 连接数据库用户的密码
 DB_NAME: jumpserver  # JumpServer 使用的数据库
 # mysqldump -h<DB_HOST> -P<DB_PORT> -u<DB_USER> -p<DB_PASSWORD> <DB_NAME> > /opt/<DB_NAME>.sql
 ```
-:::
 
-:::note
 
 - 选择与自己环境部署方式对应的数据库备份方式：
 
 ### installer 部署
-:::
 
 ```sh
 # 记录 SECRET_KEY 和 BOOTSTRAP_TOKEN
@@ -157,7 +151,6 @@ cd /opt/Dockerfile
 docker-compose stop
 ```
 ### 2.2 修改数据库字符集
-:::note
 
 - 如果你不需要或不想处理数据库字符集可以跳过此步骤, 保证迁移前后的数据库字符集一样即可。
 
@@ -170,10 +163,8 @@ else
     echo "备份数据库字符集正确";
 fi
 ```
-:::
 
 ### 2.3 下载 jumpserver-install
-:::note
 
 ```sh
 cd /opt
@@ -182,10 +173,8 @@ wget https://github.com/jumpserver/installer/releases/download/v3.10.21/jumpserv
 tar -xf jumpserver-installer-v3.10.21.tar.gz
 cd jumpserver-installer-v3.10.21
 ```
-:::
 
 ### 2.4 编辑临时配置文件
-:::note
 
 ```sh
 vi config-example.txt
@@ -205,15 +194,12 @@ LOG_LEVEL=ERROR
 # SESSION_COOKIE_AGE=86400
 SESSION_EXPIRE_AT_BROWSER_CLOSE=True  # 关闭浏览器后 session 过期
 ```
-:::
 
 ## 2.5 开始部署 JumpServer
-:::note
 
 - 选择与自己数据库环境对应的部署方式。
 
 ### 使用新的内置数据库
-:::
 
 ```sh
 ./jmsctl.sh install

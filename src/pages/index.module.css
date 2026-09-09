@@ -60,12 +60,12 @@
   position: relative;
   z-index: 1;
   margin: 12px auto 0; /* 上下左零、左右自动 → 居中 */
-  width: 760px; /* 限宽, 避免居中后单行过长影响阅读 */
+  width: 532px; /* 限宽, 避免居中后单行过长影响阅读 (原 760px, 缩小 30%) */
   max-width: 100%;
   text-align: center;
   word-break: break-word;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 12.8px; /* 原 16px, 缩小 20% */
+  line-height: 28.8px; /* 原 24px, 加大行间距(两行之间留出 0.3rem), 让折行后更透气 */
   color: #6c7280;
 }
 

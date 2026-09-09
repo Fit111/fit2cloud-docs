@@ -8,7 +8,6 @@ title: 在线升级
 - 升级前做好数据库的备份工作是一个良好的习惯。
 :::
 
-:::note
 
 - 请先手动备份好数据库, 然后继续操作。
 - values.yaml 从 `https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml` 获取。
@@ -17,7 +16,6 @@ title: 在线升级
 helm repo update
 helm upgrade jms-k8s jumpserver/jumpserver -n default -f values.yaml
 ```
-:::
 
 :::warning[注意]
 

@@ -8,19 +8,15 @@ title: 参数说明
 :::
 
 ## 1 Core 参数说明
-:::note
 
 - 打开 config.txt 配置文件。
 
 ```sh
 vi /opt/jumpserver/config/config.txt
 ```
-:::
 
-:::note
 
 - Core 参数如下：
-:::
 
 |  参数名称   | 默认值  | 可选项  | 说明  |
 |  :-----  | :-----  |  :-----  | :-----  |
@@ -93,10 +89,8 @@ vi /opt/jumpserver/config/config.txt
 | FTP_FILE_MAX_STORE | 100（M） | - |  FTP 文件上传下载备份阈值，单位(M)，当值&lt;=0时，不备份文件 |
 
 ## 2 KoKo 参数说明
-:::note
 
 - KoKo 参数如下：
-:::
 
 |  参数名称   | 默认值  | 可选项  | 说明  |
 |  :-----  | :-----  |  :-----  | :-----  |
@@ -128,10 +122,8 @@ vi /opt/jumpserver/config/config.txt
 | ENABLE_VSCODE_SUPPORT | true | true <br /> false | 是否开启针对 VScode 的 Remote SSH 远程开发支持 <br /> # 前置条件: 必须开启 ENABLE_LOCAL_PORT_FORWARD |
 
 ## 3 Lion 参数说明
-:::note
 
 - Lion 参数如下：
-:::
 
 |  参数名称   | 默认值  | 可选项  | 说明  |
 |  :-----  | :-----  |  :-----  | :-----  |

@@ -144,7 +144,8 @@ const config = {
         // 版本化: current(jumpserver-docs) = v4.0, 历史版本 v3.0
         lastVersion: 'current',
         versions: {
-          current: { label: 'v4.0', badge: false, banner: 'none' },
+          current: { label: 'v5.0', badge: false, banner: 'none' },
+          v4: { label: 'v4.0', badge: false, banner: 'none' },
           v3: { label: 'v3.0', badge: false, banner: 'none' },
         },
       },

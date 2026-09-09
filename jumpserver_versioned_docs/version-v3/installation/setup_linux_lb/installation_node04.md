@@ -4,27 +4,22 @@ title: 部署 JumpServer 04 节点
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - JumpServer_Node_04 服务器信息如下:
 
 ```sh
 192.168.100.24
 ```
-:::
 
 ## 2 配置 NFS
 ### 2.1 安装 NFS 依赖包
-:::note
 
 ```sh
 yum -y install nfs-utils
 showmount -e 192.168.100.11
 ```
-:::
 
 ### 2.2 挂载 NFS 目录
-:::note
 
 ```sh
 # 将 Core 持久化目录挂载到 NFS, 默认 /opt/jumpserver/core/data, 请根据实际情况修改
@@ -32,20 +27,16 @@ showmount -e 192.168.100.11
 mkdir /opt/jumpserver/core/data
 mount -t nfs 192.168.100.11:/data /opt/jumpserver/core/data
 ```
-:::
 
 ### 2.3 配置 NFS 共享目录开机自动挂载
-:::note
 
 ```sh
 # 可以写入到 /etc/fstab, 重启自动挂载. 注意: 设置后如果 nfs 损坏或者无法连接该服务器将无法启动
 echo "192.168.100.11:/data /opt/jumpserver/core/data nfs defaults 0 0" >> /etc/fstab
 ```
-:::
 
 ## 3 安装 JumpServer
 ### 3.1 下载 jumpserver-install 软件包
-:::note
 
 ```sh
 cd /opt
@@ -54,10 +45,8 @@ wget https://github.com/jumpserver/installer/releases/download/v3.10.21/jumpserv
 tar -xf jumpserver-installer-v3.10.21.tar.gz
 cd jumpserver-installer-v3.10.21
 ```
-:::
 
 ### 3.2 修改临时配置文件
-:::note
 
 ```sh
 vi config-example.txt
@@ -96,18 +85,14 @@ REDIS_PASSWORD=KXOeyNgDeTdpeu9q
 SHARE_ROOM_TYPE=redis                                            # KoKo Lion 使用 redis 共享
 REUSE_CONNECTION=False                                           # Koko 禁用连接复用
 ```
-:::
 
 ### 3.3 执行脚本安装 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh install
 ```
-:::
 
 ### 3.4 启动 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh start
@@ -121,4 +106,3 @@ Creating jms_koko      ... done
 Creating jms_magnus    ... done
 Creating jms_web       ... done
 ```
-:::

@@ -3,10 +3,8 @@ title: 网络端口说明
 ---
 
 ## 1 网络端口列表
-:::note
 
 - JumpServer 作为符合 4A 规范的专业运维安全审计系统，其正常运行需要开放如下网络端口，管理员可根据实际环境中 JumpServer 组件部署的方案，在网络和主机侧开放相关端口。
-:::
 
 | 端口 | 作用 | 说明 |
 | --- | --- | --- |
@@ -24,7 +22,6 @@ title: 网络端口说明
 | 30000-30100 | Magnus Oracle 服务端口 | DB Client 方式连接 Oracle 数据库资产，该端口范围可自定义 |
 
 ## 2 防火墙常用命令
-:::note
 
 - 确认 firewall 的状态为 running
 ```sh
@@ -33,9 +30,7 @@ firewall-cmd --state
 ```sh
 running
 ```
-:::
 
-:::note
 
 - 临时开放端口（规则立即生效，重启失效）
 ```sh
@@ -43,9 +38,7 @@ firewall-cmd --zone=public --add-port=80/tcp
 firewall-cmd --zone=public --add-port=2222/tcp
 firewall-cmd --add-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept"
 ```
-:::
 
-:::note
 
 - 临时删除端口（规则立即生效，重启失效）
 ```sh
@@ -53,9 +46,7 @@ firewall-cmd --zone=public --remove-port=80/tcp
 firewall-cmd --zone=public --remove-port=2222/tcp
 firewall-cmd --remove-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept"
 ```
-:::
 
-:::note
 
 - 永久放行端口（需要 reload 才能生效）
 ```sh
@@ -64,9 +55,7 @@ firewall-cmd --zone=public --add-port=2222/tcp --permanent
 firewall-cmd --add-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept" --permanent
 firewall-cmd --reload
 ```
-:::
 
-:::note
 
 - 永久删除端口（需要 reload 才能生效）
 ```sh
@@ -75,9 +64,7 @@ firewall-cmd --zone=public --remove-port=2222/tcp --permanent
 firewall-cmd --remove-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept" --permanent
 firewall-cmd --reload
 ```
-:::
 
-:::note
 
 - 查看端口生效规则
 ```sh
@@ -99,4 +86,3 @@ public (active)
   rich rules:
     rule family="ipv4" source address="172.17.0.1/16" port port="8080" protocol="tcp" accept
 ```
-:::

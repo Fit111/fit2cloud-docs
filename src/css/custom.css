@@ -356,6 +356,9 @@ html[data-docs-product='dataease'] .theme-doc-markdown p:has(+ table) {
      都是「navbar 高度 + 本值」, 视觉间隔保持一致。 */
 aside.theme-doc-sidebar-container {
   padding-top: 24px;
+  /* 侧边栏菜单项上下 padding 在原默认(0.375rem)基础上缩小 10%, 让条目更紧凑。
+     只在此容器内覆盖变量, 不影响 navbar「开源产品」下拉等其他 menu。 */
+  --ifm-menu-link-padding-vertical: 0.25rem;
 }
 
 /* ===== 文档详情页: 左中右三段布局 =====
