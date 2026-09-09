@@ -31,9 +31,7 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  添加用户组表单</div>
 
-:::note[注意]
-单 API Key 最大并发的有效上限不会超过组最大并发；若先填了单 API Key 上限，再把组上限调到比它更小，最终会按组上限封顶。
-:::
+**注意**：单 API Key 最大并发的有效上限不会超过组最大并发；若先填了单 API Key 上限，再把组上限调到比它更小，最终会按组上限封顶。
 
 **2.1.2设置 Token 配额**
 

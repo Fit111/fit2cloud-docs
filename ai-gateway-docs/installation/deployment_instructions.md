@@ -5,9 +5,9 @@ description: 介绍 1Panel AI 网关安装部署的说明
 
 系统支持以下数据库与部署组合：
 
-- SQLite 单机：单个网关实例，适合快速部署和中小规模使用。
-- PostgreSQL 单机：单个网关实例共享 PostgreSQL 数据库。
-- PostgreSQL 高可用：多个网关实例共享 PostgreSQL，并由外部负载均衡和高可用 Redis 等基础设施提供高可用支撑。
+- **SQLite 单机**：单个网关实例，适合快速部署和中小规模使用。
+- **PostgreSQL 单机**：单个网关实例共享 PostgreSQL 数据库。
+- **PostgreSQL 高可用**：多个网关实例共享 PostgreSQL，并由外部负载均衡和高可用 Redis 等基础设施提供高可用支撑。
 
 部署边界：软件通过官方容器镜像交付，并提供部署参考；不负责安装和运维外部负载均衡、PostgreSQL、Redis 或可选的 Elasticsearch 集群。
 

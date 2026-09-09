@@ -48,11 +48,7 @@ WorkBuddy 是一款 AI 办公桌面客户端，支持 Windows 和 macOS，双击
 
 - **官方下载页**：https://www.workbuddy.cn/（打开网页后点击页面上的"立即下载"，按自己的电脑系统选择：Windows 选 **Windows x64**；Mac 电脑按芯片选 **Apple 芯片（M 系列）** 或 **Intel** 版本）
 
-:::note[温馨提示]
-
-怎么知道自己的 Mac 是苹果芯片还是 Intel？点屏幕左上角苹果图标 →「关于本机」，"芯片"一栏写着 Apple Mx 就选 ARM64/Apple 芯片版，写着 Intel 就选 x64/Intel 版。
-
-:::
+**温馨提示**：怎么知道自己的 Mac 是苹果芯片还是 Intel？点屏幕左上角苹果图标 →「关于本机」，"芯片"一栏写着 Apple Mx 就选 ARM64/Apple 芯片版，写着 Intel 就选 x64/Intel 版。
 
 安装完成后打开 WorkBuddy，用页面上的入口登录账号，即可进行下面的模型配置。
 
@@ -72,9 +68,9 @@ WorkBuddy 是一款 AI 办公桌面客户端，支持 Windows 和 macOS，双击
 
 填入以下三项信息：
 
-- 接口地址（Base URL）：`https://1router.1panel.cn/v1`（以管理员给你的地址为准）
-- API Key：第 1 步里复制的 API Key
-- 模型名称：管理员给你开通的模型名称
+- **接口地址（Base URL）**：`https://1router.1panel.cn/v1`（以管理员给你的地址为准）
+- **API Key**：第 1 步里复制的 API Key
+- **模型名称**：管理员给你开通的模型名称
 
 三者需完全一致。
 
@@ -82,11 +78,7 @@ WorkBuddy 是一款 AI 办公桌面客户端，支持 Windows 和 macOS，双击
 
 <div className="fig-cap" style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  填写接入配置</div>
 
-:::note[注意]
-
-接口地址末尾的 `/v1` 路径不可省略，部分客户端会自动补全，但建议显式写入以避免请求失败。
-
-:::
+**注意**：接口地址末尾的 `/v1` 路径不可省略，部分客户端会自动补全，但建议显式写入以避免请求失败。
 
 ### 2.3 保存并测试
 
@@ -164,12 +156,10 @@ Codex CLI 是 OpenAI 推出的终端编程助手——没有窗口界面，在�
 npm install -g @openai/codex
 ```
 
-:::note[温馨提示]
+**温馨提示**
 
 - 包名必须是 `@openai/codex`，注意前面有 `@openai/`，不要只输 `codex`，那是一个不相关的旧包。
 - 如果下载很慢或超时，可以先换国内镜像源再装：`npm config set registry https://registry.npmmirror.com`
-
-:::
 
 安装完输入 `codex --version`，能显示版本号即成功。
 
@@ -192,8 +182,8 @@ CC Switch 下载地址（GitHub Releases 发布页）：https://github.com/fario
 
 在弹出的表单中选择「自定义配置」，并填写以下信息：
 
-- API Key：粘贴在 1Panel AI 网关管理端创建的 API Key
-- API 请求地址：`https://1router.1panel.cn/v1`（注意末尾的 `/v1` 不可省略）
+- **API Key**：粘贴在 1Panel AI 网关管理端创建的 API Key
+- **API 请求地址**：`https://1router.1panel.cn/v1`（注意末尾的 `/v1` 不可省略）
 
 同时打开「本地路由映射」开关。该功能会在本机启动一个代理地址，Codex 的请求先发往本地代理，再由 CC Switch 转发到 1Panel AI 网关，从而绕开 Codex 对官方接口地址的限制。
 
@@ -235,11 +225,7 @@ Claude Code 是 Anthropic 推出的终端编程助手（与 codex 类似，在�
 
 安装完在终端输入 `claude --version`，能显示版本号即成功。
 
-:::note[温馨提示]
-
-如果 `npm install` 下载很慢或超时，可先换国内镜像源再装：`npm config set registry https://registry.npmmirror.com`
-
-:::
+**温馨提示**：如果 `npm install` 下载很慢或超时，可先换国内镜像源再装：`npm config set registry https://registry.npmmirror.com`
 
 ### 5.2 用 CC Switch 配置供应商
 
@@ -325,11 +311,7 @@ Cursor 是一款 AI 编程编辑器（可理解为"内置 AI 助手的 VS Code"�
 
 <div className="fig-cap" style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  填写模型名称、API Key 与接口地址</div>
 
-:::note[注意]
-  
-接口地址末尾的 `/v1` 路径不可省略。若你的网关部署在本地或内网，地址以管理员提供的实际地址为准。
-  
-:::
+**注意**：接口地址末尾的 `/v1` 路径不可省略。若你的网关部署在本地或内网，地址以管理员提供的实际地址为准。
 
 ### 6.4 选择模型并测试
 
@@ -436,12 +418,10 @@ openclaw config validate
 
 <div className="fig-cap" style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  openclaw config validate 校验通过</div>
 
-:::note[常见踩坑]
+**常见踩坑**
 
 - JSON 里字段名写错（如 `baseUrl` 写成 `base_url`）、`api` 值填错，都会导致校验报错「Invalid option」或「Unrecognized key」，按错误提示里给出的合法值修正即可。
 - 不要用 `openclaw config set auth.openai.baseURL ...` 来配置网关——该键位校验会失败，正确做法就是用上面的方式一或方式二写入 `models.providers`。
-    
-:::
 
 ### 7.4 启动网关并测试对话
 
@@ -556,12 +536,10 @@ npm install @ai-sdk/openai-compatible
 
 <div className="fig-cap" style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 39  OpenCode 主界面（底部状态栏显示 1Router 网关与已配置模型）</div>
 
-:::note[常见踩坑]
+**常见踩坑**
 
 - 启动后若底部状态栏没有出现 `1Router 网关`，说明 `opencode.json` 没有被识别：检查文件是否放在 `~/.config/opencode/opencode.json`（不是 `~/.opencode`），并确认 JSON 语法没有多余的逗号或引号。
 - 若提示 `provider not found`，通常是 `npm install @ai-sdk/openai-compatible` 这一步没有执行成功，重新在该目录下执行安装命令即可。
-
-:::
 
 ### 8.5 发起测试对话
 
@@ -592,11 +570,7 @@ irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/ins
 
 <div className="fig-cap" style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  在 PowerShell 中执行一键安装命令</div>
 
-:::note[温馨提示]
-
-安装过程中会自动调用 Chocolatey / winget / Git for Windows 等系统组件，首次执行可能需要授予管理员权限。若终端提示"无法访问 GitHub 原始仓库"，请确认电脑可访问 `raw.githubusercontent.com`，或按官方文档改用本地源码安装。
-
-:::
+**温馨提示**：安装过程中会自动调用 Chocolatey / winget / Git for Windows 等系统组件，首次执行可能需要授予管理员权限。若终端提示"无法访问 GitHub 原始仓库"，请确认电脑可访问 `raw.githubusercontent.com`，或按官方文档改用本地源码安装。
 
 依赖安装完成后，终端会自动进入 Hermes Agent Setup Wizard。如果之前安装过 OpenClaw，向导会先询问是否把 OpenClaw 的配置、记忆与技能迁移过来。本教程不需要迁移，保持默认或输入 `2` 跳过迁移即可。
 
@@ -676,6 +650,8 @@ Hermes Tool Configuration 列出 24 类可选工具（Browser Automation、Compu
 
 逐项选择时按下表即可：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  opencode 安装向导逐项推荐选择</div>
+
 | 工具项 | 推荐选择 | 说明 |
 | --- | --- | --- |
 | Browser Automation | `1. Local Browser` | 本机 Headless Chromium，无需 API Key |
@@ -703,11 +679,7 @@ Hermes Tool Configuration 列出 24 类可选工具（Browser Automation、Compu
 
 向导最后一行会显示 "Previous config backed up to: …\\config.yaml.bak.…"，表示旧的配置文件已自动备份，本次配置已写入 `~/.config/hermes/config.yaml`。
 
-:::note[温馨提示]
-
-以上所有选择都可以之后再通过 `hermes setup` / `hermes config` 命令重新打开修改。本教程刻意保持最简配置，避免无关工具干扰接入验证。
-
-:::
+**温馨提示**：以上所有选择都可以之后再通过 `hermes setup` / `hermes config` 命令重新打开修改。本教程刻意保持最简配置，避免无关工具干扰接入验证。
 
 ### 9.5 运行 hermes doctor 自检
 
@@ -751,6 +723,8 @@ hermes
 ## 10 常见问题排查（FAQ）
 
 配置完成后测试如果不通，按下面的对照表排查，基本都能解决：
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  常见报错排查对照表</div>
 
 | 报错现象                        | 大概率原因                                                    | 解决办法                                            |
 | --------------------------- | -------------------------------------------------------- | ----------------------------------------------- |
