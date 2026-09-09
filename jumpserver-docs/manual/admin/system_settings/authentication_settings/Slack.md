@@ -4,21 +4,15 @@ title: Slack (X-Pack)
 
 ## 1 关于 Slack
 
-:::note[注: Slack 认证方式为 JumpServer 企业版功能。]
 
-:::
-:::note
 
 - 通过点击页面右上角小齿轮进入 **系统设置** 页面，点击 **认证设置 &gt; Slack** ，进入 Slack 配置页面。
 - **Slack** 认证是基于 Slack 平台的身份认证机制，允许用户使用 Slack 账户安全登录企业应用程序。JumpServer 支持标准 Slack 认证。
-:::
 
 ## 2 配置参数
 
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -30,10 +24,8 @@ title: Slack (X-Pack)
 | 组织 | 经过身份认证和创建后，用户将被添加到所选组织中 | 默认值：`DEFAULT` |
 
 Slack 用户属性示例
-:::note
 
 -  **映射属性** 字段用于设置用户属性映射。键表示 JumpServer 用户属性名称，值对应 Slack 用户属性名称。
-:::
 
 ```json
 {

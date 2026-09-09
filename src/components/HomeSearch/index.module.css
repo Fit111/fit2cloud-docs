@@ -8,7 +8,7 @@
   z-index: 20; /* 高于 hero 光晕与插画, 保证下拉面板浮在最上层 */
   width: 800px;
   max-width: 100%;
-  margin: 104px auto 0;
+  margin: 80px auto 0;
 }
 
 /* 搜索框: 800x72 r12 白底 (设计稿 Frame 'Search') */

@@ -3,21 +3,15 @@ title: SAML2 (X-Pack)
 ---
 
 ## 1 关于 SAML2
-:::note[注: SAML2 认证方式为 JumpServer 企业版功能。]
 
-:::
-:::note
 
 - 通过点击页面右上角小齿轮进入 **系统设置** 页面，点击 **认证设置 &gt; SAML2** ，进入 SAML2 配置页面。
 - **SAML2(Security Assertion Markup Language 2.0)** 是一种开放标准，用于在身份提供者(IdP)和服务提供者(SP)之间安全交换身份认证和授权数据。JumpServer 认证支持标准 SAML2。
-:::
 
 ## 2 配置参数
 
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -32,16 +26,12 @@ title: SAML2 (X-Pack)
 | 总是更新用户信息 | 启用后，每次认证均同步用户信息(仅限姓名、用户名、邮箱、电话、评论，群组仅首次同步) |  |
 | 同步注销 | 启用后，注销也会同步注销 SAML2 服务 |  |
 
-:::note
 
 - SP 密钥和 SP 证书需配套使用，确保 SAML2 认证通信安全。SP 私钥用于签名和解密，SP 证书用于验证和加密。
 - IdP Metadata 地址和 XML 只需填写其一，若都填写则优先使用地址。
-:::
 
-:::note
 
 - 高级设置示例:
-:::
 
 ```json
 {
@@ -57,18 +47,14 @@ title: SAML2 (X-Pack)
 }
 ```
 
-:::note
 
 - SP Metadata 提供服务提供者的实体 ID、端点 URL、证书等信息，便于 IdP 配置。
 - 可在 **SP 证书** 字段下方点击 **查看** 获取 SP Metadata。
-:::
 
 ![img](/img/jumpserver/V4_SAML2.png)
 
-:::note
 
 - 属性映射示例:
-:::
 
 ```json
 {
@@ -80,10 +66,8 @@ title: SAML2 (X-Pack)
 
 ## 3 JumpServer SAML2 URL 说明
 
-:::note
 
 详细 URL 说明：
-:::
 
 | URL 类型 | 地址 | 说明 |
 |----------|------|------|

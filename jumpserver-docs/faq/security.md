@@ -3,7 +3,6 @@ title: 安全建议
 ---
 
 ## 1 基本安全要求
-:::note
 
 - JumpServer 对外最低需要开放 80 443 2222 端口。
 - JumpServer 所在服务器操作系统应该升级到最新。
@@ -15,7 +14,6 @@ title: 安全建议
 - 请部署 SSL 证书通过 HTTPS 协议来访问 JumpServer。
 - JumpServer 应该在安全设置强密码规则，禁用用户使用弱口令密码。
 - 应该开启 JumpServer MFA 认证功能，避免因密码泄露导致的安全问题。
-:::
 
 :::warning[注意]
 
@@ -23,7 +21,6 @@ title: 安全建议
 :::
 
 ## 2 安全配置建议
-:::note
 
 - [Linux 常见高危命令汇总](https://kb.fit2cloud.com/?p=173)
 - [设置某个资产只允许通过某个 IP 登录 JumpServer 之后进行连接](https://kb.fit2cloud.com/?p=199)
@@ -34,4 +31,3 @@ title: 安全建议
 - [限制来源 IP 登录 JumpServer 堡垒机](https://kb.fit2cloud.com/?p=43)
 - [JumpServer 常用的 MFA 工具](https://kb.fit2cloud.com/?p=6)
 - [JumpServer 设置会话过期时间](https://kb.fit2cloud.com/?p=5)
-:::

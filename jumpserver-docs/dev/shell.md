@@ -7,7 +7,6 @@ title: 交互命令
 :::
 ## 1 操作方法
 
-:::note
 
 ```sh
 docker exec -it jms_core bash
@@ -21,14 +20,11 @@ Organization.objects.all()
 org = Organization.objects.get(name='Default')
 org.change_to()
 ```
-:::
 
-:::note
 
 - 选择交互命令对象查看
 
 ### User
-:::
 
 ```python
 from users.models import *
@@ -123,10 +119,8 @@ node.assets.remove(asset)
 node.delete()
 ```
 ## 2 数据解密
-:::note
 
 ### 系统用户
-:::
 
 ```sh
 docker exec -it jms_core bash

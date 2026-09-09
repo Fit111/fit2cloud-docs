@@ -4,10 +4,8 @@ title: 客户端下载与安装
 
 ## 简介
 
-:::note
 
 JumpServer 客户端是一款跨平台的桌面应用程序，支持 Windows、macOS 和 Linux 系统。用户可以使用客户端本地连接和管理 JumpServer 纳管的远程资产（Windows、Linux、数据库以及网络设备）。
-:::
 
 :::warning[注：新版客户端（&gt;=v4.0.0）仅支持 JumpServer 版本 v4.10.13 及以上，请确保服务端版本满足要求。]
 

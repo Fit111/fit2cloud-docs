@@ -2,10 +2,7 @@
 title: 贡献者名单
 ---
 
-:::note[感谢为 JumpServer 做出的贡献的所有朋友，世界因你们而不同]
 
-:::
-:::note
 
 - **[老广 &lt;广宏伟&gt;][ibuler]** JumpServer 创始人
 - **[halcyon &lt;王墉&gt;][halcyon]** DevOps 资深开发者，JumpServer 第二号开发者
@@ -23,7 +20,6 @@ title: 贡献者名单
 - **[LeeEirc &lt;李智&gt;][LeeEirc]** 高级研发工程师，擅长 Go 平台开发，KoKo 组件开发者
 - **[Orange &lt;马真爽&gt;][Orange]** 核心开发者，负责 JumpServer 前端工作
 - **[八千流 &lt;蒋育敏&gt;][八千流]** 核心测试（辅助开发）负责 JumpServer 的测试
-:::
 
 [ibuler]: https://github.com/ibuler
 [halcyon]: https://github.com/halcyon

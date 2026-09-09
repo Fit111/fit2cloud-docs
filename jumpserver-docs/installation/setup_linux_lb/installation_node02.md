@@ -4,26 +4,21 @@ title: 部署 JumpServer 02 节点
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - JumpServer_Node_02 服务器信息如下: 
 ```sh
 192.168.100.22
 ```
-:::
 
 ## 2 配置 NFS
 ### 2.1 安装 NFS 依赖包
-:::note
 
 ```sh
 apt -y install nfs-utils
 showmount -e 192.168.100.11
 ```
-:::
 
 ### 2.2 挂载 NFS 目录
-:::note
 
 ```sh
 # 将 Core 持久化目录挂载到 NFS, 默认 /opt/jumpserver/core/data, 请根据实际情况修改
@@ -31,25 +26,19 @@ showmount -e 192.168.100.11
 mkdir /opt/jumpserver/core/data
 mount -t nfs 192.168.100.11:/data /opt/jumpserver/core/data
 ```
-:::
 
 ### 2.3 配置 NFS 共享目录开机自动挂载
-:::note
 
 ```sh
 # 可以写入到 /etc/fstab, 重启自动挂载. 注意: 设置后如果 nfs 损坏或者无法连接该服务器将无法启动
 echo "192.168.100.11:/data /opt/jumpserver/core/data nfs defaults 0 0" >> /etc/fstab
 ```
-:::
 
 ## 3 安装 JumpServer 
 ### 3.1 下载安装包
-:::note
 
 - 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录。
-:::
 ### 3.2 修改临时配置文件
-:::note
 
 ```sh
 vi config-example.txt
@@ -88,19 +77,15 @@ REDIS_PASSWORD=KXOeyNgDeTdpeu9q
 SHARE_ROOM_TYPE=redis                                            # KoKo Lion 使用 redis 共享
 REUSE_CONNECTION=False                                           # Koko 禁用连接复用
 ```
-:::
 
 ### 3.3 执行脚本安装 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh install
 # 检查脚本默认配置是否和修改的配置文件一致，等待安装完毕即可。
 ```
-:::
 
 ### 3.4 启动 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh start
@@ -114,11 +99,8 @@ Creating jms_koko      ... done
 Creating jms_magnus    ... done
 Creating jms_web       ... done
 ```
-:::
 
 ## 扩展更多节点
-:::note
 
 - 如有更多节点扩展需求，安装和配置方式与上述节点相同。
 - 请确保各节点间配置文件中的 BOOTSTRAP_TOKEN 和 SECRET_KEY 保持一致。
-:::

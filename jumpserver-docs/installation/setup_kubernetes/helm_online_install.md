@@ -9,15 +9,12 @@ title: 安装指南
 
 ## 2 安装部署
 ### 2.1 添加 JumpServer 的 Helm 源地址
-:::note
 
 ```sh
 helm repo add jumpserver https://jumpserver.github.io/helm-charts
 helm repo list
 ```
-:::
 
-:::note
 
 | Name                      | Description                                     | Value                   |
 | :------------------------ | :---------------------------------------------- | :---------------------- |
@@ -39,30 +36,23 @@ helm repo list
 | core.config.secretKey     | Core secret key                                 | ""                      |
 | core.config.bootstrapToken| Core bootstrap token                            | ""                      |
 | core.env.DOMAINS          | CSRF_TRUSTED_ORIGINS                            | "test.jumpserver.org    |
-:::
 
 ### 2.2 编辑 JumpServer values.yaml 文件
-:::note
 
 ```sh
 vi values.yaml
 ```
-:::
 
 ### 2.3 安装 JumpServer
 
-:::note
 
 ```sh
 helm install jms-k8s jumpserver/jumpserver -n default -f values.yaml
 ```
-:::
 
 ### 2.4 卸载 JumpServer
 
-:::note
 
 ```sh
 helm uninstall jms-k8s -n default
 ```
-:::

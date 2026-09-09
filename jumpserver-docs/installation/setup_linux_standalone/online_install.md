@@ -2,9 +2,7 @@
 title: 在线安装
 ---
 
-:::note[安装所需命令, 参考 [环境要求](./requirements) 手动安装]
 
-:::
 | OS/Arch       | Architecture | Linux Kernel | Offline Name                                     |
 | :------------ | :----------- | :----------- | :----------------------------------------------- |
 | linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-installer-v4.10.17.tar.gz |
@@ -13,7 +11,6 @@ title: 在线安装
 
 ### 中国大陆
 
-:::note
 
 ```sh
 cd /opt
@@ -21,10 +18,8 @@ wget https://resource.fit2cloud.com/jumpserver/installer/releases/download/v4.10
 tar -xf jumpserver-installer-v4.10.17.tar.gz
 cd jumpserver-installer-v4.10.17
 ```
-:::
 ### 其他地区
 
-:::note
 
 ```sh
 cd /opt
@@ -32,8 +27,6 @@ wget https://github.com/jumpserver/installer/releases/download/v4.10.17/jumpserv
 tar -xf jumpserver-installer-v4.10.17.tar.gz
 cd jumpserver-installer-v4.10.17
 ```
-:::
-:::note
 
 ```sh
 # 根据需要修改配置文件模板, 如果不清楚用途可以跳过修改
@@ -210,12 +203,8 @@ CURRENT_VERSION=
 # 启动
 ./jmsctl.sh start
 ```
-:::
 
-:::note[安装完成后 JumpServer 配置文件路径为： /opt/jumpserver/config/config.txt]
 
-:::
-:::note
 
 ```sh
 cd /opt/jumpserver-installer-v4.10.17
@@ -232,15 +221,12 @@ cd /opt/jumpserver-installer-v4.10.17
 # 帮助
 ./jmsctl.sh -h
 ```
-:::
 
 ## 2. 环境访问
-:::note[安装成功后，通过浏览器访问登录 JumpServer]
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
 用户名: admin
 密码: ChangeMe
 ```
-:::
 ![登录页面](/img/jumpserver/online_install_01.png)

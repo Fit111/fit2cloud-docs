@@ -2,9 +2,7 @@
 title: 安装指南
 ---
 
-:::note[安装所需命令, 参考 [环境要求](./requirements) 手动安装]
 
-:::
 | OS/Arch       | Architecture | Linux Kernel | Offline Name                                     |
 | :------------ | :----------- | :----------- | :----------------------------------------------- |
 | linux/amd64   | x86_64       | &gt;= 4.0       | jumpserver-ce--x86_64.tar.gz |
@@ -18,12 +16,9 @@ title: 安装指南
 
 ### linux/amd64
 
-:::note
 
 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录
-:::
 
-:::note
 
 ```sh
 cd /opt
@@ -205,12 +200,8 @@ CURRENT_VERSION=
 # 启动
 ./jmsctl.sh start
 ```
-:::
 
-:::note[安装完成后 JumpServer 配置文件路径为： /opt/jumpserver/config/config.txt]
 
-:::
-:::note
 
 ```sh
 cd jumpserver-ce--x86_64
@@ -227,15 +218,12 @@ cd jumpserver-ce--x86_64
 # 帮助
 ./jmsctl.sh -h
 ```
-:::
 ## 2. 环境访问
-:::note[安装成功后，通过浏览器访问登录 JumpServer]
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
 用户名: admin
 密码: ChangeMe
 ```
-:::
 
 ![登录页面](/img/jumpserver/online_install_01.png)

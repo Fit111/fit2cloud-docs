@@ -13,7 +13,6 @@ title: 在线升级
 
 ### 中国大陆
 
-:::note
 
 ```sh
 cd /opt
@@ -21,10 +20,8 @@ wget https://resource.fit2cloud.com/jumpserver/installer/releases/download/v4.10
 tar -xf jumpserver-installer-v4.10.17.tar.gz
 cd jumpserver-installer-v4.10.17
 ```
-:::
 ### 其他地区
 
-:::note
 
 ```sh
 cd /opt
@@ -32,8 +29,6 @@ wget https://github.com/jumpserver/installer/releases/download/v4.10.17/jumpserv
 tar -xf jumpserver-installer-v4.10.17.tar.gz
 cd jumpserver-installer-v4.10.17
 ```
-:::
-:::note
 
 ```sh
 ./jmsctl.sh upgrade
@@ -41,4 +36,3 @@ cd jumpserver-installer-v4.10.17
 # 启动 JumpServer 服务
 ./jmsctl.sh start
 ```
-:::
