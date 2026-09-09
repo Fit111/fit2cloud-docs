@@ -88,10 +88,15 @@ description: 介绍 1Panel AI 网关账号池，包括添加上游账号、供�
 
 在账号池列表的操作列，可对每个账号执行以下操作：
 
-- **编辑**：修改名称、凭据、地址、协议路由、模型映射、验证模型、优先级、最大并发和备注。
 - **启用 / 禁用**：通过列表中的开关控制账号是否参与调度。
+- **测试**：v1.0.2 起，单击 **测试** 打开测试模型弹窗，选择一个模型后单击 **开始**，系统会使用该账号已保存的配置发起一次真实调用，用于快速验证账号凭据与连通性；也可单击 **测试所有模型** 批量验证。测试为真实调用，可能产生用量和费用。
+- **编辑**：修改名称、凭据、地址、协议路由、模型映射、验证模型、优先级、最大并发和备注。
 - **删除**：单击删除并确认后，账号及其模型映射将被移除。若账号正被向量服务等功能引用，则不能直接删除。
 - **筛选**：可按供应商、协议类型、具体协议、状态和关键字筛选，并选择显示模型、优先级、最大并发等列。
+
+<img src="/img/account_pool/image41_account_test_dialog.png" alt="账号测试弹窗" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 8  账号测试弹窗</div>
 
 ## 3 对接账号
 
@@ -114,7 +119,7 @@ description: 介绍 1Panel AI 网关账号池，包括添加上游账号、供�
 
 <img src="/img/account_pool/image8_local_vllm_configuration_example.png" alt="本地 vLLM 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 8 本地 vLLM 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 9 本地 vLLM 配置样例</p>
 
 ### 3.2 对接本地 Ollama
 
@@ -135,7 +140,7 @@ description: 介绍 1Panel AI 网关账号池，包括添加上游账号、供�
 
 <img src="/img/account_pool/image9_local_ollama_configuration_example.png" alt="本地 Ollama 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 9 本地 Ollama 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 10 本地 Ollama 配置样例</p>
 
 ### 3.3 对接DeepSeek
 
@@ -154,7 +159,7 @@ description: 介绍 1Panel AI 网关账号池，包括添加上游账号、供�
 
 <img src="/img/account_pool/image10_obtain_deepseek_api_key.png" alt="获取 DeepSeek API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 10  获取 DeepSeek API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 11  获取 DeepSeek API Key</p>
 
 **步骤2 配置样例**
 
@@ -162,7 +167,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image11_DeepSeek_configuration_example.png" alt="DeepSeek 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 11  DeepSeek 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 12  DeepSeek 配置样例</p>
 
 ### 3.4 对接腾讯云
 
@@ -183,7 +188,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image12_obtain_tencent_cloud_api_key.png" alt="获取腾讯云 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 12  获取腾讯云 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 13  获取腾讯云 API Key</p>
 
 **步骤2 配置样例**
 
@@ -191,7 +196,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image13_tencent_cloud_text_to_image_model_configuration_example.png" alt="腾讯云 - 文生图模型配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 13  腾讯云 - 文生图模型配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 14  腾讯云 - 文生图模型配置样例</p>
 
 ### 3.5 对接阿里云百炼
 
@@ -212,7 +217,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image14_obtain_aliyun_api_key.png" alt="获取阿里云 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 14  获取阿里云 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 15  获取阿里云 API Key</p>
 
 **步骤2 配置样例**
 
@@ -220,7 +225,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image15_aliyun_text_to_image_model_configuration_example.png" alt="阿里云 - 文生图模型配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 15 阿里云 - 文生图模型配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 16 阿里云 - 文生图模型配置样例</p>
 
 ### 3.6  对接百度智能云千帆
 
@@ -239,7 +244,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image16_obtain_baidu_qianfan_api_key.png" alt="获取百度千帆 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 16 获取百度千帆 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 17 获取百度千帆 API Key</p>
 
 **步骤2 配置样例**
 
@@ -247,7 +252,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image17_baidu_qianfan_configuration_example.png" alt="百度千帆配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 17 百度千帆配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 18 百度千帆配置样例</p>
 
 ### 3.7  对接硅基流动
 
@@ -265,7 +270,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image18_obtain_siliconflow_api_key.png" alt="获取硅基流动 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 18 获取硅基流动 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 19 获取硅基流动 API Key</p>
 
 **步骤2 配置样例**
 
@@ -273,7 +278,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image19_siliconflow_configuration_example.png" alt="硅基流动配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 19 硅基流动配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 20 硅基流动配置样例</p>
 
 ### 3.8 对接火山引擎方舟
 
@@ -292,7 +297,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image20_obtain_volcengine_ark_api_key.png" alt="获取火山引擎方舟 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 20 获取火山引擎方舟 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 21 获取火山引擎方舟 API Key</p>
 
 **步骤2 配置样例**
 
@@ -300,7 +305,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image21_volcengine_ark_configuration_example.png" alt="火山引擎方舟配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 21 火山引擎方舟配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 22 火山引擎方舟配置样例</p>
 
 ### 3.9 对接智谱 Z.ai
 
@@ -318,7 +323,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image22_obtain_zhipu_ai_api_key.png" alt="获取智谱 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 22 获取智谱 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 23 获取智谱 API Key</p>
 
 **步骤2 配置样例**
 
@@ -326,7 +331,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image23_zhipu_ai_configuration_example.png" alt="智谱配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 23 智谱配置样例配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 24 智谱配置样例配置样例</p>
 
 ### 3.10 对接MiniMax
 
@@ -344,7 +349,7 @@ DeepSeek 账号的配置方式如下图所示。
 
 <img src="/img/account_pool/image24_obtain_minimax_api_key.png" alt="获取 MiniMax API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 24 获取 MiniMax API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 25 获取 MiniMax API Key</p>
 
 **步骤2 配置样例**
 
@@ -352,7 +357,7 @@ MiniMax 文本模型配置方式如下图所示。文生图模型可参照同样
 
 <img src="/img/account_pool/image25_minimax_configuration_example.png" alt=" MiniMax 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 25 MiniMax 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 26 MiniMax 配置样例</p>
 
 ### 3.11 对接小米
 
@@ -371,7 +376,7 @@ MiniMax 文本模型配置方式如下图所示。文生图模型可参照同样
 
 <img src="/img/account_pool/image26_obtain_xiaomi_mimo_api_key.png" alt="获取小米 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 26 获取小米 API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 27 获取小米 API Key</p>
 
 **步骤2 配置样例**
 
@@ -379,7 +384,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image27_xiaomi_mimo_configuration_example.png" alt=" 小米配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 27 小米配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 28 小米配置样例</p>
 
 ### 3.12 对接 Kimi
 
@@ -397,7 +402,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image28_obtain_kimi_api_key.png" alt="获取 Kimi API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 28 获取 Kimi API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 29 获取 Kimi API Key</p>
 
 **步骤2 配置样例**
 
@@ -405,7 +410,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image29_kimi_configuration_example.png" alt=" Kimi 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 29 Kimi 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 30 Kimi 配置样例</p>
 
 ### 3.12 对接 OpenCode
 
@@ -423,7 +428,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image30_obtain_opencode_api_key.png" alt="获取 OpenCode API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 30 获取 OpenCode API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 31 获取 OpenCode API Key</p>
 
 **步骤2 配置样例**
 
@@ -431,7 +436,7 @@ OpenCode 的 Zen（按量付费）账号配置方式如下图所示，其余账�
 
 <img src="/img/account_pool/image31_opencode_configuration_example.png" alt=" OpenCode 配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 31 OpenCode 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 32 OpenCode 配置样例</p>
 
 ### 3.13 对接 OpenAI
 
@@ -449,7 +454,7 @@ OpenCode 的 Zen（按量付费）账号配置方式如下图所示，其余账�
 
 <img src="/img/account_pool/image32_obtain_openai_api_key.png" alt="获取 OpenAI API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 32 获取 OpenAI API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 33 获取 OpenAI API Key</p>
 
 **步骤2 配置样例**
 
@@ -457,7 +462,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image33_openai_configuration_example.png" alt=" OpenAI配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 33 OpenAI 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 34 OpenAI 配置样例</p>
 
 ### 3.14 对接 OpenRouter
 
@@ -475,7 +480,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image34_obtain_openrouter_api_key.png" alt="获取 OpenRouter API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 34 获取 OpenRouter API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 35 获取 OpenRouter API Key</p>
 
 **步骤2 配置样例**
 
@@ -483,7 +488,7 @@ OpenRouter 文本模型配置方式如下图所示。文本模型、文生图模
 
 <img src="/img/account_pool/image35_openrouter__configuration_example.png" alt=" OpenRouter配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 35 OpenRouter 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 36 OpenRouter 配置样例</p>
 
 ### 3.15 对接 Anthropic
 
@@ -500,7 +505,7 @@ OpenRouter 文本模型配置方式如下图所示。文本模型、文生图模
 
 <img src="/img/account_pool/image36_obtain_anthropic_api_key.png" alt="获取 Anthropic API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 36 获取 Anthropic API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 37 获取 Anthropic API Key</p>
 
 **步骤2 配置样例**
 
@@ -508,7 +513,7 @@ Anthropic的账号配置方式如下图所示。
 
 <img src="/img/account_pool/image37_anthropic_configuration_example.png" alt=" Anthropic配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 37 Anthropic 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 38 Anthropic 配置样例</p>
 
 ### 3.16 对接 Gemini
 
@@ -525,7 +530,7 @@ Anthropic的账号配置方式如下图所示。
 
 <img src="/img/account_pool/image38_obtain_gemini_api_key.png" alt="获取 Gemini API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 38 获取 Gemini API Key</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 39 获取 Gemini API Key</p>
 
 **步骤2 配置样例**
 
@@ -533,7 +538,7 @@ Gemini账号配置方式如下图所示。
 
 <img src="/img/account_pool/image39_gemini_configuration_example.png" alt=" Gemini配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 39 Gemini 配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 40 Gemini 配置样例</p>
 
 ### 3.17 对接自定义供应商
 
@@ -554,7 +559,7 @@ Kimi 中国区 Token Plan 的账号配置方式如下图所示，其余账号类
 
 <img src="/img/account_pool/image40_custom_configuration_example.png" alt=" 自定义配置样例" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 40 自定义配置样例</p>
+<p style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 41 自定义配置样例</p>
 
 ## 4 注意事项
 

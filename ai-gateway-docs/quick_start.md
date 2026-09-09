@@ -15,7 +15,9 @@ description: 通过快速部署、界面介绍和快速上手三个部分，帮�
 
 依托 1Panel 原生应用商店，无需复杂命令，一键即可完成安装、部署与初始化，适配新手用户快速落地。
 
-![图 1  1Panel 应用商店一键部署](/img/ai-gateway/deploy_app_store.png)
+<img src="/img/ai-gateway/deploy_app_store.png" alt="1Panel 应用商店一键部署" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 1  1Panel 应用商店一键部署</div>
 
 ### 方法 2. 使用官方镜像手动部署
 
@@ -42,13 +44,19 @@ docker logs 1panel-ai-gateway
 
 ## 2 界面介绍
 
-使用管理员账号登录后进入管理端。管理端由左侧导航、顶部区域和主内容区三部分组成。左侧导航用于进入各管理模块，顶部区域显示当前页面标题并提供语言、主题和「关于」入口，主内容区显示筛选栏、数据表格、表单和详情。
+使用管理员账号登录后进入管理端。管理端由左侧导航、顶部区域和主内容区三部分组成。左侧导航用于进入各管理模块，顶部区域显示当前页面标题并提供「反馈」「关于」入口及语言、主题切换，主内容区显示筛选栏、数据表格、表单和详情。
 
-![图 2  管理端概览界面](/img/ai-gateway/overview.png)
+<img src="/img/ai-gateway/overview.png" alt="管理端概览界面" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 2  管理端概览界面</div>
+
+<img src="/img/quick_start/image_overview_hist_concurrency.png" alt="概览页历史并发图表" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 3  概览页历史并发图表</div>
 
 管理端各导航模块的功能介绍如下所示：
-- **账号池**：核心用于维护对接各类模型供应商的上游账号信息，支持配置与管理服务访问地址、身份凭据、通信协议以及模型映射关系，保障网关与上游模型服务的正常对接通信。
+- **概览**：展示网关实时运行状态，包括当前活跃用户、流式请求、网关并发与等待队列，以及模型账号并发、用户组并发的「当前 / 上限」和利用率；历史并发图表支持按近 24 小时、近 7 天、近 30 天回看最高并发与平均并发走势。
+- **账号池**：核心用于维护对接各类模型供应商的上游账号信息，支持配置与管理服务访问地址、身份凭据、通信协议以及模型映射关系，保障网关与上游模型服务的正常对接通信。列表支持对账号发起 **测试**，验证凭据与连通性。
 - **模型组**：可对各类请求模型进行有序分类与整理，主要为系统权限授权、智能路由调度提供模型分组支撑，规范模型调用逻辑。
 - **用户**：专注于平台普通用户的全生命周期管理，支持维护用户账号信息、所属用户组、账号状态以及登录密码等基础用户数据，保障用户账号合规管理。
 - **用户组**：作为权限管控核心模块，主要用于配置用户组的模型访问授权、接口并发上限以及 Token 使用配额，统一承载组内所有用户的权限与资源使用限制。
@@ -59,9 +67,7 @@ docker logs 1panel-ai-gateway
 - **设置**：提供系统全局参数配置能力，支持自定义协议转换规则、性能运行参数、日志留存时长以及正文审计规则，适配不同场景的系统运行需求。
 
 
-:::note[用户中心]
-普通用户登录后进入用户中心，可访问「API Keys」「用量统计」和「设置」。管理员可在用户菜单中切换到用户中心，管理自己的 API Key。Web 界面支持简体中文、繁体中文和 English，右上角可切换语言，主题按钮可在亮色与暗色之间切换。
-:::
+**用户中心**：普通用户登录后进入用户中心，可访问「API Keys」「用量统计」和「设置」。管理员可在用户菜单中切换到用户中心，管理自己的 API Key。Web 界面支持简体中文、繁体中文和 English，右上角可切换语言，主题按钮可在亮色与暗色之间切换。
 
 ## 3 快速上手
 
@@ -78,10 +84,14 @@ docker logs 1panel-ai-gateway
 5. 维护模型映射，输入供客户端使用的请求模型名称和用于供应商调用的上游模型名称。
 6. 设置优先级、最大并发和备注，单击 **保存**。
 
-![图 3  账号池列表](/img/ai-gateway/account_pool.png)
+<img src="/img/ai-gateway/account_pool.png" alt="账号池列表" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 4  账号池列表</div>
 
 
-![图 4  添加上游账号](/img/ai-gateway/add_upstream_account.png)
+<img src="/img/ai-gateway/add_upstream_account.png" alt="添加上游账号" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 5  添加上游账号</div>
 
 
 上游账号主要字段如下表所示。
@@ -111,7 +121,9 @@ docker logs 1panel-ai-gateway
 
 当前模型派发前不可用时，网关会尝试下一个模型。
 
-![图 5  模型组列表](/img/ai-gateway/model_groups.png)
+<img src="/img/ai-gateway/model_groups.png" alt="模型组列表" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 6  模型组列表</div>
 
 
 ### 3.3 配置用户组
@@ -124,15 +136,17 @@ docker logs 1panel-ai-gateway
 4. 在 **授权模型组** 中选择允许访问的模型组；未选择任何模型组时，该用户组可访问全部模型。
 5. 设置启用状态和备注，单击 **保存**。
 
-![图 6  用户组列表](/img/ai-gateway/user_groups.png)
+<img src="/img/ai-gateway/user_groups.png" alt="用户组列表" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 7  用户组列表</div>
 
 
-![图 7  添加用户组](/img/ai-gateway/add_user_group.png)
+<img src="/img/ai-gateway/add_user_group.png" alt="添加用户组" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 8  添加用户组</div>
 
 
-:::note[默认用户组]
-系统保证恰好存在一个启用的默认用户组。默认用户组不能禁用或删除，仍有成员的用户组也不能删除。
-:::
+**默认用户组**：系统保证恰好存在一个启用的默认用户组。默认用户组不能禁用或删除，仍有成员的用户组也不能删除。
 
 ### 3.4 配置智能路由
 
@@ -146,30 +160,34 @@ docker logs 1panel-ai-gateway
 4. 按需调整分类阈值（默认 0.72）、置信差阈值（默认 0.00）和 Top K（默认 5），单击 **保存**，确认卡片右上角显示「运行时已生效」。
 5. 在同页「向量服务」中选择一个向量账号及其真实模型，单击 **测试连接**，确认返回向量维度。
 
-![图 8  设置页的智能路由配置](/img/ai-gateway/settings.png)
+<img src="/img/ai-gateway/settings.png" alt="设置页的智能路由配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 9  设置页的智能路由配置</div>
 
 
 选择 **智能路由**，在 **样本管理** 中可查看样本的标签、样本文本和向量维度。
 
-![图 9  智能路由样本管理](/img/ai-gateway/smart_routing_samples.png)
+<img src="/img/ai-gateway/smart_routing_samples.png" alt="智能路由样本管理" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 10  智能路由样本管理</div>
 
 
-:::note[共享向量服务]
-向量服务由智能路由和内容合规共用。更换向量账号或模型后，已有样本向量会失效，需要重新构建。
-:::
+**共享向量服务**：向量服务由智能路由和内容合规共用。更换向量账号或模型后，已有样本向量会失效，需要重新构建。
 
 配置样本后，可在 **智能路由** 页切换到 **统计**，查看决策数、真实请求数、失败数、Token、平均 Token、累计耗时，以及按标签、来源和模型的分布。
 
-![图 10  智能路由统计](/img/ai-gateway/smart_routing_stats.png)
+<img src="/img/ai-gateway/smart_routing_stats.png" alt="智能路由统计" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 11  智能路由统计</div>
 
 
-:::note[智能路由生效验证]
-启用后，用虚拟模型名（如 `1Panel-Auto`）分别发起一条简单提问和一条复杂推理请求：简单请求会路由到简单模型组的便宜模型，复杂请求会路由到复杂模型组的强模型（响应中的 `model` 字段即为实际命中的模型）。每次调用的用户、请求模型与实际路由模型都会记录在 **调用日志** 中，可据此核对路由结果；**智能路由** 页的 **统计** 标签同步展示决策数与模型分布。
-:::
+**智能路由生效验证**：启用后，用虚拟模型名（如 `1Panel-Auto`）分别发起一条简单提问和一条复杂推理请求：简单请求会路由到简单模型组的便宜模型，复杂请求会路由到复杂模型组的强模型（响应中的 `model` 字段即为实际命中的模型）。每次调用的用户、请求模型与实际路由模型都会记录在 **调用日志** 中，可据此核对路由结果；**智能路由** 页的 **统计** 标签同步展示决策数与模型分布。
 
 内容合规与智能路由共用向量服务，在模型调用前检查请求内容。系统支持敏感词关键词匹配和审核样本语义匹配，命中后可按策略组执行拦截或仅审计。管理员可在 **内容合规** 页面维护敏感词与审核样本。
 
-![图 11  内容合规策略配置](/img/ai-gateway/content_moderation.png)
+<img src="/img/ai-gateway/content_moderation.png" alt="内容合规策略配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 12  内容合规策略配置</div>
 
 
 ### 3.5 创建普通用户
@@ -181,7 +199,9 @@ docker logs 1panel-ai-gateway
 3. 选择用户组，未选择时使用系统默认用户组。
 4. 输入 6 至 128 个字符的初始密码并再次确认，单击 **保存**。
 
-![图 12  用户列表](/img/ai-gateway/user_list.png)
+<img src="/img/ai-gateway/user_list.png" alt="用户列表" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 13  用户列表</div>
 
 
 :::important[用户治理]
@@ -196,7 +216,9 @@ docker logs 1panel-ai-gateway
 2. 输入名称（1 至 64 字节），单击 **创建**，页面显示以 `sk-` 开头的完整密钥。
 3. 立即单击 **复制**，将密钥保存到密码管理器或受控密钥系统。密钥仅在创建成功时完整显示一次，关闭后无法再次查看原文。
 
-![图 13  用户中心 API Keys](/img/ai-gateway/user_center_api_keys.png)
+<img src="/img/ai-gateway/user_center_api_keys.png" alt="用户中心 API Keys" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 14  用户中心 API Keys</div>
 
 
 创建密钥后，将客户端的 Base URL 配置为网关地址，配合 API Key 即可调用。以 OpenAI Chat Completions 为例：
@@ -227,34 +249,34 @@ curl https://gateway.example.com/v1/chat/completions \
 | POST | `/v1/embeddings` | OpenAI Embeddings 兼容调用。 |
 | POST | `/v1/images/generations` | OpenAI Images 兼容文生图调用。 |
 
-:::note[认证方式]
-通用方式是在 `Authorization` 请求头中使用 Bearer Token。Anthropic Messages 接口也接受 `x-api-key`，使用 `x-api-key` 时不要同时发送 `Authorization`。API Key 前后不能包含空白字符。
-:::
+**认证方式**：通用方式是在 `Authorization` 请求头中使用 Bearer Token。Anthropic Messages 接口也接受 `x-api-key`，使用 `x-api-key` 时不要同时发送 `Authorization`。API Key 前后不能包含空白字符。
 
 普通用户可在用户中心的 **用量统计** 页面按 API Key 和时间范围查看个人的请求量、输入 Token、输出 Token、总 Token 与趋势。
 
-![图 14  用户中心用量统计](/img/ai-gateway/user_center_usage.png)
+<img src="/img/ai-gateway/user_center_usage.png" alt="用户中心用量统计" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 15  用户中心用量统计</div>
 
 
-:::note[实际调用验证]
-使用普通用户的 API Key 完成一次真实调用（将上述示例中的 Base URL 替换为网关地址、`sk-xxxxxxxxxxxxxxxx` 替换为真实密钥）：发起简单提问「用一句话介绍什么是 API Key」后，网关将请求判定为简单请求，路由到简单模型组内的便宜模型（响应中的 `model` 字段返回实际命中的模型名，如 `step-3.7-flash`），并可返回完整生成的回答；管理员随后可在 **调用日志** 中看到该次调用记录，请求模型显示为虚拟模型名 `1Panel-Auto`，实际模型为路由命中的模型。
-:::
+**实际调用验证**：使用普通用户的 API Key 完成一次真实调用（将上述示例中的 Base URL 替换为网关地址、`sk-xxxxxxxxxxxxxxxx` 替换为真实密钥）：发起简单提问「用一句话介绍什么是 API Key」后，网关将请求判定为简单请求，路由到简单模型组内的便宜模型（响应中的 `model` 字段返回实际命中的模型名，如 `step-3.7-flash`），并可返回完整生成的回答；管理员随后可在 **调用日志** 中看到该次调用记录，请求模型显示为虚拟模型名 `1Panel-Auto`，实际模型为路由命中的模型。
 
 ### 3.7 查看用量与调用日志
 
 管理员可在管理端全局观测网关运行情况。**用量统计** 按用户、供应商、客户端协议和时间范围统计请求量与 Token 分布，快速识别容量与用量趋势。
 
-![图 15  管理员用量统计](/img/ai-gateway/admin_usage_stats.png)
+<img src="/img/ai-gateway/admin_usage_stats.png" alt="管理员用量统计" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 16  管理员用量统计</div>
 
 
 **调用日志** 记录每次调用的用户、模型、供应商、状态、耗时与 Token，并可展开查看每次账号尝试的调用链路。定位单次请求时，优先复制 Request ID，再结合调用时间、用户和模型交叉筛选。
 
-![图 16  调用日志](/img/ai-gateway/call_logs.png)
+<img src="/img/ai-gateway/call_logs.png" alt="调用日志" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 17  调用日志</div>
 
 
-:::note[排障建议]
-出现 401 或 403 时检查密钥、用户与用户组状态及模型授权；出现 429 时检查用户组、单 API Key、网关与账号并发限制；出现 5xx 或上游不可用时，查看调用链路中的账号尝试、状态码和耗时。
-:::
+**排障建议**：出现 401 或 403 时检查密钥、用户与用户组状态及模型授权；出现 429 时检查用户组、单 API Key、网关与账号并发限制；出现 5xx 或上游不可用时，查看调用链路中的账号尝试、状态码和耗时。
 
 ## 4 接入 WorkBuddy 客户端
 
@@ -266,33 +288,41 @@ curl https://gateway.example.com/v1/chat/completions \
 
 1. 在管理端 **模型组**（或 **账号池** 的模型映射）中查看已配置的请求模型名称，例如智能路由虚拟模型 `1Panel-Auto`。
 
-![图 17  在管理端查看可用模型名称](/img/ai-gateway/view_model_names.png)
+<img src="/img/ai-gateway/view_model_names.png" alt="在管理端查看可用模型名称" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 18  在管理端查看可用模型名称</div>
 
 
 2. 进入用户中心的 **API Keys** 页面，单击 **创建 API Key** 并为密钥命名。
 
-![图 18  创建 API Key](/img/ai-gateway/create_api_key.png)
+<img src="/img/ai-gateway/create_api_key.png" alt="创建 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 19  创建 API Key</div>
 
 
 3. 在创建成功弹窗中单击 **复制**，妥善保存以 `sk-` 开头的完整密钥（仅显示一次）。
 
-![图 19  复制 API Key](/img/ai-gateway/copy_api_key.png)
+<img src="/img/ai-gateway/copy_api_key.png" alt="复制 API Key" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 20  复制 API Key</div>
 
 
-:::note[模型名称选择]
-若网关已启用智能路由，此处填写虚拟模型名称（如 `1Panel-Auto`），接入后可让网关自动为每个问题选择合适的模型；若只需固定使用某一模型，则填写模型组中的具体请求模型名称。
-:::
+**模型名称选择**：若网关已启用智能路由，此处填写虚拟模型名称（如 `1Panel-Auto`），接入后可让网关自动为每个问题选择合适的模型；若只需固定使用某一模型，则填写模型组中的具体请求模型名称。
 
 ### 4.2 在 WorkBuddy 中配置自定义模型
 
 1. 打开 WorkBuddy 客户端，进入模型配置，单击 **配置自定义模型**。
 
-![图 20  在 WorkBuddy 中配置自定义模型](/img/ai-gateway/workbuddy_config_entry.png)
+<img src="/img/ai-gateway/workbuddy_config_entry.png" alt="在 WorkBuddy 中配置自定义模型" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 21  在 WorkBuddy 中配置自定义模型</div>
 
 
 2. 提供商选择 **自定义**。
 
-![图 21  选择自定义提供商](/img/ai-gateway/custom_provider.png)
+<img src="/img/ai-gateway/custom_provider.png" alt="选择自定义提供商" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 22  选择自定义提供商</div>
 
 
 3. 填写接入信息：
@@ -301,16 +331,18 @@ curl https://gateway.example.com/v1/chat/completions \
    - **API Key**：上一步复制的密钥。
    - **模型名称**：上一节中确认的模型名称。
 
-![图 22  填写模型接入配置](/img/ai-gateway/fill_provider_info.png)
+<img src="/img/ai-gateway/fill_provider_info.png" alt="填写模型接入配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 23  填写模型接入配置</div>
 
 
 4. 单击 **保存**，选择刚配置的模型发起一次提问进行测试。
 
-![图 23  保存并测试模型](/img/ai-gateway/test_model.png)
+<img src="/img/ai-gateway/test_model.png" alt="保存并测试模型" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 24  保存并测试模型</div>
 
 
-:::note[验证接入结果]
-测试成功后，可在网关 **调用日志** 中看到来自 WorkBuddy 的调用记录；若接入时使用的是智能路由虚拟模型，记录中的实际模型即为网关为该问题选定的模型。
-:::
+**验证接入结果**：测试成功后，可在网关 **调用日志** 中看到来自 WorkBuddy 的调用记录；若接入时使用的是智能路由虚拟模型，记录中的实际模型即为网关为该问题选定的模型。
 
 至此，你已完成从部署 1Panel AI 网关，到管理员配置上游账号、模型组、用户组与智能路由，再到创建普通用户、使用 API Key 调用模型并接入 WorkBuddy 客户端的完整流程。

@@ -6,18 +6,12 @@ keywords: [1Panel 上传证书, SSL 证书, PEM 证书, HTTPS 配置, SSL 私钥
 
 # 上传证书
 
-:::note
+点击证书列表上方的【上传证书】按钮，用户可以将已有的 SSL 证书上传至 1Panel 中，用于网站的 HTTPS 访问。
 
-    点击证书列表上方的【上传证书】按钮，用户可以将已有的 SSL 证书上传至 1Panel 中，用于网站的 HTTPS 访问。
-
-:::
 ![img.png](/img/1panel/websites/certificate_upload.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 上传证书</div>
 
-:::note
-
-    上传证书时，用户需要提供 PEM 格式的证书和私钥，两者必须互相匹配。上传后应检查证书域名、签发机构和有效期，再用于网站 HTTPS 配置。
-
-:::
+上传证书时，用户需要提供 PEM 格式的证书和私钥，两者必须互相匹配。上传后应检查证书域名、签发机构和有效期，再用于网站 HTTPS 配置。
 
 :::caution[私钥安全]
     私钥属于敏感凭证，应仅通过安全渠道保存和传输。

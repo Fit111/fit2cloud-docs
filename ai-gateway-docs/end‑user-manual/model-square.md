@@ -55,9 +55,9 @@ title: 模型广场
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  按「文本」分类筛选后的效果</div>
 
-:::note[分类下没模型时怎么办？]  
+**分类下没模型时怎么办？**
+
 如果所选分类下没有任何可用模型，页面会显示「**当前分类暂无可调用模型**」。这是正常提示，不是出错。请联系管理员确认是否已为你开通该类模型的权限。  
-:::
 
 ### 3.3 搜索框
 
@@ -127,11 +127,10 @@ title: 模型广场
 
 所有接口都需要在请求头里携带 **API Key** 用来「验明身份」。有两种写法：
 
-:::note[认证方式]
+**认证方式**
 
 - `Authorization: Bearer <API Key>` — **通用方式**，所有接口都支持
 - `x-api-key: <API Key>` — **仅** Anthropic Messages 接口（`/v1/messages`）需要这样写  
-  :::
 
 `<API Key>` 需要替换为你在 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 页面创建的实际密钥。
 

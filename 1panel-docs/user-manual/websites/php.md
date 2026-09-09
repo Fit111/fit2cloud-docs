@@ -5,60 +5,53 @@ title: PHP
 
 ## 1 创建 PHP 运行环境
 
-:::note
-    **点击创建运行环境按钮，选择 PHP 版本和扩展**
+**点击创建运行环境按钮，选择 PHP 版本和扩展**
 
-    - 1Panel 支持维护 5.x、7.x 和 8.x 三个大版本，用户可以根据自己的需求选择合适的版本
+- 1Panel 支持维护 5.x、7.x 和 8.x 三个大版本，用户可以根据自己的需求选择合适的版本
 
-:::
 ![img.png](/img/1panel/websites/runtime_list.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建 PHP 运行环境——应用卡片</div>
 
 ### 1.1.创建 本地 PHP 运行环境
 
-:::note
-    **点击创建运行环境按钮，选择本地**
+**点击创建运行环境按钮，选择本地**
 
-    - 需要先在服务器上安装 php-fpm。
+- 需要先在服务器上安装 php-fpm。
 
-:::
 ![img.png](/img/1panel/websites/runtime_local.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 创建 本地 PHP 运行环境界面</div>
 
-:::note
-    **1Panel 离线版**
+**1Panel 离线版**
 
-    - 可以从其他 1Panel 服务器拷贝 /opt/1panel/runtime/php/[php_name] 目录和镜像，并上传到离线版 1Panel 服务器，并使用 docker compose up 命令启动，记住映射的端口
-    - 创建运行环境网站，选择刚刚创建的 PHP 运行环境，修改端口为刚才启动的端口
-    - 详细操作步骤可参考：[PHP 离线版使用文档](../../installation/package_installation.md/#8-php)
+- 可以从其他 1Panel 服务器拷贝 /opt/1panel/runtime/php/[php_name] 目录和镜像，并上传到离线版 1Panel 服务器，并使用 docker compose up 命令启动，记住映射的端口
+- 创建运行环境网站，选择刚刚创建的 PHP 运行环境，修改端口为刚才启动的端口
+- 详细操作步骤可参考：[PHP 离线版使用文档](../../installation/package_installation.md/#8-php)
 
-:::
 ![img.png](/img/1panel/websites/runtime_local_website.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 创建 本地 PHP 运行环境界面（续）</div>
 
 ## 2 管理 PHP 扩展
 
-:::note
-    点击 PHP 运行环境列表中的【扩展】按钮，可以查看当前 PHP 运行环境已加载的扩展，同时支持安装、卸载扩展。
+点击 PHP 运行环境列表中的【扩展】按钮，可以查看当前 PHP 运行环境已加载的扩展，同时支持安装、卸载扩展。
 
-:::
 ![img.png](/img/1panel/websites/runtime_php_extensions.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 管理 PHP 扩展界面</div>
 
 ## 3 修改 PHP 配置
 
-:::note
-    点击 PHP 运行环境列表中的【更多】操作中的【配置】选项，可以查看并修改当前 PHP 运行环境的配置。
+点击 PHP 运行环境列表中的【更多】操作中的【配置】选项，可以查看并修改当前 PHP 运行环境的配置。
 
-:::
 ![img.png](/img/1panel/websites/runtime_php_config.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 修改 PHP 配置</div>
 
 ## 4 配置进程守护
 
-:::note
-    点击 PHP 运行环境列表中的【更多】操作中的【进程守护】选项，可以查看并修改当前 PHP 运行环境的进程守护配置。
+点击 PHP 运行环境列表中的【更多】操作中的【进程守护】选项，可以查看并修改当前 PHP 运行环境的进程守护配置。
 
-    适用于 PHP 应用需要额外的常驻进程的场景。
+适用于 PHP 应用需要额外的常驻进程的场景。
 
-
-:::
 ![img.png](/img/1panel/websites/runtime_php_daemon.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 配置进程守护界面</div>
 
 ## 5 PHP 扩展列表
 
@@ -69,6 +62,8 @@ title: PHP
 
 
 
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 PHP 扩展各版本支持情况</div>
 
 | Extension | PHP 5.5 | PHP 5.6 | PHP 7.0 | PHP 7.1 | PHP 7.2 | PHP 7.3 | PHP 7.4 | PHP 8.0 | PHP 8.1 | PHP 8.2 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
