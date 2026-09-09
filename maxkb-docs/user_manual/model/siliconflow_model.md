@@ -4,7 +4,6 @@ title: 对接SILICONFLOW
 
 ## 1 添加模型
 
-:::note
 
 添加 SILICONFLOW 模型之前，需要先在 [SILICONFLOW](https://siliconflow.cn/) 中进行注册并登录。在控制台中的【账户管理-API密钥】中新建 API 密钥。
 
@@ -15,53 +14,56 @@ title: 对接SILICONFLOW
 * 基础模型：SILICONFLOW 支持的各类模型的基础模型名称，选项中显示了 SILICONFLOW 支持的部分常用大语言模型名称，支持手动输入，但需要与 SILICONFLOW 支持的模型名称保持一致，否则无法通过校验。    
 * API URL：https://api.siliconflow.cn/v1
 * API Key：创建的密钥 Key。
-:::
 
-![SILICONFLOW](/img/maxkb/model/siliconflow_model.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_model.png" alt="图 1  SILICONFLOW 控制台 API 密钥页" />
 
-![SILICONFLOW](/img/maxkb/model/siliconflow_model2.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  SILICONFLOW 控制台 API 密钥页</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_model2.png" alt="图 2  MaxKB 的 SILICONFLOW 模型列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 的 SILICONFLOW 模型列表</div>
 
 ## 2 配置样例
 
-:::note
 
 SILICONFLOW-大语言模型配置样例图示如下：
-:::
 
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_llm.png" alt="图 3  SILICONFLOW 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  SILICONFLOW 大语言模型 配置样例图</div>
+
 
 SILICONFLOW-向量模型配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_embedding.png" alt="图 4  SILICONFLOW 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  SILICONFLOW 向量模型 配置样例图</div>
+
 
 SILICONFLOW-语音识别配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_asr.png" alt="图 5  SILICONFLOW 语音识别 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  SILICONFLOW 语音识别 配置样例图</div>
+
 
 SILICONFLOW-语音合成配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_tts.png" alt="图 6  SILICONFLOW 语音合成 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  SILICONFLOW 语音合成 配置样例图</div>
+
 
 SILICONFLOW-图片生成配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_vision_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_vision_gen.png" alt="图 7  SILICONFLOW 图片生成 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  SILICONFLOW 图片生成 配置样例图</div>
+
 
 SILICONFLOW-重排模型配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_rerank.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_rerank.png" alt="图 8  SILICONFLOW 重排模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  SILICONFLOW 重排模型 配置样例图</div>
+
 
 SILICONFLOW-视觉模型配置样例图示如下：
-:::
-<img alt="SILICONFLOW" src="/img/maxkb/model/siliconflow_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/siliconflow_vision.png" alt="图 9  SILICONFLOW 视觉模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  SILICONFLOW 视觉模型 配置样例图</div>

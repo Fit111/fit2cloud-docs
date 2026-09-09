@@ -4,7 +4,6 @@ title: 登录认证
 
 ## 登录设置
 
-:::note
 
 MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
@@ -15,78 +14,81 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 账号登录验证码设置：当用户连续登录失败次数达到预设阈值时，系统会自动触发验证码校验机制，同时登录失败锁定账号功能，有效防范暴力破解等安全风险。
 
 第三方用户默认角色分配：为第三方登录的用户默认分配的默认工作空间及角色，方便对第三方用户进行统一管理。
-:::
 
-![登录设置](/img/maxkb/system/login_setting.png)
-![登录设置](/img/maxkb/system/login_setting1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/login_setting.png" alt="图 1  系统登录设置页面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  系统登录设置页面</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/login_setting1.png" alt="图 2  第三方用户默认角色设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  第三方用户默认角色设置</div>
 
 ## 登录认证
-:::note
 
 支持 LDAP、CAS、OIDC、OAUTH2 SAML2 单点认证协议，以及企业微信、钉钉、飞书移动端扫码登录和免密，满足企业对于强身份验证和访问控制的需求。
-:::
 
-![扫码登录](/img/maxkb/system/login_auth_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/login_auth_view.png" alt="图 3  登录认证方式总览" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  登录认证方式总览</div>
 
 ### 1 LDAP
 
-:::note
 
 配置 LDAP 的过程可参考下图，注意勾选下方"启用 LDAP 认证"后开启此功能。     
 提示：配置完成可点击上方【测试连接】即时测试配置信息是否正确，网络是否连通。
-:::
-![LDAP](/img/maxkb/system/LDAP.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/LDAP.png" alt="图 4  LDAP 单点认证配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  LDAP 单点认证配置</div>
 
 ### 2 CAS
 
-:::note
 
 配置 CAS 的过程可参考下图，注意勾选下方"启用 CAS 认证"后开启此功能。    
 **说明：** CAS 回调地址即 MaxKB 访问地址加上 /api/cas ，例如：http://40.100.86.240:8080/admin/api/cas。
-:::
-![CAS](/img/maxkb/system/CAS.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/CAS.png" alt="图 5  CAS 单点认证配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  CAS 单点认证配置</div>
 
 ### 3 OIDC
 
-:::note
 
 配置 OIDC 的过程可参考下图，注意勾选下方"启用 OIDC 认证"后开启此功能。   
 **说明：** OIDC 回调地址即 MaxKB 访问地址加上 /api/oidc ，例如：http://40.100.86.240:8080/admin/api/oidc。
-:::
-![OIDC](/img/maxkb/system/OIDC.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/OIDC.png" alt="图 6  OIDC 单点认证配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  OIDC 单点认证配置</div>
 
 ### 4 OAUTH2
 
-:::note
 
 配置 OAUTH2 的过程可参考下图（授权端以 github 为例），注意勾选下方"启用 OAHTU2 认证"后开启此功能。   
 **说明：** OAUTH2 回调地址即 MaxKB 访问地址加上 /api/oauth2 ，例如：http://40.100.86.240:8080/admin/api/oauth2。
-:::
-![OAHTU2](/img/maxkb/system/oauth2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/oauth2.png" alt="图 7  OAuth2 单点认证配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  OAuth2 单点认证配置</div>
 
 ### 5 SAML2
 
-:::note
 
 配置 SAML2 的过程可参考下图（授权端以 github 为例），注意勾选下方"启用 SAML2 认证"后开启此功能。
-:::
 
-![SAML2](/img/maxkb/system/saml2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/saml2.png" alt="图 8  SAML2 单点认证配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  SAML2 单点认证配置</div>
 
 ### 6 扫码登录
 
-:::note
 
 支持企业微信、钉钉、飞书接入，支持扫码登录、免密登录。
-:::
 
-![扫码登录](/img/maxkb/system/scan_code%20_login.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/scan_code%20_login.png" alt="图 9  启用扫码登录" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  启用扫码登录</div>
 
 #### 6.1 企业微信对接
 
 ##### 6.1.1 企业微信对接设置
 
-:::note
 
 MaxKB 对接企业微信，需要填写以下信息：
 
@@ -94,59 +96,59 @@ MaxKB 对接企业微信，需要填写以下信息：
 - Agent ID：企业微信自建应用唯一标识，企业微信管理在管理后台创建或查看应用时获取。
 - App Secret：企业微信自建应用的密钥。   
 - 回调地址：即 MaxKB 访问的 URL。
-:::
 
-:::note
 
 MaxKB 配置企业微信扫码登录时，需要企业微信管理员登录 [企业微信管理管理](https://work.weixin.qq.com/wework_admin/frame) 并创建企业自建应用，完成配置后发布应用。
-:::
 
-![企微应用创建](/img/maxkb/system/qiwei_create_app1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_create_app1.png" alt="图 10  创建企业自建应用" />
 
-![企微应用创建](/img/maxkb/system/obtain_wxid.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  创建企业自建应用</div>
 
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/obtain_wxid.png" alt="图 11  应用创建后的AgentID与Secret" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  应用创建后的AgentID与Secret</div>
+
 
 第一步：创建应用。在【应用管理-应用-自建】中点击【创建应用】，输入应用名称等信息，应用创建完成后即可查看应用 Agent ID和 Secret。
-:::
 
-![企微应用创建](/img/maxkb/system/qiwei_create_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_create_app.png" alt="图 12  自建应用创建入口" />
 
-![企微应用信息](/img/maxkb/system/qiwei_appinfo.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  自建应用创建入口</div>
 
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_appinfo.png" alt="图 13  企微应用信息" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  企微应用信息</div>
+
 
 第二步：设置可信域名。在【开发者接口】中点击【设置可信域名】，添加可信域名，并进行校验。可参考[**可信域名配置**](https://kb.fit2cloud.com/?p=915e0151-5581-406f-ac2e-22afb9b3b4bf)。
-:::
 
-![设置可信域名](/img/maxkb/system/qiwei_yuming.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_yuming.png" alt="图 14  设置可信域名" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  设置可信域名</div>
+
 
 第三步：授权回调域。在【企业微信授权】中设置授权回调域。
-:::
-![设置回调域](/img/maxkb/system/qiwei_callback.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_callback.png" alt="图 15  设置回调域" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  设置回调域</div>
+
 
 第三步：配置企业可信IP。在【企业可信IP】中配置可信ip。
-:::
-![配置可信IP](/img/maxkb/system/qiwei_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_ip.png" alt="图 16  配置可信IP" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  配置可信IP</div>
+
 
 完成企业微信应用的配置和发布后，在 MaxKB 企业微信登录扫码配置页面配置相应信息并通过效验。
-:::
-![企业微信配置](/img/maxkb/system/qiwei_setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_setting.png" alt="图 17  MaxKB企业微信扫码配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  MaxKB企业微信扫码配置</div>
+
 
 后续即可在 MaxKB 登陆页面点击选择企业微信进行扫码登陆。
-:::
 
 ##### 6.1.2 企业微信免登设置
 
-:::note
 
 应用主页地址的构造可以参考企业微信开发指南[造网页授权链接——构造企业oauth2链接](https://developer.work.weixin.qq.com/document/path/91120#%E6%9E%84%E9%80%A0%E4%BC%81%E4%B8%9Aoauth2%E9%93%BE%E6%8E%A5)。  
 链接格式即参数说明如下：
@@ -158,22 +160,22 @@ MaxKB 配置企业微信扫码登录时，需要企业微信管理员登录 [企
 - AGENTID：应用 ID
 
 主页地址示例：https://open.weixin.qq.com/connect/oauth2/authorize?redirect_uri=https%3A%2F%2Fmaxkbk.fit2cloud.cn/admin/api/wecom/oauth2&response_type=code&scope=snsapi_privateinfo&appid=ww5fad05aaa36d118c&agentid=1000002&state=maxkb#wechat_redirect
-:::
 
-![企业微信配置](/img/maxkb/system/weichat_oauth2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/weichat_oauth2.png" alt="图 18  企业微信免登主页地址配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  企业微信免登主页地址配置</div>
+
 
 配置完成后，在企业微信工作台中找到 MaxKB 应用，免登访问 MaxKB。
-:::
 
-![企业微信配置](/img/maxkb/system/weichat_oauth3.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/weichat_oauth3.png" alt="图 19  企业微信工作台免登访问" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  企业微信工作台免登访问</div>
 
 #### 6.2 钉钉对接
 
 ##### 6.2.1 钉钉对接设置
 
-:::note
 
 MaxKB 对接钉钉，需要填写以下信息：
 
@@ -181,103 +183,104 @@ MaxKB 对接钉钉，需要填写以下信息：
 - APP Key：钉钉应用标识，在钉钉开放平台中查看应用【凭证与基础信息】中查看。
 - App Secret：钉钉应用秘钥，在钉钉开放平台中查看应用【凭证与基础信息】中查看。
 - 回调地址：即 MaxKB 访问URL。
-:::
 
-:::note
 
 MaxKB 配置钉钉扫码登录时，需要在 [**钉钉开放平台**](https://open-dev.dingtalk.com/) 创建应用并进行配置。
 
 第一步：创建应用。在【应用开发-钉钉应用】中点击【创建应用】，应用创建完后在【凭证与基础信息】可查案 APPKey 和 APPSecret 信息。
-:::
-![钉钉创建应用](/img/maxkb/system/dingding_app_create.png)
-![钉钉应用信息](/img/maxkb/system/dingding_app_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_app_create.png" alt="图 20  钉钉开放平台创建应用" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  钉钉开放平台创建应用</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_app_info.png" alt="图 21  钉钉应用凭证信息" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  钉钉应用凭证信息</div>
+
 
 第二步：权限设置。
 
 - 进入到【权限管理】中，添加如下图所示的权限。
-:::
 
-![钉钉应用信息](/img/maxkb/system/dingding_permissions.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_permissions.png" alt="图 22  钉钉应用权限设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22  钉钉应用权限设置</div>
+
 
 - 在【分享设置】的【回调域名】里中添加授权回调域，注意域名需要和 MaxKB 平台里填写的【回调域名】一致。
-:::
 
-![钉钉回调信息](/img/maxkb/system/dingding_url.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_url.png" alt="图 23  钉钉回调信息" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  钉钉回调信息</div>
+
 
 - 同时在【安全设置】的【重定向 URL】里中添加授权回调域，注意域名一致。
-:::
 
-![钉钉安全信息](/img/maxkb/system/dingding_safe.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_safe.png" alt="图 24  钉钉安全信息" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  钉钉安全信息</div>
+
 
 第三步：在【版本管理与发布】中，填写应用版本号、版本描述等信息，点击【保存】，发布应用。
-:::
-![钉钉应用信息](/img/maxkb/system/dingding_app_release.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_app_release.png" alt="图 25  钉钉发布应用版本" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  钉钉发布应用版本</div>
+
 
 完成配置后发布，然后在 MaxKB 钉钉扫码登录扫码配置页面进行配置并保存。
-:::
 
-![钉钉创建应用](/img/maxkb/system/dingding_setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_setting.png" alt="图 26  MaxKB钉钉扫码配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  MaxKB钉钉扫码配置</div>
+
 
 后续即可在 MaxKB 登陆页面点击选择钉钉进行扫码登陆。
-:::
 
-![钉钉应用展示](/img/maxkb/system/dingding_deplay.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_deplay.jpg" alt="图 27  钉钉应用展示" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  钉钉应用展示</div>
 
 ##### 6.2.2 钉钉免登设置
 
-:::note
 
 添加网页应用能力。在钉钉开放平台的【应用能力】中，添加【网页应用】。
-:::
     
 
-![钉钉创建应用](/img/maxkb/system/dingding_add_webapp.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_add_webapp.png" alt="图 28  钉钉添加网页应用能力" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  钉钉添加网页应用能力</div>
+
 
 设置【应用首页】和【PC 端首页地址】。
 
 地址格式为：http(s)://xxx.xxx.xxx/admin/login?client=dingtalk=CORPID。注意 corpId=CORPID 需替换成真正的 CORPID。
-:::
 
-![钉钉应用配置](/img/maxkb/system/dingding_webapp_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_webapp_config.png" alt="图 29  钉钉应用配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  钉钉应用配置</div>
+
 
 安全设置。在【安全设置】中设置重定向 URL 和端内免登录地址。
-:::
-![钉钉安全配置](/img/maxkb/system/dingding_security_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_security_config.png" alt="图 30  钉钉重定向URL安全设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  钉钉重定向URL安全设置</div>
+
 
 分享设置，在【接入登录】中设置【回调域名】。
-:::
-![钉钉安全配置](/img/maxkb/system/dingding_share_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_share_config.png" alt="图 31  钉钉分享设置回调域名" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  钉钉分享设置回调域名</div>
+
 
 应用发布后，即可在钉钉工作台免登录访问 MaxKB。
-:::
 
-![钉钉安全配置](/img/maxkb/system/dingdingview.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingdingview.png" alt="图 32  钉钉工作台免登访问效果" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 32  钉钉工作台免登访问效果</div>
 
 #### 6.3 飞书对接
 
 ##### 6.3.1 飞书对接设置
 
-:::note
 
 MaxKB 对接飞书，需要填写以下信息：
 
@@ -285,72 +288,75 @@ MaxKB 对接飞书，需要填写以下信息：
 - Corp ID；
 - App Secret：MaxKB 提供的回调地址，并作为飞书免登录授权的跳转地址；
 - 回调地址：即 MaxKB URL 地址 + '/api/feishu'，例如：http://xx.xxx.xx.xxx/api/feishu 。
-:::
 
-:::note
 
 MaxKB 配置飞书扫码登录时，需要在 [**飞书开放平台**](https://open.feishu.cn/) 创建企业自建应用，完成配置后发布，然后在 MaxKB 飞书扫码登录扫码配置页面进行配置并保存。
-:::
 
-:::note
 
 第一步：创建企业自建应用。点击【创建企业自建应用】，输入应用名称、描述以及上传应用图标后，点击【创建】。
-:::
-![飞书创建](/img/maxkb/system/feishu_create_app.png)
-![飞书创建](/img/maxkb/system/feishu_create_app1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_create_app.png" alt="图 33  飞书创建应用入口" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  飞书创建应用入口</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_create_app1.png" alt="图 34  填写飞书应用信息" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 34  填写飞书应用信息</div>
+
 
 第二步：权限配置
 
 - 配置重定向 URL。在【开发配置-安全设置】中，输入 MaxKB 飞书扫码配置弹出框中的回调地址，点击【添加】。
-:::
-![飞书配置回调URL](/img/maxkb/system/feishu_url.png)
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_url.png" alt="图 35  飞书配置回调URL" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  飞书配置回调URL</div>
+
 
 - 应用授权，在应用的【权限管理】里进行应用的相关授权，具体权限参考下图：
-:::
-![飞书应用授权](/img/maxkb/system/feishu_permissions.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_permissions.png" alt="图 36  飞书应用授权" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 36  飞书应用授权</div>
+
 
 第三步：发布应用。在【版本管理与发布】中，输入应用版本号、更新说明等信息，点击【保存】，完成应用发布。
-:::
-![飞书发布应用](/img/maxkb/system/feishu_app_release.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_app_release.png" alt="图 37  飞书发布应用" />
 
-![飞书配置](/img/maxkb/system/feishu_setting.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 37  飞书发布应用</div>
 
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_setting.png" alt="图 38  飞书配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 38  飞书配置</div>
+
 
 发布应用后，即可在 MaxKB 登陆页面点击选择飞书进行扫码登陆。
-:::
-![飞书展示](/img/maxkb/system/feishu_deplay.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_deplay.jpg" alt="图 39  飞书展示" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 39  飞书展示</div>
 
 ##### 6.3.2 飞书免登设置
 
-:::note
 
 添加【页面应用】能力。
-:::
 
-![飞书添加页面应用](/img/maxkb/system/feishu_add_webapp.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_add_webapp.png" alt="图 40  飞书添加页面应用" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 40  飞书添加页面应用</div>
+
 
 配置桌面主页，例如：配置中填写 桌面端主页地址，如：http(s)://xxx.xxx.xxx/admin/login?client=lark&appId=cli_a7e1c1ddexxxxx。
-:::
-![飞书页面应用配置](/img/maxkb/system/feishu_webapp_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_webapp_config.png" alt="图 41  飞书页面应用配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  飞书页面应用配置</div>
+
 
 在【安全设置】中添加重定向 URL。
-:::
 
-![飞书安全配置](/img/maxkb/system/feishu_security_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_security_config.png" alt="图 42  飞书安全设置重定向URL" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 42  飞书安全设置重定向URL</div>
+
 
 应用发布后，即可在飞书工作台免登录访问 MaxKB。
-:::
 
-![飞书安全配置](/img/maxkb/system/feishu_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_view.png" alt="图 43  飞书工作台免登访问效果" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 43  飞书工作台免登访问效果</div>

@@ -2,10 +2,9 @@
 title: 系统设置
 ---
 
-:::note
 
 支持系统管理员配置邮件服务器的相关信息，以便系统可以通过电子邮件进行通知或其他邮件相关的操作。
-:::
 
-![用户列表](/img/maxkb/system/email.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/email.png" alt="图 1  用户列表" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  用户列表</div>

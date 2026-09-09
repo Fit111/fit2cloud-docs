@@ -4,7 +4,6 @@ title: 对接Azure OpenAI
 
 ## 1 添加模型
 
-:::note
 
 添加 Azure OpenAI 大模型之前，需要先在 [Azure AI Studio](https://ai.azure.com/) 中注册，并获取有关 API 域名、API Key、部署详细信息等内容，参考下图：
 
@@ -17,16 +16,20 @@ title: 对接Azure OpenAI
 * API 域名：Azure OpenAI 项目 API 服务 URL，见上图。
 * API Key：Azure OpenAI 项目 API 服务认证验证信息，见上图。
 * 部署名：Azure AI Studio 项目操场中模型的部署名称。
-:::
 
-![Azure OpenAI Key](/img/maxkb/model/Azure_APIKey.png)
-![Azure OpenAI DemployInfo](/img/maxkb/model/Azure_deployInfo.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/Azure_APIKey.png" alt="图 1  Azure OpenAI API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Azure OpenAI API Key</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/Azure_deployInfo.png" alt="图 2  Azure OpenAI DemployInfo" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  Azure OpenAI DemployInfo</div>
 
 ## 2 配置样例
 
-:::note
 
 Azure OpenAI-大语言模型配置样例图示：
-:::
 
-<img alt="Azure_大语言模型" src="/img/maxkb/model/azure_model.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/azure_model.png" alt="图 3  Azure OpenAI 大语言模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Azure OpenAI 大语言模型 配置样例图</div>

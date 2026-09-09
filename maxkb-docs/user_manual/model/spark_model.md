@@ -4,7 +4,6 @@ title: 对接讯飞星火
 
 ## 1 添加模型
 
-:::note
 
 添加讯飞星火大模型之前，需要先在 [讯飞开放平台](https://www.xfyun.cn/) 中进行注册，并根据不同的模型类型在【控制台】创建不同应用，创建应用后，平台将自动生成 APP ID、API Secret、API Key 等信息。
 
@@ -17,44 +16,48 @@ title: 对接讯飞星火
 * APP ID：讯飞开放平台中创建应用的标识。
 * API Key：讯飞开放平台应用访问对应的 API Key。
 * API Secret：讯飞开放平台应用访问对应的的 API Secret。
-:::
 
-![讯飞APP](/img/maxkb/model/xunfei_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_app.png" alt="图 1  讯飞开放平台应用鉴权信息" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  讯飞开放平台应用鉴权信息</div>
+
 
 添加[讯飞星辰 MaaS 平台](https://maas.xfyun.cn/modelService)模型时，选择模型 API 调用，创建模型服务，在模型服务列表中查看 API URL、APP ID、API Secret、API Key 等相关信息。
-:::
 
-![讯飞APP](/img/maxkb/model/xunfei_app1.png)
-<img alt="讯飞APP" src="/img/maxkb/model/xunfei_maas.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_app1.png" alt="图 2  讯飞星辰 MaaS 平台模型服务列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  讯飞星辰 MaaS 平台模型服务列表</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_maas.png" alt="图 3  MaxKB 添加讯飞模型对话框" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  MaxKB 添加讯飞模型对话框</div>
 
 ## 2 配置样例
 
-:::note
 
 讯飞星火-大语言模型配置样例图示：
-:::
 
-<img alt="讯飞模型" src="/img/maxkb/model/xunfei_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_llm.png" alt="图 4  讯飞星火 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  讯飞星火 大语言模型 配置样例图</div>
+
 
 讯飞星火-向量模型配置样例图示：
-:::
 
-<img alt="讯飞模型" src="/img/maxkb/model/xunfei_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_embed.png" alt="图 5  讯飞星火 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  讯飞星火 向量模型 配置样例图</div>
+
 
 讯飞星火-语音识别模型配置样例图示：
-:::
 
-<img alt="讯飞模型" src="/img/maxkb/model/xunfei_iat.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_iat.png" alt="图 6  讯飞星火 语音识别模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  讯飞星火 语音识别模型 配置样例图</div>
+
 
 讯飞星火-语音合成模型配置样例图示：
-:::
 
-<img alt="讯飞模型" src="/img/maxkb/model/xunfei_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xunfei_tts.png" alt="图 7  讯飞星火 语音合成模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  讯飞星火 语音合成模型 配置样例图</div>

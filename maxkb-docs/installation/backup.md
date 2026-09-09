@@ -2,7 +2,6 @@
 title: 备份还原
 ---
 
-:::note
 
 MaxKB 安装后，相关文件的分布路径如下：
 
@@ -10,9 +9,7 @@ MaxKB 安装后，相关文件的分布路径如下：
 - /usr/bin：默认 docker 及 docker-compose 的运行程序被放置在此目录下
 - /usr/local/bin/mkctl：MaxKB 的命令行工具
 - /var/lib/docker：默认 docker 镜像加载在此
-:::
 
-:::note
 
 综上所述，备份 MaxKB 主要需要备份运行路径，如 /opt/maxkb 目录即可。还原步骤如下：
 
@@ -20,4 +17,3 @@ MaxKB 安装后，相关文件的分布路径如下：
 - 停止 MaxKB 服务，执行命令： mkctl stop
 - 把原环境里的运行目录 /opt/maxkb 整个目录覆盖掉新环境里的 /opt/maxkb 目录
 - 启动新环境里的 MaxKB 服务： mkctl restart
-:::

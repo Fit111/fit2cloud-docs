@@ -4,7 +4,6 @@ title: 对接Anthropic
 
 ## 1 添加模型
 
-:::note
 
 添加 Anthropic 模型之前，需要注册并在控制台中的【账户管理-API 密钥】中创建 API Key。
 
@@ -15,14 +14,12 @@ title: 对接Anthropic
 * 基础模型：Anthropic 支持的各类模型的基础模型名称，选项中显示了 Anthropic 支持的部分常用大语言模型名称，支持手动输入需要与 Anthropic 支持的模型名称保持一致，否则无法通过校验。    
 * API URL：https://api.anthropic.com/v1/messages
 * API Key：在 anthropic 控制台创建的 API Key。
-:::
 
 ## 2 配置样例
 
-:::note
 
 Anthropic-大语言模型配置样例图示如下：
-:::
 
-<img alt="anthropic" src="/img/maxkb/model/anthropic_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/anthropic_llm.png" alt="图 1  Anthropic 大语言模型 配置样例图" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Anthropic 大语言模型 配置样例图</div>

@@ -2,13 +2,10 @@
 title: 资源管理
 ---
 
-:::note
 
 资源管理功能为系统管理员提供统一、高效的资源可视化管理能力。系统管理员可以集中查看、管理和维护所有工作空间下的核心资源，包括 智能体、知识库、工具、模型等。
-:::
 
 ## 1 资源查看
-:::note
 
 支持查看不同工作空间的知识库、智能体、模型、工具资源：
 
@@ -16,12 +13,12 @@ title: 资源管理
 - 搜索筛选：支持按创建者、名称、类型、状态、工作空间进行查询。
 
 支持关键词搜索和字段筛选，快速定位资源。
-:::
 
-![资源](/img/maxkb/system/resource_management.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/resource_management.png" alt="图 1  资源查看列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  资源查看列表</div>
 
 ## 2 资源操作
-:::note
 
 管理员可对不同类型资源执行特定操作，包括但不限于：
 
@@ -29,7 +26,7 @@ title: 资源管理
 - **知识库**：支持管理、向量化、生成问题、配置设置、资源授权、导出为 Excel 或 ZIP、删除等；
 - **工具**：支持启/禁用工具、编辑、启动参数、资源授权、导出等；
 - **模型**：支持修改、资源授权、删除等；
-:::
 
-![资源](/img/maxkb/system/resource_opt_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/resource_opt_app.png" alt="图 2  智能体资源操作菜单" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  智能体资源操作菜单</div>

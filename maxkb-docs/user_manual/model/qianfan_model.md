@@ -4,7 +4,6 @@ title: 对接百度千帆
 
 ## 1 添加模型
 
-:::note
 
 添加千帆大模型之前，需要先在 [百度智能云千帆大模型平台](https://qianfan.cloud.baidu.com/) 中进行注册并登录。在控制台中的【安全认证】中创建 API Key 和 Secret Key 等信息。
 
@@ -18,27 +17,28 @@ title: 对接百度千帆
 * API Version： API 接口版本，v1/v2。
 * API URL： API Version 为 v2时的输入参数，请输入`https://qianfan.baidubce.com/v2`。
 * API Key 和 Secret Key： API Version 为 v1 时的输入参数， 即千帆大模型中应用的 API Key 和 Secret Key。
-:::
 
-![百度应用](/img/maxkb/model/qianfan_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_app.png" alt="图 1  百度应用" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  百度应用</div>
 
 ## 2 配置样例
 
-:::note
 
 千帆大模型 v2-大语言模型配置样例图示：
-:::
 
-<img alt="千帆大模型" src="/img/maxkb/model/qianfan_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_llm.png" alt="图 2  千帆大模型 v2 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  千帆大模型 v2 大语言模型 配置样例图</div>
+
 
 千帆大模型 v2-向量模型配置样例图示：
-:::
-<img alt="千帆大模型" src="/img/maxkb/model/qianfan_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_embedding.png" alt="图 3  千帆大模型 v2 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  千帆大模型 v2 向量模型 配置样例图</div>
+
 
 千帆大模型-重排模型配置样例图示：
-:::
-<img alt="千帆大模型" src="/img/maxkb/model/qianfan_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_reranker.png" alt="图 4  千帆大模型 重排模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  千帆大模型 重排模型 配置样例图</div>

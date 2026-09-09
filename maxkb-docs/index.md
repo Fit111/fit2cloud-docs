@@ -2,22 +2,23 @@
 title: 产品介绍
 ---
 
-:::note
 
 MaxKB = Max Knowledge Brain，是一款强大易用的企业级智能体平台，致力于解决企业 AI 落地面临的技术门槛高、部署成本高、迭代周期长等问题，助力企业在人工智能时代赢得先机。
 
 秉承“开箱即用，伴随成长”的设计理念，MaxKB支持企业快速接入主流大模型，高效构建专属知识库，并且提供从基础知识问答（RAG）、复杂业务流程自动化（Workflow，工作流）到智能体（Agent）的渐进式升级路径，有效赋能智能客服、智慧办公等多种应用场景。
-:::
     
-![产品理念](/img/maxkb/index/%E4%BA%A7%E5%93%81%E7%90%86%E5%BF%B5.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/%E4%BA%A7%E5%93%81%E7%90%86%E5%BF%B5.png" alt="图 1  产品理念" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  产品理念</div>
 
 ## 1 工作原理
 
-![概览](/img/maxkb/index/%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="图 2  概览" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  概览</div>
 
 ## 2 产品优势 
 
-:::note
 
 - **RAG 检索增强**      
   支持直接上传文档 / 自动爬取在线文档，支持文本自动拆分、向量化和 RAG（检索增强生成），有效减少大模型幻觉，智能问答交互体验好；   
@@ -30,15 +31,15 @@ MaxKB = Max Knowledge Brain，是一款强大易用的企业级智能体平台�
 
 - **模型中立**     
   支持对接各种大模型，包括本地私有大模型（Llama 3 / Qwen 2 等）、国内公共大模型（DeepSeek / SILICONFLOW / 通义千问 / 腾讯混元 / 字节豆包 / 百度千帆 / 智谱 AI / Kimi 等）和国外公共大模型（OpenAI / Azure OpenAI / Anthropic / Gemini 等）。
-:::
 
 ## 3 界面展示
 
-![页面](/img/maxkb/index/index1.gif)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/index1.gif" alt="图 3  页面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  页面</div>
 
 ## 4 案例展示
 
-:::note
 
 MaxKB 自发布以来，日均安装下载超过 1000 次，被广泛应用于智能客服、企业内部知识库、学术研究与教育等场景，典型应用案例详情见如下链接：
 
@@ -83,15 +84,16 @@ MaxKB 自发布以来，日均安装下载超过 1000 次，被广泛应用于�
 - [MaxKB 应用案例：建筑材料工业信息中心完成DeepSeek本地化部署，推动行业数智化转型新发展](https://mp.weixin.qq.com/s/HThGSnND3qDF8ySEqiM4jw)
 - [MaxKB 应用案例：一起DeepSeek！福建设计以AI大模型开启新篇章](https://mp.weixin.qq.com/s/m67e-H7iQBg3d24NM82UjA)
 - [MaxKB 应用案例：郑州海关上线 AI 审单智能体](https://dzb.henandaily.cn/html5/2025-07/25/content_10_1749478.htm?curr=)
-:::
     
 
 ## 5 了解更多
 
-:::note
 
 - [如何向团队介绍 MaxKB](https://fit2cloud.com/maxkb/download/introduce-maxkb_202507.pdf)
 - [飞致云培训认证中心](https://edu.fit2cloud.com/index) 
 - [MaxKB 小课堂](https://space.bilibili.com/510493147/lists/3590204?type=season)
 - [MaxKB 知识库](https://kb.fit2cloud.com/categories/maxkb)
-:::
+
+
+
+

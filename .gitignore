@@ -23,3 +23,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local build verification artifacts (added 2026-09-09)
+/build-verify-*/
+build_check.log
+build_final.log
+en_build_check.log
