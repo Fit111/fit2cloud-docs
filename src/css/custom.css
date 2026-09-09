@@ -17,6 +17,9 @@
   --ifm-background-color: #ffffff; /* 文档页保持白色底 */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* 代码块统一黑底 + 彩色语法高亮(与 bash 一致), 具体见下方代码块样式段 */
+  --prism-background-color: #000000;
+  --prism-color: #e6e6e6;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -433,78 +436,42 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-/* ===== 指令 / 配置代码块: 黑色背景 =====
-   bash 以及未标明语言的 ```（language-text）等指令块统一黑底。
-   DataEase 文档里其余语言代码块同样黑底，避免 SQL/配置混排深浅不一。 */
-[class*="language-bash"],
-[class*="language-sh"],
-[class*="language-shell"],
-[class*="language-console"],
-[class*="language-text"],
-[class*="language-plaintext"],
-[class*="language-ini"],
-[class*="language-properties"],
-html[data-docs-product='dataease'] [class*="language-"],
-html[data-docs-product='dataease'] .theme-code-block {
+/* ===== 代码块: 黑色背景 + 彩色语法高亮 =====
+   所有 ``` 代码块统一为黑底、浅色文字, 语法高亮用亮色, 保证黑底可读。
+   (与 bash 语言代码块的样式一致, 泛化到所有语言) */
+[class*="language-"] {
   background-color: #000000 !important;
   color: #e6e6e6 !important;
 }
-[class*="language-bash"] .token,
-[class*="language-sh"] .token,
-[class*="language-shell"] .token,
-[class*="language-console"] .token,
-[class*="language-text"] .token,
-[class*="language-plaintext"] .token,
-[class*="language-ini"] .token,
-[class*="language-properties"] .token,
-html[data-docs-product='dataease'] .token {
+[class*="language-"] .token {
   color: #e6e6e6;
 }
-[class*="language-bash"] .token.comment,
-[class*="language-sh"] .token.comment,
-[class*="language-shell"] .token.comment,
-[class*="language-console"] .token.comment,
-[class*="language-text"] .token.comment,
-[class*="language-plaintext"] .token.comment,
-[class*="language-ini"] .token.comment,
-[class*="language-properties"] .token.comment,
-html[data-docs-product='dataease'] .token.comment,
-html[data-docs-product='dataease'] .token.prolog,
-html[data-docs-product='dataease'] .token.doctype,
-html[data-docs-product='dataease'] .token.cdata {
-  color: #8a8a8a;
+[class*="language-"] .token.comment,
+[class*="language-"] .token.prolog,
+[class*="language-"] .token.doctype,
+[class*="language-"] .token.cdata {
+  color: #8a8a8a; /* 注释灰 */
 }
-[class*="language-bash"] .token.keyword,
-[class*="language-sh"] .token.keyword,
-[class*="language-shell"] .token.keyword,
-[class*="language-console"] .token.keyword,
-[class*="language-ini"] .token.keyword,
-html[data-docs-product='dataease'] .token.keyword,
-html[data-docs-product='dataease'] .token.boolean,
-html[data-docs-product='dataease'] .token.constant,
-html[data-docs-product='dataease'] .token.operator,
-html[data-docs-product='dataease'] .token.punctuation,
-html[data-docs-product='dataease'] .token.tag,
-html[data-docs-product='dataease'] .token.selector {
-  color: #ff79c6;
+[class*="language-"] .token.keyword,
+[class*="language-"] .token.boolean,
+[class*="language-"] .token.constant,
+[class*="language-"] .token.operator,
+[class*="language-"] .token.punctuation,
+[class*="language-"] .token.tag,
+[class*="language-"] .token.selector {
+  color: #ff79c6; /* 亮粉(关键字/运算符) */
 }
-[class*="language-bash"] .token.string,
-[class*="language-sh"] .token.string,
-[class*="language-shell"] .token.string,
-[class*="language-ini"] .token.string,
-html[data-docs-product='dataease'] .token.string,
-html[data-docs-product='dataease'] .token.char,
-html[data-docs-product='dataease'] .token.attr-value,
-html[data-docs-product='dataease'] .token.regex {
-  color: #50fa7b;
+[class*="language-"] .token.string,
+[class*="language-"] .token.char,
+[class*="language-"] .token.attr-value,
+[class*="language-"] .token.regex {
+  color: #50fa7b; /* 亮绿(字符串) */
 }
-[class*="language-bash"] .token.function,
-[class*="language-sh"] .token.function,
-html[data-docs-product='dataease'] .token.function,
-html[data-docs-product='dataease'] .token.attr-name,
-html[data-docs-product='dataease'] .token.property,
-html[data-docs-product='dataease'] .token.number {
-  color: #82aaff;
+[class*="language-"] .token.function,
+[class*="language-"] .token.attr-name,
+[class*="language-"] .token.property,
+[class*="language-"] .token.number {
+  color: #82aaff; /* 亮蓝(函数/数字) */
 }
 
 /* ===== 顶部导航栏文字字体参考 docs.halo.run「开发者指南」=====
@@ -552,9 +519,10 @@ html[data-docs-product='dataease'] .token.number {
    说明: 首页 Hero 自带浅蓝渐变背景, 白色悬浮卡会自然浮在浅蓝之上, 与设计稿一致。 */
 /* Infima 的 .navbar--fixed-top 是 left:0;right:0 满宽 fixed。
    用 margin auto 居中 + 限宽, 不能用 left:50%+translateX(会与 right:0 冲突导致错位) */
-/* 导航栏滚动行为(配合 src/clientModules/navbarSticky.js):
-   - 默认(页面未滚动, html 无 .navbar-scrolled): 顶部留 12px margin 悬浮下移;
-   - 滚动后(html.navbar-scrolled): top:0、顶部 margin 归零, 贴到视口最顶。 */
+/* 导航栏固定悬浮在页面顶部、始终停留原位, 不随滚动隐藏。
+   .navbar-gap 遮挡层(见下方「导航栏空隙遮挡」)以导航栏元素本身为界, 盖住滚动时从
+   悬浮卡上方及左右两侧空隙透出的主体内容, 内容一接触到导航栏即被隐藏。
+   这里仅负责导航栏悬浮卡的静态样式。 */
 .navbar {
   top: 12px;
   right: 0;
@@ -569,12 +537,48 @@ html[data-docs-product='dataease'] .token.number {
   background-color: #ffffff !important;
   border: 1px solid rgba(228, 232, 240, 0.9);
 }
-html.navbar-scrolled .navbar {
-  top: 0;
-  margin-top: 0;
-}
 .navbar__inner {
   max-width: 100%;
+}
+
+/* ===== 导航栏空隙遮挡(全局) =====
+   导航栏是限宽悬浮卡, 其上方 + 左右两侧空隙会让主体内容在滚动时透出。
+   .navbar-gap 容器由 src/clientModules/navbarGaps.js 动态注入, 并以导航栏元素
+   (nav[aria-label="主导航"])的实际位置/尺寸为界, 动态对齐三个空白遮挡子元素
+   (top / left / right), 使主体内容一接触到导航栏即被遮挡隐藏:
+     - 背景跟随页面背景色, 视觉融入; z-index 高于正文(auto)、低于导航栏(200);
+     - pointer-events:none 不影响交互。
+   位置/尺寸由 JS 按 nav bounding box 计算, 无需再手动同步数值。 */
+.navbar-gap {
+  position: fixed;
+  inset: 0;
+  z-index: 150;             /* 高于正文(auto)、低于导航栏(200) */
+  pointer-events: none;
+}
+.navbar-gap-top,
+.navbar-gap-left,
+.navbar-gap-right {
+  position: absolute;
+  background: var(--ifm-background-color);
+}
+.navbar-gap-top {
+  left: 0;
+  right: 0;
+}
+.navbar-gap-left,
+.navbar-gap-right {
+  width: 24px;              /* 默认左右空隙宽, 由 JS 实际覆盖 */
+  top: 0;
+}
+.navbar-gap-right {
+  right: 0;
+  left: auto;
+}
+/* 首页 Hero 顶部是 #eaf1ff, 遮挡用同色衔接, 避免露出浅蓝下的内容 */
+body.home-page .navbar-gap-top,
+body.home-page .navbar-gap-left,
+body.home-page .navbar-gap-right {
+  background: #eaf1ff;
 }
 
 /* ===== 首页顶部背景色 =====
@@ -624,14 +628,12 @@ body.home-page {
 .navbar [class*='searchIndex'] kbd {
   display: none !important;
 }
-/* 移动端: 悬浮卡缩小边距, 避免在小屏过于拥挤 */
+/* 移动端: 悬浮卡缩小边距, 避免在小屏过于拥挤.
+   (navbar-gap 遮挡的位置/尺寸由 navbarGaps.js 按 nav 实际尺寸动态计算, 无需在此覆盖) */
 @media (max-width: 996px) {
   .navbar {
     top: 8px;
     width: calc(100% - 24px);
     border-radius: 10px;
-  }
-  html.navbar-scrolled .navbar {
-    top: 0;
   }
 }

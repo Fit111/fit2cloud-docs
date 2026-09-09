@@ -2,33 +2,26 @@
 title: 部署 Elasticsearch 服务
 ---
 
-:::note[提示]
 
 - 此文档以docker方式部署 Elasticsearch 为例，其他安装方式请参考 (https://www.elastic.co/guide/en/elasticsearch/reference/index.html)
-:::
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - Elasticsearch 服务器信息如下: 
 
 ```sh 
 192.168.100.51
 ```
-:::
 
 ## 2  通过 Docker Compose 安装配置 Elasticsearch
 
 ### 2.1 创建 Elasticsearch 数据目录
-:::note
 
 ```sh
 mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 ```
-:::
 ### 2.2 docker-compose 配置
-:::note
 
 ```vim
     进入一个你方便管理的目录（例如/home/ubuntu）
@@ -75,19 +68,15 @@ mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
             soft: -1
             hard: -1
 ```
-:::
 ### 2.4 启动 Elasticsearch 服务
-:::note
 
 ```sh
     # 确保当前目录是docker-compose.yml所在的目录（例如/home/ubuntu）
     cd /home/ubuntu
     docker compose up -d
 ```
-:::
 
 ## 3 在 JumpServer 中配置 Elasticsearch 
-:::note
 
 - 访问 JumpServer Web 页面并使用管理员账号进行登录。
 - 点击左侧菜单栏的 [终端管理]，在页面的上方选择 [存储配置]，在 [命令存储] 下方选择 [创建] 选择 [Elasticsearch]
@@ -102,4 +91,3 @@ mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 | 索引 (Index)    | jumpserver                                          | 索引                   |
 | 忽略证书认证    |                                                     | https 自签 ssl 需要勾选 |
 | 默认       |                                                     | 新组件将自动使用该存储   |
-:::

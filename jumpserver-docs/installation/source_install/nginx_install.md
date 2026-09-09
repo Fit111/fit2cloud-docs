@@ -3,12 +3,10 @@ title: Nginx 环境部署
 ---
 
 ## 1 操作过程
-:::note
 
 - 从 [Nginx][nginx] 官方网站上获取 Nginx 的最新发行版本 [linux_packages][linux_packages]，通过命令行验证安装是否完成：
 
 ### Ubuntu 20.04
-:::
 
 ```bash
 apt-get install -y curl gnupg2 ca-certificates lsb-release ubuntu-keyring

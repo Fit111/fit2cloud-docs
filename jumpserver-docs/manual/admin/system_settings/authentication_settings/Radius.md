@@ -3,27 +3,19 @@ title: Radius (X-Pack)
 ---
 
 ## 1 关于 RADIUS
-:::note[注: RADIUS 认证方式为 JumpServer 企业版功能。]
 
-:::
-:::note
 
 - 通过点击页面右上角小齿轮进入 **系统设置** 页面，点击 **认证设置 &gt; Radius** ，进入 RADIUS 配置页面。
 - **RADIUS（远程身份认证拨入用户服务）** 是一种基于 RADIUS 协议的网络访问控制认证机制，提供身份认证、授权和计费（AAA）功能。JumpServer 支持标准 RADIUS 认证。
-:::
 
 ## 2 配置参数
 
-:::note
 
 - 点击页面右上角的设置按钮
 - 导航到 **系统设置 &gt; 认证设置 &gt; Radius**
-:::
 
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -36,9 +28,7 @@ title: Radius (X-Pack)
 
 启用 RADIUS MFA 后端
 
-:::note
 
 - 按照集成 RADIUS 身份认证指南配置 RADIUS 身份认证。
 - 在 **使用 radius OTP** 字段中，勾选启用 RADIUS 作为 MFA 后端。当用户的 MFA 启用时，他们可以在登录时选择 RADIUS 身份认证类型。
 - 点击 **提交**。
-:::

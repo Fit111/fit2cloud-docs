@@ -8,19 +8,15 @@ title: 参数说明
 :::
 
 ## 1 Core 参数说明
-:::note
 
 - 打开 config.txt 配置文件。
 
 ```sh
 vi /opt/jumpserver/config/config.txt
 ```
-:::
 
-:::note
 
 - Core 参数如下：
-:::
 
 |  参数名称   | 默认值  | 可选项  | 说明  |
 |  :-----  | :-----  |  :-----  | :-----  |

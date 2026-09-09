@@ -4,7 +4,6 @@ title: 数据库 SSL 连接
 
 ## 1 操作过程
 ### 1.1 准备数据库 CA 文件
-:::note
 
 - 准备好数据库 CA 文件, 当前不支持私钥认证。
 
@@ -19,10 +18,8 @@ cp db_ca.pem /opt/jumpserver/config/certs/db_ca.pem
 # . /opt/jumpserver/config/config.txt
 # mysql --ssl-ca=/opt/jumpserver/config/certs/db_ca.pem -h$DB_HOST -P$DB_PORT -U$DB_USER -p$DB_PASSWORD $DB_NAME
 ```
-:::
 
 ### 1.2 编辑配置文件
-:::note
 
 - 打开配置文件。
 
@@ -35,17 +32,14 @@ vi /opt/jumpserver/config/config.txt
 ```vim
 DB_USE_SSL=True
 ```
-:::
     
 ### 1.3 重启 JumpServer 服务
-:::note
 
 ```bash
 cd /opt/jumpserver-installer-v4.10.17
 ./jmsctl.sh down
 ./jmsctl.sh start
 ```
-:::
 
 :::warning[其他方式部署的 JumpServer 请将数据库证书 db_ca.pem 放到 /opt/jumpserver/data/certs 后重启即可]
 

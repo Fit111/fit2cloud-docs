@@ -2,25 +2,20 @@
 title: API 文档
 ---
 
-:::note[提示]
 
 API 文档默认已经集成在代码里面，部署完成后可以通过下面的方式进行访问
-:::
 
 ## 1 API 访问
-:::note
 
 |  Version                 |       Access method      |               example              |
 | ------------------------ | ------------------------ | ---------------------------------- |
 |  ``  | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
-:::
 
 ### 1.2 页面效果
 ![api_swagger](/img/jumpserver/api_swagger.png)
 
 ## 2 API 认证
 
-:::note[JumpServer API 支持的认证有以下几种方式]
 
 ```
 Session         登录后可以直接使用 session_id 作为认证方式
@@ -30,7 +25,6 @@ Access Key      对 Http Header 进行签名
 ```
 
 ### Session
-:::
 
 用户通过页面后登录，cookie 中会存在  jms_sessionid，请求时同样把  jms_sessionid 放到 cookie 中
     ### Token

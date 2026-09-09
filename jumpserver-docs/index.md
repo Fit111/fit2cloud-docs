@@ -33,19 +33,14 @@ title: 产品介绍
 **■** 限制具有用户邀请权限账号的使用范围。
 :::
 
-:::note
 
 [信创合规、开箱即用、全栈优化丨飞致云联合宏时数据发布 Zabbix 信创一体机！](https://fit2cloud.com/zabbix/index.html)
-:::
 ## 1 JumpServer 是什么？
-:::note
 
 JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。JumpServer 帮助企业以更安全的方式管控和登录所有类型的资产，实现事前授权、事中监察、事后审计，满足等保合规要求。
-:::
 
 ![index_02](/img/jumpserver/jumpserver-arch-light.png)
 
-:::note
 
 JumpServer 堡垒机支持的资产类型包括：
 
@@ -57,15 +52,17 @@ JumpServer 堡垒机支持的资产类型包括：
 - 云服务 (Kubernetes / VMware vSphere 等)
 - Web 站点 (各类系统的 Web 管理后台)
 - 应用 (通过 Remote App 连接各类应用)
-:::
 
-:::note[文档指引]
 
-[**产品官网**](https://jumpserver.org/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**安装部署**](installation/setup_linux_standalone/requirements) &emsp;&emsp;&emsp;&emsp;&emsp;  [**在线体验**](https://demo.jumpserver.org/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**企业版试用**](https://jinshuju.net/f/kyOYpi) &emsp;&emsp;&emsp;&emsp;&emsp;  [**社区论坛**](https://bbs.fit2cloud.com/c/js/5) &emsp;&emsp;&emsp;&emsp;&emsp; [**视频教学**](https://www.bilibili.com/video/BV11AsDegEo8/) &emsp;&emsp;&emsp;&emsp;&emsp; [**技术白皮书**](https://whitepaper.jumpserver.org/)
-:::
+- [**产品官网**](https://jumpserver.org/)
+- [**安装部署**](installation/setup_linux_standalone/requirements)  
+- [**在线体验**](https://demo.jumpserver.org/)  
+- [**企业版试用**](https://jinshuju.net/f/kyOYpi)  
+- [**社区论坛**](https://bbs.fit2cloud.com/c/js/5) 
+- [**视频教学**](https://www.bilibili.com/video/BV11AsDegEo8/) 
+- [**技术白皮书**](https://whitepaper.jumpserver.org/)
 
 ## 2 产品特色
-:::note
 
 JumpServer 的产品特色包括：
 
@@ -76,36 +73,27 @@ JumpServer 的产品特色包括：
 - 云端存储：审计录像云端存储，永不丢失；
 - 多租户：一套系统，多个子公司和部门同时使用；
 - 多应用支持：数据库，Windows 远程应用，Kubernetes。
-:::
 
 ## 3 页面展示
 ![界面展示](/img/jumpserver/dashboard.png)
 
 ## 4 应用商店
-:::note
 
 JumpServer 的远程应用功能，社区版默认支持 Chrome、DBeaver 应用，企业版支持更丰富的远程应用，可点击 [应用商店](https://apps.fit2cloud.com/jumpserver) 来获取更多远程应用。
-:::
 
 ## 5 安全说明
-:::note
 
 - JumpServer 是一款安全产品，请遵循 [基本安全建议](faq/security) 进行安装部署
 - 如果你发现安全问题，可以直接联系我们：support@fit2cloud.com
-:::
 
 ## 6 商业产品
-:::note
 
 - [JumpServer 企业版](https://jumpserver.org/enterprise.html)
 - [JumpServer 一体机](https://jumpserver.org/hardware.html)
-:::
 
 ## 7 了解更多
-:::note
 
 - [如何向团队介绍 JumpServer？](https://www.fit2cloud.com/jumpserver/documents/introduce-jumpserver_2026.pdf)
 - [JumpServer 技术白皮书](https://whitepaper.jumpserver.org/)
 - [JumpServer 知识库](https://kb.fit2cloud.com/categories/jumpserver)
 - [教学视频](https://space.bilibili.com/510493147?spm_id_from=333.337.0.0)
-:::

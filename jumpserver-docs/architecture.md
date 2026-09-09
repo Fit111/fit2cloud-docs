@@ -3,15 +3,12 @@ title: 系统架构
 ---
 
 ## 1 应用架构
-:::note
 
 - JumpServer 采用分层架构，分别是负载层、接入层、核心层、数据层、存储层。
 - JumpServer 应用架构图如下：
-:::
 ![architecture_01](/img/jumpserver/architecture_01.png)
 
 ## 2 组件说明
-:::note
 
 - Core 组件是 JumpServer 的核心组件，其他组件依赖此组件启动。
 - Koko 是服务于类 Unix 资产平台的组件，通过 SSH、Telnet 协议提供字符型连接。
@@ -24,10 +21,7 @@ title: 系统架构
 - Celery 是处理异步任务的组件，用于执行 JumpServer 相关的自动化任务。
 - Video 是专门处理 Razor 组件和 Lion 组件产生录像的格式转换工作，将产生的会话录像转化为 MP4 格式。
 - Panda 是基于国产操作系统的应用发布机，用于调度 Virtualapp 应用。
-:::
     
 
 ## 3 逻辑架构
-:::note[详见 [源码部署](installation/source_install/requirements)]
 
-:::

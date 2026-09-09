@@ -4,36 +4,29 @@ title: 部署 NFS 服务
 
 ## 1 NFS 服务器端安装与配置
 ### 1.1 环境信息
-:::note
 
 - NFS 服务器信息如下: 
 
 ```sh
 192.168.100.11
 ```
-:::
 
 ### 1.2 安装 NFS 服务器软件
-:::note
 
 ```sh
 sudo apt update
 sudo apt install nfs-kernel-server -y
 ```
-:::
 
 ### 1.4 启动 NFS
-:::note
 
 ```sh
 sudo systemctl enable nfs-kernel-server
 sudo systemctl start nfs-kernel-server
 sudo systemctl status nfs-kernel-server
 ```
-:::
 
 ### 1.5 配置防火墙
-:::note
 
 ```sh
 sudo ufw allow nfs
@@ -41,10 +34,8 @@ sudo ufw allow mountd
 sudo ufw allow rpc-bind
 sudo ufw status
 ```
-:::
 
 ### 1.6 配置 NFS
-:::note
 
 ```sh
 mkdir /data
@@ -57,12 +48,9 @@ vi /etc/exports
 # 也可以写具体的授权对象 /data 192.168.100.30(rw,sync,no_root_squash) 192.168.100.31(rw,sync,no_root_squash)
 /data 192.168.100.*(rw,sync,all_squash,anonuid=0,anongid=0)
 ```
-:::
     
 ### 1.7 让 exports 配置生效
-:::note
 
 ```sh
 sudo exportfs -ra
 ```
-:::

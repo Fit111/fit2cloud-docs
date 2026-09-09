@@ -2,15 +2,12 @@
 title: 人脸识别 (X-Pack)
 ---
 
-:::note[注: 人脸识别为功能为旗舰版功能。]
 
-:::
 &gt; 1. 版本：v4.6.0 及以上 <br />
 &gt; 2. 旗舰版许可证 5000 个以上的资产 <br />
 &gt; 3. 启用 HTTPS 访问
 
 ## 1 配置 Faclive
-:::note
 
 **新增参数**
 ```sh
@@ -24,45 +21,32 @@ FACELIVE_ENABLED=1
 ```sh
 jmsctl restart
 ```
-:::
 
 ## 2 配置 MFA 人脸识别
-:::note
 
 - 在用户详细信息页面记录面部信息并启用 MFA。
-:::
 
 ![image.png](/img/jumpserver/Facelive1.png)
 
-:::note
 
 - 退出登录并尝试重新登录，选择人脸验证。
-:::
 ![image.png](/img/jumpserver/Facelive2.png)
 
-:::note
 
 - 请在30秒内完成面部验证。
-:::
 ![image.png](/img/jumpserver/Facelive3.png)
 
 ## 3 资产连接面部认证与监控
-:::note
 
 - 在 **控制台 &gt; 访问控制 &gt; 资产连接** 中启用**人脸验证**。操作可以是 **人脸验证** 或 **人脸在线** 。
-:::
 ![image.png](/img/jumpserver/Facelive4.png)
 
-:::note
 
 - 连接到资产前需要进行人脸验证。
-:::
 ![image.png](/img/jumpserver/Facelive5.png)
 
-:::note
 
 - 如果面部识别未检测到用户，会暂停会话。
 - 暂停会话期间将无法进行对资产的任何操作。
-:::
 ![image.png](/img/jumpserver/Facelive6.png)
     
