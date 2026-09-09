@@ -4,7 +4,6 @@ title: 智能问数
 
 ## 1 功能概述
 
-:::tip
 
 **智能问数是 SQLBot 的核心功能模块，支持用户通过自然语言与大模型对话，自动生成图表展示和分析结果。**   
 提供如下核心能力：
@@ -19,22 +18,20 @@ title: 智能问数
 
 **使用前提：需先完成 [AI 模型配置](../system/model)，并添加至少一个可用[数据源](./datasource_description)可发起问数操作。**
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/chat_index.png)
+<img src="/img/sqlbot/user_manual/chat/chat_index.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 智能问数主页</div>
 
 ## 2 创建与管理对话
     
 ### 2.1 创建对话
 
-:::tip
 
 点击【序号 1】 、【序号 2】位置新建对话。
 
-:::
-![智能问数管理页面](/img/sqlbot/user_manual/chat/creat_chat.png)
+<img src="/img/sqlbot/user_manual/chat/creat_chat.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 新建对话</div>
 
-:::tip
 
 新建对话步骤：
 
@@ -42,29 +39,26 @@ title: 智能问数
 - 选择一个数据源；
 - 点击【确认】，进入下一步。
 
-:::
-![智能问数管理页面](/img/sqlbot/user_manual/chat/create_chat_choes_data.png)
+<img src="/img/sqlbot/user_manual/chat/create_chat_choes_data.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 选择数据源</div>
 
 #### 2.1.1 快捷提问
 
-:::tip
 
 系统将基于当前所选数据源的结构、字段信息，以及用户历史的问数行为，自动生成推荐问题。用户可直接点击推荐问题，一键发起问数操作，快速获得分析结果。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/recommend_questions.png)
+<img src="/img/sqlbot/user_manual/chat/recommend_questions.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 推荐问题</div>
 
-:::tip
 
 在每轮提问完成后，系统还会根据上下文内容生成【追加提问建议】，帮助用户持续追问、挖掘更深层的数据洞察
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/related_issues.png)
+<img src="/img/sqlbot/user_manual/chat/related_issues.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 追加提问建议</div>
 
 #### 2.1.2 手动提问
-:::tip
 
 支持用户直接输入业务问题，系统将自动解析语义、识别字段，并返回图表与 SQL 查询结果。支持多轮连续提问。  
 示例提问：
@@ -73,12 +67,11 @@ title: 智能问数
 - “哪个渠道的转化率最高？”
 - “相比上周增长最快的部门是哪个？”
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/manual_question.png)
+<img src="/img/sqlbot/user_manual/chat/manual_question.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 手动提问</div>
 
 ### 2.2 历史对话
-:::tip
 
 左侧对话栏展示用户全部历史提问记录。支持以下操作：
 
@@ -86,80 +79,77 @@ title: 智能问数
 - 修改对话标题；
 - 删除不再需要的对话记录；
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/chat_opt.png)
+<img src="/img/sqlbot/user_manual/chat/chat_opt.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 历史对话操作</div>
 
-:::tip
 
 点击任意历史对话卡片，可回溯原始问答内容、图表与 SQL。支持基于历史对话继续追问，延续上下文分析链路。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/history_chat.png)
+<img src="/img/sqlbot/user_manual/chat/history_chat.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 历史对话详情</div>
 
 ## 3 图表操作与分析
 ### 3.1 图表类型切换
-:::tip
 
 系统会根据提问内容自动生成适配图表类型。用户也可根据分析需求切换为柱状图、折线图、表格、饼图等。
 
 **注意**：可选图表类型取决于当前数据结构。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/switch_chart.png)
+<img src="/img/sqlbot/user_manual/chat/switch_chart.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 9 切换图表类型</div>
 
-:::tip
 
 所有图表支持如下操作：
 
 - **放大查看**：查看高清图表；
 - **导出图片**：支持导出 PNG 图片，用于汇报与分享.
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/export_img.png)
+<img src="/img/sqlbot/user_manual/chat/export_img.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 10 导出图表图片</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/enlarge_image.png)
+<img src="/img/sqlbot/user_manual/chat/enlarge_image.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 11 放大查看图表</div>
 
 ### 3.2 查看明细数据
-:::tip
 
 点击图表右上方的【查看明细数据】，可查看数据表格，并支持导出为 Excel 文件，便于离线分析或共享。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/view_details.png)
+<img src="/img/sqlbot/user_manual/chat/view_details.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 12 查看明细数据</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/export_excel.png)
+<img src="/img/sqlbot/user_manual/chat/export_excel.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 13 导出明细为 Excel</div>
 
 ### 3.3 查看 SQL
-:::tip
 
 系统每次问数自动生成底层 SQL 查询语句，点击图表右上角【查看 SQL】可查看、复制 SQL，用于验证逻辑或做进一步分析。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/view_sql.png)
+<img src="/img/sqlbot/user_manual/chat/view_sql.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 14 查看 SQL</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/sql_details.png)
+<img src="/img/sqlbot/user_manual/chat/sql_details.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 15 SQL 查询语句</div>
 
 ### 3.4 数据分析
-:::tip
 
 点击图表的【数据分析】按钮，系统将基于当前图表数据，调用大模型自动进行趋势分析与业务解读。
 
 系统向大模型发送分析请求，模型返回详细的分析过程与结论，包括关键趋势描述、变化原因推测、可能的业务含义等。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/data_analysis.png)
+<img src="/img/sqlbot/user_manual/chat/data_analysis.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 16 数据分析</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/data_analysis_result.png)
+<img src="/img/sqlbot/user_manual/chat/data_analysis_result.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 17 数据分析结果</div>
 
 ### 3.4 数据预测
-:::tip
 
 点击图表的【数据预测】按钮，系统将基于当前图表中的时间序列数据（如月份、季度等），自动识别趋势并预测未来的关键指标值。
 
@@ -170,19 +160,20 @@ title: 智能问数
 - 输出未来一段时间的预测值及预测逻辑说明；
 - 保留原始数据结构，方便接入下游分析流程。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/data_prediction.png)
+<img src="/img/sqlbot/user_manual/chat/data_prediction.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 18 数据预测</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/data_prediction_result.png)
+<img src="/img/sqlbot/user_manual/chat/data_prediction_result.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 19 数据预测结果</div>
 
 ### 3.5 执行详情
-:::tip
 
 点击图表的【执行详情】按钮，查看本次问数背后的完整执行过程，耗时与消耗 Tokens，便于排查问题和复现结果。
 
-:::
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/execution_details.png)
+<img src="/img/sqlbot/user_manual/chat/execution_details.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 20 执行详情</div>
 
-![智能问数管理页面](/img/sqlbot/user_manual/chat/execution_details_page.png)
+<img src="/img/sqlbot/user_manual/chat/execution_details_page.png" alt="智能问数管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 21 执行详情页</div>

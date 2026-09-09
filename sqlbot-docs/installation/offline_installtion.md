@@ -4,7 +4,6 @@ title: 离线安装
 
 ## 1 环境要求
 
-:::tip
 
 部署服务器要求：
 
@@ -14,25 +13,22 @@ title: 离线安装
 
 提示：Docker 版本太老可能会导致安装失败，建议使用安装包内的 Docker，或者使用 v23.0.5 版本及以上的 Docker。
 
-:::
 
 ## 2 下载离线安装包
 
-:::tip
 
 打开[**飞致云开源社区 SQLBot 社区版下载**](https://community.fit2cloud.com/#/products/sqlbot/downloads) 页面下载最新版本安装包，并上传至部署服务器（以 v1.0.0 为例说明安装部署过程）。
 
 社区版不提供 arm 架构安装包，需要在 arm 架构下安装，以可通过[**在线安装**](./online_installtion)方式安装。
 
-:::
 
 ## 3 端口要求
 
-:::tip
 
 离线部署 SQLBot 需要开通的访问端口说明如下：
 
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 离线部署端口要求</div>
 
 | 端口   | 作用       | 说明                        |
 |------|:---------|:--------------------------|
@@ -44,18 +40,15 @@ title: 离线安装
 
 ### 4.1 解压安装包
 
-:::tip
 
 以 root 用户通过 ssh 协议登录到部署服务器, 对安装包进行解压：
 ```
 tar -zxvf sqlbot-v1.0.0-x86_64-offline-installer.tar.gz
 ```
 
-:::
 
 ### 4.2 设置安装参数（可选）
 
-:::tip
 
 SQLBot 安装目录、服务运行端口、数据库配置等信息可在安装包解压后中的 install.conf 文件进行配置。
 
@@ -96,11 +89,9 @@ SQLBOT_CACHE_TYPE="memory"
 SQLBOT_SERVER_IMAGE_HOST=http://YOUR_SERVER_IP:MCP_PORT/images/
 ```
 
-:::
 
 ### 4.3 执行安装脚本
 
-:::tip
 
 ```
 # 进入安装包解压缩后目录  
@@ -110,11 +101,9 @@ cd sqlbot-v1.0.0-x86_64-offline-installer
 bash install.sh
 ```
 
-:::
 
 ## 5 登录访问
 
-:::tip
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8000`，并使用默认的管理员用户和密码登录 SQLBot。
 
@@ -124,5 +113,5 @@ bash install.sh
 默认密码：SQLBot@123456
 ```
 
-:::
-![访问SQLBot](/img/sqlbot/installation/login_sqlbot.png)
+<img src="/img/sqlbot/installation/login_sqlbot.png" alt="访问SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 访问 SQLBot</div>

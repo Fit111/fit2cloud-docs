@@ -4,24 +4,21 @@ title: 1Panel 安装
 
 ## 1 安装 1Panel
 
-:::tip
 
 关于 1Panel 的安装部署与基础功能介绍，请参考 [**1Panel 文档**](/1panel/) 。完成 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，界面如下。
 
-:::
 
-![1panel](/img/sqlbot/installation/1panel_index.png)
+<img src="/img/sqlbot/installation/1panel_index.png" alt="1panel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 1Panel</div>
 
 ## 2 安装 SQLBot
 
-:::tip
 
 安装好 PostgreSQL 后，进入应用商店应用列表，找到 SQLBot 应用进行安装。
 
-:::
-![安装SQLBot](/img/sqlbot/installation/1p_install_sqlbot.png)
+<img src="/img/sqlbot/installation/1p_install_sqlbot.png" alt="安装SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 安装 SQLBot</div>
 
-:::tip
 
 在应用详情页选择最新的 SQLBot 版本进行安装，进行相关参数设置。
 
@@ -32,20 +29,18 @@ title: 1Panel 安装
 * 图片服务器地址：**`http://xx.xx.xx.xxx:8001/images/**`
 * 端口外部访问：SQLBot 应用可以使用 IP:PORT 进行访问（SQLBot 应用必须打开外部端口访问）。
 
-:::
 
-![SQLBot参数设置](/img/sqlbot/installation/sqlbot_info.png)
+<img src="/img/sqlbot/installation/sqlbot_info.png" alt="SQLBot参数设置" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 SQLBot 参数设置</div>
 
-:::tip
 
 点击开始安装后，页面自动跳转到已安装应用列表，等待安装的 SQLBot 应用状态变为已启动。
 
-:::
 
-![SQLBot安装状态](/img/sqlbot/installation/sqlbot_success.png)
+<img src="/img/sqlbot/installation/sqlbot_success.png" alt="SQLBot安装状态" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 SQLBot 安装状态</div>
 ## 3 访问 SQLBot
 
-:::tip
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8000`，并使用默认的管理员用户和密码登录 SQLBot。
 
@@ -55,6 +50,6 @@ title: 1Panel 安装
 密码: SQLBot@123456
 ```
 
-:::
 
-![访问SQLBot](/img/sqlbot/installation/login_sqlbot.png)
+<img src="/img/sqlbot/installation/login_sqlbot.png" alt="访问SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 访问 SQLBot</div>

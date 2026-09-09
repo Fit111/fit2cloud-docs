@@ -2,7 +2,6 @@
 title: 术语配置
 ---
 
-:::tip
 
 术语配置用于统一管理业务领域内的专有名词或高频用语，提升 SQLBot 智能问数的准确性与可理解度。管理员可在系统中添加、编辑和维护术语，包含以下要素：
 
@@ -12,17 +11,16 @@ title: 术语配置
 
 - 同义词：可添加多个同义词或常用别称，便于用户用不同的表达方式提问时仍能准确匹配到同一概念。
 
-:::
 
-:::tip
 
 进入术语配置页面：在系统导航栏点击【设置】>【术语配置】。
 
 点击【新增术语】按钮，输入术语名称、描述和同义词进行新建术语。填写完成后点击【保存】。系统会自动更新语义匹配规则，新的术语即时生效。
 
-:::
 
-![规则组](/img/sqlbot/user_manual/setting/professional.png)
+<img src="/img/sqlbot/user_manual/setting/professional.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 术语配置页面</div>
 
-![规则组](/img/sqlbot/user_manual/setting/add_professional.png)
+<img src="/img/sqlbot/user_manual/setting/add_professional.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加术语</div>
 

@@ -2,15 +2,12 @@
 title: Ollama 部署模型接入 SQLBot
 ---
 
-:::tip
 
 本文以阿里云新加坡区操作系统为 Ubuntu 22.04 的 ECS 实例为例，演示 Ollama 安装及其与 SQLBot 对接。
 
-:::
 
 ## 1 安装 Ollama
 
-:::tip
 
 执行以下命令安装 Ollama：
 ```shell
@@ -33,11 +30,9 @@ Created symlink /etc/systemd/system/default.target.wants/ollama.service → /etc
 >>> NVIDIA GPU installed.
 ```
 
-:::
 
 ## 2 修改 Ollama配置
 
-:::tip
 
 修改文件 ollama.service，让 Ollama 访问可被外部访问
 ```shell
@@ -70,24 +65,20 @@ Environment="OLLAMA_ORIGINS=*
 WantedBy=default.target
 ```
 
-:::
 
 ## 3 重启 Ollama 服务
 
-:::tip
 
 执行命令重启 Ollama:
 ```shell
 systemctl daemon-reload;service ollama restart
 ```
 
-:::
 
 ## 4 安装运行大模型
 
 ### 4.1 安装 Qwen3 模型（兼容 OpenAI）
 
-:::tip
 
 此处以 qwen3-14b 为例，执行以下命令安装大模型：
 ```shell
@@ -109,11 +100,9 @@ success
 >>> Send a message (/? for help)
 ```
 
-:::
 
 ### 4.2 安装 DeepSeek R1 模型（不兼容 OpenAI）
 
-:::tip
 
 ```shell
 ollama run deepseek-r1:8b
@@ -133,11 +122,9 @@ writing manifest
 success
 ```
 
-:::
 
 ## 5 确认 Ollama 服务状态
 
-:::tip
 
 在 SQLBot 服务器上访问 Ollama 服务，确认网络是通的：
 ```shell
@@ -145,19 +132,15 @@ root@iZt4n4e3wmu6ddsc0hb3wbZ:~#nc -zv 47.237.135.165 11434
 Connection to 47.237.135.165 port 11434 [tcp/*] succeeded!
 ```
 
-:::
 
 ## 6 安装 OpenWebUI（可选）
 
-:::tip
 
 OpenWebUI 可在 web 界面上与大模型进行交互，非必需。
 
-:::
 
 ### 6.1 安装 docker
 
-:::tip
 
 在服务器上安装 Docker，本文使用 DataEase 项目组编写安装脚本进行安装，用户可自行选择如何安装 Docker。
 ```shell
@@ -167,11 +150,9 @@ curl -fsSL https://resource.fit2cloud.com/get-docker-linux.sh | bash
 systemctl enable docker; systemctl daemon-reload; service docker start
 ```
 
-:::
 
 ### 6.2 安装 OpenWebUI
 
-:::tip
 
 按官方示例，以 docker 直接启动 OpenWebUI，它会自动关联本地 Ollama。
 ```shell
@@ -186,22 +167,20 @@ ba913b54d026   ghcr.io/open-webui/open-webui:main   "bash start.sh"   10 minutes
 ```
 
 启动完成后，可在浏览器上通过 IP:3000来访问，如下图所示：
-![openwebui](/img/sqlbot/model_integration/openwebui.png)
+<img src="/img/sqlbot/model_integration/openwebui.png" alt="openwebui" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 OpenWebUI 访问页面</div>
 
-:::
 
 ## 7 安装配置 One API
 
-:::tip
 
 若部署的是 DeepSeek 模型，在对接 SQLBot 时需要 One API 将其转换成兼容 OpenAI 接口，否则在使用时则会出现类似下面的错误：
-![deepseek_error](/img/sqlbot/model_integration/deepseek_error.png)
+<img src="/img/sqlbot/model_integration/deepseek_error.png" alt="deepseek_error" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 DeepSeek 接入报错示例</div>
 
-:::
     
 ### 7.1 部署 One API
 
-:::tip
 
 下面以 docker 来运行 One API，此处运行端口设置成了 3001：
 ```shell
@@ -210,69 +189,63 @@ mkdir -p /oneapi/data
 docker run --name one-api -d --restart always -p 3001:3000 -e TZ=Asia/Shanghai -v /oneapi/data:/data justsong/one-api
 ```
 
-:::
 
 ### 7.2 配置 One API
 
 #### 7.2.1 添加渠道
 
-:::tip
 
 在浏览器输入 IP:3001 访问 One API。  
 先添加一个 DeepSeek 的渠道，注意「模型」输入 Ollama 中 DeepSeek 的模型名称，代理输入 Ollama 的访问地址。
-![oneapi_channel](/img/sqlbot/model_integration/oneapi_channel.png)
+<img src="/img/sqlbot/model_integration/oneapi_channel.png" alt="oneapi_channel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加 DeepSeek 渠道</div>
 
-:::
 
 #### 7.2.2 验证渠道
 
-:::tip
 
 添加渠道后，可以点击「测试」验证是否正常工作t
-![oneapi_validate](/img/sqlbot/model_integration/oneapi_validate.png)
+<img src="/img/sqlbot/model_integration/oneapi_validate.png" alt="oneapi_validate" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 测试渠道连通性</div>
 
-:::
 
 #### 7.2.3 创建令牌
 
-:::tip
 
 此处可以根据自己的实际情况进行相关设置。
-![oneapi_create_token](/img/sqlbot/model_integration/oneapi_create_token.png)
+<img src="/img/sqlbot/model_integration/oneapi_create_token.png" alt="oneapi_create_token" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 创建令牌</div>
 
-:::
 
 #### 7.2.4复制令牌
 
-:::tip
 
-![oneapi_copy_token](/img/sqlbot/model_integration/oneapi_copy_token.png)
+<img src="/img/sqlbot/model_integration/oneapi_copy_token.png" alt="oneapi_copy_token" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 复制令牌</div>
 
-:::
 
 ## 8 接入SQLBot
 
 ### 8.1 接入 Qwen3 模型（兼容 OpenAI）
 
-:::tip
 
 基础模型此处输入之前安装运行的 qwen3:14b。 
 Ollama 默认运行在 11434 端口上，API 域名输入 `http://47.237.135.165:11434/v1`，注意47.237.135.165换成自己实际的 IP 地址。 
 API Key 可以随意填写，保存即可。 
-![ollama](/img/sqlbot/model_integration/ollama_sqlbot.png)
+<img src="/img/sqlbot/model_integration/ollama_sqlbot.png" alt="ollama" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 SQLBot 接入 Ollama 模型</div>
 
-:::
 
 ### 8.2 接入 DeepSeek R1 模型（不兼容 OpenAI）
 
-:::tip
 
 基础模型此处输入之前安装运行的 deepseek-r1:8b。
 由于通过 One API 进行了转换，在 API 域名输入 One API 的服务地址，如 `http://47.236.6.226:3001/v1`，注意47.236.6.226:3001 换成自己实际的 IP 地址和运行端口。
 API Key 填写 One API 的令牌。
-![oneapi](/img/sqlbot/model_integration/oneapi_sqlbot.png)
+<img src="/img/sqlbot/model_integration/oneapi_sqlbot.png" alt="oneapi" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 SQLBot 接入 OneAPI 模型</div>
 
 在 One API 的日志中可以查看大模型的调用情况。
-![oneapi_log](/img/sqlbot/model_integration/oneapi_log.png)
+<img src="/img/sqlbot/model_integration/oneapi_log.png" alt="oneapi_log" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 9 OneAPI 调用日志</div>
 
-:::

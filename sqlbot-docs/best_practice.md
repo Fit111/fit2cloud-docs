@@ -2,7 +2,6 @@
 title: 最佳实践
 ---
 
-:::tip
 
 “智能问数”利用大语言模型（LLM）和自然语言转SQL（Text2SQL）技术，让非技术用户通过自然对话方式获取数据，从而大幅降低数据分析的门槛。然而在实际的应用中，由于模型对特定业务和数据结构的理解存在局限性，大家在使用智能问数系统的过程中经常会遇到问数不准确、答非所问等情况。总结来说，用户在智能问数的过程中经常会遇到的挑战包括：
 
@@ -13,19 +12,16 @@ title: 最佳实践
 
 导致这些问题的根本原因在于，大语言模型虽然掌握了SQL语法，但是缺乏针对特定业务和数据库结构的业务上下文。为了解决这一问题，SQLBot开源智能问数系统（`https://github.com/dataease/SQLBot`）提供了完善的业务上下文配置机制，允许用户将业务逻辑和数据定义注入到让大语言模型能够理解的上下文中，从而生成更加符合用户意图的SQL语句。本教程将为您介绍SQLBot业务上下文的具体配置方法，通过精准问数调优的四个步骤，您可以系统性地提升SQLBot在业务数据查询中的准确性。
 
-:::
 
 ## SQLBot的业务上下文配置能力
 
-:::tip
 
 SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，检索增强生成）的智能问数系统。它利用大语言模型的强大能力，将用户的自然语言问题实时转换为精确的SQL查询语句和可视化图表。其核心目标是让业务人员、运营人员乃至管理层都能在没有SQL基础的情况下，也能够轻松与数据库进行对话，即时获取数据分析的结果。
 
-:::
-![工作原理图](/img/sqlbot/best_practice/arch.png)
-    <div align="center">▲图1 SQLBot的工作原理</div>
+<img src="/img/sqlbot/best_practice/arch.png" alt="工作原理图" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 工作原理图</div>
 
-:::tip
+
 
 为了解决大语言模型“缺乏业务理解能力”的问题，SQLBot提供了一套强大的业务上下文配置能力，主要包括四大核心功能：
 
@@ -34,21 +30,18 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 - 示例SQL：针对业务中高频、复杂的查询，可以预先录入“标准问题”和“标准答案SQL”，供大语言模型来参考学习；
 - 自定义术语：建立业务术语、指标与数据库字段之间的翻译词典，消除大语言模型的歧义理解。
 
-:::
 
 ## SQLBot四步调优：实现高效准确的NL-to-SQL
 
-:::tip
 
 我们选择以Cordys CRM系统为问数对象，需要提前在SQLBot中接入Cordys CRM系统的数据库“cordys-crm”作为数据源，并将这个数据源命名为“CordysCRM”。
 
-:::
-![添加数据源](/img/sqlbot/best_practice/add_ds.png)
-    <div align="center">▲图2 在SQLBot中添加名为“CordysCRM”数据源</div>
+<img src="/img/sqlbot/best_practice/add_ds.png" alt="添加数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加数据源</div>
+
 
 ### 第一步：精简数据源（表管理）
 
-:::tip
 
 提高大语言模型生成SQL语句准确性的第一步，是划分其可用的数据表范围。例如，CordysCRM数据库中有93张表，其中一部分是系统日志表、配置表、任务表等与问数无关的表，如果将这些表也纳入“问数”的范围，不仅无用，还会干扰RAG通道中大模型生成SQL语句的准确率。
 
@@ -62,12 +55,11 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
     表管理的操作原则，仅保留业务分析所需的核心表（例如：线索表、客户表、商机表、用户表）。
 
-:::
 
-![添加表](/img/sqlbot/best_practice/add_tables.png)
-        <div align="center">▲图3 SQLBot数据源中的表管理操作界面</div>
+<img src="/img/sqlbot/best_practice/add_tables.png" alt="添加表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加表</div>
 
-:::tip
+
 
 2. 设置字段别名和描述：数据库中的表名和字段名通常过于技术化，无法适配自然语言的提问内容。这种情况下就需要设置字段别名和描述，让大模型可以更好地理解用户的自然语言提问。接下来将以CordysCRM数据源中的线索表“clue”为例进行说明；
 
@@ -83,13 +75,12 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
         例如，为“线索状态”字段添加描述：“枚举值：FOLLOWING=跟进中，NEW=新建。”
 
-:::
-![添加描述](/img/sqlbot/best_practice/set_desc.png)
-        <div align="center">▲图4 字段别名和描述设置</div>
+<img src="/img/sqlbot/best_practice/set_desc.png" alt="添加描述" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 添加描述</div>
+
 
 ### 第二步：明确表关联逻辑（表关联关系管理）
 
-:::tip
 
 复杂的业务查询往往涉及多张表的联合查询（JOIN）。如果大语言模型不知道正确的表关联关系，就会导致生成的SQL语句关联错误和不准确。SQLBot的表关联关系管理功能可以用于为大语言模型提供跨表查询的明确关联关系。
 
@@ -101,12 +92,11 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
 3. 覆盖所有核心业务关系：确保业务分析可能涉及的所有表都建立了正确的关联关系。
 
-:::
-![表关联](/img/sqlbot/best_practice/add_relations.png)
-    <div align="center">▲图5 表关联关系设置</div>
+<img src="/img/sqlbot/best_practice/add_relations.png" alt="表关联" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 表关联</div>
+
 
 ### 第三步：提供标准示例（示例SQL）
-:::tip
 
 对于具有固定统计口径或者复杂逻辑的业务查询（例如转化率、复杂的同比/环比分析、特定指标的计算），仅依赖大语言模型的泛化能力，难以保证100%的问数准确性。SQLBot提供了示例SQL功能，就是针对复杂或高频问题提供一个标准答案库，供大语言模型进行学习和复用。
 
@@ -168,14 +158,13 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
     ② 示例SQL：粘贴准备好的对应的标准SQL语句。
 
-:::
 
-![SQL示例](/img/sqlbot/best_practice/sql_example.png)
-        <div align="center">▲图6 示例SQL编辑界面</div>
+<img src="/img/sqlbot/best_practice/sql_example.png" alt="SQL示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 SQL 示例</div>
+
 
 ### 第四步：消除指标歧义（自定义术语）
 
-:::tip
 
 业务人员在日常沟通中习惯使用大量缩写或专有术语，这些口语化或业务化的叫法往往与数据库中专业的、甚至由计算表达式定义的字段名称不一致。自定义术语功能，用于建立业务人员的口语叫法与数据库中标准字段或计算表达式之间的映射词典。自定义数据的设置方法如下：
 
@@ -186,17 +175,16 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 - 术语名称：输入“MK/JS/CE/JMS/DE/MS”；
 - 术语描述：用于详细解释术语在数据库的查询逻辑。例如：“如果用户问题中采用了产品简称（MK=MaxKB，CloudExplorer=CE=云管，JS=JMS=JumpServer，DE=DataEase，MS=MeterSphere），在编写SQL时需要将简称转化为产品全称。”
 
-:::
-![术语](/img/sqlbot/best_practice/terminology.png)
-    <div align="center">▲图7 自定义术语编辑界面</div>
+<img src="/img/sqlbot/best_practice/terminology.png" alt="术语" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 术语</div>
+
 
 ## 总结
 
-:::tip
 
 提升SQLBot智能问数的准确性，是一个系统性配置业务上下文的过程。我们在使用SQL开源智能问数系统时，通过表管理、表关联关系管理、示例SQL、自定义术语这四个步骤，可以很好地配置业务上下文，大幅提高大语言模型生成业务查询的SQL语句的准确率。
 
-:::
-![问数结果](/img/sqlbot/best_practice/result.png)
-    <div align="center">▲图8 SQLBot智能问数结果示例</div>
+<img src="/img/sqlbot/best_practice/result.png" alt="问数结果" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 问数结果</div>
+
 

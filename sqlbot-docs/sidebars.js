@@ -255,46 +255,46 @@ const sidebars = {
           ],
           "key": "cat:系统管理"
         },
-        {
-          "type": "category",
-          "label": "X-Pack",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "X-Pack/prompt",
-              "label": "自定义提示词"
-            },
-            {
-              "type": "doc",
-              "id": "X-Pack/identification_setting",
-              "label": "登录认证"
-            },
-            {
-              "type": "doc",
-              "id": "X-Pack/platform_integration",
-              "label": "平台对接"
-            },
-            {
-              "type": "doc",
-              "id": "X-Pack/appearance_configuration",
-              "label": "外观设置"
-            },
-            {
-              "type": "doc",
-              "id": "X-Pack/third-party-platform-settings",
-              "label": "参数配置"
-            },
-            {
-              "type": "doc",
-              "id": "X-Pack/operation_log",
-              "label": "操作日志"
-            }
-          ],
-          "key": "cat:X-Pack"
-        }
       ],
       "key": "cat:功能手册"
+    },
+    {
+      "type": "category",
+      "label": "企业版功能",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "enterprise/prompt",
+          "label": "自定义提示词"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise/identification_setting",
+          "label": "登录认证"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise/platform_integration",
+          "label": "平台对接"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise/appearance_configuration",
+          "label": "外观设置"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise/third-party-platform-settings",
+          "label": "参数配置"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise/operation_log",
+          "label": "操作日志"
+        }
+      ],
+      "key": "cat:企业版功能"
     },
     {
       "type": "category",

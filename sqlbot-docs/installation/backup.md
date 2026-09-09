@@ -2,7 +2,6 @@
 title: 备份还原
 ---
 
-:::tip
 
 SQLBot 的 `sctl` **不提供** backup / restore 命令。升级、迁移前请手动备份；还原须在 **相同版本** 上进行。
 
@@ -16,13 +15,13 @@ grep POSTGRES_SERVER /opt/sqlbot/conf/sqlbot.conf
 - `SQLBOT_EXTERNAL_DB=false` 且 `POSTGRES_SERVER=localhost`：内置库（默认）
 - `SQLBOT_EXTERNAL_DB=true`，或 `POSTGRES_SERVER` 指向其他主机：外置库（含多数 1Panel 场景）
 
-:::
 
 ## 1 需要备份什么
 
-:::tip
 
 默认安装目录为 `/opt/sqlbot`。docker 一键运行时，路径相对执行目录下的 `./data`。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 备份内容清单</div>
 
 | 内容 | 路径 / 对象 | 说明 |
 | ---- | ----------- | ---- |
@@ -36,13 +35,11 @@ grep POSTGRES_SERVER /opt/sqlbot/conf/sqlbot.conf
 
 :::
 
-:::
 
 ## 2 备份
 
 ### 2.1 内置库（推荐）
 
-:::tip
 
 停服后打包运行数据与配置，一致性最好：
 
@@ -58,11 +55,9 @@ sctl start
 
 无 `sctl` 时（docker 一键运行）先执行 `docker stop sqlbot`，再打包当前目录下的 `./data`，最后 `docker start sqlbot`。
 
-:::
 
 ### 2.2 外置库
 
-:::tip
 
 （1）备份外部库（连接信息以 `conf/sqlbot.conf` 为准）：
 
@@ -89,19 +84,15 @@ tar -zcvf ./sqlbot-files-$(date +%F).tar.gz \
 
 1Panel 也可使用其 PostgreSQL 备份能力，并备份应用持久化目录中的 excel / file / images 及环境变量。
 
-:::
 
 ## 3 还原
 
-:::tip
 
 还原前：目标环境已安装相同版本；先备份目标侧现有数据；内置库与外置库不要交叉覆盖。
 
-:::
 
 ### 3.1 内置库
 
-:::tip
 
 ```bash
 sctl stop
@@ -111,11 +102,9 @@ tar -zxvf /opt/sqlbot-backup-YYYY-MM-DD.tar.gz -C /opt
 sctl start
 ```
 
-:::
 
 ### 3.2 外置库
 
-:::tip
 
 ```bash
 export PGPASSWORD='YourPassword'
@@ -126,15 +115,12 @@ pg_restore -h <DB_HOST> -p 5432 -U root -d sqlbot --clean --if-exists ./sqlbot-Y
 
 再解压文件备份到运行目录，确认 `POSTGRES_*`、`SECRET_KEY` 与备份一致后执行 `sctl restart`。
 
-:::
 
 ## 4 还原后检查
 
-:::tip
 
 - `sctl status` 或 `docker ps` 正常，可用原管理员账号登录
 - 抽查数据源、Excel、历史问数、术语 / SQL 示例
 - 迁移后若 MCP 无图，按 [数据迁移](./migration) 修改 `SERVER_IMAGE_HOST`
 - 升级场景请先完成本文备份，再执行 [离线升级](./offline_upgrade)
 
-:::

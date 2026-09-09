@@ -2,18 +2,14 @@
 title: 源码运行
 ---
 
-:::tip
 
 请使用 v1.1.1 等已发布分支的代码运行 SQLBot。请勿使用 main 等分支，main 等分支代码均处于开发或测试阶段，可能存在较明显功能缺陷。   
 本文所使用源码为 SQLBot main 分支，操作系统为 Ubuntu 24.04，举例说明如何以源码的形式运行 SQLBot 工程。所有操作均在阿里云（新加坡区） 4核8G 环境中执行。
 
-:::
 
-:::tip
 
 目前支持的源码运行环境有： Windows (x86)、Linux（x86 & arm64）、MacOS（x86 & arm64）。
 
-:::
 
 ## 1 项目结构
 
@@ -34,7 +30,6 @@ title: 源码运行
 
 ### 2.1 安装 Python
 
-:::tip
 
 默认情况下，Ubuntu 24.04 环境中自带了Python，如果没有 Python 环境，可以通过以下命令安装。
 ```
@@ -44,18 +39,14 @@ add-apt-repository ppa:deadsnakes/ppa
 apt install -y python3.11 python3.11-full
 ```
 
-:::
 
 ### 2.2 安装 Git
-:::tip
 
 Ubuntu 24.04 默认已安装 Git，如果环境中没有 Git，可执行命令安装 Git。
 ```
 apt-get install -y git 
 ```
 
-:::
-:::tip
 
 验证 Git。
 ```
@@ -63,10 +54,8 @@ root@iZt4ndy6544y6f1i99ahw0Z:~# git --version
 git version 2.43.0
 ```
 
-:::
 
 ### 2.3 安装配置 uv
-:::tip
 
 执行命令安装 uv。
 ```
@@ -92,10 +81,8 @@ root@iZt4ndy6544y6f1i99ahw0Z:~# uv -V
 uv 0.8.13
 ```
 
-:::
 
 ### 2.4  安装配置 nodejs
-:::tip
 
 执行命令安装 nodejs。
 ```
@@ -111,8 +98,6 @@ echo "export PATH=\$PATH:/opt/node-v22.21.1/bin" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-:::
-:::tip
 
 验证 nodejs。
 ```
@@ -152,10 +137,8 @@ root@iZt4ndy6544y6f1i99ahw0Z:~# npm version
 }
 ```
 
-:::
 
 ### 2.5 安装配置 PostgreSQL
-:::tip
 
 从 v1.1.0 版本开始，SQLBot 需要使用到 PG 的向量扩展。为了方便，这里我们使用 docker 镜像来安装 PG。
 如果没有安装 docker 环境，可以先[安装相应的 docker 环境](#41-docker)。
@@ -178,12 +161,10 @@ root@iZt4n8u2tu6392mezufc9rZ:~# docker exec -it pg psql --version
 psql (PostgreSQL) 17.6 (Debian 17.6-1.pgdg12+1)
 ```
 
-:::
 
 ## 3  代码运行
 
 ### 3.1 源码准备
-:::tip
 
 下载源码到本地
 ```
@@ -197,13 +178,11 @@ Receiving objects: 100% (12884/12884), 19.42 MiB | 16.47 MiB/s, done.
 Resolving deltas: 100% (9092/9092), done.
 ```
 
-:::
 
 ### 3.2 配置运行环境
 
 #### 3.2.1 .env 配置
 
-:::tip
 
 在工程目录下创建配置文件 .env，内容如下（根据自己实际情况修改相应配置）：
 ```
@@ -231,10 +210,8 @@ POSTGRES_PASSWORD=Password123@pg # Change this to your pwd
 SERVER_IMAGE_HOST=http://192.168.1.112:8001/images/
 ```
 
-:::
 
 #### 3.2.2 配置内置向量模型
-:::tip
 
 SQLBot 需要使用到内置向量模型，以 Ubuntu 环境为例，比较简单的办法是从现成的 SQLBot 镜像中拷贝到本地开发环境。注意路径放置在 /opt/sqlbot/models。如果是 windows 环境，则放置在项目所在盘的 /opt/sqlbot/models 下，如 D:\opt\sqlbot\models。
 
@@ -246,10 +223,8 @@ Successfully copied 831MB to /opt/sqlbot/models
 
 也可以参考一些其他的安装方式，如 `https://cloud.tencent.com/developer/article/2509399`
 
-:::
 
 #### 3.2.3 Oracle Instant Client 安装
-:::tip
 
 为了支持 Oracle 11 以及 thick 模型，我们需要安装 Oracle Instant Client。可以到 Oracle 官网下载对应的版本，地址是 `https://www.oracle.com/database/technologies/instant-client/downloads.html`
 
@@ -291,10 +266,8 @@ source ~/.bashrc
 
 windows 环境类似，将压缩包下载解压后，改名为 oracle_instant_client，放置到项目所在盘的 /opt/sqlbot/db_client 目录下，完整路径示例 D:\opt\sqlbot\db_client\oracle_instant_client
 
-:::
 
 ### 3.3 源码编译
-:::tip
 
 ```
 # 编译前端
@@ -306,10 +279,8 @@ cd ../backend
 uv sync --extra cpu
 ```
 
-:::
 
 ### 3.4 运行
-:::tip
 
 进入到 backend 文件夹下，执行下面的命令：
 
@@ -326,11 +297,9 @@ nohup uvicorn main:mcp_app --host 0.0.0.0 --port 8001 &
 nohup uvicorn main:app --host 0.0.0.0 --port 8000 --workers 1 &
 ```
 
-:::
 
 ## 4 镜像制作
 ### 4.1 安装 Docker
-:::tip
 
 在服务器上安装 Docker，本文使用 DataEase 项目组编写安装脚本进行安装，用户可自行选择如何安装 Docker（需安装 docker compsose）。
 ```
@@ -340,10 +309,8 @@ curl -fsSL https://resource.fit2cloud.com/get-docker-linux.sh | bash
 systemctl enable docker; systemctl daemon-reload; service docker start
 ```
 
-:::
 
 ### 4.2 安装 buildx
-:::tip
 
 在服务器上安装 buildx，arm 架构请自行修改对应架构信息：
 ```
@@ -352,18 +319,14 @@ curl -SL https://github.com/docker/buildx/releases/download/v0.9.1/buildx-v0.9.1
 chmod a+x .docker/cli-plugins/docker-buildx
 ```
 
-:::
 
 ### 4.3 制作镜像
-:::tip
 
 进入 SQLBot 项目根目录，执行镜像制作命令。
 ```
 docker buildx build -t registry.cn-qingdao.aliyuncs.com/dataease/sqlbot:dev-rc1 .
 ```
 
-:::
-:::tip
 
 输出日志参考
 ```
@@ -510,4 +473,3 @@ REPOSITORY                                         TAG       IMAGE ID       CREA
 registry.cn-qingdao.aliyuncs.com/dataease/sqlbot   dev-rc1   dfe2e3227a66   8 minutes ago   3.98GB
 ```
 
-:::

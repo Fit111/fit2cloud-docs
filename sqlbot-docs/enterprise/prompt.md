@@ -2,7 +2,6 @@
 title: 自定义提示词
 ---
 
-:::tip
 
 根据自身业务需要，用户可自定义提示词，辅助大语言模型生成符合预期的 SQL 查询语句，从而提升问数结果的准确度。提示词分为3种类型：
 
@@ -12,18 +11,15 @@ title: 自定义提示词
 
 - 数据预测： 仅用于数据预测的提示词。
 
-:::
 
-:::tip
 
 进入【自定义提示词】页面：在系统导航栏点击【设置】>【自定义提示词】。
 
-:::
-![prompt.png](/img/sqlbot/user_manual/X-Pack/prompt.png)
-:::tip
+<img src="/img/sqlbot/user_manual/enterprise/prompt.png" alt="prompt.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 自定义提示词页面</div>
 
 点击【添加提示词】按钮，输入提示词名称、提示词内容，并选择生效数据源，然后点击【保存】，【提示词】创建成功。
 
-:::
-![add_prompt.png](/img/sqlbot/user_manual/X-Pack/add_prompt.png)
+<img src="/img/sqlbot/user_manual/enterprise/add_prompt.png" alt="add_prompt.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加提示词</div>
 

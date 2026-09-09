@@ -4,23 +4,18 @@ title: 安装部署
 
 ## 1 部署的过程中，找不到依赖包：sqlbot-xpack 
 
-:::tip
 
 包依赖地址： `https://test.pypi.org/simple/sqlbot-xpack/` ，找到对应操作系统的依赖，执行 uv 命令自动拉取即可。
 
-:::
 
 ## 2 出现了报错信息：Signature has expired  
 
-:::tip
 
 升级版本至 v1.1.2 及以上。如果不升级版本，清理缓存后可正常运行。
 
-:::
 
 ## 3 镜像拉取超时
 
-:::tip
 
 如果是 1Panel 方式安装 SQLBot 遇到镜像拉取超时的问题，可以[参考文档](https://bbs.fit2cloud.com/t/topic/5886)。
 
@@ -42,11 +37,9 @@ title: 安装部署
 ```
 - 修改完成后，重启 docker 服务即可
 
-:::
 
 ## 4 如何访问 SQLBot 内置的 PG 数据库
 
-:::tip
 
 docker 命令启动的 SQLBot，可以先停止服务，加上 PG 的运行端口： -p 5432:5432
 ```
@@ -103,12 +96,9 @@ POSTGRES_USER=root
 POSTGRES_PASSWORD=Password123@pg
 ```
 
-:::
 
 ## 5 如何备份和还原 SQLBot？
 
-:::tip
 
 SQLBot 没有独立的备份命令。内置 PostgreSQL 建议停服后打包运行目录中的 `data`、`conf` 和 `.env`；外置 PostgreSQL 请使用 `pg_dump`，并同时备份 Excel、图片等文件目录。完整步骤见 [备份还原](../installation/backup)。
 
-:::

@@ -4,7 +4,6 @@ title: MCP
 
 ## 1 SQLBot 的 MCP 调用支持指定数据源吗？它是如何确定使用哪个数据源的？
 
-:::tip
 
 1.5.0 版本之前，MCP 方式不支持指定数据源，数据源是 SQLBot 根据问题去自动匹配的。SQLBot 的 MCP 接口调用，会根据以下几个方式来确定具体使用哪个数据源：
 
@@ -12,18 +11,15 @@ title: MCP
 - 在 SQLBot 数据源的描述信息中添加了与问题相关的信息，问数时会将问题与数据源描述信息进行相似度匹配，以此确定使用哪个数据源
 - SQLBot 中仅有一个数据源时无需确认，会默认使用该数据源
 
-:::
 
-:::tip
 
 1.6.0 版本及以后，新增 mcp_datasource_list 工具用于调取数据源列表，并返回数据源的 ID。 用户在调用 MCP 接口时，可在 question 的中 datasource_id 指定数据源 ID。
 
-:::
 
-![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_datasource_id.png)
+<img src="/img/sqlbot/mcp/sqlbot_mcp_datasource_id.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 MCP 指定数据源 ID</div>
 
 ## 2 SQLBot 的 MCP 调用支持指定工作空间和禁用图表渲染吗？
-:::tip
 
 1.8.0 版本及以后，MCP 支持选择工作空间与禁用图表渲染：
 
@@ -31,12 +27,11 @@ title: MCP
   1.10.0 及以后，请在调用 `mcp_start` 时通过 `oid` 指定工作空间；`mcp_datasource_list` 仍可通过 `oid` 查询指定工作空间下的数据源。`mcp_question` 中传 `oid` 不会生效。
 - **禁用图表渲染**：在调用 `mcp_question` 时，可通过 `return_img=false` 关闭图表图片渲染，仅返回 SQL、数据与图表配置结果，减少图片生成耗时。
 
-:::
 
-![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_oid_id.png)
+<img src="/img/sqlbot/mcp/sqlbot_mcp_oid_id.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 MCP 指定工作空间 OID</div>
 
 ## 3 SQLBot 的 MCP 中如何进行数据分析，数据预测？
-:::tip
 
 MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一会话中已完成问数（且已生成图表）的记录进行数据分析与数据预测：
 
@@ -50,12 +45,11 @@ MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一�
 3. 不可对「分析记录」「预测记录」再次执行分析/预测；目标记录必须已生成图表，否则会报错。
 4. 命令需作为独立词出现在 `question` 末尾（可带数字参数），且同一问题中不可混用多个命令。
 
-:::
 
-![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_analysis.png)
+<img src="/img/sqlbot/mcp/sqlbot_mcp_analysis.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 MCP 数据分析与预测</div>
 
 ## 4 SQLBot 的 MCP 指定工作空间失效？
-:::tip
 
 1.10.0 版本及以后，MCP 指定工作空间的参数从 mcp_question 更改至 mcp_start 节点：若仍按 1.8.x / 1.9.x 文档在 mcp_question 中传 oid，将不会生效。
 
@@ -68,12 +62,11 @@ MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一�
 
 若指定工作空间后仍异常，请检查：用户是否属于该工作空间；`oid` 是否在 `mcp_start` 阶段传入；`chat_id` 是否来自该次 `mcp_start` 返回结果。
 
-:::
 
-![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_new_oid.png)
+<img src="/img/sqlbot/mcp/sqlbot_mcp_new_oid.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 MCP 在 mcp_start 中传入 OID</div>
 
 ## 5 SQLBot 的 MCP 如何指定问数使用的模型？
-:::tip
 
 1.10.1 版本及以后，MCP 支持为问数指定 AI 模型：
 
@@ -81,4 +74,3 @@ MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一�
 - 在调用 `mcp_question` 时通过 `custom_model` 传入模型 ID；不传则使用默认模型。
 - `mcp_model_list` 的 `oid` 与创建会话时 `mcp_start` 使用的工作空间保持一致，避免选到其他空间的模型。
 
-:::

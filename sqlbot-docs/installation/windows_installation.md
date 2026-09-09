@@ -4,7 +4,6 @@ title: Windows 下安装
 
 ## 1 环境要求
 
-:::tip
 
 **部署服务器要求：**
 
@@ -12,15 +11,14 @@ title: Windows 下安装
 * 磁盘空间: 100G
 * 服务器架构: amd64 或 arm64
 
-:::
 
 ## 2 端口要求
 
-:::tip
 
 在线部署 SQLBot 需要开通的访问端口说明如下：
 
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 Windows 部署端口要求</div>
 
 | 端口   | 作用       | 说明                        |
 |------|:---------|:--------------------------|
@@ -29,7 +27,6 @@ title: Windows 下安装
 
 ## 3 Docker desktop 安装
 
-:::tip
 
 网络上有很多 Docker desktop 的详细安装教程，大家可以根据不同的操作系统版本，去查询不同的安装教程。这里例举几个写的比较详细的主流操作系统的链接：
 
@@ -37,11 +34,9 @@ title: Windows 下安装
 - [【2025 最新版】Win11 安装 Docker Desktop 超详细图文教程（小白也能学会）](https://blog.csdn.net/Little_Carter/article/details/155263711)
 - [Docker安装（Windows/Windows Server）](https://blog.csdn.net/qq_23095607/article/details/153900900)
 
-:::
 
 ## 4 安装部署
 
-:::tip
 
 安装完 docker 环境之后，进行以下操作：
 
@@ -93,11 +88,9 @@ docker run -d \
     dataease/sqlbot
 ```
 
-:::
 
 # 4 登录访问
 
-:::tip
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8000`，并使用默认的管理员用户和密码登录 SQLBot。
 
@@ -107,5 +100,5 @@ docker run -d \
 默认密码：SQLBot@123456
 ```
 
-:::
-![访问SQLBot](/img/sqlbot/installation/login_sqlbot.png)
+<img src="/img/sqlbot/installation/login_sqlbot.png" alt="访问SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 访问 SQLBot</div>
