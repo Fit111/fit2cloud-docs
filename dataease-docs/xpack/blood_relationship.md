@@ -9,28 +9,41 @@ title: 血缘分析
 血缘分析位于【工具箱】下。系统支持血缘分析功能，可以支持对数据源、数据集、仪表板做关联分析。可以通过列表、脑图两种形式查看资源的关联关系。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增血缘分析（XPack）1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![血缘分析](/img/dataease/newimg/新增血缘分析（XPack）1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/血缘分析（XPack）2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 1  血缘分析
+
+![血缘分析](/img/dataease/newimg/血缘分析（XPack）2.png)
+
+图 2  血缘分析
+
 :::note
 
 脑图形式查看时，点击右侧展开按钮，可以查看该节点的详情，以及该资源节点相关的资源依赖。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/血缘分析（XPack）3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![血缘分析](/img/dataease/newimg/血缘分析（XPack）3.png)
+
+图 3  血缘分析
 
 :::note
 
 通过【新页面打开】功能，可以直接跳转到该资源的预览页。血缘分析中可以看到所有关联的资源，比如可以看到基于指定数据集所创建的所有仪表板。但是通过【新页面打开】功能访问这些仪表板时，若当前用户无权限，会提示权限错误而无法访问。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增血缘分析（XPack）4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![血缘分析](/img/dataease/newimg/新增血缘分析（XPack）4.png)
+
+图 4  血缘分析
 
 :::note
 
 删除数据源或数据集资源时，若存在基于该资源创建的内容，系统会给出相关提示，用户可通过点击【查看血缘关系】按钮查看关联资源。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增血缘分析（XPack）5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![血缘分析](/img/dataease/newimg/新增血缘分析（XPack）5.png)
 
-<img alt="更新1" src="/img/dataease/newimg/新增血缘分析（XPack）6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 5  血缘分析
+
+![血缘分析](/img/dataease/newimg/新增血缘分析（XPack）6.png)
+
+图 6  血缘分析

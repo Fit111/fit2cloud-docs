@@ -10,7 +10,11 @@ title: 成员管理
 
 用 **组织管理员** 登录后，顶部一级菜单会出现【组织管理中心】，其下为：成员管理、权限配置、同步管理、Webhook 管理。
 :::
-<img alt="组织管理中心成员列表" src="/img/dataease/newimg/xpack/组织管理中心界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![组织管理中心成员列表](/img/dataease/newimg/xpack/组织管理中心界面.png)
+
+图 1  组织管理中心界面
+
 :::note
 
 **组织管理员可以：**
@@ -29,9 +33,9 @@ title: 成员管理
 将用户放进某个组织、从组织中移出，只能由系统管理员在【系统设置-组织管理】中完成。组织管理员进入【组织管理中心】后，只能调整该用户在 **本组织** 内的角色权限。
 :::
 
-:::note
-
 **与【系统设置-用户管理】的区别**
+
+表 1  对比项 / 系统设置-用户管理 / 组织管理中心-成员管理
 
 | 对比项 | 系统设置-用户管理 | 组织管理中心-成员管理 |
 | --- | --- | --- |
@@ -42,7 +46,6 @@ title: 成员管理
 | 将用户加入 / 移出组织 | 在 [组织管理](./sys_management_organization) 中操作 | 不支持 |
 | 调整组织内角色 | 创建用户时可指定；组织管理页也可改 | 支持 |
 | 自定义角色 | 不支持 | 支持 |
-:::
 
 ## 2 功能入口
 
@@ -52,7 +55,11 @@ title: 成员管理
 
 页面顶部有【成员】【角色】两个页签。
 :::
-<img alt="组织管理中心成员列表" src="/img/dataease/newimg/xpack/进入组织管理中心.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![组织管理中心成员列表](/img/dataease/newimg/xpack/进入组织管理中心.png)
+
+图 2  进入组织管理中心
+
 ## 3 成员页签
 
 :::note
@@ -70,7 +77,9 @@ title: 成员管理
 此页 **没有** 添加用户、批量导入、移出组织按钮。成员必须先由系统管理员加入本组织，才会出现在列表中。
 :::
 
-<img alt="组织管理中心成员列表" src="/img/dataease/newimg/xpack/成员界面功能展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组织管理中心成员列表](/img/dataease/newimg/xpack/成员界面功能展示.png)
+
+图 3  成员界面功能展示
 
 ## 4 角色页签
 
@@ -91,8 +100,13 @@ title: 成员管理
 - 自定义角色可编辑、删除。
 :::
 
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/角色管理界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/创建自定义角色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组织管理中心角色列表](/img/dataease/newimg/xpack/角色管理界面.png)
+
+图 4  角色管理界面
+
+![组织管理中心角色列表](/img/dataease/newimg/xpack/创建自定义角色.png)
+
+图 5  创建自定义角色
 
 ### 4.1 向角色添加成员
 
@@ -100,9 +114,18 @@ title: 成员管理
 
 选中角色后，右侧点击【添加成员】，可将 **已在本组织内** 且尚未拥有该角色的成员加入该角色。
 :::
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/角色添加成员1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/角色添加成员2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/角色添加成员3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员1.png)
+
+图 6  角色添加成员
+
+![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员2.png)
+
+图 7  角色添加成员
+
+![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员3.png)
+
+图 8  角色添加成员
 
 ### 4.2 从角色移除成员
 
@@ -110,4 +133,7 @@ title: 成员管理
 
 将成员从当前角色中移除后，成员仍保留在组织内。若这是其在本组织内的唯一角色，该成员可能暂时没有可用角色，需重新分配。
 :::
-<img alt="组织管理中心角色列表" src="/img/dataease/newimg/xpack/自定义角色编辑与删除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![组织管理中心角色列表](/img/dataease/newimg/xpack/自定义角色编辑与删除.png)
+
+图 9  自定义角色编辑与删除

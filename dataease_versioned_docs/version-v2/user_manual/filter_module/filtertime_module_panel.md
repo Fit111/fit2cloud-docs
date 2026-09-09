@@ -10,8 +10,8 @@ title: 时间过滤组件
 年份组件支持默认设置，可根据设置相对年份。
 :::
 
-<img alt="年份组件入口" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件年.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="仪表盘编辑_过滤组件" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件筛选年.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![年份组件入口](/img/dataease-v2/dashboard_generation/数据大屏过滤组件年.png)  
+![仪表盘编辑_过滤组件](/img/dataease-v2/dashboard_generation/数据大屏过滤组件筛选年.png)  
 
 ## 2 年月组件
 
@@ -21,8 +21,8 @@ title: 时间过滤组件
 年月组件支持默认设置，可根据设置相对月份。
 :::
 
-<img alt="年份组件入口" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件年月.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="仪表盘编辑_过滤组件" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件筛选年月.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![年份组件入口](/img/dataease-v2/dashboard_generation/数据大屏过滤组件年月.png)  
+![仪表盘编辑_过滤组件](/img/dataease-v2/dashboard_generation/数据大屏过滤组件筛选年月.png)
 
 ## 3 日期组件
 
@@ -31,14 +31,14 @@ title: 时间过滤组件
 可通过与图表的日期字段绑定，按日期过滤图表的数据。支持设置默认日期，展示展示具体日期的数据。
 :::
 
-<img alt="年份组件入口" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件年月日.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
-<img alt="仪表盘编辑_过滤组件" src="/img/dataease-v2/dashboard_generation/数据大屏年月日筛选.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![年份组件入口](/img/dataease-v2/dashboard_generation/数据大屏过滤组件年月日.png)  
+![仪表盘编辑_过滤组件](/img/dataease-v2/dashboard_generation/数据大屏年月日筛选.png)
 
 :::note
 
 日期过滤组件支持时分秒级别的设置。
 :::
-<img alt="年份组件入口" src="/img/dataease-v2/dashboard_generation/数据大屏过滤设置时分秒.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![年份组件入口](/img/dataease-v2/dashboard_generation/数据大屏过滤设置时分秒.png)  
 
 :::note
 
@@ -50,7 +50,7 @@ title: 时间过滤组件
 - 以上区间类型均支持设置【固定时间】与【动态时间】。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间查询组件支持设置时间筛选范围.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间查询组件支持设置时间筛选范围.png)
 
 ## 4 日期范围组件
 
@@ -63,7 +63,7 @@ title: 时间过滤组件
 - SELECT * FROM SALES WHERE 记录时间 &gt; '$\{BEGINTIME\}' AND 记录时间 &lt; '$\{ENDTIME\}';
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围筛选组件支持同时使用动态参数和时间维度字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围筛选组件支持同时使用动态参数和时间维度字段.png)
 
 :::note
 
@@ -73,59 +73,59 @@ title: 时间过滤组件
 - 当时间粒度为【年月日】或【年月日时分秒】时，默认值的可选项新增：“本周”（默认采用自然周，周一至周日）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围2.png)
 
 :::note
 
 **区间类型支持以下设置：开始于、结束于、时间区间、动态查询时间窗口（单次查询对多 N 天）。**
 :::
-<img alt="仪表盘编辑_过滤组件" src="/img/dataease-v2/dashboard_generation/数据大屏时间范围区间设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表盘编辑_过滤组件](/img/dataease-v2/dashboard_generation/数据大屏时间范围区间设置.png)
 
 :::note
 
 开始于：【开始于】日期前的日期无法被选择，支持设置【固定时间】与【动态时间】。比如，以下设置【开始于】日期为 2024-03-29，则 2024-03-29 前的日期无法再被选择。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期2.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期3.png)
 
 :::note
 
 结束于：【结束于】日期后的日期无法被选择，支持设置【固定时间】与【动态时间】。比如，以下设置【结束于】日期为 2024-03-29，则 2024-03-29 后的日期无法再被选择。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期4.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期5.png)
 
 :::note
 
 时间区间：只能选择该区间内的日期进行查询，支持设置【固定时间】与【动态时间】。比如如下设置了一个月的动态时间，则查询组件只能选今天起前一个月内的日期。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期7.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期6.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期7.png)
 
 :::note
 
 动态查询窗口：一次最多只能查询 N 天的日期范围，如下所示，设置单次查询时间最多 5 天，则在使用日期范围组件时，无法一次性选择大于 5 天的时间范围。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期8.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期9.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期8.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期9.png)
 
 :::note
 
 当选择时间类型参数时，系统默认设置为时间类型。点击【时间】后的编辑按钮，可以进一步选择该参数为开始时间或结束时间。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png)
 
 :::note
 
 当选择时间类型参数时，系统默认设置为时间类型。点击【时间】后的编辑按钮，可以进一步选择该参数为开始时间或结束时间。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件支持分别绑定开始时间和结束时间参数2.png)
 

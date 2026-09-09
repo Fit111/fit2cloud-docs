@@ -22,4 +22,4 @@ title: 数据大屏概述
 - 【序号 5】查看数据大屏信息，在数据大屏预览界面点击此感叹号，数据大屏信息则弹出提示。
 :::
 
-<img alt="2.0仪表板概览" src="/img/dataease-v2/panel_generation/2.0大屏概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0仪表板概览](/img/dataease-v2/panel_generation/2.0大屏概览.png)

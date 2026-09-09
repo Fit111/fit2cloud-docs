@@ -23,28 +23,28 @@ title: 移动端
 - 支持在“我的”中切换当前组织。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/更新v2-4-0-13移动端界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/更新v2-4-0-13移动端界面.png)
 
 :::note
 
 可在移动端的编辑界面设置是否【开启移动端】。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/开启移动端配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/开启移动端配置.png)
 
 :::note
 
 移动端支持收藏仪表板。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持收藏仪表板1.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>    <img alt="更新1" src="/img/dataease-v2/newimg/移动端支持收藏仪表板2.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持收藏仪表板1.png)    ![更新1](/img/dataease-v2/newimg/移动端支持收藏仪表板2.png)
 
 :::note
 
 移动端支持展示数据填报，并支持移动端填报数据（数据填报为企业版 X-Pack 功能）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>  <img alt="更新1" src="/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png)  ![更新1](/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png)
 
 ## 3 移动端布局设计
 
@@ -55,18 +55,18 @@ title: 移动端
 移动端支持自定义背景，可单独设置移动端的背景颜色或背景图片。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/设置移动端样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/设置移动端样式.png)
 
 :::note
 
  移动端组件可设置与 PC 样式同步功能。同步后，移动端组件的样式将与 PC 端保持一致；未同步时，若未单独设置移动端样式，则为最初选中时的 PC 端样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端组件新增%20PC%20样式同步功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端组件新增%20PC%20样式同步功能.png)
 
 :::note
 
 仪表板组件在移动端支持独立样式配置，便于与PC端样式区分，更好地适配移动端展示需求。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持独立样式配置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持独立样式配置2.png)
 

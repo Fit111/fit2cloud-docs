@@ -60,7 +60,9 @@ title: 电子表格概述
 - 在工作台顶部一级菜单点击【电子表格】。
 :::
 
-<img alt="功能入口" src="/img/dataease/newimg/xpack/00_功能入口_工作台顶部菜单.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![功能入口](/img/dataease/newimg/xpack/00_功能入口_工作台顶部菜单.png)
+
+图 1  电子表格入口
 
 :::note
 
@@ -70,8 +72,13 @@ title: 电子表格概述
 - 也可在文件夹行的【+】菜单中选择【新建表格】/【新建文件夹】。
 :::
 
-<img alt="电子表格模块首页" src="/img/dataease/newimg/xpack/01_电子表格模块首页.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="电子表格模块首页" src="/img/dataease/newimg/xpack/进入电子表格编辑界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![电子表格模块首页](/img/dataease/newimg/xpack/01_电子表格模块首页.png)
+
+图 2  选择数据源
+
+![电子表格模块首页](/img/dataease/newimg/xpack/进入电子表格编辑界面.png)
+
+图 3  选择数据源
 
 :::note
 
@@ -82,9 +89,18 @@ title: 电子表格概述
 - 在右侧配置区选择数据集并拖拽字段；
 - 点击下方的刷新图表数据按钮即可展示数据。
 :::
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/插入数据对象1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/插入数据对象2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/插入透视表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![电子表格模块](/img/dataease/newimg/xpack/插入数据对象1.png)
+
+图 4  插入数据对象
+
+![电子表格模块](/img/dataease/newimg/xpack/插入数据对象2.png)
+
+图 5  插入数据对象
+
+![电子表格模块](/img/dataease/newimg/xpack/插入透视表.png)
+
+图 6  插入透视表
 
 :::note
 
@@ -93,7 +109,10 @@ title: 电子表格概述
 - 可设置表头、单元格样式、边框、合并、数字格式等；
 - 长表使用【冻结】固定表头。
 :::
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/图表样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![电子表格模块](/img/dataease/newimg/xpack/图表样式.png)
+
+图 7  图表样式
 
 :::note
 
@@ -102,16 +121,29 @@ title: 电子表格概述
 - 点击工具栏【查询控件】→【+ 添加查询条件】；
 - 为条件关联明细表 / 透视表字段，实现联动过滤（详见 [查询控件](./spreadsheet_special#query-control)）。
 :::
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/添加查询组件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/添加查询组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/添加查询组件3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![电子表格模块](/img/dataease/newimg/xpack/添加查询组件1.png)
+
+图 8  添加查询组件
+
+![电子表格模块](/img/dataease/newimg/xpack/添加查询组件2.png)
+
+图 9  添加查询组件
+
+![电子表格模块](/img/dataease/newimg/xpack/添加查询组件3.png)
+
+图 10  添加查询组件
+
 :::note
 
 **第 6 步：预览、保存并发布**
 
 - 【预览】确认效果 →【保存】→【发布】上线。
 :::
-<img alt="电子表格模块" src="/img/dataease/newimg/xpack/电子表格保存发布.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![电子表格模块](/img/dataease/newimg/xpack/电子表格保存发布.png)
+
+图 11  电子表格保存发布
 
 :::note
 

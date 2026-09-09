@@ -24,12 +24,18 @@ title: 权限配置
 - 选中【用户】时，右侧只有【资源权限】，没有【菜单权限】；
 - 选中【角色】时，右侧同时出现【资源权限】【菜单权限】。
 :::
-<img alt="按用户配置" src="/img/dataease/xpack/按用户配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="按资源配置" src="/img/dataease/xpack/按资源配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-:::note
+![按用户配置](/img/dataease/xpack/按用户配置.png)
+
+图 1  按用户配置
+
+![按资源配置](/img/dataease/xpack/按资源配置.png)
+
+图 2  按资源配置
 
 **与【系统设置-权限配置】的区别**
+
+表 1  对比项 / 系统设置-权限配置 / 组织管理中心-权限配置
 
 | 对比项 | 系统设置-权限配置 | 组织管理中心-权限配置 |
 | --- | --- | --- |
@@ -40,6 +46,8 @@ title: 权限配置
 | 选中角色时的菜单权限 | 无 | 有【菜单权限】页签 |
 | 资源权限 | 有 | 有（仅本组织资源） |
 | 自定义角色 | 不支持 | 支持，见 [成员管理](./org_center_member) |
+
+:::note
 
 系统设置里，菜单权限只赋给 **个人** ；组织管理中心里，菜单权限赋给 **角色** 。系统级权限配置见 [系统设置-权限配置](./sys_management_permission)。
 :::
@@ -64,7 +72,10 @@ title: 权限配置
 
 **自定义角色** 可在此勾选菜单范围，权限不得超出其继承的内置角色类型。
 :::
-<img alt="菜单权限" src="/img/dataease/xpack/菜单权限.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![菜单权限](/img/dataease/xpack/菜单权限.png)
+
+图 3  菜单权限
 
 ## 3 资源权限
 
@@ -90,7 +101,10 @@ title: 权限配置
 - **授权**：用户或角色可以把权限范围以内的资源，再授权给本组织内其他用户或角色。
 - **管理**：可编辑管理该资源，同时拥有该资源全部权限（包括授权、导出、查看）。
 :::
-<img alt="资源权限配置" src="/img/dataease/xpack/资源权限配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![资源权限配置](/img/dataease/xpack/资源权限配置.png)
+
+图 4  资源权限配置
 
 ## 4 用户维度
 
@@ -100,7 +114,10 @@ title: 权限配置
 
 组织管理员不能在此为个人直接分配菜单权限。成员列表仅包含已加入当前组织的用户。
 :::
-<img alt="资源权限配置" src="/img/dataease/xpack/用户权限配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![资源权限配置](/img/dataease/xpack/用户权限配置.png)
+
+图 5  用户权限配置
 
 ## 5 角色维度
 
@@ -113,4 +130,7 @@ title: 权限配置
 
 内置角色只能查看、不能改菜单权限；自定义角色可同时调整资源权限与菜单权限。自定义角色的创建、编辑见 [成员管理](./org_center_member)。
 :::
-<img alt="资源权限配置" src="/img/dataease/xpack/角色权限配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![资源权限配置](/img/dataease/xpack/角色权限配置.png)
+
+图 6  角色权限配置

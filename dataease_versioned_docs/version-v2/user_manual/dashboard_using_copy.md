@@ -9,9 +9,9 @@ title: 仪表板使用
 点击下图中所示位置，创建公共链接进行仪表板分享。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板开启公共链接分享.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板开启公共链接分享.png)
 
-<img alt="仪表板_创建公共链接" src="/img/dataease-v2/dashboard_generation/创建公共链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_创建公共链接](/img/dataease-v2/dashboard_generation/创建公共链接.png)
 
 :::note
 
@@ -19,25 +19,25 @@ title: 仪表板使用
 **分享链接可设置有效期及密码保护。**
 :::
 
-<img alt="仪表板_创建公共链接_复制链接" src="/img/dataease-v2/dashboard_generation/设置公共链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_创建公共链接_复制链接](/img/dataease-v2/dashboard_generation/设置公共链接.png)
                                     
 :::note
 
 支持自定义公共链接后缀。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀1.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>  <img alt="更新1" src="/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀2.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀1.png)  ![更新1](/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀2.png)
 :::note
 
 支持自定义公共链接密码。
 :::
-<img alt="更新1" src="/img/dataease-v2/dashboard_generation/设置密码保护.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>  <img alt="更新1" src="/img/dataease-v2/dashboard_generation/修改密码.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/dashboard_generation/设置密码保护.png)  ![更新1](/img/dataease-v2/dashboard_generation/修改密码.png)
 
 :::note
 
 公共连接复制链接和密码可以直接访问。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/公共连接复制链接和密码可以直接访问.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/公共连接复制链接和密码可以直接访问.PNG)
 
 :::note
 
@@ -45,9 +45,9 @@ title: 仪表板使用
 **注意：设置 Ticket 的同时，需要开启 [设置仪表板外部参数](https://dataease.cn/docs/v2/user_manual/dashboard_basicfunctions/#5)。**     
 打开 Ticket 设置，并单独配置其有效期与参数，每个 Ticket 均可独立设定有效期，例如配置有效期为 30 天，参数为 \{"国家":"Lebanon"\}：
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/ticket设置.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/ticket设置.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/添加ticket.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/添加ticket.png)
 
 :::note
 
@@ -55,7 +55,7 @@ title: 仪表板使用
 :::
 	
 
-<img alt="更新1" src="/img/dataease-v2/newimg/复制ticket链接.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/复制ticket链接.png)
 
 ## 2 仪表板导出
 
@@ -64,7 +64,7 @@ title: 仪表板使用
 点击下图中所示位置，导出仪表板的模板、应用、PDF、图片到本地，可在本地的下载目录中查看。
 :::
 
-<img alt="仪表板_导出为模版" src="/img/dataease-v2/dashboard_generation/仪表板导出.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_导出为模版](/img/dataease-v2/dashboard_generation/仪表板导出.png)
 
 :::note
 
@@ -76,7 +76,7 @@ title: 仪表板使用
 **关于样式模板与应用模板的详细差异可参考** ：https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0。
 :::
 
-<img alt="模板内容" src="/img/dataease-v2/template_market/模板内容.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板内容](/img/dataease-v2/template_market/模板内容.png)
 
 ## 3 仪表板预览
 
@@ -85,7 +85,7 @@ title: 仪表板使用
 支持两种预览方式，第一种：新打开页面预览，第二种：全屏预览仪表盘。
 :::
 
-<img alt="仪表板_预览" src="/img/dataease-v2/dashboard_generation/仪表板预览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_预览](/img/dataease-v2/dashboard_generation/仪表板预览.png)
 
 ## 4 查看明细与放大
 
@@ -96,30 +96,30 @@ title: 仪表板使用
 预览模式下，视图放大页面支持导出视图图片，查看视图明细页面支持导出视图图表数据。
 :::
 
-<img alt="仪表板_预览" src="/img/dataease-v2/dashboard_generation/查看明细和放大.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![仪表板_预览](/img/dataease-v2/dashboard_generation/查看明细和放大.png)  
 
 :::note
 
 明细表中的图片，鼠标点击单元格图片，图片会放大展示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.7%20明细表支持显示图片5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.7%20明细表支持显示图片5.png)
 
 :::note
 
 视图明细效果，支持对视图进行 Excel 导出。
 :::
 
-<img alt="仪表板_预览" src="/img/dataease-v2/dashboard_generation/查看明细.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_预览](/img/dataease-v2/dashboard_generation/查看明细.png)
 
-<img alt="明细导出结果" src="/img/dataease-v2/dashboard_generation/视图导出.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![明细导出结果](/img/dataease-v2/dashboard_generation/视图导出.png)
 
 :::note
 
  	支持原始明细数据导出
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20支持原始明细数据导出.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20支持原始明细数据导出.PNG)
 
 ### 4.2 导出视图图片
 
@@ -128,9 +128,9 @@ title: 仪表板使用
 在视图放大效果下，支持导出视图图片,导出图片时支持选择尺寸。
 :::
 
-<img alt="仪表板_导出图片" src="/img/dataease-v2/dashboard_generation/进行放大.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_导出图片](/img/dataease-v2/dashboard_generation/进行放大.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20导出图片时支持选择尺寸.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20导出图片时支持选择尺寸.png)
 
 ## 5 仪表板刷新
 
@@ -144,14 +144,14 @@ title: 仪表板使用
 - 图表加载提示：开启后当仪表板图表在刷新或加载时，会显示一个加载中的提示，告知用户当前正在获取或更新数据。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/仪表板刷新设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/仪表板刷新设置.png)
 
 :::note
 
 同时，仪表板提供手动刷新按钮，用户需要时可自行点击进行刷新。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/进行刷新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/进行刷新.png)
 
 ## 6 仪表板全屏
 
@@ -160,5 +160,5 @@ title: 仪表板使用
 仪表板新支持一键全屏预览。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/仪表板全屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/仪表板全屏.png)
 

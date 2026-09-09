@@ -9,9 +9,9 @@ title: 数据大屏使用
 点击下图中所示位置，创建公共链接进行数据大屏分享。
 :::
 
-<img alt="仪表板_创建公共链接" src="/img/dataease-v2/panel_generation/数据大屏进行分享.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_创建公共链接](/img/dataease-v2/panel_generation/数据大屏进行分享.png)
 
-<img alt="仪表板_创建公共链接" src="/img/dataease-v2/panel_generation/数据大屏进行分享2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_创建公共链接](/img/dataease-v2/panel_generation/数据大屏进行分享2.png)
 
 :::note
 
@@ -19,26 +19,26 @@ title: 数据大屏使用
 **分享链接可设置有效期及密码保护。**
 :::
 
-<img alt="仪表板_创建公共链接_复制链接" src="/img/dataease-v2/dashboard_generation/数据大屏设置公共链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_创建公共链接_复制链接](/img/dataease-v2/dashboard_generation/数据大屏设置公共链接.png)
 
 :::note
 
 支持自定义公共链接后缀。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀1.png" width="400" style={{maxWidth:'100%', height:'auto'}}/><img alt="更新1" src="/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀2.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀1.png)![更新1](/img/dataease-v2/newimg/1.21%20支持自定义公共链接后缀2.png)
 :::note
 
 支持自定义公共链接密码。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.22%20公共链接支持自定义密码.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.22%20公共链接支持自定义密码.png)
 
 :::note
 
 公共连接复制链接和密码可以直接访问。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏公共连接复制链接和密码可以直接访问.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏公共连接复制链接和密码可以直接访问.png)
 
 :::note
 
@@ -47,16 +47,16 @@ title: 数据大屏使用
 打开 Ticket 设置，并单独配置其有效期与参数，每个 Ticket 均可独立设定有效期，例如配置有效期为 30 天，参数为 \{"国家":"Lebanon"\}：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/ticket设置.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/ticket设置.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/添加ticket.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/添加ticket.png)
 
 :::note
 
 复制 Ticket 链接，那么，使用 Ticket 的公共链接格式为 https://example.dataease.com/link/bcg48L2W?ticket=xk59xiHJ。在此情况下，无需传递 Ticket 参数，DataEase 将从数据库自动获取 Ticket 相关参数。当启用 Ticket “必选”选项时，只有在 URL 中附带 ticket 参数的情况下，公共链接才能被成功访问。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/复制ticket链接.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/复制ticket链接.png)
 
 ## 2 数据大屏导出
 
@@ -65,7 +65,7 @@ title: 数据大屏使用
 点击下图中所示位置，导出数据大屏的模板、应用、PDF、图片到本地，可在本地的下载目录中查看。
 :::
 
-<img alt="仪表板_导出为模版" src="/img/dataease-v2/dashboard_generation/数据大屏导出.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_导出为模版](/img/dataease-v2/dashboard_generation/数据大屏导出.png)
 
 :::note
 
@@ -77,7 +77,7 @@ title: 数据大屏使用
 **关于样式模板与应用模板的详细差异可参考** ：https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0。
 :::
 
-<img alt="模板内容" src="/img/dataease-v2/template_market/模板内容.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板内容](/img/dataease-v2/template_market/模板内容.png)
 
 ## 3 数据大屏预览
 
@@ -86,7 +86,7 @@ title: 数据大屏使用
 点击下图中所示位置，新打开页面预览。
 :::
 
-<img alt="仪表板_预览" src="/img/dataease-v2/dashboard_generation/数据大屏预览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_预览](/img/dataease-v2/dashboard_generation/数据大屏预览.png)
 
 ## 4 数据大屏刷新
 
@@ -100,14 +100,14 @@ title: 数据大屏使用
 - 图表加载提示：开启后当数据大屏图表在刷新或加载时，会显示一个加载中的提示，告知用户当前正在获取或更新数据。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/数据大屏刷新设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/数据大屏刷新设置.png)
 
 :::note
 
 同时，数据大屏提供手动刷新按钮，用户需要时可自行点击进行刷新。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/数据大屏刷新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/数据大屏刷新.png)
 
 ## 5 数据大屏全屏
 
@@ -116,7 +116,7 @@ title: 数据大屏使用
 数据大屏新支持一键全屏预览。
 :::
 
-<img alt="仪表板_刷新" src="/img/dataease-v2/dashboard_generation/数据大屏全屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_刷新](/img/dataease-v2/dashboard_generation/数据大屏全屏.png)
 
 ## 6 移动端访问
 
@@ -125,5 +125,5 @@ title: 数据大屏使用
 数据大屏支持移动端直接访问数据大屏。数据大屏没有单独移动端设置，可在大屏配置中设置手机合适对尺寸。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持移动端访问数据大屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持移动端访问数据大屏.png)
 

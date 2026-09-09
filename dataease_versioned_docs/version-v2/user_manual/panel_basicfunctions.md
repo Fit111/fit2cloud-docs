@@ -9,14 +9,14 @@ title: 数据大屏基础功能
 点击下图所示的位置或者新建数据大屏，进入数据大屏编辑界面。
 :::
 
-<img alt="2.0编辑仪表板" src="/img/dataease-v2/panel_generation/2.0点击编辑数据大屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0编辑仪表板](/img/dataease-v2/panel_generation/2.0点击编辑数据大屏.png)
 
 :::note
 
 在数据大屏中新建组件时，新组件将自动显示在屏幕中心位置，同时画布区域也会同步定位到屏幕中心。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏新建图表后自动定位到屏幕中心.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏新建图表后自动定位到屏幕中心.gif)
 
 :::note
 
@@ -31,14 +31,14 @@ title: 数据大屏基础功能
 - 【序号 7】比例的调整，来控制和调整画布的缩放比例；
 :::
 
-<img alt="2.0新建仪表板2" src="/img/dataease-v2/panel_generation/2.0数据大屏布局.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0新建仪表板2](/img/dataease-v2/panel_generation/2.0数据大屏布局.png)
 
 :::note
 
 按住空格键并同时使用鼠标或者触摸板，可自由移动数据大屏的画布位置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏支持按住空格键时拖动画布.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏支持按住空格键时拖动画布.gif)
 
 ## 2 保存与发布
 :::note
@@ -52,9 +52,9 @@ title: 数据大屏基础功能
 - 若需要调整内容，可修改并【保存】，生成新的草稿版本。点击【恢复到已发布版本】，放弃当前修改，将草稿版本还原至已发布版本。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏支持发布功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏支持发布功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏支持发布功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏支持发布功能2.png)
 
 :::note
 
@@ -78,9 +78,9 @@ title: 数据大屏基础功能
     - 已发布过的仪表板和数据大屏若取消发布后（即仅存在草稿版本），原先创建的分享链接和收藏记录不删除。通过分享链接访问时，将提示仪表板未发布，同时在收藏栏中无法点击查看。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏支持发布功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏支持发布功能3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏支持发布功能4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏支持发布功能4.png)
 
 ## 3 撤销
 
@@ -89,7 +89,7 @@ title: 数据大屏基础功能
 点击下图按钮，撤销上一步操作。
 :::
 
-<img alt="2.0撤销" src="/img/dataease-v2/panel_generation/2.0数据大屏撤销.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0撤销](/img/dataease-v2/panel_generation/2.0数据大屏撤销.png)
 
 ## 4 恢复
 
@@ -98,7 +98,7 @@ title: 数据大屏基础功能
 点击下图按钮，可以对组件操作恢复。
 :::
 
-<img alt="2.0恢复" src="/img/dataease-v2/panel_generation/2.0数据大屏恢复.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0恢复](/img/dataease-v2/panel_generation/2.0数据大屏恢复.png)
 
 ## 5 图层管理
 
@@ -108,7 +108,7 @@ title: 数据大屏基础功能
 图层管理分为弹窗区域、大屏区域。用户在图层管理或者点击图层右键，来调整组件的图层。
 :::
 
-<img alt="样式" src="/img/dataease-v2/panel_generation/2.0图层管理1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![样式](/img/dataease-v2/panel_generation/2.0图层管理1.png)
 
 ### 5.1 弹窗设置
 
@@ -117,31 +117,31 @@ title: 数据大屏基础功能
 打开弹窗区域，可在弹窗区域中添加查询组件。
 :::
 
-<img alt="样式" src="/img/dataease-v2/panel_generation/数据大屏新增弹窗区域.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![样式](/img/dataease-v2/panel_generation/数据大屏新增弹窗区域.png)
 
 :::note
 
 在全屏或预览的界面下，当设置了弹窗区时，数据大屏右下侧会出现查询按钮，点击可唤出弹窗区。弹窗区的查询组件功能同普通查询组件，同时也支持外部传参。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持3.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持3.gif)
 
 :::note
 
 弹窗区查询按钮支持显示控制打开预览时弹窗区域的控制按钮，则支持用户预览数据大屏时动态调整弹窗区域的显隐。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制2.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制2.gif)
 
 :::note
 
 关闭预览时弹窗区域的控制按钮，则弹窗区域被完全隐藏，且用户无法在预览界面手动调出弹窗区域。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20弹窗区查询按钮支持显示控制4.png)
 
 ### 5.2 图层隐藏
 
@@ -150,7 +150,7 @@ title: 数据大屏基础功能
 图层隐藏功能，可以迅速隐藏不需要显示的图层，以便更清晰地查看和编辑目标图层。
 :::
 	
-<img alt="仪表板主题" src="/img/dataease-v2/panel_generation/2.0图层隐藏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板主题](/img/dataease-v2/panel_generation/2.0图层隐藏.png)
 
 ### 5.3 图层锁定
 
@@ -159,7 +159,7 @@ title: 数据大屏基础功能
 通过图层锁定功能，可以确保在设计过程中不会误操作或修改已经设置好的图层。
 :::
 
-<img alt="仪表板主题" src="/img/dataease-v2/panel_generation/2.0图层锁定.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板主题](/img/dataease-v2/panel_generation/2.0图层锁定.png)
 
 ### 5.4 图层组合
 :::note
@@ -172,34 +172,34 @@ title: 数据大屏基础功能
 - 在画布区域选择图层后，右键选择组合。
 :::
 
-<img alt="仪表板主题" src="/img/dataease-v2/panel_generation/2.0图层组合2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="仪表板主题" src="/img/dataease-v2/panel_generation/2.0视图图层组合.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板主题](/img/dataease-v2/panel_generation/2.0图层组合2.png)
+![仪表板主题](/img/dataease-v2/panel_generation/2.0视图图层组合.png)
 :::note
 
 组件组合后，在图层管理中可以按照分组查看组件列表。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-9.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-9.png)
 
 :::note
 
 多个组件创建分组后，可以作为分组整体移动，如果需要单独调整分组内组件的位置，可以通过双击该组件，然后移动该组件的所在位置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-10.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-10.gif)
 
 :::note
 
 放大缩小组合时其内部组件同比放大缩小。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-11.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-11.gif)
 
 :::note
 
 画布放大缩小其图表支持同比放大缩小。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-12.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-12.gif)
 
 ### 5.5 图层顺序
 
@@ -208,7 +208,7 @@ title: 数据大屏基础功能
 图层顺序：可以直接在图层管理中直接拖拽图层顺序。或者在图层操作通过点击【上移一层】、【下移一层】、【置于顶层】、【置于底层】这些操作，来调整组件。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0图层顺序设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0图层顺序设置.png)
 
 ### 5.6 快速对齐
 
@@ -217,7 +217,7 @@ title: 数据大屏基础功能
 选择多个组件后，可以快速对齐，支持左对齐、右对齐、上对齐、下对齐、水平居中、垂直居中。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/快速对齐.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/快速对齐.png)
 
 ### 5.7 其他操作
 
@@ -226,7 +226,7 @@ title: 数据大屏基础功能
 涵盖了图层重命名、复制、删除、剪贴等各种图层操作。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0图层其他操作.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0图层其他操作.png)
 
 ## 6 批量操作
 
@@ -235,27 +235,27 @@ title: 数据大屏基础功能
 可通过鼠标框选或按住 Ctrl 点选的方式完成多选，可批量支持选择多个组件后批量移动。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20数据大屏支持多个组件批量移动.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20数据大屏支持多个组件批量移动.gif)
 
 :::note
 
 选中后可整体调整组件大小。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.18%20数据大屏多选组件后，可在没有组合的情况下整体变更组件大小.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.18%20数据大屏多选组件后，可在没有组合的情况下整体变更组件大小.gif)
 
 :::note
 
 数据大屏支持批量设置样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.15%20数据大屏支持批量设置样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.15%20数据大屏支持批量设置样式.png)
 
 :::note
 
 数据大屏在选中多个组件时支持按住 Ctrl 键取消已选中的组件。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏在选中多个组件时支持按住%20Ctrl%20键取消已选中的组件.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏在选中多个组件时支持按住%20Ctrl%20键取消已选中的组件.gif)
 
 ## 7 大屏配置
 
@@ -264,21 +264,21 @@ title: 数据大屏基础功能
 配置大屏尺寸、背景、配色、表格配色和刷新配置。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0大屏配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0大屏配置.png)
 
 :::note
 
 数据大屏设计面板支持开启辅助网格线。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏设计面板支持开启辅助网格线.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏设计面板支持开启辅助网格线.PNG)
 
 :::note
 
 数据大屏支持字体更换。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20仪表板和数据大屏支持字体更换2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20仪表板和数据大屏支持字体更换2.png)
 
 ### 7.1 尺寸
 
@@ -287,51 +287,51 @@ title: 数据大屏基础功能
 根据展示情况设置数据大屏的尺寸大小，设置对应的长度和宽度，便于适用于不同的展示常见。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0尺寸调整.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0尺寸调整.png)
 
 :::note
 
 根据画布进行展示，超出画布的组件、图表范围将不展示。如下图展示效果。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0尺寸超出.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0尺寸超出.png)
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0尺寸超出预览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0尺寸超出预览.png)
 
 :::note
 
 数据大屏支持缩放方式设置缩放方式：宽度优先、高度优先、铺满全屏、不缩放。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式1.png)
 
 :::note
 
 宽度优先：以画布宽度完整显示为前提，等比缩放高度显示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置2.png)
 
 :::note
 
 高度优先：以画布高度完整显示为前提，等比缩放宽度显示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置3.png)
 
 :::note
 
 铺满全屏：按屏幕尺寸缩放画布，会出现组件比例变形的情况。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.14%20数据大屏支持缩放方式设置4.png)
 
 :::note
 
 不缩放:当显示设备尺寸大于或者小于数据大屏的设计尺寸时，内容将按设计尺寸显示，不进行拉伸或缩放。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式2.png)
 
 ### 7.2 背景
 
@@ -345,7 +345,7 @@ title: 数据大屏基础功能
 颜色背景：根据主题和展示需求选择适当的颜色。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0大屏配置背景颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0大屏配置背景颜色.png)
 
 :::note
 
@@ -353,7 +353,7 @@ title: 数据大屏基础功能
 **注意：同时进行颜色背景和图片背景。图片背景会覆盖颜色背景。**
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0背景设置图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0背景设置图片.png)
 
 ### 7.3 配色
 
@@ -363,7 +363,7 @@ title: 数据大屏基础功能
 - 对表格进行背景、字体、边框、滚动条的颜色进行统一设置。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0大屏设置配色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0大屏设置配色.png)
 
 ### 7.4 刷新配置
 
@@ -372,7 +372,7 @@ title: 数据大屏基础功能
 对数据大屏所有图表的刷新频率、以及图表的展示结果进行统一设置。
 :::
 
-<img alt="仪表版_其他样式" src="/img/dataease-v2/panel_generation/2.0数据大屏刷新频率.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表版_其他样式](/img/dataease-v2/panel_generation/2.0数据大屏刷新频率.png)
 
 ## 8 外部参数设置
 
@@ -384,9 +384,9 @@ title: 数据大屏基础功能
 **注意：外部传参同时关联查询组件与图表时，以查询组件的优先级优先。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏外部传参.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏外部传参.png)
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/外部参数设置页面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/外部参数设置页面.png)
 
 :::note
 
@@ -406,7 +406,7 @@ echo '{"省份":"北京市"}'|base64
 以公共链接的形式访问仪表板，关联的内容被过滤。
 :::
 
-<img alt="仪表板_批量操作" src="/img/dataease-v2/dashboard_generation/外部传参示例.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_批量操作](/img/dataease-v2/dashboard_generation/外部传参示例.png)
 
 :::note
 
@@ -429,7 +429,7 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 支持复用所有的组件，复用图表支持适配当前数据大屏板样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏支持复用组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏支持复用组件.png)
 
 ## 10 返回
 
@@ -438,7 +438,7 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 点击下图所示的返回按钮，关闭数据大屏。
 :::
 
-<img alt="仪表板_关闭" src="/img/dataease-v2/panel_generation/2.0数据大屏返回.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_关闭](/img/dataease-v2/panel_generation/2.0数据大屏返回.png)
 
 ## 11 快捷键使用
 

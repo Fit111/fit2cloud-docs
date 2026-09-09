@@ -25,8 +25,12 @@ title: 快速入门
 
 进入 DataEase 主界面后可以看到界面上方导航栏，有【工作台】【仪表板】【数据大屏】【数据准备】【电子表格】五大模块。
 :::
-<img alt="界面介绍" src="/img/dataease/newimg/product_acceptance/首页.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-### 工作台
+
+![界面介绍](/img/dataease/newimg/product_acceptance/首页.png)
+
+图 1  界面介绍
+
+### 2.1 工作台
 
 :::note
 
@@ -37,8 +41,12 @@ title: 快速入门
 - 模板中心：根据自身的业务需求和使用场景选择对应的模板，并在优质模板的基础上轻松制作自己的仪表板或数据大屏。
 - 近期动态：可以查看最近使用、我的收藏、我的分享的最新操作使用记录。
 :::
-<img alt="工作台" src="/img/dataease/newimg/product_acceptance/工作台.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-### 仪表板
+
+![工作台](/img/dataease/newimg/product_acceptance/工作台.png)
+
+图 2  工作台
+
+### 2.2 仪表板
 
 :::note
 
@@ -47,10 +55,14 @@ title: 快速入门
 - 目录区域：添加目录/仪表板，对仪表板进行编辑、分享等；
 - 预览区域：预览、收藏、导出仪表板等。
 
- 详细功能请参考本文档功能手册[仪表板](./user_manual/dashboard_description)。
+ 详细功能请参考本文档使用手册[仪表板](./user_manual/dashboard_description)。
 :::
-<img alt="仪表板" src="/img/dataease/newimg/product_acceptance/仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-### 数据大屏
+
+![仪表板](/img/dataease/newimg/product_acceptance/仪表板.png)
+
+图 3  仪表板
+
+### 2.3 数据大屏
 
 :::note
 
@@ -59,26 +71,34 @@ title: 快速入门
 - 目录区域：添加目录/数据大屏，对数据大屏进行编辑、分享等；
 - 预览区域：预览、收藏、导出数据大屏等。
 
- 详细功能请参考本文档功能手册[数据大屏](./user_manual/panel_description)。
+ 详细功能请参考本文档使用手册[数据大屏](./user_manual/panel_description)。
 :::
-<img alt="数据大屏" src="/img/dataease/newimg/product_acceptance/数据大屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-### 数据准备
+![数据大屏](/img/dataease/newimg/product_acceptance/数据大屏.png)
+
+图 4  数据大屏
+
+### 2.4 数据准备
 
 :::note
 
 【数据准备】模块分为数据源和数据集，进行相关的数据准备.
 
-- **数据源**：添此界面是用来管理各类数据连接信息，是后续数据分析操作中数据的来源。详细功能请参考本文档功能手册[数据源](./user_manual/datasource_description)。
-- **数据集**：为数据分析或可视化分析进行相关的数据准备。详细功能请参考本文档功能手册[数据集](./user_manual/dataset_description)。
+- **数据源**：添此界面是用来管理各类数据连接信息，是后续数据分析操作中数据的来源。详细功能请参考本文档使用手册[数据源](./user_manual/datasource_description)。
+- **数据集**：为数据分析或可视化分析进行相关的数据准备。详细功能请参考本文档使用手册[数据集](./user_manual/dataset_description)。
 
- 详细功能请参考本文档功能手册【数据准备】。
+ 详细功能请参考本文档使用手册【数据准备】。
 :::
-<img alt="数据源" src="/img/dataease/newimg/product_acceptance/数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-<img alt="数据集" src="/img/dataease/newimg/product_acceptance/数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据源](/img/dataease/newimg/product_acceptance/数据源.png)
 
-### 电子表格
+图 5  数据源
+
+![数据集](/img/dataease/newimg/product_acceptance/数据集.png)
+
+图 6  数据集
+
+### 2.5 电子表格
 
 :::note
 
@@ -87,9 +107,12 @@ title: 快速入门
 - 目录区域：添加目录/电子表格，对电子表格进行编辑等；
 - 预览区域：预览、收藏电子表格等操作。
 
- 详细功能请参考本文档功能手册[电子表格](./xpack/spreadsheet_description)。
+详细功能请参考 [电子表格](./xpack/spreadsheet_description)。
 :::
-<img alt="电子表格" src="/img/dataease/newimg/product_acceptance/电子表格.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![电子表格](/img/dataease/newimg/product_acceptance/电子表格.png)
+
+图 7  电子表格
 
 ## 3 三分钟快速上手
 
@@ -106,7 +129,9 @@ title: 快速入门
 在数据准备模块，切换到数据源菜单，新建一个数据源链接，名称为 "销售额分析"，类型选择 "MySQL"，主机名 "mysql-de"，端口号 "3306"，数据库名 "dataease"，用户名 "root"，密码 "Password123@mysql" 检验通过后点击保存即可。
 :::
 
-<img alt="添加数据源" src="/img/dataease/newimg/product_acceptance/连接数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加数据源](/img/dataease/newimg/product_acceptance/连接数据源.png)
+
+图 8  连接数据源
 
 ### 3.2 创建数据集
 
@@ -115,15 +140,22 @@ title: 快速入门
 在数据准备模块，切换到数据集菜单，在目标目录下新建数据库数据集。
 :::
 
-<img alt="添加数据集" src="/img/dataease/newimg/product_acceptance/新建数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加数据集](/img/dataease/newimg/product_acceptance/新建数据集.png)
+
+图 9  新建数据集
+
 :::note
 
 选择上一步创建的数据源 "销售额分析"，勾选数据表 "各市实际销售额" 点击确认即可。
 :::
 
-<img alt="创建数据库数据集" src="/img/dataease/newimg/product_acceptance/创建数据库数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建数据库数据集](/img/dataease/newimg/product_acceptance/创建数据库数据集.png)
 
-<img alt="数据集创建成功" src="/img/dataease/newimg/product_acceptance/数据集创建成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 10  创建数据库数据集
+
+![数据集创建成功](/img/dataease/newimg/product_acceptance/数据集创建成功.png)
+
+图 11  数据集创建成功
 
 ### 3.3 可视化分析
 
@@ -132,14 +164,18 @@ title: 快速入门
 切换到仪表板菜单，点击空白新建创建仪表板【2021 年全国GDP数据】。
 :::
 
-<img alt="新建仪表板" src="/img/dataease/newimg/product_acceptance/新建仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建仪表板](/img/dataease/newimg/product_acceptance/新建仪表板.png)
+
+图 12  新建仪表板
 
 :::note
 
 在此步骤选择地图图表，点击确认。
 :::
 
-<img alt="选择地图视图" src="/img/dataease/newimg/product_acceptance/选择地图视图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![选择地图视图](/img/dataease/newimg/product_acceptance/选择地图视图.png)
+
+图 13  选择地图视图
 
 :::note
 
@@ -149,21 +185,27 @@ title: 快速入门
 设置钻取目录，分别拖拽钻取字段"省份""城市"字段至图形区【钻取/维度】选择框，如下图所示，下钻目录与拖入的字段顺序有关，自上而下依次下钻。
 :::
 
-<img alt="创建地图视图" src="/img/dataease/newimg/product_acceptance/创建地图视图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建地图视图](/img/dataease/newimg/product_acceptance/创建地图视图.png)
+
+图 14  创建地图视图
 
 :::note
 
 下钻结果展示，如下图所示，展示广东省地图，如果想返回上一级，点击下图中【全部】，返回全国地图。
 :::
 
-<img alt="地图下钻" src="/img/dataease/newimg/product_acceptance/地图下钻.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图下钻](/img/dataease/newimg/product_acceptance/地图下钻.png)
+
+图 15  地图下钻
 
 :::note
 
 调整地图配色，在样式 Tap 页，在基础样式中选择系统配色方案，系统自动根据各省份 GDP 值的大小在地图中着色，GDP 值较小的省份，颜色偏浅；GDP 值较大的省份，颜色偏深，最后点击保存。
 :::
 
-<img alt="地图替换颜色" src="/img/dataease/newimg/product_acceptance/地图替换颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图替换颜色](/img/dataease/newimg/product_acceptance/地图替换颜色.png)
+
+图 16  地图替换颜色
 
 ### 3.4 快速分享
 
@@ -172,19 +214,24 @@ title: 快速入门
 如下图所示，点击展开功能菜单，创建公共链接。
 :::
 
-<img alt="仪表板分享" src="/img/dataease/newimg/product_acceptance/仪表板分享.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板分享](/img/dataease/newimg/product_acceptance/仪表板分享.png)
+
+图 17  仪表板分享
 
 :::note
 
 如下图所示，打开链接分享，并点击复制链接。
 :::
 
-<img alt="创建分享链接" src="/img/dataease/newimg/product_acceptance/创建分享链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建分享链接](/img/dataease/newimg/product_acceptance/创建分享链接.png)
+
+图 18  创建分享链接
 
 :::note
 
 分享复制的链接，其他人可查看你创建的仪表板。
 :::
 
-<img alt="访问公共链接" src="/img/dataease/newimg/product_acceptance/访问公共连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![访问公共链接](/img/dataease/newimg/product_acceptance/访问公共连接.png)
 
+图 19  访问公共链接

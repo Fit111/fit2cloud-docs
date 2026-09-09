@@ -16,7 +16,7 @@ title: 组织管理
 组织列表右上角支持根据组织名称搜索组织信息。
 :::
 
-<img alt="查询组织" src="/img/dataease-v2/xpack/查询组织.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组织](/img/dataease-v2/xpack/查询组织.png)
 
 ## 2 新建组织
 
@@ -25,14 +25,14 @@ title: 组织管理
 支持添加组织，添加组织时可以选择上级组织，如不选则默认创建一级组织。
 :::
 
-<img alt="新建组织" src="/img/dataease-v2/xpack/新建组织.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建组织](/img/dataease-v2/xpack/新建组织.png)
 
 :::note
 
 支持在父节点组织下新建子节点组织。
 :::
 
-<img alt="新建组织" src="/img/dataease-v2/xpack/新建子节点组织.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建组织](/img/dataease-v2/xpack/新建子节点组织.png)
 
 ## 3 修改组织
 
@@ -41,7 +41,7 @@ title: 组织管理
 支持修改组织名称。
 :::
 
-<img alt="修改组织" src="/img/dataease-v2/xpack/修改组织.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![修改组织](/img/dataease-v2/xpack/修改组织.png)
 
 ## 4 删除组织
 
@@ -52,4 +52,4 @@ title: 组织管理
 **提示：** 如果组织下具有子组织，则需要先将子组织删除后才能删除当前组织。
 :::
 
-<img alt="删除组织" src="/img/dataease-v2/xpack/删除组织.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![删除组织](/img/dataease-v2/xpack/删除组织.png)

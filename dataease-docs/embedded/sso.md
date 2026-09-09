@@ -8,13 +8,17 @@ title: 单点登录
 :::
 
 ## 1 OIDC
+
 :::note
 
 DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置】-&gt; 【OIDC】中进行设置。
 
 点击 OIDC 编辑。即可设置 OIDC，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（1）.png" src="/img/dataease/embedded/5.1%20单点登录（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（1）](/img/dataease/embedded/单点登录（1）.png)
+
+图 1  单点登录
 
 :::note
 
@@ -26,32 +30,46 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 - Use Pkce：访问令牌。设置为 true 时，在请求标头中设置访问令牌。
 - Redirect Uri：重定向回的 URL。
 :::
-<img alt="5.1 单点登录（2）.png" src="/img/dataease/embedded/5.1%20单点登录（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（2）](/img/dataease/embedded/单点登录（2）.png)
+
+图 2  单点登录
 
 ## 2 CAS
+
 :::note
 
 DataEase 企业版支持 CAS 协议，【系统设置】-&gt; 【认证设置】-&gt; 【CAS】中进行设置。
 
 点击 CAS 编辑。即可设置 CAS，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（3）.png" src="/img/dataease/embedded/5.1%20单点登录（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（3）](/img/dataease/embedded/单点登录（3）.png)
+
+图 3  单点登录
 
 :::note
 
 - IdpUri：IdP 的 URI。
 - 回调域名：登录或注销后，回调的重定向 uri。
 :::
-<img alt="5.1 单点登录（4）.png" src="/img/dataease/embedded/5.1%20单点登录（4）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（4）](/img/dataease/embedded/单点登录（4）.png)
+
+图 4  单点登录
 
 ## 3 LDAP
+
 :::note
 
 DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置】-&gt; 【LDAP】中进行设置。
 
 点击 LDAP 编辑，即可设置 LDAP，填写完相关信息后，测试连接显示成功，即配置成功。
 :::
-<img alt="5.1 单点登录（5）.png" src="/img/dataease/embedded/5.1%20单点登录（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（5）](/img/dataease/embedded/单点登录（5）.png)
+
+图 5  单点登录
 
 :::note
 
@@ -64,7 +82,11 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 :::
 
 ## 4 OAuth2
-<img alt="5.1 单点登录（6）.png" src="/img/dataease/embedded/5.1%20单点登录（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![单点登录（6）](/img/dataease/embedded/单点登录（6）.png)
+
+图 6  单点登录
+
 :::note
 
 - 授权端地址：用户进行授权时访问的 URL，通常用于获取授权码（Authorization Code）。
@@ -76,4 +98,3 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 - 回调地址：OAuth2 认证完成后，重定向回应用的地址。
 - 字段映射：将 OAuth2 服务器中的属性对应到 DataEase 中的字段，account、name、email 为 DataEase 用户信息字段。
 :::
-

@@ -32,4 +32,6 @@ title: 工作台
     * 我的填报
 :::
 
-<img alt="工作台展示" src="/img/dataease/newimg/user_manual/工作台展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工作台展示](/img/dataease/newimg/user_manual/工作台展示.png)
+
+图 1  工作台展示

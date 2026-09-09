@@ -11,7 +11,7 @@ title: 用户管理
 系统支持多用户体系，系统管理员或组织管理员可以创建及管理用户。
 :::
 
-<img alt="用户列表" src="/img/dataease-v2/xpack/用户列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![用户列表](/img/dataease-v2/xpack/用户列表.png)
 
 ### 1.2 添加用户
 
@@ -20,7 +20,7 @@ title: 用户管理
 支持系统管理员或组织管理员添加新用户，添加用户前需要先选择对应的组织，并在该组织下创建新的用户。
 :::
 
-<img alt="添加用户按钮" src="/img/dataease-v2/xpack/添加用户按钮.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加用户按钮](/img/dataease-v2/xpack/添加用户按钮.png)
 
 :::note
 
@@ -31,7 +31,7 @@ title: 用户管理
 - 角色：用户在该组织下的角色，可多选；
 - 是否启用：用户的启用状态，如关闭，则用户无法登录 DataEase。
 :::
-<img alt="添加用户信息界面" src="/img/dataease-v2/xpack/添加用户信息界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加用户信息界面](/img/dataease-v2/xpack/添加用户信息界面.png)
 
 ### 1.3 批量导入用户
 
@@ -44,22 +44,22 @@ title: 用户管理
 - 支持上传的文件大小，10M 以内。
 - 企业微信、钉钉、飞书和国际飞书提前导入上传用户，需要将对应平台用户的【账户】填入【唯一标识】后进行上传。
 :::
-<img alt="批量导入" src="/img/dataease-v2/xpack/批量导入.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![批量导入](/img/dataease-v2/xpack/批量导入.png)
 
-<img alt="数据导入完成情况" src="/img/dataease-v2/xpack/数据导入完成情况.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据导入完成情况](/img/dataease-v2/xpack/数据导入完成情况.png)
 
 :::note
 
 支持通过 Excel 批量导入第三方平台用户用户来源支持的选项同【用户管理】中的【用户来源】字段：LOCAL、企业微信、钉钉、飞书、国际飞书、CAS、OIDC、LDAP。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户4.png)
 
 ### 1.4 编辑用户
 
@@ -68,20 +68,20 @@ title: 用户管理
 支持管理员编辑用户信息。 请注意，账号信息不支持修改。
 :::
 
-<img alt="编辑用户" src="/img/dataease-v2/xpack/编辑用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![编辑用户](/img/dataease-v2/xpack/编辑用户.png)
 
 ### 1.5 重置密码
 :::note
 
 支持管理员将用户信息重置为初始密码。
 :::
-<img alt="重置密码" src="/img/dataease-v2/xpack/重置密码.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![重置密码](/img/dataease-v2/xpack/重置密码.png)
 
 ### 1.6 删除用户
-<img alt="删除用户" src="/img/dataease-v2/xpack/删除用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![删除用户](/img/dataease-v2/xpack/删除用户.png)
 
 ### 1.7 查询用户
-<img alt="查询用户" src="/img/dataease-v2/xpack/查询用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询用户](/img/dataease-v2/xpack/查询用户.png)
 
 ## 2 角色
 :::note
@@ -102,7 +102,7 @@ title: 用户管理
 :::
 
 ### 2.1 角色列表
-<img alt="角色列表" src="/img/dataease-v2/xpack/角色列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![角色列表](/img/dataease-v2/xpack/角色列表.png)
 
 ### 2.2 添加用户
 
@@ -111,30 +111,30 @@ title: 用户管理
 **添加组织用户：** 已经拥有了当前组织下角色的用户，添加组织用户时可以直接勾选。
 :::
 
-<img alt="添加组织用户1" src="/img/dataease-v2/xpack/添加组织用户1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加组织用户1](/img/dataease-v2/xpack/添加组织用户1.png)
 
-<img alt="添加组织用户2" src="/img/dataease-v2/xpack/添加组织用户2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加组织用户2](/img/dataease-v2/xpack/添加组织用户2.png)
 
 :::note
 
 **添加外部用户：** 未拥有当前组织下角色的用户，添加外部用户时需要精准按照用户的 ID 或账号搜索。
 :::
-<img alt="添加外部用户1" src="/img/dataease-v2/xpack/添加外部用户1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加外部用户1](/img/dataease-v2/xpack/添加外部用户1.png)
 
-<img alt="添加外部用户2" src="/img/dataease-v2/xpack/添加外部用户2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加外部用户2](/img/dataease-v2/xpack/添加外部用户2.png)
 
 ### 2.3 移除用户
 :::note
 
 将用户从当前角色中移除，需要注意的是用户在整个系统所有组织中是否只有唯一的一个角色，当唯一角色被删除后用户将同步从系统中删除，仍然有其他角色就不会被删除。
 :::
-<img alt="移除角色下用户" src="/img/dataease-v2/xpack/移除角色下用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![移除角色下用户](/img/dataease-v2/xpack/移除角色下用户.png)
 
 ### 2.4 创建自定义角色
 :::note
 
 自定义角色需要继承于组织下的内置角色，可以选择继承于普通用户或组织管理员。继承的角色所能够给赋予的权限是小于等于父级角色的。
 :::
-<img alt="自定义角色1" src="/img/dataease-v2/xpack/自定义角色1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![自定义角色1](/img/dataease-v2/xpack/自定义角色1.png)
 
-<img alt="自定义角色2" src="/img/dataease-v2/xpack/自定义角色2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![自定义角色2](/img/dataease-v2/xpack/自定义角色2.png)

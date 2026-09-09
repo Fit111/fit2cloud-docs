@@ -27,13 +27,23 @@ title: 数据集
 
 其中系统变量是除了系统内置的「账号」、「姓名」、「邮箱」系统变量，系统管理员可在系统设置中增加自定义变量，组织管理员可以为组织内成员配置这些系统变量。使数据集数据与系统内置数据建立联系，可以轻松快捷地实现不同的用户访问各自所属的数据资源。自定义变量的配置见 [系统变量](./system_variables)。
 :::
-<img alt="行权限1" src="/img/dataease/xpack/行权限1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="行权限2" src="/img/dataease/xpack/行权限2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![行权限1](/img/dataease/xpack/行权限1.png)
+
+图 1  行权限
+
+![行权限2](/img/dataease/xpack/行权限2.png)
+
+图 2  行权限
+
 :::note
 
 白名单：在每条行权限的配置中，可以将 **用户** 或 **角色** 加入白名单，权限规则对白名单中的用户及所属角色成员不生效。
 :::
-<img alt="行权限白名单" src="/img/dataease/xpack/行权限白名单.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![行权限白名单](/img/dataease/xpack/行权限白名单.png)
+
+图 3  行权限白名单
 
 ## 3 列权限
 
@@ -41,8 +51,14 @@ title: 数据集
 
 列权限按照字段过滤，常用场景比如一些敏感字段数据不适合某些角色人查看及使用，像是销售金额、客户身份证号等。
 :::
-<img alt="列权限1" src="/img/dataease/xpack/列权限1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="列权限2" src="/img/dataease/xpack/列权限2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![列权限1](/img/dataease/xpack/列权限1.png)
+
+图 4  列权限
+
+![列权限2](/img/dataease/xpack/列权限2.png)
+
+图 5  列权限
 
 :::note
 
@@ -51,10 +67,16 @@ title: 数据集
 - **禁用：** 用户完全看不到该字段，甚至不知道该字段的存在；
 - **脱敏：** 用户可以看见该字段，知道这个字段的存在，但是看不到真实的信息，会有 \* 替代真实信息做脱敏处理。
 :::
-<img alt="列权限规则设置" src="/img/dataease/xpack/列权限规则设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![列权限规则设置](/img/dataease/xpack/列权限规则设置.png)
+
+图 6  列权限规则设置
 
 :::note
 
 脱敏规则支持选择系统内置规则或用户自定义，比如设置从第 M 位至第 N 位显示为 \*。
 :::
-<img alt="设置脱敏规则" src="/img/dataease/xpack/设置脱敏规则.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![设置脱敏规则](/img/dataease/xpack/设置脱敏规则.png)
+
+图 7  设置脱敏规则

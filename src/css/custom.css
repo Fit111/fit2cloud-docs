@@ -143,6 +143,79 @@ html[data-docs-product='jumpserver'] .alert--info {
   --ifm-alert-border-color: #2b937c;
 }
 
+/* DataEase v2 / v3：去掉 note 正文的蓝色包边。
+   两个版本都走 /dataease，docsProduct.js 会打 data-docs-product=dataease。
+   只去掉边框和卡片底，:::note 结构与 warning 提示框保持不变。 */
+html[data-docs-product='dataease'] .theme-admonition-note,
+html[data-docs-product='dataease'] .alert--secondary {
+  --ifm-alert-border-color: transparent;
+  --ifm-alert-border-width: 0px;
+  --ifm-alert-border-left-width: 0px;
+  --ifm-alert-background-color: transparent;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+[data-theme='dark'] html[data-docs-product='dataease'] .theme-admonition-note,
+[data-theme='dark'] html[data-docs-product='dataease'] .alert--secondary {
+  --ifm-alert-background-color: transparent;
+  background-color: transparent !important;
+}
+
+/* 图用 Markdown ![alt](src)，水平居中且不超过正文栏。表拉满正文栏，表题与表同宽对齐。 */
+html[data-docs-product='dataease'] .theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+}
+/* 正文截图居中；列表徽章、链接封面、联系我们二维码不走这套。 */
+html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+.de-contact .theme-doc-markdown img,
+html[data-docs-product='dataease'] .de-contact .theme-doc-markdown p > img:only-child {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* 图注、表题同一套：灰色居中小字。
+   .de-caption 由 docsProduct.js 按「图/表 + 序号」打上，图和表共用。
+   图片下一段的 :has 作无 JS 兜底。表题 :has(+ table) 必须单独成条，
+   不能和嵌套 :has 写在一起，否则构建器会把整条规则丢掉。 */
+html[data-docs-product='dataease'] .theme-doc-markdown p.de-caption,
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(img) + p,
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(a img) + p,
+html[data-docs-product='dataease'] .theme-doc-markdown img + p {
+  text-align: center;
+  color: #8a8f99;
+  font-size: 13px;
+  margin: 6px 0 20px;
+}
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(+ table) {
+  text-align: center;
+  color: #8a8f99;
+  font-size: 13px;
+  margin: 6px 0 20px;
+}
+
+/* 教学视频封面：固定约 280px，左对齐横排，不加图注 */
+.de-instructional-video .theme-doc-markdown a:has(img) {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  text-align: left;
+}
+.de-instructional-video .theme-doc-markdown a img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
 /* navbar 只显示 logo, 隐藏 logo 旁的文字标题(navbar.title 留空时 Docusaurus 会 fallback 站点标题, 这里一并隐藏) */
 .navbar__title {
   display: none;
@@ -360,42 +433,78 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-/* ===== bash 代码块: 黑色背景 =====
-   只改 bash 语言代码块: 背景黑、文字浅色、语法高亮用亮色, 保证黑底可读。
-   其它语言不受影响。 */
-[class*="language-bash"] {
+/* ===== 指令 / 配置代码块: 黑色背景 =====
+   bash 以及未标明语言的 ```（language-text）等指令块统一黑底。
+   DataEase 文档里其余语言代码块同样黑底，避免 SQL/配置混排深浅不一。 */
+[class*="language-bash"],
+[class*="language-sh"],
+[class*="language-shell"],
+[class*="language-console"],
+[class*="language-text"],
+[class*="language-plaintext"],
+[class*="language-ini"],
+[class*="language-properties"],
+html[data-docs-product='dataease'] [class*="language-"],
+html[data-docs-product='dataease'] .theme-code-block {
   background-color: #000000 !important;
   color: #e6e6e6 !important;
 }
-[class*="language-bash"] .token {
+[class*="language-bash"] .token,
+[class*="language-sh"] .token,
+[class*="language-shell"] .token,
+[class*="language-console"] .token,
+[class*="language-text"] .token,
+[class*="language-plaintext"] .token,
+[class*="language-ini"] .token,
+[class*="language-properties"] .token,
+html[data-docs-product='dataease'] .token {
   color: #e6e6e6;
 }
 [class*="language-bash"] .token.comment,
-[class*="language-bash"] .token.prolog,
-[class*="language-bash"] .token.doctype,
-[class*="language-bash"] .token.cdata {
-  color: #8a8a8a; /* 注释灰 */
+[class*="language-sh"] .token.comment,
+[class*="language-shell"] .token.comment,
+[class*="language-console"] .token.comment,
+[class*="language-text"] .token.comment,
+[class*="language-plaintext"] .token.comment,
+[class*="language-ini"] .token.comment,
+[class*="language-properties"] .token.comment,
+html[data-docs-product='dataease'] .token.comment,
+html[data-docs-product='dataease'] .token.prolog,
+html[data-docs-product='dataease'] .token.doctype,
+html[data-docs-product='dataease'] .token.cdata {
+  color: #8a8a8a;
 }
 [class*="language-bash"] .token.keyword,
-[class*="language-bash"] .token.boolean,
-[class*="language-bash"] .token.constant,
-[class*="language-bash"] .token.operator,
-[class*="language-bash"] .token.punctuation,
-[class*="language-bash"] .token.tag,
-[class*="language-bash"] .token.selector {
-  color: #ff79c6; /* 亮粉(关键字/运算符) */
+[class*="language-sh"] .token.keyword,
+[class*="language-shell"] .token.keyword,
+[class*="language-console"] .token.keyword,
+[class*="language-ini"] .token.keyword,
+html[data-docs-product='dataease'] .token.keyword,
+html[data-docs-product='dataease'] .token.boolean,
+html[data-docs-product='dataease'] .token.constant,
+html[data-docs-product='dataease'] .token.operator,
+html[data-docs-product='dataease'] .token.punctuation,
+html[data-docs-product='dataease'] .token.tag,
+html[data-docs-product='dataease'] .token.selector {
+  color: #ff79c6;
 }
 [class*="language-bash"] .token.string,
-[class*="language-bash"] .token.char,
-[class*="language-bash"] .token.attr-value,
-[class*="language-bash"] .token.regex {
-  color: #50fa7b; /* 亮绿(字符串) */
+[class*="language-sh"] .token.string,
+[class*="language-shell"] .token.string,
+[class*="language-ini"] .token.string,
+html[data-docs-product='dataease'] .token.string,
+html[data-docs-product='dataease'] .token.char,
+html[data-docs-product='dataease'] .token.attr-value,
+html[data-docs-product='dataease'] .token.regex {
+  color: #50fa7b;
 }
 [class*="language-bash"] .token.function,
-[class*="language-bash"] .token.attr-name,
-[class*="language-bash"] .token.property,
-[class*="language-bash"] .token.number {
-  color: #82aaff; /* 亮蓝(函数/数字) */
+[class*="language-sh"] .token.function,
+html[data-docs-product='dataease'] .token.function,
+html[data-docs-product='dataease'] .token.attr-name,
+html[data-docs-product='dataease'] .token.property,
+html[data-docs-product='dataease'] .token.number {
+  color: #82aaff;
 }
 
 /* ===== 顶部导航栏文字字体参考 docs.halo.run「开发者指南」=====

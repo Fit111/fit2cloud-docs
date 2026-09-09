@@ -10,9 +10,13 @@ title: 系统管理
 **注意：如果忘记原始密码（当前密码），则需要到数据库重置密码**
 :::
 
-<img alt="调整超时时间" src="/img/dataease/newimg/修改密码入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease/newimg/修改密码入口.png)
 
-<img alt="调整超时时间" src="/img/dataease/newimg/修改密码界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 1  修改密码入口
+
+![调整超时时间](/img/dataease/newimg/修改密码界面.png)
+
+图 2  修改密码界面
 
 ## 2 忘记了登录密码如何处理？
 
@@ -34,9 +38,13 @@ update per_user set pwd='504c8c8dfcbbe5b50d676ad65ef43909' where account='admin'
 **如遇网络不通畅，系统报 ”timeout of xxx exceeded“ 等相关超时错误，则可在【系统管理】【系统参数】的基础设置增大超时时间，同时支持在数据源的【高级设置】修改查询超时时间。**
 :::
 
-<img alt="调整超时时间" src="/img/dataease/newimg/调整超时时间.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease/newimg/调整超时时间.png)
 
-<img alt="调整超时时间" src="/img/dataease/newimg/设置超时时间2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 3  调整超时时间
+
+![调整超时时间](/img/dataease/newimg/设置超时时间2.png)
+
+图 4  设置超时时间
 
 ## 4 流向地图、符号地图等在线地图添加后白屏、无法使用
 
@@ -44,4 +52,3 @@ update per_user set pwd='504c8c8dfcbbe5b50d676ad65ef43909' where account='admin'
 
 **流向地图、符号地图等组件使用的是高德在线地图，需能够连接外网高德服务器，如遇组件白屏，可自行申请在线地图 Key 并配置，参考[在线地图 Key 申请](../user_manual/system_management/param#33)。**
 :::
-

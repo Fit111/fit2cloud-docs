@@ -38,7 +38,7 @@ docker run -d --name migration \
 
 ## 2 适用条件
 
-:::note
+表 1  适用条件
 
 | 项目 | 要求 |
 | --- | --- |
@@ -46,7 +46,6 @@ docker run -d --name migration \
 | 目标端版本 | 已安装 DataEase 3.0（如 v3.0.0） |
 | 元数据库 | **仅支持 MySQL**，JDBC URL 形如 `jdbc:mysql://127.0.0.1:3306/dataease` |
 | 安装目录 | 源端、目标端均需填写对应服务器上的非根目录绝对路径，默认分别为 `/opt/dataease2.0`、`/opt/dataease3.0` |
-:::
 
 :::note
 
@@ -111,7 +110,9 @@ java -jar dataease-migration-1.0.0.jar
 确认目标库可被覆盖后，点击「执行迁移」。页面日志会显示各阶段进度。填写完成后如下图所示：
 :::
 
-<img alt="迁移填写信息" src="/img/dataease/installation/迁移填写信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![迁移填写信息](/img/dataease/installation/迁移填写信息.png)
+
+图 1  填写连接信息
 
 :::note
 
@@ -137,7 +138,9 @@ java -jar dataease-migration-1.0.0.jar --migration.files.copy-sync-task-logs=tru
 操作日志出现「迁移任务成功完成」即表示本次迁移结束，如下图所示：
 :::
 
-<img alt="迁移任务成功" src="/img/dataease/installation/迁移任务成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![迁移任务成功](/img/dataease/installation/迁移任务成功.png)
+
+图 2  迁移任务成功
 
 :::note
 
@@ -155,4 +158,3 @@ java -jar dataease-migration-1.0.0.jar --migration.files.copy-sync-task-logs=tru
 - 本地直接操作文件目前适用于 macOS / Linux，并需要本机提供 `/bin/sh` 与 `tar`。
 - 同版本环境搬迁（非 2.0 → 3.0）不属于本工具范围。
 :::
-

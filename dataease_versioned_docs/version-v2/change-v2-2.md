@@ -10,7 +10,7 @@ title: v2.2.0
 - 支持批量修改模板分类
 - 支持批量删除模板
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-1.PNG)
 
 ### 1.2 优化 DataEase 环境无法访问在线模板市场时的模板中心与使用模板创建页面
 
@@ -18,52 +18,52 @@ title: v2.2.0
 
 只显示 DataEase 系统内模板管理中的模板。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-2.PNG)
 
 ## 2 数据准备
 ### 2.1 数据集编辑界面支持下拉框搜索
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-3.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-3.PNG)
 
 ### 2.2 继续创建数据源时保持上一次的默认文件夹
 :::note
 
 在具体数据源文件夹下点击创建数据源。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-4.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-4.PNG)
 :::note
 
 保存时的默认文件夹为创建时所选择的。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-5.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-5.PNG)
 
 :::note
 
 此时点击继续创建，则下一个数据源保存时的默认文件夹与本次自动保持一致。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-6.png)
 
 ## 3 仪表板与数据大屏
 ### 3.1  查询组件支持下拉选项设置为必填
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-7.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-8.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-7.png)
+![更新1](/img/dataease-v2/newimg/v2-2-8.png)
 ### 3.2 组件组合后，在图层管理中可以按照分组查看组件列表
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-9.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-9.png)
 ### 3.3 支持分组内部移动定位操作
 :::note
 
 多个组件创建分组后，可以作为分组整体移动，如果需要单独调整分组内组件的位置，可以通过双击该组件，然后移动该组件的所在位置。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-10.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-10.gif)
 ### 3.4 放大缩小组合时其内部组件同比放大缩小 
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-11.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-11.gif)
 ### 3.5 画布放大缩小其图表支持同比放大缩小
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-12.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-12.gif)
 
 ## 4 其他
 ### 4.1 允许社区版修改 admin 账号的密码
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-14.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/v2-2-15.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/v2-2-14.png)
+![更新1](/img/dataease-v2/newimg/v2-2-15.png)
 ### 4.2 优化版本切换脚本
 :::note
 

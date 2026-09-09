@@ -11,7 +11,9 @@ title: 用户管理
 系统管理员在此维护 **全平台** 用户账号。列表包含全部用户，并显示其所属组织与角色；未加入任何组织的用户，组织列为空、角色显示为 `-`。
 :::
 
-<img alt="系统设置用户列表" src="/img/dataease/newimg/xpack/用户管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![系统设置用户列表](/img/dataease/newimg/xpack/用户管理.png)
+
+图 1  用户管理
 
 :::note
 
@@ -29,9 +31,9 @@ title: 用户管理
 - 将已有用户加入 / 移出某个组织（在 [组织管理](./sys_management_organization) 中操作）。
 :::
 
-:::note
-
 **与【组织管理中心-成员管理】的区别**
+
+表 1  对比项 / 系统设置-用户管理 / 组织管理中心-成员管理
 
 | 对比项 | 系统设置-用户管理 | 组织管理中心-成员管理 |
 | --- | --- | --- |
@@ -41,7 +43,6 @@ title: 用户管理
 | 加入 / 移出组织 | 在组织管理中操作 | 不支持 |
 | 调整组织内角色 | 添加用户时可指定 | 支持 |
 | 自定义角色 | 不支持 | 支持 |
-:::
 
 ## 2 用户列表
 
@@ -55,7 +56,10 @@ title: 用户管理
 
 组织管理员账号若同时被授予系统设置权限，也可进入本页；未加入组织的用户（组织列为空、角色为 `-`）不会出现在对应组织的【组织管理中心-成员管理】中。
 :::
-<img alt="系统设置用户列表" src="/img/dataease/newimg/xpack/用户管理用户编辑.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![系统设置用户列表](/img/dataease/newimg/xpack/用户管理用户编辑.png)
+
+图 2  用户管理用户编辑
 
 ## 3 添加用户
 
@@ -79,7 +83,10 @@ title: 用户管理
 
 添加用户时可指定其加入某个组织及角色。若用户已存在、只需加入其他组织，请到 [组织管理](./sys_management_organization) 中操作。
 :::
-<img alt="添加用户" src="/img/dataease/newimg/xpack/新建用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![添加用户](/img/dataease/newimg/xpack/新建用户.png)
+
+图 3  新建用户
 
 ## 4 批量导入用户
 
@@ -89,8 +96,14 @@ title: 用户管理
 
 操作顺序：点击【批量导入】→ 下载导入用户模板 → 填写后上传 `.xlsx` / `.xls` 文件 → 点击【导入】。
 :::
-<img alt="批量导入" src="/img/dataease/xpack/批量导入.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="数据导入完成情况" src="/img/dataease/xpack/数据导入完成情况.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![批量导入](/img/dataease/xpack/批量导入.png)
+
+图 4  校验成功
+
+![数据导入完成情况](/img/dataease/xpack/数据导入完成情况.png)
+
+图 5  校验成功
 
 :::note
 
@@ -102,8 +115,14 @@ title: 用户管理
 
 用户来源支持的选项同列表中的【用户来源】字段：LOCAL、企业微信、钉钉、飞书、国际飞书、CAS、OIDC、LDAP。
 :::
-<img alt="批量导入第三方用户3" src="/img/dataease/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="批量导入第三方用户4" src="/img/dataease/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![批量导入第三方用户3](/img/dataease/newimg/支持通过%20Excel%20批量导入第三方平台用户3.png)
+
+图 6  填写连接信息
+
+![批量导入第三方用户4](/img/dataease/newimg/支持通过%20Excel%20批量导入第三方平台用户4.png)
+
+图 7  填写连接信息
 
 ## 5 编辑用户
 
@@ -111,7 +130,10 @@ title: 用户管理
 
 支持管理员编辑用户信息。账号信息不支持修改，可改姓名、邮箱、手机、所属组织、角色及启用状态。
 :::
-<img alt="编辑用户" src="/img/dataease/xpack/编辑用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![编辑用户](/img/dataease/xpack/编辑用户.png)
+
+图 8  编辑用户
 
 ## 6 重置密码
 
@@ -119,7 +141,10 @@ title: 用户管理
 
 支持管理员将用户密码重置为系统默认密码。确认弹窗中会显示默认密码，可复制后告知用户。
 :::
-<img alt="重置密码" src="/img/dataease/xpack/重置密码.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![重置密码](/img/dataease/xpack/重置密码.png)
+
+图 9  重置密码
 
 ## 7 删除用户
 
@@ -127,8 +152,14 @@ title: 用户管理
 
 从平台删除该用户。删除前请确认其在各组织下的角色与资源授权是否需要迁移。
 :::
-<img alt="删除用户" src="/img/dataease/xpack/删除用户.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="删除用户" src="/img/dataease/xpack/删除用户2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![删除用户](/img/dataease/xpack/删除用户.png)
+
+图 10  删除用户
+
+![删除用户](/img/dataease/xpack/删除用户2.png)
+
+图 11  删除用户
 
 ## 8 内置角色说明
 

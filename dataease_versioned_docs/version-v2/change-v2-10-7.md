@@ -20,7 +20,7 @@ title: v2.10.7
     - 不支持地图倾斜。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/在线地图支持天地图、腾讯地图1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/在线地图支持天地图、腾讯地图1.PNG)
 
 :::note
 
@@ -30,15 +30,15 @@ title: v2.10.7
 - 主题配置参考：[个性地图](https://lbs.qq.com/dev/console/custom/mapStyle)。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/在线地图支持天地图、腾讯地图2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/在线地图支持天地图、腾讯地图2.PNG)
 
 ### 1.2 数量单位支持英文简称
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数量单位支持英文简称.PNG" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数量单位支持英文简称.PNG)
 
 ### 1.3 公共连接复制链接和密码可以直接访问
 
-<img alt="更新1" src="/img/dataease-v2/newimg/公共连接复制链接和密码可以直接访问.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/公共连接复制链接和密码可以直接访问.PNG)
 
 ### 1.4 仪表板查询组件支持顶部冻结
 :::note
@@ -46,11 +46,11 @@ title: v2.10.7
 仪表板查询组件新增位置设置，当选择【置顶】时，查询组件在仪表板滚动至其触及画布上边界时会自动固定在顶部。   
 **注意：每个仪表板仅支持一个查询组件置顶，若已有置顶查询组件，再次置顶其他查询组件时，原有组件将自动取消置顶。**
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板查询组件支持顶部冻结.gif)
 
 ### 1.5 仪表板新增间距大小设置，支持自定义组件间距
 :::note
@@ -58,9 +58,9 @@ title: v2.10.7
 提供大、中、小三种内置间距选项，同时支持自定义间距，范围为 0 到 10。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板新增间距大小设置，支持自定义组件间距1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板新增间距大小设置，支持自定义组件间距1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板新增间距大小设置，支持自定义组件间距2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板新增间距大小设置，支持自定义组件间距2.png)
 
 ### 1.6 仪表板和数据大屏支持发布功能
 :::note
@@ -74,9 +74,9 @@ title: v2.10.7
 - 若需要调整内容，可修改并【保存】，生成新的草稿版本。点击【恢复到已发布版本】，放弃当前修改，将草稿版本还原至已发布版本。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能2.png)
 
 :::note
 
@@ -100,9 +100,9 @@ title: v2.10.7
     - 已发布过的仪表板和数据大屏若取消发布后（即仅存在草稿版本），原先创建的分享链接和收藏记录不删除。通过分享链接访问时，将提示仪表板未发布，同时在收藏栏中无法点击查看。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持发布功能4.png)
 
 ### 1.7 联动按钮固定悬浮在页面右上角
 :::note
@@ -110,7 +110,7 @@ title: v2.10.7
 联动按钮始终固定在页面右上角，不随页面滚动而上移。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/联动按钮固定悬浮在页面右上角.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/联动按钮固定悬浮在页面右上角.gif)
 
 ### 1.8 排序支持设置优先级
 :::note
@@ -118,11 +118,11 @@ title: v2.10.7
 排序功能现已支持配置多个字段（维度和指标）的排序优先级，系统将根据设置的优先级顺序依次进行排序。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/排序支持设置优先级1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/排序支持设置优先级1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/排序支持设置优先级2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/排序支持设置优先级2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/排序支持设置优先级3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/排序支持设置优先级3.png)
 
 ### 1.9 分组柱状图支持组内按指标排序
 :::note
@@ -130,17 +130,17 @@ title: v2.10.7
 排序结果受排序优先级设置影响，按照配置的优先级顺序进行排列。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/分组柱状图支持组内按指标排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/分组柱状图支持组内按指标排序1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/分组柱状图支持组内按指标排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/分组柱状图支持组内按指标排序2.png)
 
 ### 1.10 折线图图例支持排序
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20折线图图例支持排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20折线图图例支持排序.png)
 
 ### 1.11 明细表合并单元格支持显示图片
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20明细表合并单元格支持显示图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20明细表合并单元格支持显示图片.png)
 
 ### 1.12 图表支持配置提示信息轮播功能
 
@@ -155,9 +155,9 @@ title: v2.10.7
 - 双轴图（全部类型）
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20图表支持配置提示信息轮播功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20图表支持配置提示信息轮播功能.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20图表支持配置提示信息轮播功能.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20图表支持配置提示信息轮播功能.gif)
 
 ### 1.13 汇总表总计支持数值字段汇总方式配置
 
@@ -166,7 +166,7 @@ title: v2.10.7
 可根据字段需求选择求和、平均值、最大值、最小值等进行汇总展示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/汇总表总计支持数值字段汇总方式配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/汇总表总计支持数值字段汇总方式配置.png)
 
 ### 1.14 汇总表支持分页展示
 
@@ -175,11 +175,11 @@ title: v2.10.7
 注意：该功能存在兼容性变化，历史汇总表默认将启用分页显示，如需恢复为不分页模式，可在配置中手动关闭分页选项。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/汇总表支持分页展示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/汇总表支持分页展示.png)
 
 ### 1.15 组合图副轴支持同环比显示
 
-<img alt="更新1" src="/img/dataease-v2/newimg/组合图副轴支持同环比显示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/组合图副轴支持同环比显示.png)
 
 ### 1.16 辅助线新增【最后一项】选项
 
@@ -189,9 +189,9 @@ title: v2.10.7
 **注意：为确保【最后一项】值（即尾值）的稳定性，需要设置字段排序，从而有稳定的排序规则。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20辅助线新增【最后一项】选项1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20辅助线新增【最后一项】选项1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/辅助线新增【最后一项】选项2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/辅助线新增【最后一项】选项2.png)
 
 ### 1.17 透视表支持配置指标总计的显示名称
 
@@ -200,13 +200,13 @@ title: v2.10.7
 透视表汇总别名配置项，同时支持为总计项及字段项设置别名。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表支持配置指标总计的显示名称1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表支持配置指标总计的显示名称1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表支持配置指标总计的显示名称2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表支持配置指标总计的显示名称2.png)
 
 ### 1.18 数据大屏时间组件支持显示星期
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏时间组件支持显示星期.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏时间组件支持显示星期.png)
 
 ### 1.19 时间范围组件的默认值支持设置更多常用时间范围
 
@@ -218,9 +218,9 @@ title: v2.10.7
 - 当时间粒度为【年月日】或【年月日时分秒】时，默认值的可选项新增：“本周”（默认采用自然周，周一至周日）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围组件的默认值支持设置更多常用时间范围2.png)
 
 ### 1.20  查询组件下拉树支持选择数据集并配置图表关联
 
@@ -233,9 +233,9 @@ title: v2.10.7
 **注意：切换下拉树类型时，已配置的层级信息将被清空，请谨慎操作。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件下拉树支持选择数据集并配置图表关联1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件下拉树支持选择数据集并配置图表关联1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件下拉树支持选择数据集并配置图表关联2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件下拉树支持选择数据集并配置图表关联2.png)
 
 ### 1.21 新增子弹图
 
@@ -248,7 +248,7 @@ title: v2.10.7
 - 参考值/指标：可选项，用于展示上级目标或基准线（如年目标）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20新增子弹图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20新增子弹图.png)
 
 ### 1.22 透视表新增行列转置功能
 
@@ -257,11 +257,11 @@ title: v2.10.7
 指标展示支持选择按行头或列头展示，灵活调整展示方式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表新增行列转置功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表新增行列转置功能.png)
 
 ### 1.23 移动端支持收藏仪表板
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持收藏仪表板1.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>    <img alt="更新1" src="/img/dataease-v2/newimg/移动端支持收藏仪表板2.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持收藏仪表板1.png)    ![更新1](/img/dataease-v2/newimg/移动端支持收藏仪表板2.png)
 
 ## 2 数据准备
 
@@ -272,21 +272,21 @@ title: v2.10.7
 包括本地 Excel/CSV 和远程 Excel/CSV，上传后可在字段选择中设置字段类型以及字段长度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20Excel%20数据源支持上传后修改字段类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20Excel%20数据源支持上传后修改字段类型.png)
 
 ### 2.2 移动端支持展示数据填报，并支持移动端填报数据（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>  <img alt="更新1" src="/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png)  ![更新1](/img/dataease-v2/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png)
 
 ### 2.3 数据填报的提交记录日志支持清理（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的提交记录日志支持清理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的提交记录日志支持清理.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的提交记录日志支持清理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的提交记录日志支持清理2.png)
 
 ## 3 嵌入式（XPack）
 
 ### 3.1 模板管理页面支持嵌入
 
-<img alt="更新1" src="/img/dataease-v2/newimg/模板管理页面支持嵌入.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/模板管理页面支持嵌入.png)
 

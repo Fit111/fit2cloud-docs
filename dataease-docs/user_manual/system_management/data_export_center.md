@@ -6,13 +6,20 @@ title: 数据导出中心
 
 图表的 Excel 数据导出功能已进行优化升级。原本版本直接生成 Excel 文件进行导出的机制，现改进为引入一个全新的数据导出中心，以便统一管理所有导出任务。
 :::
-    
-<img alt="更新1" src="/img/dataease/newimg/6.1%20新增数据导出中心.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/6.1%20新增数据导出中心2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![新增数据导出中心](/img/dataease/newimg/新增数据导出中心.png)
+
+图 1  数据导出中心
+
+![新增数据导出中心2](/img/dataease/newimg/新增数据导出中心2.png)
+
+图 2  数据导出中心
 
 :::note
 
 该导出中心默认支持 10 个并发导出任务，并会自动将生成的数据文件导出至 DataEase 服务器。导出任务完成后，用户将会接收到通知，随时可前往导出中心下载文件。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据中心文件下载.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据中心文件下载](/img/dataease/newimg/数据中心文件下载.png)
+
+图 3  数据中心文件下载

@@ -27,14 +27,14 @@ title: 配置本地 Excel/CSV 数据
 **注意：本地 Excel/CSV 指的是用户通过浏览器，将本地的  Excel/CSV  文件上传到 DataEase 中。而远程 Excel/CSV 数据源是  DataEase  从远程服务器读取的 Excel 或 CSV 文件。**
 :::
 
-<img alt="Excel1" src="/img/dataease-v2/datasource_configuration/添加Excel.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Excel1](/img/dataease-v2/datasource_configuration/添加Excel.png)
 
 :::note
 
 步骤三：点击【上传文件】并自定义数据源名称，上传成功后可对数据进行预览。
 :::
 
-<img alt="Excel上传" src="/img/dataease-v2/datasource_configuration/Excel上传.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Excel上传](/img/dataease-v2/datasource_configuration/Excel上传.png)
 
 :::note
 
@@ -45,14 +45,14 @@ title: 配置本地 Excel/CSV 数据
 - 上传后可在字段选择中设置字段类型以及字段长度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20Excel%20数据源支持上传后修改字段类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20Excel%20数据源支持上传后修改字段类型.png)
 
 :::note
 
 步骤四：点击保存即可，如下图所示。
 :::
 
-<img alt="Excel保存成功" src="/img/dataease-v2/datasource_configuration/Excel保存成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Excel保存成功](/img/dataease-v2/datasource_configuration/Excel保存成功.png)
 
 :::note
 

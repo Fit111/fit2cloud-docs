@@ -14,7 +14,9 @@ Webhook 管理位于【组织管理中心】下。Webhook 是组织级别的内�
 - 消息模板：支持自定义 Webhook 请求 Body 内容，用于适配企业微信、钉钉、飞书或其他第三方系统对请求体格式的要求。可用占位符：`$\{title\}`、`$\{content\}`、`$\{messageId\}`，发送告警时系统会自动替换为对应的告警标题、告警内容和消息 ID。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增Webhook管理1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Webhook管理](/img/dataease/newimg/新增Webhook管理1.png)
+
+图 1  Webhook管理
 
 ## 1 消息模板示例
 
@@ -83,4 +85,6 @@ Webhook 管理位于【组织管理中心】下。Webhook 是组织级别的内�
 在具体图表的阈值告警中，可以选择需要生效的 Webhook。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/3.2%20新增%20Webhook%20管理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增 Webhook 管理2](/img/dataease/newimg/新增%20Webhook%20管理2.png)
+
+图 2  Webhook 管理

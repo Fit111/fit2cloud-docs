@@ -10,6 +10,7 @@ title: 图表概述
 :::
 
 ## 2 图表类型
+
 :::note
 
 - 指标（仪表盘、水波图、指标卡）
@@ -46,4 +47,6 @@ title: 图表概述
 - 【序号 14】：图表展示
 :::
 
-<img alt="视图主功能区" src="/img/dataease/view_generation/视图概览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图主功能区](/img/dataease/view_generation/视图概览.png)
+
+图 1  视图概览

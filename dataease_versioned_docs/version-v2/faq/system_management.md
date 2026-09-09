@@ -10,9 +10,9 @@ title: 系统管理
 **注意：如果忘记原始密码（当前密码），则需要到数据库重置密码**
 :::
 
-<img alt="调整超时时间" src="/img/dataease-v2/newimg/修改密码入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease-v2/newimg/修改密码入口.png)
 
-<img alt="调整超时时间" src="/img/dataease-v2/newimg/修改密码界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease-v2/newimg/修改密码界面.png)
 
 ## 2 忘记了登录密码如何处理？
 
@@ -34,9 +34,9 @@ update per_user set pwd='504c8c8dfcbbe5b50d676ad65ef43909' where account='admin'
 **如遇网络不通畅，系统报 ”timeout of xxx exceeded“ 等相关超时错误，则可在【系统管理】【系统参数】的基础设置增大超时时间，同时支持在数据源的【高级设置】修改查询超时时间。**
 :::
 
-<img alt="调整超时时间" src="/img/dataease-v2/newimg/调整超时时间.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease-v2/newimg/调整超时时间.png)
 
-<img alt="调整超时时间" src="/img/dataease-v2/newimg/设置超时时间2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![调整超时时间](/img/dataease-v2/newimg/设置超时时间2.png)
 
 ## 4 流向地图、符号地图等在线地图添加后白屏、无法使用
 

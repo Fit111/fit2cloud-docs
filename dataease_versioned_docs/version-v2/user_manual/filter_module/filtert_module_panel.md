@@ -13,34 +13,34 @@ title: 过滤组件概览
 - 【序号 4】：选择数据集，并将数据集的字段拖拽至查询组件中。
 :::
 
-<img alt="过滤组件_标题设置" src="/img/dataease-v2/dashboard_generation/数据大屏查询组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_标题设置](/img/dataease-v2/dashboard_generation/数据大屏查询组件.png)
 
 :::note
 
 支持在【展示按钮】处去掉【查询】的勾选，在不展示【查询】按钮的情况下，选择完下拉选项后会立即触发数据查询。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持无查询按钮直接查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持无查询按钮直接查询.png)
 
 :::note
 
 如下图所示，选择数据集，并将数据集中的区域字段拖拽至查询组件中。
 :::
 
-<img alt="过滤组件_位置调整" src="/img/dataease-v2/dashboard_generation/添加过滤字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_位置调整](/img/dataease-v2/dashboard_generation/添加过滤字段.png)
 
 :::note
 
 如下图所示，点击查询组件的编辑按钮，设置查询条件。
 :::
 
-<img alt="过滤组件_位置调整" src="/img/dataease-v2/dashboard_generation/点击添加查询条件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_位置调整](/img/dataease-v2/dashboard_generation/点击添加查询条件.png)
 :::note
 
 查询组件支持下拉选项设置为必填。
 :::
 
-<img alt="过滤组件_位置调整" src="/img/dataease-v2/dashboard_generation/必选项和默认值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_位置调整](/img/dataease-v2/dashboard_generation/必选项和默认值.png)
 
 :::note
 
@@ -57,8 +57,8 @@ title: 过滤组件概览
 :::note
 
 当绑定参数时，选项值来源不能为自动，否则选项值为空。因此当绑定了图表的参数时，将选项值来源的「自动」选项置灰，为不可用状态
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询组件绑定参数的方式优化.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询组件绑定参数的方式优化2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏查询组件绑定参数的方式优化.png)
+![更新1](/img/dataease-v2/newimg/数据大屏查询组件绑定参数的方式优化2.png)
 :::
 
 ## 2 使用过滤组件
@@ -67,8 +67,8 @@ title: 过滤组件概览
 进行选项选择，并点击【查询】后，被关联的图表中只显示选中的区域的数据。如果是多选，在勾选完点击【确认】后，再点击【查询】。
 :::
 
-<img alt="过滤组件_位置调整" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件勾选值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="过滤组件_位置调整" src="/img/dataease-v2/dashboard_generation/数据大屏过滤查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_位置调整](/img/dataease-v2/dashboard_generation/数据大屏过滤组件勾选值.png)
+![过滤组件_位置调整](/img/dataease-v2/dashboard_generation/数据大屏过滤查询.png)
 
 :::note
 
@@ -79,7 +79,7 @@ title: 过滤组件概览
 - 支持跨源级联，目前初版仅支持 2 级级联。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.20%20查询组件支持级联设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.20%20查询组件支持级联设置1.png)
 
 ## 3 组件样式设置
 
@@ -90,33 +90,33 @@ title: 过滤组件概览
 - 支持标签位置设置为上或者左。
 :::
 
-<img alt="过滤组件_输入框" src="/img/dataease-v2/dashboard_generation/数据大屏过滤组件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![过滤组件_输入框](/img/dataease-v2/dashboard_generation/数据大屏过滤组件样式.png)
 
 :::note
 
 查询组件支持自定义背景图片。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询组件支持自定义背景图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏查询组件支持自定义背景图片.png)
 
 :::note
 
 查询组件支持配置清空和重置按钮的颜色
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询组件支持配置清空和重置按钮的颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏查询组件支持配置清空和重置按钮的颜色.png)
 
 :::note
 
 查询组件支持自定义提示词内容设置。可以针对每个查询条件设置不同的提示词，同时支持文字颜色和大小的自定义设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询组件支持自定义提示词内容设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏查询组件支持自定义提示词内容设置.png)
 
 :::note
 
 查询条件支持单独设置宽度。允许为每个查询条件单独设置宽度，实现更灵活的布局调整。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏查询条件支持单独设置宽度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏查询条件支持单独设置宽度.png)
 
