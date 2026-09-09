@@ -13,8 +13,8 @@
 .hero {
   position: relative;
   overflow: hidden;
-  /* 标题区留白: 顶部避开悬浮 navbar(94) + 留白, 底部与产品区相接 */
-  padding: 231px 0 80px;
+  /* 标题区留白: 上、下 padding 保持一致 */
+  padding: 80px 0 80px;
 }
 
 /* 光晕: Ellipse 1 #3370ff op10% 左上; Ellipse 2 #b459ff op5% 右下 */
@@ -192,8 +192,7 @@
 /* ---------------- 底部横幅 ---------------- */
 /* 设计稿 Rectangle 27: [0,2152,1920,241], 渐变 #f7fbff→#f8f9ff */
 .bottomBanner {
-  margin-top: 80px;
-  padding: 80px 24px 90px;
+  padding: 40px 24px;
   background: linear-gradient(90deg, #f7fbff 0%, #f8f9ff 100%);
   text-align: center;
 }
@@ -221,8 +220,8 @@
 
 @media (max-width: 996px) {
   .hero {
-    /* 移动端顶部只需避开悬浮 navbar(8+70), 留白收紧 */
-    padding: 132px 0 64px;
+    /* 移动端上、下 padding 同样保持一致 */
+    padding: 80px 0 80px;
   }
   .heroTitle {
     font-size: 36px;
@@ -237,8 +236,7 @@
     line-height: 40px;
   }
   .bottomBanner {
-    margin-top: 48px;
-    padding: 56px 24px 64px;
+    padding: 32px 24px;
   }
   .bottomTitle {
     font-size: 26px;
@@ -253,8 +251,5 @@
   .heroDecor {
     width: 480px;
     height: 480px;
-  }
-  .hero {
-    padding-top: 130px;
   }
 }

@@ -13,12 +13,9 @@ title: 升级指南
 
 ### linux/amd64
 
-:::note
 
 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录。
-:::
 
-:::note
 
 ```sh
 cd /opt
@@ -29,4 +26,3 @@ cd jumpserver-ce--x86_64
 ./jmsctl.sh upgrade
 ./jmsctl.sh start
 ```
-:::

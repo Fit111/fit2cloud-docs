@@ -3,10 +3,8 @@ title: 网络端口说明
 ---
 
 ## 1 网络端口列表
-:::note
 
 - JumpServer 作为符合 4A 规范的专业运维安全审计系统，其正常运行需要开放如下网络端口，管理员可根据实际环境中 JumpServer 组件部署的方案，在网络和主机侧开放相关端口。
-:::
 
 | 端口 | 作用 | 说明 |
 | --- | --- | --- |
@@ -20,7 +18,6 @@ title: 网络端口说明
 | 5525 | Magnus 服务端口 | DB Client 方式连接数据库资产，系统会根据所连接资产的类型自动分配对应端口 |
 | 15900 | NEC 服务端口 |  VNC 服务使用 |
 
-:::note
 
 - 自 v4.10.19 版本起，Magnus 的端口统一调整为 **5525**，不再区分数据库类型使用不同的端口。连接数据库资产时，系统会自动根据资产的类型（MySQL、MariaDB、PostgreSQL、Redis、Oracle 等）分配对应的连接端口。
 - 旧版本（v4.10.19 之前）使用的 Magnus 端口如下，升级后请按需调整防火墙放行规则：
@@ -29,10 +26,8 @@ title: 网络端口说明
     - 54320：Magnus PostgreSQL 服务端口
     - 63790：Magnus Redis 服务端口
     - 15210：Magnus Oracle 服务端口
-:::
 
 ## 2 防火墙常用命令
-:::note
 
 - 确认 firewall 的状态为 running
 ```sh
@@ -41,9 +36,7 @@ firewall-cmd --state
 ```sh
 running
 ```
-:::
 
-:::note
 
 - 临时开放端口（规则立即生效，重启失效）
 ```sh
@@ -51,9 +44,7 @@ firewall-cmd --zone=public --add-port=80/tcp
 firewall-cmd --zone=public --add-port=2222/tcp
 firewall-cmd --add-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept"
 ```
-:::
 
-:::note
 
 - 临时删除端口（规则立即生效，重启失效）
 ```sh
@@ -61,9 +52,7 @@ firewall-cmd --zone=public --remove-port=80/tcp
 firewall-cmd --zone=public --remove-port=2222/tcp
 firewall-cmd --remove-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept"
 ```
-:::
 
-:::note
 
 - 永久放行端口（需要 reload 才能生效）
 ```sh
@@ -72,9 +61,7 @@ firewall-cmd --zone=public --add-port=2222/tcp --permanent
 firewall-cmd --add-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept" --permanent
 firewall-cmd --reload
 ```
-:::
 
-:::note
 
 - 永久删除端口（需要 reload 才能生效）
 ```sh
@@ -83,9 +70,7 @@ firewall-cmd --zone=public --remove-port=2222/tcp --permanent
 firewall-cmd --remove-rich-rule="rule family="ipv4" source address="172.17.0.1/16" port protocol="tcp" port="8080" accept" --permanent
 firewall-cmd --reload
 ```
-:::
 
-:::note
 
 - 查看端口生效规则
 ```sh
@@ -107,4 +92,3 @@ public (active)
   rich rules:
     rule family="ipv4" source address="172.17.0.1/16" port port="8080" protocol="tcp" accept
 ```
-:::

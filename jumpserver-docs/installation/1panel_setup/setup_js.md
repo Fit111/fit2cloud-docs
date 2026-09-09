@@ -3,11 +3,9 @@ title: 安装指南
 ---
 
 ## 1. 安装 1Panel
-:::note
 
 - 关于 1Panel 的安装部署与基础功能介绍，请参考 [1Panel 官方文档](/1panel/installation/online-installation) 。
 - 在完成了 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel。
-:::
     
 
 ## 2. 安装数据库以及 Redis 服务
@@ -17,20 +15,15 @@ title: 安装指南
 :::
 
 ## 3. 安装 JumpServer
-:::note
 
 - 打开应用商店菜单 在全部栏 右边搜索栏搜索 **JumpServer** 找到后点击 **安装**。
-:::
 
 ![img](/img/jumpserver/V4_1Panel_setup1.png)
-:::note
 
 - 在安装之前会弹出各种安装版本的信息以及数据库选择等信息，需要输入数据库密码等信息，输入完成后点击 **确认** 即可进行安装。
-:::
 
 ![img](/img/jumpserver/V4_1panel_setup2.png)
 
-:::note[详细参数说明:]
 
 | 参数                | 说明                                                         |
 | ------------------- | ------------------------------------------------------------ |
@@ -53,21 +46,16 @@ title: 安装指南
 | CPU 限制            | JumpServer 应用可以使用的 CPU 核心数。                       |
 | 内存限制            | JumpServer 应用可以使用的内存大小。                          |
 | 编辑 compose 文件   | 支持自定义 compose 文件启动容器。                            |
-:::
 
-:::note[弹出以下日志记录，出现 TASK-END 表示安装完成。]
 
-:::
 ![img](/img/jumpserver/V4_1panel_setup4.png)
 
 ## 4. 访问 JumpServer
-:::note[安装成功后，通过浏览器访问登录 JumpServer。]
 
 ```sh
 地址: http://<1Panel 服务器 IP 地址>:<JumpServer 服务运行端口>
 用户名: admin
 密码: ChangeMe
 ```
-:::
   
 

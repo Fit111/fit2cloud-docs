@@ -76,14 +76,11 @@ const PRODUCT_DESC = {
 const I18N = {
   zh: {
     title: '文档中心',
-    subtitle: '飞致云是中国领先的开源软件公司，致力于为数智经济时代创造好软件。',
+    subtitle: '我们秉持"软件用起来才有价值，才有改进机会"的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件',
     searchPlaceholder: '请输入关键词回车检索，例如：飞致云',
     searchBtn: '搜索',
     productsTitle: '全部产品',
     enter: '进入文档',
-    bannerTitle: 'FIT2CLOUD 飞致云',
-    bannerSub:
-      '我们秉持“软件用起来才有价值，才有改进机会”的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件。',
   },
   en: {
     title: 'Docs Center',

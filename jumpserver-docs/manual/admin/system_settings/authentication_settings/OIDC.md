@@ -4,20 +4,14 @@ title: OIDC (X-Pack)
 
 ## 1 关于OIDC
 
-:::note[注: OIDC 认证方式为 JumpServer 企业版功能。]
 
-:::
-:::note
 
 - 通过点击页面右上角小齿轮进入 **系统设置** 页面，点击 **认证设置 &gt; OIDC** ，进入 OIDC 配置页面。
 - **OpenID Connect(OIDC)** 是一种基于 OAuth 2.0 的身份认证协议。JumpServer 认证支持标准的 OIDC 认证。
-:::
 
 ## 2 基础配置
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -30,10 +24,8 @@ title: OIDC (X-Pack)
 
 ### 2.1 使用 Keycloak
 
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -42,10 +34,8 @@ title: OIDC (X-Pack)
 
 ### 2.2 使用本机 OIDC
 
-:::note
 
 详细参数说明：
-:::
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -82,10 +72,8 @@ title: OIDC (X-Pack)
 
 ## 3 JumpServer OIDC URL 说明
 
-:::note
 
 详细 URL 说明：
-:::
 
 | URL 类型 | 地址 | 说明 |
 |----------|------|------|

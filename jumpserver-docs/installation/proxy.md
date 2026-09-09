@@ -2,21 +2,16 @@
 title: 反向代理
 ---
 
-:::note[反向代理 JumpServer 要求说明]
 
 - rdp 协议复制粘贴需要部署可信任的 ssl 证书。
 - 通过 https 协议访问就能在 rdp 资产里面使用复制粘贴。
 - 遵循 [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) 建议。
-:::
 
 ## 1 Nginx SSL 部署
-:::note[请准备好 ssl 证书 (注意需要使用 pem 格式证书)]
 
 - 将证书放到 /opt/jumpserver/config/nginx/cert 里面。
 - 修改配置文件前需要先关闭 JumpServer 服务。
-:::
 
-:::note
 
 ```sh
 # 关闭 JumpServer 服务
@@ -44,7 +39,6 @@ SSL_CERTIFICATE_KEY=xxx.key  # /opt/jumpserver/config/nginx/cert 目录下你的
 # 启动 JumpServer 服务
 ./jmsctl.sh start
 ```
-:::
 
 :::warning[如果需要自定义 Nginx 配置文件, 可以参考此处]
 
@@ -103,14 +97,11 @@ server {
 :::
 
 ## 2 多层 Nginx 反向代理
-:::note[提示]
 
 - 适合上层还有统一对外出口的反向代理服务器
 - 属于多层 nginx 反向代理
 - 每一层都需要设置 websocket 长连接
-:::
 
-:::note
 
 ```sh
 # 编辑配置文件
@@ -137,9 +128,7 @@ server {
     }
 }
 ```
-:::
 
-:::note[推荐部署 ssl 使用更安全的 https 协议访问]
 
 - 遵循 [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) 建议。
 
@@ -175,7 +164,6 @@ server {
     }
 }
 ```
-:::
 
 :::warning
 
@@ -184,8 +172,6 @@ server {
 
 ## 3 其他 SLB
 
-:::note[提示]
 
 - 需要注意 websocket 长连接设置即可。
 - 需要注意 session 问题。
-:::

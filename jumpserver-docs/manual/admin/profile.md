@@ -2,34 +2,26 @@
 title: 个人设置
 ---
 
-:::note
 
 - 点击页面右上角 **用户名称** 按钮进入 **个人信息** 界面，该页面主要查看个人账号信息，设置个人信息临时密码等等。
-:::
 
 ![image](/img/jumpserver/V4manual_admin_profile_01.png)
 ## 1 个人信息
-:::note
 
 - 该页面可以查看管理员用户的基本信息。同时，在该页面可以进行一些认证配置，例如MFA
 认证、密码、SSH密钥登录信息等；如果管理员用户配置了企业微信、钉钉认证等，还可
-:::
 以在此页面绑定相应的账号认证信息。另外，此页面还可以设置消息订阅，默认包含站内信
     和邮件设置，如果管理员配置了企业微信、钉钉等，还可以在此处开启相关的消息订阅。
 ![image](/img/jumpserver/V4manual_admin_profile_02.png)
 
 ## 2 MFA 认证
 
-:::note
 
 - MFA（Multi-Factor Authentication）即多因素认证，是指在用户名和密码认证的基础上，再增加一层安全验证，例如短信验证码、邮箱验证码、动态令牌等。JumpServer 支持多种 MFA 认证方式，用户可以在个人信息页面 右侧 **认证配置** 栏点击 **MFA 认证** 进行配置。
-:::
 
 **OTP动态令牌**
-:::note
 
 - OTP（One-Time Password）即一次性密码，是一种动态密码，每次认证时都需要输入新的密码，该密码由动态令牌生成。
-:::
 ![image](/img/jumpserver/profile_mfa01.png)
 
 - 点击进入配置页面后根据内容下载相关 应用程序，并按照提示进行绑定。
@@ -73,26 +65,21 @@ title: 个人设置
 ![image.png](/img/jumpserver/profile_mfa08.png)
 
 ## 3 认证设置
-:::note
 
 - 管理员在个人信息页面可对本人账号信息进行相应的认证配置和消息订阅配置，可以查看和设置用户的认证信息，包括密码、SSH 密钥登录信息。
 - 登陆密码设置：管理员用户可在此页面自行更新当前账户的密码。
 - SSH 公钥设置：管理员用户可在此页面自行设置 SSH 公钥并下载，在使用 SSH 终端登录堡垒机时使用该公钥。
-:::
 ![image](/img/jumpserver/V4manual_admin_profile_04.png)
 
 ## 4 访问密钥
-:::note
 
 - 访问密钥是用户通过 API 访问堡垒机的一种方式，管理员用户可以在此页面查看和生成访问密钥。
 - 生成访问密钥：用户可以点击生成 **访问密钥** 按钮生成，生成后请妥善保存，访问密钥生成后无法再次查看，请妥善保管。
 - 此 API 密钥权限和当前管理员用户角色权限保持一致。
 - API 文档请参考：`https://&lt;堡垒机地址&gt;/api/docs/`。
-:::
 ![image](/img/jumpserver/V4manual_admin_profile_05.png)
 
 ## 5 连接令牌
-:::note
 
 - 连接令牌是将身份验证和连接资产结合起来使用的一种认证信息，支持用户一键登录到资产，
 目前支持的组件包括：KoKo、Lion、Magnus、Razor 等。管理员用户可以自行查看连接令牌信
@@ -104,38 +91,29 @@ title: 个人设置
 - 连接数据库应用：通过 Web 终端连接数据库应用，选择连接方式为 **数据库客户端**，
 即可创建令牌信息；
 - 通过调用API 方式创建。
-:::
 
 ![image](/img/jumpserver/V4manual_admin_profile_06.png)
 
 ## 6 访问令牌
 
-:::note
 
    - 访问令牌是通过 JumpServer 客户端使用 OAuth2（授权码授权）流程生成的临时凭证，用于访问受保护的资源。
    - 该机制基于标准 OAuth2 协议，用户通过第三方认证（如钉钉、企业微信）完成身份验证后，JumpServer 会生成一个短期有效的访问令牌，用于后续请求的身份校验。
-:::
 
 ![image](/img/jumpserver/V4manual_admin_profile_07.png)
 
 ## 7 偏好设置
-:::note
 
 - 管理员用户可自行在 **偏好设置** 页面对 web 终端服务进行配置。
-:::
 
 ### 7.1 **基本**
-:::note
 
 - 点击个人设置页面中的左侧页签 **基本** 按钮，可以对从JumpServer页面导出文件进行加密密码的设置。该加密密码用于对导出的文件进行加密，防止文件泄露。
-:::
 ![image](/img/jumpserver/V4manual_admin_profile_08.png)
 
 ### 7.2 **Web终端**    
-:::note
 
 点击个人设置页面中的中间页签 **Web终端** 按钮，对 Web 终端页面资产连接时的参数进行设置
-:::
 ![image](/img/jumpserver/V4manual_admin_profile_09.png)    
 
 详细配置解释:

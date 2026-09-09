@@ -49,10 +49,10 @@ const config = {
 
   // 客户端模块: 路由更新时给 <html data-docs-product> 打上当前产品标记,
   // 供 custom.css 按产品定制文档页样式(见 src/clientModules/docsProduct.js)。
-  // navbarSticky: 滚动时切换导航栏贴顶(见 src/clientModules/navbarSticky.js)。
+  // navbarGaps: 注入导航栏左右两侧的空白遮挡元素(见 src/clientModules/navbarGaps.js)。
   clientModules: [
     './src/clientModules/docsProduct.js',
-    './src/clientModules/navbarSticky.js',
+    './src/clientModules/navbarGaps.js',
   ],
 
   url: 'https://docs.fit2cloud.com',
@@ -270,7 +270,7 @@ const config = {
           {href: 'https://bbs.fit2cloud.com/', label: '论坛', position: 'left'},
           {href: 'https://edu.fit2cloud.com/', label: '培训认证', position: 'left'},
           {href: 'https://www.fit2cloud.com/about/index.html', label: '关于我们', position: 'left'},
-          {href: 'https://www.fit2cloud.com/partners/index.html', label: '合作伙伴', position: 'left'},
+          // {href: 'https://www.fit2cloud.com/partners/index.html', label: '合作伙伴', position: 'left'},
           {
             // 版本切换: 仅在有多版本文档实例的页面显示, 单版本/非文档页自动隐藏(不影响首页)。
             type: 'custom-VersionSwitcher',

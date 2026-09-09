@@ -2,12 +2,11 @@
 title: 用户案例
 ---
 
-:::note
 
-JumpServer 是广受欢迎的开源堡垒机，经历千锤百炼，广泛服务于银行、证券、制造、物流、媒体、互联网等行业，累计安装超过 200,000 次。
-:::
+- JumpServer 是广受欢迎的开源堡垒机，经历千锤百炼，广泛服务于银行、证券、制造、物流、媒体、互联网等行业，累计安装超过 200,000 次。
 
-:::note
+
+
 
 - [JumpServer 堡垒机护航顺丰科技超大规模资产安全运维](https://blog.fit2cloud.com/?p=1147)
 - [JumpServer 堡垒机让“大智慧”的混合 IT 运维更智慧](https://blog.fit2cloud.com/?p=882)
@@ -20,5 +19,4 @@ JumpServer 是广受欢迎的开源堡垒机，经历千锤百炼，广泛服务
 - [中通快递 JumpServer 主机安全运维实践](https://blog.fit2cloud.com/?p=708)
 - [东方明珠 JumpServer 高效管控异构化、分布式云端资产](https://blog.fit2cloud.com/?p=687)
 - [江苏农信 JumpServer 堡垒机助力行业云安全运维](https://blog.fit2cloud.com/?p=666)
-:::
 

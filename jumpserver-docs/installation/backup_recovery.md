@@ -4,13 +4,11 @@ title: 数据备份以及恢复指南
 
 ## 1 概述
 
-:::note
 
 **JumpServer 堡垒机数据主要分为两部分：**
 
 - 数据库数据：用户数据、资产数据、账号数据、操作日志、命令记录等。
 - 静态文件：会话录像、图片、系统日志、配置文件等。
-:::
 
 ## 2 数据库备份和恢复
 
@@ -19,7 +17,6 @@ title: 数据备份以及恢复指南
 - 本文是以同一套环境备份恢复为例，如果是跨环境恢复，请确保数据库版本型号一致，配置文件中的 **BOOTSTRAP_TOKEN** 和 **SECRET_KEY** 需要与导出来源的一致！
 :::
 
-:::note
 
 ### 备份
 
@@ -38,7 +35,6 @@ title: 数据备份以及恢复指南
   ```sh
   jmsctl restore_db /data/jumpserver/backups/jumpserver-v4.10.9-ee-xxxx-xx-xx_xx:xx:xx.dump
   ```
-:::
 ## 3 静态文件备份
 
 :::warning[注意]
@@ -48,7 +44,6 @@ title: 数据备份以及恢复指南
 - 多节点建议采用NFS等共享存储方案，避免单节点静态文件不一致问题。
 :::
 
-:::note
 
 - 静态文件目录解释：
 ```sh
@@ -83,4 +78,3 @@ title: 数据备份以及恢复指南
 rsync -avh /data/jumpserver/core/data/media/replay/ /backup/jumpserver/replay_backup/
 # 录像文件夹以日期和会话 uuid 命名
 ```
-:::

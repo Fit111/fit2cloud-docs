@@ -3,24 +3,18 @@ title: Luna 环境部署
 ---
 
 ## 1 Luna 组件概述
-:::note
 
 [Luna][luna] 是 JumpServer 的前端 UI 项目，主要使用 [Angular CLI][angular_cli] 完成。
-:::
 
 ### 1.1 环境要求
-:::note
 
 | Name    | Luna                     | Node  |
 | :------ | :----------------------- | :---- |
 | Version | v4.10.17 | 16.5 |
-:::
 
 ### 1.2 选择部署方式
-:::note
 
 ### 源代码部署
-:::
 
 - 下载源代码。
 - 可以从 [Github][luna] 网站上获取最新的 [Release][core_release] 副本。这些版本是最新代码的稳定快照，从项目网站下载 Source code.tar.gz 源代码，通过命令行中提取该存档：
@@ -113,10 +107,8 @@ cp -rf luna luna-v4.10.17
 tar -czf luna-v4.10.17.tar.gz luna-v4.10.17
 ```
 
-:::note[构建完成后, 生成在 luna 目录下]
 
 ### 使用 Release
-:::
 
 - 下载 Release 文件，从 [Github][luna] 网站上获取最新的 [Release][luna_release] 副本。
 - 这些版本是最新代码的稳定快照。

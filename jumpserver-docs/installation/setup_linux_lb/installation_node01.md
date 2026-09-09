@@ -4,27 +4,22 @@ title: 部署 JumpServer 01 节点
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - JumpServer_Node_01 服务器信息如下: 
 
 ```sh 
 192.168.100.21
 ```
-:::
 
 ## 2 配置 NFS
 ### 2.1 安装 NFS 依赖包
-:::note
 
 ```sh
 yum -y install nfs-utils
 showmount -e 192.168.100.11
 ```
-:::
 
 ### 2.2 挂载 NFS 目录
-:::note
 
 ```sh
 # 将 Core 持久化目录挂载到 NFS, 默认 /data/jumpserver/core/data, 请根据实际情况修改
@@ -32,27 +27,21 @@ showmount -e 192.168.100.11
 mkdir /data/jumpserver/core/data
 mount -t nfs 192.168.100.11:/data /data/jumpserver/core/data
 ```
-:::
 
 ### 2.3 配置 NFS 共享目录开机自动挂载
-:::note
 
 ```sh
 # 可以写入到 /etc/fstab, 重启自动挂载. 注意: 设置后如果 nfs 损坏或者无法连接该服务器将无法启动
 echo "192.168.100.11:/data /data/jumpserver/core/data nfs defaults 0 0" >> /etc/fstab
 ```
-:::
 
 ## 3 安装 JumpServer 
 
 ### 3.1 下载安装包
-:::note
 
 - 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录。
-:::
 
 ### 3.2 安装 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh install
@@ -181,12 +170,10 @@ sftp -P2222 admin@192.168.100.21
 我们的官网: https://www.jumpserver.org/
 我们的文档: /jumpserver/
 ```
-:::
 :::warning[注意：配置文件中的 bootstrap_token , SECRET_KEY 必须要和集群内其他 JumpServer 节点一致, 否则数据库数据和组件注册将受到影响。首次安装会自动生成随机值，节点 01 完成安装后需要记录这些值并在其他节点中使用。]
 
 :::
 ### 3.4 启动 JumpServer 服务
-:::note
 
 ```sh
 ./jmsctl.sh start
@@ -200,5 +187,4 @@ Creating jms_koko      ... done
 Creating jms_magnus    ... done
 Creating jms_web       ... done
 ```
-:::
 

@@ -6,24 +6,19 @@ title: 环境说明
 
 :::
 ## 1 架构图
-:::note
 
 - JumpServer 分为多个组件，大致的架构如下图所示，其中 [Lina][lina] 和 [Luna][luna] 为纯静态文件，最终由 [Nginx][nginx] 整合。
-:::
 ![!架构图](/img/jumpserver/architecture.png)
 
 ## 2 数据库要求
-:::note
 
 - MySQL 和 MariaDB 二选一即可, JumpServer 需要使用 MySQL 或 MariaDB 存储数据。
 
 | Name    | Core                     | MySQL  | MariaDB | Redis |
 | :------ | :----------------------- | :----- | :------ | :---- |
 | Version | v4.10.17 | &gt;= 5.7 | &gt;= 10.3 | &gt;= 6.0  |
-:::
 
 ## 3 部署顺序
-:::note
 
 1.Core 环境部署
 
@@ -40,7 +35,6 @@ title: 环境说明
 7.Nginx 环境部署
 
 8.JumpServer 环境整合
-:::
 
 [nginx]: http://nginx.org/
 [lina]: https://github.com/jumpserver/lina/
