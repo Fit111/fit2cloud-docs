@@ -6,20 +6,16 @@ keywords: [1Panel ClamAV, 病毒扫描, Linux 杀毒, ClamAV 安装, 恶意文�
 
 ## 1 介绍
 
-:::note
-    ClamAV 是一个开源（GPLv2许可）的反病毒工具包，专为邮件网关上的电子邮件扫描而设计。它提供了多种实用工具，包括灵活且可扩展的多线程守护进程、命令行扫描器以及用于自动更新数据库的高级工具。该工具包的核心是一个作为共享库形式提供的反病毒引擎。
+ClamAV 是一个开源（GPLv2许可）的反病毒工具包，专为邮件网关上的电子邮件扫描而设计。它提供了多种实用工具，包括灵活且可扩展的多线程守护进程、命令行扫描器以及用于自动更新数据库的高级工具。该工具包的核心是一个作为共享库形式提供的反病毒引擎。
 
-:::
 ## 2 环境要求
 
-:::note
-    **ClamAV 的最低建议配置为：**
+**ClamAV 的最低建议配置为：**
 
-    * CPU 要求：1 CPU，2.0 Ghz+
-    * 内存要求：3 GiB+
-    * 服务器架构：至少 5GiB 可用磁盘空间
+* CPU 要求：1 CPU，2.0 Ghz+
+* 内存要求：3 GiB+
+* 服务器架构：至少 5GiB 可用磁盘空间
 
-:::
 ## 3 安装
 
 
@@ -114,23 +110,21 @@ sudo systemctl status clamav-freshclam.service
 
 ## 4 扫描规则
 
-:::note[配置说明]
+**配置说明**
 
 - 扫描目录：病毒扫描任务扫描的目标目录
 - 感染文件策略：发现感染文件后，需要执行的操作方式，支持不操作、删除文件、移动文件到隔离目录、复制文件到隔离目录
 - 定时扫描（专业版和企业版）：配置定时任务，定时执行扫描任务
 - 是否告警（专业版和企业版）：扫描到感染文件后，发送告警
 
-:::
-
-:::note
-
 点击操作列的 `执行` 可以手动执行该条扫描规则，点击 `报告` 即可查看该条扫描规则的执行记录和扫描结果。
 
-:::
 ![img.png](/img/1panel/toolbox/clam_create_rule.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 扫描规则</div>
 
 ## 5 病毒类型说明
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 ClamAV 病毒类型说明</div>
 
 |类型|说明|
 | ----- | ---- |
@@ -160,13 +154,9 @@ sudo systemctl status clamav-freshclam.service
 
 ## 6 故障排除
 
-:::note
-
 - 如果 clamav 服务无法启动，请检查配置信息以及日志
 - 检查病毒库数据是否正常，在配置文件中会指定 DatabaseDirectory ，即病毒库存放位置，检查是否存在，不存在的话，手动执行一下 freshclam 命令
 - 如果手动执行 freshclam 也无法正常下载的话，可以从以下地址下载后传到该目录下
 + [https://database.clamav.net/daily.cvd](https://database.clamav.net/daily.cvd)
 + [https://database.clamav.net/bytecode.cvd](https://database.clamav.net/bytecode.cvd)
 + [https://database.clamav.net/main.cvd](https://database.clamav.net/main.cvd)
-
-:::

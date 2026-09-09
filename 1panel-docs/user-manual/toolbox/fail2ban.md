@@ -73,8 +73,6 @@ sudo systemctl status fail2ban
 
 ## 2 默认配置
 
-:::note
-
 1Panel 会默认使用以下配置：
 ```properties
 #DEFAULT-START
@@ -99,10 +97,7 @@ banaction = iptables-multiport       # 禁用方式
 logpath = /var/log/secure            # SSH 登陆日志位置
 ```
 
-:::
 ## 3 故障排除
-
-:::note
 
 - 如之前已经手动安装过 Fail2ban，需要将 [sshd] 部分的配置信息写入到 jail.local 中，重启 fail2ban 服务，否则可能出现获取黑名单报错的问题
 - 如果选择的禁用方式为 -muliport，则在封禁时，只会禁用配置中的端口，如默认配置中的 22
@@ -113,5 +108,3 @@ logpath = /var/log/secure            # SSH 登陆日志位置
 - RedHat/CentOS 日志为 /var/log/secure
 - Debian/Ubuntu 日志为 /var/log/auth.log
 - Debian 从 12 开始弃用了 rsyslog，使用时需要先自行安装
-
-:::

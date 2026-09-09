@@ -42,6 +42,10 @@ title: API Keys
 
 按下面的步骤创建你的第一把 Key：
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/api-keys/image2-create-api-key.png" alt="创建 API Key"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建 API Key 抽屉（仅需填写名称）</div>
+
 1. 在 API Keys 列表页，单击左上角的蓝色「**创建 API Key**」按钮。
 2. 页面右侧会**滑出抽屉**（弹窗）。
 3. 在「**名称**」输入框中填一个**易辨认的名字**（必填项，不能为空）。例如「测试用-小李」。
@@ -49,10 +53,6 @@ title: API Keys
 5. **立刻**复制弹出的完整 Key，保存到密码管理器或发给对应开发人员。**这一步至关重要**——一旦关掉弹窗就再也看不到完整 Key 了。
 
 > ✅ **预期结果**：抽屉里会显示一长串以 `sk-` 开头的字符串（如 `sk-vfnRUCYo...oBKs`），同时列表里多出一行。
-
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/api-keys/image2-create-api-key.png" alt="创建 API Key"/>
-
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建 API Key 抽屉（仅需填写名称）</div>
 
 :::warning[API Key 仅创建时可见]
 
@@ -74,6 +74,10 @@ title: API Keys
 2. 弹出抽屉，**只显示名称输入框**（其他字段不可改）。
 3. 改完名称后，单击「**确定**」保存；或单击「**取消**」放弃修改。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/api-keys/image3-edit-api-key.png" alt="编辑 API Key"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  编辑 API Key 抽屉（仅可修改名称）</div>
+
 ### 3.4 启用与禁用 API Key
 
 如果只是想「暂停」某把 Key（例如排查问题、应用临时下线），不需要删除，可以直接禁用它。
@@ -93,6 +97,10 @@ title: API Keys
 1. 在目标 Key 所在行最右侧的「**操作**」列，单击红色的「**删除**」链接。
 2. 弹出**二次确认**对话框，问你是否确认删除。
 3. 确认后该 Key 立即从列表消失，**所有正在使用它的业务调用会立刻失败**。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/api-keys/image5-delete-api-key.png" alt="删除 API Key"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  删除 API Key 二次确认对话框</div>
 
 :::warning[删除不可恢复]
 

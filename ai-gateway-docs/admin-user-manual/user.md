@@ -27,11 +27,17 @@ description: 介绍 1Panel AI 网关用户管理，包括添加用户、启用�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  添加用户表单</div>
 
-在用户列表的操作列，每个普通用户账号均提供 **启用/禁用 开关、 重置密码、 编辑、 删除** 四类操作，单击对应控件即可对账号进行维护。受账号当前状态影响，操作列会动态显示不同控件：被锁定的账号额外出现 解锁，受唯一管理员保护的账号则不显示危险操作。
+在用户列表的操作列，每个普通用户账号均提供 **启用/禁用 开关、 重置密码、 编辑、 删除** 等操作，单击对应控件即可对账号进行维护。受账号当前状态影响，操作列会动态显示不同控件：被锁定的账号额外出现 解锁，受唯一管理员保护的账号则不显示危险操作。
+
+在用户列表中，**Token 用量** 列展示每个用户已累计的 Token 消耗及其配额（如 `44.1K / 1B`）。v1.0.2 起，该列提供 **重置** 入口，可一键清零该用户已累计的用量。当需要为某个用户重新开始计量（如新的考核周期、重置配额占用统计）时，单击 **重置**，在「重置 Token 用量」确认框中核对当前已用额度后再次确认。重置后该用户的已用额度归零、可用额度恢复为满额；历史用量统计与调用日志保留，不受影响。用户当前用量为 0 时该入口置灰不可用。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user/image6_token_usage_reset.png" alt="重置 Token 用量确认框"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  重置 Token 用量确认框</div>
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user/image3_row_actions.png" alt="用户行内操作"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  用户行内操作</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  用户行内操作</div>
 
 ### 2.2 用户启用/禁用
 
@@ -48,7 +54,7 @@ description: 介绍 1Panel AI 网关用户管理，包括添加用户、启用�
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user/image4_edit_page.png" alt="编辑页面"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  编辑页面</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  编辑页面</div>
 
 ### 2.4 用户重置密码
 
@@ -56,7 +62,7 @@ description: 介绍 1Panel AI 网关用户管理，包括添加用户、启用�
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user/image5_reset_password_page.png" alt="重置密码页面"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  重置密码页面</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  重置密码页面</div>
 
 ### 2.5 唯一管理员保护
 
