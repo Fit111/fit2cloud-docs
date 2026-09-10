@@ -4,23 +4,24 @@ title: 销售订单管理
 
 ## 1 订单新建
 
-:::note
 
 在左侧菜单点击【订单】，即可进入订单新建页面。
-:::
 
 ![创建订单](/img/cordys/user_manual/ordercreate.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建订单</div>
+
 
 **提示**：订单表单、订单状态流可以根据公司业务特性在表单设置中进行自定义。
-:::
 
 ![订单配置](/img/cordys/user_manual/ordersetings.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  订单配置</div>
+
 ![订单流配置](/img/cordys/user_manual/orderflow-setings.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  订单流配置</div>
+
 
 **订单表格-数据源字段**：
 
@@ -38,53 +39,53 @@ title: 销售订单管理
 
 - 选择当前表格可参与计算的字段（数字类型）
 - 通过运算符组合成完整公式
-:::
 
 ![订单产品表单配置](/img/cordys/user_manual/orderproduct-setings.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  订单产品表单配置</div>
+
 ![订单表单金额配置](/img/cordys/user_manual/orderamount-setings.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  订单表单金额配置</div>
 
 ## 2 订单详情
 
-:::note
 
 点击订单名称，进入订单详情页面，用户可根据订单跟进情况修改订单状态。
-:::
 
 ![订单流](/img/cordys/user_manual/orderflow.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  订单详情</div>
+
 ## 3 状态流高级流转配置
 
-:::note
 
 涉及页面：合同阶段、订单状态。
-:::
 
 ### 3.1 订单状态流交互变更
 
-:::note
 
 - 原有交互拆分为状态配置和流转配置
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu1.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  订单流</div>
+
 ### 3.2 流转配置
 
-:::note
 
 流转配置支持基础流转和高级流转功能
 
 - 原状态回退配置变更为基础流转，逻辑不变。
 - 基础流转和高级流转为单选功能，若切换模式，则流转规则以选中的模式生效。
     - 切换模式需二次确认：“切换模式后，当前模式配置将丢失，切换后的模式将成为生效规则，是否确认切换？”。
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  订单流</div>
+
 ### 3.3 高级流转
 
-:::note
 
 高级流转：对不同状态之间的流转规则进行灵活配置。
 
@@ -95,13 +96,13 @@ title: 销售订单管理
 - 系统默认规则
     - 每个源状态默认允许流转至自身（如「从【新建】可流转到【新建】」默认勾选）， **不支持用户取消** 勾选。
 - 每个已勾选的流转路径右侧提供设置图标（⚙️），点击后弹出「流转配置」弹窗。
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu3.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  订单流</div>
+
 ### 3.4 流转配置弹窗
 
-:::note
 
 流转配置弹窗：设置流转的附件字段。
 
@@ -114,21 +115,23 @@ title: 销售订单管理
     - 固定值：可以自定义默认值
         - 选项类型的字段，固定值为选择项
 - 支持删除配置行。
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu4.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  订单流</div>
+
 
 空状态：
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu5.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  订单流</div>
 ![订单流](/img/cordys/user_manual/zhuangtailiu6.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  订单流</div>
 
 ### 3.5 流转状态
 
-:::note
 
 切换状态时判断是否有编辑权限：
 
@@ -137,6 +140,7 @@ title: 销售订单管理
     - 非可流转状态，hover提示“「待发货」不允许流转至「申请发货」，请联系管理员进行流转配置”。
     - 是可流转状态，则弹出窗口获取流转配置的字段，一个字段一行，可修改（示例：联系人电话、收货地址（必填）），流转必填项需校验必填；未配置流转配置字段则直接切换状态成功。
         - 注：字段默认值为字段值，则展示该字段的实际值；字段默认为固定值则展示配置的固定值，均可修改。
-:::
 
 ![订单流](/img/cordys/user_manual/zhuangtailiu7.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  订单流</div>

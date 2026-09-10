@@ -4,18 +4,17 @@ title: 企业微信集成配置
 
 ## 1 企业微信配置
 
-:::note
 
 **1 企业微信管理员权限**
 
 需要使用“企业微信管理员账号”（或具有通讯录管理权限的子管理员），普通成员账号没有权限创建应用或同步通讯录。
 
 **2 登录** [企业微信管理后台](https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome)
-:::
 
 ![企业微信管理后台](/img/cordys/user_manual/wecom_bg.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  企业微信管理后台</div>
+
 
 **3 配置通讯录 API 权限**
 
@@ -23,11 +22,11 @@ title: 企业微信集成配置
 
   - 通讯录组织架构只读（同步组织结构）
   - 通讯录组织架构读写（创建/修改部门和成员）
-:::
 
 ![配置](/img/cordys/user_manual/wecom-settings.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  配置通讯录 API 权限</div>
+
 
 **4 创建应用并获取凭证**
 
@@ -36,23 +35,25 @@ title: 企业微信集成配置
  - 企业 ID（CorpID）
  - 应用的 AgentId
  - 应用的 Secret
-:::
 
 ![配置](/img/cordys/user_manual/wecom_app.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  创建应用并获取凭证步骤1</div>
 ![配置](/img/cordys/user_manual/wecom_app_create.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 创建应用并获取凭证步骤2</div>
+
 
 **5 安全配置**
 
   - 配置应用的"可信 IP 白名单"，确保调用 API 时不被拒绝
   - 部署 HTTPS 服务
   - 配置回调 URL
-:::
 
 ![配置](/img/cordys/user_manual/wecom_app_config.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  安全配置</div>
+
 
  **域名归属认证说明**
 
@@ -82,11 +83,11 @@ title: 企业微信集成配置
          return 200 'Cv9TeWwxxxjAMOak';  # 该内容为企业微信验证文件中的实际文本
      }
      ```
-:::
 
 ![配置](/img/cordys/user_manual/wecom_app_domain.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  设置可信任域名</div>
+
 
 **5 数据准备**
 
@@ -98,7 +99,6 @@ title: 企业微信集成配置
 **注意:**
 - 手机号、邮箱等敏感字段默认不会在组织架构同步中返回，如需获取需额外授权；
 - 如果要使用 【组织架构同步】和【OAuth2 认证】功能 Cordys CRM 部署地址必须是可信域名，不能使用 IP 地址或自己做的内网穿透地址。
-:::
 
 ## 2 Cordys CRM 配置同步组织架构
 
@@ -106,20 +106,21 @@ title: 企业微信集成配置
 
 ![开启同步开关示意图](/img/cordys/user_manual/wecom-enable2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  开启同步开关示意图</div>
+
 ### 2.2 同步企业微信组织架构
 
-:::note
 
 1. 点击【系统】菜单，进入【组织架构】页面
 2. 点击「更多」按钮下的「企业微信同步」选项，系统将自动触发同步流程
 3. 同步完成后，页面左侧的组织架构区域将自动展示从企业微信同步过来的完整组织架构
 
 **后续维护说明**：当企业微信中新增成员或调整组织架构后，只需重复执行上述「企业微信同步」操作，即可完成最新组织架构的更新。
-:::
 
 ![同步组织架构](/img/cordys/user_manual/wecom-sync2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  同步组织架构</div>
+
 
  **重要提醒：**
 
@@ -128,9 +129,12 @@ title: 企业微信集成配置
    - 同步通讯录接口仅返回组织架构和成员基础信息，不会包含手机号、邮箱等敏感字段。  
      
  官方文档：[通讯录同步](https://developer.work.weixin.qq.com/document/path/91039)
-:::
 
 ## 3 企业微信工作台访问 Cordys CRM
 
 ![工作台访问](/img/cordys/user_manual/wecom_workbench2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  工作台访问</div>
 ![移动端界面](/img/cordys/user_manual/wecom_workbench_main2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  移动端界面</div>

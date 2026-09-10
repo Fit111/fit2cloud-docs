@@ -2,42 +2,42 @@
 title: 集成 DataEase 进行数据分析
 ---
 
-:::note
 
  **注意**：需要用到 DataEase 的商业版本（嵌入式/专业版/企业版），请参考：[DataEase 版本说明](https://dataease.cn/versions.html)
-:::
 
 ## 1 获取 DataEase 对接信息
 
-:::note
 
 在 DataEase 系统中获取必要的对接参数和配置信息。
-:::
 
 ![DataEase 对接信息](/img/cordys/user_manual/dataease-connection-info.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  DataEase 对接信息</div>
+
 ![DataEase 配置参数](/img/cordys/user_manual/dataease-config-params.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  DataEase 配置参数</div>
 
 ## 2 配置 DataEase 跨域设置
 
-:::note
 
 为确保 Cordys CRM 能够正常访问 DataEase，需要在 DataEase 中配置跨域设置。
 ![DataEase 跨域设置](/img/cordys/user_manual/dataease-cors-config.png)
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  DataEase 跨域设置</div>
 
 ## 3 Cordys CRM 页面配置
 
-:::note
 
 在 Cordys CRM 系统中配置 DataEase 集成设置：
 
 1. 登录 Cordys CRM 系统
 2. 进入【系统】&gt;【企业设置】&gt;【三方设置】
 3. 配置 DataEase 相关参数
-:::
 
 ![Cordys CRM 配置](/img/cordys/user_manual/cordys-dataease-config.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  Cordys CRM 页面配置</div>
 
 ---
 
@@ -47,15 +47,16 @@ title: 集成 DataEase 进行数据分析
 
 ![仪表板权限设置](/img/cordys/user_manual/dashboard-permissions.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  仪表板权限设置</div>
+
 ## 5 数据同步
-:::note
 
 在 【系统】&gt;【企业设置】&gt;【三方设置】&gt;【DataEase】中点击同步，即可将 Cordys CRM 中用户、角色、部门等的信息同步到 DataEase 中，配置页面也可以配置定时同步。
-:::
 ![仪表板权限设置](/img/cordys/user_manual/dataease-sync.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  数据同步</div>
+
 ## 6 编写通用数据集
-:::note
 
 Cordys CRM 通过数据权限的设计，使得不同角色能够访问到不同数据范围的数据；经过数据同步后，DataEase 会创建对应的用户与角色，并且创建数据权限和部门ID的系统变量，用户可以在编写数据集时，使用这些变量过滤数据，确保用户只能访问到有权限的数据。
 
@@ -145,22 +146,21 @@ and
     1=2
 )
 ```
-:::
 
 ## 7 DataEase 对接效果
 
 ### 7.1 外链集成
-:::note
 
 通过外链方式集成 DataEase 仪表板，用户可以在 Cordys CRM 中点击链接跳转查看数据分析结果。
-:::
 
 ![外链集成效果](/img/cordys/user_manual/dataease-external-link.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  外链集成效果</div>
+
 ### 7.2 模块嵌入
-:::note
 
 将 DataEase 仪表板直接嵌入到 Cordys CRM 的相关模块中，实现无缝数据分析体验。
-:::
 
 ![模块嵌入效果](/img/cordys/user_manual/dataease-module-embed.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  模块嵌入效果</div>

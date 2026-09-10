@@ -4,7 +4,6 @@ title: 命令行工具
 
 ## 1 Cordys CRM Service
 
-:::note
 
 Cordys CRM 在安装的时候默认向系统中添加了相应的 Cordys CRM Service，支持的 Service 命令有：
 
@@ -14,11 +13,9 @@ Cordys CRM 在安装的时候默认向系统中添加了相应的 Cordys CRM Ser
 - status : 查看 Cordys CRM 服务当前各容器运行状态
 - reload : 重载 Cordys CRM 服务配置文件
 - uninstall : 卸载 Cordys CRM 服务，相关文件和数据会保留
-:::
 
 ## 2 csctl
 
-:::note
 
 Cordys CRM 默认内置了命令行运维工具（csctl），通过执行 csctl help 命令，可以查看相关的帮助文档。
 
@@ -36,4 +33,3 @@ Commands:
     version               查看 Cordys CRM 版本
     uninstall             卸载 Cordys CRM 服务
 ```
-:::
