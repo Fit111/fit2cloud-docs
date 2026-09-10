@@ -14,13 +14,11 @@
 |------|------|----------|
 | 1Panel · AI 网关 | 1Panel AI 网关 | https://docs.fit2cloud.com/ai-gateway/ |
 | 1Panel | 现代化、开源的 Linux 服务器运维面板 | https://docs.fit2cloud.com/1panel/ |
-| JumpServer | 广受欢迎的开源堡垒机（运维安全审计系统） | https://docs.jumpserver.org/zh/v4/ |
-| DataEase | 人人可用的开源 BI 数据分析工具 | https://dataease.cn/docs/v2/ |
-| MaxKB | 强大易用的企业级智能体平台 | https://maxkb.cn/docs/v2/ |
-| SQLBot | 基于大模型的智能问数系统 | https://sqlbot.org/docs/v1/ |
-| Cordys CRM | 新一代开源 AI CRM 客户管理系统 | https://cordys.cn/docs/ |
-| MeterSphere | 新一代的开源持续测试工具 | https://metersphere.io/docs/v3.x/ |
-| Halo | 强大易用的开源建站工具 | https://docs.halo.run/ |
+| JumpServer | 广受欢迎的开源堡垒机（运维安全审计系统） | https://docs.fit2cloud.com/jumpserver/ |
+| DataEase | 人人可用的开源 BI 数据分析工具 | https://docs.fit2cloud.com/dataease/ |
+| MaxKB | 强大易用的企业级智能体平台 | https://docs.fit2cloud.com/maxkb/ |
+| SQLBot | 基于大模型的智能问数系统 | https://docs.fit2cloud.com/sqlbot/ |
+| Cordys CRM | 新一代开源 AI CRM 客户管理系统 | https://docs.fit2cloud.com/cordys/ |
 
 ## 技术栈
 
@@ -38,6 +36,8 @@ fit2cloud-docs/
 ├── dataease-docs/         # DataEase 文档
 ├── jumpserver-docs/       # JumpServer 文档
 ├── maxkb-docs/            # MaxKB 文档
+├── cordys-docs/           # CordysCRM 文档
+├── sqlbot-docs/           # SQLBot 文档
 ├── i18n/                  # 国际化内容（中/英）
 ├── docs/                  # 通用文档
 ├── sidebars.js            # 侧边栏配置
