@@ -4,18 +4,14 @@ title: JumpServer 环境整合
 
 ## 1 操作过程
 ### 1.1 编辑配置文件
-:::note
 
 ```bash
 vi /etc/nginx/conf.d/jumpserver.conf
 ```
-:::
 
 ### 1.2 选择部署方式
-:::note
 
 ### 源代码部署
-:::
 
 ```nginx
 server {

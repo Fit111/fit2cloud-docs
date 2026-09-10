@@ -2,17 +2,13 @@
 title: LDAP
 ---
 
-:::note[提示]
 
 - LDAP 支持 使用 LDAP 与 Windows AD 的用户作为 JumpServer 登录用户。
-:::
 
 ## 1 LDAP 配置
-:::note
 
 - 可选 LDAP 或 LDAPS 来进行配置。
 ### LDAP
-:::
 
     
 | name        | explain                                           |
@@ -43,29 +39,21 @@ title: LDAP
 :::
 
 ## 2 选项说明
-:::note
 
 - `DN` 一定要是完整的DN，不能跳过OU，可以使用其他工具查询  
 - `cn=admin,ou=aaa,dc=jumpserver,dc=org` 或者用 `user@domain.com` 形式
-:::
 
-:::note
 
 - `用户OU` 用户OU可以只写顶层OU，不写子OU  
 - `ou=aaa,ou=bbb,ou=ccc,dc=jumpserver,dc=org`，可以只写 `ou=ccc,dc=jumpserver,dc=org`
-:::
 
-:::note
 
 - `用户过滤器` 根据规则到 `用户OU` 里面去检索用户，支持 memberof  
 - `(uid=%(user)s)` 或 `(sAMAccountName=%(user)s)`
-:::
 
-:::note
 
 - `LADP属性映射` username name email 这三项不可修改删除  
 - `{"username": "uid", "name": "sn", "email": "mail"}` 或 `{"username": "sAMAccountName", "name": "cn", "email": "mail"}`
-:::
 
 :::warning[注意]
 
@@ -73,7 +61,6 @@ title: LDAP
 :::
 
 ## 3 参数说明
-:::note
 
 - LDAP 的部分功能在 jumpserver/config/config.txt 进行设置
 - LDAP 参数说明如下：
@@ -98,4 +85,3 @@ AUTH_LDAP_USER_LOGIN_ONLY_IN_USERS=False
 # In order to perform this operation a successful bind must be completed on the connection
 AUTH_LDAP_OPTIONS_OPT_REFERRALS=-1
 ```
-:::

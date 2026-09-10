@@ -2,25 +2,20 @@
 title: 部署 Elasticsearch 服务
 ---
 
-:::note[提示]
 
 - 集群部署请参考 (https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
-:::
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - Elasticsearch 服务器信息如下: 
 
 ```sh 
 192.168.100.51
 ```
-:::
 
 ## 2 安装配置 Docker 环境
 ### 2.1 安装 Docker
-:::note
 
 ```sh
 yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -29,10 +24,8 @@ sed -i 's+download.docker.com+mirrors.aliyun.com/docker-ce+' /etc/yum.repos.d/do
 yum makecache fast
 yum -y install docker-ce
 ```
-:::
 
 ### 2.2 配置 Docker
-:::note
 
 ```sh
 mkdir /etc/docker/
@@ -46,20 +39,16 @@ vi /etc/docker/daemon.json
   "log-opts": {"max-file": "3", "max-size": "10m"}
 }
 ```
-:::
 
 ### 2.3 启动 Docker
-:::note
 
 ```sh
 systemctl enable docker
 systemctl start docker
 ```
-:::
 
 ## 3 安装配置 Elasticsearch
 ### 3.1 下载 Elasticsearch 镜像
-:::note
 
 ```sh
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.17.6
@@ -76,18 +65,14 @@ Digest: sha256:81c126e4eddbc5576285670cb3e23d7ef7892ee5e757d6d9ba870b6fe99f1219
 Status: Downloaded newer image for docker.elastic.co/elasticsearch/elasticsearch:7.17.6
 docker.elastic.co/elasticsearch/elasticsearch:7.17.6
 ```
-:::
 
 ### 3.2 Elasticsearch 持久化数据目录创建
-:::note
 
 ```sh
 mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 ```
-:::
 
 ### 3.3 启动 Elasticsearch 服务
-:::note
 
 ```vim
 ## 请自行修改账号密码并牢记，丢失后可以删掉容器后重新用新密码创建，数据不会丢失
@@ -104,10 +89,8 @@ mkdir -p /opt/jumpserver/elasticsearch/data /opt/jumpserver/elasticsearch/logs
 ```sh
 docker run --name jms_es -d -p 9200:9200 -p 9300:9300 -e cluster.name=docker-cluster -e discovery.type=single-node -e network.host=0.0.0.0 -e bootstrap.memory_lock="true" -e xpack.security.enabled="true" -e TAKE_FILE_OWNERSHIP="true" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" -e ELASTIC_PASSWORD=KXOeyNgDeTdpeu9q -v /opt/jumpserver/elasticsearch/data:/usr/share/elasticsearch/data -v /opt/jumpserver/elasticsearch/logs:/usr/share/elasticsearch/logs --restart=always docker.elastic.co/elasticsearch/elasticsearch:7.17.6
 ```
-:::
 
 ### 3.4 在 JumpServer 中配置 Elasticsearch 
-:::note
 
 - 访问 JumpServer Web 页面并使用管理员账号进行登录。
 - 点击左侧菜单栏的 [终端管理]，在页面的上方选择 [存储配置]，在 [命令存储] 下方选择 [创建] 选择 [Elasticsearch]
@@ -121,4 +104,3 @@ docker run --name jms_es -d -p 9200:9200 -p 9300:9300 -e cluster.name=docker-clu
 | 索引 (Index)    | jumpserver                                          | 索引                   |
 | 忽略证书认证    |                                                     | https 自签 ssl 需要勾选 |
 | 默认存储        |                                                     | 新组件将自动使用该存储   |
-:::

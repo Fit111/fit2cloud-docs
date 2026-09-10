@@ -6,7 +6,6 @@ title: Redis SSL 连接
 ### 1.1 准备数据库 CA 文件
 ### 方式一
 
-:::note
 
 - 准备好 Redis ca 文件 (云服务商一般只提供 ca 文件)
 
@@ -21,10 +20,8 @@ cp redis_ca.crt /opt/jumpserver/config/certs/redis_ca.crt
 # . /opt/jumpserver/config/config.txt
 # redis-cli --tls --cacert /opt/jumpserver/config/certs/redis_ca.crt -h $REDIS_HOST -p $REDIS_PORT -a $REDIS_PASSWORD info
 ```
-:::
 ### 方式二
 
-:::note
 
 - 准备好 Redis ca 文件、私钥和证书 (自签证书)
 
@@ -41,9 +38,7 @@ cp redis_client.key /opt/jumpserver/config/certs/redis_client.key
 # . /opt/jumpserver/config/config.txt
 # redis-cli --tls --cacert /opt/jumpserver/config/certs/redis_ca.crt --cert /opt/jumpserver/config/certs/redis_client.crt --key /opt/jumpserver/config/certs/redis_client.key -h $REDIS_HOST -p $REDIS_PORT -a $REDIS_PASSWORD info
 ```
-:::
 ### 1.2 编辑配置文件
-:::note
 
 - 打开配置文件。
 
@@ -57,17 +52,14 @@ vi /opt/jumpserver/config/config.txt
 ```vim
 REDIS_USE_SSL=True
 ```
-:::
 
 ### 1.3 重启 JumpServer 服务
-:::note
 
 ```bash
 cd /opt/jumpserver-installer-v3.10.21
 ./jmsctl.sh down
 ./jmsctl.sh start
 ```
-:::
 
 :::warning[其他方式部署的 JumpServer 请将 Redis SSL 证书放到各组件 data/certs 目录重启即可]
 

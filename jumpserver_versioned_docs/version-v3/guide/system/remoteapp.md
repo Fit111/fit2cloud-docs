@@ -2,79 +2,54 @@
 title: 远程应用
 ---
 
-:::note[注：社区版只支持 Website 方式。]
 
-:::
 ## 1 功能简述
-:::note
 
 - 远程应用（RemoteApp）功能是微软在 Windows Server 2008之后，在其系统中集成的一项服务功能，使用户可以通过远程桌面访问远端的桌面与程序，客户端本机无须安装系统与应用程序的情况下也能正常使用远端发布的各种的桌面与应用。
-:::
 ![remoteapp03](/img/jumpserver-v3/remoteapp03.png)
 
 ## 2 应用发布机
-:::note
 
 - RemoteApp 功能需准备应用发布机环境来进行支持。
 - 应用发布机是用来运行 Web 页面资产或者使用远程应用 Navicat 连接数据的程序运行主体。
-:::
 
 ### 2.1 版本要求
-:::note
 
 - 应用发布机为 Windows Server 服务器，具体版本要求如下：
-:::
 
-:::note
 
 | Windows Server 2016 | Windows Server 2019 |
 | ------------------------------------------------ | ----------------------------------------------- |
 | ✓                                  | ✓                                |
-:::
 
 ### 2.2 创建应用发布机
-:::note
 
 - 点击应用发布机页面的`创建`按钮即新建一个应用发布机。
-:::
 ![remoteapp04](/img/jumpserver-v3/remoteapp04.png)
 
-:::note
 
 - 我们支持通过 WinRM 和 OpenSSH 的协议进行应用发布机的部署（推荐使用 Windows-Server 自带的 WinRM 服务）
-:::
 
 ### WinRM
 
-:::note
 
 - 通过 WinRM 协议部署应用发布机，在创建应用发布机页面新增 WinRM 协议即可。
-:::
 ![remoteapp18](/img/jumpserver-v3/remoteapp18.png)
 
-:::note
 
 - WinRM 配置完成。
-:::
 ### OpenSSH
 
-:::note
 
 - 通过 OpenSSH 协议部署应用发布机需要安装 OpenSSH 协议，可以在 JumpServer 页面 - `Web终端` - `帮助` - `下载` 页面找到 OpenSSH 安装包。
-:::
 ![remoteapp01](/img/jumpserver-v3/remoteapp01.png)
 
-:::note
 
 - OpenSSH 安装包传到应用发布机桌面后，双击进行安装。
-:::
 ![remoteapp02](/img/jumpserver-v3/remoteapp02.png)
 
-:::note
 
 - OpenSSH 配置完成。
-:::
-:::note
 
 - 详细参数说明：
 
@@ -93,25 +68,19 @@ title: 远程应用
 | RDS 单用户单会话 | 选择"禁用"或"启用"设置单用户单会话模式。 <br /> A.禁用：允许每个用户可以同时多台客户端电脑连接服务器远程桌面。 <br />  B.启用：禁止每个用户可以同时多台客户端电脑连接服务器远程桌面。 |
 | RDS 最大断开时间 | 如果某个会话连接达到了此最大时间，连接即断开。 |
 | RDS 远程应用注销时间限制 | 远程应用会话断开后的注销时间。 |
-:::
 
 ### 2.3 部署应用发布机
-:::note
 
 - 创建应用发布机后需手动执行应用发布机部署，安装 Python、Chrome、Navicat、DBeaver 或自定义远程应用。
 - 点击`应用发布机名称`按钮进入应用发布机详情页中，选择`发布机部署`页签，点击快速更新模块的`初始化部署`按钮，初始化应用发布机。
-:::
 ![remoteapp05](/img/jumpserver-v3/remoteapp05.png)
 
 ### 2.4 查看应用发布机详情
-:::note
 
 - 点击`应用发布机名称`按钮进入应用发布机详情页中。
 - 此页面包含应用发布机详情信息，包括：远程应用发布机帐号列表、远程应用、发布机部署记录等。
-:::
 ![remoteapp06](/img/jumpserver-v3/remoteapp06.png)
 
-:::note
 
 - 详细参数说明：
 
@@ -122,122 +91,90 @@ title: 远程应用
 | 远程应用 | 该模块中包含默认的远程应用与自建的远程应用信息，在该模块可直接对远程应用进行部署。 |
 | 发布机部署 | 该模块中主要用于远程应用发布机的初始化部署，以及部署日志的查看。 |
 | 活动记录 | 该模块中记录了远程应用发布机的活动记录信息，点击可查看活动详情。 |
-:::
 
 ## 3 远程应用
-:::note
 
 - 支持 Windows-Server 系统作为远程应用发布机。
 - 创建远程应用资源，实现远程访问目标资源，并实现密码代填功能。
 - 当前举例访问 JumpServer 页面过程（实现密码代填）
-:::
 
 ### 3.1 创建 Website 资产
-:::note
 
 - 点击切换至`控制台`视图`资产管理` - `资产列表` 页面中。
 - 选中 `Web` 页签，点击创建 Website 资产。
-:::
 ![remoteapp08](/img/jumpserver-v3/remoteapp08.png)
 
-:::note
 
 - 其中 `选择器` 参数，需要根据目标 Url 页面中的代码参数中获取。
 - 我们通过 `F12` 打开目标 Url 的开发者工具页面，步骤如下图：
-:::
 ![remoteapp09](/img/jumpserver-v3/remoteapp09.png)
 
-:::note
 
 - 把获取到的参数填写至创建的目标 Website 资产，参考当前页面`3.1 标题`第一张图片。
-:::
 
 ### 3.2 创建资产授权规则
-:::note
 
 - 点击切换至`权限管理` - `资产授权` 页面中。
 - 创建新的授权规则，如下图：
-:::
 ![remoteapp10](/img/jumpserver-v3/remoteapp10.png)
 
 ### 3.3 访问 Website 资产
-:::note
 
 - 支持通过 `Web终端` 选中目标 Website 资产访问。
 - 支持通过本地客户端方式访问 Website 资产，安装 JumpServer 客户端程序，可在 JumpServer 页面 - `Web终端` - `帮助` - `下载` 页面找到安装包。
-:::
 ![remoteapp11](/img/jumpserver-v3/remoteapp11.png)
 
 ### 3.4 页面效果
-:::note
 
 - 当前为远程应用页面访问效果图：
-:::
 ![remoteapp07](/img/jumpserver-v3/remoteapp07.png)
 
 ## 4 虚拟应用
-:::note
 
 - 支持 Linux 系统作为远程应用发布机。
 - 创建远程应用资源，实现远程访问目标资源，并实现密码代填功能。
 - 当前举例访问 JumpServer 页面过程（实现密码代填）
-:::
 
 ### 4.1 功能启用
-:::note
 
 - 点击`系统设置` - `功能设置` - `虚拟应用`页签启用虚拟应用功能。
-:::
 ![remoteapp12](/img/jumpserver-v3/remoteapp12.png)
 
-:::note
 
 - 功能启用后，可以在`系统设置` - `远程应用`模块中看到`虚拟应用`和`应用提供者`页签。
-:::
 ![remoteapp13](/img/jumpserver-v3/remoteapp13.png)
 
 ### 4.2 上传应用
-:::note
 
 - 点击`虚拟应用`的页签，上传需要发布的应用，当前举例应用为 Chrome。
-:::
 ![remoteapp14](/img/jumpserver-v3/remoteapp14.png)
 
-:::note
 
 - 上传虚拟应用后，Panda 组件会同步这个应用配置的镜像，目前同步方式为自动同步，默认每5分钟一次，支持修改时间间隔。
 - 点击`应用提供者`页签中的列表名称后跳转同步状态页。
-:::
 ![remoteapp15](/img/jumpserver-v3/remoteapp15.png)
 
 ### 4.3 创建 Website 资产
-:::note
 
 - 点击切换至`控制台`视图`资产管理` - `资产列表` 页面中。
 - 选中 `Web` 页签，点击创建 Website 资产。
-:::
 ![remoteapp08](/img/jumpserver-v3/remoteapp08.png)
 
 ### 4.4 创建资产授权规则
-:::note
 
 - 点击切换至`权限管理` - `资产授权` 页面中。
 - 创建新的授权规则，如下图：
-:::
 ![remoteapp10](/img/jumpserver-v3/remoteapp10.png)
 
 ### 4.5 访问 Website 资产
-:::note
 
 - 支持通过 `Web终端` 选中目标 Website 资产访问（如下图）。
 - 支持通过本地客户端方式访问 Website 资产，安装 JumpServer 客户端程序，可在 JumpServer 页面 - `Web终端` - `帮助` - `下载` 页面找到安装包。
-:::
 ![remoteapp16](/img/jumpserver-v3/remoteapp16.png)
 ![remoteapp17](/img/jumpserver-v3/remoteapp17.png)
 
 ## 5 自定义 Applet
 ### 5.1 Applet 介绍
-:::note
 
 - Applet 是一个包含 Python 脚本的目录，必须至少包含以下文件：
 
@@ -248,9 +185,7 @@ title: 远程应用
 ├── manifest.yml
 └── setup.yml
 ```
-:::
 
-:::note
 
 - 文件名称作用说明：
 
@@ -261,10 +196,8 @@ title: 远程应用
 | manifest.yml | Applet 的元数据。 |
 | setup.yml | 拉起程序的安装描述。 |
 | i18n.yml | 对 manifest.yml 的国际化文件。 |
-:::
 
 ### 5.2 元数据 manifest.yml
-:::note
 
 - manifest.yml 定义了 Applet 的元数据，如名称、作者、版本、支持的协议。
 
@@ -282,9 +215,7 @@ tags: (required）
 protocols: (required）
   - mysql
 ```
-:::
 
-:::note
 
 - 详细字段说明：
 
@@ -295,10 +226,8 @@ protocols: (required）
 | tags | 一些标签。 |
 | type | 主要是 General 或 Web。 |
 | i18n.yml | 对 manifest.yml 的国际化文件。 |
-:::
 
 ### 5.3 安装条件 setup.yml
-:::note
 
 - setup.yml 定义了 Applet 拉起程序的安装方式。
 
@@ -312,9 +241,7 @@ destination: C:\Program Files\MySQL\MySQL Workbench 8.0 CE
 program: C:\Program Files\MySQL\MySQL Workbench 8.0 CE\MySQLWorkbench.exe
 md5: d628190252133c06dad399657666974a
 ```
-:::
 
-:::note
 
 - 详细字段说明：
 
@@ -326,15 +253,11 @@ md5: d628190252133c06dad399657666974a
 | destination | 程序安装目录地址。 |
 | program | 具体的软件地址。 |
 | md5 | program 软件的 md5 值，主要用于校验安装是否成功。 |
-:::
 
-:::note
 
 - 如果选择 manual 的方式，source 等保持为空，可不校验 MD5 值，需要手动登录 Applet host（应用发布机）上安装软件。
-:::
 
 ### 5.4 脚本执行 main.py
-:::note
 
 - main.py 是 Python 脚本主程序。
 - JumpServer 的 Remoteapp 程序 tinker 将通过调用 python main.py base64_json_data 的方式执行。
@@ -371,4 +294,3 @@ md5: d628190252133c06dad399657666974a
   }
 }
 ```
-:::

@@ -3,13 +3,10 @@ title: Lion 环境部署
 ---
 
 ## 1 Lion 组件简述
-:::note
 
 [Lion][lion] 使用了 [Apache][apache] 软件基金会的开源项目 [Guacamole][guacamole]，JumpServer 使用 Golang 和 Vue 重构了 Guacamole 实现 RDP/VNC 协议跳板机功能。
-:::
 
 ### 1.1 环境要求
-:::note
 
 | Name    | JumpServer               | Guacd                  |  Lion                    |
 | :------ | :----------------------- | :--------------------- | :----------------------- |
@@ -28,14 +25,12 @@ cd guacamole-server-1.4.0/
 - 参考 [building-guacamole-server][building-guacamole-server] 官方文档，安装对应操作系统的依赖包。
 
 ### Ubuntu 20.04
-:::
 
 ```bash
 apt-get install -y libcairo2-dev libjpeg-turbo8-dev libpng-dev libtool-bin libossp-uuid-dev
 apt-get install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev freerdp2-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev libwebsockets-dev     libpulse-dev libssl-dev libvorbis-dev libwebp-dev
 ```
 ### 1.2 构建 Guacd
-:::note
 
 ```bash
 ./configure --with-init-dir=/etc/init.d
@@ -45,10 +40,8 @@ ldconfig
 ```
 
 - 如果希望使用 systemd 管理, 可以使用 ./configure --with-systemd-dir=/etc/systemd/system/
-:::
 
 ### 1.3 下载 Lion
-:::note
 
 - 可以从 [Github][lion] 网站上获取最新的 [Release][lion_release] 副本。
 
@@ -59,12 +52,9 @@ ldconfig
 | Linux   | loong64 | [lion-v3.10.21-linux-loong64.tar.gz][lion-v3.10.21-linux-loong64] |
 | Darwin  | amd64   | [lion-v3.10.21-darwin-amd64.tar.gz][lion-v3.10.21-darwin-amd64]   |
 | Windows | amd64   | [lion-v3.10.21-windows-amd64.tar.gz][lion-v3.10.21-windows-amd64] |
-:::
 
-:::note
 
 ### Linux/amd64
-:::
 
 ```bash
 cd /opt
@@ -81,7 +71,6 @@ tar -xf lion-v3.10.21-linux-arm64.tar.gz
 cd lion-v3.10.21-linux-arm64
 ```
 ### 1.4 修改配置文件
-:::note
 
 ```bash
 cp config_example.yml config.yml
@@ -122,23 +111,18 @@ LOG_LEVEL: DEBUG           # 开发建议设置 DEBUG, 生产环境推荐使用 
 # REDIS_PASSWORD:
 # REDIS_DB_ROOM:
 ```
-:::
 
 ### 1.5 启动 Guacd
-:::note
 
 ```bash
 /etc/init.d/guacd start
 ```
-:::
 
 ### 1.6 启动 Lion
-:::note
 
 ```bash
 ./lion
 ```
-:::
 
 [nginx]: http://nginx.org/
 [lina]: https://github.com/jumpserver/lina/

@@ -34,14 +34,11 @@ title: 产品介绍
 :::
 
 ## 1 JumpServer 是什么？
-:::note
 
 JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。JumpServer 帮助企业以更安全的方式管控和登录所有类型的资产，实现事前授权、事中监察、事后审计，满足等保合规要求。
-:::
 
 ![index_02](/img/jumpserver-v3/jumpserver-arch-light.png)
 
-:::note
 
 JumpServer 堡垒机支持的资产类型包括：
 
@@ -53,13 +50,11 @@ JumpServer 堡垒机支持的资产类型包括：
 - 云服务 (Kubernetes / VMware vSphere 等)
 - Web 站点 (各类系统的 Web 管理后台)
 - 应用 (通过 Remote App 连接各类应用)
-:::
 
-:::note[文档指引]
 
-- **JumpServer 介绍**    
+**JumpServer 介绍**    
 
-     [**产品简介**](/jumpserver/v3/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**安装部署**](installation/setup_linux_standalone/requirements) &emsp;&emsp;&emsp;&emsp;&emsp;  [**体验环境**](https://demo.jumpserver.org/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**企业试用**](https://jinshuju.net/f/kyOYpi) &emsp;&emsp;&emsp;&emsp;&emsp;  [**社区论坛**](https://bbs.fit2cloud.com/c/js/5)
+    &emsp;&emsp;&emsp;[**产品简介**](/jumpserver/v3/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**安装部署**](installation/setup_linux_standalone/requirements) &emsp;&emsp;&emsp;&emsp;&emsp;  [**体验环境**](https://demo.jumpserver.org/) &emsp;&emsp;&emsp;&emsp;&emsp;  [**企业试用**](https://jinshuju.net/f/kyOYpi) &emsp;&emsp;&emsp;&emsp;&emsp;  [**社区论坛**](https://bbs.fit2cloud.com/c/js/5)
 
   - **功能指南**
 
@@ -69,23 +64,21 @@ JumpServer 堡垒机支持的资产类型包括：
 
        [**文件管理**](guide/user/file_management) &emsp;&emsp;&emsp;&emsp;&emsp;  [**作业中心**](guide/user/ops/quick_command)   &emsp;&emsp;&emsp;&emsp;&emsp;  [**资产连接**](guide/user/web_terminal) &emsp;&emsp;&emsp;&emsp;&emsp;  [**系统设置**](guide/system/basic)
 
-- **企业应用（X-Pack）**
+  - **企业应用（X-Pack）**
 
-       [**资产登录复核**](guide/admin/permission/host_acls)  &emsp;&emsp;&emsp; [**连接方式控制**](guide/admin/permission/connect_method_acls)
+      [**资产登录复核**](guide/admin/permission/host_acls)  &emsp;&emsp;&emsp; [**连接方式控制**](guide/admin/permission/connect_method_acls)
 
-       [**工单**](guide/admin/admin_tickets) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; [**云同步**](guide/admin/asset/asset_list/#33)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  [**角色列表**](guide/admin/user/role_list)
+      [**工单**](guide/admin/admin_tickets) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; [**云同步**](guide/admin/asset/asset_list/#33)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  [**角色列表**](guide/admin/user/role_list)
 
-       [**帐号收集**](guide/admin/account/account_gather) &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号改密**](guide/admin/account/account_change_secret)  &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号备份**](guide/admin/account/account_backup) 
+      [**帐号收集**](guide/admin/account/account_gather) &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号改密**](guide/admin/account/account_change_secret)  &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号备份**](guide/admin/account/account_backup) 
 
-       [**短信设置**](guide/system/message/#2-x-pack)  &emsp;&emsp;&emsp;&emsp;&emsp; [**界面设置**](guide/system/index_logo)  &emsp;&emsp;&emsp;&emsp;&emsp; [**组织管理**](guide/system/organization)  &emsp;&emsp;&emsp;&emsp;&emsp; [**认证设置**](faq/faq/#4)
+      [**短信设置**](guide/system/message/#2-x-pack)  &emsp;&emsp;&emsp;&emsp;&emsp; [**界面设置**](guide/system/index_logo)  &emsp;&emsp;&emsp;&emsp;&emsp; [**组织管理**](guide/system/organization)  &emsp;&emsp;&emsp;&emsp;&emsp; [**认证设置**](faq/faq/#4)
 
- - **进阶学习** 
+  - **进阶学习** 
 
-       [**客户案例**](user_stories) &emsp;&emsp;&emsp;&emsp;&emsp;  [**视频学习**](https://space.bilibili.com/510493147/channel/collectiondetail?sid=1394720) &emsp;&emsp;&emsp;&emsp;&emsp;  [**更多实践**](https://kb.fit2cloud.com/categories/jumpserver)&emsp;
-:::
+        [**客户案例**](user_stories) &emsp;&emsp;&emsp;&emsp;&emsp;  [**视频学习**](https://space.bilibili.com/510493147/channel/collectiondetail?sid=1394720) &emsp;&emsp;&emsp;&emsp;&emsp;  [**更多实践**](https://kb.fit2cloud.com/categories/jumpserver)&emsp;
 
 ## 2 产品特色
-:::note
 
 JumpServer 的产品特色包括：
 
@@ -96,25 +89,19 @@ JumpServer 的产品特色包括：
 - 云端存储：审计录像云端存储，永不丢失；
 - 多租户：一套系统，多个子公司和部门同时使用；
 - 多应用支持：数据库，Windows 远程应用，Kubernetes。
-:::
 
 ## 3 页面展示
 ![界面展示](/img/jumpserver-v3/dashboard.png)
 
 ## 4 功能列表
-:::note
 
 - [JumpServer 堡垒机功能列表](https://www.jumpserver.org/features.html)
-:::
 
 ## 5 应用商店
-:::note
 
 JumpServer 的远程应用功能，社区版默认支持 Chrome、DBeaver 应用，企业版支持更丰富的远程应用，可点击 [应用商店](https://apps.fit2cloud.com/jumpserver) 来获取更多远程应用。
-:::
 
 ## 6 安全说明
-:::note
 
 JumpServer 是一款安全产品，请参考 [基本安全建议](faq/security) 部署安装。
 
@@ -123,21 +110,16 @@ JumpServer 是一款安全产品，请参考 [基本安全建议](faq/security) 
 - ibuler@fit2cloud.com
 - support@fit2cloud.com
 - 400-052-0755
-:::
 
 ## 7 商业产品
-:::note
 
 - [JumpServer 企业版](https://jumpserver.org/enterprise.html)
 - [JumpServer 一体机](https://jumpserver.org/hardware.html)
-:::
 
 ## 8 了解更多
-:::note
 
 - [如何向团队介绍 JumpServer？](https://www.fit2cloud.com/jumpserver/documents/introduce-jumpserver_202507.pdf)
 - [JumpServer 技术白皮书](https://whitepaper.jumpserver.org/)
 - [JumpServer 知识库](https://kb.fit2cloud.com/categories/jumpserver)
 - [FIT2CLOUD Bilibili 官方站](https://space.bilibili.com/510493147?spm_id_from=333.337.0.0)
 - [FIT2CLOUD 技术博客](https://blog.fit2cloud.com/)
-:::

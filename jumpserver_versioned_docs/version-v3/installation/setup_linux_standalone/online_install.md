@@ -2,15 +2,12 @@
 title: 在线安装
 ---
 
-:::note
 
 [JumpServer 部署环境要求可点击后进行参考](../setup_linux_standalone/requirements)
-:::
 ## 1. 安装部署
 
 ### 中国大陆
 
-:::note
 
 <div class="termy">
 ```console
@@ -27,10 +24,8 @@ $ curl -sSL https://resource.fit2cloud.com/jumpserver/jumpserver/releases/downlo
 For more commands, you can enter <span style="color: red;">jmsctl --help</span> to view help information.
 ```
 </div>
-:::
 ### 其他地区
 
-:::note
 
 <div class="termy">
 ```console
@@ -47,8 +42,6 @@ $ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v3.10.21/
 For more commands, you can enter <span style="color: red;">jmsctl --help</span> to view help information.
 ```
 </div>
-:::
-:::note[提示]
 
 - 首次安装后需要修改配置文件，定义 DOMAINS 字段后即可正常使用
 - 如果服务器是一键安装并且旧版本就已经使用 JumpServer 开启了 HTTPS，则不需要进行任何更改。
@@ -65,12 +58,8 @@ For more commands, you can enter <span style="color: red;">jmsctl --help</span> 
   # DOMAINS="demo.jumpserver.org,172.17.200.191"    # 使用 IP 和 域名一起访问
   DOMAINS=
 ```
-:::
 
-:::note[安装完成后 JumpServer 配置文件路径为： /opt/jumpserver/config/config.txt]
 
-:::
-:::note
 
 ```sh
 cd /opt/jumpserver-installer-v3.10.21
@@ -87,15 +76,12 @@ cd /opt/jumpserver-installer-v3.10.21
 # 帮助
 ./jmsctl.sh -h
 ```
-:::
 
 ## 2. 环境访问
-:::note[安装成功后，通过浏览器访问登录 JumpServer]
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
 用户名: admin
 密码: admin
 ```
-:::
 ![登录页面](/img/jumpserver-v3/online_install_01.png)
