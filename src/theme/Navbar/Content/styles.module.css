@@ -1,0 +1,43 @@
+/**
+ * Swizzle @theme/Navbar/Content 配套样式。
+ * navMenuBox: 左侧六个菜单项(首页/产品文档/官网/论坛/培训认证/关于我们)的容器盒子,
+ *   宽 508px / 高 22px。菜单项本身由 NavbarNavLink 渲染为 flex 项, 盒子内保持横排。
+ */
+.navMenuBox {
+  display: flex;
+  align-items: center;
+  width: 508px;
+  height: 22px;
+}
+
+/* 盒内六个菜单项相邻之间的间距加大 10px: gap 由默认 0 → 10px
+   (只作用于盒子内的项, 不加 padding, 不改变每项点击区域) */
+.navMenuBox {
+  gap: 10px;
+}
+
+/*
+窄屏隐藏左侧菜单盒: 移动端导航由汉堡侧边栏承担, 固定 508px 盒子在窄屏会挤破布局。
+ */
+@media (max-width: 996px) {
+  .navMenuBox {
+    display: none;
+  }
+}
+
+/*
+Hide color mode toggle in small viewports
+ */
+@media (max-width: 996px) {
+  .colorModeToggle {
+    display: none;
+  }
+}
+
+/*
+Restore some Infima style that broke with CSS Cascade Layers
+See https://github.com/facebook/docusaurus/pull/11142
+ */
+:global(.navbar__items--right) > :last-child {
+  padding-right: 0;
+}

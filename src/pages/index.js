@@ -77,9 +77,8 @@ const I18N = {
   zh: {
     title: '文档中心',
     subtitle: '我们秉持"软件用起来才有价值，才有改进机会"的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件',
-    searchPlaceholder: '请输入关键词回车检索，例如：飞致云',
+    searchPlaceholder: '请输入关键词回车检索，例如：1Panel 如何安装',
     searchBtn: '搜索',
-    productsTitle: '全部产品',
     enter: '进入文档',
   },
   en: {
@@ -97,12 +96,20 @@ const I18N = {
 };
 
 function Hero({site, zh}) {
+  const illustration = useBaseUrl('/img/index/hero-illustration.png');
   return (
     <section className={styles.hero}>
       {/* 背景光晕: 对应设计稿 Ellipse 1(#3370ff 10%) / Ellipse 2(#b459ff 5%) */}
       <span className={clsx(styles.heroDecor, styles.heroDecorBlue)} aria-hidden="true" />
       <span className={clsx(styles.heroDecor, styles.heroDecorPurple)} aria-hidden="true" />
       <div className={styles.heroInner}>
+        {/* 右侧插画: 高度锁到 hero 组件高度(340px)等比缩放, ≤996px 隐藏 */}
+        <img
+          src={illustration}
+          alt="FIT2CLOUD 文档中心"
+          className={styles.heroIllustration}
+          loading="eager"
+        />
         <h1 className={styles.heroTitle}>{site.title}</h1>
         <p className={styles.heroSubtitle}>{site.subtitle}</p>
         {/* 搜索框 + 输入后的即时结果下拉面板(Figma frame '交互' 的 Search + Frame 1564942) */}
@@ -155,15 +162,6 @@ function ProductsSection({site}) {
   );
 }
 
-function BottomBanner({site}) {
-  return (
-    <section className={styles.bottomBanner}>
-      <h2 className={styles.bottomTitle}>{site.bannerTitle}</h2>
-      <p className={styles.bottomSub}>{site.bannerSub}</p>
-    </section>
-  );
-}
-
 export default function Home() {
   const {i18n} = useDocusaurusContext();
   const zh = i18n.currentLocale === 'zh-Hans';
@@ -181,7 +179,6 @@ export default function Home() {
       <div className={styles.portalPage}>
         <Hero site={site} zh={zh} />
         <ProductsSection site={site} />
-        <BottomBanner site={site} />
       </div>
     </Layout>
   );

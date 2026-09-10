@@ -46,7 +46,7 @@
    - 版权三行 16px #6c7280 居中, 上方 1px 分隔线
    链接数据沿用 docusaurus.config.js 里维护的真实地址。 */
 .footer {
-  background: #f7fbff;
+  background: #eaf1ff; /* 主题浅蓝(与首页 hero 顶部同色), 与白色文档 panel 区分 */
   --ifm-footer-padding-vertical: 64px;
 }
 .footer__title {
@@ -132,39 +132,26 @@
   --ifm-alert-border-color: #00c853;
 }
 
-/* JumpServer 文档页：提示框左边框用官方文档主色（深青绿 #2b937c）。
-   由 src/clientModules/docsProduct.js 在该产品页给 <html data-docs-product='jumpserver'>
-   打标记, 仅 JumpServer 页生效, 不影响其他产品。 */
-html[data-docs-product='jumpserver'] .alert--secondary,
-html[data-docs-product='jumpserver'] .alert--success,
-html[data-docs-product='jumpserver'] .alert--info {
-  --ifm-alert-border-color: #2b937c;
-}
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--secondary,
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--success,
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--info {
-  --ifm-alert-border-color: #2b937c;
-}
 
 /* DataEase v2 / v3：去掉 note 正文的蓝色包边。
    两个版本都走 /dataease，docsProduct.js 会打 data-docs-product=dataease。
    只去掉边框和卡片底，:::note 结构与 warning 提示框保持不变。 */
-html[data-docs-product='dataease'] .theme-admonition-note,
-html[data-docs-product='dataease'] .alert--secondary {
-  --ifm-alert-border-color: transparent;
-  --ifm-alert-border-width: 0px;
-  --ifm-alert-border-left-width: 0px;
-  --ifm-alert-background-color: transparent;
-  border: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-[data-theme='dark'] html[data-docs-product='dataease'] .theme-admonition-note,
-[data-theme='dark'] html[data-docs-product='dataease'] .alert--secondary {
-  --ifm-alert-background-color: transparent;
-  background-color: transparent !important;
-}
+/*html[data-docs-product='dataease'] .theme-admonition-note,*/
+/*html[data-docs-product='dataease'] .alert--secondary {*/
+/*  --ifm-alert-border-color: transparent;*/
+/*  --ifm-alert-border-width: 0px;*/
+/*  --ifm-alert-border-left-width: 0px;*/
+/*  --ifm-alert-background-color: transparent;*/
+/*  border: none !important;*/
+/*  background-color: transparent !important;*/
+/*  box-shadow: none !important;*/
+/*  padding: 0 !important;*/
+/*}*/
+/*[data-theme='dark'] html[data-docs-product='dataease'] .theme-admonition-note,*/
+/*[data-theme='dark'] html[data-docs-product='dataease'] .alert--secondary {*/
+/*  --ifm-alert-background-color: transparent;*/
+/*  background-color: transparent !important;*/
+/*}*/
 
 /* 图用 Markdown ![alt](src)，水平居中且不超过正文栏。表拉满正文栏，表题与表同宽对齐。 */
 html[data-docs-product='dataease'] .theme-doc-markdown table {
@@ -361,6 +348,25 @@ aside.theme-doc-sidebar-container {
   --ifm-menu-link-padding-vertical: 0.25rem;
 }
 
+/* ===== 文档侧边栏分类展开小箭头: 缩小到原(1.25rem/背景2rem)的 0.5, 更小巧 =====
+   放在全局(不在 1272 断点内), 保证所有显示侧边栏的视口都生效。
+   箭头在分类链接(<Link class="menu__link menu__link--sublist[-caret]">)的 ::after 上,
+   由 Infima 变量 --ifm-menu-link-sublist-icon 提供 SVG 图标(元素 1.25rem、背景 2rem);
+   这里用 background-size 把图标压小, 并同步缩小元素尺寸。
+   注意: 不是 .menu__caret::before(那是「无链接」分类的独立折叠按钮箭头)。 */
+.theme-doc-sidebar-container .menu__link--sublist:after {
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  background-size: 1rem 1rem;
+}
+.theme-doc-sidebar-container .menu__link--sublist-caret:after {
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  background-size: 1rem 1rem;
+}
+
 /* ===== 文档详情页: 左中右三段布局 =====
    Docusaurus 原生支持三段: 左侧导航栏 + 中间内容 + 右侧目录(TOC)。
    说明: 右侧目录是自动生成的第三列, 仅当「文档有标题且未设置
@@ -371,7 +377,7 @@ aside.theme-doc-sidebar-container {
    - 右侧目录固定约 240px 独立成列, 与内容左右分明。
    若想要 1:2:1 的均宽比例, 把下面 .col--3 和 [class*=docItemCol] 的
    flex 值改成 2:1 并把左栏宽度调成 25% 即可。 */
-@media (min-width: 997px) {
+@media (min-width: 1272px) {
   /* 左栏: 固定宽 360px, 里侧 300px 菜单靠右 → 侧栏贴向内容区, 左侧留白 */
   aside.theme-doc-sidebar-container {
     flex: 0 0 360px;
@@ -397,7 +403,7 @@ aside.theme-doc-sidebar-container {
   .theme-doc-sidebar-container .menu__link {
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 16px;
     color: #1b1b1d;
   }
   .theme-doc-sidebar-container .menu__list-item-collapsible > .menu__link {
@@ -405,15 +411,6 @@ aside.theme-doc-sidebar-container {
   }
   .theme-doc-sidebar-container .menu__link--active {
     font-weight: 600;   /* 当前项加粗 */
-  }
-  /* 侧栏分类展开箭头参考 halo: 更小巧、浅灰(halo 的辅助小图标偏浅) */
-  .theme-doc-sidebar-container .menu__caret {
-    opacity: 0.55;
-  }
-  .theme-doc-sidebar-container .menu__caret::before {
-    height: 1rem;
-    width: 1rem;
-    background-size: 1rem 1rem;
   }
   /* 侧栏菜单项 hover / 选中项: 背景改为主页浅蓝、文字改浅蓝 */
   .theme-doc-sidebar-container .menu__link:hover,
@@ -436,6 +433,18 @@ aside.theme-doc-sidebar-container {
     flex: 0 0 240px !important;
     width: 240px !important;
     max-width: 240px !important;
+  }
+}
+
+/* ===== 右侧标题导航(TOC): 跟随三栏布局断点, 仅 ≥1272px 显示 =====
+   上面三栏布局断点已从 Infima 默认 997px 提到 1272px。
+   而 Docusaurus 默认的桌面 TOC 只在 @media(max-width:996px) 才隐藏,
+   若不覆盖, 997~1271px 这段视口仍会显示右侧 TOC, 与新的布局断点不一致。
+   这里把隐藏范围同步扩到 1271px, 让右侧 TOC 仅在 ≥1272px 显示,
+   997~1271px 之间退回两栏(左栏 + 内容), 与三栏布局断点保持一致。 */
+@media (max-width: 997px) {
+  [class*="tableOfContents"] {
+    display: none;
   }
 }
 
@@ -527,18 +536,18 @@ aside.theme-doc-sidebar-container {
    悬浮卡上方及左右两侧空隙透出的主体内容, 内容一接触到导航栏即被隐藏。
    这里仅负责导航栏悬浮卡的静态样式。 */
 .navbar {
-  top: 12px;
+  top: 0;
   right: 0;
   left: 0;
-  margin: 12px auto 0;
-  width: calc(100% - 48px);
-  max-width: 1240px;
+  margin: 0;
+  width: 100%; /* 左右两侧占满 */
+  max-width: none;
   min-height: 70px;
   --ifm-navbar-height: 70px;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   background-color: #ffffff !important;
-  border: 1px solid rgba(228, 232, 240, 0.9);
+  border-bottom: 1px solid rgba(228, 232, 240, 0.9);
 }
 .navbar__inner {
   max-width: 100%;
@@ -631,12 +640,16 @@ body.home-page {
 .navbar [class*='searchIndex'] kbd {
   display: none !important;
 }
-/* 移动端: 悬浮卡缩小边距, 避免在小屏过于拥挤.
-   (navbar-gap 遮挡的位置/尺寸由 navbarGaps.js 按 nav 实际尺寸动态计算, 无需在此覆盖) */
+/* 首页隐藏右上角搜索框: 首页有页面中央的大搜索框(HomeSearch), 不需要 navbar 那个。
+   首页 body 挂 home-page 类(index.js), 文档页/其他页正常显示搜索框。 */
+body.home-page [class*='navbarSearchContainer'] {
+  display: none !important;
+}
+/* 移动端: navbar 同样左右占满(无悬浮留白/圆角) */
 @media (max-width: 996px) {
   .navbar {
-    top: 8px;
-    width: calc(100% - 24px);
-    border-radius: 10px;
+    top: 0;
+    width: 100%;
+    border-radius: 0;
   }
 }

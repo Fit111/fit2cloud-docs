@@ -247,11 +247,12 @@ const config = {
         // 由 Figma 设计稿导航 logo 节点(492:10074)导出为透明 PNG(fit2cloud-logo.png)。
         // 亮/暗主题统一用同一张(暗色下 navbar 仍为白色悬浮卡, 深蓝 logo 清晰可见)。
         // title 留空: 只显示 logo, 不显示文字(若省略 title, Docusaurus 会用站点标题作为文字)
+        // 现改为带 "| 文档中心" 的完整横幅 FIT2CLOUD 飞致云 文档中心-01.png
         title: '',
         logo: {
-          src: 'img/fit2cloud-logo.png',
-          srcDark: 'img/fit2cloud-logo.png',
-          alt: 'FIT2CLOUD 飞致云',
+          src: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
+          srcDark: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
+          alt: 'FIT2CLOUD 飞致云 文档中心',
         },
         items: [
           {to: '/', label: '首页', position: 'left'},
