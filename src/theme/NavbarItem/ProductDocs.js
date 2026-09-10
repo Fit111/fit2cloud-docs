@@ -60,9 +60,9 @@ export default function ProductDocs() {
   const imgSrc = (name) => base + encodeURIComponent(name);
 
   return (
-    <div className="navbar__item dropdown dropdown--hoverable">
+    <div className={`navbar__item dropdown dropdown--hoverable ${styles.container}`}>
       <a
-        className="navbar__link"
+        className={`navbar__link ${styles.trigger}`}
         href="#"
         role="button"
         aria-haspopup="true"

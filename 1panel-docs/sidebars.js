@@ -10,6 +10,23 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "版本迭代",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "changelog",
+          "label": "社区版/专业版"
+        },
+        {
+          "type": "doc",
+          "id": "enterprise-changelog",
+          "label": "企业版"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "安装部署",
       "collapsed": true,
       "items": [
@@ -794,23 +811,6 @@ const sidebars = {
           "type": "doc",
           "id": "faq/ai-coding",
           "label": "AI 编程接入指南"
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "版本迭代",
-      "collapsed": true,
-      "items": [
-        {
-          "type": "doc",
-          "id": "changelog",
-          "label": "社区版/专业版"
-        },
-        {
-          "type": "doc",
-          "id": "enterprise-changelog",
-          "label": "企业版"
         }
       ]
     },

@@ -13,8 +13,9 @@
 .hero {
   position: relative;
   overflow: hidden;
-  /* 标题区留白: 上、下 padding 保持一致 */
-  padding: 80px 0 80px;
+  /* 上部留白保留 80px, 下部 padding 去掉 */
+  padding: 80px 0 0;
+  height: 340px;
 }
 
 /* 光晕: Ellipse 1 #3370ff op10% 左上; Ellipse 2 #b459ff op5% 右下 */
@@ -45,12 +46,24 @@
   padding: 0 24px;
 }
 
-/* 标题与副标题: 居中展示(原右侧插画已移除, 与搜索框共用一条中轴线) */
+/* 右侧插画: 高度锁到 hero 组件高度(340px)等比缩放, 垂直居中贴右, 浮在光晕之上/正文之下 */
+.heroIllustration {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 340px; /* 与 .hero 的 height 一致 */
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 标题与副标题: 默认左对齐(≥996px 时右侧有插画); ≤996px 插画隐藏后改回居中, 见底部媒体查询 */
 .heroTitle {
   position: relative;
   z-index: 1;
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 48px;
   font-weight: 600;
   line-height: 67px;
@@ -59,10 +72,10 @@
 .heroSubtitle {
   position: relative;
   z-index: 1;
-  margin: 12px auto 0; /* 上下左零、左右自动 → 居中 */
+  margin: 12px 0 0; /* 左对齐: 上下左零 */
   width: 532px; /* 限宽, 避免居中后单行过长影响阅读 (原 760px, 缩小 30%) */
   max-width: 100%;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
   font-size: 12.8px; /* 原 16px, 缩小 20% */
   line-height: 28.8px; /* 原 24px, 加大行间距(两行之间留出 0.3rem), 让折行后更透气 */
@@ -74,7 +87,7 @@
 
 /* ---------------- 全部产品 ---------------- */
 .productsSection {
-  padding: 40px 0 0;
+  padding: 0;
 }
 .productsInner {
   max-width: 1248px;
@@ -189,28 +202,6 @@
   color: #ffffff;
 }
 
-/* ---------------- 底部横幅 ---------------- */
-/* 设计稿 Rectangle 27: [0,2152,1920,241], 渐变 #f7fbff→#f8f9ff */
-.bottomBanner {
-  padding: 40px 24px;
-  background: linear-gradient(90deg, #f7fbff 0%, #f8f9ff 100%);
-  text-align: center;
-}
-.bottomTitle {
-  margin: 0 0 12px;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 45px;
-  color: #001222;
-}
-.bottomSub {
-  margin: 0 auto;
-  max-width: 860px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #6c7280;
-}
-
 /* ---------------- 响应式 ---------------- */
 @media (max-width: 1200px) {
   .productGrid {
@@ -219,9 +210,22 @@
 }
 
 @media (max-width: 996px) {
+  /* ≤996px 隐藏右侧插画 */
+  .heroIllustration {
+    display: none;
+  }
   .hero {
-    /* 移动端上、下 padding 同样保持一致 */
-    padding: 80px 0 80px;
+    /* 移动端同样去掉下部 padding */
+    padding: 80px 0 0;
+  }
+  /* 插画隐藏后标题/副标题改回居中(默认左对齐以避开右插画) */
+  .heroTitle {
+    text-align: center;
+  }
+  .heroSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   .heroTitle {
     font-size: 36px;
@@ -234,13 +238,6 @@
   .productsTitle {
     font-size: 28px;
     line-height: 40px;
-  }
-  .bottomBanner {
-    padding: 32px 24px;
-  }
-  .bottomTitle {
-    font-size: 26px;
-    line-height: 36px;
   }
 }
 

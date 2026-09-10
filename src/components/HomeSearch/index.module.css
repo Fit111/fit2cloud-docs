@@ -8,13 +8,13 @@
   z-index: 20; /* 高于 hero 光晕与插画, 保证下拉面板浮在最上层 */
   width: 800px;
   max-width: 100%;
-  margin: 80px auto 0;
+  margin: 40px auto 0; /* 上移 40px (原 80px) */
 }
 
-/* 搜索框: 800x72 r12 白底 (设计稿 Frame 'Search') */
+/* 搜索框: 800x52 r12 白底 */
 .searchBox {
   position: relative;
-  height: 72px;
+  height: 52px;
   background: #ffffff;
   border-radius: 12px;
   font-size: 14px;
@@ -25,39 +25,38 @@
 .input {
   flex: 1;
   height: 100%;
-  padding: 0 140px 0 32px;
+  padding: 0 72px 0 20px;
   border: none;
   outline: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   color: #1f2329;
 }
 .input::placeholder {
   color: #c8cbcb;
+  font-size: 13px; /* 占位文字单独小一号 */
+  font-weight: normal;
 }
 .input::-webkit-search-cancel-button {
   display: none;
 }
 
-/* 搜索按钮: 104x52 r8, 距框右/上各 10px */
+/* 搜索按钮: 64x36 r8, 距框右/上各 8px (适配 52 高) */
 .btn {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 104px;
-  height: 52px;
+  right: 8px;
+  top: 8px;
+  width: 64px;
+  height: 36px;
   border: none;
   border-radius: 8px;
-  background: #0c7be0;
+  background: linear-gradient(90deg, rgba(12, 123, 224, 1) 0%, rgba(51, 61, 255, 1) 100%);
   color: #ffffff;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
-}
-.btn:hover {
-  background: #0a6cc7;
 }
 
 /* ---------------- 下拉面板 ----------------
@@ -181,18 +180,18 @@
     margin-top: 48px;
   }
   .searchBox {
-    height: 60px;
+    height: 52px;
   }
   .input {
-    padding: 0 120px 0 24px;
-    font-size: 16px;
+    padding: 0 72px 0 20px;
+    font-size: 15px;
   }
   .btn {
-    width: 92px;
-    height: 44px;
+    width: 64px;
+    height: 36px;
     right: 8px;
     top: 8px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .panel {
     padding: 16px;
