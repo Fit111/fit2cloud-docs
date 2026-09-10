@@ -4,62 +4,60 @@ title: 组织架构配置
 
 ## 1 快捷导入成员
 
-:::note
 
 **注意**：导入成员功能与企业微信同步功能互斥，请确认同步组织架构开关处于关闭状态。
-:::
 
 ### 1.1 操作步骤
 
-:::note
 
 1. 点击「更多」按钮下的「导入」选项
 2. 在导入成员弹窗中，下载模板
 3. 根据模板要求维护好成员信息
 4. 上传模板文件，即可完成导入
-:::
 
 ![导入成员](/img/cordys/user_manual/import-members2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  导入成员</div>
+
 ## 2 手动添加成员
 
-:::note
 
 **注意**：添加成员功能与企业微信同步功能互斥，请确认同步组织架构开关处于关闭状态。
-:::
 
 ### 2.1 添加部门信息
 
 ![添加部门](/img/cordys/user_manual/add-department2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  添加部门</div>
+
 ### 2.2 添加成员
 
-:::note
 
 录入成员基本信息，即创建成功。
-:::
 
 ![添加成员](/img/cordys/user_manual/add-member2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  添加成员</div>
 
 ## 3 成员登录系统
 
 ### 3.1 账号登录
 
-:::note
 
 所有系统成员均可使用账号 & 密码登录系统：
 
 - **账号**：手机号或邮箱
 - **密码**：手机号后6位
-:::
 
 ![账号登录](/img/cordys/installation/login.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  账号登录</div>
+
 ### 3.2 扫码登录
 
-:::note
 
 从企业微信同步的成员，在【企业设置】→【三方设置】中开启扫码登录后，即可使用扫码登录功能。
-:::
 
 ![扫码登录](/img/cordys/user_manual/qr-login2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  扫码登录</div>

@@ -2,7 +2,6 @@
 title: 业务表单配置
 ---
 
-:::note
 
 点击左侧菜单【系统】，进入【模块设置】页面。
 
@@ -22,13 +21,13 @@ title: 业务表单配置
 - **跟进计划表单**
 
 用户可以根据公司业务需求自定义表单内容。
-:::
 
 ![表单设置](/img/cordys/user_manual/form-settings2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  表单设置</div>
+
 ## 1 表单设置
 
-:::note
 
 点击相应业务的「表单设置」按钮，进入自定义表单设置页面。
 
@@ -37,11 +36,11 @@ title: 业务表单配置
 1. **添加字段**：从左侧选择字段组件，拖拽至中间表单区域
 2. **配置属性**：在右侧字段属性面板修改字段的基本信息、约束、权限等
 3. **调整布局**：在表单属性中修改整体表单布局
-:::
 
 ![模块设置](/img/cordys/user_manual/module-settings2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  模块设置</div>
+
 
 表单字段设置
 
@@ -60,12 +59,12 @@ title: 业务表单配置
 - 选择线索来源字段
 - 选择“显隐规则”
 - 设置规则，选择“线上”显示“线上来源详情”字段
-:::
     
 
 ![下拉单选-显隐](/img/cordys/user_manual/form-dropdown-box-show2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  下拉单选-显隐</div>
+
 
 **字段联动** 属性
 
@@ -97,11 +96,11 @@ title: 业务表单配置
 - 选择“字段联动”
 - 联动字段选择”线上来源详情“
 - 设置规则，选择“线下”限制可选范围（联动字段）”400电话“
-:::
 
 ![下拉字段-联动](/img/cordys/user_manual/form-dropdown-box-link.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  下拉字段-联动</div>
+
 
 数据单选/数据多选
 
@@ -119,12 +118,12 @@ title: 业务表单配置
 - 价格表
 - 报价单
 - 合同
-:::
     
 
 ![数据源](/img/cordys/user_manual/form-data-source2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  数据源</div>
+
 
 **数据过滤** 属性
 
@@ -141,12 +140,12 @@ title: 业务表单配置
 - 选择“数据过滤”
 - 点击“设置”
 - 设置过滤条件“客户名属于客户名”
-:::
     
 
 ![数据过滤](/img/cordys/user_manual/form-data-source-filter2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  数据过滤</div>
+
 
 **显示字段** 属性
 
@@ -162,13 +161,15 @@ title: 业务表单配置
 - 选择联系人字段
 - 选择“显示字段”
 - 选择“姓名、邮箱”
-:::
 
 ![显示字段](/img/cordys/user_manual/form-data-source-filter22.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  显示字段</div>
+
 ![显示字段2](/img/cordys/user_manual/form-data-source-field2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  显示字段2</div>
+
 
 计算  **公式**  属性
 
@@ -180,11 +181,11 @@ title: 业务表单配置
 - 点击公式属性的设置
 - 选择当前表单可参与计算的字段（数字类型）
 - 通过运算符组成完成公式
-:::
 
 ![计算字段](/img/cordys/user_manual/form-calculated-field2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  计算字段</div>
+
 
 手机  **格式** 属性
 
@@ -194,36 +195,36 @@ title: 业务表单配置
 
 1. **不验证**：不校验长度，输入数字即可
 2. **手机号**：严格校验11位数字
-:::
 
 ![image-20251210105522825](/img/cordys/user_manual/form-phone.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  手机格式设置</div>
+
 
 表单联动设置
 
 - **表单联动** 
 
 是一种自动同步不同表单字段数据的智能功能，可实现跨表单的信息关联与填充，无需手动重复录入。
-:::
 
 ![image-20251210113756150](/img/cordys/user_manual/form-linkage-1.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  表单联动设置</div>
+
 
 典型业务场景
 
 - **线索转商机**
 
 在【商机表单设置】中，”表单联动“属性选择【线索】模块，点击设置，配置字段对应关系。
-:::
     
 
 ![image-20251210114449217](/img/cordys/user_manual/form-linkage-2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  线索转商机</div>
+
 ## 2 业务规则设置
 
-:::note
 
 在【模块设置】中，可以对不同模块的业务规则进行自定义配置。
 
@@ -236,11 +237,11 @@ title: 业务表单配置
 - **库容规则**
 - **商机阶段**
 - **商机关闭原因设置**
-:::
 
 ![业务规则设置](/img/cordys/user_manual/business-rules2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  业务规则设置</div>
+
 
 线索池设置
 
@@ -289,8 +290,7 @@ title: 业务表单配置
     固定、有明确开始和结束点的时间范围，不会变化。
 
     4.2 对比表
-:::
-
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  动态时间与区间时间对比</div>
     | 维度     | 动态时间                         | 区间时间                          |
     | -------- | -------------------------------- | --------------------------------- |
     | 范围特性 | 随当前时间动态变化                | 固定不变                          |
@@ -298,7 +298,6 @@ title: 业务表单配置
     | 适用场景 | 实时筛选（如“近 7 天线索”）        | 固定周期统计（如“11 月销售数据”） |
     | 灵活性   | 高（自动随当前时间变化）           | 低（需手动调整）                   |
 
-:::note
 
 5. 动态时间 vs 动态-自定义
 
@@ -326,12 +325,12 @@ title: 业务表单配置
         - 计算结果：2025-11-30
 
         系统以当前时间为基准回溯 30 天，每次查询都会自动更新。
-:::
 
  
 ![image-20251210134250096](/img/cordys/user_manual/setting-lead-pool.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  更新线索池</div>
+
 
 商机阶段设置
 
@@ -340,32 +339,34 @@ title: 业务表单配置
 - 在更多操作中可以添加进行中的商机阶段
 - 进行中的商机阶段支持修改阶段名称与赢率
 - 支持自定义商机阶段回退设置
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  业务规则设置</div>
 
 ## 3 记录/计划评论功能设置
 
 ### 3.1 记录/计划新增评论功能
-:::note
 
 - 在详情和跟进记录下方增加评论入口
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings3.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  业务规则设置</div>
+
 
 - 点击 + 或右上评论 弹出新建评论窗口（样式以交互为准），第一版评论使用多行文本， 无需支持富文本。
     - 新建评论 默认文案“输入评论，支持@他人”
     - 回复评论 默认文案“回复XX”
     - @他人时展示全部人员下拉列表
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings4.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  业务规则设置</div>
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings5.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  业务规则设置</div>
+
 
 - 评论展示
     - 评论默认按时间倒序排列
@@ -375,20 +376,20 @@ title: 业务表单配置
     - 每条评论都支持回复、编辑、删除
         - 评论创建人可以编辑和删除评论
         - 有本条记录/计划数据权限的人员可以添加/回复评论（即：能看到记录/计划的人就能添加/回复评论）
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings6.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  业务规则设置</div>
+
 ### 3.2 记录/计划详情增加评论展示
-:::note
 
 - 查看记录/计划详情时，增加评论展示， 功能与时光轴保持一致。
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings7.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  业务规则设置</div>
+
 ### 3.3 通知
-:::note
 
 添加评论后触发消息通知给记录/计划负责人以及被@ 人员。
 消息模板：
@@ -396,33 +397,26 @@ title: 业务表单配置
 - 通知负责人：【添加评论提醒】评论发起人 给线索名/客户名/商机名 的跟进记录/跟进计划添加了评论
 - 通知被@人员： 【添加评论提醒】评论发起人 给线索名/客户名/商机名 的跟进记录/跟进计划添加了评论并@了你
 - 线索名/客户名/商机名支持跳转到详情页（最好是直接打开这条记录的详情）
-:::
 
 ![业务规则设置](/img/cordys/user_manual/Opportunity_Stage_Settings8.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  业务规则设置</div>
+
 ### 3.4 权限
-:::note
 
 - 因记录/计划没有单独模块，有线索、客户、商机 的资源查询权限即可添加评论
 - 评论创建人可以删除自己的评论，删除自己的评论时如存在回复的评论也会一起删除
-:::
 
 ### 3.5 涉及页面
-:::note
 
 - 顶部记录/计划列表
 - 各资源详情页记录/计划
-:::
 
 ### 3.6 移动端
-:::note
 
 - 移动端首页需增加计划/记录列表（仅展示时光轴，无需展示列表），并支持评论
 - 移动端资源详情页需增加评论功能
-:::
 
 ### 3.7 日志
-:::note
 
 增、删、改评论需要记录日志
-:::

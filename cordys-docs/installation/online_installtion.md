@@ -4,7 +4,6 @@ title: 在线安装
 
 ## 1 环境要求
 
-:::note
 
 **部署服务器要求：**
 
@@ -13,15 +12,12 @@ title: 在线安装
 * 磁盘空间: 100G
 
 **提示：** Docker 版本太老可能会导致安装失败，建议使用 v23.0.5 版本及以上的 Docker。
-:::
 
 ## 2 端口要求
 
-:::note
 
 在线部署 Cordys CRM 需要开通的访问端口说明如下：
-:::
-
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  端口说明</div>
 | 端口   | 作用              | 说明                        |
 |------|:----------------|:--------------------------|
 | 22   | SSH             | 安装、升级及管理使用                |
@@ -30,7 +26,6 @@ title: 在线安装
 
 ## 3 在线安装
 
-:::note
 
 在配置 Docker 环境的操作系统中，进行以下操作：
 
@@ -44,11 +39,9 @@ docker run -d \
 1panel/cordys-crm
 
 ```
-:::
    
 ### 3.1 参数说明
 
-:::note
 
  如需调整 MySQL、Redis 等内部组件的配置文件，可直接编辑宿主机目录下的：
   
@@ -92,30 +85,24 @@ logger.sql.level=info
 #dashboard.whitelist.allowed=
 
 ```
-:::
 
 ## 4 在线升级
 
 ### 4.1 停止并移除现有的容器
-:::note
 
 ```
 docker stop cordys-crm
 docker rm cordys-crm
 ```
-:::
 
 ### 4.2 拉取最新的镜像
      
-:::note
 
 ```
 docker pull 1panel/cordys-crm
 ```
-:::
 
 ### 4.3 重新启动容器
-:::note
 
 ```
 docker run -d \
@@ -128,11 +115,9 @@ docker run -d \
 ```
 
 **注意:** 升级前做好数据库的备份工作是一个良好的习惯，升级过程中如果发生错误，请参考：[**常见问题排查**](./faq)。
-:::
 
 ## 5 登录访问
 
-:::note
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8081`，并使用默认的管理员用户和密码登录 Cordys CRM。
 
@@ -141,6 +126,7 @@ docker run -d \
 
 默认密码：CordysCRM
 ```
-:::
 ![访问 Cordys CRM](/img/cordys/installation/login.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  访问 Cordys CRM</div>
 

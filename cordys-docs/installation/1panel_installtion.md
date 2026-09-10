@@ -4,16 +4,15 @@ title: 1Panel 安装
 
 ## 1 安装 1Panel
 
-:::note
 
 关于 1Panel 的安装部署与基础功能介绍，请参考 [**1Panel 官方文档**](/1panel/) 。完成 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，界面如下。
-:::
 
 ![1panel](/img/cordys/installation/1panel_index2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  1panel</div>
+
 ## 2 安装 Cordys CRM
 
-:::note
 
 在应用详情页选择最新的 Cordys CRM 版本进行安装，进行相关参数设置。
 
@@ -27,35 +26,35 @@ title: 1Panel 安装
 点击开始安装后，页面自动跳转到已安装应用列表，等待安装的 Cordys CRM 应用状态变为已启动。
 
 **注意:** 如需修改 MySQL,Redis 相关配置参数请参考 [**在线一键安装**](./online_installtion) 文档。
-:::
 
 ![安装 Cordys CRM](/img/cordys/installation/1p_install_crm2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  安装 Cordys CRM</div>
+
 
 安装完成后，点击已安装应用列表中的 Cordys CRM 应用，进入应用详情页，可以看到 Cordys CRM 应用的相关信息。
-:::
 
 ![Cordys CRM安装状态](/img/cordys/installation/crm_success2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Cordys CRM安装状态</div>
+
 ## 3 升级 Cordys CRM
 
-:::note
 
 Cordys CRM 支持在线升级，点击已安装应用列表中的 Cordys CRM 应用，进入应用详情页，选择最新的版本进行升级。
-:::
 
 ![在线升级](/img/cordys/installation/1p_upgrade2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  在线升级</div>
 ![在线升级](/img/cordys/installation/1p_upgrade_info2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  在线升级</div>
+
 
 **注意:** 升级过程中如果发生错误，请参考：[**常见问题排查**](./faq)。
-:::
 
 ## 4 访问 Cordys CRM
 
-:::note
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8081`，并使用默认的管理员用户和密码登录 Cordys CRM。
 
@@ -64,6 +63,7 @@ Cordys CRM 支持在线升级，点击已安装应用列表中的 Cordys CRM 应
 
 密码: CordysCRM
 ```
-:::
 
 ![访问Cordys CRM](/img/cordys/installation/login.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  访问Cordys CRM</div>

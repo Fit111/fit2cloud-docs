@@ -6,61 +6,62 @@ title: 产品资料录入
 
 ### 1.1 新建产品
 
-:::note
 
 在左侧菜单点击【产品】，进入产品管理页面。    
 
 用户可以将产品的基础属性（如名称、价格、图片等）录入并保存即可创建成功。
 
  **提示**：产品表单可以根据公司产品特性在表单设置中进行自定义。
-:::
 
 ![添加产品](/img/cordys/user_manual/add-product2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  添加产品</div>
+
 ![产品表单设置](/img/cordys/user_manual/product-form-settings2.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  产品表单设置</div>
 
 ### 1.2 导入产品
 
-:::note
 
 点击下载模板，将产品信息维护到模板中，再拖拽到文件区域，点击校验模板即可完成导入产品。
-:::
 
 ![导入产品](/img/cordys/user_manual/product-import2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  导入产品</div>
+
 ### 1.3 管理产品
 
-:::note
 
 产品列表支持以下功能：
 
 - 调整产品排序
 - 批量产品操作
-:::
 
 ![产品管理](/img/cordys/user_manual/manage-products2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  产品管理</div>
+
 ### 1.4 产品详情
 
-:::note
 
 点击产品名称可查看产品详情。
-:::
 
 ![产品管理](/img/cordys/user_manual/Product_Details3.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  产品管理</div>
 
 ## 2 价格表
 
 ### 2.1 价格表表单设置
 
-:::note
 
 在左侧菜单点击【系统-模块配置】，点击价格表表单设置。
-:::
 
 ![价格表表单设置](/img/cordys/user_manual/product-price-list2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  价格表表单设置</div>
+
 
 **价格表表单设置** ：
 
@@ -73,25 +74,25 @@ title: 产品资料录入
 - 支持从左侧选择字段拖拽到表格区域
 - 支持设置表格汇总
 - 支持固定表格列
-:::
 
 ![](/img/cordys/user_manual/product-price-list22.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  产品表格字段</div>
+
 
 **产品表格-数据源字段**：
 
 - 产品表格内置产品数据源字段
 - **数据过滤**：设置数据过滤规则，跟进规则展示产品列表
 - **显示字段**：设置选择产品时，同步显示关联的字段，依次展示在表格列中
-:::
     
 
 ![image-20251210154921725](/img/cordys/user_manual/product-price-list12.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  产品表格-数据源字段</div>
+
 ### 2.2 新建价格表
 
-:::note
 
 “新建价格表” 功能用于创建产品定价清单，支持录入产品信息、定价、税点等内容，是销售报价、产品定价管理的基础工具。
 
@@ -113,48 +114,51 @@ title: 产品资料录入
   在 “备注” 文本框中，输入价格表的额外说明（如 “此价格表适用于华东区域渠道客户”）
 - 步骤 5：保存价格表
   确认信息填写完整后，点击弹窗底部 “保存” 按钮，完成价格表创建；若需放弃操作，点击 “取消” 即可
-:::
     
 
 ![image-20251210161304428](/img/cordys/user_manual/product-price-list32.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  新建价格表</div>
+
 ![image-20251210161340016](/img/cordys/user_manual/product-price-list42.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  新建价格表详情</div>
 
 ### 2.3 导入价格表
 
-:::note
 
 点击下载模板，将产品信息维护到模板中，再拖拽到文件区域，点击校验模板即可完成导入价格表。
 
 **注意:** 因价格表存在包含多个产品的场景， 请严格按照模板完成价格表信息维护。
-:::
-
-![image-20251210162522188](/img/cordys/user_manual/product-import.png)
 
 ![image-20251210162840222](/img/cordys/user_manual/product-price-list5.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  导入价格表</div>
+
 ### 2.4 导出价格表
 
-:::note
 
 价格表支持导出所有页或导出勾选的数据。
 
 - 导出支持勾选导出字段
 - 导出完成后在【左下角头像-我的导出】中查看导出任务进度或下载文件
-:::
 
 ![image-20251210163159433](/img/cordys/user_manual/product-price-list6.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  导出价格表步骤1</div>
+
 ![image-20251210163515333](/img/cordys/user_manual/product-price-list7.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  导出价格表步骤2</div>
 
 ### 2.5 管理价格表
 
-:::note
 
 价格表列表支持以下功能：
 
 - 调整价格表排序
 - 批量修改价格表操作
-:::
 
 ![image-20251210164156657](/img/cordys/user_manual/product-price-list8.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  管理价格表</div>

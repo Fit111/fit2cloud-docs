@@ -4,7 +4,6 @@ title: 安装常见问题
 
 ## 1. 安装时找不到镜像报错
 
-:::note
 
    执行以下命令时：
   ```bash
@@ -25,9 +24,7 @@ title: 安装常见问题
   net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers).
   See 'docker run --help'.
   ```
-:::
 
-:::note
 
 ✅ 解决方案
   **原因**：Docker 默认从官方仓库拉取镜像，网络可能无法直连。
@@ -76,13 +73,11 @@ title: 安装常见问题
   * [离线包安装](./offline_installtion)
   
   * [1Panel 应用商店安装](./1panel_installtion)
-:::
 
 ---
 
 ## 2. 成功安装后无法访问
 
-:::note
 
 ✅ 排查思路
   1. 确认容器是否正常运行：
@@ -105,17 +100,14 @@ title: 安装常见问题
    
       * 检查 **安全组** 或 **防火墙** 是否放行 `8081` 端口。
       * 本地访问时请确保使用 `http://&lt;服务器公网IP&gt;:8081/`。
-:::
 
 ---
 
 ## 3. 镜像兼容性说明
-:::note
 
   ✅ 支持：amd64 (x86_64)
   
   ❌ 暂不支持：ARM（包括 Apple M1/M2/M3、树莓派等）
   
   ARM 用户请关注后续镜像更新计划。
-:::
 

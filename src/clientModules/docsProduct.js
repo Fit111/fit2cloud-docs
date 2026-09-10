@@ -11,6 +11,8 @@ function setDocsProduct(pathname) {
     product = '1panel';
   } else if (p.includes('/dataease')) {
     product = 'dataease';
+  } else if (p.includes('/cordys')) {
+    product = 'cordys';
   }
   if (typeof document === 'undefined') {
     return;
