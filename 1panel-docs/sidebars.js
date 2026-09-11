@@ -10,7 +10,7 @@ const sidebars = {
     },
     {
       "type": "category",
-      "label": "版本迭代",
+      "label": "更新日志",
       "collapsed": true,
       "items": [
         {
