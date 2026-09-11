@@ -268,7 +268,6 @@ const config = {
           // 与"首页/产品文档"同一行, 右侧只留 搜索 + 版本切换 + 中英文切换。
           // 外部链接一律用 href(不用 to), NavbarNavLink 会自动加
           // target="_blank" + rel="noopener noreferrer" + 外链小图标
-          {href: 'https://www.fit2cloud.com/', label: '官网', position: 'left'},
           {href: 'https://bbs.fit2cloud.com/', label: '论坛', position: 'left'},
           {href: 'https://edu.fit2cloud.com/', label: '培训认证', position: 'left'},
           {href: 'https://www.fit2cloud.com/about/index.html', label: '关于我们', position: 'left'},
