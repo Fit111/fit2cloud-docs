@@ -26,24 +26,42 @@ const DOCS_PRODUCTS = [
   {name: 'Cordys CRM', id: 'cordys', routeBasePath: 'cordys'},
 ];
 
-function useOnClickOutside(ref, handler) {
+function useOnClickOutside(refs, handler) {
   useEffect(() => {
+    const refList = Array.isArray(refs) ? refs : [refs];
+    // 必须用 click(bubble) 而不用 mousedown: 若在 mousedown 阶段就关闭菜单,
+    // portal 菜单会被移除, 浏览器对已移除元素不再派发 mouseup/click,
+    // 导致菜单项 <Link> 的导航丢失(真实点击不跳转, 而编程 a.click() 却正常)。
     const listener = (e) => {
-      if (!ref.current || ref.current.contains(e.target)) return;
+      const inside = refList.some(
+        (r) => r.current && r.current.contains(e.target),
+      );
+      if (inside) return;
       handler();
     };
-    document.addEventListener('mousedown', listener);
+    document.addEventListener('click', listener);
     document.addEventListener('touchstart', listener);
     return () => {
-      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('click', listener);
       document.removeEventListener('touchstart', listener);
     };
-  }, [ref, handler]);
+  }, [refs, handler]);
 }
 
 export default function DocsSwitcher() {
   const {pathname} = useLocation();
   const apv = useActivePluginAndVersion();
+  // 所有 hooks 必须无条件执行：不能在此处提前 return，否则跨产品客户端导航时
+  // (current 短暂为 null) hooks 数量不一致，React 抛 “Rendered fewer hooks than
+  // expected”，表现为点击切换文档后不跳转。故 useState/useRef/useEffect 全部前置。
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  const btnRef = useRef(null);
+  const menuRef = useRef(null); // 菜单(portal 到 body)也在 ref 之外, 需一并判定为「内部」
+  // 下拉菜单的 fixed 定位坐标(基于按钮 getBoundingClientRect), null 表示未测量
+  const [menuPos, setMenuPos] = useState(null);
+  // 点按钮/菜单项都算「内部」, 不触发关闭; 外部点击才关闭
+  useOnClickOutside([ref, menuRef], () => setOpen(false));
 
   // 当前文档插件 id；拿不到时用 pathname 首段兜底
   const pluginId = apv?.activePlugin?.pluginId;
@@ -55,14 +73,8 @@ export default function DocsSwitcher() {
     const seg = '/' + (pathname.split('/').filter(Boolean)[0] ?? '');
     current = DOCS_PRODUCTS.find((p) => '/' + p.routeBasePath === seg);
   }
-  if (!current) return null; // 非本站文档页（如站点根/门户介绍）
-
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-  const btnRef = useRef(null);
-  // 下拉菜单的 fixed 定位坐标(基于按钮 getBoundingClientRect), null 表示未测量
-  const [menuPos, setMenuPos] = useState(null);
-  useOnClickOutside(ref, () => setOpen(false));
+  // 非本站文档页（如站点根/门户介绍）: hooks 已全部执行, 这里可安全 return
+  if (!current) return null;
 
   // 打开时测量按钮位置, 用于把悬浮菜单对齐到按钮正下方
   useEffect(() => {
@@ -79,6 +91,7 @@ export default function DocsSwitcher() {
   const menu = open && menuPos ? (
     createPortal(
       <ul
+        ref={menuRef}
         className={styles.switcherMenu}
         style={{top: menuPos.top, left: menuPos.left, minWidth: menuPos.width}}>
         {DOCS_PRODUCTS.map((p) => (
@@ -87,7 +100,8 @@ export default function DocsSwitcher() {
               className={
                 p.id === current.id ? styles.switcherActive : styles.switcherItem
               }
-              to={`/${p.routeBasePath}/`}>
+              to={`/${p.routeBasePath}/`}
+              onClick={() => setOpen(false)}>
               {p.name}
             </Link>
           </li>
