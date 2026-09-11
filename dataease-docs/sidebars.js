@@ -154,7 +154,7 @@ const sidebars = {
     ),
     doc("quick_start", "快速入门", "doc:快速入门"),
     cat(
-      "最新动态",
+      "更新日志",
       [
         doc("changelog", "更新日志", "doc:最新动态/更新日志"),
         cat(
