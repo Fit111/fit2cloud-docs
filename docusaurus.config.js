@@ -279,7 +279,10 @@ const config = {
             position: 'right',
           },
           {
-            type: 'search',
+            // 右上角即时搜索: 复用首页 HomeSearch 的搜索逻辑与结果面板
+            // (src/theme/NavbarItem/HomeNavbarSearch.js)。
+            // 注意: Navbar/Content 已去掉 easyops SearchBar 兜底, 避免双搜索框。
+            type: 'custom-HomeNavbarSearch',
             position: 'right',
           },
         ],

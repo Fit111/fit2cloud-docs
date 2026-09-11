@@ -8,6 +8,7 @@
  * - 列出「本站有文档」的产品，跳转各自文档站首页（/xxx/）。
  */
 import React, {useState, useRef, useEffect} from 'react';
+import {createPortal} from 'react-dom';
 import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import {useActivePluginAndVersion} from '@docusaurus/plugin-content-docs/client';
@@ -58,11 +59,48 @@ export default function DocsSwitcher() {
 
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const btnRef = useRef(null);
+  // 下拉菜单的 fixed 定位坐标(基于按钮 getBoundingClientRect), null 表示未测量
+  const [menuPos, setMenuPos] = useState(null);
   useOnClickOutside(ref, () => setOpen(false));
+
+  // 打开时测量按钮位置, 用于把悬浮菜单对齐到按钮正下方
+  useEffect(() => {
+    if (!open) return undefined;
+    const btn = btnRef.current;
+    if (!btn) return undefined;
+    const r = btn.getBoundingClientRect();
+    setMenuPos({top: r.bottom + 4, left: r.left, width: r.width});
+    const onScroll = () => setOpen(false);
+    window.addEventListener('scroll', onScroll, true); // 滚动(含侧边栏)时关闭, 避免菜单脱离按钮
+    return () => window.removeEventListener('scroll', onScroll, true);
+  }, [open]);
+
+  const menu = open && menuPos ? (
+    createPortal(
+      <ul
+        className={styles.switcherMenu}
+        style={{top: menuPos.top, left: menuPos.left, minWidth: menuPos.width}}>
+        {DOCS_PRODUCTS.map((p) => (
+          <li key={p.id}>
+            <Link
+              className={
+                p.id === current.id ? styles.switcherActive : styles.switcherItem
+              }
+              to={`/${p.routeBasePath}/`}>
+              {p.name}
+            </Link>
+          </li>
+        ))}
+      </ul>,
+      document.body,
+    )
+  ) : null;
 
   return (
     <div className={styles.switcher} ref={ref}>
       <button
+        ref={btnRef}
         className={styles.switcherButton}
         onClick={() => setOpen(!open)}
         aria-expanded={open}
@@ -71,21 +109,7 @@ export default function DocsSwitcher() {
         <span className={styles.switcherLabel}>{current.name}</span>
         <span className={styles.switcherCaret}>▾</span>
       </button>
-      {open && (
-        <ul className={styles.switcherMenu}>
-          {DOCS_PRODUCTS.map((p) => (
-            <li key={p.id}>
-              <Link
-                className={
-                  p.id === current.id ? styles.switcherActive : styles.switcherItem
-                }
-                to={`/${p.routeBasePath}/`}>
-                {p.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {menu}
     </div>
   );
 }
