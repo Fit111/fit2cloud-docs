@@ -61,7 +61,7 @@ const PRODUCT_DESC = {
 const I18N = {
   zh: {
     title: '文档中心',
-    subtitle: '我们秉持"软件用起来才有价值，才有改进机会"的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件',
+    subtitle: '我们秉持"软件用起来才有价值，才有改进机会"的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件。',
     searchPlaceholder: '请输入关键词回车检索，例如：1Panel 如何安装',
     searchBtn: '搜索',
     enter: '进入文档',
@@ -81,7 +81,8 @@ const I18N = {
 };
 
 function Hero({site, zh}) {
-  const illustration = useBaseUrl('/img/index/hero-illustration.png');
+  // hero 右侧插画: 主题图(文件名含中文/【】, 用 URL 编码)
+  const illustration = useBaseUrl('/img/%E3%80%90%E4%B8%BB%E9%A2%98%E3%80%91%E9%A3%9E%E8%87%B4%E4%BA%91%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.png');
   return (
     <section className={styles.hero}>
       {/* 背景光晕: 对应设计稿 Ellipse 1(#3370ff 10%) / Ellipse 2(#b459ff 5%) */}
