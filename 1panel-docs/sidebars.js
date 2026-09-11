@@ -27,6 +27,33 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "购买指南",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "link",
+          "label": "版本功能对比",
+          "href": "https://1panel.cn/versions.html"
+        },
+        {
+          "type": "link",
+          "label": "1Panel 专业版",
+          "href": "https://www.lxware.cn/1panel"
+        },
+        {
+          "type": "link",
+          "label": "1Panel 企业版",
+          "href": "https://1panel.cn/enterprise.html"
+        },
+        {
+      "type": "link",
+      "label": "1Panel AI 一体机",
+      "href": "https://1panel.cn/ai-appliance.html"
+        },
+      ]
+    },
+    {
+      "type": "category",
       "label": "安装部署",
       "collapsed": true,
       "items": [
@@ -813,33 +840,6 @@ const sidebars = {
           "label": "AI 编程接入指南"
         }
       ]
-    },
-    {
-      "type": "category",
-      "label": "1Panel 商业版本",
-      "collapsed": true,
-      "items": [
-        {
-          "type": "link",
-          "label": "版本功能对比",
-          "href": "https://1panel.cn/versions.html"
-        },
-        {
-          "type": "link",
-          "label": "1Panel 专业版",
-          "href": "https://www.lxware.cn/1panel"
-        },
-        {
-          "type": "link",
-          "label": "1Panel 企业版",
-          "href": "https://1panel.cn/enterprise.html"
-        }
-      ]
-    },
-    {
-      "type": "link",
-      "label": "1Panel AI 一体机",
-      "href": "https://1panel.cn/ai-appliance.html"
     },
     {
       "type": "doc",
