@@ -28,6 +28,12 @@ const sidebars = {
       "key": "doc:更新日志"
     },
     {
+      "type": "link",
+      "label": "购买指南",
+      "href": "https://jumpserver.org/enterprise.html",
+      "key": "doc:购买指南"
+    },
+    {
       "type": "category",
       "label": "安装部署",
       "collapsed": true,
@@ -186,12 +192,6 @@ const sidebars = {
         }
       ],
       "key": "cat:安装部署"
-    },
-    {
-      "type": "link",
-      "label": "购买指南",
-      "href": "https://jumpserver.org/enterprise.html",
-      "key": "doc:购买指南"
     },
     {
       "type": "category",
