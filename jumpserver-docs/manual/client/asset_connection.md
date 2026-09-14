@@ -12,7 +12,9 @@ title: 资产连接
 - 在 Linux 资产列表中，点击目标资产名称右侧的 **连接** ，弹出连接窗口。
 - 在连接窗口中，选择协议，选择需要使用的账号，点击 **确认** 按钮，即可连接资产。
 
-![image](/img/jumpserver/clientV4_03.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/clientV4_03.png" alt="图 1  Linux 资产连接" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Linux 资产连接</div>
 
 ## Windows 资产连接
 
@@ -32,7 +34,9 @@ title: 资产连接
 - 选中 **MySQL** 后，右侧会出现可连接的应用列表并提供下载方式，点击 **下载应用** 并安装。
 - 安装完成后，点击 **Select path** 配置其安装路径后，即可使用该应用进行数据库的连接。
 
-![image](/img/jumpserver/clientV4_04.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/clientV4_04.png" alt="图 2  本地客户端配置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  本地客户端配置</div>
 
 ### 连接资产
 
@@ -51,4 +55,6 @@ title: 资产连接
 
 - 在各类型资产的连接页面，可右键点击目标资产，然后点击 **收藏** ，即可将目标资产添加到收藏列表中。
 
-![image](/img/jumpserver/clientV4_05.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/clientV4_05.png" alt="图 3  收藏资产连接" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  收藏资产连接</div>

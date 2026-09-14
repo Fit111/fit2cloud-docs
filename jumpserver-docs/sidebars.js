@@ -238,6 +238,12 @@ const sidebars = {
               "id": "manual/common/personal_center",
               "label": "个人中心",
               "key": "doc:使用手册/通用功能/个人中心"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/webterminal",
+              "label": "Web Terminal",
+              "key": "doc:使用手册/通用功能/web终端"
             }
           ],
           "key": "cat:使用手册/通用功能"
@@ -930,14 +936,14 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "普通使用手册",
+          "label": "普通用户使用手册",
           "collapsed": true,
           "items": [
             {
               "type": "doc",
               "id": "manual/user/profile",
               "label": "个人设置",
-              "key": "doc:使用手册/普通使用手册/个人设置"
+              "key": "doc:使用手册/普通用户使用手册/个人设置"
             },
             {
               "type": "category",
@@ -953,37 +959,37 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/admin/workbench/my_assets/assets_connect",
                       "label": "连接资产",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/连接资产"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/连接资产"
                     },
                     {
                       "type": "doc",
                       "id": "manual/admin/workbench/my_assets/web_terminal",
                       "label": "Web终端",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/Web终端"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/Web终端"
                     },
                     {
                       "type": "doc",
                       "id": "manual/admin/workbench/my_assets/file_transfer",
                       "label": "文件传输",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/文件传输"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件传输"
                     },
                     {
                       "type": "doc",
                       "id": "manual/admin/workbench/my_assets/file_explorer",
                       "label": "文件管理",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/文件管理"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件管理"
                     }
                   ],
-                  "key": "cat:使用手册/普通使用手册/工作台/我的资产"
+                  "key": "cat:使用手册/普通用户使用手册/工作台/我的资产"
                 }
               ],
-              "key": "cat:使用手册/普通使用手册/工作台"
+              "key": "cat:使用手册/普通用户使用手册/工作台"
             },
             {
               "type": "doc",
               "id": "manual/user/ticket",
               "label": "工单",
-              "key": "doc:使用手册/普通使用手册/工单"
+              "key": "doc:使用手册/普通用户使用手册/工单"
             },
             {
               "type": "category",
@@ -994,31 +1000,31 @@ const sidebars = {
                   "type": "doc",
                   "id": "manual/client/client_installation",
                   "label": "客户端下载与安装",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/客户端下载与安装"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/客户端下载与安装"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/asset_connection",
                   "label": "资产连接",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/资产连接"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/资产连接"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/connection_settings",
                   "label": "连接设置",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/连接设置"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/连接设置"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/tool",
                   "label": "工具",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/工具"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/工具"
                 }
               ],
-              "key": "cat:使用手册/普通使用手册/客户端使用"
+              "key": "cat:使用手册/普通用户使用手册/客户端使用"
             }
           ],
-          "key": "cat:使用手册/普通使用手册"
+          "key": "cat:使用手册/普通用户使用手册"
         },
         {
           "type": "category",
