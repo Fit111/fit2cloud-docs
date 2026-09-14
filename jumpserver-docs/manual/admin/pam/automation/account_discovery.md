@@ -42,6 +42,10 @@ description: 介绍 JumpServer PAM 中账号发现任务的创建、执行以及
 
 选择 **账号发现任务** 页签。列表列字段包括名称、节点、资产、周期执行、执行周期、执行数及操作。行内绿色按钮为立即执行，**更多** 中可 **编辑** 或 **删除**。
 
+:::warning[执行前确认]
+**立即执行** 会在选定的资产或节点上执行账号发现。执行前请确认目标范围和任务配置，避免对不需要检查的资产发起批量操作。
+:::
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_disc_03.png" alt="图 3  账号发现任务" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  账号发现任务</div>
