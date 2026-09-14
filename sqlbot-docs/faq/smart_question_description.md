@@ -4,39 +4,34 @@ title: 智能问数
 
 ## 1 是否支持多表关联查询？
 
-:::tip
 
 支持多表关联查询。建议在数据源中，维护数据表之间的关联关系，并维护表备注，有助于模型生成更符合预期的 SQL 语句。
 
-:::
 
 ## 2 术语怎么使用？
 
-:::tip
 
 当用户发起问数请求时，会根据发送的问题匹配术语，被匹配到的术语，会将「术语描述」和「用户问题」一起发送给大语言模型，辅助生成正确的 SQL 查询语句。
 
 术语示例如下图所示：
 
-:::
 
-![professional..png](/img/sqlbot/faq/professional..png)
+<img src="/img/sqlbot/faq/professional..png" alt="professional..png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 专业版</div>
 
 ## 3 SQL 示例怎么使用？
 
-:::tip
 
 当用户发起问数请求时，将发送的问题与 SQL 示例库中的问题进行匹配，被匹配到的 SQL 示例，会将问题的「 示例 SQL」和「用户问题」一起发送给大语言模型，辅助生成正确的 SQL 查询语句。
 
 SQL 示例如下图所示：
 
-:::
 
-![data_training.png](/img/sqlbot/faq/data_training.png)
+<img src="/img/sqlbot/faq/data_training.png" alt="data_training.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 数据训练</div>
 
 ## 4 SQLBot 在哪些方面会影响到对 token 的消耗？
 
-:::tip
 
 问数的时候对 token 的消耗主要有几个地方：
 
@@ -48,11 +43,9 @@ SQL 示例如下图所示：
 
 如果上面这几个地方内容多的话，对 token 的消耗会比较大，另外，在问数过程中的上下文也会有一定的 token 消耗。
 
-:::
 
 ## 5  如何提升 SQLBot 问数的准确率？
 
-:::tip
 
 可以通过以下几个方面的设置来提升 SQLBot 的问数准确率：
 
@@ -64,26 +57,21 @@ SQL 示例如下图所示：
 - 若存在多表关联查询的场景，可以在数据源的表关系管理中，给关联表设置字段的关联关系
 - 试试其他的大模型，换个强一些的大模型，虽然简单粗暴，但效果明显
 
-:::
 
 ## 6 问数过程中大模型有响应，但 SQLBot 显示解析响应结果出错
 
-:::tip
 
 SQLBot 对大模型返回的问数结果的结构是有要求的，SQLBot 在提示词模板中对该格式有明确定义。在使用过程中，有些大模型由于理解能力问题，并未按要求返回相应格式的数据，会导致 SQLBot 无法解析返回结果，出现类似下图的错误：
 
-:::
-![faq_parse_answer.png](/img/sqlbot/faq/faq_parse_answer.png)
+<img src="/img/sqlbot/faq/faq_parse_answer.png" alt="faq_parse_answer.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 FAQ 解析答案</div>
 
-:::tip
 
 此时建议更换其他模型试试。
 
-:::
 
 ## 7 为什么低于 Oracle 12 版本会出现 limit 1000 加在 SQL 最外层？
 
-:::tip
 
 如下所示，在问数请求发起后，模型生成的限制1000行条件：ROWNUM &lt;= 1000，增加到了 SQL 语句的最外层，可能会影响结果的准确性。
 
@@ -98,8 +86,6 @@ GROUP BY "d1"."CITYNAME"
 ORDER BY "city_name"
 ```
 
-:::
-:::tip
 
 需要注意：对于oracle版本低于12的情况，建议使用支持深度思考的模型，且开启思考过程，有助于生成符合预期的 SQL 语句。
 
@@ -110,4 +96,3 @@ ORDER BY "city_name"
 3、和上述情况一致（很小概率），没有将 limit 1000 加在最内层，而是加在了外层。
 ```
 
-:::

@@ -26,26 +26,34 @@ title: 配置 Kingbase 数据源
 步骤二：按照以下步骤，选择 Kingbase 图标。
 :::
 
-<img alt="Kingbase" src="/img/dataease/datasource_configuration/KingBase1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Kingbase](/img/dataease/datasource_configuration/KingBase1.png)
+
+图 1  选择Kingbase数据源
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="Kingbase" src="/img/dataease/datasource_configuration/KingBase2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Kingbase](/img/dataease/datasource_configuration/KingBase2.png)
+
+图 2  Kingbase连接信息
 
 :::note
 
 步骤四：获取 Schema。
 :::
 
-<img alt="Kingbase" src="/img/dataease/datasource_configuration/KingBase_Schema.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Kingbase](/img/dataease/datasource_configuration/KingBase_Schema.png)
+
+图 3  KingBase Schema
 
 :::note
 
 详细说明信息如下：
 :::
+
+表 1  基础属性说明
 
 | 基础属性           | 说明                            |
 |:---------------|:------------------------------|
@@ -65,7 +73,9 @@ title: 配置 Kingbase 数据源
 步骤五：数据源检验，校验成功后如下图所示，点击保存即可。
 :::
 
-<img alt="Kingbase" src="/img/dataease/datasource_configuration/KingBase3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Kingbase](/img/dataease/datasource_configuration/KingBase3.png)
+
+图 4  Kingbase校验成功
 
 ## 3 说明
 

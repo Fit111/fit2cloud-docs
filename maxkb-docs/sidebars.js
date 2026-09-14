@@ -401,137 +401,137 @@ const sidebars = {
           "id": "user_manual/Customlanguage",
           "label": "自定义语言包",
           "key": "doc:功能手册/自定义语言包"
+        }
+      ],
+      "key": "cat:功能手册"
+    },
+    {
+      "type": "category",
+      "label": "企业版功能",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/user",
+          "label": "用户管理",
+          "key": "doc:企业版功能/用户管理"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/workspace",
+          "label": "工作空间",
+          "key": "doc:企业版功能/工作空间"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/role",
+          "label": "角色管理",
+          "key": "doc:企业版功能/角色管理"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/resource_management",
+          "label": "资源管理",
+          "key": "doc:企业版功能/资源管理"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/shared_resources",
+          "label": "共享资源",
+          "key": "doc:企业版功能/共享资源"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/chat_user",
+          "label": "对话用户",
+          "key": "doc:企业版功能/对话用户"
         },
         {
           "type": "category",
-          "label": "X-Pack功能",
+          "label": "知识库",
           "collapsed": true,
           "items": [
             {
               "type": "doc",
-              "id": "user_manual/X-Pack/user",
-              "label": "用户管理",
-              "key": "doc:功能手册/X-Pack功能/用户管理"
+              "id": "user_manual/X-Pack/feishu_doc",
+              "label": "飞书文档知识库",
+              "key": "doc:企业版功能/知识库/飞书文档知识库"
             },
             {
               "type": "doc",
-              "id": "user_manual/X-Pack/workspace",
-              "label": "工作空间",
-              "key": "doc:功能手册/X-Pack功能/工作空间"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/role",
-              "label": "角色管理",
-              "key": "doc:功能手册/X-Pack功能/角色管理"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/resource_management",
-              "label": "资源管理",
-              "key": "doc:功能手册/X-Pack功能/资源管理"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/shared_resources",
-              "label": "共享资源",
-              "key": "doc:功能手册/X-Pack功能/共享资源"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/chat_user",
+              "id": "user_manual/X-Pack/dataset_chatuser",
               "label": "对话用户",
-              "key": "doc:功能手册/X-Pack功能/对话用户"
-            },
-            {
-              "type": "category",
-              "label": "知识库",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/feishu_doc",
-                  "label": "飞书文档知识库",
-                  "key": "doc:功能手册/X-Pack功能/知识库/飞书文档知识库"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/dataset_chatuser",
-                  "label": "对话用户",
-                  "key": "doc:功能手册/X-Pack功能/知识库/对话用户"
-                }
-              ],
-              "key": "cat:功能手册/X-Pack功能/知识库"
-            },
-            {
-              "type": "category",
-              "label": "智能体",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/app_logo_settting",
-                  "label": "显示设置",
-                  "key": "doc:功能手册/X-Pack功能/智能体/显示设置"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/app_integrate",
-                  "label": "接入第三方",
-                  "key": "doc:功能手册/X-Pack功能/智能体/接入第三方"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/app_auth",
-                  "label": "身份验证",
-                  "key": "doc:功能手册/X-Pack功能/智能体/身份验证"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/app_chatueser",
-                  "label": "对话用户",
-                  "key": "doc:功能手册/X-Pack功能/智能体/对话用户"
-                }
-              ],
-              "key": "cat:功能手册/X-Pack功能/智能体"
-            },
-            {
-              "type": "category",
-              "label": "系统设置",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/theme_settings",
-                  "label": "系统外观",
-                  "key": "doc:功能手册/X-Pack功能/系统设置/系统外观"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/X-Pack/login_auth",
-                  "label": "登录认证",
-                  "key": "doc:功能手册/X-Pack功能/系统设置/登录认证"
-                }
-              ],
-              "key": "cat:功能手册/X-Pack功能/系统设置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/operation_log",
-              "label": "操作日志",
-              "key": "doc:功能手册/X-Pack功能/操作日志"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/X-Pack/system_API",
-              "label": "系统API",
-              "key": "doc:功能手册/X-Pack功能/系统API"
+              "key": "doc:企业版功能/知识库/对话用户"
             }
           ],
-          "key": "cat:功能手册/X-Pack功能"
+          "key": "cat:企业版功能/知识库"
+        },
+        {
+          "type": "category",
+          "label": "智能体",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/app_logo_settting",
+              "label": "显示设置",
+              "key": "doc:企业版功能/智能体/显示设置"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/app_integrate",
+              "label": "接入第三方",
+              "key": "doc:企业版功能/智能体/接入第三方"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/app_auth",
+              "label": "身份验证",
+              "key": "doc:企业版功能/智能体/身份验证"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/app_chatueser",
+              "label": "对话用户",
+              "key": "doc:企业版功能/智能体/对话用户"
+            }
+          ],
+          "key": "cat:企业版功能/智能体"
+        },
+        {
+          "type": "category",
+          "label": "系统设置",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/theme_settings",
+              "label": "系统外观",
+              "key": "doc:企业版功能/系统设置/系统外观"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/X-Pack/login_auth",
+              "label": "登录认证",
+              "key": "doc:企业版功能/系统设置/登录认证"
+            }
+          ],
+          "key": "cat:企业版功能/系统设置"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/operation_log",
+          "label": "操作日志",
+          "key": "doc:企业版功能/操作日志"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/X-Pack/system_API",
+          "label": "系统API",
+          "key": "doc:企业版功能/系统API"
         }
       ],
-      "key": "cat:功能手册"
+      "key": "cat:企业版功能"
     },
     {
       "type": "category",
@@ -623,6 +623,12 @@ const sidebars = {
           "id": "faq/doc_segment",
           "label": "知识库文档如何合理分段",
           "key": "doc:实践教程/知识库文档如何合理分段"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/workbuddy_maxkb_skills",
+          "label": "WorkBuddy + MaxKB 技能",
+          "key": "doc:实践教程/WorkBuddy + MaxKB 技能"
         }
       ],
       "key": "cat:实践教程"
@@ -637,12 +643,6 @@ const sidebars = {
           "id": "Skills/MaxKB_Skills",
           "label": "MaxKB Skills",
           "key": "doc:MaxKB Skills 技能/MaxKB Skills"
-        },
-        {
-          "type": "doc",
-          "id": "user_manual/workbuddy_maxkb_skills",
-          "label": "WorkBuddy + MaxKB 技能",
-          "key": "doc:MaxKB Skills 技能/WorkBuddy + MaxKB 技能"
         }
       ],
       "key": "cat:MaxKB Skills 技能"

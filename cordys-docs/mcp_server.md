@@ -2,14 +2,11 @@
 title: MCP 服务开放
 ---
 
-:::note
 
 Cordys CRM 支持通过 MCP 进行服务端智能创建（线索/客户/商机/联系人）、智能录入（跟进记录）、智能查重等。
-:::
 
 ## 1 服务配置
 
-:::note
 
 Cordys CRM MCP Server 安装 All in one 镜像中就包含了，默认端口是 8082，支持以下两种通信协议：
 
@@ -41,10 +38,8 @@ spring.ai.mcp.server.version=1.0.0
 # spring.ai.mcp.server.protocol=STREAMABLE
 # spring.ai.mcp.server.streamable-http.mcp-endpoint=/mcp
 ```
-:::
 
 ## 2 客户端配置
-:::note
 
 Cordys CRM MCP Server 默认监听端口为 8082，支持 SSE 和 Streamable-HTTP 协议进行通信。基本配置如下：
 
@@ -61,26 +56,21 @@ Cordys CRM MCP Server 默认监听端口为 8082，支持 SSE 和 Streamable-HTT
 }
 ```
 服务端开启了 Streamable-HTTP 协议，只需将 `transport` 字段修改为 `streamable_http` 即可。
-:::
 
-:::note
 
 登录 Cordys CRM 从左下角 【 个人中心 - API Keys 】中获取 Access Key 和 Secret Key
-:::
 
 ![APIKeys](/img/cordys/index/api_keys2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  API Keys</div>
+
 
 Cordys CRM 的 MCP Server 和 基础镜像安装方式相同，具体可以参考：[**Cordys CRM 安装部署**](./installation/1panel_installtion)
-:::
 
 ## 3 MCP 工具说明
-:::note
 
 Cordys CRM 的 MCP Server 提供以下工具。
-:::
-
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 工具说明</div>
 | 工具名称            | 功能描述     | 输入参数参考 input_schema | 输出结果                |
 |---------------------|------------|--------------------------|------------------------|
 | global_search       | 通用查询     | 查询关键字                | 查询结果集 ｜ 失败原因   |
@@ -95,12 +85,9 @@ Cordys CRM 的 MCP Server 提供以下工具。
 | update_opportunity  | 更新商机     | 需要更新的属性和值        | 更新成功信息 ｜ 失败原因 |
 | update_contact      | 更新联系人   | 需要更新的属性和值        | 更新成功信息 ｜ 失败原因 |
 
-:::note
 
 `Tools` 将 Cordys CRM 系统中配置的动态表单参数输出为标准的 `input_schema`，客户端需根据该格式传递正确参数。
-:::
 
-:::note
 
 以 add_lead 为例，其他工具用法类似，输入参数 (input_schema)
 ```
@@ -138,12 +125,9 @@ Cordys CRM 的 MCP Server 提供以下工具。
   "required" : [ "公司", "负责人", "区域", "所属产品", "线索来源"]
 }
 ```
-:::
-:::note
 
 参数说明：
-:::
-
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  参数说明</div>
 | 字段         | 说明       | 示例/可选值                     |
 | ------------ | ---------- | ------------------------------- |
 | `type`       | 参数类型   | `string` / `number` / `array`… |
@@ -157,7 +141,8 @@ Cordys CRM 的 MCP Server 提供以下工具。
 
 ![agent](/img/cordys/mcp/agent_mcp2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 集成示例</div>
+
 
 步骤⼀： 创建或进入一个高级编排类型的应用。
 
@@ -183,25 +168,23 @@ Cordys CRM 的 MCP Server 提供以下工具。
     }
     ```
 服务端开启了 Streamable-HTTP 协议，只需将 `transport` 字段修改为 `streamable_http` 即可。
-:::
 
-:::note
 
 方式一：Cordys CRM 智能查询效果
-:::
 
 ![智能查询客户](/img/cordys/user_manual/agent-query-customer2.png)
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  智能查询客户</div>
+
 
 方式二：Cordys CRM 智能添加效果
-:::
 
 ![智能创建线索](/img/cordys/user_manual/agent-Create-lead2.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智能创建线索</div>
+
 ###  4.2 开发工具 TRAE 集成示例
 
-:::note
 
 第一步: 配置 `MCP Server`
 ```
@@ -215,10 +198,9 @@ Cordys CRM 的 MCP Server 提供以下工具。
     }
 }
 ```
-:::
-:::note
 
 第二步: 通过`Agent`对话验证工具可用性
-:::
 
 ![Trae.png](/img/cordys/mcp/trae.png)
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  验证</div>

@@ -9,7 +9,7 @@ title: 配置 API 数据源
 点击【新建数据源】，跳转至新建数据连接页面，填入新建数据源的名称，在【类型】下拉框选定【API】数据源。
 :::
  
-<img alt="新增api数据源" src="/img/dataease-v2/datasource_configuration/选择API.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增api数据源](/img/dataease-v2/datasource_configuration/选择API.png)
 
 ## 2 添加 API 数据表
 
@@ -18,7 +18,7 @@ title: 配置 API 数据源
 点击【数据表】，跳转至添加 API 数据表页面，添加成功可再次返回新建数据源页面，一个 API 数据源可添加多张 API 数据表。
 :::
 
-<img alt="数据表" src="/img/dataease-v2/datasource_configuration/API添加数据表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据表](/img/dataease-v2/datasource_configuration/API添加数据表.png)
 
 ## 3 输入基础信息
 
@@ -28,7 +28,7 @@ title: 配置 API 数据源
 如下示例图以 GET 请求为例，请求类型选择 GET，填入完整的请求地址。
 :::
 
-<img alt="基础信息" src="/img/dataease-v2/datasource_configuration/API配置信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![基础信息](/img/dataease-v2/datasource_configuration/API配置信息.png)
 
 ## 4 填写请求参数
 
@@ -39,9 +39,9 @@ title: 配置 API 数据源
 如下示例图，认证方式选 No Auth，【是否指定JsonPath】勾选否，点击下一步，勾选所需的字段，支持字段重命名，字段类型选择，点击【保存】即可。
 :::
 
-<img alt="请求参数1" src="/img/dataease-v2/datasource_configuration/API设置请求参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![请求参数1](/img/dataease-v2/datasource_configuration/API设置请求参数.png)
 
-<img alt="请求参数2" src="/img/dataease-v2/datasource_configuration/API指定JsonPath.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![请求参数2](/img/dataease-v2/datasource_configuration/API指定JsonPath.png)
 
 :::note
 
@@ -50,29 +50,29 @@ title: 配置 API 数据源
 如下示例图，认证方式选 No Auth，【是否指定JsonPath】勾选是，录入正确的 JsonPath 的值，点击下一步，支持字段重命名，字段类型选择，点击【保存】即可。
 :::
 
-<img alt="请求参数3" src="/img/dataease-v2/datasource_configuration/请求参数3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![请求参数3](/img/dataease-v2/datasource_configuration/请求参数3.png)
 
-<img alt="请求参数4" src="/img/dataease-v2/datasource_configuration/API数据结构.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![请求参数4](/img/dataease-v2/datasource_configuration/API数据结构.png)
 
 :::note
 
 API 数据源支持参数提取。API 数据源接口参数设置支持从 API 请求的响应数据中提取结果作为 API 数据表的请求参数，可以用于 API  token 获取等场景。
 提取参数：
 :::
-<img alt="更新1" src="/img/dataease-v2/datasource_configuration/数据源支持参数提取.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/datasource_configuration/数据源支持参数提取.png)
 
 :::note
 
 配置参数：
 :::
-<img alt="更新1" src="/img/dataease-v2/datasource_configuration/数据源支持参数提取2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/datasource_configuration/数据源支持参数提取2.png)
 
 :::note
 
 API 数据源在请求参数的请求头、QUERY 参数、请求体（form-data、x-www-form-urlencoded）均增加时间函数支持。目前内置的时间函数有当天（yyyy-MM-DD）、当天（yyyy/MM/DD）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/datasource_configuration/数据源支持时间函数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/> 
+![更新1](/img/dataease-v2/datasource_configuration/数据源支持时间函数.png) 
 
 :::note
 
@@ -85,16 +85,16 @@ API 数据源支持分页获取数据支持两种分页方式：【页码+大小
 - 在 Query 参数中，将页码和大小参数与内置分页参数进行映射。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据2.png)
 
 :::note
 
 【页码+大小】同时支持将页码和大小参数嵌入 URL 路径中（如 DataEase 分页 API）。使用时，可按照下图所示，在路径中直接使用 $\{pageNumber\} 和 $\{pageSize\} 引用内置分页参数，总数字段的设置与前述方法一致。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据3.png)
 
 :::note
 
@@ -105,9 +105,9 @@ API 数据源支持分页获取数据支持两种分页方式：【页码+大小
 - 在 Query 参数中，将页码和大小参数映射到内置分页参数。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据4.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据5.png)
 
 :::note
 
@@ -120,7 +120,7 @@ API 数据源支持主键设置及基于主键的增量同步更新。
 - 仅在新建 API 数据源表时，才能为选定的字段设置主键，已有数据源表不支持修改主键设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/API%20数据源支持主键设置及基于主键的增量同步更新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/API%20数据源支持主键设置及基于主键的增量同步更新.png)
 
 ## 5 数据源校验
 
@@ -129,7 +129,7 @@ API 数据源支持主键设置及基于主键的增量同步更新。
 新建数据源页面点击【校验】，校验数据链接性，若信息输入正确，且网络正常，提示校验成功。
 :::
 
-<img alt="校验api" src="/img/dataease-v2/datasource_configuration/API校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![校验api](/img/dataease-v2/datasource_configuration/API校验成功.png)
 
 ## 6 数据源保存
 
@@ -138,4 +138,4 @@ API 数据源支持主键设置及基于主键的增量同步更新。
 如下图所示，点击【保存】，配置 API 数据源完成。
 :::
 
-<img alt="" src="/img/dataease-v2/datasource_configuration/API保存成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![](/img/dataease-v2/datasource_configuration/API保存成功.png)

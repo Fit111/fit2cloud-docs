@@ -13,8 +13,9 @@
 .hero {
   position: relative;
   overflow: hidden;
-  /* 标题区留白: 顶部避开悬浮 navbar(94) + 留白, 底部与产品区相接 */
-  padding: 231px 0 80px;
+  /* 上部留白保留 80px, 下部 padding 去掉 */
+  padding: 80px 0 0;
+  height: 340px;
 }
 
 /* 光晕: Ellipse 1 #3370ff op10% 左上; Ellipse 2 #b459ff op5% 右下 */
@@ -45,12 +46,24 @@
   padding: 0 24px;
 }
 
-/* 标题与副标题: 居中展示(原右侧插画已移除, 与搜索框共用一条中轴线) */
+/* 右侧插画: 固定 547x340, 垂直居中贴右, 浮在光晕之上/正文之下 */
+.heroIllustration {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 547px;
+  height: 340px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 标题与副标题: 默认左对齐(≥996px 时右侧有插画); ≤996px 插画隐藏后改回居中, 见底部媒体查询 */
 .heroTitle {
   position: relative;
   z-index: 1;
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 48px;
   font-weight: 600;
   line-height: 67px;
@@ -59,13 +72,13 @@
 .heroSubtitle {
   position: relative;
   z-index: 1;
-  margin: 12px auto 0; /* 上下左零、左右自动 → 居中 */
-  width: 760px; /* 限宽, 避免居中后单行过长影响阅读 */
+  margin: 12px 0 0; /* 左对齐: 上下左零 */
+  width: 532px; /* 限宽, 避免居中后单行过长影响阅读 (原 760px, 缩小 30%) */
   max-width: 100%;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 12.8px; /* 原 16px, 缩小 20% */
+  line-height: 28.8px; /* 原 24px, 加大行间距(两行之间留出 0.3rem), 让折行后更透气 */
   color: #6c7280;
 }
 
@@ -74,7 +87,8 @@
 
 /* ---------------- 全部产品 ---------------- */
 .productsSection {
-  padding: 40px 0 0;
+  /* 去掉上 padding、保留下 padding, 与 hero 紧贴, 与 footer 隔开 */
+  padding: 0 0 40px;
 }
 .productsInner {
   max-width: 1248px;
@@ -116,19 +130,6 @@
   text-decoration: none;
 }
 
-/* 分类 Tag: 贴右上角(顶/右与卡缘平齐), r: 右上随卡、左下 12 */
-.cardTag {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 28px;
-  padding: 0 14px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 28px;
-  border-radius: 0 20px 0 12px;
-}
-
 .productHeader {
   display: flex;
   align-items: center;
@@ -166,50 +167,31 @@
   overflow: hidden;
 }
 
-/* 「进入文档」: 320x32 r4, 渐变描边(#1075e3→#333dff), 白底蓝字 */
+/* 「进入文档」: 浅蓝底搭配低对比细边框, 悬停与键盘聚焦时轻微加深 */
 .productEnter {
   margin-top: auto;
-  height: 32px;
+  height: 36px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  color: #0c7be0;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg, #1075e3 0%, #333dff 100%) border-box;
-  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0966ba;
+  border: 1px solid rgba(12, 123, 224, 0.12);
+  border-radius: 8px;
+  background-color: #f0f6ff;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
-.productCard:hover .productEnter {
-  background:
-    linear-gradient(90deg, #1075e3 0%, #333dff 100%) padding-box,
-    linear-gradient(90deg, #1075e3 0%, #333dff 100%) border-box;
-  color: #ffffff;
+.productCard:hover .productEnter,
+.productCard:focus-visible .productEnter {
+  background-color: #e6f0ff;
+  border-color: rgba(12, 123, 224, 0.24);
+  color: #08549a;
 }
-
-/* ---------------- 底部横幅 ---------------- */
-/* 设计稿 Rectangle 27: [0,2152,1920,241], 渐变 #f7fbff→#f8f9ff */
-.bottomBanner {
-  margin-top: 80px;
-  padding: 80px 24px 90px;
-  background: linear-gradient(90deg, #f7fbff 0%, #f8f9ff 100%);
-  text-align: center;
-}
-.bottomTitle {
-  margin: 0 0 12px;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 45px;
-  color: #001222;
-}
-.bottomSub {
-  margin: 0 auto;
-  max-width: 860px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #6c7280;
+.productCard:focus-visible {
+  outline: 2px solid #0c7be0;
+  outline-offset: 4px;
 }
 
 /* ---------------- 响应式 ---------------- */
@@ -220,9 +202,22 @@
 }
 
 @media (max-width: 996px) {
+  /* ≤996px 隐藏右侧插画 */
+  .heroIllustration {
+    display: none;
+  }
   .hero {
-    /* 移动端顶部只需避开悬浮 navbar(8+70), 留白收紧 */
-    padding: 132px 0 64px;
+    /* 移动端同样去掉下部 padding */
+    padding: 80px 0 0;
+  }
+  /* 插画隐藏后标题/副标题改回居中(默认左对齐以避开右插画) */
+  .heroTitle {
+    text-align: center;
+  }
+  .heroSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   .heroTitle {
     font-size: 36px;
@@ -236,14 +231,6 @@
     font-size: 28px;
     line-height: 40px;
   }
-  .bottomBanner {
-    margin-top: 48px;
-    padding: 56px 24px 64px;
-  }
-  .bottomTitle {
-    font-size: 26px;
-    line-height: 36px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -253,8 +240,5 @@
   .heroDecor {
     width: 480px;
     height: 480px;
-  }
-  .hero {
-    padding-top: 130px;
   }
 }

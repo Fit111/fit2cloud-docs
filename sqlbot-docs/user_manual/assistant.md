@@ -4,29 +4,27 @@ title: 小助手应用
 
 ## 1 功能概述
 
-:::tip
 
 SQLBot 支持通过【小助手】的方式将智能问数能力嵌入到外部系统页面中，用户可直接在嵌入页面中，通过自然语言提问并获取基于业务数据的实时分析结果。
 
-:::
 
-![小助手应用](/img/sqlbot/user_manual/assistant/小助手应用首页.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用首页.png" alt="小助手应用" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 小助手应用</div>
 
-![嵌入式效果](/img/sqlbot/user_manual/assistant/小助手嵌入效果.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手嵌入效果.png" alt="嵌入式效果" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 嵌入式效果</div>
 
 ## 2 应用类型与配置
 
-:::tip
 
 系统提供【基础应用】与【高级应用】两类嵌入模式，满足从快速部署到精细权限管控的不同集成需求。
 
-:::
 
-![小助手应用类型](/img/sqlbot/user_manual/assistant/小助手应用选择.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用选择.png" alt="小助手应用类型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 小助手应用类型</div>
 
 ### 2.1 基础应用
 
-:::tip
 
 基础应用支持快速嵌入 SQLBot 功能：
 
@@ -35,15 +33,15 @@ SQLBot 支持通过【小助手】的方式将智能问数能力嵌入到外部�
 
 适用场景：数据权限要求不高的页面，如运营看板、知识库、内网主页等。
 
-:::
 
-![小助手简单应用](/img/sqlbot/user_manual/assistant/小助手简单应用创建.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手简单应用创建.png" alt="小助手简单应用" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 小助手简单应用创建</div>
 
-![小助手简单应用](/img/sqlbot/user_manual/assistant/小助手简单应用配置.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手简单应用配置.png" alt="小助手简单应用" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 小助手简单应用配置</div>
 
 ### 2.2 高级应用
 
-:::tip
 
 高级应用适用于数据权限需由业务系统严格控制的复杂场景：
 
@@ -51,19 +49,17 @@ SQLBot 支持通过【小助手】的方式将智能问数能力嵌入到外部�
 
 适用场景：企业管理系统、客户门户、需要按用户数据隔离的 B2B 系统等。
 
-:::
 
-![小助手高级应用](/img/sqlbot/user_manual/assistant/小助手高级应用创建.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手高级应用创建.png" alt="小助手高级应用" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 小助手高级应用创建</div>
 
-:::tip
 
 在接口地址配置完成后，点击【添加接口凭证】，进入如下配置窗口。
 
-:::
 
-![小助手高级应用](/img/sqlbot/user_manual/assistant/小助手高级应用配置.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手高级应用配置.png" alt="小助手高级应用" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 小助手高级应用配置</div>
 
-:::tip
 
 配置流程：
 
@@ -77,59 +73,57 @@ SQLBot 支持通过【小助手】的方式将智能问数能力嵌入到外部�
     - 目标凭证位置：获取的认证信息在请求中的放置的位置，如 Header、Cookie、Param。
     - 目标凭证：具体的凭证值，填写后系统会根据配置在请求时自动带上，一般无需填写，系统自动按类型获取。
 
-:::
 
 ### 2.3 嵌入代码获取
 
-:::tip
 
 每个应用创建成功后，系统会自动生成可嵌入前端的 JavaScript 代码：
 
 - 标准嵌入代码：供业务系统开发者将问数小助手嵌入至目标页面；
 - 浏览器测试代码：支持在浏览器控制台快速运行测试，验证集成效果。
 
-:::
 
-![小助手嵌入代码](/img/sqlbot/user_manual/assistant/小助手嵌入第三方.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手嵌入第三方.png" alt="小助手嵌入代码" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 小助手嵌入第三方</div>
 
-![小助手嵌入代码](/img/sqlbot/user_manual/assistant/小助手全屏嵌入.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手全屏嵌入.png" alt="小助手嵌入代码" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 9 小助手全屏嵌入</div>
 
-![小助手嵌入代码](/img/sqlbot/user_manual/assistant/小助手浮窗嵌入.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手浮窗嵌入.png" alt="小助手嵌入代码" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 10 小助手浮窗嵌入</div>
 
 ## 3 应用管理功能
 
-:::tip
 
 在应用上点击【编辑】按钮，可进入应用详情页，修改名称、描述、跨域设置、数据源配置等内容。保存后立即生效。
 
-:::
 
-![小助手应用编辑](/img/sqlbot/user_manual/assistant/小助手应用编辑.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用编辑.png" alt="小助手应用编辑" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 11 小助手应用编辑</div>
 
-:::tip
 
 点击【显示设置】按钮后，系统将弹出显示设置界面。可以对嵌入小助手界面进行样式更改。
 
-:::
 
-![小助手应用删除](/img/sqlbot/user_manual/assistant/小助手应用显示设置1.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用显示设置1.png" alt="小助手应用删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 12 小助手显示设置 1</div>
 
-![小助手应用删除](/img/sqlbot/user_manual/assistant/小助手应用显示设置2.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用显示设置2.png" alt="小助手应用删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 13 小助手显示设置 2</div>
 
-:::tip
 
 点击【删除】按钮后，系统将弹出确认框。确认后，该应用将被彻底移除，嵌入代码失效。
 
-:::
 
-![小助手应用删除](/img/sqlbot/user_manual/assistant/小助手应用删除1.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用删除1.png" alt="小助手应用删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 14 删除小助手应用 1</div>
 
-![小助手应用删除](/img/sqlbot/user_manual/assistant/小助手应用删除2.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用删除2.png" alt="小助手应用删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 15 删除小助手应用 2</div>
 
-:::tip
 
 在页面右上角的搜索栏中输入应用名称关键词，系统将筛选展示符合条件的应用，支持快速定位和管理。
 
-:::
 
-![小助手应用搜索](/img/sqlbot/user_manual/assistant/小助手应用搜索.png)
+<img src="/img/sqlbot/user_manual/assistant/小助手应用搜索.png" alt="小助手应用搜索" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 16 小助手应用搜索</div>

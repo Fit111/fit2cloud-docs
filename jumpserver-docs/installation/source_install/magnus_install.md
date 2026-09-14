@@ -4,9 +4,10 @@ title: Magnus 环境部署
 
 ## 1 Magnus 环境部署
 ### 1.1 环境要求
-:::note
 
 - 可以从 [Github][magnus] 网站上获取最新的 [Release][magnus_release] 副本。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  Magnus 下载包</div>
 
 | 操作系统 | 架构类型 | 名称                                                                                         |
 | :------ | :------ | :-------------------------------------------------------------------------------------------- |
@@ -15,11 +16,11 @@ title: Magnus 环境部署
 | Linux   | loong64 | [magnus-v4.10.17-linux-loong64.tar.gz][magnus-v4.10.17-linux-loong64] |
 | Darwin  | amd64   | [magnus-v4.10.17-darwin-amd64.tar.gz][magnus-v4.10.17-darwin-amd64]   |
 | Darwin  | arm64   | [magnus-v4.10.17-darwin-arm64.tar.gz][magnus-v4.10.17-darwin-arm64]   |
-:::
 
-:::note
 
 - Magnus 需要使用 Wisp 与 JumpServer 通信，从 [Github][wisp] 网站上获取最新的 [Release][wisp_release] 副本。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  Wisp 下载包</div>
 
 | 操作系统 | 架构类型 | 名称                                                                                       |
 | :------ | :------ | :------------------------------------------------------------------------------------------ |
@@ -29,13 +30,10 @@ title: Magnus 环境部署
 | Darwin  | amd64   | [wisp-v4.10.17-darwin-amd64.tar.gz][wisp-v4.10.17-darwin-amd64]   |
 | Darwin  | arm64   | [wisp-v4.10.17-darwin-arm64.tar.gz][wisp-v4.10.17-darwin-arm64]   |
 | Windows | amd64   | [wisp-v4.10.17-windows-amd64.tar.gz][wisp-v4.10.17-windows-amd64] |
-:::
 
 ### 1.2 选择部署方式
-:::note
 
 ### Linux/amd64
-:::
 
 - 解压缩包。
 

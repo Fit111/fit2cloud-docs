@@ -4,7 +4,6 @@ title: 对接DeepSeek
 
 ## 1 添加模型
 
-:::note
 
 添加 DeepSeek 大模型之前，需要先在 [DeepSeek 开放平台](https://platform.deepseek.com/) 创建 API Key。
 
@@ -14,15 +13,16 @@ title: 对接DeepSeek
 * 模型类型：大语言模型。   
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。  
 * API Key：在 DeepSeek 开放平台创建并查看。
-:::
 
-![kimi 模型](/img/maxkb/model/deepseek_apikey.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/deepseek_apikey.png" alt="图 1  DeepSeek API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  DeepSeek API Key</div>
 
 ## 2 配置样例
 
-:::note
 
 DeepSeek-大语言模型配置样例图示：
-:::
 
-<img alt="deepseek 模型" src="/img/maxkb/model/deepseek_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/deepseek_llm.png" alt="图 2  DeepSeek 大语言模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  DeepSeek 大语言模型 配置样例图</div>

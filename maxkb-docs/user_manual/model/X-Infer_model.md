@@ -4,7 +4,6 @@ title: 对接Xorbits Inference
 
 ## 1 添加模型
 
-:::note
 
 选择模型供应商为`Xorbits Inference`，并在模型添加对话框中输入如下必要信息：
 
@@ -16,48 +15,47 @@ title: 对接Xorbits Inference
 
 * API 域名：Xorbits Inference 服务地址，例如：http://192.168.20.242:9997 。 
 * API Key：若没有 API Key，输入任意字符即可。
-:::
 
 ## 2 配置样例
 
-:::note
 
 Xorbits Inference-大语言模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_llm.png" alt="图 1  Xorbits Inference 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Xorbits Inference 大语言模型 配置样例图</div>
+
 
 Xorbits Inference-向量模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_embed.png" alt="图 2  Xorbits Inference 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  Xorbits Inference 向量模型 配置样例图</div>
+
 
 Xorbits Inference-重排模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_reranker.png" alt="图 3  Xorbits Inference 重排模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Xorbits Inference 重排模型 配置样例图</div>
+
 
 Xorbits Inference-语音识别模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_asr.png" alt="图 4  Xorbits Inference 语音识别模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  Xorbits Inference 语音识别模型 配置样例图</div>
+
 
 Xorbits Inference-语音合成模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_tts.png" alt="图 5  Xorbits Inference 语音合成模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  Xorbits Inference 语音合成模型 配置样例图</div>
+
 
 Xorbits Inference-视觉模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_version.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_version.png" alt="图 6  Xorbits Inference 视觉模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  Xorbits Inference 视觉模型 配置样例图</div>
+
 
 Xorbits Inference-图片生成模型配置样例图示如下：
-:::
-<img alt="Xorbits Inference" src="/img/maxkb/model/xinfo_version_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_version_gen.png" alt="图 7  Xorbits Inference 图片生成模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  Xorbits Inference 图片生成模型 配置样例图</div>

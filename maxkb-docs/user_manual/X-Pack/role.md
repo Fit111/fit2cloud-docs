@@ -2,7 +2,6 @@
 title: 角色管理
 ---
 
-:::note
 
 角色是用户在系统中的身份，用于批量进行权限管理。  
 
@@ -16,12 +15,12 @@ title: 角色管理
 - 普通用户：可以维护自己创建的资源和被授权的资源，如创建的智能体、知识库、工具、模型所有功能权限。 
 
 **注意**：系统内置角色不可以编辑权限，仅能添加/移除成员。
-:::
 
-![角色管理](/img/maxkb/system/role_manage.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/role_manage.png" alt="图 1  角色管理" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  角色管理</div>
 
 ## 1 创建角色
-:::note
 
 创建自定义角色：
 
@@ -29,51 +28,51 @@ title: 角色管理
  - 继承角色：系统管理员、工作空间管理员和普通用户。
 
 **注意**：系统管理员功能，工作空间管理员无此功能。
-:::
 
-![新建角色](/img/maxkb/system/create_role.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_role.png" alt="图 2  新建角色表单" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  新建角色表单</div>
 
 ## 2  权限配置
-:::note
 
 自定义角色创建成功，默认不勾选继承角色的所有权限。自定义角色可继承内置的 3 种角色进行自定义权限，如自定义系统管理员的权限设置，可以在内置系统管理员的权限范围内编辑。
-:::
 
-![新建角色](/img/maxkb/system/create_role_permissions.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_role_permissions.png" alt="图 3  自定义角色权限配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  自定义角色权限配置</div>
+
 
 内置系统管理员角色权限：
-:::
 
-<img alt="角色权限" src="/img/maxkb/system/administrator_permissions.png" width="800" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/administrator_permissions.png" alt="图 4  系统管理员角色权限" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  系统管理员角色权限</div>
+
 
 内置工作空间管理员角色权限：
-:::
 
-<img alt="角色权限" src="/img/maxkb/system/workspace%20_admin_permissions.png" width="800" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/workspace%20_admin_permissions.png" alt="图 5  工作空间管理员角色权限" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  工作空间管理员角色权限</div>
+
 
 内置普通用户角色权限：
-:::
 
-<img alt="角色权限" src="/img/maxkb/system/user_permissions.png" width="800" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/user_permissions.png" alt="图 6  普通用户角色权限" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  普通用户角色权限</div>
 
 ## 3 成员管理
 
-:::note
 
 支持按角色管理成员，点击【成员】，显示当前所选角色的成员列表。
 
 工作空间管理员可以看到作为工作空间管理员角色的工作空间下的所有成员。
-:::
 
-![成员管理](/img/maxkb/system/role_numberlist.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/role_numberlist.png" alt="图 7  角色成员列表" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  角色成员列表</div>
+
 
 添加成员：
 
@@ -81,16 +80,19 @@ title: 角色管理
 - 当前所选的角色为工作空间管理员或普通用户角色时，添加成员时选择完成后，还需要选择工作空间，工作空间列表也可以多选。
 
 **注意**：工作空间管理员添加成员时，工作空间下拉列表仅列出工作空间管理员角色的工作空间。
-:::
 
-![成员管理](/img/maxkb/system/add_number.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/add_number.png" alt="图 8  添加角色成员" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  添加角色成员</div>
+
 
 移除成员：
 
 - 用户在某个工作空间中的角色，若用户拥有多工作空间的成员，需要移除多次。
 - 成员移除后，登录系统则不再拥有该角色。
 - 内置系统管理员角色中的 admin 用户不能被移除。
-:::
+
+
+
+
 

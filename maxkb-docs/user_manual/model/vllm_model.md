@@ -4,7 +4,6 @@ title: 对接vLLM
 
 ## 1 添加模型
 
-:::note
 
 选择模型供应商为`vLLM`，并在模型添加对话框中输入如下必要信息：
 
@@ -13,41 +12,40 @@ title: 对接vLLM
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。      
 * API 域名：vLLM 服务地址， 如：http://192.168.20.242:8000/v1 。 
 * API Key：若没有 API Key，输入任意字符即可。
-:::
 
 ## 2 配置样例
 
-:::note
 
 vLLM-大语言模型配置样例图示如下：
-:::
 
-<img alt="vLLM LLM模型" src="/img/maxkb/model/vLLM_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/vLLM_llm.png" alt="图 1  vLLM 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  vLLM 大语言模型 配置样例图</div>
+
 
 vLLM-向量模型配置样例图示如下：
-:::
 
-<img alt="vLLM 向量模型" src="/img/maxkb/model/vllm_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/vllm_embedding.png" alt="图 2  vLLM 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  vLLM 向量模型 配置样例图</div>
+
 
 vLLM-语音识别模型配置样例图示如下：
-:::
 
-<img alt="vLLM 语音模型" src="/img/maxkb/model/vllm_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/vllm_asr.png" alt="图 3  vLLM 语音识别模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  vLLM 语音识别模型 配置样例图</div>
+
 
 vLLM-视觉模型配置样例图示如下：
-:::
 
-<img alt="vLLM 视觉模型" src="/img/maxkb/model/vllm_version_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/vllm_version_gen.png" alt="图 4  vLLM 视觉模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  vLLM 视觉模型 配置样例图</div>
+
 
 vLLM-重排模型配置样例图示如下：
-:::
 
-<img alt="vLLM 重排模型" src="/img/maxkb/model/vllm_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/vllm_reranker.png" alt="图 5  vLLM 重排模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  vLLM 重排模型 配置样例图</div>

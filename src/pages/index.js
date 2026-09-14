@@ -20,44 +20,16 @@ import styles from './index.module.css';
  * - 产品区: 标题 '全部产品' 36px/600 居中; 3列卡片 384x256 间距24 r20
  *     卡底渐变 #f7fbff→#ffffff; 内边距 32
  *     logo(高30)+名称 24px/700 #1f2329; 副标题 16px #1f2329; 描述 14px/24 #646a73
- *     '进入文档' 按钮 320x32 r4 渐变描边 #1075e3→#333dff, 文字 16px #0c7be0
- *     分类 Tag 贴右上角(与卡顶/右缘平齐), 浅色底 + 品牌色字 14px/500
+ *     '进入文档' 按钮 320x36 r8 浅蓝底、低对比细边框, 文字 14px #0966ba
  * - 底部横幅: 渐变 #f7fbff→#f8f9ff; 'FIT2CLOUD 飞致云' 32px/600 居中 + 说明 16px #6c7280
  * - 设计稿的「热门检索/换一批」榜单按要求不做
  * ------------------------------------------------------------------ */
-
-/* 产品分类标签 (文字与颜色取自设计稿各卡 Tag 实例) */
-const TAGS = {
-  '1Panel AI 网关': {label: 'AI 原生', color: '#005eeb'},
-  '1Panel 面板': {label: 'AI 原生', color: '#005eeb'},
-  'Cordys CRM': {label: 'AI CRM', color: '#00a6ab'},
-  JumpServer: {label: '运维安全', color: '#189e7a'},
-  MaxKB: {label: '智能体开发', color: '#3370ff'},
-  DataEase: {label: '数据可视化', color: '#0b87fd'},
-  SQLBot: {label: '智能问数', color: '#3370ff'},
-  MeterSphere: {label: '软件测试', color: '#783887'},
-  Halo: {label: '建站', color: '#0b87fd'},
-};
-const DEFAULT_TAG = {label: 'AI 原生', color: '#005eeb'};
-
-/* 卡片排列顺序: 对齐设计稿 (行1 AI 网关/1Panel/Cordys CRM; 行2 JumpServer/MaxKB/DataEase; 行3 SQLBot/MeterSphere/Halo) */
-const CARD_ORDER = [
-  '1Panel AI 网关',
-  '1Panel 面板',
-  'Cordys CRM',
-  'JumpServer',
-  'MaxKB',
-  'DataEase',
-  'SQLBot',
-  'MeterSphere',
-  'Halo',
-];
 
 /* 卡片描述区的长文案 (副标题用 products.js 的短定位句, 此处为完整描述)。
    文案口径对齐 fit2cloud 官网产品介绍; 未覆盖的产品回退为副标题同文。 */
 const PRODUCT_DESC = {
   '1Panel AI 网关':
-    '1Panel 是一个现代化、开源的 Linux 服务器运维管理面板，帮助你快速建设与管理数字化基础设施。',
+    '1Panel AI 网关提供从统一接入、智能路由到合规审计的全链条管控，让企业 AI 落地更安全、更高效、更可控。',
   '1Panel 面板':
     '1Panel 是一个现代化、开源的 Linux 服务器运维管理面板，帮助你轻松部署和管理网站、数据库与容器等应用。',
   JumpServer:
@@ -76,14 +48,10 @@ const PRODUCT_DESC = {
 const I18N = {
   zh: {
     title: '文档中心',
-    subtitle: '飞致云是中国领先的开源软件公司，致力于为数智经济时代创造好软件。',
-    searchPlaceholder: '请输入关键词回车检索，例如：飞致云',
+    subtitle: '我们秉持"软件用起来才有价值，才有改进机会"的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件。',
+    searchPlaceholder: '请输入关键词回车检索，例如：1Panel 如何安装',
     searchBtn: '搜索',
-    productsTitle: '全部产品',
     enter: '进入文档',
-    bannerTitle: 'FIT2CLOUD 飞致云',
-    bannerSub:
-      '我们秉持“软件用起来才有价值，才有改进机会”的核心价值观，向中国数字化团队交付被广泛验证、可信赖的开源软件。',
   },
   en: {
     title: 'Docs Center',
@@ -100,12 +68,21 @@ const I18N = {
 };
 
 function Hero({site, zh}) {
+  // hero 右侧插画: 主题图(文件名含中文/【】, 用 URL 编码)
+  const illustration = useBaseUrl('/img/%E3%80%90%E4%B8%BB%E9%A2%98%E3%80%91%E9%A3%9E%E8%87%B4%E4%BA%91%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.png');
   return (
     <section className={styles.hero}>
       {/* 背景光晕: 对应设计稿 Ellipse 1(#3370ff 10%) / Ellipse 2(#b459ff 5%) */}
       <span className={clsx(styles.heroDecor, styles.heroDecorBlue)} aria-hidden="true" />
       <span className={clsx(styles.heroDecor, styles.heroDecorPurple)} aria-hidden="true" />
       <div className={styles.heroInner}>
+        {/* 右侧插画: 高度锁到 hero 组件高度(340px)等比缩放, ≤996px 隐藏 */}
+        <img
+          src={illustration}
+          alt="FIT2CLOUD 文档中心"
+          className={styles.heroIllustration}
+          loading="eager"
+        />
         <h1 className={styles.heroTitle}>{site.title}</h1>
         <p className={styles.heroSubtitle}>{site.subtitle}</p>
         {/* 搜索框 + 输入后的即时结果下拉面板(Figma frame '交互' 的 Search + Frame 1564942) */}
@@ -118,17 +95,11 @@ function Hero({site, zh}) {
     </section>
   );
 }function ProductCard({item, site}) {
-  const tag = TAGS[item.name] || DEFAULT_TAG;
   const target = item.to ?? item.link;
   const logo = useBaseUrl(`/img/logo/${encodeURIComponent(item.logo)}`);
   const desc = PRODUCT_DESC[item.name] || item.desc;
   return (
     <Link to={target} className={styles.productCard}>
-      <span
-        className={styles.cardTag}
-        style={{color: tag.color, background: `${tag.color}1F`}}>
-        {tag.label}
-      </span>
       <span className={styles.productHeader}>
         <img src={logo} alt={item.name} className={styles.productLogo} loading="lazy" />
         <span className={styles.productName}>{item.name}</span>
@@ -141,16 +112,13 @@ function Hero({site, zh}) {
 }
 
 function ProductsSection({site}) {
-  const ordered = CARD_ORDER.map(
-    (name) => HOME_PRODUCTS.find((p) => p.name === name),
-  ).filter(Boolean);
   return (
     <section className={styles.productsSection}>
       <div className={styles.productsInner}>
         <h2 className={styles.productsTitle}>{site.productsTitle}</h2>
         <div className={styles.productGrid}>
-          {ordered.map((item) => (
-            <ProductCard key={item.name} item={item} site={site} />
+          {HOME_PRODUCTS.map((item) => (
+            <ProductCard key={item.id} item={item} site={site} />
           ))}
         </div>
       </div>
@@ -158,17 +126,8 @@ function ProductsSection({site}) {
   );
 }
 
-function BottomBanner({site}) {
-  return (
-    <section className={styles.bottomBanner}>
-      <h2 className={styles.bottomTitle}>{site.bannerTitle}</h2>
-      <p className={styles.bottomSub}>{site.bannerSub}</p>
-    </section>
-  );
-}
-
 export default function Home() {
-  const {i18n} = useDocusaurusContext();
+  const {i18n, siteConfig} = useDocusaurusContext();
   const zh = i18n.currentLocale === 'zh-Hans';
   const site = zh ? I18N.zh : I18N.en;
 
@@ -180,11 +139,10 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout title={site.title} description={site.subtitle}>
+    <Layout title={siteConfig.title} description={site.subtitle}>
       <div className={styles.portalPage}>
         <Hero site={site} zh={zh} />
         <ProductsSection site={site} />
-        <BottomBanner site={site} />
       </div>
     </Layout>
   );

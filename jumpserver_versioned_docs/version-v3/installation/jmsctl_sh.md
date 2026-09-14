@@ -3,7 +3,6 @@ title: 命令行工具
 ---
 
 ## 1 命令行运维工具 - jmsctl
-:::note
 
 - JumpServer 默认内置了命令行运维工具 - jmsctl，通过执行 jmsctl help 命令，可以查看相关的帮助文档。
 
@@ -33,10 +32,8 @@ More Commands:
   raw               执行原始 docker compose 命令
   tail [service]    查看 Service 日志
 ```
-:::
 
 ## 2 配置工具 - jmsctl config
-:::note
 
 - JumpServer 默认内置了配置工具 - jmsctl config，通过执行 jmsctl config help 命令，可以查看相关的帮助文档。
 
@@ -52,4 +49,3 @@ Args:
   ssl              配置 Web SSL 
   env              配置 JumpServer 环境变量
 ```
-:::

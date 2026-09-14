@@ -6,11 +6,11 @@ title: v2.10.3
 
 ### 1.1 选项卡支持关闭 Tab 标签进行标题隐藏
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20选项卡支持关闭%20Tab%20标签进行标题隐藏.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20选项卡支持关闭%20Tab%20标签进行标题隐藏.PNG)
 
 ### 1.2  数据大屏设计面板支持开启辅助网格线
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏设计面板支持开启辅助网格线.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏设计面板支持开启辅助网格线.PNG)
 
 ### 1.3 图表跳转支持携带查询组件的过滤值并传递给外部参数
 :::note
@@ -18,7 +18,7 @@ title: v2.10.3
 在目标仪表板上创建外部参数，添加所需的外部参数，并选择与其关联的查询组件或图表。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数1.PNG)
 
 :::note
 
@@ -27,27 +27,27 @@ title: v2.10.3
 如果目标仪表板中有多个图表需要联动，可在【联动图表】中进行字段关联设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数2.PNG)
 
 :::note
 
 切换【携带查询条件】，将源仪表板的查询组件值绑定到目标仪表板的外部参数。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数3.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数3.PNG)
 
 :::note
 
 可将源仪表板上的查询条件动态传递至目标仪表板，实现跨仪表板的图表联动。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数.gif)
 
 ### 1.4  地图和气泡地图支持配置边线和区块填充透明度
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图和气泡地图支持配置边线和区块填充透明度1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图和气泡地图支持配置边线和区块填充透明度1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图和气泡地图支持配置边线和区块填充透明度2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图和气泡地图支持配置边线和区块填充透明度2.png)
 
 ### 1.5 线图和面积图支持设置条件样式
 :::note
@@ -55,22 +55,22 @@ title: v2.10.3
 设置的条件样式将影响折线图的线条（或面积）和标签文字的颜色。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/折线图和面积图支持设置条件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/折线图和面积图支持设置条件样式.png)
 
 ### 1.6  折线图和面积图支持配置标签位置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/折线图和面积图支持配置标签位置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/折线图和面积图支持配置标签位置.png)
 
 ### 1.7 数据大屏缩放方式增加不缩放模式
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式1.png)
 
 :::note
 
 当显示设备尺寸大于或者小于数据大屏的设计尺寸时，内容将按设计尺寸显示，不进行拉伸或缩放。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏缩放方式增加不缩放模式2.png)
 
 ### 1.8 明细表支持自动换行
 :::note
@@ -78,7 +78,7 @@ title: v2.10.3
 注意：自动换行功能启用后，表头的行高无法固定。在开启合并单元格时，自动换行则会失效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持自动换行.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持自动换行.png)
 
 ### 1.9 数据大屏中 Tab 组件支持标签排序
 :::note
@@ -86,9 +86,9 @@ title: v2.10.3
 可以通过鼠标右键点击选项卡，选择【排序】功能对 Tab 标签进行自定义排序，影响标签的显示顺序。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏中%20Tab%20组件支持标签排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏中%20Tab%20组件支持标签排序1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏中%20Tab%20组件支持标签排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏中%20Tab%20组件支持标签排序2.png)
 
 ### 1.10 Tab 组件在调整大小时，支持设置内部组件的大小是否自动调整
 :::note
@@ -96,9 +96,9 @@ title: v2.10.3
 在调整 Tab 组件大小时勾选【调整大小保持内部组件尺寸】，Tab 组件大小变化将不会影响内部组件的大小。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整2.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整2.gif)
 
 ### 1.11 数据大屏支持按住空格键时拖动画布
 :::note
@@ -106,11 +106,11 @@ title: v2.10.3
 按住空格键并同时使用鼠标或者触摸板，可自由移动数据大屏的画布位置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏支持按住空格键时拖动画布.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏支持按住空格键时拖动画布.gif)
 
 ### 1.12 支持移动端访问数据大屏
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持移动端访问数据大屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持移动端访问数据大屏.png)
 
 ### 1.13 查询组件支持自定义排序
 
@@ -119,15 +119,15 @@ title: v2.10.3
 当显示字段与排序字段相同时，文本下拉和数值下拉支持选择自定义排序规则。且勾选后，下拉查询组件的默认值选项将按照自定义排序显示。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持自定义排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持自定义排序1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持自定义排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持自定义排序2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持自定义排序3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持自定义排序3.png)
 
 ### 1.14 查询组件支持内边距和圆角设置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持内边距和圆角设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持内边距和圆角设置1.png)
 
 ### 1.15 时间查询组件支持设置时间筛选范围
 :::note
@@ -140,7 +140,7 @@ title: v2.10.3
 - 以上区间类型均支持设置【固定时间】与【动态时间】。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间查询组件支持设置时间筛选范围.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间查询组件支持设置时间筛选范围.png)
 
 ### 1.16 查询条件支持单独设置宽度
 :::note
@@ -148,7 +148,7 @@ title: v2.10.3
 允许为每个查询条件单独设置宽度，实现更灵活的布局调整。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询条件支持单独设置宽度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询条件支持单独设置宽度.png)
 
 ### 1.17 支持组件背景模糊/毛玻璃效果
 :::note
@@ -156,31 +156,31 @@ title: v2.10.3
 支持设置组件背景模糊，该效果能够透过组件展示并模糊下层内容，透明区域也将应用模糊处理。若为图片，需确保其具有透明背景以生效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持组件背景模糊：毛玻璃效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持组件背景模糊：毛玻璃效果.png)
 
 ### 1.18 明细表支持总计
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持总计.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持总计.png)
 
 ### 1.19 条形图的纵轴支持设置显示标签的长度限制
 
-<img alt="更新1" src="/img/dataease-v2/newimg/条形图的纵轴支持设置显示标签的长度限制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/条形图的纵轴支持设置显示标签的长度限制.png)
 
 ### 1.20 图例支持设置图标大小
 
-<img alt="更新1" src="/img/dataease-v2/newimg/图例支持设置图标大小.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/图例支持设置图标大小.png)
 
 ### 1.21 仪表盘标签支持显示占比
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表盘标签支持显示占比.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表盘标签支持显示占比.png)
 
 ### 1.22 进度条标签支持自定义显示指标或百分比
 
-<img alt="更新1" src="/img/dataease-v2/newimg/进度条标签支持自定义显示指标或百分比.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/进度条标签支持自定义显示指标或百分比.png)
 
 ### 1.23 雷达图支持设置辅助点显示、大小及面积显示
 
-<img alt="更新1" src="/img/dataease-v2/newimg/雷达图支持设置辅助点显示、大小及面积显示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/雷达图支持设置辅助点显示、大小及面积显示.png)
 
 ### 1.24 地图支持自定义区域及其区域下钻
 :::note
@@ -188,24 +188,24 @@ title: v2.10.3
 在【系统设置】→【系统参数】→【地图设置】中，可以添加自定义地理区域，并对中国省份进行自定义组合。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻2.png)
 
 :::note
 
 在地图和气泡地图等离线地图中，可以选择并显示自定义区域，在维度中添加区域字段（数据值如东区、南区、北区）。配置区域与省份的下钻，可支持从区域下钻到省份。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/地图支持自定义区域及其区域下钻.gif)
 
 ### 1.25 仪表板和数据大屏支持字体更换
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板和数据大屏支持字体更换.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板和数据大屏支持字体更换.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20仪表板和数据大屏支持字体更换2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20仪表板和数据大屏支持字体更换2.png)
 
 ## 2 数据准备
 
@@ -219,7 +219,7 @@ title: v2.10.3
 - 仅在新建 API 数据源表时，才能为选定的字段设置主键，已有数据源表不支持修改主键设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/API%20数据源支持主键设置及基于主键的增量同步更新.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/API%20数据源支持主键设置及基于主键的增量同步更新.png)
 
 ### 2.2 上传 Excel 数据源时支持字段选择
 :::note
@@ -230,7 +230,7 @@ title: v2.10.3
 - 对已有 Excel 数据源进行数据替换时，同样支持字段选择和字段长度调整。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/上传%20Excel%20数据源时支持字段选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/上传%20Excel%20数据源时支持字段选择.png)
 
 ### 2.3 数据填报支持多条录入并新增“快速确认完成”按钮
 :::note
@@ -238,7 +238,7 @@ title: v2.10.3
 可以在同一界面填写多条记录并提交，增加每条记录的状态标签。并提供“快速确认完成”按钮，支持用户快速修改单条记录状态或批量设置为完成。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报支持多条录入并新增“快速确认完成”按钮.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报支持多条录入并新增“快速确认完成”按钮.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 权限管理新增导出控制
@@ -250,7 +250,7 @@ title: v2.10.3
 - 图表权限：支持以 Excel 格式导出图表展示的数据的导出权限。
 - 明细权限：支持导出图表对应的详细数据的导出权限。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/权限管理新增导出控制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/权限管理新增导出控制.png)
 
 ### 3.2 同步管理目标数据源支持自定义配置 Doris 的 FE/BE 端口地址
 :::note
@@ -258,16 +258,16 @@ title: v2.10.3
 可以分别设置 Doris FE（前端）和 BE（后端）的 IP 地址、查询端口及 HTTP 端口，提供更灵活的配置选项，以满足不同环境下的部署需求。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/同步管理目标数据源支持自定义配置%20Doris%20的%20FE：BE%20端口地址.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/同步管理目标数据源支持自定义配置%20Doris%20的%20FE：BE%20端口地址.png)
 
 ## 4 系统设置
 ### 4.1 支持设置用户登录限制
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持设置用户登录限制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持设置用户登录限制.png)
 
 ### 4.2 系统设置增加页面打开方式选项
 
-<img alt="更新1" src="/img/dataease-v2/newimg/系统设置增加页面打开方式选项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/系统设置增加页面打开方式选项.png)
 
 ### 4.3 增加资源默认排序方式的配置项
 :::note
@@ -275,7 +275,7 @@ title: v2.10.3
 系统管理员可以设置各类资源的默认排序方式，用户则可以根据个人需求调整资源的排序。用户自定义的排序方式将保存在浏览器本地，优先级高于系统默认设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/增加资源默认排序方式的配置项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/增加资源默认排序方式的配置项.png)
 
 ### 4.4 新增游离资源管理（XPack）
 :::note
@@ -288,23 +288,23 @@ title: v2.10.3
 - 资源删除：支持一键删除和单资源删除操作。删除前会弹出确认提示，避免误操作；删除单个资源时，会显示该资源的血缘关系。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增游离资源管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增游离资源管理.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增游离资源管理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增游离资源管理2.png)
 
 ## 5 嵌入式（XPack）
 
 ### 5.1 嵌入式应用指定密钥长度
 
-<img alt="更新1" src="/img/dataease-v2/newimg/嵌入式应用指定密钥长度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/嵌入式应用指定密钥长度.png)
 
 ### 5.2 支持嵌入 Tab 和组合形式的组件
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持嵌入%20Tab%20和组合形式的组件3.png)
 
 ### 5.3 支持嵌入数据填报
 :::note
@@ -312,16 +312,16 @@ title: v2.10.3
 支持嵌入【数据填报列表】和【我的填报】页面。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持嵌入数据填报.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持嵌入数据填报.png)
 
 ## 6 其他
 ### 6.1 资源树节点支持拖拽移动位置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/资源树节点支持拖拽移动位置.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/资源树节点支持拖拽移动位置.gif)
 
 ### 6.2 新增消息中心
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增消息中心1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增消息中心1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增消息中心2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增消息中心2.png)
 

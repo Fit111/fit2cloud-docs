@@ -25,7 +25,7 @@ title: 快速入门
 
 进入 DataEase 主界面后可以看到界面上方导航栏，有【工作台】【仪表板】【数据大屏】【数据准备】四大模块。
 :::
-<img alt="界面介绍" src="/img/dataease-v2/newimg/product_acceptance/首页.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![界面介绍](/img/dataease-v2/newimg/product_acceptance/首页.png)
 ### 工作台
 
 :::note
@@ -37,7 +37,7 @@ title: 快速入门
 - 模板中心：根据自身的业务需求和使用场景选择对应的模板，并在优质模板的基础上轻松制作自己的仪表板或数据大屏。
 - 近期动态：可以查看最近使用、我的收藏、我的分享的最新操作使用记录。
 :::
-<img alt="工作台" src="/img/dataease-v2/newimg/product_acceptance/工作台.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工作台](/img/dataease-v2/newimg/product_acceptance/工作台.png)
 ### 仪表板
 
 :::note
@@ -49,7 +49,7 @@ title: 快速入门
 
  详细功能请参考本文档功能手册[仪表板](./user_manual/dashboard_description)。
 :::
-<img alt="仪表板" src="/img/dataease-v2/newimg/product_acceptance/仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板](/img/dataease-v2/newimg/product_acceptance/仪表板.png)
 ### 数据大屏
 
 :::note
@@ -61,7 +61,7 @@ title: 快速入门
 
  详细功能请参考本文档功能手册[数据大屏](./user_manual/panel_description)。
 :::
-<img alt="数据大屏" src="/img/dataease-v2/newimg/product_acceptance/数据大屏.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏](/img/dataease-v2/newimg/product_acceptance/数据大屏.png)
 
 ### 数据准备
 
@@ -74,9 +74,9 @@ title: 快速入门
 
  详细功能请参考本文档功能手册【数据准备】。
 :::
-<img alt="数据源" src="/img/dataease-v2/newimg/product_acceptance/数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据源](/img/dataease-v2/newimg/product_acceptance/数据源.png)
 
-<img alt="数据集" src="/img/dataease-v2/newimg/product_acceptance/数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据集](/img/dataease-v2/newimg/product_acceptance/数据集.png)
 ## 3 三分钟快速上手
 
 :::note
@@ -92,7 +92,7 @@ title: 快速入门
 在数据准备模块，切换到数据源菜单，新建一个数据源链接，名称为 "GDP 分析"，类型选择 "MySQL"，主机名 "mysql"，数据库名 "dataease"，用户名 "root"，密码 "Password123@mysql" 检验通过后点击保存即可。
 :::
 
-<img alt="添加数据源" src="/img/dataease-v2/newimg/product_acceptance/连接数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加数据源](/img/dataease-v2/newimg/product_acceptance/连接数据源.png)
 
 ### 3.2 创建数据集
 
@@ -101,11 +101,11 @@ title: 快速入门
 在数据准备模块，切换到数据集菜单，在【官方示例】分组下添加数据库数据集，选择上一步创建的数据源 "demo"，勾选数据表 "demo_gdp_by_city" 点击确认即可。
 :::
 
-<img alt="添加数据集" src="/img/dataease-v2/newimg/product_acceptance/新建数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加数据集](/img/dataease-v2/newimg/product_acceptance/新建数据集.png)
 
-<img alt="创建数据库数据集" src="/img/dataease-v2/newimg/product_acceptance/创建数据库数据集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建数据库数据集](/img/dataease-v2/newimg/product_acceptance/创建数据库数据集.png)
 
-<img alt="数据集创建成功" src="/img/dataease-v2/newimg/product_acceptance/数据集创建成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据集创建成功](/img/dataease-v2/newimg/product_acceptance/数据集创建成功.png)
 
 ### 3.3 可视化分析
 
@@ -114,14 +114,14 @@ title: 快速入门
 切换到仪表板菜单，在【官方示例】分组下创建仪表板【2021 年全国GDP数据】。
 :::
 
-<img alt="新建仪表板" src="/img/dataease-v2/newimg/product_acceptance/新建仪表板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建仪表板](/img/dataease-v2/newimg/product_acceptance/新建仪表板.png)
 
 :::note
 
 在此步骤选择地图图表，点击确认。
 :::
 
-<img alt="选择地图视图" src="/img/dataease-v2/newimg/product_acceptance/选择地图视图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![选择地图视图](/img/dataease-v2/newimg/product_acceptance/选择地图视图.png)
 
 :::note
 
@@ -131,21 +131,21 @@ title: 快速入门
 设置钻取目录，分别拖拽钻取字段"province""city"至图形区【钻取/维度】选择框，如下图所示，下钻目录与拖入的字段顺序有关，自上而下依次下钻。
 :::
 
-<img alt="创建地图视图" src="/img/dataease-v2/newimg/product_acceptance/创建地图视图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建地图视图](/img/dataease-v2/newimg/product_acceptance/创建地图视图.png)
 
 :::note
 
 下钻结果展示，如下图所示，展示福建省地图，如果想返回上一级，点击下图中【全部】，返回全国地图。
 :::
 
-<img alt="地图下钻" src="/img/dataease-v2/newimg/product_acceptance/地图下钻.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图下钻](/img/dataease-v2/newimg/product_acceptance/地图下钻.png)
 
 :::note
 
 调整地图配色，在样式 Tap 页，在基础样式中选择系统配色方案，系统自动根据各省份 GDP 值的大小在地图中着色，GDP 值较小的省份，颜色偏浅；GDP 值较大的省份，颜色偏深，最后点击保存。
 :::
 
-<img alt="地图替换颜色" src="/img/dataease-v2/newimg/product_acceptance/地图替换颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图替换颜色](/img/dataease-v2/newimg/product_acceptance/地图替换颜色.png)
 
 ### 3.4 快速分享
 
@@ -154,19 +154,19 @@ title: 快速入门
 如下图所示，点击展开功能菜单，创建公共链接。
 :::
 
-<img alt="仪表板分享" src="/img/dataease-v2/newimg/product_acceptance/仪表板分享.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板分享](/img/dataease-v2/newimg/product_acceptance/仪表板分享.png)
 
 :::note
 
 如下图所示，打开链接分享，并点击复制链接。
 :::
 
-<img alt="创建分享链接" src="/img/dataease-v2/newimg/product_acceptance/创建分享链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![创建分享链接](/img/dataease-v2/newimg/product_acceptance/创建分享链接.png)
 
 :::note
 
 分享复制的链接，其他人可查看你创建的仪表板。
 :::
 
-<img alt="访问公共链接" src="/img/dataease-v2/newimg/product_acceptance/访问公共连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![访问公共链接](/img/dataease-v2/newimg/product_acceptance/访问公共连接.png)
 

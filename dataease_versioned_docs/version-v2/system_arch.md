@@ -4,7 +4,7 @@ title: 系统架构
 
 ## 1 整体架构
 
-<img alt="整体架构" src="/img/dataease-v2/newimg/product_acceptance/功能架构图.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![整体架构](/img/dataease-v2/newimg/product_acceptance/功能架构图.jpg)
 
 ## 2 组件说明
 
@@ -18,7 +18,7 @@ title: 系统架构
 :::
 
 各个组件间的关系可参考下图  
-<img alt="组件说明" src="/img/dataease-v2/newimg/product_acceptance/2.0组件关系图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件说明](/img/dataease-v2/newimg/product_acceptance/2.0组件关系图.png)
 
 ## 3 关键术语
 

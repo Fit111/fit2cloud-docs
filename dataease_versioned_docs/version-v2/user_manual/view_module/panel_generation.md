@@ -21,7 +21,7 @@ title: 图表概述
 - 关系图（散点图、象限图、漏斗图、桑基图、圆形填充图）
 - 双轴图（柱线组合图、分组柱线组合图、堆叠柱线组合图、双线组合图）
 
-**注意：流向地图、符号地图等组件使用的是高德在线地图，需能够连接外网高德服务器，如遇组件白屏，可自行申请在线地图 Key 并配置，参考[在线地图 Key 申请](https://dataease.cn/docs/v2/user_manual/system_management/param/#31)。**
+**注意：流向地图、符号地图等组件使用的是高德在线地图，需能够连接外网高德服务器，如遇组件白屏，可自行申请在线地图 Key 并配置，参考[在线地图 Key 申请](../system_management/param#33-在线地图)。**
 :::
 
 ## 3 功能区介绍
@@ -44,4 +44,4 @@ title: 图表概述
 - 【序号 12】：图表展示
 :::
 
-<img alt="视图主功能区" src="/img/dataease-v2/view_generation/2.0t数据大屏图表功能区.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![视图主功能区](/img/dataease-v2/view_generation/2.0t数据大屏图表功能区.png)

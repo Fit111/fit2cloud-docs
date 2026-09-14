@@ -4,7 +4,6 @@ title: 数据源概览
 
 ## 1 功能概述
 
-:::tip
 
 【数据源】用来管理各类数据连接信息，是后续的智能问数和数据分析中数据的来源。
 在数据源管理页面中，提供如下核心功能：
@@ -15,26 +14,24 @@ title: 数据源概览
 - 数据源操作：点击数据源卡片右下角，可进行编辑或删除操作；
 - 开启智能问数：对数据源可直接点击按钮启用；
 
-:::
 
-![数据源管理页面](/img/sqlbot/user_manual/datasource/datasource_index.png)
+<img src="/img/sqlbot/user_manual/datasource/datasource_index.png" alt="数据源管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 数据源管理页面</div>
 
 ## 2 支持的数据源类型
 
-:::tip
 
 - **OLTP 型数据库：** MySQL、SQL Server、Oracle、PostgreSQL、达梦、Kingbase
 - **OLAP 型数据库：** ClickHouse、Apache Doris、Elasticsearch、StarRocks
 - **数据仓库/数据湖：** AWS RedShift、Apache Hive
 - **数据文件：** Excel/CSV
 
-:::
 
-![支持的数据源类型](/img/sqlbot/user_manual/datasource/datasource_list.png)
+<img src="/img/sqlbot/user_manual/datasource/datasource_list.png" alt="支持的数据源类型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 支持的数据源类型</div>
 
 ## 3 数据源预览与字段结构
 
-:::tip
 
 点击某个数据源卡片可进入该数据源详情页面。 在左侧展示该数据源下的所有数据表，可查看字段结构，包括字段名称、字段类型、备注信息及启用状态。
 例如，点击"物业管理数据"数据源下的`t_fee` 表，可以查看该表的字段结构：
@@ -45,15 +42,15 @@ title: 数据源概览
 
 表与字段支持按需启用或禁用，后续智能问数时仅识别已启用的表与字段。
 
-:::
 
-![数据源](/img/sqlbot/user_manual/datasource/data_index.png)
+<img src="/img/sqlbot/user_manual/datasource/data_index.png" alt="数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 数据源详情页</div>
 
-![数据源](/img/sqlbot/user_manual/datasource/data_pre.png)
+<img src="/img/sqlbot/user_manual/datasource/data_pre.png" alt="数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 查看表字段结构</div>
 
 ## 4 数据源表关系管理
 
-:::tip
 
 【表关系管理】用于管理数据源中各个数据表之间的关联关系。当用户发起的问数请求，涉及到多表查询时，便可以根据数据源中维护的表关联关系，辅助生成正确的 SQL 查询语句。
 点击某个数据源卡片可进入该数据源详情页面，点击【表关系管理】，进入数据源的表关系管理页面，可按照如下进行操作：
@@ -62,6 +59,6 @@ title: 数据源概览
 - 序号2:表关系管理页面，可以将数据源中的表拖拽至此，添加表关联关系、修改关联关系、删除关联关系。
 - 序号3:表关联关系修改完成后，点击【保存】，表关联关系保存成功，并在问数中生效。
 
-:::
 
-![表关系管理](/img/sqlbot/user_manual/datasource/table_relationship.png)
+<img src="/img/sqlbot/user_manual/datasource/table_relationship.png" alt="表关系管理" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 表关系管理</div>

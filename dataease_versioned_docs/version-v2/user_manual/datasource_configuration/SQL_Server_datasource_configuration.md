@@ -25,21 +25,21 @@ title: 配置 SQL Server 数据源
 步骤二：按照以下步骤，选择 SQL Server 图标。
 :::
 
-<img alt="SQL Server" src="/img/dataease-v2/datasource_configuration/选择SQLServer.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQL Server](/img/dataease-v2/datasource_configuration/选择SQLServer.png)
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="SQLServer链接信息" src="/img/dataease-v2/datasource_configuration/SQLServer链接信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQLServer链接信息](/img/dataease-v2/datasource_configuration/SQLServer链接信息.png)
 
 :::note
 
 步骤四：获取 Schema。
 :::
 
-<img alt="SQLServer获取Schema" src="/img/dataease-v2/datasource_configuration/SQLServer获取schema.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQLServer获取Schema](/img/dataease-v2/datasource_configuration/SQLServer获取schema.png)
 
 :::note
 
@@ -65,4 +65,4 @@ title: 配置 SQL Server 数据源
 **注意：若数据库连接失败，可添加额外的 JDBC 连接符”encrypt=true;trustServerCertificate=true“，确保具有足够的权限。**
 :::
 
-<img alt="SQLServer校验成功" src="/img/dataease-v2/datasource_configuration/SQLServer校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![SQLServer校验成功](/img/dataease-v2/datasource_configuration/SQLServer校验成功.png)

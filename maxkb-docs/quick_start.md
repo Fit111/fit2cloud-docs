@@ -4,7 +4,6 @@ title: 快速入门
 
 ## 1 快速部署
 
-:::note
 
 - 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
 - 生产环境推荐使用 [离线安装包](https://community.fit2cloud.com/#/products/maxkb/downloads) 进行部署。
@@ -21,12 +20,10 @@ bash install.sh
 
 默认密码：MaxKB@123..
 ```
-:::
     
 
 ## 2 界面介绍
 
-:::note
 
 进入 MaxKB 主界面后可以看到界面上方导航栏，包含首页、智能体、知识库、工具、模型五大模块。
 
@@ -39,27 +36,25 @@ bash install.sh
 - 知识库：创建和管理知识库，包括上传离线文档、Web 站点、飞书文档等，为问答对话提供知识来源，对知识进行统一管理，并助力智能问答。
 
 - 智能体：提供预配置模板和组件，可快速创建基础问答智能体，或对复杂业务流程进行高级智能体编排，打造专属 AI 助手。
-:::
 
-![导航栏](/img/maxkb/index/page_introduction.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/page_introduction.png" alt="图 1  导航栏" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  导航栏</div>
 
 ## 3 快速上手
 
-:::note
 
 MaxKB 通过接入大模型、构建知识库、创建智能体，三步拥有专属的 AI 助手。同时支持快速嵌入各类系统，零编码快速集成，让现有系统瞬间拥有 AI 能力。
-:::
 
-![操作流程](/img/maxkb/index/flow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/flow.png" alt="图 2  操作流程" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  操作流程</div>
+
 
 下面以通用知识库为例，通过公有模型服务阿里云百炼（本地模型部署操作，例如，DeepSeek 部署，请参考[使用 1Panel 开源面板快速部署DeepSeek-R1](https://mp.weixin.qq.com/s/bF253jBHZIWIHvNnSMv-Rg)），快速创建智能问答智能体并发布说明具体操作。
-:::
 
 ### 3.1 添加模型
 
-:::note
 
 登录 MaxKB 系统后， 打开【模型】页面，在供应商列表中选择【阿里云百炼】，然后点击【添加模型】，进入模型配置表单配置参数如下：
 
@@ -67,23 +62,19 @@ MaxKB 通过接入大模型、构建知识库、创建智能体，三步拥有�
 * 模型类型：大语言模型。   
 * 基础模型：阿里云百炼支持的 LLM 模型名称，下拉选项是常用的一些大语言模型名称，支持自定义输入。        
 * API Key：阿里云 DashScope 灵积模型服务 API Key管理中创建和查看。
-:::
 
-![添加模型 APIkey](/img/maxkb/index/add_model.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/add_model.png" alt="图 3  添加模型 APIkey" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  添加模型 APIkey</div>
+
 
 不同的平台参数要求不同，其它供应商模型配置添加详情见各模型对接详细说明。
-:::
 
 ### 3.2 创建知识库
 
-:::note
 
 打开【知识库】页面，点击【创建知识库】，输入知识库名称、知识库描述、选择向量模型，并设置知识库类型为通用型，然后将离线文档通过拖拽方式或选择文件上传方式进行上传。
-:::
 
-:::note
 
 上传文档要求：  
 
@@ -97,11 +88,11 @@ MaxKB 通过接入大模型、构建知识库、创建智能体，三步拥有�
 
 * 规范分段标识：离线文档的分段标识要有一定规范，否则拆分出来的段落不规整。   
 * 段落要完整：一个分段中最好能描述一个完整的内容。
-:::
 
-![创建通用知识库](/img/maxkb/index/dataset.png)
-    
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/dataset.png" alt="图 4  创建通用知识库" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  创建通用知识库</div>
+
 
 MaxKB 支持智能分段和高级分段两种分段方式。
 
@@ -110,33 +101,34 @@ MaxKB 支持智能分段和高级分段两种分段方式。
 - **高级分段**：支持自定义设置分段标识符、分段长度及自动清洗。分段标识还支持使用正则表达式处理复杂结构文档。
 
 导入时添加分段标题为关联问题，勾选后会把所有分段的标题设置为分段的关联问题。
-:::
 
-![编辑分段](/img/maxkb/index/paragraphing.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/paragraphing.png" alt="图 5  编辑分段" />
 
- 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  编辑分段</div>
+
 
 点击【创建并导入】后，系统后台会对文档进行自动分段 、存储、向量化处理操作，执行完成后在知识库文档列表中各个文件状态显示为【成功】。
-:::
 
-![文档列表](/img/maxkb/index/doc_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/doc_list.png" alt="图 6  文档列表" />
 
-![分段列表](/img/maxkb/index/document_list.png)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  文档列表</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/document_list.png" alt="图 7  分段列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  分段列表</div>
 
 ### 3.3 创建智能体
 
-:::note
 
 点击【创建】，选择智能体类型，输入智能体名称后点击【创建】。
 
 - **简易智能体**：提供基础的功能和设置选项，可满足大多数基本的问答需求，适用于需要快速上线智能体应用。
 - **高级智能体**：通过基础组件、工具以及智能体嵌套进行功能和逻辑的编排，设计工作流程，满足各类复杂业务场景的需求。
-:::
 
-![创建应用](/img/maxkb/index/creat_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/creat_app.png" alt="图 8  创建应用" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  创建应用</div>
+
 
 智能体创建完成，进入配置智能体的设置页面，左侧为智能体信息，右侧为调试预览界面。
 
@@ -156,12 +148,11 @@ MaxKB 支持智能分段和高级分段两种分段方式。
 * 语音播放：开启后可以通过语音进行播放回答，可以通过浏览器播放，也可以通选择语音合成模型。
 
 智能体信息设置完成后，可以在右侧调试预览中进行测试验证，调试预览中的提问内容不计入对话日志。
-:::
 
-![应用设置](/img/maxkb/index/app_setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/app_setting.png" alt="图 9  应用设置" />
 
-  
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  应用设置</div>
+
 
 **知识库参数设置详细说明：**
 
@@ -183,32 +174,35 @@ MaxKB 支持智能分段和高级分段两种分段方式。
     * 指定回复内容：当没有命中知识库分段时可以指定回复内容，进一步引导。   
 
 - **问题优化：** 开启后对用户提出的问题先进行一次 LLM 优化处理，然后根据问题优化后的结果在知识库中进行检索。
-:::
 
-<img alt="应用知识库参数设置" src="/img/maxkb/index/parameter_setting.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/parameter_setting.png" alt="图 10  应用知识库参数设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  应用知识库参数设置</div>
+
 
 保存设置并发布后，在智能体列表页面的概览页面点击【去对话】或在浏览器中复制公开访问链接进入问答页面进行提问。
-:::
 
-![演示预览](/img/maxkb/index/app_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/app_view.png" alt="图 11  演示预览" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  演示预览</div>
 
 ### 3.4 智能体集成
 
-:::note
 
 MaxKB 智能体支持零编码快速嵌入第三方 Web 系统。
 
 在智能体概览页面，点击【嵌入第三方】，复制对应的嵌入代码，以全屏模式或浮窗模式嵌入到第三方系统中，嵌入完成后便可在第三方系统中进行问答。
-:::
 
-![嵌入第三方](/img/maxkb/index/embed.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/embed.png" alt="图 12  嵌入第三方" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  嵌入第三方</div>
+
 
 MaxKB 智能体也支持接入企业微信、公众号、钉钉和飞书等移动端智能体，详细说明见：[X-Pack功能-智能体接入 ](./user_manual/X-Pack/app_integrate)。
-:::
 
     
+
+
+
+
 

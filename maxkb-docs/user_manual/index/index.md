@@ -4,18 +4,17 @@ title: 概览
 
 ## 1 概述
 
-:::note
 
 工作空间首页统计功能，提供全面的资源管理和运营数据可视化。首页由 **快捷创建**、**资源概览**、**监控统计**、**使用排行榜** 四大模块组成，为管理员提供资源调度与运营决策支持。
-:::
 
 ---
 
 ## 2 页面布局
-:::note
 
 首页采用模块化设计，主要包含四个核心区域：
-:::
+
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  首页核心模块说明</div>
 
 | 模块 | 功能定位 | 核心内容 |
 |-----|---------|---------|
@@ -30,23 +29,23 @@ title: 概览
 
 ### 3.1 功能说明
 
-:::note
 
 快捷创建模块提供常用资源的一键创建入口，支持快速创建或导入智能体、知识库、工具和模型。
-:::
 
-![first](/img/maxkb/first/quick_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/quick_create.png" alt="图 1  快捷创建模块" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  快捷创建模块</div>
 
 ## 4 资源概览
 
 ### 4.1 功能说明
 
-:::note
 
 资源概览模块展示工作空间内各类型资源的总量统计与分类信息，帮助管理员快速了解资源分布状况。
-:::
 
-![first](/img/maxkb/first/source_show.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/source_show.png" alt="图 2  资源概览模块" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  资源概览模块</div>
 
 ### 4.2 统计内容
 
@@ -54,24 +53,26 @@ title: 概览
 
 ### 5.1 功能说明
 
-:::note
 
 监控统计模块追踪工作空间的运营数据，包含活跃用户、对话量、Token消耗量以及用户满意度的走势图表。
-:::
 
-![first](/img/maxkb/first/see.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/see.png" alt="图 3  监控统计模块" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  监控统计模块</div>
+
 ### 5.2 统计指标、趋势图表
-:::note
 
 #### 核心指标卡片
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  核心指标字段说明</div>
 
 | 指标 | 说明 |
 |-----|------|
 | **活跃用户** | 统计周期内的活跃用户数量及环比变化 |
 | **对话次数** | 统计周期内的对话交互总次数 |
 | **Tokens 总数** | 统计周期内消耗的 Tokens 总量 |
-| **用户满意度** | 用户对对话结果的满意与不满意评价统计 |
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  趋势图表内容说明</div>
+
 | 图表 | 展示内容 |
 |-----|---------|
 | **活跃用户趋势** | 活跃用户与新增用户的每日变化趋势 |
@@ -81,35 +82,36 @@ title: 概览
 
 ### 5.3 时间范围选择
 
-:::note
 
 支持选择不同的统计周期，包括过去7天、30天、90天等选项。
-:::
 
-![first](/img/maxkb/first/day.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/day.png" alt="图 4  时间范围选择" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  时间范围选择</div>
+
 ### 5.4 筛选功能
 
-:::note
 
 支持按智能体筛选统计数据，查看特定智能体的运营情况。
-:::
-![first](/img/maxkb/first/agent.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/agent.png" alt="图 5  按智能体筛选" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  按智能体筛选</div>
+
 ## 6 使用排行榜
 
 ### 6.1 功能说明
 
-:::note
 
 使用排行榜模块按照 Token 消耗和对话次数分别统计 TOP 智能体和 TOP 用户，为管理员提供资源调度依据。
-:::
 
-![first](/img/maxkb/first/top.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/top.png" alt="图 6  使用排行榜模块" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  使用排行榜模块</div>
 
 ### 6.2 排名统计
-:::note
 
-#### Tokens 消耗 - TOP 智能体
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  Tokens 消耗 - TOP 智能体展示说明</div>
 
 | 排名 | 展示内容 |
 |-----|---------|
@@ -117,12 +119,13 @@ title: 概览
 | 消耗数值 | 每个智能体的 Tokens 消耗总量 |
 | 趋势标识 | 环比增减趋势指示 |
 
-![first](/img/maxkb/first/token.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/token.png" alt="图 7  Tokens 消耗 - TOP 智能体" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  Tokens 消耗 - TOP 智能体</div>
 
 #### 对话次数 - TOP 智能体
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 5  对话次数 - TOP 智能体展示说明</div>
 
 | 排名 | 展示内容 |
 |-----|---------|
@@ -130,26 +133,33 @@ title: 概览
 | 对话数值 | 每个智能体的对话次数 |
 | 趋势标识 | 环比增减趋势指示 |
 
-![first](/img/maxkb/first/times.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/times.png" alt="图 8  对话次数 - TOP 智能体" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  对话次数 - TOP 智能体</div>
+
 
 #### Tokens 消耗 - TOP 用户
 :::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 6  Tokens 消耗 - TOP 用户展示说明</div>
 
 | 排名 | 展示内容 |
 |-----|---------|
 | 排名列表 | 按 Tokens 消耗量降序排列的用户 |
 | 消耗数值 | 每个用户的 Tokens 消耗总量 |
 | 趋势标识 | 环比增减趋势指示 |
-![first](/img/maxkb/first/user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/user.png" alt="图 9  Tokens 消耗 - TOP 用户" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  Tokens 消耗 - TOP 用户</div>
 
 #### 6.2.1 导出
-:::note
 
 排行榜详情页支持按指定时间范围筛选数据后导出全量明细 Excel 文件，导出数据包含当前筛选条件下全部分页数据，不受页面 20 条 / 页展示限制。
-:::
 
-![first](/img/maxkb/first/export.png)
-![first](/img/maxkb/first/excel.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/export.png" alt="图 10  排行榜详情 - 导出" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  排行榜详情 - 导出</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/excel.png" alt="图 11  排行榜导出 Excel 明细" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  排行榜导出 Excel 明细</div>

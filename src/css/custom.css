@@ -17,6 +17,9 @@
   --ifm-background-color: #ffffff; /* 文档页保持白色底 */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* 代码块统一黑底 + 彩色语法高亮(与 bash 一致), 具体见下方代码块样式段 */
+  --prism-background-color: #000000;
+  --prism-color: #e6e6e6;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -43,8 +46,11 @@
    - 版权三行 16px #6c7280 居中, 上方 1px 分隔线
    链接数据沿用 docusaurus.config.js 里维护的真实地址。 */
 .footer {
-  background: #f7fbff;
+  background: #eaf1ff; /* 主题浅蓝(与首页 hero 顶部同色), 与白色文档 panel 区分 */
   --ifm-footer-padding-vertical: 64px;
+  /* 上 padding 40px、下 padding 去掉 */
+  padding-top: 40px;
+  padding-bottom: 0;
 }
 .footer__title {
   font-size: 20px;
@@ -54,7 +60,7 @@
 }
 .footer__link-item {
   color: #6c7280 !important;
-  font-size: 16px;
+  font-size: 14px;
 }
 .footer__link-item:hover {
   color: #0c7be0 !important;
@@ -77,6 +83,7 @@
 
 /* 版权区: 三行(备案号/版权所有/条款链接)居中浅灰, 上方 1px 分隔线 */
 .footer__copyright {
+  font-size: 14px;
   line-height: 2;
   padding-top: 24px;
   margin-top: 8px;
@@ -129,18 +136,78 @@
   --ifm-alert-border-color: #00c853;
 }
 
-/* JumpServer 文档页：提示框左边框用官方文档主色（深青绿 #2b937c）。
-   由 src/clientModules/docsProduct.js 在该产品页给 <html data-docs-product='jumpserver'>
-   打标记, 仅 JumpServer 页生效, 不影响其他产品。 */
-html[data-docs-product='jumpserver'] .alert--secondary,
-html[data-docs-product='jumpserver'] .alert--success,
-html[data-docs-product='jumpserver'] .alert--info {
-  --ifm-alert-border-color: #2b937c;
+
+/* DataEase v2 / v3：去掉 note 正文的蓝色包边。
+   两个版本都走 /dataease，docsProduct.js 会打 data-docs-product=dataease。
+   只去掉边框和卡片底，:::note 结构与 warning 提示框保持不变。 */
+/*html[data-docs-product='dataease'] .theme-admonition-note,*/
+/*html[data-docs-product='dataease'] .alert--secondary {*/
+/*  --ifm-alert-border-color: transparent;*/
+/*  --ifm-alert-border-width: 0px;*/
+/*  --ifm-alert-border-left-width: 0px;*/
+/*  --ifm-alert-background-color: transparent;*/
+/*  border: none !important;*/
+/*  background-color: transparent !important;*/
+/*  box-shadow: none !important;*/
+/*  padding: 0 !important;*/
+/*}*/
+/*[data-theme='dark'] html[data-docs-product='dataease'] .theme-admonition-note,*/
+/*[data-theme='dark'] html[data-docs-product='dataease'] .alert--secondary {*/
+/*  --ifm-alert-background-color: transparent;*/
+/*  background-color: transparent !important;*/
+/*}*/
+
+/* 图用 Markdown ![alt](src)，水平居中且不超过正文栏。表拉满正文栏，表题与表同宽对齐。 */
+html[data-docs-product='dataease'] .theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
 }
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--secondary,
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--success,
-[data-theme='dark'] html[data-docs-product='jumpserver'] .alert--info {
-  --ifm-alert-border-color: #2b937c;
+/* 正文截图居中；列表徽章、链接封面、联系我们二维码不走这套。 */
+html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+.de-contact .theme-doc-markdown img,
+html[data-docs-product='dataease'] .de-contact .theme-doc-markdown p > img:only-child {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* 图注、表题同一套：灰色居中小字。
+   .de-caption 由 docsProduct.js 按「图/表 + 序号」打上，图和表共用。
+   图片下一段的 :has 作无 JS 兜底。表题 :has(+ table) 必须单独成条，
+   不能和嵌套 :has 写在一起，否则构建器会把整条规则丢掉。 */
+html[data-docs-product='dataease'] .theme-doc-markdown p.de-caption,
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(img) + p,
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(a img) + p,
+html[data-docs-product='dataease'] .theme-doc-markdown img + p {
+  text-align: center;
+  color: #8a8f99;
+  font-size: 13px;
+  margin: 6px 0 20px;
+}
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(+ table) {
+  text-align: center;
+  color: #8a8f99;
+  font-size: 13px;
+  margin: 6px 0 20px;
+}
+
+/* 教学视频封面：固定约 280px，左对齐横排，不加图注 */
+.de-instructional-video .theme-doc-markdown a:has(img) {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  text-align: left;
+}
+.de-instructional-video .theme-doc-markdown a img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
 /* navbar 只显示 logo, 隐藏 logo 旁的文字标题(navbar.title 留空时 Docusaurus 会 fallback 站点标题, 这里一并隐藏) */
@@ -280,6 +347,28 @@ html[data-docs-product='jumpserver'] .alert--info {
      都是「navbar 高度 + 本值」, 视觉间隔保持一致。 */
 aside.theme-doc-sidebar-container {
   padding-top: 24px;
+  /* 侧边栏菜单项上下 padding 在原默认(0.375rem)基础上缩小 10%, 让条目更紧凑。
+     只在此容器内覆盖变量, 不影响 navbar「开源产品」下拉等其他 menu。 */
+  --ifm-menu-link-padding-vertical: 0.25rem;
+}
+
+/* ===== 文档侧边栏分类展开小箭头: 缩小到原(1.25rem/背景2rem)的 0.5, 更小巧 =====
+   放在全局(不在 1272 断点内), 保证所有显示侧边栏的视口都生效。
+   箭头在分类链接(<Link class="menu__link menu__link--sublist[-caret]">)的 ::after 上,
+   由 Infima 变量 --ifm-menu-link-sublist-icon 提供 SVG 图标(元素 1.25rem、背景 2rem);
+   这里用 background-size 把图标压小, 并同步缩小元素尺寸。
+   注意: 不是 .menu__caret::before(那是「无链接」分类的独立折叠按钮箭头)。 */
+.theme-doc-sidebar-container .menu__link--sublist:after {
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  background-size: 1rem 1rem;
+}
+.theme-doc-sidebar-container .menu__link--sublist-caret:after {
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  background-size: 1rem 1rem;
 }
 
 /* ===== 文档详情页: 左中右三段布局 =====
@@ -292,7 +381,7 @@ aside.theme-doc-sidebar-container {
    - 右侧目录固定约 240px 独立成列, 与内容左右分明。
    若想要 1:2:1 的均宽比例, 把下面 .col--3 和 [class*=docItemCol] 的
    flex 值改成 2:1 并把左栏宽度调成 25% 即可。 */
-@media (min-width: 997px) {
+@media (min-width: 1272px) {
   /* 左栏: 固定宽 360px, 里侧 300px 菜单靠右 → 侧栏贴向内容区, 左侧留白 */
   aside.theme-doc-sidebar-container {
     flex: 0 0 360px;
@@ -318,7 +407,7 @@ aside.theme-doc-sidebar-container {
   .theme-doc-sidebar-container .menu__link {
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 16px;
     color: #1b1b1d;
   }
   .theme-doc-sidebar-container .menu__list-item-collapsible > .menu__link {
@@ -326,15 +415,6 @@ aside.theme-doc-sidebar-container {
   }
   .theme-doc-sidebar-container .menu__link--active {
     font-weight: 600;   /* 当前项加粗 */
-  }
-  /* 侧栏分类展开箭头参考 halo: 更小巧、浅灰(halo 的辅助小图标偏浅) */
-  .theme-doc-sidebar-container .menu__caret {
-    opacity: 0.55;
-  }
-  .theme-doc-sidebar-container .menu__caret::before {
-    height: 1rem;
-    width: 1rem;
-    background-size: 1rem 1rem;
   }
   /* 侧栏菜单项 hover / 选中项: 背景改为主页浅蓝、文字改浅蓝 */
   .theme-doc-sidebar-container .menu__link:hover,
@@ -360,41 +440,53 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-/* ===== bash 代码块: 黑色背景 =====
-   只改 bash 语言代码块: 背景黑、文字浅色、语法高亮用亮色, 保证黑底可读。
-   其它语言不受影响。 */
-[class*="language-bash"] {
+/* ===== 右侧标题导航(TOC): 跟随三栏布局断点, 仅 ≥1272px 显示 =====
+   上面三栏布局断点已从 Infima 默认 997px 提到 1272px。
+   而 Docusaurus 默认的桌面 TOC 只在 @media(max-width:996px) 才隐藏,
+   若不覆盖, 997~1271px 这段视口仍会显示右侧 TOC, 与新的布局断点不一致。
+   这里把隐藏范围同步扩到 1271px, 让右侧 TOC 仅在 ≥1272px 显示,
+   997~1271px 之间退回两栏(左栏 + 内容), 与三栏布局断点保持一致。 */
+@media (max-width: 997px) {
+  [class*="tableOfContents"] {
+    display: none;
+  }
+}
+
+/* ===== 代码块: 黑色背景 + 彩色语法高亮 =====
+   所有 ``` 代码块统一为黑底、浅色文字, 语法高亮用亮色, 保证黑底可读。
+   (与 bash 语言代码块的样式一致, 泛化到所有语言) */
+[class*="language-"] {
   background-color: #000000 !important;
   color: #e6e6e6 !important;
 }
-[class*="language-bash"] .token {
+[class*="language-"] .token {
   color: #e6e6e6;
 }
-[class*="language-bash"] .token.comment,
-[class*="language-bash"] .token.prolog,
-[class*="language-bash"] .token.doctype,
-[class*="language-bash"] .token.cdata {
+[class*="language-"] .token.comment,
+[class*="language-"] .token.prolog,
+[class*="language-"] .token.doctype,
+[class*="language-"] .token.cdata {
   color: #8a8a8a; /* 注释灰 */
 }
-[class*="language-bash"] .token.keyword,
-[class*="language-bash"] .token.boolean,
-[class*="language-bash"] .token.constant,
-[class*="language-bash"] .token.operator,
-[class*="language-bash"] .token.punctuation,
-[class*="language-bash"] .token.tag,
-[class*="language-bash"] .token.selector {
+[class*="language-"] .token.keyword,
+[class*="language-"] .token.boolean,
+[class*="language-"] .token.constant,
+[class*="language-"] .token.operator,
+[class*="language-"] .token.punctuation,
+[class*="language-"] .token.tag,
+[class*="language-"] .token.selector {
   color: #ff79c6; /* 亮粉(关键字/运算符) */
 }
-[class*="language-bash"] .token.string,
-[class*="language-bash"] .token.char,
-[class*="language-bash"] .token.attr-value,
-[class*="language-bash"] .token.regex {
+[class*="language-"] .token.string,
+[class*="language-"] .token.char,
+[class*="language-"] .token.attr-value,
+[class*="language-"] .token.regex {
   color: #50fa7b; /* 亮绿(字符串) */
 }
-[class*="language-bash"] .token.function,
-[class*="language-bash"] .token.attr-name,
-[class*="language-bash"] .token.property,
-[class*="language-bash"] .token.number {
+[class*="language-"] .token.function,
+[class*="language-"] .token.attr-name,
+[class*="language-"] .token.property,
+[class*="language-"] .token.number {
   color: #82aaff; /* 亮蓝(函数/数字) */
 }
 
@@ -420,6 +512,36 @@ aside.theme-doc-sidebar-container {
   font-size: 14px;
 }
 
+html[data-docs-product='cordys'] .theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+html[data-docs-product='cordys'] .theme-doc-markdown th,
+html[data-docs-product='cordys'] .theme-doc-markdown td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 表格固定列宽(installation 目录 + manual/env 参数说明页): 拉满正文栏、table-layout: fixed
+   让各列等分(拉平)不再被内容撑宽, 单元格内容超长时自动换行(overflow-wrap/word-break),
+   避免出现横向滚动条。目录标记 data-docs-section 由 src/clientModules/docsProduct.js 注入。 */
+html[data-docs-product='jumpserver'][data-docs-section='installation'] .theme-doc-markdown table,
+html[data-docs-product='jumpserver'][data-docs-section='env'] .theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+html[data-docs-product='jumpserver'][data-docs-section='installation'] .theme-doc-markdown th,
+html[data-docs-product='jumpserver'][data-docs-section='installation'] .theme-doc-markdown td,
+html[data-docs-product='jumpserver'][data-docs-section='env'] .theme-doc-markdown th,
+html[data-docs-product='jumpserver'][data-docs-section='env'] .theme-doc-markdown td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 /* ===== 文档侧栏: 菜单项内容靠左 =====
    菜单项文字保持 Infima 默认左对齐(带缩进); 不做居中处理。
    侧栏整体位置见下方 1:2:1 块里 sidebarViewport 的 flex 对齐。 */
@@ -443,29 +565,66 @@ aside.theme-doc-sidebar-container {
    说明: 首页 Hero 自带浅蓝渐变背景, 白色悬浮卡会自然浮在浅蓝之上, 与设计稿一致。 */
 /* Infima 的 .navbar--fixed-top 是 left:0;right:0 满宽 fixed。
    用 margin auto 居中 + 限宽, 不能用 left:50%+translateX(会与 right:0 冲突导致错位) */
-/* 导航栏滚动行为(配合 src/clientModules/navbarSticky.js):
-   - 默认(页面未滚动, html 无 .navbar-scrolled): 顶部留 12px margin 悬浮下移;
-   - 滚动后(html.navbar-scrolled): top:0、顶部 margin 归零, 贴到视口最顶。 */
+/* 导航栏固定悬浮在页面顶部、始终停留原位, 不随滚动隐藏。
+   .navbar-gap 遮挡层(见下方「导航栏空隙遮挡」)以导航栏元素本身为界, 盖住滚动时从
+   悬浮卡上方及左右两侧空隙透出的主体内容, 内容一接触到导航栏即被隐藏。
+   这里仅负责导航栏悬浮卡的静态样式。 */
 .navbar {
-  top: 12px;
+  top: 0;
   right: 0;
   left: 0;
-  margin: 12px auto 0;
-  width: calc(100% - 48px);
-  max-width: 1240px;
+  margin: 0;
+  width: 100%; /* 左右两侧占满 */
+  max-width: none;
   min-height: 70px;
   --ifm-navbar-height: 70px;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   background-color: #ffffff !important;
-  border: 1px solid rgba(228, 232, 240, 0.9);
-}
-html.navbar-scrolled .navbar {
-  top: 0;
-  margin-top: 0;
+  border-bottom: 1px solid rgba(228, 232, 240, 0.9);
 }
 .navbar__inner {
   max-width: 100%;
+}
+
+/* ===== 导航栏空隙遮挡(全局) =====
+   导航栏是限宽悬浮卡, 其上方 + 左右两侧空隙会让主体内容在滚动时透出。
+   .navbar-gap 容器由 src/clientModules/navbarGaps.js 动态注入, 并以导航栏元素
+   (nav[aria-label="主导航"])的实际位置/尺寸为界, 动态对齐三个空白遮挡子元素
+   (top / left / right), 使主体内容一接触到导航栏即被遮挡隐藏:
+     - 背景跟随页面背景色, 视觉融入; z-index 高于正文(auto)、低于导航栏(200);
+     - pointer-events:none 不影响交互。
+   位置/尺寸由 JS 按 nav bounding box 计算, 无需再手动同步数值。 */
+.navbar-gap {
+  position: fixed;
+  inset: 0;
+  z-index: 150;             /* 高于正文(auto)、低于导航栏(200) */
+  pointer-events: none;
+}
+.navbar-gap-top,
+.navbar-gap-left,
+.navbar-gap-right {
+  position: absolute;
+  background: var(--ifm-background-color);
+}
+.navbar-gap-top {
+  left: 0;
+  right: 0;
+}
+.navbar-gap-left,
+.navbar-gap-right {
+  width: 24px;              /* 默认左右空隙宽, 由 JS 实际覆盖 */
+  top: 0;
+}
+.navbar-gap-right {
+  right: 0;
+  left: auto;
+}
+/* 首页 Hero 顶部是 #eaf1ff, 遮挡用同色衔接, 避免露出浅蓝下的内容 */
+body.home-page .navbar-gap-top,
+body.home-page .navbar-gap-left,
+body.home-page .navbar-gap-right {
+  background: #eaf1ff;
 }
 
 /* ===== 首页顶部背景色 =====
@@ -497,32 +656,32 @@ body.home-page {
 .navbar [class*='colorModeToggle'] {
   display: none !important;
 }
-/* 导航搜索框: 对齐设计稿 Search 实例(215x32 r20 白底 pill, placeholder 请输入)。
-   隐藏 ctrl/ctrl+k 快捷键提示, 收窄整体宽度。 */
-.navbar [class*='searchBarValue'] {
-  width: 215px;
-  min-height: 32px;
-  padding: 0 12px;
-  border-radius: 20px;
-  border: 1px solid #e4e8f0;
-  background: #ffffff;
-  font-size: 14px;
-  color: #c8cbcb;
-  gap: 6px;
-}
-.navbar [class*='searchBarValue'] kbd,
-.navbar [class*='searchHint'],
-.navbar [class*='searchIndex'] kbd {
+/* 导航搜索框: 对齐设计稿 Search pill(215x32 r20 白底)。
+   easyops SearchBar 已不再挂载(改用 HomeNavbarSearch 复用的即时搜索面板),
+   这里的样式只针对新组件 HomeNavbarSearch 的容器类 navbar-search-home。 */
+/* 首页隐藏右上角搜索框: 首页有页面中央的大搜索框(HomeSearch), 不需要 navbar 那个。
+   首页 body 挂 home-page 类(index.js), 文档页/其他页正常显示搜索框。 */
+body.home-page [class*='navbar-search-home'] {
   display: none !important;
 }
-/* 移动端: 悬浮卡缩小边距, 避免在小屏过于拥挤 */
+/* /search 全部结果页同样隐藏右上角搜索框: 本页右侧自带的 hero 大搜索框足够。
+   由 SearchPage.js 给 body 挂 search-page 类。 */
+body.search-page [class*='navbar-search-home'] {
+  display: none !important;
+}
+/* 搜索结果关键词高亮: 淡蓝色底(首页下拉/右上角下拉 /search 页共用)。
+   由 HomeSearch/highlight.js 的 highlightText 生成 <mark class="search-mark">。 */
+.search-mark {
+  background: rgba(12, 123, 224, 0.14); /* 淡蓝 */
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+/* 移动端: navbar 同样左右占满(无悬浮留白/圆角) */
 @media (max-width: 996px) {
   .navbar {
-    top: 8px;
-    width: calc(100% - 24px);
-    border-radius: 10px;
-  }
-  html.navbar-scrolled .navbar {
     top: 0;
+    width: 100%;
+    border-radius: 0;
   }
 }

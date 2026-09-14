@@ -1,8 +1,10 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useHistory} from '@docusaurus/router';
 import {usePluginData} from '@docusaurus/useGlobalData';
-import {createPortal} from 'react-dom';
 import styles from './index.module.css';
+import {buildIndex, searchDocs, I18N, MAX_RESULTS, searchUrlFor} from './search';
+import ResultsPanel from './ResultsPanel';
+import SearchBox from './SearchBox';
 
 /* ------------------------------------------------------------------
  * 首页 Hero 搜索框 + 即时结果下拉面板
@@ -15,9 +17,8 @@ import styles from './index.module.css';
  *     摘要 14/400 #6c7280, 单行省略
  *   底部「查看全部结果」14/400, 默认 #6c7280, hover #333eff
  *
- * 数据来源: useAllDocsData() (Docusaurus 官方客户端 API), 只读文档元数据
- *   (title / description / permalink), 不需要额外的索引构建步骤。
- *   全站约 300 篇文档, 元数据体积很小, 直接在前端做子串匹配即可。
+ * 搜索逻辑(productOf/buildIndex/searchDocs)已抽到 ./search.js, 结果面板
+ * 已抽到 ./ResultsPanel, 与导航栏 HomeNavbarSearch 共用。
  *
  * 【面板定位: position:fixed 的原因】
  *   Hero(.hero) 设了 overflow:hidden(用于裁剪大尺寸光晕), 若面板沿用
@@ -26,91 +27,6 @@ import styles from './index.module.css';
  *   因此下面板用 createPortal 渲染到 <body> 并 position:fixed, 以搜索框的
  *   getBoundingClientRect 计算视口坐标, 彻底脱离 Hero 的裁切范围、浮在一切之上。
  * ------------------------------------------------------------------ */
-
-/* routeBasePath(permalink 第一段) → 产品中文名, 与设计稿 Tag 位置对应 */
-const PRODUCT_BY_ROUTE = {
-  '1panel': '1Panel 面板',
-  sqlbot: 'SQLBot',
-  jumpserver: 'JumpServer',
-  dataease: 'DataEase',
-  maxkb: 'MaxKB',
-  'ai-gateway': '1Panel AI 网关',
-  docs: '文档中心',
-};
-
-const MAX_RESULTS = 5; // 设计稿面板展示 5 行
-const MAX_SCAN = 400; // 命中截断, 避免超长列表排序开销
-
-const I18N = {
-  zh: {
-    viewAll: '查看全部结果',
-    empty: '未找到相关文档，换个关键词试试',
-  },
-  en: {
-    viewAll: 'View all results',
-    empty: 'No docs found, try another keyword',
-  },
-};
-
-function productOf(permalink) {
-  const seg = (permalink || '').replace(/^\//, '').split('/')[0];
-  return PRODUCT_BY_ROUTE[seg] || (seg ? seg.toUpperCase() : '文档中心');
-}
-
-/* 精简索引: 只取每个产品的最新版本, 避免 v1/v2 内容重复出现在结果里 */
-/* 补上产品名与检索用小写串(插件已去好重、只留最新版本) */
-function buildIndex(items) {
-  return (items || []).map((it) => {
-    const product = productOf(it.permalink);
-    return {
-      ...it,
-      product,
-      haystack: `${it.title} ${it.desc} ${product}`.toLowerCase(),
-    };
-  });
-}
-
-/* 子串匹配: 空格分隔的多个词需全部命中, 标题命中优先于摘要命中 */
-function searchDocs(index, query) {
-  const q = query.trim().toLowerCase();
-  if (!q) {
-    return [];
-  }
-  const terms = q.split(/\s+/).filter(Boolean);
-  const hits = [];
-  for (const item of index) {
-    if (terms.every((t) => item.haystack.includes(t))) {
-      hits.push({
-        ...item,
-        score: item.title.toLowerCase().includes(q) ? 0 : 1,
-      });
-      if (hits.length >= MAX_SCAN) {
-        break;
-      }
-    }
-  }
-  return hits.sort((a, b) => a.score - b.score);
-}
-
-function DocIcon() {
-  return (
-    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-      <path
-        d="M8.5 5.8h9.2a1.2 1.2 0 01.85.35l5.3 5.3a1.2 1.2 0 01.35.85v13.9a1.2 1.2 0 01-1.2 1.2H8.5a1.2 1.2 0 01-1.2-1.2V7a1.2 1.2 0 011.2-1.2z"
-        fill="#ffffff"
-        stroke="#b7bfd2"
-        strokeWidth="1.5"
-      />
-      <path d="M18 5.8v6.2h6.2" stroke="#b7bfd2" strokeWidth="1.5" />
-      <path
-        d="M11.5 17.5h9M11.5 21h9M11.5 24.5h5.5"
-        stroke="#c8cbcb"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 export default function HomeSearch({zh, placeholder, submitLabel}) {
   const t = zh ? I18N.zh : I18N.en;
@@ -131,7 +47,7 @@ export default function HomeSearch({zh, placeholder, submitLabel}) {
   const results = useMemo(() => searchDocs(index, query), [index, query]);
   const visible = open && query.trim().length > 0;
   const rows = results.slice(0, MAX_RESULTS);
-  const searchUrl = `/search?q=${encodeURIComponent(query.trim())}`;
+  const searchUrl = searchUrlFor(query);
 
   const go = useCallback(
     (url) => {
@@ -218,79 +134,36 @@ export default function HomeSearch({zh, placeholder, submitLabel}) {
   };
 
   const panel = visible ? (
-    createPortal(
-      <div
-        ref={panelRef}
-        className={styles.panel}
-        style={
-          rect
-            ? {top: rect.top, left: rect.left, width: rect.width}
-            : {visibility: 'hidden'}
-        }>
-        {rows.length === 0 ? (
-          <div className={styles.empty}>{t.empty}</div>
-        ) : (
-          <>
-            {rows.map((item, i) => (
-              <a
-                key={item.permalink}
-                href={item.permalink}
-                className={`${styles.row} ${i === active ? styles.rowActive : ''}`}
-                onMouseEnter={() => setActive(i)}
-                onClick={(e) => {
-                  e.preventDefault();
-                  go(item.permalink);
-                }}>
-                <span className={styles.rowIcon}>
-                  <DocIcon />
-                </span>
-                <span className={styles.rowBody}>
-                  <span className={styles.rowTitleRow}>
-                    <span className={styles.rowTitle}>{item.title}</span>
-                    <span className={styles.rowTag}>{item.product}</span>
-                  </span>
-                  <span className={styles.rowDesc}>{item.desc}</span>
-                </span>
-              </a>
-            ))}
-            <a
-              className={styles.viewAll}
-              href={searchUrl}
-              onClick={(e) => {
-                e.preventDefault();
-                go(searchUrl);
-              }}>
-              {t.viewAll}
-            </a>
-          </>
-        )}
-      </div>,
-      document.body,
-    )
+    <ResultsPanel
+      rect={rect}
+      rows={rows}
+      query={query}
+      active={active}
+      emptyText={t.empty}
+      viewAllText={t.viewAll}
+      searchUrl={searchUrl}
+      onOpen={setActive}
+      onNavigate={go}
+      panelRef={panelRef}
+    />
   ) : null;
 
   return (
     <div className={styles.wrap} ref={wrapRef}>
-      <form className={styles.searchBox} role="search" onSubmit={onSubmit} ref={searchBoxRef}>
-        <input
-          className={styles.input}
-          type="search"
-          name="q"
-          value={query}
-          placeholder={placeholder}
-          autoComplete="off"
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setOpen(true);
-            setActive(-1);
-          }}
-          onFocus={() => setOpen(true)}
-          onKeyDown={onKeyDown}
-        />
-        <button className={styles.btn} type="submit">
-          {submitLabel}
-        </button>
-      </form>
+      <SearchBox
+        value={query}
+        placeholder={placeholder}
+        submitLabel={submitLabel}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          setOpen(true);
+          setActive(-1);
+        }}
+        onFocus={() => setOpen(true)}
+        onKeyDown={onKeyDown}
+        onSubmit={onSubmit}
+        boxRef={searchBoxRef}
+      />
       {panel}
     </div>
   );

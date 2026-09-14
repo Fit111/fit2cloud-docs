@@ -2,7 +2,6 @@
 title: 最佳实践
 ---
 
-:::note
 
 - [JumpServer 用户权限体系的使用实践](https://kb.fit2cloud.com/?p=170)
 - [JumpServer 主备部署的录像同步](https://kb.fit2cloud.com/?p=132)
@@ -17,4 +16,3 @@ title: 最佳实践
 - [VSCode 连接 JumpServer 资产](https://kb.fit2cloud.com/?p=48)
 - [会话共享 && 多用户协同操作](https://kb.fit2cloud.com/?p=41)
 - [同一个系统用户对不同的资产不同的密码](https://kb.fit2cloud.com/?p=19)
-:::

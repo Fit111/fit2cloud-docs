@@ -9,7 +9,9 @@ title: 外观配置
 该主题应用于系统顶部导航背景色，系统默认蓝色主题，用户可自定义色值为自定义主题。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/更新v2-4-0-15外观设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![外观设置](/img/dataease/newimg/外观设置.png)
+
+图 1  平台显示主题
 
 ## 2 平台登录设置
 
@@ -19,15 +21,20 @@ title: 外观配置
 为了显示效果，建议上传的图片大小符合系统中的提示，如：头部系统 logo，建议大小为 135px\*35px。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/更新v2-4-0-16外观设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![外观设置2](/img/dataease/newimg/外观设置2.png)
+
+图 2  平台登录设置
 
 ## 3 平台设置
+
 :::note
 
 置配顶部导航 logo 和帮助文档连接，以及控制文档，关于按钮的显隐。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/更新v2-4-0-17外观设置3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![外观设置3](/img/dataease/newimg/外观设置3.png)
+
+图 3  平台设置
 
 ## 4 移动端设置
 
@@ -36,9 +43,12 @@ title: 外观配置
 外观配置支持设置移动端登录 Logo 及背景图。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.2%20支持配置移动端登录界面（XPack）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![支持配置移动端登录界面（XPack）](/img/dataease/newimg/支持配置移动端登录界面（XPack）.png)
+
+图 4  配置移动端登录界面
 
 ## 5 其他设置
+
 :::note
 
 支持设置 AI 助手按钮、文档按钮、关于按钮的【显示】、【隐藏】或【Iframe中隐藏】。
@@ -47,6 +57,11 @@ title: 外观配置
 - 隐藏 - 在各种模式下均隐藏
 - Iframe 中隐藏 - 主要用在嵌入式场景中，平台访问均显示，Iframe 嵌入的场景中会不显示
 :::
-<img alt="更新1" src="/img/dataease/newimg/4.1%20外观配置优化1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/4.1%20外观配置优化2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
+![外观配置优化1](/img/dataease/newimg/外观配置优化1.png)
+
+图 5  外观配置优化
+
+![外观配置优化2](/img/dataease/newimg/外观配置优化2.png)
+
+图 6  外观配置优化

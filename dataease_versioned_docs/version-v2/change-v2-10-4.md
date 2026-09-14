@@ -6,7 +6,7 @@ title: v2.10.4
 
 ### 1.1 选项卡 Tab 标签支持下划线、加粗、斜体样式设置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.1%20%20选项卡%20Tab%20标签支持下划线、加粗、斜体样式设置.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.1%20%20选项卡%20Tab%20标签支持下划线、加粗、斜体样式设置.PNG)
 
 ### 1.2 数据大屏 Tab 组件支持图表以组合的形式进行拖入操作
 :::note
@@ -17,21 +17,21 @@ Tab 组件的图表组合支持规则：
 - 支持普通组合（不包含 Tab 组件）拖入 Tab 组件。若组合中包含 Tab 组件，则该组合无法拖入其他 Tab 组件。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.2%20数据大屏%20Tab%20组件支持图表以组合的形式进行拖入操作.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.2%20数据大屏%20Tab%20组件支持图表以组合的形式进行拖入操作.gif)
 
 ### 1.3 新增圆形填充图
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20%20%20新增圆形填充图.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20%20%20新增圆形填充图.PNG)
 
 ### 1.4  柱状图和符号地图支持条件样式设置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20%20柱状图和符号地图支持条件样式设置1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20%20柱状图和符号地图支持条件样式设置1.PNG)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20%20柱状图和符号地图支持条件样式设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20%20柱状图和符号地图支持条件样式设置2.png)
 
 ### 1.5 柱状图支持自定义柱宽
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20%20柱状图支持自定义柱宽.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20%20柱状图支持自定义柱宽.png)
 
 ### 1.6  透视表支持为表头单独设置背景颜色
 :::note
@@ -39,11 +39,11 @@ Tab 组件的图表组合支持规则：
 透视表支持分别设置行背景、列背景和角背景的样式，包括背景颜色、文本颜色和字体格式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/透视表支持为表头单独设置背景颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/透视表支持为表头单独设置背景颜色.png)
 
 ### 1.7 地图缩放等级可精确设置至 0.1
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.7%20地图缩放等级可精确设置至%200.1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.7%20地图缩放等级可精确设置至%200.1.png)
 
 ## 2 数据准备
 
@@ -59,16 +59,16 @@ Tab 组件的图表组合支持规则：
 - 在 Query 参数中，将页码和大小参数与内置分页参数进行映射。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据2.png)
 
 :::note
 
 【页码+大小】同时支持将页码和大小参数嵌入 URL 路径中（如 DataEase 分页 API）。使用时，可按照下图所示，在路径中直接使用 $\{pageNumber\} 和 $\{pageSize\} 引用内置分页参数，总数字段的设置与前述方法一致。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据3.png)
 
 :::note
 
@@ -79,9 +79,9 @@ Tab 组件的图表组合支持规则：
 - 在 Query 参数中，将页码和大小参数映射到内置分页参数。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据4.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20API%20数据源支持分页获取数据5.png)
 
 ### 2.2 Excel 数据源追加策略调整
 :::note
@@ -96,7 +96,7 @@ Tab 组件的图表组合支持规则：
 在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 数据源新增查看权限
@@ -116,7 +116,7 @@ Tab 组件的图表组合支持规则：
     - 数据源不可见：在“创建数据集”界面，用户无权看到该数据源。
     - 修改已包含数据源的数据集：如果用户对某数据集有编辑权限，但该数据集依赖一个用户无查看权限的数据源，则在编辑数据集时，将提示“权限不足，无法修改”。禁止保存对数据集的任何更改。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20数据源新增查看权限.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20数据源新增查看权限.png)
 
 ### 3.2 新增 Webhook 管理
 :::note
@@ -130,19 +130,19 @@ Webhook 是组织级别的内容，以便于统一管理和扩展消息推送，
 - Secret（可选）：如果填写 Secret，DataEase 会使用它计算加密的哈希签名，用于数据加密和验证。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.2%20新增%20Webhook%20管理1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.2%20新增%20Webhook%20管理1.png)
 :::note
 
 在具体图表的阈值告警中，可以选择需要生效的 Webhook。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.2%20新增%20Webhook%20管理2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.2%20新增%20Webhook%20管理2.png)
 
 ### 3.3 支持 Elasticsearch 数据源作为数据同步的源数据源
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.3%20支持%20Elasticsearch%20数据源作为数据同步的源数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.3%20支持%20Elasticsearch%20数据源作为数据同步的源数据源.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.3%20支持%20Elasticsearch%20数据源作为数据同步的源数据源2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.3%20支持%20Elasticsearch%20数据源作为数据同步的源数据源2.png)
 
 ## 4 系统设置
 ### 4.1 新增 MFA 支持（XPack）
@@ -157,7 +157,7 @@ Webhook 是组织级别的内容，以便于统一管理和扩展消息推送，
 - OTP 延迟有效次数：设置用户 OTP 验证的允许失败次数。
 - 扫描名称配置：可自定义用户扫描绑定 MFA 时的名称显示。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持1.png)
 
 :::note
 
@@ -170,35 +170,35 @@ Webhook 是组织级别的内容，以便于统一管理和扩展消息推送，
 **注意：若用户未绑定 MFA，但系统已启用 MFA，用户在常规登录后，进入 MFA 验证页面时将出现绑定页面，包含 App下载链接和用于扫码绑定 MFA。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持2.png)
 
 :::note
 
 用户绑定 MFA 操作流程：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持3.png)
 
 :::note
 
 扫码下载 MFA 应用：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持4.png)
 
 :::note
 
 绑定 MFA 多因子认证：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持5.png)
 
 :::note
 
 用户绑定并开启 MFA 后，登陆后进行 MFA 多因子认证：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20新增%20MFA%20支持6.png)
 
 :::note
 
@@ -207,13 +207,13 @@ Webhook 是组织级别的内容，以便于统一管理和扩展消息推送，
 
 ### 4.2 OIDC 认证配置现支持字段映射功能（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20OIDC%20认证配置现支持字段映射功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20OIDC%20认证配置现支持字段映射功能.png)
 
 ## 5 嵌入式（XPack）
 
 ### 5.1 Copilot 支持嵌入
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20Copilot%20支持嵌入.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20Copilot%20支持嵌入.png)
 
 ### 5.2 网页组件支持通过 PostMessage 的方式向外层仪表板传递参数
 
@@ -245,7 +245,7 @@ Webhook 是组织级别的内容，以便于统一管理和扩展消息推送，
 传参示例：
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.2%20网页组件支持通过类似%20%20PostMessage%20的方式向外层仪表板传递参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.2%20网页组件支持通过类似%20%20PostMessage%20的方式向外层仪表板传递参数.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.2%20网页组件支持通过类似%20%20PostMessage%20的方式向外层仪表板传递参数.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.2%20网页组件支持通过类似%20%20PostMessage%20的方式向外层仪表板传递参数.gif)
 

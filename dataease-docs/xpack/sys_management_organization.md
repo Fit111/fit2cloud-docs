@@ -13,9 +13,9 @@ title: 组织管理
 选中组织后，右侧显示组织名称、人数、【添加成员】按钮，以及成员列表（姓名、账号、邮箱、角色、用户状态、操作）。
 :::
 
-:::note
-
 **与【组织管理中心】的分工**
+
+表 1  操作 / 系统设置-组织管理 / 组织管理中心-成员管理
 
 | 操作 | 系统设置-组织管理 | 组织管理中心-成员管理 |
 | --- | --- | --- |
@@ -26,10 +26,14 @@ title: 组织管理
 | 创建自定义角色 | 不支持 | 支持 |
 | 进入组织代管 | 支持 | — |
 
+:::note
+
 这就是两边的核心差异：系统管理员把用户放进某个组织；组织管理员进入该组织的【组织管理中心】后，只能调整该用户在本组织内的角色，不能再把它移出组织。
 :::
 
-<img alt="系统设置组织管理" src="/img/dataease/newimg/xpack/组织管理界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![系统设置组织管理](/img/dataease/newimg/xpack/组织管理界面.png)
+
+图 1  组织管理界面
 
 ## 2 查询与选择组织
 
@@ -40,7 +44,9 @@ title: 组织管理
 选中「总公司」后，右侧显示人数、【添加成员】，以及该组织成员列表。
 :::
 
-<img alt="系统设置组织管理" src="/img/dataease/newimg/xpack/组织管理查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![系统设置组织管理](/img/dataease/newimg/xpack/组织管理查询.png)
+
+图 2  组织管理查询
 
 ## 3 新建组织
 
@@ -49,8 +55,13 @@ title: 组织管理
 组织树标题旁可新建一级组织；也可在某个组织下新建子组织。创建时可指定组织管理员。
 :::
 
-<img alt="系统设置组织管理" src="/img/dataease/newimg/xpack/组织管理创建1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="系统设置组织管理" src="/img/dataease/newimg/xpack/组织管理创建2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![系统设置组织管理](/img/dataease/newimg/xpack/组织管理创建1.png)
+
+图 3  组织管理创建
+
+![系统设置组织管理](/img/dataease/newimg/xpack/组织管理创建2.png)
+
+图 4  组织管理创建
 
 ## 4 修改与删除组织
 
@@ -58,7 +69,10 @@ title: 组织管理
 
 支持修改组织名称。删除组织后，该组织下的资源将一并删除。若组织下仍有子组织，需先删除全部子组织。
 :::
-<img alt="系统设置组织管理" src="/img/dataease/newimg/xpack/组织管理删除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![系统设置组织管理](/img/dataease/newimg/xpack/组织管理删除.png)
+
+图 5  组织管理删除
 
 ## 5 添加成员
 
@@ -71,7 +85,9 @@ title: 组织管理
 弹窗左侧列出尚未加入该组织的平台用户，右侧选择成员角色后点击【添加】。
 :::
 
-<img alt="添加组织成员" src="/img/dataease/newimg/xpack/组织管理添加成员.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加组织成员](/img/dataease/newimg/xpack/组织管理添加成员.png)
+
+图 6  组织管理添加成员
 
 ## 6 调整角色与移出组织
 
@@ -81,7 +97,9 @@ title: 组织管理
 - **移出组织**：操作列可将成员从当前组织中移除，**不会删除** 平台账号。移出后，该用户不再出现在该组织的【组织管理中心】成员列表中。
 :::
 
-<img alt="添加组织成员" src="/img/dataease/newimg/xpack/组织管理调整角色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加组织成员](/img/dataease/newimg/xpack/组织管理调整角色.png)
+
+图 7  组织管理调整角色
 
 ## 7 进入组织
 
@@ -90,5 +108,10 @@ title: 组织管理
 系统管理员可在组织节点上选择【进入组织】，以代理身份进入目标组织的【组织管理中心】，代行组织管理员进行成员、权限等日常维护。
 :::
 
-<img alt="添加组织成员" src="/img/dataease/newimg/xpack/组织管理进入组织1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="添加组织成员" src="/img/dataease/newimg/xpack/组织管理进入组织2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加组织成员](/img/dataease/newimg/xpack/组织管理进入组织1.png)
+
+图 8  组织管理进入组织
+
+![添加组织成员](/img/dataease/newimg/xpack/组织管理进入组织2.png)
+
+图 9  组织管理进入组织

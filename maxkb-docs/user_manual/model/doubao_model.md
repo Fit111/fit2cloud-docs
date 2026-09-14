@@ -4,27 +4,27 @@ title: 对接火山引擎
 
 ## 1 添加模型
 
-:::note
 
 选择模型供应商为`火山引擎`，并在模型添加对话框中输入如下必要信息：
 
 * 模型名称：MaxKB 中自定义的模型名称。     
 * 模型类型：大语言模型/向量模型/语音识别/语音合成/视觉模型/图片生成/文生视频/图生视频。
-:::
 
-:::note
 
 豆包大语言模型其它接入参数说明：
 
 * 基础模型：在线推理的接入点 ID。        
 * API 域名：https://ark.cn-beijing.volces.com/api/v3
 * API Key：接入点-&gt; API调用 -&gt; 通过API Key授权 -&gt; 选择 API Key 复制获取，如下图
-:::
 
-![火山引擎 LLM模型](/img/maxkb/model/doubao_jieru.png)
-![火山引擎 LLM模型](/img/maxkb/model/doubao_llm_apikey.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_jieru.png" alt="图 1  火山引擎 LLM模型" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  火山引擎 LLM模型</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_llm_apikey.png" alt="图 2  火山引擎 API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  火山引擎 API Key</div>
+
 
 语音识别和语音合成需要输入 App ID、Access Token、Cluster ID。
 
@@ -32,12 +32,15 @@ title: 对接火山引擎
 * App ID：在火山引擎中创建的应用ID。 
 * Access Token：在火山引擎应用对应的认证信息。 
 * Cluster ID：在火山引擎应用对应的服务信息.
-:::
 
-![火山引擎_语音识别](/img/maxkb/model/doubao_stt.png)
-![火山引擎o_语音合成](/img/maxkb/model/doubao_tts.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_stt.png" alt="图 3  火山引擎 语音识别模型配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  火山引擎 语音识别模型配置样例图</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_tts.png" alt="图 4  火山引擎 语音合成模型配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  火山引擎 语音合成模型配置样例图</div>
+
 
 图片生成需要输入 Access Key ID 和 Secret Access Key 。
 
@@ -45,62 +48,69 @@ title: 对接火山引擎
 
 * Access Key ID：在火山引擎 API 访问密钥的服务信息。 
 * Secret Access Key：在火山引擎 API 访问密钥的认证信息.
-:::
 
-![火山引擎_图片生成](/img/maxkb/model/doubao_API.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_API.png" alt="图 5  火山引擎_图片生成" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  火山引擎_图片生成</div>
 
 ## 2 配置样例
 
-:::note
 
 火山引擎-大语言模型配置样例图示如下：
-:::
-<img alt="火山引擎 LLM模型" src="/img/maxkb/model/huoshan_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_llm.png" alt="图 6  火山引擎 大语言模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  火山引擎 大语言模型 配置样例图</div>
+
 
 火山引擎-向量模型配置样例图示如下：
-:::
-<img alt="火山引擎 向量模型" src="/img/maxkb/model/huoshan_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_embedding.png" alt="图 7  火山引擎 向量模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  火山引擎 向量模型 配置样例图</div>
+
 
 火山引擎-语音识别模型配置样例图示如下：
-:::
-<img alt="火山引擎 语音识别模型" src="/img/maxkb/model/huoshan_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_asr.png" alt="图 8  火山引擎 语音识别模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  火山引擎 语音识别模型 配置样例图</div>
+
 
 火山引擎-语音合成模型配置样例图示如下：
-:::
-<img alt="火山引擎 语音合成模型" src="/img/maxkb/model/huoshan_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_tts.png" alt="图 9  火山引擎 语音合成模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  火山引擎 语音合成模型 配置样例图</div>
+
 
 火山引擎-视觉模型模型配置样例图示如下：
-:::
-<img alt="火山引擎 视觉模型" src="/img/maxkb/model/doubao_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_vision.png" alt="图 10  火山引擎 视觉模型模型 配置样例图" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  火山引擎 视觉模型模型 配置样例图</div>
+
 
 火山引擎-图片生成模型需要在火山引擎【控制台-访问控制-API 访问密钥】新建密钥，样例图示如下：
-:::
-<img alt="火山引擎 图片生成" src="/img/maxkb/model/doubao_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_gen1.png" alt="图 11  火山引擎 图片生成模型参数配置" />
 
-<img alt="火山引擎 图片生成" src="/img/maxkb/model/doubao_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  火山引擎 图片生成模型参数配置</div>
 
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_gen2.png" alt="图 12  火山引擎 图片生成模型配置示例" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  火山引擎 图片生成模型配置示例</div>
+
 
 火山引擎-文生视频模型模型配置样例图示如下：
-:::
-<img alt="火山引擎 文生视频" src="/img/maxkb/model/doubao_text2video.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_text2video.png" alt="图 13  火山引擎 文生视频模型参数配置" />
 
-<img alt="火山引擎 文生视频" src="/img/maxkb/model/doubao_text2video1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  火山引擎 文生视频模型参数配置</div>
 
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_text2video1.png" alt="图 14  火山引擎 文生视频模型配置示例" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  火山引擎 文生视频模型配置示例</div>
+
 
 火山引擎-图生视频模型模型配置样例图示如下：
-:::
-<img alt="火山引擎 图生视频" src="/img/maxkb/model/doubao_picture2video.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_picture2video.png" alt="图 15  火山引擎 图生视频模型参数配置" />
 
-<img alt="火山引擎 图生视频" src="/img/maxkb/model/doubao_picture2video1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  火山引擎 图生视频模型参数配置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_picture2video1.png" alt="图 16  火山引擎 图生视频模型配置示例" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  火山引擎 图生视频模型配置示例</div>

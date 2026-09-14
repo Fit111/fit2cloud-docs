@@ -4,10 +4,8 @@ title: 环境要求
 
 ## 1. 操作系统
 
-:::note
 
 - 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
-:::
 
 | 操作系统   | 架构 | Linux 内核  | 软件要求       | 最小化硬件配置     |
 | :------------ | :----------- | :------------ | :------------------------------------ | :-------------------- |
@@ -16,31 +14,23 @@ title: 环境要求
 
 ### Debian / Ubuntu
 
-:::note
 
 ```sh
 apt-get update
 apt-get install -y wget curl tar gettext iptables
 ```
-:::
 ### RedHat / CentOS
 
-:::note
 
 ```sh
 yum update
 yum install -y wget curl tar gettext iptables
 ```
-:::
 ## 2 数据库
-:::note
 
 **JumpServer 需要使用 MySQL 或 MariaDB 存储数据，使用 Redis 缓存数据，如果有自建数据库或云数据库的使用需求请参考下列的数据库环境要求：**
-:::
-:::note
 
 我们支持[数据库 SSL 连接](../security_setup/mysql_ssl) 和 [Redis SSL 连接](../security_setup/redis_ssl)
-:::
 | 名称    | 版本 | 默认字符集  | 默认字符编码  | TLS/SSL          |
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
 | MySQL   | &gt;= 5.7  | utf8             | utf8_general_ci    | ✓ |
@@ -50,12 +40,9 @@ yum install -y wget curl tar gettext iptables
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
 | Redis   | &gt;= 6.0  | ✓ | ✗   | ✓ |
 
-:::note[创建数据库 SQL 参考]
 
-:::
 ### MySQL
 
-:::note
 
 ```mysql
 create database jumpserver default charset 'utf8';
@@ -69,10 +56,8 @@ mysql> show create database jumpserver;
 +------------+---------------------------------------------------------------------+
 1 row in set (0.00 sec)
 ```
-:::
 ### MariaDB
 
-:::note
 
 ```mysql
 create database jumpserver default charset 'utf8';
@@ -86,4 +71,3 @@ MariaDB> show create database jumpserver;
 +------------+-----------------------------------------------------------------------+
 1 row in set (0.001 sec)
 ```
-:::

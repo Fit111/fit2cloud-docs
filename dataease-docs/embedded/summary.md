@@ -8,7 +8,10 @@ title: 嵌入式概述
 
 DataEase 提供了丰富的嵌入式功能，包括可视化看板单独嵌入，系统模块嵌入等，DataEase 提供封装好的方法及模块，用户在代码中参考官方示例即可完成嵌入操作。
 :::
-<img alt="1.1嵌入模块说明.jpg" src="/img/dataease/embedded/1.1嵌入模块说明.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入模块说明](/img/dataease/embedded/嵌入模块说明.jpg)
+
+图 1  嵌入模块说明
 
 :::note
 
@@ -16,10 +19,17 @@ DataEase 嵌入式支持 DIV 和 Iframe 两种嵌入方式，支持按照单个�
 
 DataEase 同时提供了丰富的 API 接口，包括仪表板管理、数据大屏管理，数据集管理、权限管理、用户管理等模块，可根据实际的业务需求调用 DataEase 的接口完成业务要求，API 说明入口位于 【系统设置】-&gt;【API Key】-&gt;【查看 API】。
 :::
-<img alt="1.1嵌入式BI功能架构（1）.png" src="/img/dataease/embedded/1.1嵌入式BI功能架构（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.1 嵌入式BI功能架构（2）" src="/img/dataease/embedded/1.1%20嵌入式BI功能架构（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入式BI功能架构（1）](/img/dataease/embedded/嵌入式BI功能架构（1）.png)
+
+图 2  嵌入式BI功能架构
+
+![嵌入式BI功能架构（2）](/img/dataease/embedded/嵌入式BI功能架构（2）.png)
+
+图 3  嵌入式BI功能架构
 
 ## 2 嵌入式场景效果预览
+
 :::note
 
 [官方演示环境](https://embedded-bi.dataease.cn/#/home/index)，嵌入式官方体验环境，可查看嵌入式效果。
@@ -28,22 +38,38 @@ DataEase 同时提供了丰富的 API 接口，包括仪表板管理、数据大
 
 **注意：如果项目的前端使用的是 Vue3 的框架，建议参考 Vue3 的代码进行嵌入；其他前端框架可参考 LayUl 框架的代码进行嵌入。**
 :::
+
 :::note
 
 数据大屏及数据大屏设计器嵌入。
 :::
-<img alt="1.2 嵌入场景预览（1）" src="/img/dataease/embedded/1.2%20嵌入场景预览（1）.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.2 嵌入场景预览（11）.PNG" src="/img/dataease/embedded/1.2%20嵌入场景预览（11）.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入场景预览（1）](/img/dataease/embedded/嵌入场景预览（1）.PNG)
+
+图 4  嵌入场景预览
+
+![嵌入场景预览（11）](/img/dataease/embedded/嵌入场景预览（11）.PNG)
+
+图 5  嵌入场景预览
 
 :::note
 
 仪表板及仪表板设计器嵌入。
 :::
-<img alt="1.2 嵌入场景预览（2）.png" src="/img/dataease/embedded/1.2%20嵌入场景预览（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.2 嵌入场景预览（22）.png" src="/img/dataease/embedded/1.2%20嵌入场景预览（22）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入场景预览（2）](/img/dataease/embedded/嵌入场景预览（2）.png)
+
+图 6  嵌入场景预览
+
+![嵌入场景预览（22）](/img/dataease/embedded/嵌入场景预览（22）.png)
+
+图 7  嵌入场景预览
 
 :::note
 
 模块嵌入。
 :::
-<img alt="1.2 嵌入场景预览（3）.png" src="/img/dataease/embedded/1.2%20嵌入场景预览（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入场景预览（3）](/img/dataease/embedded/嵌入场景预览（3）.png)
+
+图 8  嵌入场景预览

@@ -8,7 +8,7 @@ title: 嵌入式概述
 
 DataEase 提供了丰富的嵌入式功能，包括可视化看板单独嵌入，系统模块嵌入等，DataEase 提供封装好的方法及模块，用户在代码中参考官方示例即可完成嵌入操作。
 :::
-<img alt="1.1嵌入模块说明.jpg" src="/img/dataease-v2/embedded/1.1嵌入模块说明.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![1.1嵌入模块说明.jpg](/img/dataease-v2/embedded/1.1嵌入模块说明.jpg)
 
 :::note
 
@@ -16,8 +16,8 @@ DataEase 嵌入式支持 DIV 和 Iframe 两种嵌入方式，支持按照单个�
 
 DataEase 同时提供了丰富的 API 接口，包括仪表板管理、数据大屏管理，数据集管理、权限管理、用户管理等模块，可根据实际的业务需求调用 DataEase 的接口完成业务要求，API 说明入口位于 【系统设置】-&gt;【API Key】-&gt;【查看 API】。
 :::
-<img alt="1.1嵌入式BI功能架构（1）.png" src="/img/dataease-v2/embedded/1.1嵌入式BI功能架构（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.1 嵌入式BI功能架构（2）" src="/img/dataease-v2/embedded/1.1%20嵌入式BI功能架构（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![1.1嵌入式BI功能架构（1）.png](/img/dataease-v2/embedded/1.1嵌入式BI功能架构（1）.png)
+![1.1 嵌入式BI功能架构（2）](/img/dataease-v2/embedded/1.1%20嵌入式BI功能架构（2）.png)
 
 ## 2 嵌入式场景效果预览
 :::note
@@ -32,18 +32,18 @@ DataEase 同时提供了丰富的 API 接口，包括仪表板管理、数据大
 
 数据大屏及数据大屏设计器嵌入。
 :::
-<img alt="1.2 嵌入场景预览（1）" src="/img/dataease-v2/embedded/1.2%20嵌入场景预览（1）.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.2 嵌入场景预览（11）.PNG" src="/img/dataease-v2/embedded/1.2%20嵌入场景预览（11）.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![1.2 嵌入场景预览（1）](/img/dataease-v2/embedded/1.2%20嵌入场景预览（1）.PNG)
+![1.2 嵌入场景预览（11）.PNG](/img/dataease-v2/embedded/1.2%20嵌入场景预览（11）.PNG)
 
 :::note
 
 仪表板及仪表板设计器嵌入。
 :::
-<img alt="1.2 嵌入场景预览（2）.png" src="/img/dataease-v2/embedded/1.2%20嵌入场景预览（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1.2 嵌入场景预览（22）.png" src="/img/dataease-v2/embedded/1.2%20嵌入场景预览（22）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![1.2 嵌入场景预览（2）.png](/img/dataease-v2/embedded/1.2%20嵌入场景预览（2）.png)
+![1.2 嵌入场景预览（22）.png](/img/dataease-v2/embedded/1.2%20嵌入场景预览（22）.png)
 
 :::note
 
 模块嵌入。
 :::
-<img alt="1.2 嵌入场景预览（3）.png" src="/img/dataease-v2/embedded/1.2%20嵌入场景预览（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![1.2 嵌入场景预览（3）.png](/img/dataease-v2/embedded/1.2%20嵌入场景预览（3）.png)

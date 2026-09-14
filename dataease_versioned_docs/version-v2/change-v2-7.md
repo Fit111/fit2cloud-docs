@@ -10,88 +10,88 @@ title: v2.7.0
 仪表板与数据大屏均增加高级样式设置，包括分页器配色，联动、钻取、跳转的图标颜色，钻取层级展示颜色。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.1%20增加高级样式设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.1%20增加高级样式设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.1%20增加高级样式设置.png)
+![更新1](/img/dataease-v2/newimg/1.1%20增加高级样式设置2.png)
 
 ### 1.2 图表过滤器支持复杂的与或条件设置
 :::note
 
 过滤器配置方式有调整，直接点击配置，而非之前的拖动字段配置，即目前的配置方式与 v1 统一。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.2%20图表过滤器支持复杂的与或条件设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.2%20图表过滤器支持复杂的与或条件设置.png)
 
 ### 1.3 富文本组件增加字间距配置项
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20富文本组件增加字间距配置项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20富文本组件增加字间距配置项.png)
 
 ### 1.4 导出图片时支持选择尺寸
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20导出图片时支持选择尺寸.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20导出图片时支持选择尺寸.png)
 
 ### 1.5 数据大屏支持查询组件
 :::note
 
 数据大屏新增支持查询组件，与仪表板查询组件一致。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20数据大屏支持查询组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20数据大屏支持查询组件.png)
 
 ### 1.6 图表、查询组件等可以直接在右侧编辑区修改标题
 :::note
 
 双击右侧编辑区的标题即可修改标题。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.6%20图表、查询组件等可以直接在右侧编辑区修改标题.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.6%20图表、查询组件等可以直接在右侧编辑区修改标题.gif)
 
 ### 1.7 指标卡阈值支持设置背景色
-<img alt="更新1" src="/img/dataease-v2/newimg/1.7%20指标卡阈值支持设置背景色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.7%20指标卡阈值支持设置背景色.png)
 
 ### 1.8 水波图支持设置阈值
-<img alt="更新1" src="/img/dataease-v2/newimg/1.8%20水波图支持设置阈值.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.8%20水波图支持设置阈值.gif)
 
 ### 1.9 表格阈值支持非指标字段
-<img alt="更新1" src="/img/dataease-v2/newimg/1.9%20表格阈值支持非指标字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.9%20表格阈值支持非指标字段.png)
 
 ### 1.10 新增桑基图
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20新增桑基图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20新增桑基图.png)
 
 ### 1.11 新增流向地图
-<img alt="更新1" src="/img/dataease-v2/newimg/1.11%20新增流向地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.11%20新增流向地图.png)
 
 ### 1.12 新增进度条图
 :::note
 
 通过实际值与目标值自动计算当前完成比例。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20新增进度条图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20新增进度条图.png)
 
 ### 1.13 新增对称条形图
-<img alt="更新1" src="/img/dataease-v2/newimg/1.13%20新增对称条形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.13%20新增对称条形图.png)
 
 ### 1.14 新增区间条形图
-<img alt="更新1" src="/img/dataease-v2/newimg/1.14%20新增区间条形图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.14%20新增区间条形图.png)
 
 ### 1.15 新增流媒体组件
 :::note
 
 流媒体只支持 flv 格式，如果需要使用 rtsp 格式，可参考知识库文章：https://kb.fit2cloud.com/?p=182 。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.15%20新增流媒体组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.15%20新增流媒体组件.png)
 
 ### 1.16 新增视频组件
 :::note
 
 不能上传本地视频，需要填写视频链接信息。如果需要搭建视频服务器可参考知识库：[https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b](https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b)、[https://kb.fit2cloud.com/?p=15](https://kb.fit2cloud.com/?p=15) 。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.16%20新增视频组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.16%20新增视频组件.png)
 
 ### 1.17 象限图恒线支持设置小数及负数
-<img alt="更新1" src="/img/dataease-v2/newimg/1.17%20象限图恒线支持设置小数及负数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.17%20象限图恒线支持设置小数及负数.png)
 
 ### 1.18 数据大屏新增跑马灯组件
 :::note
 
 数据大屏新增跑马灯组件，实现文字的循环滚动。支持设置文字颜色、字间距、字体大小、透明度、播放速度等选项。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.18%20数据大屏新增跑马灯组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.18%20数据大屏新增跑马灯组件.png)
 
 ### 1.19 查询组件下拉列表选项优化
 :::note
@@ -107,15 +107,15 @@ title: v2.7.0
 参数绑定的操作前置到字段选择。
 当绑定参数时，选项值来源不能为自动，否则选项值为空。因此当绑定了图表的参数时，将选项值来源的「自动」选项置灰，为不可用状态
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化.png)
+![更新1](/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化2.png)
 
 ### 1.21 Pad 端访问公共链接，以 PC 端布局展示
 
 ## 2 数据准备
 
 ### 2.1 数据源支持直接输入 jdbc url 字符串进行数据连接
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20数据源支持直接输入%20jdbc%20url%20字符串进行数据连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20数据源支持直接输入%20jdbc%20url%20字符串进行数据连接.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 支持定时报告
@@ -123,28 +123,28 @@ title: v2.7.0
 
 第一步：基础信息配置：
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告1.png)
 :::note
 
 第二步：接收人配置
 目前只支持邮件和飞书接收通知。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告2.png)
 :::note
 
 选择内部收件人可以按照角色或用户维度多选。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告3.png)
 :::note
 
 需要发送给外部邮箱可以通过【邮件通知】输入框输入，输入完邮箱后点击回车即可。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告4.png)
 :::note
 
 第三步：配置发送设置
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持定时报告5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持定时报告5.png)
 
 ## 4 系统设置(XPack）
 ### 4.1 外观配置优化
@@ -156,10 +156,10 @@ title: v2.7.0
 - 隐藏 - 在各种模式下均隐藏
 - Iframe 中隐藏 - 主要用在嵌入式场景中，平台访问均显示，Iframe 嵌入的场景中会不显示
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20外观配置优化1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20外观配置优化2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20外观配置优化1.png)
+![更新1](/img/dataease-v2/newimg/4.1%20外观配置优化2.png)
 ### 4.2 支持禁用初始密码及配置密码有效期
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持禁用初始密码及配置密码有效期.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持禁用初始密码及配置密码有效期.png)
 
 ### 4.3 支持第三方平台移动端免密登录
 
@@ -168,7 +168,7 @@ title: v2.7.0
 
 以前版本设置过 CAS、OIDC 的这里不用再设置，会自动添加到 DataEase 的控制台参数中。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/4.4%20支持在系统设置中配置认证对接信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.4%20支持在系统设置中配置认证对接信息.png)
 
 ### 4.5 支持设置系统变量
 :::note
@@ -179,22 +179,22 @@ title: v2.7.0
 - 数值
 - 日期
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/添加系统变量.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/添加系统变量.png)
 :::note
 
 系统管理员可以为文本型变量添加可选值，为数值和日期类型变量设置范围值。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/用户添加参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/用户添加参数.png)
 :::note
 
 系统管理员设置好系统变量后，组织管理员可以为组织内成员配置这些系统变量。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/用户配置多个参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/用户配置多个参数.png)
 :::note
 
 在配置数据集的行权限时，除了系统内置的变量外，可以使用这些自定义的系统变量。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据集权限匹配参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据集权限匹配参数.png)
 
 ## 5 嵌入式（XPack）
 ### 5.1 Iframe、Div 方式嵌入仪表板、数据大屏、图表时支持外部参数
@@ -210,5 +210,5 @@ title: v2.7.0
 图表的 Excel 数据导出功能已进行优化升级。原本版本直接生成 Excel 文件进行导出的机制，现改进为引入一个全新的数据导出中心，以便统一管理所有导出任务。  
 该导出中心默认支持 10 个并发导出任务，并会自动将生成的数据文件导出至 DataEase 服务器。导出任务完成后，用户将会接收到通知，随时可前往导出中心下载文件。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/6.1%20新增数据导出中心.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/6.1%20新增数据导出中心2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/6.1%20新增数据导出中心.png)
+![更新1](/img/dataease-v2/newimg/6.1%20新增数据导出中心2.png)

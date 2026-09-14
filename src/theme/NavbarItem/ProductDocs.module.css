@@ -6,6 +6,15 @@
   min-width: 320px; /* 官方菜单偏宽, 容纳 图标+两行文字 */
 }
 
+/* 外层 .navbar__item 默认带 4px 上下 padding(--ifm-navbar-item-padding-vertical),
+   导致本项比相邻纯文字菜单(.navbar__link)整体下沉 4px。
+   这里只去掉垂直 padding、保留水平方向, 让 trigger 与其他项对齐。 */
+.container {
+  display: flex;
+  align-items: center; /* 让 trigger 文字在盒子中轴垂直居中(盒子父级也已 align-items:center) */
+  padding: 0 var(--ifm-navbar-item-padding-horizontal);
+}
+
 /* 整条: 图标在左, 名+描述在右, 一行一个产品 */
 .link {
   display: flex;
@@ -14,14 +23,22 @@
   padding: 8px 12px;
 }
 
-/* 下拉 trigger 文字旁的 chevron 箭头(参考 halo 顶部「版本」): 15px、浅灰、位置靠下 */
+/* 下拉 trigger 链接: 用 inline-flex 让「文字 + 箭头」垂直居中,
+   消除内联箭头(15px)撑高行盒导致文字相对其他纯文字菜单项下沉的问题
+   (其他项没有箭头, 行盒高度一致, 对齐才统一)。 */
+.trigger {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 下拉 trigger 文字旁的 chevron 箭头(参考 halo 顶部「版本」): 15px、浅灰 */
 .caretIcon {
   margin-left: 4px;
   color: #9aa4b1;
-  vertical-align: -0.2em; /* 相对文字基线往下沉, 箭头靠下 */
+  vertical-align: middle;
   transition: color 0.2s, transform 0.2s;
 }
-.navbar__link:hover .caretIcon {
+:global(.navbar__link):hover .caretIcon {
   color: #0c7be0;
 }
 /* 下拉展开(hover)时箭头旋转 180° */

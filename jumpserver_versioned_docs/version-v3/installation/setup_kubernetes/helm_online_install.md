@@ -2,7 +2,6 @@
 title: 在线安装
 ---
 
-:::note
 
 国内可以使用由 [华为云](https://www.huaweicloud.com/) 提供的容器镜像服务
 
@@ -13,7 +12,6 @@ title: 在线安装
 | 华北-北京四   | swr.cn-north-4.myhuaweicloud.com     | DOCKER_IMAGE_PREFIX=swr.cn-north-4.myhuaweicloud.com     | repository: swr.cn-north-4.myhuaweicloud.com     | linux/arm64    |
 | 华东-上海一   | swr.cn-east-3.myhuaweicloud.com      | DOCKER_IMAGE_PREFIX=swr.cn-east-3.myhuaweicloud.com      | repository: swr.cn-east-3.myhuaweicloud.com      | linux/arm64    |
 | 西南-贵阳一   | swr.cn-southwest-2.myhuaweicloud.com | DOCKER_IMAGE_PREFIX=swr.ap-southeast-1.myhuaweicloud.com | repository: swr.ap-southeast-1.myhuaweicloud.com | linux/loong64  |
-:::
 
 ## 1 环境要求
 
@@ -22,16 +20,13 @@ title: 在线安装
 
 ## 2 安装部署
 ### 2.1 添加 JumpServer 的 Helm 源地址
-:::note
 
 ```sh
 helm repo add jumpserver https://jumpserver.github.io/helm-charts
 helm repo list
 ```
-:::
 
 ### 2.2 编辑 JumpServer values.yaml 文件
-:::note
 
 ```sh
 vi values.yaml
@@ -907,22 +902,17 @@ web:
 
   affinity: {}
 ```
-:::
 
 ### 2.3 安装 JumpServer
 
-:::note
 
 ```sh
 helm install jms-k8s jumpserver/jumpserver -n default -f values.yaml
 ```
-:::
 
 ### 2.4 卸载 JumpServer
 
-:::note
 
 ```sh
 helm uninstall jms-k8s -n default
 ```
-:::

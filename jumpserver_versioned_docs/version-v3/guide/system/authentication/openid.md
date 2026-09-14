@@ -2,9 +2,7 @@
 title: OpenID (X-Pack)
 ---
 
-:::note[注：OpenId 认证为 JumpServer 企业版功能。]
 
-:::
 ## 1 Keycloak 对接
 
 ### 1.1 创建设置 KeyCloak Client
@@ -19,7 +17,6 @@ title: OpenID (X-Pack)
 
 ![KeyCloak](/img/jumpserver-v3/Keycloak_03.png)
 
-:::note
 
 ```yaml
 {
@@ -133,7 +130,6 @@ title: OpenID (X-Pack)
     "introspection_endpoint":"https://id.jumpserver.org/auth/realms/jumpserver/protocol/openid-connect/token/introspect"
 }
 ```
-:::
 
 ## 2 配置 JumpServer
 
@@ -142,10 +138,8 @@ title: OpenID (X-Pack)
 - 配置有两种方式，一种是 Keycloak 的配置，一种是 OIDC 的配置
 :::
 
-:::note
 
 ### Keycloak 方式使用配置
-:::
 
 ```sh
 vi /opt/jumpserver/config/config.txt
@@ -163,9 +157,7 @@ AUTH_OPENID_SHARE_SESSION=True
 AUTH_OPENID_IGNORE_SSL_VERIFICATION=True
 ```
     
-:::note[参数说明]
 
-:::
 | name                                  | explain                                                 |
 | ------------------------------------- | ------------------------------------------------------- |
 | `BASE_SITE_URL`                       | JumpServer服务的地址（注意末尾加  "/"）                   |
@@ -204,9 +196,7 @@ AUTH_OPENID_SHARE_SESSION=True
 AUTH_OPENID_IGNORE_SSL_VERIFICATION=True
 ```
 
-:::note[参数说明]
 
-:::
 | name                                          | explain
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `BASE_SITE_URL`                               | JumpServer service URL.                                                                                                                                                               |

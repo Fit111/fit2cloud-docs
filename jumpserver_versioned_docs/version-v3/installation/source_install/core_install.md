@@ -3,26 +3,19 @@ title: Core 环境部署
 ---
 
 ## 1 Core 组件简述
-:::note
 
 - [Core][core] 是 JumpServer 的核心组件，由 [Django][django] 二次开发而来，内置了 [Gunicorn][gunicorn] [Celery][celery] Beat [Flower][flower] [Daphne][daphne] 服务。
-:::
 
 ### 1.1 环境要求
-:::note
 
 | Name    | Core                     | Python |
 | :------ | :----------------------- | :----- |
 | Version | v3.10.21     | 3.11    |
-:::
 
 ### 1.2 下载源代码
-:::note
 
 - 可以从 [Github][core] 网站上获取最新的 [Release][core_release] 副本。这些版本是最新代码的稳定快照，从项目网站下载的源将采用 .tar.gz 存档的形式，通过命令行中提取该存档：
-:::
 
-:::note
 
 ```bash
 cd /opt
@@ -47,11 +40,8 @@ requirements/           # 对应操作系统需要的依赖包
 ├── requirements.txt    # python
 └── rpm_pkg.sh          # 基于 RedHat 的发行版(如: CentOS)
 ```
-:::
-:::note
 
 ### Ubuntu 20.04
-:::
 
 ```bash
 apt-get install -y pkg-config libxmlsec1-dev libpq-dev libffi-dev libxml2 libxslt-dev libldap2-dev libsasl2-dev sshpass mariadb-client bash-completion g++ make sshpass
@@ -64,12 +54,9 @@ apt-get install -y pkg-config libxmlsec1-dev libpq-dev libffi-dev libxml2 libxsl
 apt-get install -y libmariadb-dev
 ```
 ### 1.3 安装 Python3
-:::note
 
 - 从 [Python][python] 网站获取部署 Python3 的方法，请根据 [环境要求](#_3)，通过命令行中判断是否安装完成：
-:::
 
-:::note
 
 ```bash
 apt-get install -y python3.11 python3.11-dev python3.11-venv
@@ -83,10 +70,8 @@ Python 3.11.10 (default, Nov 23 2021, 15:27:38)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-:::
 
 ### 1.4 安装 Python 依赖
-:::note
 
 - 为 JumpServer 项目单独创建 python3 虚拟环境。
 
@@ -248,17 +233,14 @@ REDIS_PASSWORD: ********
 rm -f apps/locale/zh/LC_MESSAGES/django.mo apps/locale/zh/LC_MESSAGES/djangojs.mo
 python apps/manage.py compilemessages
 ```
-:::
 
 ### 1.5 启动 Core
-:::note
 
 - 后台运行可以加 -d，`./jms start -d`
 
 ```bash
 ./jms start
 ```
-:::
 
 [nginx]: http://nginx.org/
 [lina]: https://github.com/jumpserver/lina/

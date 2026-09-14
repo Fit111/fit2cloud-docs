@@ -22,21 +22,21 @@ title: v2.10.6
 - 点击顶部功能按钮（如外部参数、仪表板配置、移动端布局、图表、复用等），退出隐藏设置状态并执行相应操作。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板支持组件隐藏1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板支持组件隐藏1.PNG)
 
 :::note
 
 在单个组件的右上角菜单中，点击【隐藏】选项，可直接进入隐藏设置状态，并将该组件添加至【已隐藏组件列表】。其余操作与隐藏设置流程一致。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板支持组件隐藏2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板支持组件隐藏2.PNG)
 
 :::note
 
 在【已隐藏组件】列表中，点击组件可恢复显示，操作方式与移动端布局一致。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/仪表板支持组件隐藏3.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/仪表板支持组件隐藏3.gif)
 
 ### 1.2 Tab 组件的标题支持背景设置
 :::note
@@ -44,11 +44,11 @@ title: v2.10.6
 Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景色、背景图和边框样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/Tab%20组件的标题支持背景设置.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/Tab%20组件的标题支持背景设置.PNG)
 
 ### 1.3 数据大屏在选中多个组件时支持按住 Ctrl 键取消已选中的组件
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏在选中多个组件时支持按住%20Ctrl%20键取消已选中的组件.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏在选中多个组件时支持按住%20Ctrl%20键取消已选中的组件.gif)
 
 ### 1.4  移动端组件新增 PC 样式同步功能
 :::note
@@ -56,7 +56,7 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 同步后，移动端组件的样式将与 PC 端保持一致；未同步时，若未单独设置移动端样式，则为最初选中时的 PC 端样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端组件新增%20PC%20样式同步功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端组件新增%20PC%20样式同步功能.png)
 
 ### 1.5 图表指标支持快速计算累加
 :::note
@@ -69,7 +69,7 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 - 其他图表类型：分布图、地图、关系图。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/图表指标支持快速计算累加.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/图表指标支持快速计算累加.png)
 
 ### 1.6 明细表支持表头分组
 :::note
@@ -77,25 +77,25 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 明细表表头选项新增【表头分组】功能。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持表头分组1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持表头分组1.png)
 
 :::note
 
 在表头分组设置页，可按住 Ctrl/Cmd  键选择表头列进行合并分组。注意：仅同级别表头可合并。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持表头分组2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持表头分组2.png)
 
 :::note
 
 已合并的表头可通过左键选中，右键打开操作菜单进行管理。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表支持表头分组3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表支持表头分组3.png)
 
 ### 1.7 横纵轴支持快捷启用与禁用轴名称
 
-<img alt="更新1" src="/img/dataease-v2/newimg/横纵轴支持快捷启用与禁用轴名称.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/横纵轴支持快捷启用与禁用轴名称.png)
 
 ### 1.8 新增轴线颜色自定义设置
 :::note
@@ -103,15 +103,15 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 支持自定义轴线的显示，并调整其颜色、形状和宽度。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增轴线颜色自定义设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增轴线颜色自定义设置.png)
 
 ### 1.9 明细表在合并单元格状态下禁用斑马纹配置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/明细表在合并单元格状态下禁用斑马纹配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/明细表在合并单元格状态下禁用斑马纹配置.png)
 
 ### 1.10 数字下拉组件的显示字段支持选择文本类型字段
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数字下拉组件的显示字段支持选择文本类型字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数字下拉组件的显示字段支持选择文本类型字段.png)
 
 ### 1.11 时间范围筛选组件支持同时使用动态参数和时间维度字段
 :::note
@@ -122,11 +122,11 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 - SELECT * FROM SALES WHERE 记录时间 &gt; '$\{BEGINTIME\}' AND 记录时间 &lt; '$\{ENDTIME\}';
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/时间范围筛选组件支持同时使用动态参数和时间维度字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/时间范围筛选组件支持同时使用动态参数和时间维度字段.png)
 
 ### 1.12 查询组件支持文本搜索时按回车键触发查询
 
-<img alt="更新1" src="/img/dataease-v2/newimg/查询组件支持文本搜索时按回车键触发查询.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/查询组件支持文本搜索时按回车键触发查询.gif)
 
 ## 2 数据准备
 
@@ -137,7 +137,7 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 【分组字段】功能支持用户通过可视化方式对字段值进行分类，无需编写 SQL 语法或使用函数，即可完成数据分组。例如，可将“广东省”归入“华南”区域，实现灵活的数据分类与分析。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增数据集分组字段功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增数据集分组字段功能1.png)
 
 :::note
 
@@ -148,7 +148,7 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 创建分组字段后，可直接在数据预览界面查看分组结果，分组字段会新增至维度列表中。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增数据集分组字段功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增数据集分组字段功能2.png)
 
 ### 2.2 新增远程 Excel/CSV 数据源
 :::note
@@ -158,7 +158,7 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 **注意：远程 Excel/CSV 数据源是  DataEase  从远程服务器读取的 Excel 或 CSV 文件。而本地 Excel/CSV 指的是用户通过浏览器，将本地的  Excel/CSV  文件上传到 DataEase 中。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源1.png)
 
 :::note
 
@@ -170,20 +170,20 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 可点击 【加载数据】进行数据预览，以确保远程文件能够正确解析。点击 【校验】 以验证数据源的连通性。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源2.png)
 
 :::note
 
 配置数据更新，设置更新方式和更新频率，可定期拉取远程 Excel/CSV 文件实现数据自动更新。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增远程%20Excel：CSV%20数据源4.png)
 
 ### 2.3 数据填报的表单中的下拉框和多选框组件支持关联所有有效数据源（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单中的下拉框和多选框组件支持关联所有有效数据源.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单中的下拉框和多选框组件支持关联所有有效数据源.png)
 
 ### 2.4 数据填报支持绑定已有数据表（XPack）
 
@@ -192,17 +192,17 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 数据填报表单可绑定现有数据库表，表单字段可选择与数据库表字段绑定，系统将自动匹配字段类型。对于未绑定的新增字段，系统将在目标数据表中创建对应的数据库字段，填报数据也将同步插入原数据表。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/%20数据填报支持绑定已有数据表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/%20数据填报支持绑定已有数据表.png)
 
 ### 2.5 数据填报的日期组件支持设置默认值，默认填充当前日期时间（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的日期组件支持设置默认值，默认填充当前日期时间.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的日期组件支持设置默认值，默认填充当前日期时间.png)
 
 ### 2.6 数据填报的表单数据支持按字段过滤查询（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单数据支持按字段过滤查询1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单数据支持按字段过滤查询1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单数据支持按字段过滤查询2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单数据支持按字段过滤查询2.png)
 
 ### 2.7 数据填报的表单数据支持一键清空（XPack）
 
@@ -211,11 +211,11 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 一键清空时会弹出删除确认，确认后成功删除数据。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单数据支持一键清空1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单数据支持一键清空1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单数据支持一键清空2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单数据支持一键清空2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据填报的表单数据支持一键清空3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据填报的表单数据支持一键清空3.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 Doris 类型的目标数据源支持忽略 BE 节点设置，并允许配置副本数
@@ -225,16 +225,16 @@ Tab 组件新增标题背景设置项，可自定义内边距、圆角、背景�
 BE 节点设置为可选非必选项，但 BE 副本数必须小于等于 BE 节点数。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数2.png)
 
 ## 4 系统设置
 ### 4.1 新增飞书数据源插件（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件2.png)
 
 :::note
 
@@ -242,7 +242,7 @@ BE 节点设置为可选非必选项，但 BE 副本数必须小于等于 BE 节
 飞书数据源需通过【系统设置】&gt;【平台对接】中的飞书应用进行数据读取。当【平台对接】中的飞书设置无效或被禁用时，飞书数据源将无法使用。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件3.png)
 
 :::note
 
@@ -251,45 +251,45 @@ BE 节点设置为可选非必选项，但 BE 副本数必须小于等于 BE 节
 - 由企业管理员开通多维表格权限，仅提供只读权限。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件4.png)
 
 :::note
 
 - 由普通管理员开通云文档权限，具备编辑权限。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件5.png)
 
 :::note
 
 在使用飞书数据源时，也需要对应的飞书多维表格已对该飞书应用做了相关授权。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件6.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件7.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件7.png)
 
 :::note
 
 飞书数据源的操作方式与 API 数据源类似。访问多维表格的文档地址从 URL 中最后一个 / 与 ? 之间提取 app_token。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件8.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件8.png)
 
 :::note
 
 数据源配置页面输入 app_token ，点击【获取数据表】和【获取视图】，系统将自动加载该多维表格下的数据表和视图。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件9.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件9.png)
 
 :::note
 
 飞书数据源支持定时同步，操作方式与 API 数据源一致，可按需设置定时同步规则。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增飞书数据源插件10.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增飞书数据源插件10.png)
 
 ### 4.2 移动端支持 OIDC、LDAP、CAS、OAuth2 等认证方式登录（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/移动端支持%20OIDC、LDAP、CAS、OAuth2%20等认证方式登录.png" width="400" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/移动端支持%20OIDC、LDAP、CAS、OAuth2%20等认证方式登录.png)

@@ -3,7 +3,6 @@ title: 配置 Excel/CSV 数据
 ---
 
 ## 1 前提条件
-:::tip
 
 在上传 Excel/CSV 数据表之前，请确保以下准备工作已完成，以避免导入失败或数据识别异常：
 
@@ -14,24 +13,19 @@ title: 配置 Excel/CSV 数据
     - 文件首行为字段名（表头），不能为空；
 - 文件大小限制：单个 Excel/CSV 文件建议不超过 50MB。
 
-:::
 
 ## 2 配置数据源链接步骤
-:::tip
 
 以下是将本地 Excel/CSV 文件作为数据源导入的详细流程：
 
-:::
 
-:::tip
 
 步骤一：选择数据源类型。在【新建数据源】页面选择 "本地 Excel/CSV" 作为数据源类型。
 
-:::
 
-![支持的数据源类型](/img/sqlbot/user_manual/datasource/datasource_list.png)
+<img src="/img/sqlbot/user_manual/datasource/datasource_list.png" alt="支持的数据源类型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 支持的数据源类型</div>
 
-:::tip
 
 步骤二：上传文件并填写配置信息。进入【配置信息】页后，完成以下操作：
 
@@ -41,25 +35,23 @@ title: 配置 Excel/CSV 数据
 
 文件上传成功后，将显示文件名与大小信息，可点击“重新上传”更换文件。
 
-:::
 
-![配置Excel](/img/sqlbot/user_manual/datasource/add_excel.png)
+<img src="/img/sqlbot/user_manual/datasource/add_excel.png" alt="配置Excel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 配置 Excel 连接信息</div>
 
-:::tip
 
 步骤三：配置完文件与基本信息后，进入【选择数据表】步骤。
 
 若上传文件中包含多个工作表，下一步将展示可选的工作表列表供选择；若为 CSV 文件，则自动进入字段预览页。
 
-:::
 
-![配置Excel](/img/sqlbot/user_manual/datasource/save_excel.png)
+<img src="/img/sqlbot/user_manual/datasource/save_excel.png" alt="配置Excel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 选择数据表</div>
 
-:::tip
 
 对创建完成的 Excel/CSV 数据源对可直接开启智能问数。
 
-:::
 
-![配置Excel](/img/sqlbot/user_manual/datasource/question_excel.png)
+<img src="/img/sqlbot/user_manual/datasource/question_excel.png" alt="配置Excel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 开启智能问数</div>
 

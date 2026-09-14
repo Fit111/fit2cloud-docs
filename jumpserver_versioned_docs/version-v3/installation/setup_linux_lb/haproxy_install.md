@@ -4,34 +4,27 @@ title: 部署 HAProxy 服务
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - HAProxy 服务器信息如下: 
 
 ```sh 
 192.168.100.100
 ```
-:::
     
 ### 1.2 安装依赖
-:::note
 
 ```sh
 yum -y install epel-release
 ```
-:::
 
 ## 2 安装配置 HAProxy
 ### 2.1 安装 HAProxy
-:::note
 
 ```sh
 yum install -y haproxy
 ```
-:::
 
 ### 2.2 配置 HAProxy
-:::note
 
 ```sh
 # 打开 HAProxy 的配置文件
@@ -184,27 +177,21 @@ listen jms-magnus
     server 192.168.100.23 192.168.100.23:30000 weight 1 check inter 2s rise 2 fall 3 send-proxy
     server 192.168.100.24 192.168.100.24:30000 weight 1 check inter 2s rise 2 fall 3 send-proxy
 ```
-:::
 
 ### 2.3 配置 SELinux
-:::note
 
 ```sh
 setsebool -P haproxy_connect_any 1
 ```
-:::
 
 ### 2.4 启动 HAProxy
-:::note
 
 ```sh
 systemctl enable haproxy
 systemctl start haproxy
 ```
-:::
 
 ## 3 配置防火墙
-:::note
 
 ```sh
 firewall-cmd --permanent --zone=public --add-port=80/tcp
@@ -214,4 +201,3 @@ firewall-cmd --permanent --zone=public --add-port=33060/tcp
 firewall-cmd --permanent --zone=public --add-port=33061/tcp
 firewall-cmd --reload
 ```
-:::

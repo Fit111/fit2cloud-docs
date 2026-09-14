@@ -2,16 +2,13 @@
 title: 成员管理
 ---
 
-:::tip
 
 用于管理当前工作空间下的使用成员，包括添加、移除、搜索、批量操作等。
 
 每个用户可加入多个工作空间，但每个成员在不同空间下的访问权限是独立管理的。
 
-:::
 
 ## 1 成员概览
-:::tip
 
 【成员管理】页面中，展示了当前工作空间下的所有成员列表，包含：
 
@@ -21,11 +18,10 @@ title: 成员管理
 - 邮箱信息
 - 角色（管理员 / 普通成员）
 
-:::
 
-![成员列表](/img/sqlbot/user_manual/setting/menmber_list.png)
+<img src="/img/sqlbot/user_manual/setting/menmber_list.png" alt="成员列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 成员列表</div>
 
-:::tip
 
 在顶部搜索框中输入关键词，支持按以下字段模糊搜索成员：
 
@@ -35,12 +31,11 @@ title: 成员管理
 
 支持拼音首字母、模糊匹配、大小写不敏感搜索。
 
-:::
 
-![成员搜索](/img/sqlbot/user_manual/setting/member_search.png)
+<img src="/img/sqlbot/user_manual/setting/member_search.png" alt="成员搜索" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 成员搜索</div>
 
 ## 2 添加成员
-:::tip
 
 工作管理员/管理员可执行成员添加操作。
 
@@ -53,15 +48,15 @@ title: 成员管理
 
 添加成功后，用户即可访问当前工作空间资源（如智能问数、数据源、仪表板）。
 
-:::
 
-![添加成员](/img/sqlbot/user_manual/setting/add_member.png)
+<img src="/img/sqlbot/user_manual/setting/add_member.png" alt="添加成员" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加成员</div>
 
-![添加成功](/img/sqlbot/user_manual/setting/add_menber_success.png)
+<img src="/img/sqlbot/user_manual/setting/add_menber_success.png" alt="添加成功" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 添加成功</div>
 
 ## 3 移除成员
 
-:::tip
 
 工作管理员/管理员可移除不再需要访问权限的成员，管理员不可移除其他管理员。
 
@@ -70,8 +65,9 @@ title: 成员管理
 
 成员被移除后，立即失去该工作空间的访问权限。该成员账号仍存在，不影响其在其他工作空间的使用。
 
-:::
 
-![删除成员](/img/sqlbot/user_manual/setting/delete_member.png)
+<img src="/img/sqlbot/user_manual/setting/delete_member.png" alt="删除成员" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 删除成员</div>
 
-![确认删除](/img/sqlbot/user_manual/setting/delete_confirm.png)
+<img src="/img/sqlbot/user_manual/setting/delete_confirm.png" alt="确认删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 确认删除</div>

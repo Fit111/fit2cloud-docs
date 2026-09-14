@@ -10,24 +10,18 @@ title: 数据库迁移
 :::
 
 ## 1 数据库要求
-:::note
 
 - 针对 MySQL/MariaDB 和 Redis 的版本要求如下：
-:::
   
-:::note
 
 | DB      | Version | Cache | Version |
 | :------ | :------ | :---- | :------ |
 | MySQL   | &gt;= 5.7  | Redis | &gt;= 6.0  |
 | MariaDB | &gt;= 10.6 |  -    |   -     |
-:::
 
 ## 2 操作过程
-:::note[备份数据库]
 
 ### 手动部署
-:::
 
 ```sh
 cd /opt/koko
@@ -128,7 +122,6 @@ cd /opt/jumpserver-installer-v3.10.21
 # 如果是 gz 格式的需要先解压: gunzip /opt/jumpserver/db_backup/jumpserver-2021-01-22_19:28:24.sql.gz
 mv /opt/jumpserver/db_backup/jumpserver-2021-01-22_19:28:24.sql /opt/jumpserver.sql
 ```
-:::note[修改数据库字符集]
 
 ```sh
 if grep -q 'COLLATE=utf8_bin' /opt/jumpserver.sql; then
@@ -139,15 +132,12 @@ else
     echo "备份数据库字符集正确";
 fi
 ```
-:::
 
-:::note[迁移到新服务器]
 
 - 将导出的 /opt/jumpserver.sql 拷贝要新的服务器上面。
 - 下面以迁移到其他 CentOS7 服务器为例，实际操作过程中请自行替换对应的命令。
 
 ### 迁移到 MariaDB 10.6
-:::
 
 ```sh
 vi /etc/yum.repos.d/MariaDB.repo
@@ -271,7 +261,6 @@ exit
 ```
     - 启动 jms_core 看 jumpserver.log 是否有报错。
 
-:::note[启动报错 Cannot add foreign key constraint]
 
 ```sh
 if grep -q 'COLLATE=utf8_bin' /opt/jumpserver.sql; then
@@ -287,4 +276,3 @@ drop database jumpserver;
 create database jumpserver default charset 'utf8';
 source /opt/jumpserver.sql;
 ```
-:::

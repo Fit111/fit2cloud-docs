@@ -2,7 +2,6 @@
 title: Linux SSH
 ---
 
-:::note[资产要求]
 
 - 资产必须部署 openssh-server。
 - 防火墙 ssh 端口必须开放给 JumpServer 所有服务器访问。
@@ -11,4 +10,3 @@ title: Linux SSH
 ```vim
 UseDNS no
 ```
-:::

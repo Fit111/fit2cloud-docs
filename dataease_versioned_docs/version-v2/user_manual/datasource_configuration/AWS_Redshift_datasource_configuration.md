@@ -25,21 +25,21 @@ title: 配置 AWS Redshift 数据源
 步骤二：按照以下步骤，选择 AWS Redshift 图标。
 :::
 
-<img alt="AWS Redshift" src="/img/dataease-v2/datasource_configuration/选择AWSRedshift.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![AWS Redshift](/img/dataease-v2/datasource_configuration/选择AWSRedshift.png)
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="AWS Redshift" src="/img/dataease-v2/datasource_configuration/AWS链接信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![AWS Redshift](/img/dataease-v2/datasource_configuration/AWS链接信息.png)
 
 :::note
 
 步骤四：获取 Schema。
 :::
 
-<img alt="AWS Redshift" src="/img/dataease-v2/datasource_configuration/AWS获取Schema.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![AWS Redshift](/img/dataease-v2/datasource_configuration/AWS获取Schema.png)
 
 :::note
 
@@ -64,4 +64,4 @@ title: 配置 AWS Redshift 数据源
 步骤五：数据源检验，校验成功后如下图所示，点击保存即可。
 :::
 
-<img alt="AWS Redshift" src="/img/dataease-v2/datasource_configuration/AWS校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![AWS Redshift](/img/dataease-v2/datasource_configuration/AWS校验成功.png)

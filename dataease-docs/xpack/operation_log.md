@@ -12,13 +12,18 @@ title: 操作日志
 - **其他用户**（含组织管理员）：仅可查看自己的操作日志，包括该用户所在各组织下的操作记录。
 :::
 
-<img alt="操作日志" src="/img/dataease/newimg/xpack/操作日志.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志](/img/dataease/newimg/xpack/操作日志.png)
+
+图 1  操作日志
 
 ## 2 查看操作日志
 
 :::note
 
 进入【工具箱】→【操作日志】，即可查看日志列表。表格列包括：
+:::
+
+表 1  查看操作日志
 
 | 列名 | 说明 |
 | --- | --- |
@@ -28,9 +33,10 @@ title: 操作日志
 | 操作用户 | 执行操作的用户 |
 | IP 地址 | 操作来源 IP |
 | 操作时间 | 操作发生时间 |
-:::
 
-<img alt="操作日志入口" src="/img/dataease/newimg/操作日志入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志入口](/img/dataease/newimg/操作日志入口.png)
+
+图 2  操作日志入口
 
 ## 3 筛选日志
 
@@ -46,9 +52,13 @@ title: 操作日志
 **提示：** 定时任务和消息通知中已有的相关记录，操作日志里不再重复记录。
 :::
 
-<img alt="操作日志筛选" src="/img/dataease/newimg/操作日志1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![操作日志筛选](/img/dataease/newimg/操作日志1.png)
 
-<img alt="操作日志筛选" src="/img/dataease/newimg/操作日志2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 3  操作日志
+
+![操作日志筛选](/img/dataease/newimg/操作日志2.png)
+
+图 4  操作日志
 
 ## 4 导出操作日志
 
@@ -57,4 +67,6 @@ title: 操作日志
 点击页面【导出】按钮，可将当前筛选结果导出为 Excel 文件，便于离线留存或二次分析。
 :::
 
-<img alt="导出操作日志" src="/img/dataease/system_management/导出操作日志.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![导出操作日志](/img/dataease/system_management/导出操作日志.png)
+
+图 5  导出操作日志

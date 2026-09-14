@@ -4,7 +4,6 @@ title: 对接Kimi
 
 ## 1 添加模型
 
-:::note
 
 添加 Kimi 模型之前，需要先在 [Moonshot AI 开放平台](https://platform.moonshot.cn/console/account) 中注册并创建 API Key。
 
@@ -15,15 +14,16 @@ title: 对接Kimi
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。。   
 * API 域名：https://api.moonshot.cn/v1  
 * API Key：在 Kimi 账户中心的 API Key 管理中创建和查看。
-:::
 
-![kimi APIkey](/img/maxkb/model/kimi_apikey.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/kimi_apikey.png" alt="图 1  Kimi API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Kimi API Key</div>
 
 ## 2 配置样例
 
-:::note
 
 kimi-大语言模型配置样例图示：
-:::
 
-<img alt="kimi 模型" src="/img/maxkb/model/kimi_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/kimi_llm.png" alt="图 2  kimi 大语言模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  kimi 大语言模型 配置样例图</div>

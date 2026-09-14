@@ -4,53 +4,42 @@ title: 部署 MySQL 服务
 
 ## 1 准备工作
 ### 1.1 环境信息
-:::note
 
 - MySQL 服务器信息如下: 
 
 ```sh 
 192.168.100.11
 ```
-:::
 
 ### 1.2 设置 Repo
-:::note
 
 ```sh
 yum -y localinstall http://mirrors.ustc.edu.cn/mysql-repo/mysql57-community-release-el7.rpm
 ```
-:::
 
 ## 2 安装配置 MySQL
 ### 2.1 Yum 方式安装 MySQL
-:::note
 
 ```sh
 yum install -y mysql-community-server
 ```
-:::
 
 ### 2.1 配置 MySQL
-:::note
 
 ```sh
 if [ ! "$(cat /usr/bin/mysqld_pre_systemd | grep -v ^\# | grep initialize-insecure )" ]; then
     sed -i "s@--initialize @--initialize-insecure @g" /usr/bin/mysqld_pre_systemd
 fi
 ```
-:::
 
 ### 2.2 启动 MySQL
-:::note
 
 ```sh
 systemctl enable mysqld
 systemctl start mysqld
 ```
-:::
 
 ### 2.3 配置数据库授权
-:::note
 
 ```sh
 mysql -uroot
@@ -86,13 +75,10 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> exit
 Bye
 ```
-:::
 
 ## 3 配置防火墙
-:::note
 
 ```sh
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.100.0/24" port protocol="tcp" port="3306" accept"
 firewall-cmd --reload
 ```
-:::

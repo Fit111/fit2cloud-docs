@@ -4,7 +4,6 @@ title: 对接本地大模型
 
 ## 1 下载模型
 
-:::note
 
 **前提条件：** 将模型下载到服务器，并且挂在到 MaxKB 容器中,以向量模型为例详细说明如下。
 
@@ -19,10 +18,8 @@ https://huggingface.co/models?other=text-embedding
 -v /opt/maxkb/model/local_embedding:/opt/maxkb/model/local_embedding
 # 说明： v 模型所在目录:MaxKB 容器内目录
 ```
-:::
 ## 2 添加模型
 
-:::note
 
 在模型管理中，点击供应商【本地模型】，直接进入下一步填写本地模型的表单。  
 
@@ -30,13 +27,11 @@ https://huggingface.co/models?other=text-embedding
 * 模型类型：向量模型/重排模型。   
 * 基础模型：模型在 MaxKB 容器下的绝对路径。     
 * 模型目录：模型的目录（基础模型为名称时，该目录生效，基础模型若有绝对路径，则该参数不生效，建议与基础模型填写一致）。
-:::
 
 ## 3 配置样例
 
-:::note
 
 本地模型-向量模型配置样例图示如下：
-:::
-<img alt="本地向量模型" src="/img/maxkb/model/local_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/local_embed.png" alt="图 1  本地模型 向量模型 配置样例图" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  本地模型 向量模型 配置样例图</div>

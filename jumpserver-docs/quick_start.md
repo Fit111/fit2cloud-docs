@@ -3,36 +3,33 @@ title: 快速入门
 ---
 
 ## 1 安装 JumpServer
-:::note
 
 - 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
 - 参照 [Linux 单机安装部署指南](installation/setup_linux_standalone/offline_install) 来快速部署 JumpServer
-:::
 
-:::note[安装成功后，通过浏览器访问登录 JumpServer]
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
 用户名: admin
 密码: ChangeMe
 ```
-:::
 
 ## 2 资产管理
 ### 2.1 准备工作
-:::note
 
-- 准备两个测试资产和一个数据库来验证功能。
-:::
+[//]: # (- 准备两个测试资产和一个数据库来验证功能。)
 
-:::note
+[//]: # ()
+[//]: # ()
+[//]: # (|   IP 地址     |    主机名       |    端口    | 操作系统         |  管理员用户    |    密码       |)
 
-|   IP 地址     |    主机名       |    端口    | 操作系统         |  管理员用户    |    密码       |
-| ------------ | --------------- | ---------- | ---------------- |--- ---------- |--- ---------- |
-| 172.16.80.11 |    test_ssh01   |     22     |     Centos 7     |      root     |  Test2020.L   |
-| 172.16.80.21 |    test_rdp01   |    3389    |    Windows 10    | administrator |  Test2020.W   |
-| 172.16.80.31 |   test_mysql01  |    3306    |      MySQL 5     |      root     |  Test2020.M   |
-:::
+[//]: # (| ------------ | --------------- | ---------- | ---------------- |--- ---------- |--- ---------- |)
+
+[//]: # (| 172.16.80.11 |    test_ssh01   |     22     |     Centos 7     |      root     |  Test2020.L   |)
+
+[//]: # (| 172.16.80.21 |    test_rdp01   |    3389    |    Windows 10    | administrator |  Test2020.W   |)
+
+[//]: # (| 172.16.80.31 |   test_mysql01  |    3306    |      MySQL 5     |      root     |  Test2020.M   |)
 
 :::warning[注意]
 
@@ -41,11 +38,8 @@ title: 快速入门
 :::
 
 ### 2.2 编辑资产树
-:::note
 
 - 点击页面左侧的 `资产管理` - `资产列表`，在根节点 `Default` 右键新建 `SSH Server` 、 `RDP Server` 、`Database` 三个节点。
-:::
-:::note
 
 - 资产树样式如下：
 
@@ -55,7 +49,6 @@ Default
 └─ RDP Server
 └─ DB Server
 ```
-:::
 
 :::warning[注意]
 
@@ -63,35 +56,34 @@ Default
 :::
 
 ### 2.3 创建资产
-:::note
 
 - 点击页面左侧的 `资产管理` - `资产列表` - `主机` - `创建` 创建一台 Linux 服务器，并在创建资产过程中，创建特权用户，内容就是上面表单的 `管理员用户` 和 `密码`。
 - Windows 资产的创建流程同样如此。
-:::
 
-:::note
 
 - 创建 Linux 资产样式如下：
-:::
 
-:::note
-
-| 名称        | IP/主机      | 资产平台 | 节点          | 协议组    | 账号列表   |
-| ---------- | ------------ | ------- | ------------ | -------  | -------- |
-| test_ssh01 | 172.16.80.11 | Linux   | /Default/SSH Server | ssh 22 | 添加 |
-:::
-
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建 Linux 资产示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'16%', padding:'8px'}}>名称</th><th style={{width:'16%', padding:'8px'}}>IP/主机</th><th style={{width:'16%', padding:'8px'}}>资产平台</th><th style={{width:'22%', padding:'8px'}}>节点</th><th style={{width:'14%', padding:'8px'}}>协议组</th><th style={{width:'16%', padding:'8px'}}>账号列表</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>test_ssh01</td><td style={{padding:'8px'}}>172.16.80.11</td><td style={{padding:'8px'}}>Linux</td><td style={{padding:'8px'}}>/Default/SSH Server</td><td style={{padding:'8px'}}>ssh 22</td><td style={{padding:'8px'}}>添加</td></tr>
+</tbody>
+</table>
 
 - 添加登录资产用户样式如下：
-:::
 
-:::note
-
-| 名称              | 用户名 | 特权用户 | 密文类型     | 密码          |
-| ----------------- | ---- | ------- | ---------- | ---------------- |
-| 172.16.80.11_root | root  | 是 | 密码 |Test2020.L |
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  添加登录资产用户示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'20%', padding:'8px'}}>用户名</th><th style={{width:'20%', padding:'8px'}}>特权用户</th><th style={{width:'20%', padding:'8px'}}>密文类型</th><th style={{width:'20%', padding:'8px'}}>密码</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>172.16.80.11_root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>是</td><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>Test2020.L</td></tr>
+</tbody>
+</table>
 
 :::warning[注意]
 
@@ -104,34 +96,33 @@ Default
 :::
 
 ### 2.4 创建数据库应用
-:::note
 
 - 点击页面左侧的 `资产管理` - `资产列表` - `创建` - `数据库下选择 MySQL 数据库`。
-:::
 
-:::note
 
 - 创建 MySQL 数据库应用样式如下：
-:::
 
-:::note
-
-| 名称         | 地址          | 节点               | 数据库 | 协议组      | 账号列表  |
-| ------------ | ------------ | ------------------ | ----- | ----------- | -------- |
-| test_mysql01 | 172.16.80.31 | /Default/DB Server | test  | mysql:3306  | 添加     |
-:::
-
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  创建 MySQL 数据库应用示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'16%', padding:'8px'}}>名称</th><th style={{width:'16%', padding:'8px'}}>地址</th><th style={{width:'16%', padding:'8px'}}>节点</th><th style={{width:'16%', padding:'8px'}}>数据库</th><th style={{width:'18%', padding:'8px'}}>协议组</th><th style={{width:'18%', padding:'8px'}}>账号列表</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>test_mysql01</td><td style={{padding:'8px'}}>172.16.80.31</td><td style={{padding:'8px'}}>/Default/DB Server</td><td style={{padding:'8px'}}>test</td><td style={{padding:'8px'}}>mysql:3306</td><td style={{padding:'8px'}}>添加</td></tr>
+</tbody>
+</table>
 
 - 添加登录数据库用户样式如下：
-:::
 
-:::note
-
-|        名称       | 用户名 | 特权用户 | 密文类型 |    密码    |
-| ----------------- | ----- | ------ | -------  | ---------- |
-| 172.16.80.23_root | root  | root   | 密码     | Test2020.M |
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  添加登录数据库用户示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'20%', padding:'8px'}}>用户名</th><th style={{width:'20%', padding:'8px'}}>特权用户</th><th style={{width:'20%', padding:'8px'}}>密文类型</th><th style={{width:'20%', padding:'8px'}}>密码</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>172.16.80.23_root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>Test2020.M</td></tr>
+</tbody>
+</table>
 
 :::warning[注意]
 
@@ -139,23 +130,22 @@ Default
 :::
 
 ## 3 创建授权规则
-:::note
 
 - 点击页面左侧的 `权限管理` - `资产授权` - `创建` 创建一个授权。
 - Windows 资产、MySQL 数据库 的授权流程和下述内容相同。
-:::
 
-:::note
 
 - 创建登录授权规则（例如 Linux 资产），样式如下：
-:::
 
-:::note
-
-| 名称             | 用户                 | 用户组 | 资产                     | 节点 | 账号                                  | 动作                  |
-| ---------------- | -------------------- | ----- | ------------------------ | --- | ----------------------------------------- | -------------------- |
-| admin_ssh01 | Administrator(admin) |   -    | test_ssh01(172.16.80.11) |  -   | 所有账号                  | ✓ 全部 |
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 5  创建登录授权规则示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'14%', padding:'8px'}}>名称</th><th style={{width:'14%', padding:'8px'}}>用户</th><th style={{width:'14%', padding:'8px'}}>用户组</th><th style={{width:'14%', padding:'8px'}}>资产</th><th style={{width:'14%', padding:'8px'}}>节点</th><th style={{width:'14%', padding:'8px'}}>账号</th><th style={{width:'14%', padding:'8px'}}>动作</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>admin_ssh01</td><td style={{padding:'8px'}}>Administrator(admin)</td><td style={{padding:'8px'}}>-</td><td style={{padding:'8px'}}>test_ssh01(172.16.80.11)</td><td style={{padding:'8px'}}>-</td><td style={{padding:'8px'}}>所有账号</td><td style={{padding:'8px'}}>✓ 全部</td></tr>
+</tbody>
+</table>
 
 :::warning[注意]
 
@@ -167,10 +157,8 @@ Default
 :::
 
 ## 4 用户登录
-:::note
 
 - 点击页面右上角的 `Web 终端` 进行资产连接。
-:::
 
 :::warning[注意]
 
@@ -178,57 +166,56 @@ Default
 :::
 
 ## 5 系统设置
-:::note
 
 - 点击页面右上角的 `系统设置` 进行配置。
-:::
 
 ### 5.1 基本设置
-:::note
 
-| 名称          | 示例                        | 备注                                         |
-| ------------ | --------------------------- | -------------------------------------------- |
-| 当前站点URL   | `https://demo.jumpserver.org` | 不设置的话，邮件收到的地址为 `http://localhost` |
-| 用户向导URL   |                             | 用户首次登录可以看到此 `超链接`，可以不设置      |
-| 忘记密码URL   |                             | 使用了 LDAP, OPENID 等外部认证系统，可以自定义  |
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 6  基本设置示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'35%', padding:'8px'}}>示例</th><th style={{width:'45%', padding:'8px'}}>备注</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>当前站点URL</td><td style={{padding:'8px'}}><code>https://demo.jumpserver.org</code></td><td style={{padding:'8px'}}>不设置的话，邮件收到的地址为 <code>http://localhost</code></td></tr>
+<tr><td style={{padding:'8px'}}>用户向导URL</td><td style={{padding:'8px'}}></td><td style={{padding:'8px'}}>用户首次登录可以看到此 <code>超链接</code>，可以不设置</td></tr>
+<tr><td style={{padding:'8px'}}>忘记密码URL</td><td style={{padding:'8px'}}></td><td style={{padding:'8px'}}>使用了 LDAP, OPENID 等外部认证系统，可以自定义</td></tr>
+</tbody>
+</table>
 
 ### 5.2 邮件设置
-:::note
 
 - 我们支持通过`SMTP`或`EXCHANGE`方式来对接邮件配置。
-:::
 
-### SMTP
-
-:::note
-
-| 名称 | 示例 | 备注 |
-| ---------- | ---------------- | ---------------------------------- |
-| SMTP主机   | smtp.qq.com      | 服务商提供的 smtp 服务器             |
-| SMTP端口   | 25               | 通常是 `25`                         |
-| SMTP账号   | **********@qq.com | 通常是 `user@domain.com`            |
-| SMTP密码   | **************** | 每次 `测试连接` 都需要重新输入密码    |
-| 使用SSL    | [ ]              | 如果端口使用 `465`，必须勾选此项      |
-| 使用TLS    | [ ]              | 如果端口使用 `587`，必须勾选此项      |
-| 发件人     | **********@qq.com | `测试连接` 必须要输入                |
-| 主题前缀   | [JMS]            | 邮件的标题，收到的邮件是 `[JMS]` 开头 |
-| 测试收件人 | **********@qq.com | 测试连接必填                         |
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 7  SMTP 配置示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'35%', padding:'8px'}}>示例</th><th style={{width:'45%', padding:'8px'}}>备注</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>SMTP主机</td><td style={{padding:'8px'}}>smtp.qq.com</td><td style={{padding:'8px'}}>服务商提供的 smtp 服务器</td></tr>
+<tr><td style={{padding:'8px'}}>SMTP端口</td><td style={{padding:'8px'}}>25</td><td style={{padding:'8px'}}>通常是 <code>25</code></td></tr>
+<tr><td style={{padding:'8px'}}>SMTP账号</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>通常是 <code>user@domain.com</code></td></tr>
+<tr><td style={{padding:'8px'}}>SMTP密码</td><td style={{padding:'8px'}}>{'****************'}</td><td style={{padding:'8px'}}>每次 <code>测试连接</code> 都需要重新输入密码</td></tr>
+<tr><td style={{padding:'8px'}}>使用SSL</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>465</code>，必须勾选此项</td></tr>
+<tr><td style={{padding:'8px'}}>使用TLS</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>587</code>，必须勾选此项</td></tr>
+<tr><td style={{padding:'8px'}}>发件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}><code>测试连接</code> 必须要输入</td></tr>
+<tr><td style={{padding:'8px'}}>主题前缀</td><td style={{padding:'8px'}}>[JMS]</td><td style={{padding:'8px'}}>邮件的标题，收到的邮件是 <code>[JMS]</code> 开头</td></tr>
+<tr><td style={{padding:'8px'}}>测试收件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>测试连接必填</td></tr>
+</tbody>
+</table>
 
 :::warning[注意]
 
 - 不可以同时勾选 `使用 SSL` 和 `使用 TLS`。
 :::
 ## 6 常用功能操作
-:::note
 
 - **[通过 SFTP 上传下载][通过 SFTP 上传下载]**
 - **[Windows 上传下载][Windows 上传下载]**
 - **[限制 IP 登录][限制 IP 登录]**
 - **[纳管数据库应用][纳管数据库应用]**
 - **[Redis 数据库纳管][Redis 数据库纳管]**
-:::
 
 [通过 SFTP 上传下载]: https://kb.fit2cloud.com/?p=115
 [Windows 上传下载]: https://kb.fit2cloud.com/?p=87

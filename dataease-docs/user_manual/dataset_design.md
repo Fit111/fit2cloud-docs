@@ -9,7 +9,9 @@ title: 数据集功能设计
 点击左侧数据表，右侧默认展示预览数据。切换 Tab 页,可切换至结构预览、行权限、列权限(行列权限为 X-Pack 功能)。
 :::
 
-<img alt="数据集界面" src="/img/dataease/dataset_configuration/数据集界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>  
+![数据集界面](/img/dataease/dataset_configuration/数据集界面.png)
+
+图 1  数据集界面
 
 ## 2 数据集编辑
 
@@ -17,19 +19,32 @@ title: 数据集功能设计
 
 点击右上角【编辑】按钮。进入数据编辑界面。切换到【批量管理】可对数据集字段进行批量操作。
 :::
-<img alt="数据集编辑界面" src="/img/dataease/dataset_configuration/数据集编辑界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集编辑界面](/img/dataease/dataset_configuration/数据集编辑界面.png)
+
+图 2  数据集编辑界面
 
 :::note
 
 勾选排序后，数据会进行升序排序。
 :::
-<img alt="数据集排序" src="/img/dataease/quick_start/数据集排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集排序](/img/dataease/quick_start/数据集排序.png)
+
+图 3  数据集排序
+
 :::note
 
 在数据集预览界面导出数据集后依旧会对导出的数据进行升序排列。
 :::
-<img alt="数据集排序2" src="/img/dataease/quick_start/数据集排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="数据集排序2" src="/img/dataease/quick_start/数据集排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集排序2](/img/dataease/quick_start/数据集排序1.png)
+
+图 4  数据集排序
+
+![数据集排序2](/img/dataease/quick_start/数据集排序2.png)
+
+图 5  数据集排序
 
 ## 3 字段管理
 
@@ -39,7 +54,10 @@ title: 数据集功能设计
 
 如下图所示，切换到【批量管理】，可修改字段名。
 :::
-<img alt="数据集字段重命名" src="/img/dataease/dataset_configuration/数据集字段重命名.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集字段重命名](/img/dataease/dataset_configuration/数据集字段重命名.png)
+
+图 6  数据集字段重命名
 
 ### 3.2 字段选中
 
@@ -47,7 +65,10 @@ title: 数据集功能设计
 
 字段显示支持全选/全不选，也可单独勾选。
 :::
-<img alt="数据集字段选中" src="/img/dataease/dataset_configuration/数据集字段选中.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集字段选中](/img/dataease/dataset_configuration/数据集字段选中.png)
+
+图 7  数据集字段选中
 
 ### 3.3 更换字段类型
 
@@ -55,7 +76,10 @@ title: 数据集功能设计
 
 如下图所示，支持更换字段类型。可全选后统一进行修改。
 :::
-<img alt="数据集字段更改类型" src="/img/dataease/dataset_configuration/数据集字段更改类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据集字段更改类型](/img/dataease/dataset_configuration/数据集字段更改类型.png)
+
+图 8  数据集字段更改类型
 
 ### 3.4 日期字段解析
 
@@ -65,26 +89,37 @@ title: 数据集功能设计
 可将该文本字段改为时间类型，并选择 Y/m/d 格式（具体格式看数据源），则日期类查询组件可以过滤出来这些数据。
 :::
 
-<img alt="字段时间解析" src="/img/dataease/dataset_configuration/字段时间解析.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![字段时间解析](/img/dataease/dataset_configuration/字段时间解析.png)
+
+图 9  字段时间解析
 
 ### 3.5 URL 字段使用
+
 :::note
 
 数据集字段类型支持“URL”类型。URL 字段数据在明细表中会自动展示为图片。
 :::
 
-<img alt="字段时间解析" src="/img/dataease/dataset_configuration/支持图片url.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![字段时间解析](/img/dataease/dataset_configuration/支持图片url.png)
 
-<img alt="更新1" src="/img/dataease/newimg/明细表支持显示图片2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 10  图片url
+
+![明细表显示图片](/img/dataease/newimg/明细表支持显示图片2.png)
+
+图 11  明细表显示图片
 
 :::note
 
 图片展示高度根据所设置单元格行高自适应。鼠标悬浮在单元格上，会出现图片原始链接。鼠标点击单元格图片，图片会放大展示。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.7%20明细表支持显示图片3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![明细表支持显示图片3](/img/dataease/newimg/明细表支持显示图片3.png)
 
-<img alt="更新1" src="/img/dataease/newimg/1.7%20明细表支持显示图片4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 12  明细表显示图片
+
+![明细表支持显示图片4](/img/dataease/newimg/明细表支持显示图片4.png)
+
+图 13  明细表显示图片
 
 ### 3.6 更换指标维度
 
@@ -92,7 +127,10 @@ title: 数据集功能设计
 
 如下图所示，支持将字段转换为维度或指标。
 :::
-<img alt="切换维度" src="/img/dataease/dataset_configuration/切换维度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![切换维度](/img/dataease/dataset_configuration/切换维度.png)
+
+图 14  切换维度
 
 ### 3.7 新建计算字段
 
@@ -101,8 +139,10 @@ title: 数据集功能设计
 点击【新建计算字段】按钮，弹出新建计算字段页面，在此页面输入字段名，字段表达式，通过引用函数，生成新的数据集字段。
 :::
 
-<img alt="新建计算字段" src="/img/dataease/dataset_configuration/新建计算字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
- 
+![新建计算字段](/img/dataease/dataset_configuration/新建计算字段.png)
+
+图 15  新建计算字段
+
 :::note
 
 - 【序号 1】在此输入新建字段的名称；
@@ -113,7 +153,9 @@ title: 数据集功能设计
 - 【序号 6】函数栏，使用的函数支持对应数据集的数据库函数。
 :::
 
-<img alt="新建计算字段设计" src="/img/dataease/dataset_configuration/新建计算字段设计.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新建计算字段设计](/img/dataease/dataset_configuration/新建计算字段设计.png)
+
+图 16  新建计算字段设计
 
 :::note
 
@@ -129,7 +171,9 @@ title: 数据集功能设计
 在计算字段编辑页面新增校验按钮，用户可在保存前对计算字段的语法有效性进行校验，确保配置正确。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/计算字段编辑页面支持语法校验功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![校验成功](/img/dataease/newimg/计算字段编辑页面支持语法校验功能1.png)
+
+图 17  校验成功
 
 ### 3.8 字段分组功能
 
@@ -138,7 +182,9 @@ title: 数据集功能设计
 【分组字段】功能支持用户通过可视化方式对字段值进行分类，无需编写 SQL 语法或使用函数，即可完成数据分组。例如，可将“广东省”归入“华南”区域，实现灵活的数据分类与分析。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增数据集分组字段功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![字段分组功能](/img/dataease/newimg/新增数据集分组字段功能1.png)
+
+图 18  字段分组功能
 
 :::note
 
@@ -149,7 +195,9 @@ title: 数据集功能设计
 创建分组字段后，可直接在数据预览界面查看分组结果，分组字段会新增至维度列表中。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/新增数据集分组字段功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![字段分组功能](/img/dataease/newimg/新增数据集分组字段功能2.png)
+
+图 19  字段分组功能
 
 ### 3.9 复制字段
 
@@ -158,7 +206,10 @@ title: 数据集功能设计
 支持对字段进行【复制】操作，复制后的字段相当于新建一个计算字段，复制后的字段，字段名：原字段名_Copy。  
 **注意：** 仅数据集字段管理的字段支持复制。
 :::
-<img alt="字段复制" src="/img/dataease/dataset_configuration/字段复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![字段复制](/img/dataease/dataset_configuration/字段复制.png)
+
+图 20  字段复制
 
 ### 3.10 删除字段
 
@@ -167,7 +218,9 @@ title: 数据集功能设计
 支持对字段进行【删除】操作。
 :::
 
-<img alt="字段删除" src="/img/dataease/dataset_configuration/字段删除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![字段删除](/img/dataease/dataset_configuration/字段删除.png)
+
+图 21  字段删除
 
 ## 4 数据关联
 
@@ -177,7 +230,10 @@ title: 数据集功能设计
 
 如下图，在关联数据集设置页面，选择左连接，即 LEFT JOIN，连接取左表所有数据记录，当关联字段中匹配到右表的字段，则检索出右表的数据记录，否则以 null 显示。
 :::
-<img alt="左连接" src="/img/dataease/dataset_configuration/左连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![左连接](/img/dataease/dataset_configuration/左连接.png)
+
+图 22  左连接
 
 ### 4.2 右连接
 
@@ -186,7 +242,9 @@ title: 数据集功能设计
 如下图，在关联数据集设置页面，选择右连接，即 RIGHT JOIN，连接取右表所有数据记录，当关联字段中匹配到左表的字段，则检索出左表的数据记录，否则以 null 显示。
 :::
 
-<img alt="右连接" src="/img/dataease/dataset_configuration/右连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/> 
+![右连接](/img/dataease/dataset_configuration/右连接.png)
+
+图 23  右连接
 
 ### 4.3 内连接
 
@@ -194,7 +252,10 @@ title: 数据集功能设计
 
 如下图，在关联数据集设置页面，选择内连接，即 INNER JOIN，当左表和右表的数据记录存在匹配时，数据记录才被检索出来。
 :::
-<img alt="内连接" src="/img/dataease/dataset_configuration/内连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![内连接](/img/dataease/dataset_configuration/内连接.png)
+
+图 24  内连接
 
 ### 4.4 全连接
 
@@ -205,4 +266,7 @@ title: 数据集功能设计
 - MySQL，API，Excel 数据源目前不支持全连接；
 - 由于交互问题，校验放在后端执行，若不支持全连接，会返回提示。
 :::
-<img alt="更新1" src="/img/dataease/dataset_configuration/全连接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![校验成功](/img/dataease/dataset_configuration/全连接.png)
+
+图 25  校验成功

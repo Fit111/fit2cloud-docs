@@ -9,7 +9,7 @@ title: 1Panel 安装指南
 关于 1Panel 的安装部署与基础功能介绍，请参考 [1Panel 官方文档](https://1panel.cn/docs/installation/online_installation/)。在完成了 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，如下界面。  
 **注意：暂不支持使用 1Panel 部署企业版/嵌入式版。**
 :::
-<img alt="安装1Panel" src="/img/dataease-v2/installation/1panel安装1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![安装1Panel](/img/dataease-v2/installation/1panel安装1.png)
 
 ## 2 安装 MySQL 数据库
 
@@ -18,9 +18,9 @@ title: 1Panel 安装指南
 在安装 DataEase 之前，需要先在 1Panel 上安装好所需的软件 MySQL。在应用商店中选择 MySQL 点击安装，选择 8.2.0 版本（这里必须选择 8.x.x 版本）。
 :::
 
-<img alt="安装MYSQL1" src="/img/dataease-v2/installation/1panel安装2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![安装MYSQL1](/img/dataease-v2/installation/1panel安装2.png)
 
-<img alt="安装MYSQL2" src="/img/dataease-v2/installation/mysql参数设置.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![安装MYSQL2](/img/dataease-v2/installation/mysql参数设置.PNG)
 
 :::note
 
@@ -38,7 +38,7 @@ title: 1Panel 安装指南
 
 点击安装完成后，页面自动跳转到已安装应用列表，等待安装的 MySQL 应用状态变为已启动。
 :::
-<img alt="MYSQL状态" src="/img/dataease-v2/installation/mysql安装完成.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![MYSQL状态](/img/dataease-v2/installation/mysql安装完成.png)
 
 ## 3 安装 DataEase
 
@@ -46,7 +46,7 @@ title: 1Panel 安装指南
 
 安装好 MySQL 后，进入应用商店应用列表，找到 DataEase 应用进行安装。在应用详情页选择 v2.0 最新的 DataEase 版本进行安装。
 :::
-<img alt="安装DataEase" src="/img/dataease-v2/installation/找到v2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![安装DataEase](/img/dataease-v2/installation/找到v2.png)
 
 :::note
 
@@ -66,7 +66,7 @@ title: 1Panel 安装指南
 * 端口外部访问：DataEase 应用可以使用 IP:PORT 进行访问（DataEase 应用必须打开外部端口访问）。
 :::
 
-<img alt="DataEase参数设置" src="/img/dataease-v2/installation/de参数设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![DataEase参数设置](/img/dataease-v2/installation/de参数设置.png)
 
 :::note
 
@@ -89,5 +89,5 @@ title: 1Panel 安装指南
 第一次登录需修改 admin 用户的密码，修改密码后，重新登录系统即可使用 DataEase。
 :::
 
-<img alt="访问DataEase1" src="/img/dataease-v2/installation/访问v2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![访问DataEase1](/img/dataease-v2/installation/访问v2.png)
 

@@ -16,6 +16,8 @@ v3 元数据库除默认内置 MySQL 外，还支持 GreatSQL、达梦（DM）�
 安装器默认拉起内置 MySQL 容器。改用外部库时，可在运行 `install.sh` 时交互选择，或预先编辑 `install.conf`：
 :::
 
+表 1  支持的元数据库
+
 | `DE_DB_TYPE` | 说明 |
 | --- | --- |
 | `mysql` | MySQL（默认，含内置容器场景） |

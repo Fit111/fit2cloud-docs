@@ -3,6 +3,7 @@ title: 查询组件概览
 ---
 
 ## 1 添加查询组件
+
 :::note
 
 添加查询组件至仪表板：
@@ -13,34 +14,45 @@ title: 查询组件概览
 - 【序号 4】：选择数据集，并将数据集的字段拖拽至查询组件中。
 :::
 
-<img alt="查询组件_标题设置" src="/img/dataease/dashboard_generation/2.0查询组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_标题设置](/img/dataease/dashboard_generation/查询组件.png)
+
+图 1  查询组件
 
 :::note
 
 如下图所示，选择数据集，并将数据集中的区域字段拖拽至查询组件中。
 :::
 
-<img alt="查询组件_位置调整" src="/img/dataease/dashboard_generation/2.0过滤组件拖拽字段.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件拖拽字段.png)
+
+图 2  过滤组件拖拽字段
 
 :::note
 
 支持在【展示按钮】处去掉【查询】的勾选，在不展示【查询】按钮的情况下，选择完下拉选项后会立即触发数据查询。
 :::
 
-<img alt="更新1" src="/img/dataease/dashboard_generation/查询组件支持无查询按钮直接查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件无查询按钮直接查询](/img/dataease/dashboard_generation/查询组件支持无查询按钮直接查询.png)
+
+图 3  查询组件无查询按钮直接查询
 
 :::note
 
 如下图所示，点击查询组件的编辑按钮，设置查询条件。
 :::
 
-<img alt="查询组件_位置调整" src="/img/dataease/dashboard_generation/2.0过滤组件编辑.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件编辑.png)
+
+图 4  过滤组件编辑
+
 :::note
 
 查询组件支持下拉选项设置为必填。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/v2-2-7-1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加查询组件](/img/dataease/newimg/添加查询组件.png)
+
+图 5  添加查询组件
 
 :::note
 
@@ -53,23 +65,38 @@ title: 查询组件概览
 -  选项类型支持【单选】和【多选】。
 -  可以为过滤条件设置默认值。
 :::
+
 :::note
 
 当绑定参数时，选项值来源不能为自动，否则选项值为空。因此当绑定了图表的参数时，将选项值来源的「自动」选项置灰，为不可用状态。
 :::
-<img alt="更新1" src="/img/dataease/newimg/查询组件绑定参数的方式优化.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/查询组件绑定参数的方式优化2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![查询组件绑定参数的方式优化](/img/dataease/newimg/查询组件绑定参数的方式优化.png)
+
+图 6  查询组件绑定参数的方式优化
+
+![查询组件绑定参数的方式优化](/img/dataease/newimg/查询组件绑定参数的方式优化2.png)
+
+图 7  查询组件绑定参数的方式优化
 
 ## 2 使用查询组件
+
 :::note
 
 进行选项选择，并点击【查询】后，被关联的图表中只显示选中的区域的数据。如果是多选，在勾选完点击【确认】后，再点击【查询】。
 :::
-<img alt="查询组件_位置调整" src="/img/dataease/dashboard_generation/2.0进行查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-<img alt="查询组件_位置调整" src="/img/dataease/dashboard_generation/2.0过滤组件选项多选确认.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_位置调整](/img/dataease/dashboard_generation/进行查询.png)
 
-<img alt="查询组件_位置调整" src="/img/dataease/dashboard_generation/2.0过滤组件多选确定.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 8  进行查询
+
+![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件选项多选确认.png)
+
+图 9  过滤组件选项多选确认
+
+![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件多选确定.png)
+
+图 10  过滤组件多选确定
 
 :::note
 
@@ -80,8 +107,13 @@ title: 查询组件概览
 - 支持跨源级联，目前初版仅支持 2 级级联。
 :::
 
-<img alt="更新1" src="/img/dataease/dashboard_generation/查询组件支持级联设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/dashboard_generation/查询组件支持级联设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件级联设置](/img/dataease/dashboard_generation/查询组件支持级联设置1.png)
+
+图 11  查询组件级联设置
+
+![查询组件级联设置](/img/dataease/dashboard_generation/查询组件支持级联设置2.png)
+
+图 12  查询组件级联设置
 
 ## 3 组件样式设置
 
@@ -92,7 +124,10 @@ title: 查询组件概览
 - 仪表板主画布中，可设置查询组件位置为【置顶】或【默认】；同一仪表板仅允许一个置顶查询组件。
 - 支持组件背景设置，包括内边距、圆角、背景颜色、背景图片等。
 :::
-<img alt="查询组件_输入框" src="/img/dataease/dashboard_generation/2.0组件样式设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置.png)
+
+图 13  组件样式设置
 
 :::note
 
@@ -101,7 +136,10 @@ title: 查询组件概览
 - 支持统一设置查询条件间距、查询条件高度（高度最小 32）。
 - 开启【自定义条件样式】后，可设置输入文字颜色与字号；并可按单个查询条件分别设置提示词、查询条件宽度（宽度最小 100）。
 :::
-<img alt="查询组件_输入框" src="/img/dataease/dashboard_generation/组件样式设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置1.png)
+
+图 14  组件样式设置
 
 :::note
 
@@ -111,7 +149,9 @@ title: 查询组件概览
 - 支持设置标签文字颜色、字号、加粗、斜体，以及名称与选框间距。
 :::
 
-<img alt="查询组件_输入框" src="/img/dataease/dashboard_generation/组件样式设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置2.png)
+
+图 15  组件样式设置
 
 :::note
 
@@ -121,16 +161,24 @@ title: 查询组件概览
 - 支持设置按钮颜色，以及按钮文字颜色、字号、加粗、斜体。
 :::
 
-<img alt="查询组件_输入框" src="/img/dataease/dashboard_generation/组件样式设置3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置3.png)
+
+图 16  组件样式设置
 
 :::note
 
 仪表板查询组件支持顶部冻结，当选择【置顶】时，查询组件在仪表板滚动至其触及画布上边界时会自动固定在顶部。    
 **注意：每个仪表板仅支持一个查询组件置顶，若已有置顶查询组件，再次置顶其他查询组件时，原有组件将自动取消置顶。**
 :::
-<img alt="更新1" src="/img/dataease/newimg/仪表板查询组件支持顶部冻结1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-<img alt="更新1" src="/img/dataease/newimg/仪表板查询组件支持顶部冻结2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板查询组件顶部冻结](/img/dataease/newimg/仪表板查询组件支持顶部冻结1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/仪表板查询组件滚动.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 17  仪表板查询组件顶部冻结
 
+![仪表板查询组件顶部冻结](/img/dataease/newimg/仪表板查询组件支持顶部冻结2.png)
+
+图 18  仪表板查询组件顶部冻结
+
+![仪表板查询组件滚动](/img/dataease/newimg/仪表板查询组件滚动.gif)
+
+图 19  仪表板查询组件滚动

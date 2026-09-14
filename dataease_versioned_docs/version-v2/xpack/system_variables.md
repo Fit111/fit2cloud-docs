@@ -7,7 +7,7 @@ title: 系统变量
 
 系统管理员可以使用【系统变量】模块，在该模块中为全局添加自定义变量。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/系统变量页面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/系统变量页面.png)
 
 :::note
 
@@ -17,26 +17,26 @@ title: 系统变量
 - 数值
 - 日期
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/添加系统变量.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/添加系统变量.png)
 :::note
 
 系统管理员可以为文本型变量添加可选值，为数值和日期类型变量设置范围值。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/用户添加参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/用户添加参数.png)
 :::note
 
 系统管理员设置好系统变量后，组织管理员可以为组织内成员配置这些系统变量。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/用户配置多个参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/用户配置多个参数.png)
 :::note
 
 在配置数据集的行权限时，除了系统内置的变量外，可以使用这些自定义的系统变量。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据集权限匹配参数.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据集权限匹配参数.png)
 
 :::note
 
 数据集自定义 SQL 时支持选择系统变量作为查询条件。在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)

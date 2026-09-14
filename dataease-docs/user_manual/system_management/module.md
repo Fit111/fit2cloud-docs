@@ -2,9 +2,11 @@
 title: 工具箱
 ---
 
-<img alt="百宝箱入口" src="/img/dataease/system_management/百宝箱.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![百宝箱入口](/img/dataease/system_management/百宝箱.png)
 
-##  1 模板管理
+图 1  工具箱入口
+
+## 1 模板管理
 
 ### 1.1 新建模板分类
 
@@ -14,13 +16,19 @@ title: 工具箱
 可以通过点击【添加分类】按钮，给模板新建分类，为模板进行分组分类，可以更方便的对模板进行管理和查找。
 :::
 
-<img alt="模板管理界面" src="/img/dataease/system_management/模板管理界面.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![模板管理界面](/img/dataease/system_management/模板管理界面.png)
+
+图 2  模板管理界面
+
 :::note
 
 - 支持批量修改模板分类。
 - 支持批量删除模板。
 :::
-<img alt="更新1" src="/img/dataease/newimg/v2-2-1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![批量管理模板](/img/dataease/newimg/批量管理模板.png)
+
+图 3  批量管理模板
 
 ### 1.2 添加样式模板
 
@@ -29,9 +37,17 @@ title: 工具箱
 样式模板来源于仪表板、数据大屏的转换，可在仪表板、数据大屏预览界面"保存为样式模板"。如下图所示，也可点击【导入模板】，上传模板文件，添加模板。
 :::
 
-<img alt="导出为模板" src="/img/dataease/system_management/导出为模板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="上传模板" src="/img/dataease/system_management/上传模板.png" width="900" style={{maxWidth:'100%', height:'auto'}}/> 
-<img alt="模板导入成功" src="/img/dataease/system_management/模板导入成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![导出为模板](/img/dataease/system_management/导出为模板.png)
+
+图 4  保存为样式模板
+
+![上传模板](/img/dataease/system_management/上传模板.png)
+
+图 5  上传模板
+
+![模板导入成功](/img/dataease/system_management/模板导入成功.png)
+
+图 6  模板导入成功
 
 ### 1.3 添加应用模板
 
@@ -46,26 +62,41 @@ title: 工具箱
 关于模板文件与应用文件的区别可参考：`https://kb.fit2cloud.com/?p=211`。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增应用功能1](/img/dataease/newimg/新增应用功能1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 7  应用模板说明
+
+![新增应用功能2](/img/dataease/newimg/新增应用功能2.png)
+
+图 8  应用模板示例
+
 :::note
 
 可在【模板管理】中上传应用模板。
 :::
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![新增应用功能3](/img/dataease/newimg/新增应用功能3.png)
+
+图 9  上传应用模板
+
 :::note
 
 使用模板新建仪表板或数据大屏时可选择使用存在的应用文件。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增应用功能4](/img/dataease/newimg/新增应用功能4.png)
 
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 10  使用应用模板创建
+
+![新增应用功能5](/img/dataease/newimg/新增应用功能5.png)
+
+图 11  选择应用文件
+
 :::note
 
 使用应用创建的资源，会自动弹出相关配置项，需要用户进一步填写。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/5.1%20新增应用功能6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增应用功能6](/img/dataease/newimg/新增应用功能6.png)
 
+图 12  填写应用配置

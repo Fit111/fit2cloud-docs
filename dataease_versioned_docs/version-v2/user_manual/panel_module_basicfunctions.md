@@ -9,7 +9,7 @@ title: 组件基础功能
 创建一个新的图表组件后，数据大屏右侧会默认展开该图表的配置界面，点击【收回】也可将右侧图表编辑区、数据集编辑区隐藏靠边。
 :::
 
-<img alt="组建编辑_基础功能" src="/img/dataease-v2/panel_generation/2.0数据大屏图表编辑.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组建编辑_基础功能](/img/dataease-v2/panel_generation/2.0数据大屏图表编辑.png)
 
 ## 2 复制与删除
 
@@ -18,13 +18,13 @@ title: 组件基础功能
 使用系统快捷键可快速复制组件 ，点击【back】键进行组件删除。
 :::
 
-<img alt="组件删除_基础功能" src="/img/dataease-v2/panel_generation/2.0组件复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件删除_基础功能](/img/dataease-v2/panel_generation/2.0组件复制.png)
 
 :::note
 
 表格支持右键复制单元格内容鼠标悬浮到某一单元格上，点击右键，即可复制当前单元格内容。（注意，这里不会另外弹出复制按钮，右键之后就已经完成了复制）
 :::
-<img alt="组件删除_基础功能" src="/img/dataease-v2/panel_generation/数据大屏表格复制内容.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件删除_基础功能](/img/dataease-v2/panel_generation/数据大屏表格复制内容.gif)
 
 ## 4 组件位置及大小调整
 
@@ -33,20 +33,20 @@ title: 组件基础功能
 可进行组件的位置移动和大小调整。
 :::
 
-<img alt="2.0数据大屏大小调整" src="/img/dataease-v2/panel_generation/2.0数据大屏大小调整.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0数据大屏大小调整](/img/dataease-v2/panel_generation/2.0数据大屏大小调整.gif)
 :::note
 
 通过组件的位置属性，通过设置 X、Y、W、H 的值，可对组件的位置和大小精准调整。
 :::
 
-<img alt="2.0数据大屏位置移动" src="/img/dataease-v2/panel_generation/2.0数据大屏位置移动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0数据大屏位置移动](/img/dataease-v2/panel_generation/2.0数据大屏位置移动.png)
 
 :::note
 
 数据大屏中所有组件均支持 3D 设置，且支持组件组合后进行 3D 设置。
 :::
 
-<img alt="2.0数据大屏位置移动" src="/img/dataease-v2/panel_generation/数据大屏组件支持3D设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![2.0数据大屏位置移动](/img/dataease-v2/panel_generation/数据大屏组件支持3D设置.png)
 
 ## 5 事件设置
 :::note
@@ -62,7 +62,7 @@ title: 组件基础功能
 **注意：事件绑定需退出编辑模式后生效，富文本开启绑定事件则内部点击事件失效。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏事件功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏事件功能.png)
 
 ## 6 联动设置
 
@@ -72,14 +72,14 @@ title: 组件基础功能
 **提示：** 仪表盘、水波图、富文本不支持联动设置。
 :::
 
-<img alt="联动设置" src="/img/dataease-v2/panel_generation/2.0数据大屏联动设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动设置](/img/dataease-v2/panel_generation/2.0数据大屏联动设置.png)
 
 :::note
 
 如下图，当设置两个图表联动时，设置相对应的图表的联动字段，设置完成后，点击【确定】，联动设置完成。
 :::
 
-<img alt="设置联动字段" src="/img/dataease-v2/panel_generation/2.0数据大屏设置联动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![设置联动字段](/img/dataease-v2/panel_generation/2.0数据大屏设置联动.png)
 
 :::note
 
@@ -90,28 +90,28 @@ title: 组件基础功能
 如果图表同时设置了联动和钻取，那么当点击时由用户选择执行联动或者钻取，当只设置了联动时，默认执行联动；当只设置了钻取时，默认执行钻取。
 :::
 
-<img alt="联动展示" src="/img/dataease-v2/panel_generation/2.0数据大屏点击联动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动展示](/img/dataease-v2/panel_generation/2.0数据大屏点击联动.png)
 
 :::note
 
 第二步，联动结果展示，如下图，设置了联动的图表，只展示浙江省的数据，图表联动时，支持联动部分高亮显示。
 :::
 
-<img alt="联动展示" src="/img/dataease-v2/panel_generation/2.0联动效果.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动展示](/img/dataease-v2/panel_generation/2.0联动效果.gif)
 
 :::note
 
 联动按钮始终固定在页面右上角，不随页面滚动而上移。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏联动按钮固定悬浮在页面右上角.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏联动按钮固定悬浮在页面右上角.gif)
 
 :::note
 
 第三步，可点击下图所示位置，清除局部联动和所有联动。
 :::
 
-<img alt="地图联动" src="/img/dataease-v2/panel_generation/2.0数据大屏清除联动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图联动](/img/dataease-v2/panel_generation/2.0数据大屏清除联动.png)
 
 :::note
 
@@ -119,9 +119,9 @@ title: 组件基础功能
 也可以选择在配置联动设置时，选择“同时触发联动和下钻”，这样当点击该图表时将同时执行下钻与联动动作。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20下钻和联动支持配置同时触发2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20下钻和联动支持配置同时触发2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20下钻和联动支持配置同时触发3.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20下钻和联动支持配置同时触发3.gif)
 
 ## 7 跳转设置
 
@@ -131,13 +131,13 @@ title: 组件基础功能
 **提示：** 仪表盘、水波图、词云图、富文本不支持跳转。
 :::
 
-<img alt="跳转设置入口" src="/img/dataease-v2/panel_generation/2.0数据大屏跳转设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置入口](/img/dataease-v2/panel_generation/2.0数据大屏跳转设置.png)
 :::note
 
 跳转设置的弹窗页面为内嵌式 DIV 弹窗样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/跳转设置的弹窗页面样式变更为内嵌式弹窗.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/跳转设置的弹窗页面样式变更为内嵌式弹窗.gif)
 
 :::note
 
@@ -150,7 +150,7 @@ title: 组件基础功能
 **注意：** 当前用户至少拥有目标数据大屏的查看权限，跳转时，若启用字段是指标字段，则提示”未获取跳转信息“。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/数据大屏开启跳转设置以及设置内容.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/数据大屏开启跳转设置以及设置内容.png)
 
 :::note
 
@@ -158,7 +158,7 @@ title: 组件基础功能
 在目标数据大屏上创建外部参数，添加所需的外部参数，并选择与其关联的查询组件或图表。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数1.png)
 
 :::note
 
@@ -167,21 +167,21 @@ title: 组件基础功能
 如果目标数据大屏中有多个图表需要联动，可在【联动图表】中进行字段关联设置。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数2.png)
 
 :::note
 
 切换【携带查询条件】，将源数据大屏的查询组件值绑定到目标数据大屏的外部参数。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数3.png)
 
 :::note
 
 可将源数据大屏上的查询条件动态传递至目标数据大屏，实现跨数据大屏的图表联动。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏图表跳转支持携带查询组件的过滤值并传递给外部参数.gif)
 
 :::note
 
@@ -193,27 +193,27 @@ title: 组件基础功能
 **注意：** 跳转时，若启用字段是指标字段，则提示”未获取跳转信息“。
 :::
 
-<img alt="跳转展示" src="/img/dataease-v2/panel_generation/数据大屏设置外部连接跳转.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转展示](/img/dataease-v2/panel_generation/数据大屏设置外部连接跳转.png)
 
 :::note
 
 点击【福建省】，并选择【跳转】。如果图表同时设置了联动和钻取，那么当点击时由用户选择执行联动或者跳转，当只设置了跳转时，默认执行跳转。
 :::
 
-<img alt="跳转展示" src="/img/dataease-v2/panel_generation/2.0数据大屏点击进行跳转.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转展示](/img/dataease-v2/panel_generation/2.0数据大屏点击进行跳转.png)
 
 :::note
 
 如果选择的是数据大屏跳转，那么跳转至数据大屏，并联动目标数据大屏的图表，如果不需要，可点击右上角清除联动。
 :::
 
-<img alt="跳转展示" src="/img/dataease-v2/panel_generation/2.0数据大屏跳转加联动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转展示](/img/dataease-v2/panel_generation/2.0数据大屏跳转加联动.png)
 :::note
 
 如果选择的是外部链接跳转，那么跳转至第三方平台，同时点击值传递给第三方链接。
 :::
 
-<img alt="跳转设置" src="/img/dataease-v2/panel_generation/2.0数据大屏跳转到外部链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置](/img/dataease-v2/panel_generation/2.0数据大屏跳转到外部链接.png)
 
 ## 8 组件样式
 :::note
@@ -221,26 +221,26 @@ title: 组件基础功能
 所有组件均支持通过双击组件编辑区域的名称进行改名操作。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/panel_generation/仪表板和数据大屏支持更多组件修改名称.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/panel_generation/仪表板和数据大屏支持更多组件修改名称.gif)
 
 :::note
 
 如下图，图表切换到 Tab 【样式】，在【背景】和【基础样式】进行组件样式设置。
 :::
 
-<img alt="组件样式入口" src="/img/dataease-v2/panel_generation/2.0数据大屏组件样式入口.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式入口](/img/dataease-v2/panel_generation/2.0数据大屏组件样式入口.png)
 
 :::note
 
 支持设置组件背景模糊，该效果能够透过组件展示并模糊下层内容，透明区域也将应用模糊处理。若为图片，需确保其具有透明背景以生效。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/支持组件背景模糊：毛玻璃效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/支持组件背景模糊：毛玻璃效果.png)
 
 :::note
 
 图片等其他组件同样支持设置组件样式；以下图为示例，图片组件可选择边框样式以及设置背景。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/数据大屏组件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据大屏组件样式.png)
 

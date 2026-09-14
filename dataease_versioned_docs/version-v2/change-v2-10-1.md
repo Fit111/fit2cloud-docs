@@ -6,7 +6,7 @@ title: v2.10.1
 
 ### 1.1 同环比增加具体数值选项
 
-<img alt="更新1" src="/img/dataease-v2/newimg/同环比增加具体数值.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/同环比增加具体数值.png)
 
 ### 1.2 仪表板和数据大屏支持浏览器整体刷新
 :::note
@@ -15,16 +15,16 @@ title: v2.10.1
 **注意：整体刷新仅公共链接和新 Tab 预览生效，避免在设计时频繁刷新影响编辑体验。**
 :::
 
-<img alt="更新1" src="/img/dataease-v2/dashboard_generation/仪表板刷新设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/dashboard_generation/数据大屏刷新设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/dashboard_generation/仪表板刷新设置.png)
+![更新1](/img/dataease-v2/dashboard_generation/数据大屏刷新设置.png)
 
 ### 1.3 Tab 组件支持整个 Tab 页的内容复制
 
-<img alt="更新1" src="/img/dataease-v2/newimg/Tab页整页复制.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/Tab页整页复制.gif)
 
 ### 1.4 新增双线组合图
 
-<img alt="更新1" src="/img/dataease-v2/newimg/新增双轴组合图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/新增双轴组合图.png)
 
 ### 1.5 分组柱线组合图支持子类别排序
 :::note
@@ -32,7 +32,7 @@ title: v2.10.1
 分组柱线组合图可基于类别进行排序，还可以在类别内设置子类型的顺序。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/分组柱状组合图支持子类别排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/分组柱状组合图支持子类别排序.png)
 
 ### 1.6 跳转设置中打开方式支持弹窗页面
 :::note
@@ -40,7 +40,7 @@ title: v2.10.1
 外部链接和仪表板跳转，均支持弹窗页面方式打开。此外，还支持设置弹窗的窗口大小。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/跳转打开方式新增弹窗.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/跳转打开方式新增弹窗.png)
 
 ## 2 数据准备
 
@@ -50,8 +50,8 @@ title: v2.10.1
 数据提交方式为【数据更新】时，会出现【表单模板设置】选项，可以设置表单中的表单项是否允许被修改。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/表单模板设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/模板设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/表单模板设置.png)
+![更新1](/img/dataease-v2/newimg/模板设置.png)
 
 ## 3 组织管理中心（XPack）
 ### 3.1 定时报告增加水印设置
@@ -59,10 +59,10 @@ title: v2.10.1
 
 当定时报告所指定的仪表板或数据大屏开启水印，定时报告中支持水印设置。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/定时报告水印设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/定时报告水印设置.png)
 
 ## 4 系统设置
 ### 4.1 新增 OAuth2 认证支持（XPack）
 
-<img alt="更新1" src="/img/dataease-v2/newimg/oauth2设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/oauth2设置.png)
 

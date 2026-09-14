@@ -9,11 +9,16 @@ title: 告警管理
 DataEase 的告警管理功能中，用户可以为数据图表设置告警条件，当数据超出预设的阈值时，系统将触发告警，并提供多种通知方式进行告知。可在【工具箱】下的【告警管理】集中管理所有告警。
 :::
 
-<img alt="阈值告警" src="/img/dataease/xpack/高级功能阈值告警.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![阈值告警](/img/dataease/xpack/高级功能阈值告警.png)
 
-<img alt="告警通知" src="/img/dataease/xpack/邮件告警通知.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 1  高级功能阈值告警
+
+![告警通知](/img/dataease/xpack/邮件告警通知.png)
+
+图 2  邮件告警通知
 
 ## 2 告警管理
+
 :::note
 
 告警列表展示该组织下所有已创建的告警，包括告警名称、数据来源、资源类型、告警状态（开启/关闭）、创建人和时间等关键信息。用户可以在这里快速浏览和管理已有的告警。
@@ -24,14 +29,18 @@ DataEase 的告警管理功能中，用户可以为数据图表设置告警条�
 - 【序号 4】删除任务。
 :::
 
-<img alt="告警通知" src="/img/dataease/xpack/告警列表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![告警通知](/img/dataease/xpack/告警列表.png)
+
+图 3  告警列表
 
 :::note
 
 告警记录可以查看所有触发过的告警事件，详细说明触发的时间、数据的状态、通知的发送情况。用户可以在此查看历史告警的执行情况，便于追溯和分析。
 :::
 
-<img alt="告警通知" src="/img/dataease/xpack/告警通知记录.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![告警通知](/img/dataease/xpack/告警通知记录.png)
+
+图 4  告警通知记录
 
 ## 3 阈值告警设置
 
@@ -42,28 +51,40 @@ DataEase 的告警管理功能中，用户可以为数据图表设置告警条�
 **注意：双轴类图表不支持阈值告警。**
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/3.2%20新增告警管理（XPack）1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增告警管理（XPack）1](/img/dataease/newimg/新增告警管理（XPack）1.png)
 
-<img alt="告警通知" src="/img/dataease/xpack/新增告警.png" width="600" style={{maxWidth:'100%', height:'auto'}}/>
+图 5  告警管理
+
+![告警通知](/img/dataease/xpack/新增告警.png)
+
+图 6  告警
 
 :::note
 
 为选定的资源设置具体的阈值条件，包括告警的类型、名称、资源名称、告警状态（开启/关闭）以及创建时间等。例如，每日检测仪某个数据低于预期值或库存量达到某个上限时触发告警。
 :::
 
-<img alt="告警通知" src="/img/dataease/xpack/创建告警机制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![告警通知](/img/dataease/xpack/创建告警机制.png)
+
+图 7  创建告警机制
 
 :::note
 
 阈值告警规则支持动态值设置。数值类型字段则支持二次计算选项，例如最小值、最大值和平均值。
 :::
-<img alt="更新1" src="/img/dataease/newimg/阈值告警规则支持动态值设置1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![阈值告警规则动态值设置](/img/dataease/newimg/阈值告警规则支持动态值设置1.png)
+
+图 8  阈值告警规则动态值设置
 
 :::note
 
 时间类型字段的动态值类似于查询组件中的时间组件，能够根据图表中时间字段的显示格式自动设定时间粒度。
 :::
-<img alt="更新1" src="/img/dataease/newimg/阈值告警规则支持动态值设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![阈值告警规则动态值设置](/img/dataease/newimg/阈值告警规则支持动态值设置2.png)
+
+图 9  阈值告警规则动态值设置
 
 :::note
 
@@ -75,5 +96,6 @@ DataEase 的告警管理功能中，用户可以为数据图表设置告警条�
 - 是否重复发送：打开开关时，如果连续多次满足告警条件，则每次都会发生告警信息，关闭开关时，若连续多次满足告警条件，则只有第一次会发送告警信息。
 :::
 
-<img alt="告警通知" src="/img/dataease/xpack/告警通知.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![告警通知](/img/dataease/xpack/告警通知.png)
 
+图 10  告警通知

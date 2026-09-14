@@ -7,20 +7,20 @@ title: 嵌入式常见问题
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（1）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（1）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（1）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（1）.png)
 
 :::note
 
 解决方案：检查嵌入式应用的跨域设置，与提示报错的 origin 是否相同。
 :::
-<img alt="4. 嵌入式常见问题（2）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（2）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（2）.png)
 
 ## 2 Iframe DIV 嵌入后，提示域名匹配错误
 :::note
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（3）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（3）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（3）.png)
 
 :::note
 
@@ -35,7 +35,7 @@ origin-list: http://localhost:8000，访问 DataEase 地址1（9080）,访问 Da
 dectl restart
 ```
 :::
-<img alt="4. 嵌入式常见问题（4）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（4）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（4）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（4）.png)
 
 :::note
 
@@ -48,7 +48,7 @@ dectl restart
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（5）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（5）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（5）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（5）.png)
 
 :::note
 
@@ -58,7 +58,7 @@ dectl restart
 
 情况一：DataEase JS 未正确引入，如下所示，打开浏览器控制台，在 Network 页签选择 JS ，搜索 dataease 查看是否存在相关 JS 即可判断。
 :::
-<img alt="4. 嵌入式常见问题（6）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（6）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（6）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（6）.png)
 
 :::note
 
@@ -70,8 +70,8 @@ dectl restart
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（7）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（7）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="4. 嵌入式常见问题（8）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（8）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（7）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（7）.png)
+![4. 嵌入式常见问题（8）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（8）.png)
 
 :::note
 
@@ -83,7 +83,7 @@ dectl restart
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（9）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（9）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（9）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（9）.png)
 
 :::note
 
@@ -95,7 +95,7 @@ dectl restart
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（10）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（10）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（10）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（10）.png)
 
 :::note
 
@@ -110,7 +110,7 @@ dectl restart
 
 如下所示：
 :::
-<img alt="4. 嵌入式常见问题（11）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（11）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（11）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（11）.png)
 
 :::note
 
@@ -124,7 +124,7 @@ dectl restart
 
 DIV 嵌入时页面白屏，或列表为空，浏览器控制台查看网络请求状态有 401 状态码
 :::
-<img alt="4. 嵌入式常见问题（12）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（12）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（12）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（12）.png)
 
 :::note
 
@@ -132,7 +132,7 @@ iFrame 嵌入时提示 Request failed with status code 400
 
 网络请求返回异常：Request processing failed: com.auth0.jwt.exceptions.InvalidClaimException: The Token can't be used before Wed Jan 08 13:42:29 CST 2025.
 :::
-<img alt="4. 嵌入式常见问题（13）.png" src="/img/dataease-v2/embedded/4.%20嵌入式常见问题（13）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![4. 嵌入式常见问题（13）.png](/img/dataease-v2/embedded/4.%20嵌入式常见问题（13）.png)
 
 :::note
 

@@ -2,14 +2,13 @@
 title: 简易智能体
 ---
 
-:::note
 
 点击【创建智能体】，输入智能体名称以及智能体描述，选择【简易配置】，点击【创建】，进入简易智能体配置设置页面。
-:::
 
-![选择智能体类型](/img/maxkb/app/selectAppType.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/selectAppType.png" alt="图 1  选择智能体类型" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  选择智能体类型</div>
+
 
 左侧为智能体信息，右侧为调试预览界面。   
 
@@ -32,13 +31,19 @@ title: 简易智能体
 * 语音播放：开启后可以通过语音进行播放回答，可以通过浏览器播放，也可以通选择语音合成模型。
 
 **智能体信息设置完成后，点击【保存并发布】后，智能体设置才生效。**
-:::
 
-![智能体设置](/img/maxkb/app/app_setting.png)
-![智能体设置](/img/maxkb/app/app_setting1.png)
-![智能体设置](/img/maxkb/app/app_setting2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_setting.png" alt="图 2  智能体基础信息设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  智能体基础信息设置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_setting1.png" alt="图 3  智能体提示词设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  智能体提示词设置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_setting2.png" alt="图 4  智能体扩展能力设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智能体扩展能力设置</div>
+
 
 提示词是在每次对话开始时固定注入的上下文指令，用于为模型确立身份、语气、知识边界及输出格式等前置规则，从而确保回复精准、风格一致且可控。
 
@@ -54,10 +59,10 @@ title: 简易智能体
 通过合理编排提示词，管理员可在不更换模型的前提下，实现多场景、多角色的快速切换，显著降低大模型幻觉风险并提升用户体验。
 
 简易智能体的系统提示词支持基于用户输入的主题内容，自动生成高质量、结构完整的系统提示词，辅助用户快速构建适用于当前场景的提示文本。
-:::
-![智能体设置](/img/maxkb/app/app_prompt.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_prompt.png" alt="图 5  系统提示词编辑" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  系统提示词编辑</div>
+
 
 开场白兼具“自我介绍”与“操作提示”的双重作用，能够在零打扰的前提下，告诉用户“我是谁、能做什么、该怎么问”。合理设计的开场白可显著降低首次使用门槛，提升后续问答效率。
 
@@ -65,11 +70,15 @@ title: 简易智能体
 - 支持使用 &lt;html_rander&gt;  标签编写 HTML 代码。
 
 可参考 [MaxKB 开场白参考模板（基于 HTML 编写）](https://kb.fit2cloud.com/?p=14db4420-5ed4-4e49-b500-c36c36883c2d)。
-:::
 
-<img alt="智能体设置" src="/img/maxkb/app/opening_remarks.png" width="500" style={{maxWidth:'100%', height:'auto'}}/><img alt="智能体设置" src="/img/maxkb/app/opening_remarks1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/opening_remarks.png" alt="图 6  开场白内容编辑" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  开场白内容编辑</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/opening_remarks1.png" alt="图 7  开场白 HTML 效果" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  开场白 HTML 效果</div>
+
 
 当用户提问后，系统优先在已关联的知识库中执行分段检索，随后将命中的内容注入提示词，再交由大模型生成答案。智能体设置时可以控制检索行为：
 
@@ -83,14 +92,16 @@ title: 简易智能体
 - 最大引用字符数：对入选段落再做字符截断，确保总长度不超过设定上限（默认 5,000 字符）。
 - 无引用时的回答策略：允许大模型基于通用知识作答，或指定统一回复（如暂无相关资料”，拒绝编造）。
 - 问题优化开关：启用后，系统会先将用户问题改写为更利于检索的表述，再执行检索，提高命中率。
-:::
 
-<img alt="智能体设置" src="/img/maxkb/app/base_parameter_settings.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
-:::note
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/base_parameter_settings.png" alt="图 8  问答基础参数" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  问答基础参数</div>
+
 
 输出思考：开启后，模型在生成最终答案前，会先输出一段置于标签内的推理过程，随后再给出正式回复。
 
 **注意**：部分模型只输出单标签，无法进行关闭控制，需对模型进行配置优化。如 DeepSeek-R1-Distill-Qwen-32B。
-:::
 
-![智能体设置](/img/maxkb/app/ctr_thkpro.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ctr_thkpro.png" alt="图 9  输出思考过程开关" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  输出思考过程开关</div>

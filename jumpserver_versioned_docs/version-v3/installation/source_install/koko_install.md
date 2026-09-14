@@ -3,24 +3,18 @@ title: KoKo 环境部署
 ---
 
 ## 1 KoKo 组件简述
-:::note
 
 Koko 是 Go 版本的 coco，重构了 coco 的 SSH/SFTP 服务和 Web Terminal 服务。
-:::
 
 ### 1.1 环境要求
-:::note
 
 | Name    | KoKo                     | Go   | Node  | Redis Client |
 | :------ | :----------------------- | :--  | :---- | :----------- |
 | Version | v3.10.21     | 1.18 | 16.5  | &gt;= 6.0       |
-:::
 
 ### 1.2 选择部署方式
-:::note
 
 ### 源代码部署
-:::
 
 - 下载源代码。
 - 从项目网站下载 Source code.tar.gz 源代码，通过命令行中提取该存档：
@@ -84,9 +78,7 @@ echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
         cp build/koko-v3.10.21-linux-amd64.tar.gz /opt
         ```
 
-        :::note[构建完成后, 生成在 build 目录下]
 
-        :::
     ### 使用 Release
 
 - 下载 Release 文件。
@@ -136,7 +128,6 @@ cd koko-v3.10.21-linux-arm64
 mv kubectl /usr/local/bin/kubectl
 ```
 ### 1.3 修改配置文件
-:::note
 
 ```bash
 cp config_example.yml config.yml
@@ -212,15 +203,12 @@ LOG_LEVEL: DEBUG           # 开发建议设置 DEBUG, 生产环境推荐使用 
 # REDIS_CLUSTERS:
 # REDIS_DB_ROOM:
 ```
-:::
 
 ### 1.4 启动 KoKo
-:::note
 
 ```bash
 ./koko
 ```
-:::
 
 [nginx]: http://nginx.org/
 [lina]: https://github.com/jumpserver/lina/

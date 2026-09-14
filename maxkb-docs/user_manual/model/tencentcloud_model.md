@@ -4,7 +4,6 @@ title: 对接腾讯云
 
 ## 1 添加模型
 
-:::note
 
 添加腾讯知识引擎原子能力之前，需要先在腾讯云开通知识引擎原子能力服务并新建API Key。
 
@@ -15,14 +14,15 @@ title: 对接腾讯云
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。
 * API URL：https://api.lkeap.cloud.tencent.com/v1/chat/completions。
 * API Key：在控制台新建的OpenAI API KEY。
-:::
 
-![tencent apikey](/img/maxkb/model/tencent_atomicpower_apikey.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/tencent_atomicpower_apikey.png" alt="图 1  腾讯云 API Key" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  腾讯云 API Key</div>
 
 ## 2 配置样例
 
-:::note
 
 腾讯云知识引擎原子能力-大语言模型配置样例图示如下：
-:::
-<img alt="知识引擎原子 大语言模型" src="/img/maxkb/model/tencent_atomicpower_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/tencent_atomicpower_llm.png" alt="图 2  腾讯云知识引擎原子能力 大语言模型 配置样例图" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  腾讯云知识引擎原子能力 大语言模型 配置样例图</div>

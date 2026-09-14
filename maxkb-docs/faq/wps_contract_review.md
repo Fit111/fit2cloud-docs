@@ -2,16 +2,13 @@
 title: WPS合同审核助手的设计与实现
 ---
 
-:::note
 
 通过 MaxKB 开源智能体平台对接 WPS Office，打造一款“智能合同审核助手”的具体方法。
 
 将企业的合同知识库能力直接集成到日常办公环境中，让合同审核从原本需要数天的人工流程，转变为几分钟内就能完成的智能化操作，在保持审核标准统一的同时，大幅提升了合同审核的效率和准确性。
-:::
 
 ## 1 方案设计
 
-:::note
 
 MaxKB WPS合同审核工作流的核心是实现分类选择知识库、文档预处理，以及利用SSE（‌即Server-Sent Events，服务器发送事件‌）技术实时推送审核结果。
 
@@ -41,16 +38,19 @@ MaxKB WPS合同审核工作流的核心是实现分类选择知识库、文档�
 
 MaxKB WPS合同审核助手的实现采用前后端分离的架构，前端负责文档处理和界面展示，后端提供AI审核服务。
 用户在前端上传文件后，文档在MaxKB中经过文档合并、PDF转换、解析及判断器分类等，随后交由AI结合知识库检索结果进行审核，最终将审核结果返回前端并将渲染的结果展现给用户。
-:::
 
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E6%9E%B6%E6%9E%84%E5%9B%BE.jpeg)
-![wps_contract](/img/maxkb/FAQ/MaxKB%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%91%A8%E6%89%8B%E5%B7%A5%E4%BD%9C%E6%B5%81.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E6%9E%B6%E6%9E%84%E5%9B%BE.jpeg" alt="图 1  MaxKB WPS 合同审核助手架构" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  MaxKB WPS 合同审核助手架构</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%91%A8%E6%89%8B%E5%B7%A5%E4%BD%9C%E6%B5%81.png" alt="图 2  MaxKB 合同审核助手工作流程" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 合同审核助手工作流程</div>
 
 ## 2 插件安装
 
 ### 2.1 macOS操作系统
 
-:::note
 
 打开终端，执行以下命令：
 '''
@@ -58,24 +58,24 @@ curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
 '''
 
 该脚本会自动下载并安装插件至WPS的插件目录：~/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons。
-:::
 
-![wps_contract](/img/maxkb/FAQ/macOS_MaxKB%20WPS%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/macOS_MaxKB%20WPS%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="图 3  macOS 系统安装 WPS 插件" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  macOS 系统安装 WPS 插件</div>
 
 ### 2.2 Windows操作系统
 
-:::note
 
 在网页中下载插件：https://maxkb-tools-1323865188.cos.ap-guangzhou.myqcloud.com/maxkb-wps.exe。
 
 运行后，插件将被自动安装至：C:\Users\$\{Your_Name\}\AppData\Roaming\kingsoft\wps\jsaddons。
-:::
 
-![wps_contract](/img/maxkb/FAQ/Windows_MaxKB%20WPS%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/Windows_MaxKB%20WPS%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="图 4  Windows 系统安装 WPS 插件" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  Windows 系统安装 WPS 插件</div>
 
 ## 3 实现步骤与效果展示
 
-:::note
 
 通过MaxKB WPS合同审核助手，用户几分钟内就可以搞定以往需要数小时的合同审核工作。以下是详细的操作步骤与效果说明：
 
@@ -86,33 +86,39 @@ curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
 - Base URL：MaxKB服务地址
 - APP Key：应用级别的认证密钥
 - 销售姓名：审核人员信息
-:::
 
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E6%8F%92%E4%BB%B6%E8%8F%9C%E5%8D%95.png)
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%88%9D%E5%A7%8B%E5%8C%96_01.png)
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%88%9D%E5%A7%8B%E5%8C%96_02.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E6%8F%92%E4%BB%B6%E8%8F%9C%E5%8D%95.png" alt="图 5  WPS 中的 MaxKB 合同审核插件菜单" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  WPS 中的 MaxKB 合同审核插件菜单</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%88%9D%E5%A7%8B%E5%8C%96_01.png" alt="图 6  MaxKB WPS 插件初始化（一）" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  MaxKB WPS 插件初始化（一）</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%88%9D%E5%A7%8B%E5%8C%96_02.png" alt="图 7  MaxKB WPS 插件初始化（二）" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  MaxKB WPS 插件初始化（二）</div>
+
 
 (2) 选择合同分类   
 
 根据合同内容选择对应的知识库，先选择产品线（例如DataEase、MaxKB等），再选择合同类型（例如订阅、授权、维保等）。
 
 系统会根据所选分类自动匹配对应的知识库，确保审核逻辑与企业标准一致。
-:::
 
-![wps_contract](/img/maxkb/FAQ/WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E7%9F%A5%E8%AF%86%E5%BA%93%E9%80%89%E6%8B%A9.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E7%9F%A5%E8%AF%86%E5%BA%93%E9%80%89%E6%8B%A9.png" alt="图 8  选择合同审核助手知识库" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  选择合同审核助手知识库</div>
+
 
 (3) 一键审核   
 
 上传一份合同文件，系统自动完成文档的预处理（例如接受修订、删除批注等）、导出PDF文件、调用智能体分析合同等操作，并实时展示审核结果。
-:::
 
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA.png" alt="图 9  合同审核助手审核结果展示" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  合同审核助手审核结果展示</div>
+
 
 (4) 查看审核报告
 
@@ -127,11 +133,11 @@ curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
 ■ 合规性检查：与企业标准对照，指出不合规项；
 
 ■ 修改建议：具体的修改意见和参考文本。
-:::
 
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E6%8A%A5%E5%91%8A.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E6%8A%A5%E5%91%8A.png" alt="图 10  合同审核报告" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  合同审核报告</div>
+
 
 (5) 导出PDF报告
 
@@ -142,7 +148,7 @@ curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
 ■ 格式完整保留：Markdown格式、表格、列表等； 
 
 ■ 智能分页：避免标题、表格、代码块被截断。
-:::
 
-![wps_contract](/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E6%8A%A5%E5%91%8A%E5%AF%BC%E5%87%BA.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/MaxKB%20WPS%E5%90%88%E5%90%8C%E5%AE%A1%E6%A0%B8%E5%8A%A9%E6%89%8B%E5%AE%A1%E6%A0%B8%E6%8A%A5%E5%91%8A%E5%AF%BC%E5%87%BA.png" alt="图 11  导出合同审核报告" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  导出合同审核报告</div>

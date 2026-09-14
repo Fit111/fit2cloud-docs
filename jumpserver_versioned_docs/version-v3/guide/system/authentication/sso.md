@@ -2,16 +2,11 @@
 title: SSO (X-Pack)
 ---
 
-:::note[注：SSO 认证为 JumpServer 企业版功能。]
 
-:::
-:::note[提示]
 
 - 使用 SSO 对接第三方系统。
-:::
 
 ## 1 操作过程
-:::note
 
 - 修改 JumpServer 配置文件启用 SSO.
 
@@ -21,15 +16,11 @@ vi /opt/jumpserver/config/config.txt
 ```vim
 AUTH_SSO=True
 ```
-:::
 
-:::note
 
 - 修改完成后保存，重启 JumpServer 即可。
-:::
 
 ## 2 使用方法
-:::note
 
 - 通过 api 获取任意管理员 token 为其他用户创建免密登录链接。
 
@@ -43,7 +34,6 @@ curl -X POST https://demo.jumpserver.org/api/v1/authentication/auth/ \
 ```
 
 ### Token 使用方法
-:::
 
 ```sh
 curl -X POST https://demo.jumpserver.org/api/v1/authentication/sso/login-url/ \

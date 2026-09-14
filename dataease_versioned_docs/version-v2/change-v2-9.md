@@ -12,7 +12,7 @@ title: v2.9.0
 - 等比适应：跟随组件大小改变而改变，但是图片原始比例不跟随改变。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.1%20图片组件支持不同的适应方式.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.1%20图片组件支持不同的适应方式.PNG)
 
 ### 1.2 地图、气泡地图提示信息增强
 :::note
@@ -20,9 +20,9 @@ title: v2.9.0
 支持在提示信息中选择显示未参与图表制作的其他指标字段。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.2%20地图、气泡地图提示信息增强.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.2%20地图、气泡地图提示信息增强.PNG)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.2%20地图、气泡地图提示信息增强2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.2%20地图、气泡地图提示信息增强2.PNG)
 
 ### 1.3 线面图与柱条图类型支持最值显示
 :::note
@@ -30,9 +30,9 @@ title: v2.9.0
 线/面图和柱/条图类型的图表中，不包含子类别和堆叠项的情况下，可以设置显示最值。开启【显示最值】后，图中的最大值和最小值的标签会以专属的样式呈现。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20线面图与柱条图类型支持最值显示1.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20线面图与柱条图类型支持最值显示1.PNG)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20线面图与柱条图类型支持最值显示2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20线面图与柱条图类型支持最值显示2.PNG)
 
 ### 1.4 支持按图例设置颜色
 :::note
@@ -40,7 +40,7 @@ title: v2.9.0
 分布图、关系图、柱/条图、线/面图支持在基础样式中通过自定义颜色，为图例设置不同的颜色。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20支持按图例设置颜色.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20支持按图例设置颜色.png)
 
 ### 1.5 数据大屏新增弹窗区支持
 :::note
@@ -48,21 +48,21 @@ title: v2.9.0
 打开弹窗区域。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持1.png)
 
 :::note
 
 在弹窗区域中添加查询组件。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持2.png)
 
 :::note
 
 在全屏或预览的界面下，当设置了弹窗区时，数据大屏右下侧会出现查询按钮，点击可唤出弹窗区。弹窗区的查询组件功能同普通查询组件，同时也支持外部传参。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持3.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20数据大屏新增弹窗区支持3.gif)
 
 ### 1.6 查询组件中的文本下拉选项支持全部和默认两种选择
 :::note
@@ -73,7 +73,7 @@ title: v2.9.0
 - 全部：对所有数据进行查询并返回，在数据量大的情况下，可能会存在性能问题，如等待时间长，加载慢，甚至浏览器内存不足，故使用时需注意。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.6%20查询组件中的文本下拉选项支持全部和默认两种选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.6%20查询组件中的文本下拉选项支持全部和默认两种选择.png)
 
 ### 1.7 查询组件支持无查询按钮直接查询
 :::note
@@ -81,11 +81,11 @@ title: v2.9.0
 支持在【展示按钮】处去掉【查询】的勾选，在不展示【查询】按钮的情况下，选择完下拉选项后会立即触发数据查询。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.7%20查询组件支持无查询按钮直接查询.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.7%20查询组件支持无查询按钮直接查询.png)
 
 ### 1.8 汇总表支持显示总计
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.8%20汇总表支持显示总计.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.8%20汇总表支持显示总计.png)
 
 ### 1.9 数据大屏支持切换图表类型
 :::note
@@ -93,47 +93,47 @@ title: v2.9.0
 支持在数据大屏中，将已存在图表切换成其他图表类型。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.9%20数据大屏支持切换图表类型1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.9%20数据大屏支持切换图表类型1.png)
 
 ### 1.10 气泡地图添加水波纹动画配置
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.10%20气泡地图添加水波纹动画配置.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.10%20气泡地图添加水波纹动画配置.gif)
 
 ### 1.11 流向地图支持配置起止点名称及更多动效
 :::note
 
 支持配置起点名称、终点名称、线条粗细。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效.png)
 
 :::note
 
 支持通过【标注】功能，设置起始位置文字样式及标注点样式。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效2.png)
 
 :::note
 
 支持配置气泡动效：进入【高级】并打开【气泡动效】开关。。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.11%20流向地图支持配置起止点名称及更多动效.gif)
 
 ### 1.12 表格的表头/单元格/斑马纹均支持单独设置透明度
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.12%20表格的表头：单元格：斑马纹均支持单独设置透明度.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.12%20表格的表头：单元格：斑马纹均支持单独设置透明度.png)
 
 ### 1.13 表格字体支持设置加粗和斜体
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.13%20表格字体支持设置加粗和斜体.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.13%20表格字体支持设置加粗和斜体.png)
 
 ### 1.14 表格支持单独控制表头和单元格的横纵边框显隐
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.14%20表格支持单独控制表头和单元格的横纵边框显隐.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.14%20表格支持单独控制表头和单元格的横纵边框显隐.png)
 
 ### 1.15 数据大屏支持批量设置样式
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.15%20数据大屏支持批量设置样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.15%20数据大屏支持批量设置样式.png)
 
 ## 2 数据准备
 
@@ -142,21 +142,21 @@ title: v2.9.0
 
 支持 ssh 隧道方式，通过跳板机连接其他网络环境中的数据源。支持密码和密钥两种方式。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20数据源支持%20ssh%20隧道.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20数据源支持%20ssh%20隧道.png)
 
 ### 2.2 API 数据源支持自定义参数前后缀
 :::note
 
 功能背景可参考：https://github.com/dataease/dataease/issues/11010 。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/2.2%20API%20数据源支持自定义参数前后缀.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.2%20API%20数据源支持自定义参数前后缀.png)
 
 ### 2.3 数据源支持复制
 :::note
 
 除 Excel 数据源外，其他数据源支持复制功能。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/数据源支持复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/数据源支持复制.png)
 
 ## 3 系统设置（XPack）
 ### 3.1 支持 LDAP 认证
@@ -165,7 +165,7 @@ title: v2.9.0
 注意：LDAP 实现方式与 APISIX 无关，特别注意 LDAP 属性映射里的字段名。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持%20LDAP%20认证.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持%20LDAP%20认证.png)
 
 ### 3.2 支持配置默认登录方式
 :::note
@@ -173,17 +173,17 @@ title: v2.9.0
 在已配置其他登录方式（LDAP、CAS、OIDC）的情况下，并将其配置为默认登录方式，则在访问 DataEase 时，登录页面会自动跳转到相应登录页面。在配置了其他默认登录方式的情况下，如果需要使用 DataEase 原有登录方式，可以访问 URL：http(s)://de_server_ip:de_port/#/admin-login，可支持所有用户的普通登录。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.2%20支持配置默认登录方式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.2%20支持配置默认登录方式.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.2%20支持配置默认登录方式2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.2%20支持配置默认登录方式2.png)
 
 ### 3.3 OIDC 配置项 Realm 优化为非必填项
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.3%20OIDC%20配置项%20Realm%20优化为非必填项.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.3%20OIDC%20配置项%20Realm%20优化为非必填项.png)
 
 ### 3.4 增加导出仪表板或数据大屏图片的接口
 
-<img alt="更新1" src="/img/dataease-v2/newimg/3.4%20增加导出仪表板或数据大屏图片的接口%20.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.4%20增加导出仪表板或数据大屏图片的接口%20.png)
 
 ## 4 组织管理中心（XPack）
 ### 4.1 定时报告增加出错重试设置
@@ -192,7 +192,7 @@ title: v2.9.0
 当定时报告发送失败后自动按照重试设置进行重发尝试。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.1%20定时报告增加出错重试设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.1%20定时报告增加出错重试设置.png)
 
 ### 4.2 支持通过 Excel 批量导入第三方平台用户
 :::note
@@ -201,13 +201,13 @@ title: v2.9.0
 用户来源支持的选项同【用户管理】中的【用户来源】字段：LOCAL、企业微信、钉钉、飞书、国际飞书、CAS、OIDC、LDAP。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户2.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户3.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20支持通过%20Excel%20批量导入第三方平台用户4.png)
 
 ### 4.3 支持多条行权限配置取并集
 :::note
@@ -215,7 +215,7 @@ title: v2.9.0
 用户如果适用数据集的多条行权限规则，则会取所有规则的并集（历史版本中是取交集）。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/4.3%20支持多条行权限配置取并集.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.3%20支持多条行权限配置取并集.png)
 
 ## 5 其他
 ### 5.1 新增应用功能
@@ -226,28 +226,28 @@ title: v2.9.0
 可将自己的仪表板/数据大屏导出为【应用】。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能2.png)
 :::note
 
 可在【模板管理】中上传应用。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能3.png)
 :::note
 
 使用模板新建仪表板或数据大屏时可选择使用存在的应用文件。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能4.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能5.png)
 :::note
 
 使用应用创建的资源，会自动弹出相关配置项，需要用户进一步填写。
 :::
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.1%20新增应用功能6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.1%20新增应用功能6.png)
 ### 5.2 新增 Copilot 对话分析功能
 :::note
 
@@ -261,7 +261,7 @@ title: v2.9.0
 - Oracle
 - SQLServer
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/5.2%20新增%20Copilot%20对话分析功能1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.2%20新增%20Copilot%20对话分析功能1.png)
 
-<img alt="更新1" src="/img/dataease-v2/newimg/5.2%20新增%20Copilot%20对话分析功能2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/5.2%20新增%20Copilot%20对话分析功能2.png)
 

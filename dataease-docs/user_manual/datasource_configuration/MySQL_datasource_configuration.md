@@ -25,19 +25,25 @@ title: 配置 MySQL 数据源
 步骤二：按照以下步骤，选择 MySQL 图标。
 :::
 
-<img alt="MySQL1" src="/img/dataease/datasource_configuration/选择数据源1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![MySQL1](/img/dataease/datasource_configuration/选择数据源1.png)
+
+图 1  选择MySQL数据源
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="MySQL2" src="/img/dataease/datasource_configuration/MYSQL信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![MySQL2](/img/dataease/datasource_configuration/MYSQL信息.png)
+
+图 2  MySQL 连接信息
 
 :::note
 
 详细说明信息如下：
 :::
+
+表 1  基础属性说明
 
 | 基础属性             | 说明                                      |
 |:-----------------|:----------------------------------------|
@@ -56,4 +62,6 @@ title: 配置 MySQL 数据源
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
 :::
 
-<img alt="MySQL3" src="/img/dataease/datasource_configuration/MYSQL校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![MySQL3](/img/dataease/datasource_configuration/MYSQL校验成功.png)
+
+图 3  MySQL 校验成功

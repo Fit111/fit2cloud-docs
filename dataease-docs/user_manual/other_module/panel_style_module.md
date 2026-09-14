@@ -3,47 +3,62 @@ title: 其他组件
 ---
 
 ## 1 文本
+
 ### 1.1 富文本
 
 :::note
 
 双击富文本组件，可定义样式，并支持在编辑区引用维度与指标中字段。
 注意： 引用维度与指标字段时，富文本只选取第一条结果值。
-
-<img alt="仪表板_富文本组件入口" src="/img/dataease/dashboard_generation/数据大屏富文本组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-
-<img alt="富文本组件_功能" src="/img/dataease/view_generation/3.0数据大屏富文本填入指标.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 :::
+
+![仪表板_富文本组件入口](/img/dataease/dashboard_generation/数据大屏富文本组件.png)
+
+图 1  数据大屏富文本组件
+
+![富文本组件_功能](/img/dataease/view_generation/数据大屏富文本填入指标.png)
+
+图 2  数据大屏富文本填入指标
 
 :::note
 
 双击输入文字，可单独调整某文字样式。
 :::
 
-<img alt="富文本组件_调整样式" src="/img/dataease/view_generation/3.0数据大屏文本样式调整.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![富文本组件_调整样式](/img/dataease/view_generation/数据大屏文本样式调整.png)
+
+图 3  数据大屏文本样式调整
 
 :::note
 
 点击插入超链接按钮，可配置超链接，下示例图以插入”百度网页“链接为例。
 :::
 
-<img alt="富文本组件_超链接" src="/img/dataease/view_generation/3.0数据大屏设置超链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![富文本组件_超链接](/img/dataease/view_generation/数据大屏设置超链接.png)
+
+图 4  数据大屏设置超链接
 
 :::note
 
 添加表格，输入文字，并可对表格单元格、行、列等做调整，如下图所示。
 :::
 
-<img alt="富文本组件_超链接" src="/img/dataease/view_generation/3.0数据大屏添加表格.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![富文本组件_超链接](/img/dataease/view_generation/数据大屏添加表格.png)
 
-<img alt="富文本组件_表格" src="/img/dataease/view_generation/3.0数据大屏表格效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 5  数据大屏添加表格
+
+![富文本组件_表格](/img/dataease/view_generation/数据大屏表格效果.png)
+
+图 6  数据大屏表格效果
 
 :::note
 
 还支持插入图片、媒体。
 :::
 
-<img alt="富文本组件_图片" src="/img/dataease/view_generation/3.0数据大屏插入图片.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![富文本组件_图片](/img/dataease/view_generation/数据大屏插入图片.png)
+
+图 7  数据大屏插入图片
 
 ### 1.2 跑马灯
 
@@ -52,18 +67,26 @@ title: 其他组件
 马灯组件可实现文字的循环滚动。支持设置文字颜色、字间距、字体大小、透明度、播放速度等选项。
 :::
 
-<img alt="仪表板_富文本组件入口" src="/img/dataease/dashboard_generation/数据大屏跑马灯组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板_富文本组件入口](/img/dataease/dashboard_generation/数据大屏跑马灯组件.png)
 
-<img alt="更新1" src="/img/dataease/newimg/1.18%20数据大屏新增跑马灯组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 8  数据大屏跑马灯组件
+
+![数据大屏新增跑马灯组件](/img/dataease/newimg/数据大屏新增跑马灯组件.png)
+
+图 9  数据大屏跑马灯组件
 
 ## 2 媒体
+
 ### 2.1 图片
+
 :::note
 
 辅助类图片组件，如可作为组件的背景等。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏图片组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏图片组件](/img/dataease/newimg/数据大屏图片组件.png)
+
+图 10  数据大屏图片组件
 
 :::note
 
@@ -74,40 +97,66 @@ title: 其他组件
 - 等比适应：跟随组件大小改变而改变，但是图片原始比例不跟随改变。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏图片组件适应.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏图片组件适应](/img/dataease/newimg/数据大屏图片组件适应.png)
+
+图 11  数据大屏图片组件适应
 
 ### 2.2 视频
+
 :::note
 
 不能上传本地视频，需要填写视频链接信息。如果需要搭建视频服务器可参考知识库：`https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b`、`https://kb.fit2cloud.com/?p=15` 。
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据大屏视频组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/1.16%20新增视频组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据大屏视频组件](/img/dataease/newimg/数据大屏视频组件.png)
+
+图 12  数据大屏视频组件
+
+![新增视频组件-2](/img/dataease/newimg/新增视频组件-2.png)
+
+图 13  视频组件
 
 ### 2.3 流媒体
+
 :::note
 
 流媒体只支持 flv 格式，如果需要使用 rtsp 格式，可参考知识库文章：`https://kb.fit2cloud.com/?p=182` 。
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据大屏流媒体组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/1.15%20新增流媒体组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据大屏流媒体组件](/img/dataease/newimg/数据大屏流媒体组件.png)
+
+图 14  数据大屏流媒体组件
+
+![新增流媒体组件-2](/img/dataease/newimg/新增流媒体组件-2.png)
+
+图 15  流媒体组件
 
 ### 2.4 图片组
+
 :::note
 
 支持简单的图片上传和轮播功能。
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增图片组组件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据大屏图片组组件](/img/dataease/newimg/数据大屏新增图片组组件1.png)
+
+图 16  数据大屏图片组组件
 
 :::note
 
 图片组还支持与指定数据集关联设置条件样式，根据数据集的变化展示不同的图片。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增图片组组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增图片组组件.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏图片组组件](/img/dataease/newimg/数据大屏新增图片组组件2.png)
+
+图 17  数据大屏图片组组件
+
+![数据大屏图片组组件](/img/dataease/newimg/数据大屏新增图片组组件.gif)
+
+图 18  数据大屏图片组组件
 
 ### 2.5 分页组件
+
 :::note
 
 用户在制作数据大屏时，可通过分页组件展示多个分页，并通过点击切换查看；  
@@ -118,11 +167,20 @@ title: 其他组件
 - 支持对标签，背景进行样式调整；
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增分页组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增分页组件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/数据大屏新增分页组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏分页组件](/img/dataease/newimg/数据大屏新增分页组件.png)
+
+图 19  数据大屏分页组件
+
+![数据大屏分页组件](/img/dataease/newimg/数据大屏新增分页组件1.png)
+
+图 20  数据大屏分页组件
+
+![数据大屏分页组件](/img/dataease/newimg/数据大屏新增分页组件2.png)
+
+图 21  数据大屏分页组件
 
 ## 3 Tab 组件
+
 :::note
 
 用户在制作数据大屏时，可通过选项卡展示多个视图，并通过点击切换查看；    
@@ -136,7 +194,9 @@ Tab 组件支持放置视图、媒体等组件，配置方式与单独使用该�
 如下图所示，可通过 Tab 页展示多个图表和组件。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏选项卡.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏选项卡](/img/dataease/newimg/数据大屏选项卡.png)
+
+图 22  数据大屏选项卡
 
 :::note
 
@@ -147,46 +207,63 @@ Tab 组件支持图表以组合的形式进行拖入操作。支持规则：
 - Tab 组件内部支持组件组合和解除组合操作。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.2%20数据大屏%20Tab%20组件支持图表以组合的形式进行拖入操作.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏 Tab 组件支持图表以组合的形式进行拖入操作](/img/dataease/newimg/数据大屏%20Tab%20组件支持图表以组合的形式进行拖入操作.gif)
+
+图 23  Tab 内图表组合展示
 
 :::note
 
 Tab 组件支持编辑名称、复制与删除（序号 1）、新增（序号 2）、位置调整（序号 3）、背景设置（序号 4）、标题背景设置（序号 5）、Tab 标签（序号 6）、边框（序号 7）、轮播（序号 8）功能。  
 **注意：Tab 组件的轮播在编辑状态下不生效，在预览模式下才会生效。**
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据大屏tab组件配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![数据大屏tab组件配置](/img/dataease/newimg/数据大屏tab组件配置.png)
+
+图 24  数据大屏tab组件配置
 
 :::note
 
 Tab 组件标签支持标题背景设置，可自定义内边距、圆角、背景色、背景图和边框样式。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏tab标题设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏tab标题设置](/img/dataease/newimg/数据大屏tab标题设置.png)
+
+图 25  数据大屏tab标题设置
 
 :::note
 
 选项卡支持关闭 Tab 标签进行标题隐藏。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏选项卡支持关闭%20Tab%20标签进行标题隐藏。.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![关闭 Tab 标签](/img/dataease/newimg/数据大屏选项卡支持关闭%20Tab%20标签进行标题隐藏。.png)
+
+图 26  关闭 Tab 标签
 
 :::note
 
 可以通过鼠标右键点击选项卡，选择【排序】功能对 Tab 标签进行自定义排序，影响标签的显示顺序。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏中%20Tab%20组件支持标签排序1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏中 Tab 组件标签排序](/img/dataease/newimg/数据大屏中%20Tab%20组件支持标签排序1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏中%20Tab%20组件支持标签排序2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 27  数据大屏中 Tab 组件标签排序
+
+![数据大屏中 Tab 组件标签排序](/img/dataease/newimg/数据大屏中%20Tab%20组件支持标签排序2.png)
+
+图 28  数据大屏中 Tab 组件标签排序
 
 :::note
 
 在调整 Tab 组件大小时勾选【调整大小保持内部组件尺寸】，Tab 组件大小变化将不会影响内部组件的大小。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Tab 组件在调整大小时，支持设置内部组件的大小是否自动调整1](/img/dataease/newimg/Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整1.png)
 
-<img alt="更新1" src="/img/dataease/newimg/1.10%20Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整2.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 29  Tab 调整大小
+
+![Tab 组件在调整大小时，支持设置内部组件的大小是否自动调整2](/img/dataease/newimg/Tab%20组件在调整大小时，支持设置内部组件的大小是否自动调整2.gif)
+
+图 30  Tab 调整大小
 
 ## 4 素材
 
@@ -195,13 +272,21 @@ Tab 组件标签支持标题背景设置，可自定义内边距、圆角、背�
 数据大屏自带丰富的边框和图形、图标，用户可以通过点击【素材】，根据实际场景进行选用。
 :::
 
-<img alt="仪表盘编辑_其他组件" src="/img/dataease/view_generation/3.0数据大屏素材添加边框.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表盘编辑_其他组件](/img/dataease/view_generation/数据大屏素材添加边框.png)
 
-<img alt="仪表盘编辑_其他组件" src="/img/dataease/view_generation/3.0数据大屏装饰.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 31  数据大屏素材添加边框
 
-<img alt="仪表盘编辑_其他组件" src="/img/dataease/view_generation/3.0数据大屏图形.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表盘编辑_其他组件](/img/dataease/view_generation/数据大屏装饰.png)
 
-<img alt="仪表盘编辑_其他组件" src="/img/dataease/view_generation/3.0数据大屏图标.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 32  数据大屏装饰
+
+![仪表盘编辑_其他组件](/img/dataease/view_generation/数据大屏图形.png)
+
+图 33  图形组件
+
+![仪表盘编辑_其他组件](/img/dataease/view_generation/数据大屏图标.png)
+
+图 34  数据大屏图标
 
 ## 5 日期时间
 
@@ -210,11 +295,17 @@ Tab 组件标签支持标题背景设置，可自定义内边距、圆角、背�
 数据大屏支持时钟组件，支持显示星期。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏时间组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏时间组件](/img/dataease/newimg/数据大屏时间组件.png)
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏时间显示.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 35  数据大屏时间组件
 
-<img alt="更新1" src="/img/dataease/newimg/数据大屏时间组件支持显示星期.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![数据大屏时间显示](/img/dataease/newimg/数据大屏时间显示.png)
+
+图 36  数据大屏时间显示
+
+![数据大屏时间组件显示星期](/img/dataease/newimg/数据大屏时间组件支持显示星期.png)
+
+图 37  数据大屏时间组件显示星期
 
 ## 6 网页
 
@@ -222,6 +313,11 @@ Tab 组件标签支持标题背景设置，可自定义内边距、圆角、背�
 
 数据大屏支持时钟组件
 :::
-<img alt="更新1" src="/img/dataease/newimg/数据大屏网页组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease/newimg/数据大屏网页填入.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
+![数据大屏网页组件](/img/dataease/newimg/数据大屏网页组件.png)
+
+图 38  数据大屏网页组件
+
+![数据大屏网页填入](/img/dataease/newimg/数据大屏网页填入.png)
+
+图 39  数据大屏网页填入

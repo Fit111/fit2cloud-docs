@@ -2,14 +2,11 @@
 title: 源码运行
 ---
 
-:::note
 
 目前支持的源码运行环境有： Windows (x86)、Linux（x86 & arm64）、MacOS（x86 & arm64）。
-:::
 
 ## 1 项目结构
 
-:::note
 
 ``` 
 ├── backend                                  # 后端项目
@@ -35,22 +32,18 @@ title: 源码运行
 │   └── redis                                # Redis 配置
 └── shells                                   # 脚本
 ```
-:::
 
 ## 2 安装基础 POM
 
-:::note
 
 该命令会将 `parent pom` 安装到本地 Maven 仓库，使其他外部子工程可以获取最新的 `&lt;properties&gt;` 配置。
 
 ```bash
 ./mvnw install -N
 ```
-:::
 
 ## 3 后端构建
 
-:::note
 
 **提示：** 确保已正确安装 JDK 21 和 Maven 3.8.6 及以上版本和环境。
 
@@ -63,11 +56,9 @@ title: 源码运行
 
 * `-DskipTests`: 跳过测试用例执行
 * `-DskipAntRunForJenkins`: 跳过 Jenkins 使用的 Ant 任务
-:::
 
 ### 3.1  后端参数配置说明
 
-:::note
 
 在本地运行 **Cordys CRM** 项目时，需要在本地创建配置文件：
 
@@ -77,7 +68,6 @@ title: 源码运行
 ```
 **提示：**
 你也可以通过修改应用 ‘Application’ 启动参数，自定义配置文件的加载路径。
-:::
 
 ### 3.2 配置示例
 
@@ -116,13 +106,10 @@ spring.session.timeout=43200s
 
 ## 4 前端构建
 
-:::note
 
  **提示：** 确保已正确安装 Node.js 和依赖环境。
-:::
 
 ### 4.1 工程初始化&运行
-:::note
 
 在`/packages`目录下运行依赖安装命令：
 
@@ -135,11 +122,9 @@ pnpm i -w
 ```node
 npm run build
 ```
-:::
 
 ### 4.2 mobile 移动端工程包
 
-:::note
 
 移动端工程由 Vite+Vue3+TS+Vant-UI 基础框架组成。
 
@@ -156,22 +141,18 @@ npm run dev
 ```node
 npm run build
 ```
-:::
     
 
 ### 4.3 mobile 调试&开发
-:::note
 
 为了方便移动端项目的开发调试，可以通过模拟登录态：
 
     1. 启动 `web` 项目并完成登录，登录后打开浏览器控制台，复制 `localStorage` 中的 `sessionId` 和 `csrfToken` 两个属性值。
     2. 启动 `mobile` 项目，打开控制台，将第1步复制的 `localStorage` 属性值粘贴至控制台，刷新页面即可模拟登录。若登录过期，重新登录 `web` 项目并复制新的属性值替换即可。
     3. 在手机端调试时，进入页面并完成授权登录后，快速点击 10 次用户名区域，切换到 `我的` 菜单，即可唤起 `Eruda` 调试工具。
-:::
     
 
 ### 4.4 WEB 端工程包
-:::note
 
 WEB 端工程由 Vite+Vue3+TS+Naive-UI 基础框架组成。
 
@@ -188,21 +169,17 @@ npm run dev
 ```node
 npm run build
 ```
-:::
 
 ## 5 整体打包
 
-:::note
 
 使用以下命令进行完整的构建与打包：
 
 ```bash
 ./mvnw clean package
 ```
-:::
 ## 6 常见问题
 
-:::note
 
 **Q1：构建过程中遇到依赖下载失败怎么办？**
 
@@ -246,7 +223,6 @@ A：请检查 `cordys-crm.properties` 配置文件中的数据库连接信息是
 A：可以在 `cordys-crm.properties` 文件中添加或修改：
 
     server.port=8081
-:::
 
 ## 7 开源协议
 

@@ -19,9 +19,14 @@ title: 工具箱概述
 点击任一菜单项即可进入对应的工具箱功能页面；进入后页面左侧导航可切换其余功能。
 :::
 
-<img alt="工具箱" src="/img/dataease/newimg/xpack/工具箱总览.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工具箱](/img/dataease/newimg/xpack/工具箱总览.png)
+
+图 1  工具箱总览
 
 ## 2 功能一览
+
+表 1  功能一览
+
 | 功能 | 说明 |
 | --- | --- |
 | 定时报告 | 设置任务定时生成报表（仪表板/数据大屏）并推送给指定人员，支持邮件、企业微信、钉钉、飞书等渠道 |
@@ -41,7 +46,9 @@ title: 工具箱概述
 - **添加任务**：新建定时报告任务，可配置报表、执行周期与推送渠道（邮件/企业微信/钉钉/飞书等）。
 :::
 
-<img alt="工具箱" src="/img/dataease/newimg/xpack/定时报告.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工具箱](/img/dataease/newimg/xpack/定时报告.png)
+
+图 2  定时报告
 
 ## 4 告警管理
 
@@ -53,7 +60,9 @@ title: 工具箱概述
 - **检测记录**：展示告警检测的历史记录。
 :::
 
-<img alt="工具箱" src="/img/dataease/newimg/xpack/告警管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工具箱](/img/dataease/newimg/xpack/告警管理.png)
+
+图 3  告警管理
 
 ## 5 血缘分析
 
@@ -65,7 +74,9 @@ title: 工具箱概述
 - **查询结果**：按数据源名称、数据源集名称、仪表板名称、数据大屏名称展示血缘关系。
 :::
 
-<img alt="工具箱" src="/img/dataease/newimg/xpack/血缘分析.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工具箱](/img/dataease/newimg/xpack/血缘分析.png)
+
+图 4  血缘分析
 
 ## 6 模板管理
 
@@ -77,7 +88,9 @@ title: 工具箱概述
 - **导入模板**：导入仪表板/数据大屏模板文件。
 :::
 
-<img alt="工具箱" src="/img/dataease/newimg/xpack/模板管理.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![工具箱](/img/dataease/newimg/xpack/模板管理.png)
+
+图 5  导入模板
 
 ## 7 操作日志
 

@@ -2,13 +2,10 @@
 title: Linux VNC
 ---
 
-:::note[资产要求]
 
 - 资产必须部署 vncserver。
 - 防火墙 vncserver 端口必须开放给 JumpServer 所有服务器访问。
-:::
 
-:::note
 
 - Centos 7 示例：
 
@@ -37,4 +34,3 @@ vncserver :1
 ```
 
 - `:1` 为 `5901` 端口，同理 `:2` 为 `5902`
-:::

@@ -5,13 +5,10 @@ title: 交互命令
 :::warning[操作不当将导致数据丢失，操作前请仔细确认]
 
 :::
-:::note
 
 参考 [Django 文档](https://docs.djangoproject.com/zh-hans/3.2/intro/tutorial02/)
-:::
 ## 1 操作方法
 
-:::note
 
 ```sh
 docker exec -it jms_core bash
@@ -25,14 +22,11 @@ Organization.objects.all()
 org = Organization.objects.get(name='Default')
 org.change_to()
 ```
-:::
 
-:::note
 
 - 选择交互命令对象查看
 
 ### User
-:::
 
 ```python
 from users.models import *
@@ -127,10 +121,8 @@ node.assets.remove(asset)
 node.delete()
 ```
 ## 2 数据解密
-:::note
 
 ### 系统用户
-:::
 
 ```sh
 docker exec -it jms_core bash

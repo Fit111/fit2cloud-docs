@@ -4,7 +4,6 @@ title: 在线安装
 
 ## 1 环境要求
 
-:::tip
 
 **部署服务器要求：**
 
@@ -13,15 +12,14 @@ title: 在线安装
 * 磁盘空间: 100G
 * 服务器架构: amd64 或 arm64
 
-:::
 
 ## 2 端口要求
 
-:::tip
 
 在线部署 SQLBot 需要开通的访问端口说明如下：
 
-:::
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 在线部署端口要求</div>
 
 | 端口   | 作用       | 说明                        |
 |------|:---------|:--------------------------|
@@ -31,7 +29,6 @@ title: 在线安装
 
 ## 3 安装部署
 
-:::tip
 
 在配置 Docker 环境的操作系统中，进行以下操作：
 
@@ -83,11 +80,9 @@ docker run -d \
     dataease/sqlbot
 ```
 
-:::
 
 ## 4 登录访问
 
-:::tip
 
 安装成功后即可通过浏览器访问地址 `http://目标服务器 IP 地址:8000`，并使用默认的管理员用户和密码登录 SQLBot。
 
@@ -97,6 +92,6 @@ docker run -d \
 默认密码：SQLBot@123456
 ```
 
-:::
 
-![访问SQLBot](/img/sqlbot/installation/login_sqlbot.png)
+<img src="/img/sqlbot/installation/login_sqlbot.png" alt="访问SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
+<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 访问 SQLBot</div>

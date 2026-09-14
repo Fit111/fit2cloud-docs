@@ -3,38 +3,51 @@ title: 嵌入式流程
 ---
 
 ## 1 流程概述
+
 :::note
 
 DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如下。
 
 **注意：嵌入需要在 DataEase 的配置文件 `/opt/dataease3.0/conf/application.yml` 里增加 origin-list 配置，并重启服务。详细见[嵌入式常见问题](./question)。**
 :::
+
 ### 1.1 DIV 嵌入式流程
 
 :::note
 
 在 DataEase 中创建嵌入式应用后，首先获取其 APP ID 和 APP Secret，同时获取 DataEase 用户账号。使用这些信息生成 token，并利用生成的 token 进行认证。引入 DataEase 提供的嵌入式 js 文件后，使用指定参数创建 DataEaseBi 对象，并渲染 DIV 容器即可实现嵌入式应用的集成与展示。
 :::
-<img alt="2. DataEase 嵌入式流程.jpg" src="/img/dataease/embedded/2.%20DataEase%20嵌入式流程.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![2. DataEase 嵌入式流程.jpg](/img/dataease/embedded/2.%20DataEase%20嵌入式流程.jpg)
+
+图 1  DataEase 嵌入式流程
 
 ### 1.2 Iframe 嵌入式流程
+
 :::note
 
 在 DataEase 中创建嵌入式应用后，首先获取其 APP ID 和 APP Secret，同时获取 DataEase 用户账号。使用这些信息生成 token，并利用生成的 token 进行认证。使用 postMessage 通信并传入相应参数，即可实现嵌入式应用的集成与展示。
 :::
-<img alt="2. DataEase 嵌入式流程（2）.jpg" src="/img/dataease/embedded/2.%20DataEase%20嵌入式流程（2）.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![2. DataEase 嵌入式流程（2）.jpg](/img/dataease/embedded/2.%20DataEase%20嵌入式流程（2）.jpg)
+
+图 2  DataEase 嵌入式流程
 
 ## 2 端口说明
+
 :::note
 
 **注意：企业版（嵌入式版）使用端口为 9080，需要开放此端口访问。**
 :::
+
+表 1  端口说明
 
 | 端口   |    作用    |       说明        |
 |------|:--------:|:---------------:|
 | 9080 | Apisix 服务 | 企业版、专业版、嵌入式版使用 apisix 的 9080 端口进行嵌入及访问 |
 
 ## 3 APP 创建
+
 :::note
 
 点击【系统设置】，进入【嵌入式管理】页面创建嵌入式应用。
@@ -50,9 +63,18 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 - APP Secret ：嵌入式获取 JWT token 需要填写的 Secret。
 :::
-<img alt="2.2嵌入式 APP 创建.png" src="/img/dataease/embedded/2.2嵌入式%20APP%20创建.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="2.2嵌入式 APP 创建（2）.png" src="/img/dataease/embedded/2.2嵌入式%20APP%20创建（2）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="2.2嵌入式 APP 创建（3）.png" src="/img/dataease/embedded/2.2嵌入式%20APP%20创建（3）.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![嵌入式 APP 创建](/img/dataease/embedded/嵌入式%20APP%20创建.png)
+
+图 3  嵌入式 APP 创建
+
+![嵌入式 APP 创建（2）](/img/dataease/embedded/嵌入式%20APP%20创建（2）.png)
+
+图 4  嵌入式 APP 创建
+
+![嵌入式 APP 创建（3）](/img/dataease/embedded/嵌入式%20APP%20创建（3）.png)
+
+图 5  嵌入式 APP 创建
 
 :::note
 
@@ -105,12 +127,24 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 数据大屏 ID（编辑或预览界面均可获取） 及图表 ID 获取。
 :::
-<img alt="1数据大屏id.jpg" src="/img/dataease/embedded/1数据大屏id.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1数据大屏-图表 id.jpg" src="/img/dataease/embedded/1数据大屏-图表%20id.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![1数据大屏id.jpg](/img/dataease/embedded/1数据大屏id.jpg)
+
+图 6  数据大屏 ID
+
+![1数据大屏-图表 id.jpg](/img/dataease/embedded/1数据大屏-图表%20id.jpg)
+
+图 7  数据大屏图表 ID
 
 :::note
 
 仪表板 ID（编辑或预览界面均可获取） 以及图表 ID  获取。
 :::
-<img alt="1图表id.jpg" src="/img/dataease/embedded/1图表id.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="1仪表板-图表id.jpg" src="/img/dataease/embedded/1仪表板-图表id.jpg" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![1图表id.jpg](/img/dataease/embedded/1图表id.jpg)
+
+图 8  图表 ID
+
+![1仪表板-图表id.jpg](/img/dataease/embedded/1仪表板-图表id.jpg)
+
+图 9  仪表板图表 ID

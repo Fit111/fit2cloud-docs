@@ -3,29 +3,22 @@ title: 偏好设置
 ---
 
 ## 1 基本设置
-:::note
 
 - 选中偏好设置`基本`按钮，可以对 JumpServer 页面导出文件的加密密码进行设置。
-:::
 ![preference_settings01](/img/jumpserver-v3/preference_settings01.png)
 
-:::note
 
 - 功能详细说明：
 
 | 功能    |                说明                  |
 | -------| ------------------------------------ |
 | 文件加密密码 | 从 JumpServer 导出或者下载的文件中会存在敏感信息，此处设置文件的加密密码。此处的文件加密密码仅适用于账号密码批量导出的场景中。 |
-:::
 
 ## 2 Luna 配置设置
-:::note
 
 - 选中偏好设置`Luna 配置设置`按钮，可以对 Luna 页面连接资产时的参数进行设置。
-:::
 ![preference_settings02](/img/jumpserver-v3/preference_settings02.png)
 
-:::note
 
 - 功能详细说明：
 
@@ -41,20 +34,15 @@ title: 偏好设置
 | 字符终端字体大小 | 支持设置终端字体的大小显示。 |
 | 字符终端 Backspace AS Ctrl+H | 支持在命令行中是否开启快捷键 Ctrl+H 作为删除键。 |
 | 右键快速粘贴 | 支持在命令行中开启右键快速粘贴。 |
-:::
 
 ## 3 Koko 配置设置
-:::note
 
 - 选中偏好设置`Koko 配置设置`按钮，可以对 Koko 组件连接资产时的参数进行设置。
-:::
 ![preference_settings03](/img/jumpserver-v3/preference_settings03.png)
 
-:::note
 
 - 功能详细说明：
 
 | 功能    |                说明                  |
 | -------| ------------------------------------ |
 | 文件名冲突解决方案 | 当通过 KOKO 组件进行文件上传时，支持对冲突的文件名进行替换或加后缀的操作。 |
-:::

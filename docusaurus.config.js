@@ -4,8 +4,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 // 站点标题按语言区分：构建 zh-Hans 时显示中文，构建 en 时显示英文
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE || 'zh-Hans';
+// 轻量模式仅作用于本地开发，生产构建始终包含完整文档。
+const isLiteDev = process.env.NODE_ENV === 'development' && process.env.DOCS_DEV_LITE === '1';
 const config = {
-  title: currentLocale === 'en' ? 'Docs Center' : '文档中心',
+  title: currentLocale === 'en' ? 'Docs Center' : '飞致云文档中心',
   tagline: currentLocale === 'en' ? 'Multiple product docs, one site, global search' : '多个产品文档，一个站点，全局搜索',
 
   // favicon 用 headTags 绝对路径提供(避免 Docusaurus 在英文站 /en/ 下自动加 /en 前缀导致 404)
@@ -49,10 +51,10 @@ const config = {
 
   // 客户端模块: 路由更新时给 <html data-docs-product> 打上当前产品标记,
   // 供 custom.css 按产品定制文档页样式(见 src/clientModules/docsProduct.js)。
-  // navbarSticky: 滚动时切换导航栏贴顶(见 src/clientModules/navbarSticky.js)。
+  // navbarGaps: 注入导航栏左右两侧的空白遮挡元素(见 src/clientModules/navbarGaps.js)。
   clientModules: [
     './src/clientModules/docsProduct.js',
-    './src/clientModules/navbarSticky.js',
+    './src/clientModules/navbarGaps.js',
   ],
 
   url: 'https://docs.fit2cloud.com',
@@ -144,7 +146,8 @@ const config = {
         // 版本化: current(jumpserver-docs) = v4.0, 历史版本 v3.0
         lastVersion: 'current',
         versions: {
-          current: { label: 'v4.0', badge: false, banner: 'none' },
+          current: { label: 'v5.0', badge: false, banner: 'none' },
+          v4: { label: 'v4.0', badge: false, banner: 'none' },
           v3: { label: 'v3.0', badge: false, banner: 'none' },
         },
       },
@@ -246,11 +249,12 @@ const config = {
         // 由 Figma 设计稿导航 logo 节点(492:10074)导出为透明 PNG(fit2cloud-logo.png)。
         // 亮/暗主题统一用同一张(暗色下 navbar 仍为白色悬浮卡, 深蓝 logo 清晰可见)。
         // title 留空: 只显示 logo, 不显示文字(若省略 title, Docusaurus 会用站点标题作为文字)
+        // 现改为带 "| 文档中心" 的完整横幅 FIT2CLOUD 飞致云 文档中心-01.png
         title: '',
         logo: {
-          src: 'img/fit2cloud-logo.png',
-          srcDark: 'img/fit2cloud-logo.png',
-          alt: 'FIT2CLOUD 飞致云',
+          src: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
+          srcDark: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
+          alt: 'FIT2CLOUD 飞致云 文档中心',
         },
         items: [
           {to: '/', label: '首页', position: 'left'},
@@ -266,18 +270,20 @@ const config = {
           // 与"首页/产品文档"同一行, 右侧只留 搜索 + 版本切换 + 中英文切换。
           // 外部链接一律用 href(不用 to), NavbarNavLink 会自动加
           // target="_blank" + rel="noopener noreferrer" + 外链小图标
-          {href: 'https://www.fit2cloud.com/', label: '官网', position: 'left'},
           {href: 'https://bbs.fit2cloud.com/', label: '论坛', position: 'left'},
           {href: 'https://edu.fit2cloud.com/', label: '培训认证', position: 'left'},
           {href: 'https://www.fit2cloud.com/about/index.html', label: '关于我们', position: 'left'},
-          {href: 'https://www.fit2cloud.com/partners/index.html', label: '合作伙伴', position: 'left'},
+          // {href: 'https://www.fit2cloud.com/partners/index.html', label: '合作伙伴', position: 'left'},
           {
             // 版本切换: 仅在有多版本文档实例的页面显示, 单版本/非文档页自动隐藏(不影响首页)。
             type: 'custom-VersionSwitcher',
             position: 'right',
           },
           {
-            type: 'search',
+            // 右上角即时搜索: 复用首页 HomeSearch 的搜索逻辑与结果面板
+            // (src/theme/NavbarItem/HomeNavbarSearch.js)。
+            // 注意: Navbar/Content 已去掉 easyops SearchBar 兜底, 避免双搜索框。
+            type: 'custom-HomeNavbarSearch',
             position: 'right',
           },
         ],
@@ -309,12 +315,13 @@ const config = {
           },
           {
             title: '资料下载',
+            // 产品标识供 Footer/Links 在渲染时排序，支持修改共用顺序后热更新。
             items: [
-              {label: '1Panel 产品资料下载', to: 'https://fit2cloud.com/1panel/download/introduce-1panel_2026.pdf'},
-              {label: 'JumpServer 产品资料下载', to: 'https://fit2cloud.com/jumpserver/documents/introduce-jumpserver_2026.pdf'},
-              {label: 'DataEase 产品资料下载', to: 'https://fit2cloud.com/dataease/download/introduce-dataease_2026.pdf'},
-              {label: 'MaxKB 产品资料下载', to: 'https://fit2cloud.com/maxkb/download/introduce-maxkb_2026.pdf'},
-              {label: 'Cordys 产品资料下载', to: 'https://fit2cloud.com/cordys/download/introduce-cordys_2026.pdf'},
+              {'data-product-id': '1panel', label: '1Panel 产品资料下载', to: 'https://fit2cloud.com/1panel/download/introduce-1panel_2026.pdf'},
+              {'data-product-id': 'jumpserver', label: 'JumpServer 产品资料下载', to: 'https://fit2cloud.com/jumpserver/documents/introduce-jumpserver_2026.pdf'},
+              {'data-product-id': 'maxkb', label: 'MaxKB 产品资料下载', to: 'https://fit2cloud.com/maxkb/download/introduce-maxkb_2026.pdf'},
+              {'data-product-id': 'dataease', label: 'DataEase 产品资料下载', to: 'https://fit2cloud.com/dataease/download/introduce-dataease_2026.pdf'},
+              {'data-product-id': 'cordys', label: 'Cordys 产品资料下载', to: 'https://fit2cloud.com/cordys/download/introduce-cordys_2026.pdf'},
             ],
           },
         ],
@@ -337,5 +344,25 @@ const config = {
       },
     }),
 };
+
+if (isLiteDev) {
+  config.staticDirectories = config.staticDirectories.filter(
+    (directory) => !directory.includes('_versioned_docs/'),
+  );
+  config.plugins = config.plugins.map((plugin) =>
+    Array.isArray(plugin) && plugin[0] === '@docusaurus/plugin-content-docs'
+      ? [plugin[0], {...plugin[1], onlyIncludeVersions: ['current']}]
+      : plugin,
+  );
+  config.plugins.push(function lightweightDevTools() {
+    return {
+      name: 'lightweight-dev-tools',
+      // 保留热更新，省略浏览器调试用的 JS 源码映射。
+      configureWebpack() {
+        return {devtool: false};
+      },
+    };
+  });
+}
 
 export default config;

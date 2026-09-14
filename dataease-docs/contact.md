@@ -1,10 +1,11 @@
 ---
 title: 联系我们
+wrapperClassName: de-contact
 ---
 
 ## 1 微信公众号
 
-![wechat-official](/img/dataease/wechat-official.jpg)
+<img alt="微信公众号" src="/img/dataease/wechat-official.jpg" width="280" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 2 开源社区论坛
 
@@ -16,7 +17,7 @@ title: 联系我们
 
 ## 3 学习认证
 
-<img alt="wechat-official" src="/img/dataease/学习认证.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
+<img alt="学习认证" src="/img/dataease/学习认证.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 4 项目地址
 
@@ -29,10 +30,10 @@ title: 联系我们
 
 :::note
 
-- 官网：`http://www.dataease.cn`
+- 官网：[https://www.dataease.cn](https://www.dataease.cn)
 - 邮箱：support@fit2cloud.com
 - 电话：400-052-0755
 :::
 
-[dataease]: `https://github.com/dataease/dataease`
-[dataease stars]: `https://img.shields.io/github/stars/dataease/dataease.svg`
+[dataease]: https://github.com/dataease/dataease
+[dataease stars]: https://img.shields.io/github/stars/dataease/dataease.svg

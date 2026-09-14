@@ -2,14 +2,13 @@
 title: 高级智能体
 ---
 
-:::note
 
 点击【创建】，选择【高级智能体】，输入智能体名称，可以根据需求选择模板，点击【创建】进入工作流编排页面。
-:::
 
-![选择智能体类型](/img/maxkb/app/app_workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_workflow.png" alt="图 1  选择智能体类型" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  选择智能体类型</div>
+
 
 高级智能体通过可视化工作流，将 AI 模型、知识库、业务逻辑、外部工具等节点自由组合，进行调试与发布。
 
@@ -20,40 +19,38 @@ title: 高级智能体
 - 连线的后置节点可以引用前置节点的输出参数，如果节点名称变更，需要重新复制变量，参数引用方式是`\{\{节点名称.变量名称\}\}`。
 
 完成工作流程设计之后，使用左下方的画布控制栏，可以对画布进行整体调整，包括画布缩放、节点收缩以及流程一键优化。
-:::
 
-![默认画布](/img/maxkb/app/defult_workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/defult_workflow.png" alt="图 2  默认画布" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  默认画布</div>
 
 ## 1 基础节点
 
-:::note
 
 每个工作流由【基本信息】与【开始】两个基础节点构成，且均不可删除、不可复制。
 
 - 基本信息：用于配置智能体基础数据：智能体名称、智能体描述、开场白、语音开关等。每个智能体仅存在一个该节点。
 - 开始：作流执行的起点，所有后续节点均从此节点开始流转。每个智能体仅存在一个该节点。
-:::
 
 #### 1.1 基本信息
 
-:::note
 
 节点说明：工作流的开始节点，有且唯一，不能删除和复制，问答页面输入的问题会作为该节点的输出参数 \{question\}， 后续节点如需引用可以复制输出参数或选择变量：`开始节点-&gt;用户问题`。
-:::
 
-<img alt="基本信息" src="/img/maxkb/app/start_node.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/start_node.png" alt="图 3  基本信息" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  基本信息</div>
+
 
 长期记忆：在开启长期记忆功能后，系统将自动从历史对话中提炼用户的偏好、背景、目标及规则约定等关键信息，按照用户维度持久化存储至数据库。
 
 - 触发机制：支持设置按对话轮次或按时间周期方式触发记忆生成。
 - 使用：在后续对话中，管理员可通过引用变量 \{memory\} 将当前用户的记忆内容注入系统提示词或对话上下文，使智能体无需重复询问即可持续了解用户，有效提升对话的连贯性与个性化体验。
-:::
 
-![长期记忆](/img/maxkb/app/longtime_memory.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/longtime_memory.png" alt="图 4  长期记忆" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  长期记忆</div>
+
 
  文件上传：开启后智能体将支持在对话时上传文档。
 
@@ -66,12 +63,15 @@ title: 高级智能体
 每次最多上传 10 个文件，单个文件不超过 100 MB，在后续节点中可以对上传后的文件进行处理。默认 3 个文件，单个文件不超过 50 MB。
 
 上传方式：支持本地文件上传和 URL 地址上传两种上传方式。
-:::
 
-<img alt="开始节点-文件上传" src="/img/maxkb/app/upload_config.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="开始节点-文件上传" src="/img/maxkb/app/upload_config1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/upload_config.png" alt="图 5  文件上传限制设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  文件上传限制设置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/upload_config1.png" alt="图 6  文件上传方式设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  文件上传方式设置</div>
+
 
 用户输入：在会话开始时，需要在用户端提供的必要信息，例如，岗位角色、模型、知识库等，以便后续流程可以根据不同输入进行不同的流程设计。
 
@@ -88,11 +88,11 @@ title: 高级智能体
   3、匹配值下拉联动：
       若源参数是单选 / 树形单选 / 多选：匹配值直接下拉展示该参数所有配置好的选项标签、选项值；
       若源参数是文本类：支持手动输入匹配内容，支持变量引用语法 \{\{参数名\}\}
-:::
 
-<img alt="开始节点-用户输入" src="/img/maxkb/app/user_input.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/user_input.png" alt="图 7  开始节点-用户输入" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  开始节点-用户输入</div>
+
 
 接口传参：在通过智能体公开访问链接时可配置的参数。添加接口参数后将会在公开访问 URL 自动增加接口参数，在与第三方系统集成。
 
@@ -100,13 +100,13 @@ title: 高级智能体
 - 会话变量：变量在当前对话流程中全程有效，用于实现节点间数据传递与逻辑判断。
 - 语音输入：开启后将支持以语音的方式进行问题的输入，需要使用语音识别模型。   
 - 语音播放：开启后回答内容将以语音的方式进行播放，可以使用浏览器内置的播放，也可以使用语音合成模型进行播放。
-:::
 
-![会话变量](/img/maxkb/app/chat_var.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/chat_var.png" alt="图 8  会话变量" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  会话变量</div>
 
 #### 1.2 开始
 
-:::note
 
 作为工作流执行的起点，所有后续节点均从此节点开始流转。
 
@@ -133,20 +133,21 @@ title: 高级智能体
 - 音频\{audio\}:客户端上传的音频文件。
 - 视频\{video\}:客户端上传的视频文件。
 - 其它文件\{other\}：客户端上传的其他文件。
-:::
 
-<img alt="开始节点" src="/img/maxkb/app/app_start.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_start.png" alt="图 9  开始节点" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  开始节点</div>
+
 
 点击画布右上角【添加组件】，即可通过“点击”或“拖拽”方式将所需节点加入工作流。组件按功能分为三大类，具体说明如下：
 
 - **基础组件**：覆盖 AI 能力、知识库、业务逻辑等。
 - **工具**：通过函数方式灵活处理复杂需求。
 - **智能体**：一键引入其他已发布的智能体作为子流程，直接复用其问答结果，实现快速拼装与能力复用。
-:::
 
-![编排画布](/img/maxkb/app/workflow.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/workflow.png" alt="图 10  编排画布" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  编排画布</div>
 
 ## 2 基本组件
 
@@ -154,7 +155,6 @@ title: 高级智能体
 
 #### 2.1.1  AI 对话
 
-:::note
 
 节点说明：如果智能体需要与 AI 大模型进行对话，则需要在编排中添加 AI 对话组件。
 
@@ -190,47 +190,50 @@ title: 高级智能体
 - 异常信息 \{exception_message\}：支持为异常分支配置专属执行流程，如自动重试、默认值兜底。
 
 **注意**：MCP 工具的调用需要大语言模型支持函数调用，如果大语言模型不支持，则配置无效。
-:::
 
-<img alt="AI对话" src="/img/maxkb/app/ai_chat.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat.png" alt="图 11  AI对话" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  AI对话</div>
+
 
 提示词是在每次对话开始时固定注入的上下文指令，用于为模型确立身份、语气、知识边界及输出格式等前置规则，从而确保回复精准、风格一致且可控。
 
 - 变量支持：如 \{data\} 自动插入知识库片段，\{question\} 引用用户问题，实现精准、可控、低幻觉的智能回复。
 
 AI 对话节点支持基于用户输入的主题内容，自动生成高质量、结构完整的系统提示词，辅助用户快速构建适用于当前场景的提示文本。通过合理编排提示词，管理员可在不更换模型的前提下，实现多场景、多角色的快速切换，显著降低大模型幻觉风险并提升用户体验。
-:::
-![智能体设置](/img/maxkb/app/ai_chat_prompt.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_prompt.png" alt="图 12  智能体设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  智能体设置</div>
+
 
 MCP：引用 MCP和自定义 MCP Server Config。
-:::
-<img alt="AI对话MCP" src="/img/maxkb/app/ai_chat_MCP.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="AI对话自定义" src="/img/maxkb/app/ai_chat_config.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_MCP.png" alt="图 13  AI对话MCP" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  AI对话MCP</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_config.png" alt="图 14  AI对话自定义" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  AI对话自定义</div>
+
 
 工具：支持添加【工具】中已启用的工具。
-:::
-![AI对话工具](/img/maxkb/app/ai_chat_new_tool.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_new_tool.png" alt="图 15  AI对话工具" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  AI对话工具</div>
+
 
 Skills：支持添加【工具】中已启用的 Skills。
-:::
-![AI对话技能](/img/maxkb/app/ai_chat_skills.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_skills.png" alt="图 16  AI对话技能" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  AI对话技能</div>
+
 
 智能体：支持添加已创建的其他智能体。
-:::
-![AI对话智能体](/img/maxkb/app/ai_chat_agent.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_agent.png" alt="图 17  AI对话智能体" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  AI对话智能体</div>
 
 #### 2.1.2 意图识别
-:::note
 
 节点说明：根据输入进行意图的分类识别。
 
@@ -245,12 +248,12 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 - 分类 \{category\}：根据意图分类的类型，返回分类名称。 
 - 理由 \{reason\}：判断意图分类的理由。
-:::
-<img alt="意图识别" src="/img/maxkb/app/intent_classification.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/intent_classification.png" alt="图 18  意图识别" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  意图识别</div>
 
 #### 2.1.3 文本转语音
 
-:::note
 
 节点说明：将文本转换为音频。
 
@@ -263,13 +266,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 结果 \{result\}：将文本转成的音频内容。
-:::
 
-<img alt="文本转语音" src="/img/maxkb/app/text2audio.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/text2audio.png" alt="图 19  文本转语音" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  文本转语音</div>
 
 #### 2.1.4 语音转文本
 
-:::note
 
 节点说明：将音频文件转换为文本。
 
@@ -282,13 +285,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 结果 \{result\}：语音转换后的文本内容。
-:::
 
-<img alt="语音转文本" src="/img/maxkb/app/audio2text.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/audio2text.png" alt="图 20  语音转文本节点" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  语音转文本节点</div>
 
 #### 2.1.5 图片生成
 
-:::note
 
 节点说明：根据文本描述生成对应的图片。
 
@@ -303,13 +306,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 - AI 回答内容 \{answer\}：即图片生成模型根据文本输入生成的图片。
 - 图片 \{image\}: 生成图片的详细信息。
-:::
 
-<img alt="图片生成" src="/img/maxkb/app/vision_gen.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/vision_gen.png" alt="图 21  图片生成" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  图片生成</div>
 
 #### 2.1.6 图片理解
 
-:::note
 
 节点说明：对用户上传的图片文件进行分析和理解。
 
@@ -329,13 +332,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - AI 回答内容\{answer\}：根据上传的图片以及角色、提示词等信息图片理解模型返回的内容。
-:::
 
-<img alt="图片理解" src="/img/maxkb/app/picture_extract.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/picture_extract.png" alt="图 22  图片理解" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22  图片理解</div>
 
 #### 2.1.7 文生视频
 
-:::note
 
 节点说明：根据文本描述生成对应的视频。
 
@@ -349,12 +352,12 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 视频 \{video\}：根据文本生成的视频内容。
-:::
-<img alt="语音转文本" src="/img/maxkb/app/text2video.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/text2video.png" alt="图 23  文生视频节点" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  文生视频节点</div>
 
 #### 2.1.8 图生视频
 
-:::note
 
 节点说明：根据图片生成对应的视频。
 
@@ -370,13 +373,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 视频 \{video\}：根据图片生成的视频内容。
-:::
 
-<img alt="图生视频" src="/img/maxkb/app/picture2video.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/picture2video.png" alt="图 24  图生视频" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  图生视频</div>
 
 #### 2.1.9 视频理解
 
-:::note
 
 节点说明：对用户上传的视频文件进行分析和理解。
 
@@ -396,13 +399,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - AI 回答内容\{answer\}：根据上传的视频以及角色、提示词等信息视觉模型返回的内容。
-:::
 
-<img alt="视频理解" src="/img/maxkb/app/video_extract.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/video_extract.png" alt="图 25  视频理解" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  视频理解</div>
 
 #### 2.1.10 问题优化
 
-:::note
 
 节点说明：根据当前会话的历史聊天记录，以及在节点设置的大语言模型和提示词，对当前问题进行智能优化。
 
@@ -417,15 +420,15 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 问题优化结果 \{answer\}：通过大模型优化后的问题。
-:::
 
-<img alt="问题优化" src="/img/maxkb/app/question_opt.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/question_opt.png" alt="图 26  问题优化" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  问题优化</div>
 
 ### 2.2 知识库
 
 #### 2.2.1  知识库检索
   
-:::note
 
 节点说明：如果智能体需要关联知识库，则需要在编排中添加知识库检索节点，选择知识库、设置检索参数、选择检索的问题。
 
@@ -444,13 +447,13 @@ Skills：支持添加【工具】中已启用的 Skills。
 - 满足直接回答的分段列表 \{is_hit_handling_method_list\}：数组类型，指根据检索问题、检索参数进行检索后命中的分段中满足直接回答的所有分段列表，包含了分段的所有属性；       
 - 检索结果 \{data\}：字符串类型，指根据检索问题、检索参数进行检索后命中的分段内容；       
 - 满足直接回答的分段内容 \{directly_return\}：字符串类型，指根据检索问题、检索参数进行检索后命中的分段中满足直接回答的所有分段内容。
-:::
 
-<img alt="知识库检索" src="/img/maxkb/app/dataset_search.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/dataset_search.png" alt="图 27  知识库检索" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  知识库检索</div>
 
 #### 2.2.2 文档标签检索
 
-:::note
 
 节点说明：根据设置的文档标签筛选条件检索出符合条件的文档。
 
@@ -467,20 +470,20 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 - 知识库列表 \{knowledge_list\}：数组类型，指符合标签条件的知识库列表。
 - 文档列表 \{document_list\}:数组类型，指符合标签条件的文档列表。
-:::
 
-<img alt="文档标签检索" src="/img/maxkb/app/doc_tag_search.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/doc_tag_search.png" alt="图 28  文档标签检索节点配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  文档标签检索节点配置</div>
+
 
 该节点配合【知识库检索】节点进行分段内容检索，进一步缩小检索范围，使检索结果更加准确。
-:::
 
-![文档标签检索](/img/maxkb/app/doc_tag_replay.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/doc_tag_replay.png" alt="图 29  文档标签检索结果输出" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  文档标签检索结果输出</div>
 
 #### 2.2.3 多路召回
 
-:::note
 
 节点说明：根据需要重排的内容、检索问题以及检索参数进行多路召回。
 
@@ -496,28 +499,28 @@ Skills：支持添加【工具】中已启用的 Skills。
 - 重排结果列表 \{result_list\}：数组类型，指根据重排后的结果列表。
 - 重排结果 \{result\}：字符串类型，指根据检索参数后的重排结果。
 - 满足直接回答的分段列表 \{is_hit_handling_method_list\}: 数组类型，指根据检索参数后的检索列表。
-:::
 
-<img alt="多路召回" src="/img/maxkb/app/rerank.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/rerank.png" alt="图 30  多路召回" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  多路召回</div>
 
 ### 2.3 业务逻辑
 
 #### 2.3.1  判断器
 
-:::note
 
 节点说明：根据不同的条件进行逻辑判断，每个判断分支后面必须有后置执行节点。  
 
 判断器节点输出参数说明：
 
 - 分支名称\{branch_name\}：每个判断分支的名称。
-:::
 
-<img alt="判断器" src="/img/maxkb/app/condition_statement.png" width="450" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/condition_statement.png" alt="图 31  判断器" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  判断器</div>
 
 #### 2.3.2  表单收集
 
-:::note
 
 节点说明：通过表单的设计，以引导的方式主动获取必要的信息，一般智能体于需要多次询问的应答场景。
 
@@ -531,56 +534,56 @@ Skills：支持添加【工具】中已启用的 Skills。
 - 表单全部内容\{form_data\}：表单的全部内容。
 
 表单全部内容将作为固定的输出，对于各个表单项也都进行参数化输出。
-:::
 
-<img alt="表单收集" src="/img/maxkb/app/form.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/form.png" alt="图 32  表单收集" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 32  表单收集</div>
+
 
 表单添加参数的组件类型支持文本框、多行文本框、JSON 文本框、密码框、单选框、多选框、选项卡、单行选项卡、单行多选卡、滑块、开关、日期、文件上传、模型、知识库和树形选择器。
-:::
 
-<img alt="文件上传" src="/img/maxkb/app/form_fileup.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/form_fileup.png" alt="图 33  文件上传" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  文件上传</div>
+
 
 表单参数支持引用变量或参数输入:
 
 * 组件类型为【单选框、多选框、选项卡、单行选项卡、单行多选卡、JSON文本框】时，赋值方式中可选择自定义或引用变量，默认为：自定义。引用变量的格式可参考【引用变量】旁的提示信息。
-:::
 
-<img alt="参数格式" src="/img/maxkb/app/form_parameters_format.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/form_parameters_format.png" alt="图 34  参数格式" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 34  参数格式</div>
+
 
 * 【文本框、多行文本框、密码框】组件的默认值支持参数输入。参数格式参考：\{\{开始.question\}\}
-:::
 
-<img alt="参数输入" src="/img/maxkb/app/input_parameter.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/input_parameter.png" alt="图 35  参数输入设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  参数输入设置</div>
+
 
 * 【显隐设置】可通过本表单位置靠前的输入参数、全局 / 会话变量、前置节点输出变量的值，动态控制当前参数显示或隐藏。
-:::
 
-<img alt="参数输入" src="/img/maxkb/app/show_hide.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>   
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/show_hide.png" alt="图 36  显隐设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 36  显隐设置</div>
 
 #### 2.3.3  指定回复
 
-:::note
 
 节点说明：指定输出文本内容，在知识库查询到的相关内容满足直接回答的要求，可以输出检索内容，也可以在知识库没有查询到关联内容时，指定回复内容。
 
 输出参数：   
 
 * 内容\{answer\}： 指定回复输出的内容。
-:::
 
-<img alt="指定回复" src="/img/maxkb/app/direct_reply.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/direct_reply.png" alt="图 37  指定回复" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 37  指定回复</div>
 
 #### 2.3.4 循环节点
 
-:::note
 
 节点说明：通过设置循环类型和循环体，在满足特定条件前重复执行任务序列。添加循环节点后，会生成一个循环节点和对应的循环体画布。
 
@@ -591,25 +594,31 @@ Skills：支持添加【工具】中已启用的 Skills。
 * 指定次数循环：按预设固定次数执行循环，用户可以直接设置任务重复运行的具体次数（如循环 5 次、10 次），可以满足“明确次数的重复操作”的使用需求；
     * 循环次数：设置循环次数，如果小于 1，则设置为 1。
 * 无限循环：无固定终止条件，任务将持续重复执行，直至满足停止条件时终止，默认最大循环 500 次，适用于“需长期运行，并等待特定事件触发”的使用场景。
-:::
     
-<img alt="循环数组" src="/img/maxkb/app/loop_array.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="循环次数" src="/img/maxkb/app/loop_count.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="无线循环" src="/img/maxkb/app/loop_infinite.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_array.png" alt="图 38  循环数组" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 38  循环数组</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_count.png" alt="图 39  循环次数" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 39  循环次数</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_infinite.png" alt="图 40  无线循环" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 40  无线循环</div>
+
 
 输出参数：在循环体中【循环开始】设置的循环变量，可以作为循环节点的输出参数，供各工作流节点调用。
-:::
-<img alt="输出参数" src="/img/maxkb/app/loop_output.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_output.png" alt="图 41  输出参数" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  输出参数</div>
+
 
 循环体：循环体画布用于编排循环的逻辑，每次循环时，工作流会执行循环体画布中的工作流。
-:::
-![循环](/img/maxkb/app/loop.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop.png" alt="图 42  循环" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 42  循环</div>
+
 
 **循环开始**：作为循环执行的起点，循环体中所有后续节点均从此节点开始流转。
 
@@ -625,55 +634,53 @@ Skills：支持添加【工具】中已启用的 Skills。
 * 循环元素\{item\}：数组中的单个数据。数组由多个元素组成，每个元素可以是数字、字符、字符串等数据类型。
     
         例如：数组 array=[23,26,37,88,90]，array[0]的 index 是 0，item 为 23； array[4]的 index 是 4，item 为 90。
-:::
-<img alt="循环开始" src="/img/maxkb/app/loop_begins.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_begins.png" alt="图 43  循环开始" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 43  循环开始</div>
+
 
 **Continue**：用于终止当前循环，执行下次循环。
 
 添加条件：添加终止当前循环的条件，当满足条件时，终止当前循环，执行下次的循环。
 
 **注意**：Continue 不能作为结束节点。
-:::
 
-<img alt="循环continue" src="/img/maxkb/app/continue.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/continue.png" alt="图 44  循环continue" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 44  循环continue</div>
+
 
 **Break**：终止当前循环，跳出循环体.
 
 添加条件：添加终止当前循环的条件，当满足条件时，终止当前循环，跳出循环体，继续工作流。
-:::
 
-<img alt="循环break" src="/img/maxkb/app/break.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/break.png" alt="图 45  循环break" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 45  循环break</div>
+
 
 **注意**：
 
 - 循环体内不支持添加循环节点，避免造成死循环；
 - 循环类型为无限循环时，默认最大循环 1000 次，如需修改配置参数，则需要在 $\{MAXKB_BASE\}/maxkb/.env（默认是 /opt/maxkb/.env）文件中进行修改，并且在修改完后需执行 `mkctl reload` 命令重新加载配置文件。
-:::
 
 ### 2.4 数据处理
 
 #### 2.4.1 变量赋值
 
-:::note
 
 节点说明：更新全局变量的值。
 
 变量：待赋值的目标全局变量。
 
 赋值：给变量赋值的相关内容，可引用变量、自定义和赋值为空。
-:::
 
-<img alt="变量赋值" src="/img/maxkb/app/reset_var.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/reset_var.png" alt="图 46  变量赋值" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 46  变量赋值</div>
 
 #### 2.4.2 变量聚合
 
-:::note
 
 节点说明：将多个变量整合为一个参数进行输出。
 
@@ -688,20 +695,20 @@ Skills：支持添加【工具】中已启用的 Skills。
 输出参数：
 
 * 显示名称\{变量\}：聚合后的参数名称，随聚合变量更新。
-:::
 
-<img alt="变量聚合" src="/img/maxkb/app/aggregate_var.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/aggregate_var.png" alt="图 47  变量聚合节点设置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 47  变量聚合节点设置</div>
+
 
 变量聚合的主要功能是将多个变量整合为一个参数进行输出，能减少流程中变量传递的复杂度。
-:::
 
-![变量聚合](/img/maxkb/app/aggregate_var1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/aggregate_var1.png" alt="图 48  引用聚合变量" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 48  引用聚合变量</div>
 
 #### 2.4.3 变量拆分
 
-:::note
 
 节点说明：用 JSON Path 表达式把输入的 JSON 变量一次拆成多个独立变量。
 
@@ -714,14 +721,17 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 * 结果\{result\}：输出所有拆分变量的内容。
 * 显示名称\{拆分变量\}：单个拆分变量的内容，随拆分变量更新。
-:::
 
-<img alt="变量拆分" src="/img/maxkb/app/split_var.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
-![变量拆分](/img/maxkb/app/split_var1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/split_var.png" alt="图 49  变量拆分节点设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 49  变量拆分节点设置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/split_var1.png" alt="图 50  引用拆分变量" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 50  引用拆分变量</div>
 
 #### 2.4.4 参数提取
 
-:::note
 
 节点说明：从非结构化文本或半结构化文本中提取结构化参数。
 
@@ -735,22 +745,22 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 * 结果\{result\}：输出所有提取参数的内容。
 * 提取参数\{参数名\}：单个提取参数的内容，随提取参数更新。
-:::
 
-<img alt="参数提取" src="/img/maxkb/app/parameter_extraction.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/parameter_extraction.png" alt="图 51  参数提取配置" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 51  参数提取配置</div>
+
 
 参数提取主要利用 AI 模型，从非结构化文本或半结构化文本中提取结构化参数。使用场景如处理合同文档时，可使用该自动提取 “签订日期”、“合同金额”、”服务内容“ 等关键参数。
-:::
 
-![参数提取](/img/maxkb/app/parameter_extraction1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/parameter_extraction1.png" alt="图 52  参数提取使用示例" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 52  参数提取使用示例</div>
 
 ### 2.5 其他
 
 #### 2.5.1 MCP 调用
 
-:::note
 
 节点说明：通过 SSE/Streamable_HTTP 协议调用 MCP 服务中的工具。
 
@@ -764,11 +774,11 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 结果 \{result\}：MCP 工具执行返回结果。
-:::
 
-<img alt="MCP 节点" src="/img/maxkb/app/mcp.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/mcp.png" alt="图 53  MCP 节点" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 53  MCP 节点</div>
+
 
 ```
 MCP Server Config 格式参考如下
@@ -779,11 +789,9 @@ MCP Server Config 格式参考如下
     }
 }
 ```
-:::
 
 #### 2.5.2 文档内容提取
 
-:::note
 
 节点说明：对用户上传的文档进行内容总结。
 
@@ -794,35 +802,35 @@ MCP Server Config 格式参考如下
 参数输出：
 
 - 文档输出 \{content\}：对用户上传文件进行的总结输出。
-:::
 
-<img alt="文档内容提取" src="/img/maxkb/app/doc_extract.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/doc_extract.png" alt="图 54  文档内容提取" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 54  文档内容提取</div>
 
 #### 2.5.3 自定义工具
 
-:::note
 
 在高级编排流程中，编写 Python 代码和添加参数创建工具数作为流程中的一个处理节点，以灵活处理复杂需求，自定义工具与创建工具内容一致，详细说明见：[工具](../tool/tool#2)。
-:::
 
-<img alt="添加函数" src="/img/maxkb/app/app_function.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_function.png" alt="图 55  自定义工具添加函数" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 55  自定义工具添加函数</div>
 
 ### 2.6 工具
 
-:::note
 
 在高级编排流程中，可以添加工具中的工具作为组件节点，以灵活处理复杂需求，工具的创建详细说明见：[工具](../tool/tool)。
 
 节点设置：即工具的输入参数。
 
 参数输出：即工具的返回结果。
-:::
 
-![添加函数](/img/maxkb/app/app_function2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_function2.png" alt="图 56  工作流添加工具节点" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 56  工作流添加工具节点</div>
 
 ### 2.7 智能体
 
-:::note
 
 在高级编排流程中，可以添加其它智能体（简单配置智能体和流程编排智能体）作为流程中的一个处理节点，直接快速利用子智能体的问答结果。
 
@@ -834,80 +842,83 @@ MCP Server Config 格式参考如下
 参数输出：
 
 - 结果：即子智能体的返回结果。
-:::
 
-![添加函数](/img/maxkb/app/app_subapp.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/app_subapp.png" alt="图 57  工作流添加子智能体节点" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 57  工作流添加子智能体节点</div>
 
 ## 3 其它说明
 
 ### 3.1 执行条件
 
-:::note
 
 MaxKB 工作流中支持多出多进，在这个情况下，汇集节点可以根据与前置节点的逻辑关系，选择执行条件。
 
 - 所有：需要等所有前置连线节点全部执行完成后，才可执行当前节点。
 - 任一：任一前置连线节点执行完成后，即可执行当前节点。
-:::
 
-![执行条件](/img/maxkb/app/node_condition.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/node_condition.png" alt="图 58  执行条件" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 58  执行条件</div>
 
 ### 3.2 禁用/启用
 
-:::note
 
 智能体编排画布支持节点节点禁用/启用功能。用户可以在不删除节点的前提下，临时禁用特定节点以调试流程或屏蔽部分逻辑，从而大幅提升工作流调试效率与编排灵活性。
 
 - 被禁用的节点及后置节点将不会被执行，恢复启用后则正常执行。
-:::
 
-<img alt="禁用/启用" src="/img/maxkb/app/on_off.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/on_off.png" alt="图 59  禁用/启用" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 59  禁用/启用</div>
 
 ### 3.3 调试
 
-:::note
 
 完成所有的编排设计后，可点击【调试】后，先校验流程是否合规，校验通过后可在当前页面进行对话测试。
-:::
 
-![调试预览](/img/maxkb/app/workflow_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/workflow_view.png" alt="图 60  调试预览" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 60  调试预览</div>
+
 
 在调试对话框中进行提问，AI 回答完成后，会显示【执行详情】，点击【执行详情】后，在弹出执行详情对话框中可以查看每个流程节点的执行状态、耗时以及其它执行信息。
-:::
 
-![执行详情](/img/maxkb/app/exec_detail.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/exec_detail.png" alt="图 61  执行详情" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 61  执行详情</div>
 
 ### 3.4 发布历史
 
-:::note
 
 智能体高级编排中，支持查看发布历史版本的工作流、时间和用户。
-:::
 
-![发布历史](/img/maxkb/app/public_history.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_history.png" alt="图 62  发布历史列表" />
 
-:::note
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 62  发布历史列表</div>
+
 
 智能体支持编辑历史发布版本的名称，默认发布名称为发布的时间，同时支持恢复历史版本的工作流。
-:::
-![发布历史](/img/maxkb/app/public_history_edit.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_history_edit.png" alt="图 63  编辑发布版本名称" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 63  编辑发布版本名称</div>
 
 ### 3.5 自动保存
 
-:::note
 
 高级编排流程默认手动保存，也可设置自动保存，开启自动保存后将每隔 1 分钟保存到本地，并在发布成功后将配置同步到后台数据库。
-:::
 
-![自动保存](/img/maxkb/app/auto_save.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/auto_save.png" alt="图 64  自动保存" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 64  自动保存</div>
 
 ### 3.6 发布
 
-:::note
 
 点击【发布】后会先校验当前工作流是否符合规则，如果合规将成功发布，否则发布失败。发布成功后，所有节点配置修改才在问答页面中生效。
 
 可以点击【去对话】进行 AI 问答，也可以查看发布历史并进行版本恢复。
-:::
+
+
+
+

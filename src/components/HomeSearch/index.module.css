@@ -1,6 +1,9 @@
 /* ==================================================================
- * 首页 Hero 搜索框 + 即时结果下拉面板
+ * 首页 Hero 搜索框 (搜索框本体样式)
  * 数值取自 Figma frame '交互' 的 Frame 1564942 / 搜索内容 / 查看全部结果
+ *
+ * 即时结果下拉面板的样式已抽到 ResultsPanel.module.css,
+ * 与导航栏 HomeNavbarSearch 共用。
  * ================================================================== */
 
 .wrap {
@@ -8,15 +11,16 @@
   z-index: 20; /* 高于 hero 光晕与插画, 保证下拉面板浮在最上层 */
   width: 800px;
   max-width: 100%;
-  margin: 104px auto 0;
+  margin: 40px auto 0; /* 上移 40px (原 80px) */
 }
 
-/* 搜索框: 800x72 r12 白底 (设计稿 Frame 'Search') */
+/* 搜索框: 800x52 r12 白底 */
 .searchBox {
   position: relative;
-  height: 72px;
+  height: 52px;
   background: #ffffff;
   border-radius: 12px;
+  font-size: 14px;
   box-shadow: 0 8px 28px rgba(28, 75, 170, 0.08);
   display: flex;
   align-items: center;
@@ -24,154 +28,38 @@
 .input {
   flex: 1;
   height: 100%;
-  padding: 0 140px 0 32px;
+  padding: 0 72px 0 20px;
   border: none;
   outline: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   color: #1f2329;
 }
 .input::placeholder {
   color: #c8cbcb;
+  font-size: 13px; /* 占位文字单独小一号 */
+  font-weight: normal;
 }
 .input::-webkit-search-cancel-button {
   display: none;
 }
 
-/* 搜索按钮: 104x52 r8, 距框右/上各 10px */
+/* 搜索按钮: 64x36 r8, 距框右/上各 8px (适配 52 高) */
 .btn {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 104px;
-  height: 52px;
+  right: 8px;
+  top: 8px;
+  width: 64px;
+  height: 36px;
   border: none;
   border-radius: 8px;
-  background: #0c7be0;
+  background: linear-gradient(90deg, rgba(12, 123, 224, 1) 0%, rgba(51, 61, 255, 1) 100%);
   color: #ffffff;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
-}
-.btn:hover {
-  background: #0a6cc7;
-}
-
-/* ---------------- 下拉面板 ----------------
-   设计稿: 与搜索框同宽 800, 距框 8, 白底 r12, 内边距 27(左右/上)。
-
-   【position:fixed 说明】
-   面板用 position:fixed + 内联 style(top/left/width, 由 JS 以搜索框的
-   getBoundingClientRect 计算), 并渲染到 <body>(createPortal)。
-   原因: Hero 有 overflow:hidden(裁剪光晕), 若面板 absolute 沈出 Hero 底部会被
-   整个裁掉、只露出第一行(见 index.js 顶部注释的 BUG), 故改为 fixed 脱离收剪范围。
-   z-index 取高位, 保证浮在 navbar / 产品卡片等一切之上。 */
-.panel {
-  position: fixed;
-  padding: 27px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(28, 75, 170, 0.14);
-  max-height: 60vh;
-  overflow-y: auto;
-  z-index: 1000;
-  box-sizing: border-box;
-}
-
-/* 结果行: 746x70(=800-27*2), 行内容 54 高 + 上下留白 8, 图标与正文间距 12 */
-.row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  height: 70px;
-  padding: 8px;
-  border-radius: 8px;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-.row:hover {
-  text-decoration: none;
-}
-/* hover / 键盘选中态 (设计稿 Frame 1564944 第 3 行: #f5f8ff r8) */
-.rowActive {
-  background: #f5f8ff;
-}
-.rowIcon {
-  flex: 0 0 32px;
-  width: 32px;
-  height: 32px;
-  display: block;
-}
-.rowBody {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.rowTitleRow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-/* 标题 20/500 #6c7280, 单行省略 */
-.rowTitle {
-  flex: 0 1 auto;
-  min-width: 0;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 32px;
-  color: #6c7280;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-/* 分类 Tag: 底 #edf0f1 r4, 文字 12/400 #323535, 高 24 */
-.rowTag {
-  flex: none;
-  height: 24px;
-  padding: 0 8px;
-  border-radius: 4px;
-  background: #edf0f1;
-  color: #323535;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
-  white-space: nowrap;
-}
-/* 摘要 14/400 #6c7280, 最多一行 */
-.rowDesc {
-  display: block;
-  margin-top: 4px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #6c7280;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 底部「查看全部结果」: 14/400, 默认 #6c7280, hover #333eff (设计稿 Frame 1564943) */
-.viewAll {
-  display: block;
-  margin-top: 8px;
-  padding: 9px 8px 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #6c7280;
-  text-decoration: none;
-}
-.viewAll:hover {
-  color: #333eff;
-  text-decoration: none;
-}
-
-.empty {
-  padding: 16px 8px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #6c7280;
 }
 
 /* ---------------- 响应式 ---------------- */
@@ -180,32 +68,17 @@
     margin-top: 48px;
   }
   .searchBox {
-    height: 60px;
+    height: 52px;
   }
   .input {
-    padding: 0 120px 0 24px;
-    font-size: 16px;
+    padding: 0 72px 0 20px;
+    font-size: 15px;
   }
   .btn {
-    width: 92px;
-    height: 44px;
+    width: 64px;
+    height: 36px;
     right: 8px;
     top: 8px;
-    font-size: 16px;
-  }
-  .panel {
-    padding: 16px;
-  }
-  .row {
-    gap: 8px;
-    height: 64px;
-  }
-  .rowTitle {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  .rowDesc {
-    font-size: 13px;
-    margin-top: 2px;
+    font-size: 14px;
   }
 }

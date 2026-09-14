@@ -4,7 +4,6 @@ title: 对接Amazon Bedrock
 
 ## 1 添加模型
 
-:::note
 
 选择模型供应商为`Amazon Bedrock`，并在模型添加对话框中输入如下必要信息：
 
@@ -14,14 +13,12 @@ title: 对接Amazon Bedrock
 * 基础模型：Amazon Bedrock 支持的模型名称，下拉选项是常用的一些大语言模型名称，支持自定义输入。     
 * Region Name：模型开通的区域。    
 * Access Key ID/Secret Access Key:  Access Key ID 和 Secret Access Key 是用于对 AWS 服务（包括 Amazon Bedrock）的编程访问进行身份验证的凭证。
-:::
 
 ## 2 配置样例
 
-:::note
 
 Amazon Bedrock-大语言模型配置样例图示：
-:::
 
-<img alt="AWS LLM模型" src="/img/maxkb/model/AWS_LLM.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/AWS_LLM.png" alt="图 1  Amazon Bedrock 大语言模型 配置样例图" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Amazon Bedrock 大语言模型 配置样例图</div>

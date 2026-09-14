@@ -9,74 +9,74 @@ title: v2.5.0
 
 仪表板、数据大屏、数据集、数据源模块的资源树，支持按照资源的创建时间、名称进行升序和降序排列。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.1%20仪表板、数据大屏等页面的资源树支持排序.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.1%20仪表板、数据大屏等页面的资源树支持排序.png)
 
 ### 1.2 仪表板支持外部参数功能
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.2可视化资源支持外部参数功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.2可视化资源支持外部参数功能.png)
 
 ### 1.3 数据大屏增加时钟组件
 
-<img alt="更新1" src="/img/dataease-v2/newimg/1.3%20数据大屏增加时钟组件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.3%20数据大屏增加时钟组件.png)
 
 ### 1.4 数据大屏支持多个组件批量移动
 :::note
 
 数据大屏支持选择多个组件后批量移动。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.4%20数据大屏支持多个组件批量移动.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.4%20数据大屏支持多个组件批量移动.gif)
 
 ### 1.5 日期查询组件可设置查询的起止日期
 :::note
 
 区间类型支持以下设置：开始于、结束于、时间区间、动态查询时间窗口（单次查询最多 N 天）。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期1.png)
 :::note
 
 开始于：【开始于】日期前的日期无法被选择，支持设置【固定时间】与【动态时间】。比如，以下设置【开始于】日期为 2024-03-29，则 2024-03-29 前的日期无法再被选择。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期2.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期3.png)
 :::note
 
 结束于：【结束于】日期后的日期无法被选择，支持设置【固定时间】与【动态时间】。比如，以下设置【结束于】日期为 2024-03-29，则 2024-03-29 后的日期无法再被选择。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期4.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期5.png)
 :::note
 
 时间区间：只能选择该区间内的日期进行查询，支持设置【固定时间】与【动态时间】。比如如下设置了一个月的动态时间，则查询组件只能选今天起前一个月内的日期。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期7.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期6.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期7.png)
 :::note
 
 动态查询窗口：一次最多只能查询 N 天的日期范围，如下所示，设置单次查询时间最多 5 天，则在使用日期范围组件时，无法一次性选择大于 5 天的时间范围。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期8.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期9.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期8.png)
+![更新1](/img/dataease-v2/newimg/1.5%20日期查询组件可设置查询的起止日期9.png)
 
 ### 1.6 新增气泡地图
-<img alt="更新1" src="/img/dataease-v2/newimg/1.6%20新增气泡地图.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.6%20新增气泡地图.png)
 
 ### 1.7 增加配置：开启移动端
 :::note
 
 可在移动端的编辑界面设置是否【开启移动端】。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/1.7%20增加配置：开启移动端.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/1.7%20增加配置：开启移动端.png)
 
 ## 2 数据准备
 
 ### 2.1 支持获取数据源数据表以及数据集字段的描述信息
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="更新1" src="/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息.png)
+![更新1](/img/dataease-v2/newimg/2.1%20支持获取数据源数据表以及数据集字段的描述信息2.png)
 
 ### 2.2 计算字段支持被二次引用
 
-<img alt="更新1" src="/img/dataease-v2/newimg/2.2%20计算字段支持被二次引用.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/2.2%20计算字段支持被二次引用.png)
 
 ## 3 系统设置
 ### 3.1 支持从个人信息处绑定第三方平台账号
@@ -84,7 +84,7 @@ title: v2.5.0
 
 支持从个人信息处绑定第三方平台账号，前提是已经在系统设置的平台对接中对接了第三方平台。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20支持从个人信息处绑定第三方平台账号.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20支持从个人信息处绑定第三方平台账号.png)
 
 ## 4 其他
 ### 4.1 支持配置是否启用 HTML 缓存
@@ -112,5 +112,5 @@ cache: true
 ```
 :::
 ### 4.2 集成 MaxKB，新增 DataEaseAI 小助手
-<img alt="更新1" src="/img/dataease-v2/newimg/4.2%20集成%20MaxKB，新增%20DataEaseAI%20小助手.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/4.2%20集成%20MaxKB，新增%20DataEaseAI%20小助手.png)
 

@@ -10,7 +10,9 @@ title: 组件基础功能
 **提示：** 切换其他图表，右侧配置项也会跟随变动为新图表的内容。
 :::
 
-<img alt="组建编辑_基础功能" src="/img/dataease/dashboard_generation/2.0组建编辑基础功能.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组建编辑_基础功能](/img/dataease/dashboard_generation/组建编辑基础功能.png)
+
+图 1  组建编辑基础
 
 ## 2 复制
 
@@ -19,7 +21,9 @@ title: 组件基础功能
 点击下图中所示的位置，复制组件。
 :::
 
-<img alt="组件复制_基础功能" src="/img/dataease/dashboard_generation/2.0视图复制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件复制_基础功能](/img/dataease/dashboard_generation/视图复制.png)
+
+图 2  视图复制
 
 ## 3 删除
 
@@ -28,7 +32,9 @@ title: 组件基础功能
 点击下图所示的位置，删除组件。
 :::
 
-<img alt="组件删除_基础功能" src="/img/dataease/dashboard_generation/2.0视图删除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件删除_基础功能](/img/dataease/dashboard_generation/视图删除.png)
+
+图 3  视图删除
 
 ## 4 组件位置及大小调整
 
@@ -37,9 +43,12 @@ title: 组件基础功能
 仪表板为矩阵模式，组件支持通过拖拽进行位置移动和大小设置。
 :::
 
-<img alt="组件位置及大小" src="/img/dataease/dashboard_generation/2.0仪表板视图设置大小.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件位置及大小](/img/dataease/dashboard_generation/仪表板视图设置大小.png)
+
+图 4  仪表板视图设置大小
 
 ## 5 事件设置
+
 :::note
 
 图片、富文本、指标卡、图形、图标组件支持事件设置。仪表板中支持的事件：
@@ -53,7 +62,9 @@ title: 组件基础功能
 **注意：事件绑定需退出编辑模式后生效，富文本开启绑定事件则内部点击事件失效。**
 :::
 
-<img alt="组件位置及大小" src="/img/dataease/dashboard_generation/事件设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件位置及大小](/img/dataease/dashboard_generation/事件设置.png)
+
+图 5  事件设置
 
 ## 6 联动设置
 
@@ -63,48 +74,63 @@ title: 组件基础功能
 **提示：** 仪表盘、水波图、富文本不支持联动设置。
 :::
 
-<img alt="联动设置" src="/img/dataease/dashboard_generation/2.0仪表板视图联动.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动设置](/img/dataease/dashboard_generation/仪表板视图联动.png)
+
+图 6  仪表板视图联动
 
 :::note
 
 如下图，当设置两个图表联动时，设置相对应的图表的联动字段，设置完成后，点击【确定】，联动设置完成。
 :::
 
-<img alt="设置联动字段" src="/img/dataease/dashboard_generation/2.0仪表板进行联动设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![设置联动字段](/img/dataease/dashboard_generation/仪表板进行联动设置.png)
 
-<img alt="设置联动字段" src="/img/dataease/dashboard_generation/2.0仪表板进行联动设置2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 7  仪表板进行联动设置
+
+![设置联动字段](/img/dataease/dashboard_generation/仪表板进行联动设置2.png)
+
+图 8  仪表板进行联动设置
 
 :::note
 
 第一步，点击【东南亚】，并选择【联动】。
 :::
+
 :::note
 
 如果图表同时设置了联动和钻取，那么当点击时由用户选择执行联动或者钻取，当只设置了联动时，默认执行联动；当只设置了钻取时，默认执行钻取。
 :::
 
-<img alt="联动展示" src="/img/dataease/dashboard_generation/2.0点击联动按钮.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动展示](/img/dataease/dashboard_generation/点击联动按钮.png)
+
+图 9  点击联动按钮
 
 :::note
 
 第二步，联动结果展示，如下图，设置了联动的图表，只展示浙江省的数据，图表联动时，支持联动部分高亮显示。
 :::
 
-<img alt="联动展示" src="/img/dataease/dashboard_generation/2.0仪表板联动效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动展示](/img/dataease/dashboard_generation/仪表板联动效果.png)
+
+图 10  仪表板联动效果
 
 :::note
 
 联动按钮始终固定在页面右上角，不随页面滚动而上移。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/联动按钮固定悬浮在页面右上角.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![联动按钮固定悬浮在页面右上角](/img/dataease/newimg/联动按钮固定悬浮在页面右上角.gif)
+
+图 11  联动按钮固定悬浮在页面右上角
 
 :::note
 
 第三步，可点击下图所示位置，清除局部联动和所有联动。
 :::
 
-<img alt="地图联动" src="/img/dataease/dashboard_generation/2.0仪表板联动效果清除.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![地图联动](/img/dataease/dashboard_generation/仪表板联动效果清除.png)
+
+图 12  仪表板联动效果清除
 
 ## 7 跳转设置
 
@@ -114,14 +140,18 @@ title: 组件基础功能
 **提示：** 仪表盘、水波图不支持跳转。
 :::
 
-<img alt="跳转设置入口" src="/img/dataease/dashboard_generation/2.0仪表板进行跳转设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置入口](/img/dataease/dashboard_generation/仪表板进行跳转设置.png)
+
+图 13  跳转设置
 
 :::note
 
 跳转设置的弹窗页面为内嵌式 DIV 弹窗样式。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/仪表板跳转设置的弹窗页面样式变更为内嵌式弹窗.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置内嵌弹窗](/img/dataease/newimg/仪表板跳转设置的弹窗页面样式变更为内嵌式弹窗.gif)
+
+图 14  跳转设置内嵌弹窗
 
 :::note
 
@@ -134,7 +164,9 @@ title: 组件基础功能
 **注意：** 当前用户至少拥有目标仪表板的查看权限，跳转时，若启用字段是指标字段，则提示”未获取跳转信息“。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/开启跳转设置以及设置内容.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![开启跳转设置](/img/dataease/newimg/开启跳转设置以及设置内容.png)
+
+图 15  开启跳转设置
 
 :::note
 
@@ -142,7 +174,9 @@ title: 组件基础功能
 在目标仪表板上创建外部参数，添加所需的外部参数，并选择与其关联的查询组件或图表。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/图表跳转支持携带查询组件的过滤值并传递给外部参数1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转携带查询过滤值](/img/dataease/newimg/图表跳转支持携带查询组件的过滤值并传递给外部参数1.png)
+
+图 16  跳转携带查询过滤值
 
 :::note
 
@@ -151,21 +185,27 @@ title: 组件基础功能
 如果目标仪表板中有多个图表需要联动，可在【联动图表】中进行字段关联设置。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数2.PNG" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图表跳转支持携带查询组件的过滤值并传递给外部参数2](/img/dataease/newimg/图表跳转支持携带查询组件的过滤值并传递给外部参数2.PNG)
+
+图 17  跳转携带查询过滤值
 
 :::note
 
 切换【携带查询条件】，将源仪表板的查询组件值绑定到目标仪表板的外部参数。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/20图表跳转支持携带查询组件的过滤值并传递给外部参数3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转携带查询过滤值](/img/dataease/newimg/20图表跳转支持携带查询组件的过滤值并传递给外部参数3.png)
+
+图 18  跳转携带查询过滤值
 
 :::note
 
 可将源仪表板上的查询条件动态传递至目标仪表板，实现跨仪表板的图表联动。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.3%20图表跳转支持携带查询组件的过滤值并传递给外部参数.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![图表跳转支持携带查询组件的过滤值并传递给外部参数](/img/dataease/newimg/图表跳转支持携带查询组件的过滤值并传递给外部参数.gif)
+
+图 19  跳转携带查询过滤值
 
 :::note
 
@@ -177,21 +217,27 @@ title: 组件基础功能
 **注意：** 跳转时，若启用字段是指标字段，则提示”未获取跳转信息“。
 :::
 
-<img alt="跳转设置" src="/img/dataease/dashboard_generation/仪表板设置外部连接跳转.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置](/img/dataease/dashboard_generation/仪表板设置外部连接跳转.png)
+
+图 20  仪表板设置外部连接跳转
 
 :::note
 
 点击图表中的维度字段，即可触发跳转。
 :::
 
-<img alt="跳转展示" src="/img/dataease/dashboard_generation/2.0点击跳转按钮.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转展示](/img/dataease/dashboard_generation/点击跳转按钮.png)
+
+图 21  点击跳转按钮
 
 :::note
 
 如果选择的是外部链接跳转，那么跳转至第三方平台，同时点击值传递给第三方链接。
 :::
 
-<img alt="跳转设置" src="/img/dataease/dashboard_generation/跳转结果_外部链接.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![跳转设置](/img/dataease/dashboard_generation/跳转结果_外部链接.png)
+
+图 22  跳转结果 外部链接
 
 :::note
 
@@ -199,24 +245,33 @@ title: 组件基础功能
 也可以选择在配置联动设置时，选择“同时触发联动和下钻”，这样当点击该图表时将同时执行下钻与联动动作。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/1.10%20下钻和联动支持配置同时触发2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![下钻和联动支持配置同时触发2](/img/dataease/newimg/下钻和联动支持配置同时触发2.png)
 
-<img alt="更新1" src="/img/dataease/newimg/1.10%20下钻和联动支持配置同时触发3.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 23  下钻和联动配置同时触发
+
+![下钻和联动支持配置同时触发3](/img/dataease/newimg/下钻和联动支持配置同时触发3.gif)
+
+图 24  下钻和联动配置同时触发
 
 ## 8 组件样式
+
 :::note
 
 所有组件均支持通过双击组件编辑区域的名称进行改名操作。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/仪表板支持更多组件修改名称.gif" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板更多组件修改名称](/img/dataease/newimg/仪表板支持更多组件修改名称.gif)
+
+图 25  仪表板更多组件修改名称
 
 :::note
 
 如下图，切换到 【样式】，在【背景】和【基础样式】进行组件样式设置。
 :::
 
-<img alt="组件样式入口" src="/img/dataease/dashboard_generation/2.0仪表板组件样式.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式入口](/img/dataease/dashboard_generation/仪表板组件样式.png)
+
+图 26  仪表板组件样式
 
 :::note
 
@@ -224,28 +279,37 @@ title: 组件基础功能
 以下图为示例，勾选【背景】，上传背景图片，或者勾选【边框】，选择边框样式，点击【确定】，完成背景设置。
 :::
 
-<img alt="组件背景设置" src="/img/dataease/dashboard_generation/2.0仪表板组件图片边框.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件背景设置](/img/dataease/dashboard_generation/仪表板组件图片边框.png)
 
-<img alt="组件样式" src="/img/dataease/dashboard_generation/2.0仪表板组件边框选择.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+图 27  仪表板组件图片边框
+
+![组件样式](/img/dataease/dashboard_generation/仪表板组件边框选择.png)
+
+图 28  仪表板组件边框选择
 
 :::note
 
 查询组件支持标题颜色、表情颜色、边框颜色、提示文字颜色、自定义背景颜色设置，如下图所示。
 :::
 
-<img alt="组件样式" src="/img/dataease/dashboard_generation/2.0查询组件样式设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![组件样式](/img/dataease/dashboard_generation/查询组件样式设置.png)
+
+图 29  查询组件样式设置
 
 :::note
 
 支持设置组件背景模糊，该效果能够透过组件展示并模糊下层内容，透明区域也将应用模糊处理。若为图片，需确保其具有透明背景以生效。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/仪表板支持组件背景模糊-毛玻璃效果.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![仪表板组件背景模糊-毛玻璃效果](/img/dataease/newimg/仪表板支持组件背景模糊-毛玻璃效果.png)
+
+图 30  仪表板组件背景模糊-毛玻璃效果
 
 :::note
 
 图片等其他组件同样支持设置组件样式；以下图为示例，图片组件可选择边框样式以及设置背景。
 :::
 
-<img alt="更新1" src="/img/dataease/dashboard_generation/仪表板组件样式设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>	
+![仪表板组件样式设置](/img/dataease/dashboard_generation/仪表板组件样式设置.png)
 
+图 31  仪表板组件样式设置

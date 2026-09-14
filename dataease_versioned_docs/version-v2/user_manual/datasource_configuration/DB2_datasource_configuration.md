@@ -25,14 +25,14 @@ title: 配置 DB2 数据源
 步骤二：按照以下步骤，选择 Db2 图标。
 :::
 
-<img alt="Db2" src="/img/dataease-v2/datasource_configuration/选择DB2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![Db2](/img/dataease-v2/datasource_configuration/选择DB2.png)
 
 :::note
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 :::
 
-<img alt="DB2链接信息" src="/img/dataease-v2/datasource_configuration/DB2链接信息.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![DB2链接信息](/img/dataease-v2/datasource_configuration/DB2链接信息.png)
 
 :::note
 
@@ -57,6 +57,6 @@ title: 配置 DB2 数据源
 步骤四：获取 Schema 并检验数据源，检验成功后如下图所示，点击保存即可。
 :::
 
-<img alt="DB2获取Schema" src="/img/dataease-v2/datasource_configuration/DB2获取Schema.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![DB2获取Schema](/img/dataease-v2/datasource_configuration/DB2获取Schema.png)
 
-<img alt="DB2校验成功" src="/img/dataease-v2/datasource_configuration/DB2校验成功.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![DB2校验成功](/img/dataease-v2/datasource_configuration/DB2校验成功.png)

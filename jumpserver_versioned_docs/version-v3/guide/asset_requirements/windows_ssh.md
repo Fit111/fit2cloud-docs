@@ -2,26 +2,19 @@
 title: Windows SSH
 ---
 
-:::note[Windows 资产的测试连接、硬件信息获取、用户自动推送功能需要进行以下相关设置]
 
 注意：按照下面的文档部署好 Openssh 后，在 Web 的资产列表里面找到您的 Windows 资产，在协议组中加入 rdp 3389和 ssh 22协议，然后就可以使用资产测试连接、硬件信息获取、用户自动推送的功能。
-:::
 
-:::note
 
 Win7/Win2008 需要升级 `powershell` 到 3.0 以上，详情请参考 [ansible 客户端需求](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html)
-:::
 ## 1 安装 OpenSSH
 
-:::note
 
 [下载最新的 OpenSSH-Win64.msi](https://github.com/PowerShell/Win32-OpenSSH/releases/latest)  
 - 通过管理员身份的直接运行即可，安装过程无需交互，安装完成后不需要任何配置即可直接使用。
-:::
 
 ## 2 使用 Private Key
 
-:::note
 
 - [Setup public key based authentication for windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Setup-public-key-based-authentication-for-windows)
 
@@ -127,13 +120,10 @@ Subsystem	sftp	sftp-server.exe
 net stop sshd
 net start sshd
 ```
-:::
 
 ## 3 Private Key 使用方式
-:::note
 
 ```powershell
 ssh user@ip -i <private_key_absolute_path>        (local users)
 ssh user@domain@ip -i <private_key_absolute_path> (Domain users)
 ```
-:::

@@ -11,12 +11,9 @@ title: 注意事项
 - 然后按照升级文档对其他 JumpServer 节点升级即可。
 :::
 
-:::note
 
 - 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录。
-:::
 
-:::note
 
 ```sh
 cd /opt
@@ -29,4 +26,3 @@ export SKIP_BACKUP_DB=1
 ./jmsctl.sh upgrade
 ./jmsctl.sh start
 ```
-:::

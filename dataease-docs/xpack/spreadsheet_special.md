@@ -9,7 +9,7 @@ title: 电子表格特殊功能
 
 ## 1 能力概览
 
-:::note
+表 1  能力概览
 
 | 能力 | 说明 |
 | --- | --- |
@@ -18,8 +18,7 @@ title: 电子表格特殊功能
 | 查询控件 | 配置查询条件，联动过滤明细表 / 透视表 |
 | 数据集复制粘贴 | 在表格内复制 / 剪切 / 粘贴已绑定数据集的对象 |
 | 右侧配置面板 | 选中数据对象后配置字段、样式与数据集 |
-| 替换数据集 | 批量切换表格内数据集并映射字段（见 [发布运维](./spreadsheet_publish#dataset-replace)） |
-:::
+| 替换数据集 | 批量切换表格内数据集并映射字段（见 [发布运维](./spreadsheet_publish#1-数据集替换)） |
 
 :::note
 
@@ -38,17 +37,21 @@ title: 电子表格特殊功能
 4. 点击【确定】后，在右侧配置数据集与字段。
 :::
 
-<img alt="插入明细表" src="/img/dataease/newimg/xpack/插入图表1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="插入明细表" src="/img/dataease/newimg/xpack/插入数据对象1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![插入明细表](/img/dataease/newimg/xpack/插入图表1.png)
+
+图 1  插入图表
+
+![插入明细表](/img/dataease/newimg/xpack/插入数据对象1.png)
+
+图 2  插入数据对象
 
 :::note
 
 【插入】下拉 **不包含** 传统 BI 图表类型。数据可视化请使用明细表 / 透视表，并通过查询控件联动过滤。
 :::
 
-<a id="detail-table"></a>
+## 3 明细表
 
-## 3 明细表 
 :::note
 
 **用途**：逐行展示数据集明细，适合清单、对账、明细报表。
@@ -71,11 +74,13 @@ title: 电子表格特殊功能
 - 渲染区域受保护，不可直接编辑单元格内容；
 - 支持行列冻结。
 :::
-<img alt="插入明细表" src="/img/dataease/newimg/xpack/插入数据对象2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-<a id="pivot-table"></a>
+![插入明细表](/img/dataease/newimg/xpack/插入数据对象2.png)
 
-## 4 透视表 
+图 3  插入数据对象
+
+## 4 透视表
+
 :::note
 
 **用途**：按维度汇总指标，适合交叉分析、统计报表。
@@ -98,22 +103,23 @@ title: 电子表格特殊功能
 - 渲染区域受保护；
 - 支持行列冻结。
 :::
-<img alt="插入透视表" src="/img/dataease/newimg/xpack/插入透视表.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
-:::note
+![插入透视表](/img/dataease/newimg/xpack/插入透视表.png)
+
+图 4  插入透视表
 
 **明细表 vs 透视表**
+
+表 2  透视表
 
 | 对比项 | 明细表 | 透视表 |
 | --- | --- | --- |
 | 展示方式 | 逐行明细 | 按行 / 列交叉汇总 |
 | 字段区域 | 数据列 | 行、列 |
 | 典型场景 | 销售明细、对账单 | 地区 × 品类汇总 |
-:::
 
-<a id="query-control"></a>
+## 5 查询控件
 
-## 5 查询控件 
 :::note
 
 【查询控件】位于工具栏右侧。点击后，公式栏上方出现查询栏，提供：
@@ -126,13 +132,18 @@ title: 电子表格特殊功能
 查询条件用于过滤并联动刷新表格内的明细表 / 透视表对象。
 :::
 
-<img alt="查询控件" src="/img/dataease/newimg/xpack/查询控件.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询控件](/img/dataease/newimg/xpack/查询控件.png)
+
+图 5  查询控件
 
 ### 5.1 查询条件类型
 
 :::note
 
 根据关联字段类型，可配置以下条件：
+:::
+
+表 3  查询条件类型
 
 | 类型 | 适用字段 | 说明 |
 | --- | --- | --- |
@@ -143,9 +154,10 @@ title: 电子表格特殊功能
 | 数字范围 | 数字 | 最小值—最大值区间 |
 | 时间 | 日期 | 单个时间点，支持固定 / 动态时间 |
 | 时间范围 | 日期 | 起止时间，支持固定 / 动态时间 |
-:::
 
-<img alt="查询控件" src="/img/dataease/newimg/xpack/查询条件类型.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询控件](/img/dataease/newimg/xpack/查询条件类型.png)
+
+图 6  查询条件类型
 
 ### 5.2 配置步骤
 
@@ -162,9 +174,17 @@ title: 电子表格特殊功能
 5. 保存配置。不需要查询栏时，可【删除查询组件】。
 :::
 
-<img alt="添加查询条件" src="/img/dataease/newimg/xpack/添加查询组件1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="添加查询条件配置" src="/img/dataease/newimg/xpack/添加查询组件2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="查询条件关联字段" src="/img/dataease/newimg/xpack/添加查询组件3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![添加查询条件](/img/dataease/newimg/xpack/添加查询组件1.png)
+
+图 7  添加查询组件
+
+![添加查询条件配置](/img/dataease/newimg/xpack/添加查询组件2.png)
+
+图 8  添加查询组件
+
+![查询条件关联字段](/img/dataease/newimg/xpack/添加查询组件3.png)
+
+图 9  添加查询组件
 
 ### 5.3 查询行为与联动
 
@@ -176,30 +196,35 @@ title: 电子表格特殊功能
 - 条件为空或填写不完整时会提示；
 - 查询后，关联的明细表 / 透视表按条件过滤数据，多个条件之间按配置逻辑共同生效。
 :::
-<img alt="添加查询条件" src="/img/dataease/newimg/xpack/查询行为1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="添加查询条件" src="/img/dataease/newimg/xpack/查询行为2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![添加查询条件](/img/dataease/newimg/xpack/查询行为1.png)
+
+图 10  查询行为
+
+![添加查询条件](/img/dataease/newimg/xpack/查询行为2.png)
+
+图 11  查询行为
 
 :::note
 
 **筛选 vs 查询控件**：工具栏【筛选】作用于普通单元格区域；【查询控件】联动明细表 / 透视表对象。
 :::
 
-<a id="dataset-copy-paste"></a>
+## 6 数据集复制粘贴
 
-## 6 数据集复制粘贴 
-:::note
+表 4  数据集复制粘贴
 
 | 操作 | 说明 |
 | --- | --- |
 | 复制数据集 / 剪切数据集 | 选中已绑定数据集的明细表 / 透视表时，对象操作条提供复制 / 剪切数据集 |
 | 粘贴数据集 | 在目标位置右键【粘贴数据集】，将已复制 / 剪切的数据对象粘贴过去 |
-:::
 
-<img alt="查询条件关联字段" src="/img/dataease/newimg/xpack/数据集复制剪切.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![查询条件关联字段](/img/dataease/newimg/xpack/数据集复制剪切.png)
 
-<a id="config-panel"></a>
+图 12  数据集复制剪切
 
-## 7 右侧配置面板 
+## 7 右侧配置面板
+
 :::note
 
 选中明细表或透视表后，右侧出现配置面板，通常包括：
@@ -210,6 +235,15 @@ title: 电子表格特殊功能
 
 最右侧【数据集】面板可切换当前对象绑定的数据集，并按维度 / 指标浏览字段。
 :::
-<img alt="配置面板" src="/img/dataease/newimg/xpack/配置面板1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="配置面板" src="/img/dataease/newimg/xpack/配置面板2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="配置面板" src="/img/dataease/newimg/xpack/配置面板3.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![配置面板](/img/dataease/newimg/xpack/配置面板1.png)
+
+图 13  配置面板
+
+![配置面板](/img/dataease/newimg/xpack/配置面板2.png)
+
+图 14  配置面板
+
+![配置面板](/img/dataease/newimg/xpack/配置面板3.png)
+
+图 15  配置面板

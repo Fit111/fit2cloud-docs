@@ -1,0 +1,171 @@
+# 构建 Docusaurus 站点并部署到阿里云 OSS(CDN 前置)
+#
+# 触发: 仅手动触发(workflow_dispatch)。去 GitHub -> Actions -> "Deploy to Aliyun OSS"
+#       -> "Run workflow" 按钮, 每次由你决定是否部署。push 不会自动触发。
+#
+# 需要的 GitHub Secrets(仓库 Settings -> Secrets and variables -> Actions):
+#   ALIYUN_ACCESS_KEY_ID       阿里云 AccessKey ID
+#   ALIYUN_ACCESS_KEY_SECRET   阿里云 AccessKey Secret
+#   ALIYUN_OSS_ENDPOINT         OSS 外网 Endpoint, 如 oss-cn-hangzhou.aliyuncs.com
+#   ALIYUN_OSS_BUCKET           OSS Bucket 名称, 如 my-docs
+#   ALIYUN_CDN_DOMAIN           CDN 加速域名, 如 docs.fit2cloud.com
+#
+# 流程:
+#   1. npm run build 生成静态站点到 build/
+#   2. 用 ossutil sync 增量同步到 Bucket(--checksum 比较大小和 crc64, 只传有变化的; --delete 清理已删文件)
+#   3. 用 aliyun-cli 调用 CDN RefreshObjectCaches 刷新(目录或批量URL, 见 cdn_refresh_mode 输入)
+#      (需要 RAM 子账号具备 cdn:RefreshObjectCaches 权限, 否则该步会 Forbidden.RAM)
+
+name: Deploy to Aliyun OSS
+
+on:
+  workflow_dispatch:
+    inputs:
+      purge_cdn:
+        description: '是否刷新 CDN 缓存(默认 true)'
+        required: false
+        default: 'true'
+        type: boolean
+      cdn_refresh_mode:
+        description: 'CDN 刷新方式: directory=整站目录刷新(1次配额,100/天); url-all=批量URL刷新本次所有HTML(2000/天)'
+        required: false
+        default: 'directory'
+        type: choice
+        options:
+          - directory
+          - url-all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-oss
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy to OSS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Download ossutil
+        run: |
+          curl -sSfL -o ossutil.zip \
+            https://gosspublic.alicdn.com/ossutil/v2/2.4.0/ossutil-2.4.0-linux-amd64.zip
+          unzip -o ossutil.zip -d ossutil-bin
+          find ossutil-bin -name ossutil -type f -exec chmod +x {} \;
+          # 复制到工作区根目录并加入 PATH
+          find ossutil-bin -name ossutil -type f -exec cp {} ./ossutil \;
+          chmod +x ./ossutil
+
+      - name: Sync build to OSS (incremental sync)
+        run: |
+          # 每次 npm run build 都会刷新所有文件的 mtime, 若按时间戳(--update)判断
+          # 会把"内容没变仅时间变"的文件也当作要传, 导致每次全量上传(约 400MB), 很慢。
+          # 之前用 --size-only(只比大小) 会误判: HTML 内容变了但字节数恰好相同(CSS哈希名等长
+          # 替换)时被当作"未变化"跳过, 造成线上 HTML 引用已删除的旧 CSS -> 样式丢失。
+          # 因此改用 --checksum: 大小不同 或 crc64 校验不同 才上传, 既不漏传又不全量。
+          # Docusaurus 静态资源带内容哈希, 内容变了大小/crc64 必变, 必会正确上传。
+          # 保留 --delete 让本地删除的文件也能从云端同步删除(两端一致)。
+          # --checksum 是增量关键: 同时比较大小和 crc64, 只会传真正有改动的文件。
+          # ossutil v2 默认 SigV4 签名, 必须用下面的 region 推导(缺少会报 "region must be set")。
+          # region 从 endpoint 推导: 如 oss-cn-hangzhou.aliyuncs.com -> cn-hangzhou
+          OSS_REGION="$(echo "$ALIYUN_OSS_ENDPOINT" | sed -E 's|^https?://||; s|^oss-||; s|\..*||')"
+          echo "Derived region: $OSS_REGION"
+          cat > "$HOME/.ossutilconfig" <<EOF
+          [default]
+          accessKeyID = "$ALIYUN_ACCESS_KEY_ID"
+          accessKeySecret = "$ALIYUN_ACCESS_KEY_SECRET"
+          region = "$OSS_REGION"
+          endpoint = "$ALIYUN_OSS_ENDPOINT"
+          EOF
+          ./ossutil sync ./build/ "oss://$ALIYUN_OSS_BUCKET/" --delete --checksum -f
+        env:
+          ALIYUN_ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+          ALIYUN_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+          ALIYUN_OSS_ENDPOINT: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
+          ALIYUN_OSS_BUCKET: ${{ secrets.ALIYUN_OSS_BUCKET }}
+
+      - name: Download aliyun-cli
+        if: github.event.inputs.purge_cdn == 'true'
+        run: |
+          # 直接下载 aliyun-cli 官方 GitHub Release 的 linux-amd64 包。
+          # 用固定版本号, 避免 runner 上用受限 GITHUB_TOKEN 访问外部仓库 API 被拒。
+          # 版本过旧需更新时, 改下面的版本号(或到 github.com/aliyun/aliyun-cli/releases 查最新)。
+          ALIYUN_CLI_VERSION="v3.4.11"
+          VER="${ALIYUN_CLI_VERSION#v}"
+          ASSET_URL="https://github.com/aliyun/aliyun-cli/releases/download/${ALIYUN_CLI_VERSION}/aliyun-cli-linux-${VER}-amd64.tgz"
+          echo "Downloading: $ASSET_URL"
+          curl -sSfL -o aliyun-cli.tgz "$ASSET_URL"
+          tar -xzf aliyun-cli.tgz
+          chmod +x ./aliyun
+          ./aliyun version
+
+      - name: Purge CDN cache
+        if: github.event.inputs.purge_cdn == 'true'
+        run: |
+          # RefreshObjectCaches 为全局 API, region 取一个有效值即可
+          ./aliyun configure set --profile default --mode AK \
+            --access-key-id "$ALIYUN_ACCESS_KEY_ID" \
+            --access-key-secret "$ALIYUN_ACCESS_KEY_SECRET" \
+            --region "cn-hangzhou"
+
+          SCHEME="${ALIYUN_CDN_SCHEME:-https}"
+          MODE="${{ github.event.inputs.cdn_refresh_mode }}"
+          echo "CDN refresh mode: $MODE"
+
+          if [ "$MODE" = "url-all" ]; then
+            # 批量 URL 刷新: 收集 build 下所有 HTML -> 转成完整 URL, 多行 ObjectPath 一次提交(算 1 次配额)
+            # 规则: index.html -> 目录路径(带尾斜杠); 其余 xxx.html -> 去掉 .html
+            # zh-Hans 在 build 根, en 在 build/en 子目录, 各自映射到对应 URL 路径。
+            URLS=""
+            while IFS= read -r f; do
+              rel="${f#build/}"                 # 去掉 build/ 前缀
+              rel="${rel//\'/}"                  # 清理
+              if [ "$rel" = "index.html" ]; then
+                path="/"
+              elif [ "$rel" = "404.html" ]; then
+                path="/404.html"
+              elif [[ "$rel" == */index.html ]]; then
+                path="/${rel%/index.html}/"
+              else
+                path="/${rel%.html}"
+              fi
+              URLS="${URLS}${SCHEME}://${ALIYUN_CDN_DOMAIN}${path}"$'\n'
+            done < <(find build -name '*.html' | sort)
+            # 去末尾换行
+            URLS="${URLS%$'\n'}"
+            echo "Purged URLs count: $(printf '%s' "$URLS" | grep -c '/' || true)"
+            ./aliyun cdn RefreshObjectCaches \
+              --ObjectPath "$URLS" \
+              --ObjectType file \
+              --Force true
+            echo "CDN url-all purge submitted for ${ALIYUN_CDN_DOMAIN}"
+          else
+            # 默认: 整站目录刷新
+            ./aliyun cdn RefreshObjectCaches \
+              --ObjectPath "${SCHEME}://${ALIYUN_CDN_DOMAIN}/" \
+              --ObjectType Directory \
+              --Force true
+            echo "CDN directory purge submitted for ${ALIYUN_CDN_DOMAIN}"
+          fi
+        env:
+          ALIYUN_ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+          ALIYUN_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+          ALIYUN_CDN_DOMAIN: ${{ secrets.ALIYUN_CDN_DOMAIN }}

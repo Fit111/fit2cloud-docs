@@ -15,7 +15,10 @@ title: 安全管理
 - OTP 延迟有效次数：设置用户 OTP 验证的允许失败次数。
 - 扫描名称配置：可自定义用户扫描绑定 MFA 时的名称显示。
 :::
-<img alt="更新1" src="/img/dataease/newimg/4.1新增MFA支持1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+
+![新增MFA支持1](/img/dataease/newimg/新增MFA支持1.png)
+
+图 1  校验成功
 
 :::note
 
@@ -28,7 +31,9 @@ title: 安全管理
 **注意：若用户未绑定 MFA，但系统已启用 MFA，用户在常规登录后，进入 MFA 验证页面时将出现绑定页面，包含 App下载链接和用于扫码绑定 MFA。**
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.1新增MFA支持2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增MFA支持2](/img/dataease/newimg/新增MFA支持2.png)
+
+图 2  MFA
 
 :::note
 
@@ -39,7 +44,9 @@ HMAC 是第三方系统系统对接 DataEase API 的签名鉴权开关。
 - 时钟偏差：设置 HMAC 校验的时间容错，默认值为 300 秒。
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/HMAC设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![校验成功](/img/dataease/newimg/HMAC设置.png)
+
+图 3  校验成功
 
 ## 2 用户绑定
 
@@ -50,25 +57,33 @@ HMAC 是第三方系统系统对接 DataEase API 的签名鉴权开关。
 **注意：钉钉等第三方平台扫码方式不需要进行 MFA 多因子认证，第三方认证登陆时默认不开启 MFA。**
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.1新增MFA支持2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增MFA支持2](/img/dataease/newimg/新增MFA支持2.png)
+
+图 4  MFA
 
 :::note
 
 扫码下载 MFA 应用：
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.1%20新增%20MFA%20支持4.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增 MFA 支持4](/img/dataease/newimg/新增%20MFA%20支持4.png)
+
+图 5  MFA
 
 :::note
 
 绑定 MFA 多因子认证：
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.1%20新增%20MFA%20支持5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增 MFA 支持5](/img/dataease/newimg/新增%20MFA%20支持5.png)
+
+图 6  MFA
 
 :::note
 
 用户绑定并开启 MFA 后，登陆后进行 MFA 多因子认证：
 :::
 
-<img alt="更新1" src="/img/dataease/newimg/4.1%20新增%20MFA%20支持6.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![新增 MFA 支持6](/img/dataease/newimg/新增%20MFA%20支持6.png)
+
+图 7  MFA

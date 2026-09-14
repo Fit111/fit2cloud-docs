@@ -20,8 +20,8 @@ title: 权限配置
 - 授权：给予用户或者角色相关资源的「授权」的权限，用户或角色可以把权限范围以内的相关资源，通过权限管理给予其余用户或者角色；
 - 管理：给予用户或者角色相关资源的「管理」的权限的，那么用户或者角色可以对相关资源进行编辑管理，同时拥有该资源所有权限（包括授权、导出、查看）；
 :::
-<img alt="按用户配置" src="/img/dataease-v2/xpack/按用户配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="按资源配置" src="/img/dataease-v2/xpack/按资源配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![按用户配置](/img/dataease-v2/xpack/按用户配置.png)
+![按资源配置](/img/dataease-v2/xpack/按资源配置.png)
 
 ## 2 菜单权限
 
@@ -39,7 +39,7 @@ title: 权限配置
 - 系统管理/权限配置
 :::
 
-<img alt="菜单权限" src="/img/dataease-v2/xpack/菜单权限.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![菜单权限](/img/dataease-v2/xpack/菜单权限.png)
 
 ## 3 资源权限
 :::note
@@ -47,7 +47,7 @@ title: 权限配置
 资源权限可按照用户或角色进行授予。**菜单权限和资源权限分离**，用户或角色可仅拥有资源权限，如 API 用户。  
 **资源可通过分组进⾏权限继承**，即资源组授权给对应的角色或⽤户后，这些角色和⽤户对该资源分组下的新增资源⾃动拥有对应的权限。
 :::
-<img alt="资源权限配置" src="/img/dataease-v2/xpack/资源权限配置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![资源权限配置](/img/dataease-v2/xpack/资源权限配置.png)
 
 :::note
 
@@ -57,7 +57,7 @@ title: 权限配置
 - 图表权限：支持以 Excel 格式导出图表展示的数据的导出权限。
 - 明细权限：支持导出图表对应的详细数据的导出权限。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/权限管理新增导出控制.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/权限管理新增导出控制.png)
 
 :::note
 
@@ -75,7 +75,7 @@ title: 权限配置
     - 数据源不可见：在“创建数据集”界面，用户无权看到该数据源。
     - 修改已包含数据源的数据集：如果用户对某数据集有编辑权限，但该数据集依赖一个用户无查看权限的数据源，则在编辑数据集时，将提示“权限不足，无法修改”。禁止保存对数据集的任何更改。
 :::
-<img alt="更新1" src="/img/dataease-v2/newimg/3.1%20数据源新增查看权限.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![更新1](/img/dataease-v2/newimg/3.1%20数据源新增查看权限.png)
 
 ## 4 行列权限
 
@@ -95,13 +95,13 @@ title: 权限配置
 系统支持从 3 种不同的维度配置行权限（维度包括"角色"、"用户"、"系统变量"）；  
 其中系统变量是除了系统内置的"账号"、"姓名"、"邮箱"系统变量，系统管理员可在系统设置中增加自定义变量，组织管理员可以为组织内成员配置这些系统变量。使数据集数据与系统内置数据建立联系，可以实现轻松快捷地实现不同的用户访问各自所属的数据资源。
 :::
-<img alt="行权限1" src="/img/dataease-v2/xpack/行权限1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="行权限2" src="/img/dataease-v2/xpack/行权限2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![行权限1](/img/dataease-v2/xpack/行权限1.png)
+![行权限2](/img/dataease-v2/xpack/行权限2.png)
 :::note
 
 白名单：在每条行权限的配置中，可以将用户加入白名单，权限规则对白名单用户不生效。
 :::
-<img alt="行权限白名单" src="/img/dataease-v2/xpack/行权限白名单.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![行权限白名单](/img/dataease-v2/xpack/行权限白名单.png)
 
 ### 4.2 列权限
 
@@ -109,8 +109,8 @@ title: 权限配置
 
 列权限按照字段过滤，常用场景比如一些敏感字段数据不适合某些角色人查看及使用，像是销售金额、客户身份证号等。
 :::
-<img alt="列权限1" src="/img/dataease-v2/xpack/列权限1.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
-<img alt="列权限2" src="/img/dataease-v2/xpack/列权限2.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![列权限1](/img/dataease-v2/xpack/列权限1.png)
+![列权限2](/img/dataease-v2/xpack/列权限2.png)
 
 :::note
 
@@ -119,10 +119,10 @@ title: 权限配置
 - **禁用：** 用户完全看不到该字段，甚至不知道该字段的存在； 
 - **脱敏：** 用户可以看见该字段，知道这个 字段的存在，但是看不到真实的信息，会有 * 替代真实信息做脱敏处理。
 :::
-<img alt="列权限规则设置" src="/img/dataease-v2/xpack/列权限规则设置.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![列权限规则设置](/img/dataease-v2/xpack/列权限规则设置.png)
 
 :::note
 
 脱敏规则支持选择系统内置规则或用户自定义，比如设置从第 M 位至第 N 位显示为 *。
 :::
-<img alt="设置脱敏规则" src="/img/dataease-v2/xpack/设置脱敏规则.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
+![设置脱敏规则](/img/dataease-v2/xpack/设置脱敏规则.png)
