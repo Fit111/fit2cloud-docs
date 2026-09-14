@@ -989,7 +989,44 @@ const sidebars = {
             "type": "doc",
             "id": "manual/pam/index"
           },
-          "items": [],
+          "items": [
+            {
+              "type": "doc",
+              "id": "manual/pam/dashboard",
+              "label": "仪表盘",
+              "key": "doc:使用手册/PAM 管理/仪表盘"
+            },
+            {
+              "type": "doc",
+              "id": "manual/pam/accounts",
+              "label": "账号管理",
+              "key": "doc:使用手册/PAM 管理/账号管理"
+            },
+            {
+              "type": "doc",
+              "id": "manual/pam/account_automation",
+              "label": "账号自动化管理",
+              "key": "doc:使用手册/PAM 管理/账号自动化管理"
+            },
+            {
+              "type": "doc",
+              "id": "manual/pam/security",
+              "label": "安全设置",
+              "key": "doc:使用手册/PAM 管理/安全设置"
+            },
+            {
+              "type": "doc",
+              "id": "manual/pam/integration",
+              "label": "集成管理",
+              "key": "doc:使用手册/PAM 管理/集成管理"
+            },
+            {
+              "type": "doc",
+              "id": "manual/pam/activity",
+              "label": "活动管理",
+              "key": "doc:使用手册/PAM 管理/活动管理"
+            }
+          ],
           "key": "doc:使用手册/PAM 管理"
         },
         {
