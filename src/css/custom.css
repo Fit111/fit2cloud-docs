@@ -22,22 +22,6 @@
   --prism-color: #e6e6e6;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  /* 暗色模式下把背景恢复成深色。:root 里的 --ifm-background-color:#fff 会传播到暗色,
-     若不覆盖会导致暗色下文档仍白底、浅色文字看不清。 */
-  --ifm-background-color: #1b1b1d;
-  --ifm-background-surface-color: #242526;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
 /* ===== footer 对齐 Figma 首页设计稿 (浅色页脚) =====
    设计稿规格 (spec_full.txt Group 22):
    - 背景: 页面浅蓝渐变延续 (#f7fbff)
@@ -121,20 +105,6 @@
 .alert--info {
   --ifm-alert-border-color: #00c853;
 }
-[data-theme='dark'] .alert--secondary,
-[data-theme='dark'] .alert--success,
-[data-theme='dark'] .alert--info {
-  --ifm-alert-background-color: #1b1b1d;
-  --ifm-alert-foreground-color: #e6e6e6;
-  background-color: #1b1b1d !important;
-}
-[data-theme='dark'] .alert--secondary {
-  --ifm-alert-border-color: #0c7be0;
-}
-[data-theme='dark'] .alert--success,
-[data-theme='dark'] .alert--info {
-  --ifm-alert-border-color: #00c853;
-}
 
 
 /* DataEase v2 / v3：去掉 note 正文的蓝色包边。
@@ -150,11 +120,6 @@
 /*  background-color: transparent !important;*/
 /*  box-shadow: none !important;*/
 /*  padding: 0 !important;*/
-/*}*/
-/*[data-theme='dark'] html[data-docs-product='dataease'] .theme-admonition-note,*/
-/*[data-theme='dark'] html[data-docs-product='dataease'] .alert--secondary {*/
-/*  --ifm-alert-background-color: transparent;*/
-/*  background-color: transparent !important;*/
 /*}*/
 
 /* 图用 Markdown ![alt](src)，水平居中且不超过正文栏。表拉满正文栏，表题与表同宽对齐。 */
@@ -380,8 +345,11 @@ aside.theme-doc-sidebar-container {
    - 内容区弹性占满剩余;
    - 右侧目录固定约 240px 独立成列, 与内容左右分明。
    若想要 1:2:1 的均宽比例, 把下面 .col--3 和 [class*=docItemCol] 的
-   flex 值改成 2:1 并把左栏宽度调成 25% 即可。 */
-@media (min-width: 1272px) {
+   flex 值改成 2:1 并把左栏宽度调成 25% 即可。
+   断点从原 1272px 下探到 998px: 使右侧标题导航在 150% 显示缩放下
+   (1920 物理 ≈ 1280 CSS px)以及更窄的桌面窗口都能显示在右侧;
+   仅 <998px(近似 Docusaurus/Infima 的 996px 桌面阈值)才退回移动端布局。 */
+@media (min-width: 998px) {
   /* 左栏: 固定宽 360px, 里侧 300px 菜单靠右 → 侧栏贴向内容区, 左侧留白 */
   aside.theme-doc-sidebar-container {
     flex: 0 0 360px;
@@ -440,12 +408,11 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-/* ===== 右侧标题导航(TOC): 跟随三栏布局断点, 仅 ≥1272px 显示 =====
-   上面三栏布局断点已从 Infima 默认 997px 提到 1272px。
-   而 Docusaurus 默认的桌面 TOC 只在 @media(max-width:996px) 才隐藏,
-   若不覆盖, 997~1271px 这段视口仍会显示右侧 TOC, 与新的布局断点不一致。
-   这里把隐藏范围同步扩到 1271px, 让右侧 TOC 仅在 ≥1272px 显示,
-   997~1271px 之间退回两栏(左栏 + 内容), 与三栏布局断点保持一致。 */
+/* ===== 右侧标题导航(TOC): 跟随三栏布局断点, 仅 ≥998px 显示 =====
+   三栏断点已从 1272px 降到 998px(贴合 Docusaurus 的 996px 桌面阈值),
+   使右侧 TOC 与 JS useWindowSize 的 desktop/mobile 判定保持一致:
+   两侧(JS ≥997 渲染组件 + CSS ≥998 固定三栏)都满足才稳定显示在右侧。
+   997px 以下 Docusaurus 与这里同时判定为移动端, 右侧 TOC 隐藏。 */
 @media (max-width: 997px) {
   [class*="tableOfContents"] {
     display: none;
@@ -650,11 +617,6 @@ body.home-page {
 .navbar__link--active {
   color: #0c7be0;
   background: transparent;
-}
-/* 隐藏主题切换开关(设计稿导航右侧只有 搜索+语言, 无主题切换)。
-   匹配 ColorModeToggle 的哈希类名, 限定在 navbar 内避免影响其他地方。 */
-.navbar [class*='colorModeToggle'] {
-  display: none !important;
 }
 /* 导航搜索框: 对齐设计稿 Search pill(215x32 r20 白底)。
    easyops SearchBar 已不再挂载(改用 HomeNavbarSearch 复用的即时搜索面板),
