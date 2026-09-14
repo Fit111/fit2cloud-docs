@@ -63,7 +63,7 @@ title: LDAP HA (X-Pack)
 - 在 **导入组织** 字段中选择要导入的一个或多个组织
 - 选中要导入的用户，点击 **导入** 继续；或者点击 **全部导入** 导入所有用户
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_LDAP1.png" alt="图 1  导入 LDAP HA 用户" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_LDAP3.png" alt="图 1  导入 LDAP HA 用户" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  导入 LDAP HA 用户</div>
 
 ## 设置 LDAP HA 用户同步
@@ -82,5 +82,5 @@ title: LDAP HA (X-Pack)
 - 在 **收件人** 字段中选择一个或多个用户以接收同步结果
 - 点击 **确认**
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_LDAP2.png" alt="图 2  LDAP HA 用户同步设置" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_LDAP4.png" alt="图 2  LDAP HA 用户同步设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  LDAP HA 用户同步设置</div>

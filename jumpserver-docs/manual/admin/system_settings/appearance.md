@@ -34,7 +34,7 @@ title: 界面设置
 
 - 调整`网站图标`选项后，它将显示为浏览器标签左侧的小图标，如下图所示：
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_appearance_07.png" alt="图 7  网站图标设置" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  网站图标设置</div>
+<div style={{textAlign:"center",color:"#030405",fontSize:"13px",margin:"6px 0 20px"}}>图 7  网站图标设置</div>
 
 ## 3 图片
 

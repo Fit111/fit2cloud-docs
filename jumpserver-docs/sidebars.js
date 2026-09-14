@@ -202,11 +202,44 @@ const sidebars = {
           "type": "category",
           "label": "通用功能",
           "collapsed": true,
-          "link": {
-            "type": "doc",
-            "id": "manual/common/index"
-          },
-          "items":[],
+          "items": [
+            {
+              "type": "doc",
+              "id": "manual/common/global_search",
+              "label": "全局搜索",
+              "key": "doc:使用手册/通用功能/全局搜索"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/system_message",
+              "label": "系统消息",
+              "key": "doc:使用手册/通用功能/系统消息"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/daily_ticket",
+              "label": "日常工单",
+              "key": "doc:使用手册/通用功能/日常工单"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/system_help",
+              "label": "系统帮助",
+              "key": "doc:使用手册/通用功能/系统帮助"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/language_switch",
+              "label": "语言切换",
+              "key": "doc:使用手册/通用功能/语言切换"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/personal_center",
+              "label": "个人中心",
+              "key": "doc:使用手册/通用功能/个人中心"
+            }
+          ],
           "key": "cat:使用手册/通用功能"
         },
         {
@@ -604,6 +637,12 @@ const sidebars = {
                   "id": "manual/admin/system_settings/platforms",
                   "label": "平台列表",
                   "key": "doc:使用手册/管理员手册/系统设置/平台列表"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/system_settings/ai_assistant",
+                  "label": "AI 助手",
+                  "key": "doc:使用手册/管理员手册/系统设置/AI 助手"
                 },
                 {
                   "type": "doc",
@@ -1007,32 +1046,6 @@ const sidebars = {
       "key": "cat:使用手册"
     },
     {
-      "type": "category",
-      "label": "常见问题",
-      "collapsed": true,
-      "items": [
-        {
-          "type": "doc",
-          "id": "faq/faq",
-          "label": "产品 FAQ",
-          "key": "doc:常见问题/产品 FAQ"
-        },
-        {
-          "type": "doc",
-          "id": "faq/security",
-          "label": "安全建议",
-          "key": "doc:常见问题/安全建议"
-        },
-        {
-          "type": "link",
-          "label": "企业版",
-          "href": "https://www.jumpserver.org/enterprise.html",
-          "key": "link:常见问题/企业版"
-        }
-      ],
-      "key": "cat:常见问题"
-    },
-    {
       "type": "doc",
       "id": "user_stories",
       "label": "企业版功能",
@@ -1065,58 +1078,54 @@ const sidebars = {
       "key": "doc:运维指南"
     },
     {
-      "type": "doc",
-      "id": "user_stories",
-      "label": "最佳实践",
-      "key": "doc:最佳实践"
+      "type": "category",
+      "label": "常见问题",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "faq/faq",
+          "label": "产品 FAQ",
+          "key": "doc:常见问题/产品 FAQ"
+        },
+        {
+          "type": "doc",
+          "id": "faq/security",
+          "label": "安全建议",
+          "key": "doc:常见问题/安全建议"
+        },
+        {
+          "type": "link",
+          "label": "企业版",
+          "href": "https://www.jumpserver.org/enterprise.html",
+          "key": "link:常见问题/企业版"
+        }
+      ],
+      "key": "cat:常见问题"
     },
     {
-      "type": "doc",
-      "id": "user_stories",
-      "label": "安全建议",
-      "key": "doc:安全建议"
+      "type": "category",
+      "label": "最佳实践",
+      "collapsed": true,
+      "link": {
+        "type": "doc",
+        "id": "best_practices"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "faq/security",
+          "label": "安全建议",
+          "key": "doc:最佳实践/安全建议"
+        }
+      ],
+      "key": "cat:最佳实践"
     },
     {
       "type": "doc",
       "id": "contact",
       "label": "联系我们",
       "key": "doc:联系我们"
-    },
-    {
-      "type": "doc",
-      "id": "global_search",
-      "label": "全局搜索",
-      "key": "doc:全局搜索"
-    },
-    {
-      "type": "doc",
-      "id": "system_message",
-      "label": "系统消息",
-      "key": "doc:系统消息"
-    },
-    {
-      "type": "doc",
-      "id": "system_help",
-      "label": "系统帮助",
-      "key": "doc:系统帮助"
-    },
-    {
-      "type": "doc",
-      "id": "language_switch",
-      "label": "语言切换",
-      "key": "doc:语言切换"
-    },
-    {
-      "type": "doc",
-      "id": "personal_center",
-      "label": "个人中心",
-      "key": "doc:个人中心"
-    },
-    {
-      "type": "doc",
-      "id": "daily_ticket",
-      "label": "日常工单",
-      "key": "doc:日常工单"
     }
   ]
 };

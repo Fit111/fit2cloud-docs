@@ -22,14 +22,7 @@ title: 角色列表
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_02.png" alt="图 2  角色权限设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  角色权限设置</div>
 
-## 3 角色导入/导出
-
-- 角色支持导入创建和已存在角色导出，支持 xlxs 和 cvs 的表格格式。
-- 首次导入，可点击 **导入** 按钮下载模板后根据提示填写信息后导入。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_03.png" alt="图 3  角色导入/导出" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  角色导入/导出</div>
-
-## 4 角色详情
+## 3 角色详情
 
 - 在 **角色列表** 页面点击角色名称，进入角色详情页面。
 - 角色详情页包含的信息包括角色基本信息、角色权限、授权用户以及角色活动记录。
@@ -49,19 +42,19 @@ title: 角色列表
 </tbody>
 </table>
 
-## 5 更新角色
+## 4 更新角色
 
 - 当需求对某个角色的信息进行更新时，可在 **角色列表** 页面中，点击角色后方的 **编辑** 按钮进行角色信息更新。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_05.png" alt="图 5  更新角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  更新角色</div>
 
-## 6 克隆角色
+## 5 克隆角色
 
 - 点击角色后方的 **...** 按钮选择 **副本** 按钮，进入角色创建界面，修改相关信息后，提交后修改角色权限即克隆完成。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_06.png" alt="图 6  克隆角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  克隆角色</div>
 
-## 7 删除角色
+## 6 删除角色
 
 - 系统默认角色不允许删除，非内置角色可进行删除。
 - 点击角色后方的 **删除** 按钮，删除角色。

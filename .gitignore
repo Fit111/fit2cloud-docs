@@ -29,3 +29,13 @@ yarn-error.log*
 build_check.log
 build_final.log
 en_build_check.log
+
+# WorkBuddy 本地工作数据（记忆/临时配置，不提交）(added 2026-09-13)
+.workbuddy/
+
+# 一次性本地脚本（截图辅助等，不提交）(added 2026-09-13)
+/scripts/
+
+# 本地开发服务日志 (added 2026-09-13)
+docusaurus-dev.log
+

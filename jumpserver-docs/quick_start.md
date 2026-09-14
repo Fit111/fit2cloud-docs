@@ -187,20 +187,23 @@ Default
 
 - 我们支持通过`SMTP`或`EXCHANGE`方式来对接邮件配置。
 
-### SMTP
-
-
-| 名称 | 示例 | 备注 |
-| ---------- | ---------------- | ---------------------------------- |
-| SMTP主机   | smtp.qq.com      | 服务商提供的 smtp 服务器             |
-| SMTP端口   | 25               | 通常是 `25`                         |
-| SMTP账号   | **********@qq.com | 通常是 `user@domain.com`            |
-| SMTP密码   | **************** | 每次 `测试连接` 都需要重新输入密码    |
-| 使用SSL    | [ ]              | 如果端口使用 `465`，必须勾选此项      |
-| 使用TLS    | [ ]              | 如果端口使用 `587`，必须勾选此项      |
-| 发件人     | **********@qq.com | `测试连接` 必须要输入                |
-| 主题前缀   | [JMS]            | 邮件的标题，收到的邮件是 `[JMS]` 开头 |
-| 测试收件人 | **********@qq.com | 测试连接必填                         |
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 7  SMTP 配置示例</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'35%', padding:'8px'}}>示例</th><th style={{width:'45%', padding:'8px'}}>备注</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>SMTP主机</td><td style={{padding:'8px'}}>smtp.qq.com</td><td style={{padding:'8px'}}>服务商提供的 smtp 服务器</td></tr>
+<tr><td style={{padding:'8px'}}>SMTP端口</td><td style={{padding:'8px'}}>25</td><td style={{padding:'8px'}}>通常是 <code>25</code></td></tr>
+<tr><td style={{padding:'8px'}}>SMTP账号</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>通常是 <code>user@domain.com</code></td></tr>
+<tr><td style={{padding:'8px'}}>SMTP密码</td><td style={{padding:'8px'}}>{'****************'}</td><td style={{padding:'8px'}}>每次 <code>测试连接</code> 都需要重新输入密码</td></tr>
+<tr><td style={{padding:'8px'}}>使用SSL</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>465</code>，必须勾选此项</td></tr>
+<tr><td style={{padding:'8px'}}>使用TLS</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>587</code>，必须勾选此项</td></tr>
+<tr><td style={{padding:'8px'}}>发件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}><code>测试连接</code> 必须要输入</td></tr>
+<tr><td style={{padding:'8px'}}>主题前缀</td><td style={{padding:'8px'}}>[JMS]</td><td style={{padding:'8px'}}>邮件的标题，收到的邮件是 <code>[JMS]</code> 开头</td></tr>
+<tr><td style={{padding:'8px'}}>测试收件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>测试连接必填</td></tr>
+</tbody>
+</table>
 
 :::warning[注意]
 
