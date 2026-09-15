@@ -55,6 +55,10 @@ description: 介绍 JumpServer PAM 中账号推送任务的创建、执行以及
 
 行内绿色按钮立即执行。**更多** 包括 **编辑**、**删除**、**副本**。
 
+:::warning[执行前确认]
+**立即执行** 会把账号创建或更新到选定的资产或节点。执行前请确认目标范围、账号和密文策略，避免覆盖资产上的现有账号信息。
+:::
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_push_03.png" alt="图 3  行内更多" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  行内更多</div>
