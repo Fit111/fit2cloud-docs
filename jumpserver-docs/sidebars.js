@@ -1050,12 +1050,6 @@ const sidebars = {
           "items": [
             {
               "type": "doc",
-              "id": "manual/user/workbench/change_to_workbench",
-              "label": "切换工作台",
-              "key": "doc:使用手册/普通用户手册/切换工作台"
-            },
-            {
-              "type": "doc",
               "id": "manual/user/workbench/overview",
               "label": "概览",
               "key": "doc:使用手册/普通用户手册/概览"
