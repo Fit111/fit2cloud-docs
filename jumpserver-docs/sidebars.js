@@ -205,6 +205,12 @@ const sidebars = {
           "items": [
             {
               "type": "doc",
+              "id": "manual/common/organization_switch",
+              "label": "组织切换",
+              "key": "doc:使用手册/通用功能/组织切换"
+            },
+            {
+              "type": "doc",
               "id": "manual/common/global_search",
               "label": "全局搜索",
               "key": "doc:使用手册/通用功能/全局搜索"
@@ -223,6 +229,18 @@ const sidebars = {
             },
             {
               "type": "doc",
+              "id": "manual/common/webterminal",
+              "label": "Web 终端",
+              "key": "doc:使用手册/通用功能/web终端"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/system_settings",
+              "label": "系统设置",
+              "key": "doc:使用手册/通用功能/系统设置"
+            },
+            {
+              "type": "doc",
               "id": "manual/common/system_help",
               "label": "系统帮助",
               "key": "doc:使用手册/通用功能/系统帮助"
@@ -235,9 +253,9 @@ const sidebars = {
             },
             {
               "type": "doc",
-              "id": "manual/common/personal_center",
-              "label": "个人中心",
-              "key": "doc:使用手册/通用功能/个人中心"
+              "id": "manual/common/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/通用功能/个人设置"
             }
           ],
           "key": "cat:使用手册/通用功能"
@@ -809,6 +827,86 @@ const sidebars = {
                   "key": "doc:使用手册/管理员手册/系统设置/系统任务"
                 },
                 {
+                  "type": "category",
+                  "label": "设备管理",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/overview",
+                      "label": "概览",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/概览"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/dashboard",
+                      "label": "仪表盘",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/仪表盘"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_network",
+                      "label": "网络配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/网络配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_cert",
+                      "label": "域名配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/域名配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_disk",
+                      "label": "磁盘管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/磁盘管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_auth",
+                      "label": "授权管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/授权管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_settings",
+                      "label": "服务设置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/服务设置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_ha",
+                      "label": "主备管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/主备管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_backup",
+                      "label": "数据备份",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/数据备份"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_state",
+                      "label": "应用状态",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用状态"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_config",
+                      "label": "应用配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_log",
+                      "label": "应用日志",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用日志"
+                    }
+                  ],
+                  "key": "cat:使用手册/管理员手册/系统设置/设备管理"
+                },
+                {
                   "type": "doc",
                   "id": "manual/admin/system_settings/licenses",
                   "label": "许可证",
@@ -839,6 +937,18 @@ const sidebars = {
           "label": "审计员手册",
           "collapsed": true,
           "items": [
+            {
+              "type": "doc",
+              "id": "manual/admin/audit/session_audit/audit_desk",
+              "label": "审计台概览",
+              "key": "doc:使用手册/管理员手册/审计台/审计台概览"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/audit/session_audit/dashboard",
+              "label": "仪表盘",
+              "key": "doc:使用手册/管理员手册/审计台/仪表盘"
+            },
             {
               "type": "category",
               "label": "审计台",
@@ -942,14 +1052,20 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "普通使用手册",
+          "label": "普通用户使用手册",
           "collapsed": true,
           "items": [
             {
               "type": "doc",
-              "id": "manual/user/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/普通使用手册/个人设置"
+              "id": "manual/user/workbench/change_to_workbench",
+              "label": "切换工作台",
+              "key": "doc:使用手册/普通用户使用手册/切换工作台"
+            },
+            {
+              "type": "doc",
+              "id": "manual/user/workbench/overview",
+              "label": "概览",
+              "key": "doc:使用手册/普通用户使用手册/概览"
             },
             {
               "type": "category",
@@ -963,39 +1079,91 @@ const sidebars = {
                   "items": [
                     {
                       "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/assets_connect",
+                      "id": "manual/user/workbench/my_assets/assets_connect",
                       "label": "连接资产",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/连接资产"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/连接资产"
                     },
                     {
                       "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/web_terminal",
+                      "id": "manual/user/workbench/my_assets/web_terminal",
                       "label": "Web终端",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/Web终端"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/Web终端"
                     },
                     {
                       "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/file_transfer",
+                      "id": "manual/user/workbench/my_assets/file_transfer",
                       "label": "文件传输",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/文件传输"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件传输"
                     },
                     {
                       "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/file_explorer",
+                      "id": "manual/user/workbench/my_assets/file_explorer",
                       "label": "文件管理",
-                      "key": "doc:使用手册/普通使用手册/工作台/我的资产/文件管理"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件管理"
                     }
                   ],
-                  "key": "cat:使用手册/普通使用手册/工作台/我的资产"
+                  "key": "cat:使用手册/普通用户使用手册/工作台/我的资产"
+                },
+                {
+                  "type": "category",
+                  "label": "作业中心",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/job_center/adhoc",
+                      "label": "快捷命令",
+                      "key": "doc:使用手册/管理员手册/工作台/作业中心/快捷命令"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/job_center/jobs_management",
+                      "label": "作业管理",
+                      "key": "doc:使用手册/管理员手册/工作台/作业中心/作业管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/job_center/templates_management",
+                      "label": "模板管理",
+                      "key": "doc:使用手册/管理员手册/工作台/作业中心/模板管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/job_center/execute_history",
+                      "label": "执行历史",
+                      "key": "doc:使用手册/管理员手册/工作台/作业中心/执行历史"
+                    }
+                  ],
+                  "key": "cat:使用手册/管理员手册/工作台/作业中心"
+                },
+                {
+                  "type": "category",
+                  "label": "其他",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/other/system_tool",
+                      "label": "系统工具",
+                      "key": "doc:使用手册/管理员手册/工作台/其他/系统工具"
+                    }
+                  ],
+                  "key": "cat:使用手册/管理员手册/工作台/其他"
                 }
               ],
-              "key": "cat:使用手册/普通使用手册/工作台"
+              "key": "cat:使用手册/普通用户使用手册/工作台"
+            },
+            {
+              "type": "doc",
+              "id": "manual/user/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/普通用户使用手册/个人设置"
             },
             {
               "type": "doc",
               "id": "manual/user/ticket",
               "label": "工单",
-              "key": "doc:使用手册/普通使用手册/工单"
+              "key": "doc:使用手册/普通用户使用手册/工单"
             },
             {
               "type": "category",
@@ -1006,31 +1174,31 @@ const sidebars = {
                   "type": "doc",
                   "id": "manual/client/client_installation",
                   "label": "客户端下载与安装",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/客户端下载与安装"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/客户端下载与安装"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/asset_connection",
                   "label": "资产连接",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/资产连接"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/资产连接"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/connection_settings",
                   "label": "连接设置",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/连接设置"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/连接设置"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/tool",
                   "label": "工具",
-                  "key": "doc:使用手册/普通使用手册/客户端使用/工具"
+                  "key": "doc:使用手册/普通用户使用手册/客户端使用/工具"
                 }
               ],
-              "key": "cat:使用手册/普通使用手册/客户端使用"
+              "key": "cat:使用手册/普通用户使用手册/客户端使用"
             }
           ],
-          "key": "cat:使用手册/普通使用手册"
+          "key": "cat:使用手册/普通用户使用手册"
         },
         {
           "type": "category",
@@ -1041,6 +1209,12 @@ const sidebars = {
             "id": "manual/pam/index"
           },
           "items": [
+            {
+              "type": "doc",
+              "id": "manual/pam/introduction",
+              "label": "PAM 概览",
+              "key": "doc:使用手册/PAM 管理/PAM 概览"
+            },
             {
               "type": "doc",
               "id": "manual/pam/dashboard",

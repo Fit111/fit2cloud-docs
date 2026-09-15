@@ -229,7 +229,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
-      colorMode: { respectPrefersColorScheme: true },
+      // 站点只保留浅色模式: 禁用颜色模式切换, 也不再跟随系统偏好(深色模式已移除)
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // 侧边栏分类展开策略:
       // - autoCollapseCategories: 原为 true(手风琴效果, 展开某分类时自动收起同级其他分类)。
       //   现已配合 src/theme/DocSidebarItems 改为「一级+二级默认全展开」, 若继续保留 true,
@@ -253,7 +258,6 @@ const config = {
         title: '',
         logo: {
           src: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
-          srcDark: 'img/FIT2CLOUD 飞致云 文档中心-01.png',
           alt: 'FIT2CLOUD 飞致云 文档中心',
         },
         items: [
@@ -340,7 +344,6 @@ const config = {
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
       },
     }),
 };
