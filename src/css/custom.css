@@ -514,6 +514,24 @@ html[data-docs-product='jumpserver'][data-docs-section='env'] .theme-doc-markdow
   word-break: break-word;
 }
 
+/* ===== PAM 概览页(manual/pam/introduction)的 Markdown 表格: 宽度对齐「角色列表」的 HTML 表格 =====
+   背景: HTML 表格(如 manual/admin/system_settings/role_list.md)在标签里显式写了
+   width:'100%' / maxWidth:'100%', 所以拉满正文栏; 而 Markdown 表格由 Infima 默认样式
+   table{display:block; overflow:auto; 无 width} 接管 —— 没有宽度, 表格按内容收缩,
+   看上去比 HTML 表格窄一截。这里把宽度相关的属性补齐, 让两者等宽。
+   说明:
+   - 只补宽度, 不写 table-layout:fixed, 各列仍按内容分配(角色列表那张表另有
+     tableLayout:'fixed' + th 宽 25%/75%; 若本页也要各列等分, 再加这一行即可)。
+   - 页面钩子 docs-doc-id-<doc id> 由 theme-classic 的 DocItem 自动加在 <html> 上,
+     这里用 [class*=] 匹配, 避开 doc id 里的 "/" 在 CSS 标识符中需要转义的问题
+     (与下方 [class*=admonitionHeading] 同一套写法)。
+   - 作用域仅限本页, 不影响其他文档的 Markdown 表格。 */
+html[class*='docs-doc-id-manual/pam/introduction'] .theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+}
+
 /* ===== 文档侧栏: 菜单项内容靠左 =====
    菜单项文字保持 Infima 默认左对齐(带缩进); 不做居中处理。
    侧栏整体位置见下方 1:2:1 块里 sidebarViewport 的 flex 对齐。 */

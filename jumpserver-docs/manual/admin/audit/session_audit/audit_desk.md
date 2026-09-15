@@ -1,5 +1,6 @@
 ---
 title: 审计台概览
+description: 介绍 JumpServer 审计台中对用户会话、日志、作业审计。
 ---
 
 ## 1 功能概述
@@ -9,6 +10,8 @@ title: 审计台概览
 - 页面以只读审查为主，不承载资源配置入口；仅 **在线用户** 提供强制下线操作。
 - 审计台顶部支持组织切换，页面展示的数据以当前所选组织为范围。
 - 各模块的数据均支持按时间与关键字筛选，列表类页面支持导出，便于留存审计材料。
+
+进入方式：点击页面左上角的**切换器**（默认显示「控制台」），在下拉中选择 **审计台**。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_session_audit_audit_desk.png" alt="图 1 审计台 仪表盘" />
 
@@ -64,18 +67,7 @@ title: 审计台概览
 - **账号报表**：账号统计报告与账号自动化报告。
 - 报告模块需要有效的产品授权。
 
-## 8 权限与使用范围
-
-- 审计台按模块控制访问权限，常用权限项包括：
-    - **仪表盘与报告**：`rbac.view_audit`。
-    - **会话记录、会话命令**：`terminal.view_session`、`terminal.view_command`；录像回放与下载需 `terminal.view_sessionreplay` 与 `terminal.download_sessionreplay`。
-    - **文件传输**：`audits.view_ftplog`。
-    - **在线用户**：`audits.view_usersession`，下线需 `audits.offline_usersession`。
-    - **登录日志、改密日志、操作日志**：`audits.view_userloginlog`、`audits.view_passwordchangelog`、`audits.view_operatelog`。
-    - **作业审计**：`audits.view_joblog`；**工单审计**：`tickets.view_ticket`。
-- 可直接为审计人员分配内置的 **系统审计员** 或 **组织审计员** 角色：系统审计员拥有系统范围的审计权限，组织审计员仅限所属组织。
-
-## 9 典型使用场景
+## 8 典型使用场景
 
 - **合规与事后追溯**：还原某次运维行为，确认操作人、来源、资产、账号、命令与传输的文件。
 - **安全事件定位**：结合会话录像、命令输出与操作日志的字段变更，定位问题根因。
@@ -83,7 +75,7 @@ title: 审计台概览
 - **运维作业核查**：确认周期作业是否按预期执行，快速定位执行失败的作业。
 - **审计材料留存**：通过列表导出与报告导出，留存可交付的审计凭据。
 
-## 10 数据来源与留存
+## 9 数据来源与留存
 
 - 登录日志由认证流程产生，会话、命令与文件传输记录由终端会话运行过程产生，操作日志由平台在资源变更时自动记录。
 - 日志默认保存在数据库中；操作日志与命令记录支持配置写入 Elasticsearch 进行集中存储与检索。

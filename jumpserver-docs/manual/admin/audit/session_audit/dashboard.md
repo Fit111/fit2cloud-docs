@@ -11,6 +11,7 @@ title: 审计台仪表盘
 
 ![v5_session_audit_dashboard](/img/jumpserver/v5_session_audit_dashboard.png)
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 审计台仪表盘</div>
 ## 2 日志数据
 
 - 展示当前时间段内的日志类审计指标，包含登录日志数、操作日志数、改密日志数三项。
