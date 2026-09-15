@@ -16,6 +16,8 @@ description: 介绍 JDMC 主备管理中的运行概览、生产操作入口与�
 
 尚未配置高可用时，页面提示「尚未配置高可用，请先完成节点配置。」**集群状态** 区按以下卡片展示集群状态，区标题右侧显示当前数据库引擎摘要，点击 **刷新状态** 重新获取：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  集群状态卡片说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>卡片</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -34,6 +36,8 @@ description: 介绍 JDMC 主备管理中的运行概览、生产操作入口与�
 ## 3 节点配置
 
 节点配置用于设置双节点高可用的节点信息与同步策略。页面顶部标注支持范围：**PostgreSQL 16 · 异步/同步**、**MySQL 8 / MariaDB 10.6 · 异步**。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  节点配置字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

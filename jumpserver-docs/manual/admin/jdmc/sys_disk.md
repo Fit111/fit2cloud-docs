@@ -18,6 +18,8 @@ description: 介绍 JDMC 磁盘管理中为数据盘扩容的操作流程与磁�
 
 **候选磁盘** 区块列出可用于扩容的磁盘，顶部显示 **可用候选磁盘** 数量与候选列表的采集时间。磁盘行首可勾选，已勾选的磁盘标记为 **已选**。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  候选磁盘列表字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>列</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -34,6 +36,8 @@ description: 介绍 JDMC 磁盘管理中为数据盘扩容的操作流程与磁�
 ## 3 磁盘详情
 
 磁盘详情用于查看磁盘挂载点、文件系统与容量占用情况，支持按文件系统筛选。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  磁盘详情列表字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

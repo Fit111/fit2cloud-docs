@@ -231,6 +231,7 @@ const sidebars = {
               "type": "doc",
               "id": "manual/common/webterminal",
               "label": "Web 终端",
+              "className": "sidebar-item-badge-new",
               "key": "doc:使用手册/通用功能/web终端"
             },
             {
@@ -668,6 +669,7 @@ const sidebars = {
                   "type": "doc",
                   "id": "manual/admin/system_settings/ai_assistant",
                   "label": "AI 助手",
+                  "className": "sidebar-item-badge-new",
                   "key": "doc:使用手册/管理员手册/系统设置/AI 助手"
                 },
                 {
@@ -825,6 +827,7 @@ const sidebars = {
                 {
                   "type": "category",
                   "label": "设备管理",
+                  "className": "sidebar-item-badge-new",
                   "collapsed": true,
                   "items": [
                     {
