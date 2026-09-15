@@ -1,10 +1,11 @@
 ---
 title: 账号自动化管理
+description: 介绍 JumpServer PAM 中的账号自动化管理。
 ---
 
 ## 1 功能概述
 
-- 进入 **PAM** 页面，点击 **PAM &gt; 自动化 &gt; 账号发现 / 账号推送 / 账号备份** 进入对应页面。账号自动化管理包含账号发现、账号推送、账号备份三类自动化任务，用于自动收集、推送、备份资产上的账号信息，减少人工操作，提升账号管理效率与安全性。
+- 进入 **PAM** 页面，单击 **PAM &gt; 自动化 &gt; 账号发现 / 账号推送 / 账号备份** 进入对应页面。账号自动化管理包含账号发现、账号推送、账号备份三类自动化任务，用于自动收集、推送、备份资产上的账号信息，减少人工操作，提升账号管理效率与安全性。
 
 ## 2 账号发现
 
@@ -14,33 +15,43 @@ title: 账号自动化管理
 
 ### 2.2 发现账号
 
-- 选中账号后，点击 **更多操作** 中的 **同步所选** 按钮，将收集到的用户绑定到相应的资产。
+- 选中账号后，单击 **更多操作** 中的 **同步所选** 按钮，将收集到的用户绑定到相应的资产。
 
-![automation_01](/img/jumpserver/v4_account_discovery_01.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_discovery_01.png" alt="图 1  发现账号" />
 
-- 点击 **更多操作** 中的 **删除同步所选** 按钮，从服务器中删除账户。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  发现账号</div>
 
-- 点击 **更多操作** 中的 **删除所选** 按钮，从账户发现中删除账户。
+- 单击 **更多操作** 中的 **删除同步所选** 按钮，从服务器中删除账户。
+
+- 单击 **更多操作** 中的 **删除所选** 按钮，从账户发现中删除账户。
 
 - 账户绑定后，可在资产详情的 **账号** 页签中查看该资产下的账户列表。
 
-![automation_04](/img/jumpserver/v4_account_discovery_04.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_discovery_04.png" alt="图 2  发现账号" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  发现账号</div>
 
 ### 2.3 账号发现任务
 
 - 在 **账户发现任务** 页面中的 **创建** 按钮，以创建用户发现任务。
 
-![automation_05](/img/jumpserver/v4_account_discovery_05.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_discovery_05.png" alt="图 3  账号发现任务" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  账号发现任务</div>
 
 - 成功创建后，选择 **执行** 按钮以执行收集用户任务。
 
-![automation_06](/img/jumpserver/v4_account_discovery_06.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_discovery_06.png" alt="图 4  账号发现任务" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  账号发现任务</div>
 
 ### 2.4 执行历史
 
 - 执行列表页面主要显示已执行的发现用户任务的详细信息和日志。单击相应已执行日志旁边的 **日志** 按钮或 **报告** 按钮，查看任务执行的详细信息。
 
-![automation_07](/img/jumpserver/v4_account_discovery_07.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_discovery_07.png" alt="图 5  执行历史" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  执行历史</div>
 
 ## 3 账号推送
 
@@ -52,7 +63,9 @@ title: 账号自动化管理
 
 - 在 **账户推送任务** 页面中的 **创建** 按钮，以创建用户推送任务。
 
-![automation_01](/img/jumpserver/v4_account_push_01.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_push_01.png" alt="图 6  账号推送任务" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  账号推送任务</div>
 
 - 详细参数说明：
 
@@ -75,19 +88,25 @@ title: 账号自动化管理
 
 - 选择 **执行** 按钮，执行推送账号功能，查看结果。
 
-![automation_02](/img/jumpserver/v4_account_push_02.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_push_02.png" alt="图 7  执行账号推送" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  执行账号推送</div>
 
 ### 3.4 执行历史
 
-- 此页面主要查看账号推送计划任务的执行日志。可以点击执行历史右侧 **日志** 查看。
+- 此页面主要查看账号推送计划任务的执行日志。可以单击执行历史右侧 **日志** 查看。
 
-![automation_03](/img/jumpserver/v4_account_push_03.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_push_03.png" alt="图 8  执行历史" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  执行历史</div>
 
 ### 3.5 执行记录
 
 - 此页面主要用于查看账号推送计划任务的详细变更记录。
 
-![automation_04](/img/jumpserver/v4_account_push_04.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_push_04.png" alt="图 9  执行记录" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  执行记录</div>
 
 ## 4 账号备份
 
@@ -99,7 +118,9 @@ title: 账号自动化管理
 
 - 单击 **账户备份任务** 页面上的 **创建** 按钮，创建一个用于账户备份的自动化任务。完整填写账户备份任务的信息并确认设置以创建。
 
-![automation_01](/img/jumpserver/v4_account_backup_01.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_backup_01.png" alt="图 10  账号备份任务" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  账号备份任务</div>
 
 - 详细参数说明：
 
@@ -115,14 +136,20 @@ title: 账号自动化管理
 
 - 选择 **执行** 功能，执行账号备份任务。执行后，可以查看任务执行状态。
 
-![automation_02](/img/jumpserver/v4_account_backup_02.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_backup_02.png" alt="图 11  账号备份任务" />
 
-- 点击账号备份任务旁边的 **更多** 按钮，进行编辑、删除和复制。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  账号备份任务</div>
 
-![automation_03](/img/jumpserver/v4_account_backup_03.png)
+- 单击账号备份任务旁边的 **更多** 按钮，进行编辑、删除和复制。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_backup_03.png" alt="图 12  账号备份任务" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  账号备份任务</div>
 
 ### 4.3 执行历史
 
 - 此页主要显示账户备份任务执行的历史记录、执行日志以及有关账户备份的详细信息。
 
-![automation_04](/img/jumpserver/v4_account_backup_04.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_account_backup_04.png" alt="图 13  执行历史" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  执行历史</div>

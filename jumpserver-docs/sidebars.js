@@ -389,56 +389,52 @@ const sidebars = {
               "collapsed": true,
               "items": [
                 {
-                  "type": "category",
-                  "label": "自动化",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/pam/automation/account_discovery",
-                      "label": "账号发现",
-                      "key": "doc:使用手册/管理员手册/PAM/自动化/账号发现"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/pam/automation/account_push",
-                      "label": "账号推送",
-                      "key": "doc:使用手册/管理员手册/PAM/自动化/账号推送"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/pam/automation/account_backup",
-                      "label": "账号备份",
-                      "key": "doc:使用手册/管理员手册/PAM/自动化/账号备份"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/PAM/自动化"
-                },
-                {
-                  "type": "category",
-                  "label": "安全设置",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/pam/security/change_secrets",
-                      "label": "账号改密",
-                      "key": "doc:使用手册/管理员手册/PAM/安全设置/账号改密"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/pam/security/risk_detection",
-                      "label": "风险检测",
-                      "key": "doc:使用手册/管理员手册/PAM/安全设置/风险检测"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/PAM/安全设置"
+                  "type": "doc",
+                  "id": "manual/pam/switch_pam",
+                  "label": "切换到 PAM",
+                  "key": "doc:使用手册/管理员手册/PAM/切换到 PAM"
                 },
                 {
                   "type": "doc",
-                  "id": "manual/admin/pam/applications_manage",
-                  "label": "应用管理",
-                  "key": "doc:使用手册/管理员手册/PAM/应用管理"
+                  "id": "manual/pam/introduction",
+                  "label": "PAM 概览",
+                  "key": "doc:使用手册/管理员手册/PAM/PAM 概览"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/dashboard",
+                  "label": "仪表盘",
+                  "key": "doc:使用手册/管理员手册/PAM/仪表盘"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/accounts",
+                  "label": "账号管理",
+                  "key": "doc:使用手册/管理员手册/PAM/账号管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/account_automation",
+                  "label": "账号自动化管理",
+                  "key": "doc:使用手册/管理员手册/PAM/账号自动化管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/security",
+                  "label": "安全设置",
+                  "key": "doc:使用手册/管理员手册/PAM/安全设置"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/integration",
+                  "label": "集成管理",
+                  "key": "doc:使用手册/管理员手册/PAM/集成管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/pam/activity",
+                  "label": "活动管理",
+                  "key": "doc:使用手册/管理员手册/PAM/活动管理"
                 }
               ],
               "key": "cat:使用手册/管理员手册/PAM"
@@ -941,13 +937,13 @@ const sidebars = {
               "type": "doc",
               "id": "manual/admin/audit/session_audit/audit_desk",
               "label": "审计台概览",
-              "key": "doc:使用手册/管理员手册/审计台/审计台概览"
+              "key": "doc:使用手册/审计员手册/审计台概览"
             },
             {
               "type": "doc",
               "id": "manual/admin/audit/session_audit/dashboard",
               "label": "仪表盘",
-              "key": "doc:使用手册/管理员手册/审计台/仪表盘"
+              "key": "doc:使用手册/审计员手册/仪表盘"
             },
             {
               "type": "category",
@@ -1113,28 +1109,28 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/adhoc",
                       "label": "快捷命令",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/快捷命令"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/快捷命令"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/jobs_management",
                       "label": "作业管理",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/作业管理"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/作业管理"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/templates_management",
                       "label": "模板管理",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/模板管理"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/模板管理"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/execute_history",
                       "label": "执行历史",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/执行历史"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/执行历史"
                     }
                   ],
-                  "key": "cat:使用手册/管理员手册/工作台/作业中心"
+                  "key": "cat:使用手册/普通用户使用手册/工作台/作业中心"
                 },
                 {
                   "type": "category",
@@ -1145,10 +1141,10 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/user/workbench/other/system_tool",
                       "label": "系统工具",
-                      "key": "doc:使用手册/管理员手册/工作台/其他/系统工具"
+                      "key": "doc:使用手册/普通用户使用手册/工作台/其他/系统工具"
                     }
                   ],
-                  "key": "cat:使用手册/管理员手册/工作台/其他"
+                  "key": "cat:使用手册/普通用户使用手册/工作台/其他"
                 }
               ],
               "key": "cat:使用手册/普通用户使用手册/工作台"
@@ -1199,60 +1195,6 @@ const sidebars = {
             }
           ],
           "key": "cat:使用手册/普通用户使用手册"
-        },
-        {
-          "type": "category",
-          "label": "PAM 管理",
-          "collapsed": true,
-          "link": {
-            "type": "doc",
-            "id": "manual/pam/index"
-          },
-          "items": [
-            {
-              "type": "doc",
-              "id": "manual/pam/introduction",
-              "label": "PAM 概览",
-              "key": "doc:使用手册/PAM 管理/PAM 概览"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/dashboard",
-              "label": "仪表盘",
-              "key": "doc:使用手册/PAM 管理/仪表盘"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/accounts",
-              "label": "账号管理",
-              "key": "doc:使用手册/PAM 管理/账号管理"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/account_automation",
-              "label": "账号自动化管理",
-              "key": "doc:使用手册/PAM 管理/账号自动化管理"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/security",
-              "label": "安全设置",
-              "key": "doc:使用手册/PAM 管理/安全设置"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/integration",
-              "label": "集成管理",
-              "key": "doc:使用手册/PAM 管理/集成管理"
-            },
-            {
-              "type": "doc",
-              "id": "manual/pam/activity",
-              "label": "活动管理",
-              "key": "doc:使用手册/PAM 管理/活动管理"
-            }
-          ],
-          "key": "doc:使用手册/PAM 管理"
         },
         {
           "type": "category",

@@ -1,14 +1,17 @@
 ---
 title: 仪表盘
+description: 介绍 JumpServer PAM 中的仪表盘。
 ---
 
 ## 1 功能概述
 
-- 进入 **PAM** 页面，点击 **PAM &gt; 仪表盘**，进入 PAM 仪表盘页面。
+- 进入 **PAM** 页面，单击 **PAM &gt; 仪表盘**，进入 PAM 仪表盘页面。
 - PAM 仪表盘集中展示当前账号库、自动化任务执行情况与账号安全风险等关键指标。
 - 仪表盘由"账号数据"、"任务汇总"、"账号改密成功/失败"、"风险账号"和"账号类型占比"五个区块组成。
 
-![V4_pam_dashboard1](/img/jumpserver/V4_pam_dashboard1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_pam_dashboard1.png" alt="图 1  功能概述" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  功能概述</div>
 
 ## 2 账号数据
 
