@@ -840,6 +840,18 @@ const sidebars = {
           "collapsed": true,
           "items": [
             {
+              "type": "doc",
+              "id": "manual/admin/audit/session_audit/audit_desk",
+              "label": "审计台概览",
+              "key": "doc:使用手册/管理员手册/审计台/审计台概览"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/audit/session_audit/dashboard",
+              "label": "仪表盘",
+              "key": "doc:使用手册/管理员手册/审计台/仪表盘"
+            },
+            {
               "type": "category",
               "label": "审计台",
               "collapsed": true,
@@ -1099,6 +1111,12 @@ const sidebars = {
             "id": "manual/pam/index"
           },
           "items": [
+            {
+              "type": "doc",
+              "id": "manual/pam/introduction",
+              "label": "PAM 概览",
+              "key": "doc:使用手册/PAM 管理/PAM 概览"
+            },
             {
               "type": "doc",
               "id": "manual/pam/dashboard",
