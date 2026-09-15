@@ -1,29 +1,25 @@
 ---
 title: 日常工单
+description: 介绍普通用户视角下的工单申请与审批，包括我发起的、待我审批两个页面。
 ---
 
+**日常工单** 是普通用户按需获取资产权限的入口。日常运维中遇到临时需要登录某台服务器、使用某个数据库账号，或需要执行被命令过滤拦截的操作时，都可以通过工单提交申请，经审批人确认后获得所申请资产的权限。
 
-- JumpServer 的 **日常工单** 功能负责授权工单的申请与审核，覆盖资产授权、命令过滤与资产登录等场景，并支持二级审批流程。用户发起授权申请，经设置的审批人审批通过后，即可获得所申请资产的权限。
+相比长期开通权限，工单把授权限定在申请的内容和申请的期限内，到期自动失效，审批与使用过程也都有记录可查，既满足临时运维的需要，又不会留下长期敞开的权限。
 
-## 1 启用工单
+## 1 申请工单
 
-- 管理员点击页面右上角小齿轮进入 **系统设置** 页面，点击 **功能设置 &gt; 工单**，进入工单设置页面。
-- 可以自定义是否启用工单功能，启用后用户即可通过工单来申请资源授权。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature3.png" alt="图 1  工单设置" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  工单设置</div>
+点击顶部导航栏中的 **工单** 图标即可进入工单页面，**我发起的** 页签列出由自己创建的全部工单，既是发起新申请的地方，也用于跟踪历史申请的处理结果。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature4.png" alt="图 2  启用工单效果" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  启用工单效果</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder01.png" alt="图 1  工单入口与我发起的" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  工单入口与我发起的</div>
 
-## 2 申请工单
+点击 **申请工单** 按钮，填写工单的标题、组织、节点、资产、申请账号、操作以及权限期限等信息后提交。
 
-- 普通用户进入 **工单** 页面的 **我发起的** 页签，该页面用于查看由当前用户创建的工单详情记录，并可发起新的工单申请。
-- 点击 **申请工单** 按钮，填写工单的标题、组织、节点、资产、申请账号、操作以及权限期限等信息后提交。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder01.png" alt="图 3  申请工单" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  申请工单</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder02.png" alt="图 2  申请工单信息" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  申请工单信息</div>
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder02.png" alt="图 4  申请工单信息" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  申请工单信息</div>
+各字段的含义如表 1 所示。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  申请工单参数说明</div>
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
@@ -41,38 +37,33 @@ title: 日常工单
 </tbody>
 </table>
 
-## 3 查看工单
+提交后点击工单标题即可进入详情页，查看工单的基本信息、申请信息、审批人以及当前的审批进度；如果申请缘由需要补充说明，也可以在详情页与审批人对话。
 
-- 点击创建好的工单标题，可进入工单详情页。工单详情页中包含该工单的基本信息、申请信息以及审批人，同时该页面可以与审批人进行对话。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder03.png" alt="图 5  查看工单" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  查看工单</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder03.png" alt="图 3  工单详情" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  工单详情</div>
 
-## 4 取消工单
+申请提交后如果不再需要，可以在工单详情页手动取消工单，避免占用审批人的处理时间，也让待审批列表与实际需求保持一致。
 
-- 在工单详情页可以手动取消工单。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder04.png" alt="图 6  取消工单" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  取消工单</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder04.png" alt="图 4  取消工单" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  取消工单</div>
 
-## 5 审批工单
+## 2 审批工单
 
-- 审批人在 **待我审批** 页面点击工单名称，对工单进行查阅审批。审批人查看工单时，可修改申请人申请的资产、账号、操作等权限。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder05.png" alt="图 7  审批工单" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  审批工单</div>
+需要处理他人提交的工单时，在 **待我审批** 页签中点击工单名称进入审批页面。审批人可以查阅申请信息后决定同意或拒绝，也可以按实际需要修改申请人申请的资产、账号、操作等权限，把授权范围收紧到最小必要之后，再完成审批。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder06.png" alt="图 8  审批工单详情" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  审批工单详情</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder05.png" alt="图 5  审批工单" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  审批工单</div>
 
-- 除了在 JumpServer 页面进行审批外，JumpServer 还支持企业微信、钉钉直接审批工单信息。当审批人绑定企业微信或钉钉后，可实时在企业微信或钉钉上对申请人的工单进行审批。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder07.png" alt="图 9  企业微信钉钉审批" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  企业微信钉钉审批</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder06.png" alt="图 6  审批工单详情" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  审批工单详情</div>
 
-## 6 工单审计
+审批人绑定企业微信或钉钉后，还可以直接在移动端处理工单，不必专门登录 JumpServer，临时授权的等待时间更短。
 
-- 审计员进入 **审计台** 页面，点击 **会话审计 &gt; 工单列表**，进入工单列表页面。
-- 工单列表页可以查看系统用户提交的工单列表，点击对应的工单标题可以查看工单详情。
-- 工单详情页可以查看工单的详细信息，包括工单标题、工单内容、工单状态、工单处理人、工单创建时间等。
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/ticket_audit01.png" alt="图 10  工单列表" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  工单列表</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder07.png" alt="图 7  企业微信钉钉审批" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  企业微信钉钉审批</div>
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/ticket_audit02.png" alt="图 11  工单详情" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  工单详情</div>
+## 3 其他角色操作
+
+工单功能的启用，以及审批人、审批流程等配置属于管理员操作，位于**管理员手册 > 系统设置 > 功能设置 > 工单**：[功能设置 > 工单](../admin/system_settings/feature_settings.md#2-工单)。
+
+已提交工单的事后核查与导出由审计员完成，位于 **审计员手册 > 审计台 > 工单审计**：[工单审计](../admin/audit/session_audit/ticket_audit.md)。

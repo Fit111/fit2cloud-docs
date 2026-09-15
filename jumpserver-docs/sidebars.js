@@ -205,6 +205,12 @@ const sidebars = {
           "items": [
             {
               "type": "doc",
+              "id": "manual/common/organization_switch",
+              "label": "组织切换",
+              "key": "doc:使用手册/通用功能/组织切换"
+            },
+            {
+              "type": "doc",
               "id": "manual/common/global_search",
               "label": "全局搜索",
               "key": "doc:使用手册/通用功能/全局搜索"
@@ -223,6 +229,18 @@ const sidebars = {
             },
             {
               "type": "doc",
+              "id": "manual/common/webterminal",
+              "label": "Web 终端",
+              "key": "doc:使用手册/通用功能/web终端"
+            },
+            {
+              "type": "doc",
+              "id": "manual/common/system_settings",
+              "label": "系统设置",
+              "key": "doc:使用手册/通用功能/系统设置"
+            },
+            {
+              "type": "doc",
               "id": "manual/common/system_help",
               "label": "系统帮助",
               "key": "doc:使用手册/通用功能/系统帮助"
@@ -235,15 +253,9 @@ const sidebars = {
             },
             {
               "type": "doc",
-              "id": "manual/common/personal_center",
-              "label": "个人中心",
-              "key": "doc:使用手册/通用功能/个人中心"
-            },
-            {
-              "type": "doc",
-              "id": "manual/common/webterminal",
-              "label": "Web Terminal",
-              "key": "doc:使用手册/通用功能/web终端"
+              "id": "manual/common/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/通用功能/个人设置"
             }
           ],
           "key": "cat:使用手册/通用功能"
@@ -253,12 +265,6 @@ const sidebars = {
           "label": "管理员手册",
           "collapsed": true,
           "items": [
-            {
-              "type": "doc",
-              "id": "manual/admin/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/管理员手册/个人设置"
-            },
             {
               "type": "category",
               "label": "控制台",
@@ -810,6 +816,12 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/管理员手册/系统设置"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/管理员手册/个人设置"
             },
             {
               "type": "category",
