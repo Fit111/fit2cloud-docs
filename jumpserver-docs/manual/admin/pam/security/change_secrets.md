@@ -77,6 +77,10 @@ description: 介绍 JumpServer PAM 中账号改密任务的创建、执行以及
 
 行内绿色按钮立即执行。**更多** 包括 **编辑**、**删除**、**副本**。
 
+:::warning[执行前确认]
+**立即执行** 或详情页中的 **手动执行** 会修改目标资产上的账号密文。执行前请确认目标资产、账号、密文策略和任务范围，生产环境建议先小范围验证。
+:::
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_secret_04.png" alt="图 4  行内更多" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  行内更多</div>

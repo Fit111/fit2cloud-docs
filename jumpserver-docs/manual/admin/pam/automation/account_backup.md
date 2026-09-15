@@ -62,6 +62,10 @@ description: 介绍 JumpServer PAM 中账号备份任务的创建、维护以及
 
 行内绿色按钮立即执行。**更多** 包括 **编辑**、**删除**、**副本**。编辑抽屉标题为 **更新账号备份任务**，可 **提交** 或 **还原**。
 
+:::warning[执行前确认]
+**立即执行** 会根据任务配置导出账号密文，并发送到收件人或写入 SFTP 服务器。执行前请确认备份类型、接收对象和加密配置。
+:::
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_backup_04.png" alt="图 4  行内更多" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  行内更多</div>
