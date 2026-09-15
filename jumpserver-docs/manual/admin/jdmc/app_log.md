@@ -19,3 +19,6 @@ description: 介绍 JDMC 应用日志的日志文件列表与实时日志查看�
 ## 3 日志查看
 
 从左侧选择一个日志文件，系统将自动开始实时监控并持续输出新增日志。点击 **继续监控** 继续刷新日志，点击 **下载** 保存日志文件。未选择文件时，页面提示「请从左侧选择一个日志文件，系统将自动开始实时监控」。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_jdmc_applog_02.png" alt="图 2  gunicorn.log 实时日志" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2   实时日志查看</div>
