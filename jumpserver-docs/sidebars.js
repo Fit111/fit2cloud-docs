@@ -274,8 +274,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/admin/console/switch_console",
-                  "label": "切换到控制台",
-                  "key": "doc:使用手册/管理员手册/控制台/切换到控制台"
+                  "label": "控制台概览",
+                  "key": "doc:使用手册/管理员手册/控制台/控制台概览"
                 },
                 {
                   "type": "doc",
@@ -389,12 +389,6 @@ const sidebars = {
               "label": "PAM",
               "collapsed": true,
               "items": [
-                {
-                  "type": "doc",
-                  "id": "manual/pam/switch_pam",
-                  "label": "切换到 PAM",
-                  "key": "doc:使用手册/管理员手册/PAM/切换到 PAM"
-                },
                 {
                   "type": "doc",
                   "id": "manual/pam/introduction",
@@ -1051,20 +1045,20 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "普通用户使用手册",
+          "label": "普通用户手册",
           "collapsed": true,
           "items": [
             {
               "type": "doc",
               "id": "manual/user/workbench/change_to_workbench",
               "label": "切换工作台",
-              "key": "doc:使用手册/普通用户使用手册/切换工作台"
+              "key": "doc:使用手册/普通用户手册/切换工作台"
             },
             {
               "type": "doc",
               "id": "manual/user/workbench/overview",
               "label": "概览",
-              "key": "doc:使用手册/普通用户使用手册/概览"
+              "key": "doc:使用手册/普通用户手册/概览"
             },
             {
               "type": "category",
@@ -1080,28 +1074,28 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/user/workbench/my_assets/assets_connect",
                       "label": "连接资产",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/连接资产"
+                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/连接资产"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/my_assets/web_terminal",
                       "label": "Web终端",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/Web终端"
+                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/Web终端"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/my_assets/file_transfer",
                       "label": "文件传输",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件传输"
+                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件传输"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/my_assets/file_explorer",
                       "label": "文件管理",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/我的资产/文件管理"
+                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件管理"
                     }
                   ],
-                  "key": "cat:使用手册/普通用户使用手册/工作台/我的资产"
+                  "key": "cat:使用手册/普通用户手册/工作台/我的资产"
                 },
                 {
                   "type": "category",
@@ -1112,28 +1106,28 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/adhoc",
                       "label": "快捷命令",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/快捷命令"
+                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/快捷命令"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/jobs_management",
                       "label": "作业管理",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/作业管理"
+                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/作业管理"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/templates_management",
                       "label": "模板管理",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/模板管理"
+                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/模板管理"
                     },
                     {
                       "type": "doc",
                       "id": "manual/user/workbench/job_center/execute_history",
                       "label": "执行历史",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/作业中心/执行历史"
+                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/执行历史"
                     }
                   ],
-                  "key": "cat:使用手册/普通用户使用手册/工作台/作业中心"
+                  "key": "cat:使用手册/普通用户手册/工作台/作业中心"
                 },
                 {
                   "type": "category",
@@ -1144,25 +1138,25 @@ const sidebars = {
                       "type": "doc",
                       "id": "manual/user/workbench/other/system_tool",
                       "label": "系统工具",
-                      "key": "doc:使用手册/普通用户使用手册/工作台/其他/系统工具"
+                      "key": "doc:使用手册/普通用户手册/工作台/其他/系统工具"
                     }
                   ],
-                  "key": "cat:使用手册/普通用户使用手册/工作台/其他"
+                  "key": "cat:使用手册/普通用户手册/工作台/其他"
                 }
               ],
-              "key": "cat:使用手册/普通用户使用手册/工作台"
+              "key": "cat:使用手册/普通用户手册/工作台"
             },
             {
               "type": "doc",
               "id": "manual/user/profile",
               "label": "个人设置",
-              "key": "doc:使用手册/普通用户使用手册/个人设置"
+              "key": "doc:使用手册/普通用户手册/个人设置"
             },
             {
               "type": "doc",
               "id": "manual/user/ticket",
               "label": "工单",
-              "key": "doc:使用手册/普通用户使用手册/工单"
+              "key": "doc:使用手册/普通用户手册/工单"
             },
             {
               "type": "category",
@@ -1173,31 +1167,31 @@ const sidebars = {
                   "type": "doc",
                   "id": "manual/client/client_installation",
                   "label": "客户端下载与安装",
-                  "key": "doc:使用手册/普通用户使用手册/客户端使用/客户端下载与安装"
+                  "key": "doc:使用手册/普通用户手册/客户端使用/客户端下载与安装"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/asset_connection",
                   "label": "资产连接",
-                  "key": "doc:使用手册/普通用户使用手册/客户端使用/资产连接"
+                  "key": "doc:使用手册/普通用户手册/客户端使用/资产连接"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/connection_settings",
                   "label": "连接设置",
-                  "key": "doc:使用手册/普通用户使用手册/客户端使用/连接设置"
+                  "key": "doc:使用手册/普通用户手册/客户端使用/连接设置"
                 },
                 {
                   "type": "doc",
                   "id": "manual/client/tool",
                   "label": "工具",
-                  "key": "doc:使用手册/普通用户使用手册/客户端使用/工具"
+                  "key": "doc:使用手册/普通用户手册/客户端使用/工具"
                 }
               ],
-              "key": "cat:使用手册/普通用户使用手册/客户端使用"
+              "key": "cat:使用手册/普通用户手册/客户端使用"
             }
           ],
-          "key": "cat:使用手册/普通用户使用手册"
+          "key": "cat:使用手册/普通用户手册"
         },
         {
           "type": "category",
@@ -1212,12 +1206,6 @@ const sidebars = {
         }
       ],
       "key": "cat:使用手册"
-    },
-    {
-      "type": "doc",
-      "id": "user_stories",
-      "label": "企业版功能",
-      "key": "doc:企业版功能"
     },
     {
       "type": "category",
@@ -1281,12 +1269,6 @@ const sidebars = {
           "id": "faq/security",
           "label": "安全建议",
           "key": "doc:常见问题/安全建议"
-        },
-        {
-          "type": "link",
-          "label": "企业版",
-          "href": "https://www.jumpserver.org/enterprise.html",
-          "key": "link:常见问题/企业版"
         }
       ],
       "key": "cat:常见问题"
