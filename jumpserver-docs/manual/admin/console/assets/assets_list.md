@@ -73,18 +73,23 @@ Web 类型资产的配置说明见 [Web 资产](./web_assets.md)。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建资产字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。资产在 JumpServer 中的显示名，不可重名，与操作系统计算机名无关。 |
-| 基本设置 | IP/主机 | 必填。资产地址，支持域名或 IP，允许重复。 |
-| 基本设置 | 平台 | 创建时所选平台，示例为 Linux。 |
-| 基本设置 | 节点 | 必填。资产所属节点。 |
-| 协议 | 协议 | 访问协议与端口。Linux 默认可包含 ssh / 22、sftp / 22，可增减。 |
-| 账号 | 账号 | 可单击 **新增** 或 **模版添加**，在创建时绑定登录账号。 |
-| 其它设置 | 网域 | 跨网段时选择网域作为代理。 |
-| 其它设置 | 标签 | 选填，便于筛选。 |
-| 其它设置 | 激活中 | 勾选后资产可被使用。 |
-| 其它设置 | 备注 | 选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。资产在 JumpServer 中的显示名，不可重名，与操作系统计算机名无关。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>IP/主机</td><td style={{padding:'8px'}}>必填。资产地址，支持域名或 IP，允许重复。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>平台</td><td style={{padding:'8px'}}>创建时所选平台，示例为 Linux。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>节点</td><td style={{padding:'8px'}}>必填。资产所属节点。</td></tr>
+<tr><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>访问协议与端口。Linux 默认可包含 ssh / 22、sftp / 22，可增减。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>可单击 <strong>新增</strong> 或 <strong>模版添加</strong>，在创建时绑定登录账号。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>网域</td><td style={{padding:'8px'}}>跨网段时选择网域作为代理。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>标签</td><td style={{padding:'8px'}}>选填，便于筛选。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后资产可被使用。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。</td></tr>
+</tbody>
+</table>
 
 :::important[协议受平台限制]
 资产可用的协议由平台决定。单击协议行的设置可查看协议参数；若要变更协议能力，须更新对应平台。

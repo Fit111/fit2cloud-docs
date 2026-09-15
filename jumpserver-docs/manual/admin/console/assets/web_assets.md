@@ -41,20 +41,25 @@ Web 资产用于通过远程应用访问内部系统、SaaS 或其他网页。�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建 Web 资产字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。资产在 JumpServer 中的显示名，不可重名。 |
-| 基本设置 | URL | 必填。目标网页地址。 |
-| 基本设置 | 平台 | 创建时所选平台，示例为 Website。 |
-| 基本设置 | 节点 | 必填。资产所属节点。 |
-| 基本设置 | 访问白名单 | 选填。留空允许访问所有站点；配置后只允许打开资产地址及白名单中的站点。 |
-| 选择器 | 自动代填 | **禁用**、**基本** 或 **脚本**，见下文。 |
-| 协议 | 协议 | 默认为 http(s)，端口示例为 80，可增减。 |
-| 账号 | 账号 | 可单击 **新增** 或 **模版添加**，绑定登录该站点的账号。 |
-| 其它设置 | 网域 | 选填。 |
-| 其它设置 | 标签 | 选填。 |
-| 其它设置 | 激活中 | 勾选后资产可被使用。 |
-| 其它设置 | 备注 | 选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。资产在 JumpServer 中的显示名，不可重名。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>URL</td><td style={{padding:'8px'}}>必填。目标网页地址。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>平台</td><td style={{padding:'8px'}}>创建时所选平台，示例为 Website。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>节点</td><td style={{padding:'8px'}}>必填。资产所属节点。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>访问白名单</td><td style={{padding:'8px'}}>选填。留空允许访问所有站点；配置后只允许打开资产地址及白名单中的站点。</td></tr>
+<tr><td style={{padding:'8px'}}>选择器</td><td style={{padding:'8px'}}>自动代填</td><td style={{padding:'8px'}}><strong>禁用</strong>、<strong>基本</strong> 或 <strong>脚本</strong>，见下文。</td></tr>
+<tr><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>默认为 http(s)，端口示例为 80，可增减。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>可单击 <strong>新增</strong> 或 <strong>模版添加</strong>，绑定登录该站点的账号。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>网域</td><td style={{padding:'8px'}}>选填。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>标签</td><td style={{padding:'8px'}}>选填。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后资产可被使用。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。</td></tr>
+</tbody>
+</table>
 
 :::note[访问白名单]
 输入完整 HTTP / HTTPS 站点地址（协议、主机和端口），不含路径或通配符，按回车确认。页面资源加载不受限制。
@@ -90,18 +95,40 @@ Web 资产用于通过远程应用访问内部系统、SaaS 或其他网页。�
 
 ### 4.3 脚本
 
-登录流程有多步、需等待人工验证或页面跳转时，选择 **脚本**，在编辑器中填写 JSON 数组。
+登录流程有多步、需等待人工验证或页面跳转时，选择 **脚本**，在编辑器中填写 JSON 数组。每步是一个对象，`step` 从 1 起且不可重复。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_web_04.png" alt="图 5  脚本代填" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  脚本代填</div>
 
-界面说明：
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  脚本步骤字段</div>
 
-- 每步可指定 origin。
-- `interactive` 会暂停并等待人工验证。
-- `success` 必须是最后一步。
-- Web Proxy 支持同一窗口内的页面跳转，暂不支持 iframe 和独立弹窗登录。
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'78%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>step</td><td style={{padding:'8px'}}>必填。正整数，表示执行顺序，不可重复。</td></tr>
+<tr><td style={{padding:'8px'}}>command</td><td style={{padding:'8px'}}>必填。常用取值：<code>type</code>（输入）、<code>click</code>（单击）、<code>interactive</code>（暂停并等待人工验证）、<code>success</code>（登录成功判定，必须是最后一步）。</td></tr>
+<tr><td style={{padding:'8px'}}>target</td><td style={{padding:'8px'}}>选择器，写法与基本代填相同，如 <code>name=username</code>、<code>id=login_button</code>。</td></tr>
+<tr><td style={{padding:'8px'}}>value</td><td style={{padding:'8px'}}><code>type</code> 时填写。内置变量见下方示例：账号用户名、账号密码。</td></tr>
+<tr><td style={{padding:'8px'}}>origin</td><td style={{padding:'8px'}}>选填。该步所在页面的 HTTP / HTTPS 源（协议、主机和端口，不含路径）。多站点跳转时按步指定。</td></tr>
+</tbody>
+</table>
+
+示例：输入用户名和密码、单击登录，必要时暂停人工验证，最后用 `success` 结束：
+
+```json
+[
+  {"step": 1, "command": "type", "target": "name=username", "value": "{USERNAME}", "origin": "https://example.com"},
+  {"step": 2, "command": "type", "target": "name=password", "value": "{SECRET}"},
+  {"step": 3, "command": "click", "target": "id=login_button"},
+  {"step": 4, "command": "interactive"},
+  {"step": 5, "command": "success"}
+]
+```
+
+请按实际登录页修改 `origin` 与选择器。无验证码等人工步骤时，可去掉 `interactive`，但仍须将 `success` 放在最后一步。
 
 :::warning[脚本限制]
 当前 Web Proxy 暂不支持 iframe 登录，也不支持独立弹窗登录。多步脚本请在同一窗口内完成跳转。

@@ -55,19 +55,24 @@ description: 介绍 JumpServer 控制台中资产账号的创建、模版添加�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  新增账号字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。账号显示名，允许重复。 |
-| 基本设置 | 用户名 | 登录资产所用用户名。 |
-| 基本设置 | 特权账号 | 勾选后，批量改密、推送等操作可优先使用该账号。 |
-| 基本设置 | 切换自 | 从此账号切换到当前账号，例如先登录特权账号再切换。 |
-| 资产 | 资产 | 选择要关联的资产，可将同一账号关联到多台资产。 |
-| 密码 | 密文类型 | **密码**、**SSH 密钥**、**SSH 证书**、**令牌** 或 **访问密钥**。 |
-| 密码 | 密码 | 密文类型为密码时填写。可单击生成按钮随机生成。 |
-| 密码 | 可改密 | 勾选后，账号改密计划可修改该账号在资产上的密码。 |
-| 其它设置 | 账号策略 | 同一资产上已存在同名账号时的处理方式：**跳过**、**更新** 或 **失败**。默认 **失败**。 |
-| 其它设置 | 激活 | 勾选后账号可用于登录。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。账号显示名，允许重复。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>用户名</td><td style={{padding:'8px'}}>登录资产所用用户名。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>特权账号</td><td style={{padding:'8px'}}>勾选后，批量改密、推送等操作可优先使用该账号。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>切换自</td><td style={{padding:'8px'}}>从此账号切换到当前账号，例如先登录特权账号再切换。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>选择要关联的资产，可将同一账号关联到多台资产。</td></tr>
+<tr><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>密文类型</td><td style={{padding:'8px'}}><strong>密码</strong>、<strong>SSH 密钥</strong>、<strong>SSH 证书</strong>、<strong>令牌</strong> 或 <strong>访问密钥</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>密文类型为密码时填写。可单击生成按钮随机生成。</td></tr>
+<tr><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>可改密</td><td style={{padding:'8px'}}>勾选后，账号改密计划可修改该账号在资产上的密码。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>账号策略</td><td style={{padding:'8px'}}>同一资产上已存在同名账号时的处理方式：<strong>跳过</strong>、<strong>更新</strong> 或 <strong>失败</strong>。默认 <strong>失败</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活</td><td style={{padding:'8px'}}>勾选后账号可用于登录。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 ## 5 模版添加
 

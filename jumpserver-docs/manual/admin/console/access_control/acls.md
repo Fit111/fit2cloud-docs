@@ -43,16 +43,21 @@ description: 介绍 JumpServer 控制台中用户登录、命令过滤、资产�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  用户登录控制字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。规则名称。 |
-| 基本设置 | 优先级 | 默认 50。 |
-| 用户 | 用户 | **全部用户**、**指定用户** 或 **属性筛选**。 |
-| 规则 | IP | 限制用户登录来源 IP。`*` 表示匹配所有。示例：`192.168.10.1`、`192.168.1.0/24`、`10.1.1.1-10.1.1.20` 及 IPv6。按 Enter 继续输入。 |
-| 规则 | 时段 | 按星期与小时拖动选择。未选择等同全选。可 **清空选择** 或 **全选**。 |
-| 动作 | 动作 | **拒绝**、**接受**、**审批** 或 **通知**。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。规则名称。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>默认 50。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}><strong>全部用户</strong>、<strong>指定用户</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>IP</td><td style={{padding:'8px'}}>限制用户登录来源 IP。<code>*</code> 表示匹配所有。示例：<code>192.168.10.1</code>、<code>192.168.1.0/24</code>、<code>10.1.1.1-10.1.1.20</code> 及 IPv6。按 Enter 继续输入。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>时段</td><td style={{padding:'8px'}}>按星期与小时拖动选择。未选择等同全选。可 <strong>清空选择</strong> 或 <strong>全选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}><strong>拒绝</strong>、<strong>接受</strong>、<strong>审批</strong> 或 <strong>通知</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 列表列字段包括名称、优先级、激活中、动作及操作。未激活时 **激活中** 显示为否。
 
@@ -76,17 +81,22 @@ description: 介绍 JumpServer 控制台中用户登录、命令过滤、资产�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  命令过滤字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。过滤器名称。 |
-| 基本设置 | 优先级 | 默认 50。 |
-| 用户 | 用户 | **全部用户**、**指定用户** 或 **属性筛选**。 |
-| 资产 | 资产 | **全部资产**、**指定资产** 或 **属性筛选**。 |
-| 账号 | 账号 | **所有账号** 或 **指定账号**。 |
-| 命令组 | 命令组 | 选择已创建的命令组。 |
-| 动作 | 动作 | 匹配后的处理方式，默认 **拒绝**。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。过滤器名称。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>默认 50。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}><strong>全部用户</strong>、<strong>指定用户</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}><strong>全部资产</strong>、<strong>指定资产</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}><strong>所有账号</strong> 或 <strong>指定账号</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>命令组</td><td style={{padding:'8px'}}>命令组</td><td style={{padding:'8px'}}>选择已创建的命令组。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>匹配后的处理方式，默认 <strong>拒绝</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 列表列字段包括名称、命令组、优先级、激活中、备注及操作。
 
@@ -126,18 +136,23 @@ description: 介绍 JumpServer 控制台中用户登录、命令过滤、资产�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  资产连接字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。 |
-| 基本设置 | 优先级 | 默认 50。 |
-| 用户 | 用户 | **全部用户**、**指定用户** 或 **属性筛选**。 |
-| 资产 | 资产 | **全部资产**、**指定资产** 或 **属性筛选**。 |
-| 账号 | 账号 | **所有账号** 或 **指定账号**。 |
-| 规则 | IP | 限制连接来源 IP，格式与用户登录相同，`*` 表示全部。 |
-| 规则 | 时段 | 可拖动选择；未选择等同全选。 |
-| 动作 | 动作 | 下拉选择，默认 **拒绝**。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>默认 50。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}><strong>全部用户</strong>、<strong>指定用户</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}><strong>全部资产</strong>、<strong>指定资产</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}><strong>所有账号</strong> 或 <strong>指定账号</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>IP</td><td style={{padding:'8px'}}>限制连接来源 IP，格式与用户登录相同，<code>*</code> 表示全部。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>时段</td><td style={{padding:'8px'}}>可拖动选择；未选择等同全选。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>下拉选择，默认 <strong>拒绝</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 ## 6 数据脱敏
 
@@ -153,18 +168,23 @@ description: 介绍 JumpServer 控制台中用户登录、命令过滤、资产�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  数据脱敏字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。 |
-| 基本设置 | 优先级 | 默认 50。 |
-| 用户 | 用户 | **全部用户**、**指定用户** 或 **属性筛选**。 |
-| 资产 | 资产 | **全部资产**、**指定资产** 或 **属性筛选**。 |
-| 账号 | 账号 | **所有账号** 或 **指定账号**。 |
-| 规则 | 遮盖列名 | 要遮盖的列名，界面示例为 `password`。 |
-| 规则 | 遮盖方法 | **固定字符替换**、**隐藏中间字符**、**保留前缀** 或 **保留后缀**。 |
-| 规则 | 遮盖字符 | 固定字符替换时使用的字符，界面默认为 `######`。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>默认 50。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}><strong>全部用户</strong>、<strong>指定用户</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}><strong>全部资产</strong>、<strong>指定资产</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}><strong>所有账号</strong> 或 <strong>指定账号</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>遮盖列名</td><td style={{padding:'8px'}}>要遮盖的列名，界面示例为 <code>password</code>。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>遮盖方法</td><td style={{padding:'8px'}}><strong>固定字符替换</strong>、<strong>隐藏中间字符</strong>、<strong>保留前缀</strong> 或 <strong>保留后缀</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>规则</td><td style={{padding:'8px'}}>遮盖字符</td><td style={{padding:'8px'}}>固定字符替换时使用的字符，界面默认为 <code>######</code>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 ## 7 剪贴板
 
@@ -180,21 +200,26 @@ description: 介绍 JumpServer 控制台中用户登录、命令过滤、资产�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 5  剪贴板控制字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。 |
-| 基本设置 | 优先级 | 默认 50。 |
-| 用户 | 用户 | **全部用户**、**指定用户** 或 **属性筛选**。 |
-| 资产 | 资产 | **全部资产**、**指定资产** 或 **属性筛选**。 |
-| 账号 | 账号 | **所有账号** 或 **指定账号**。 |
-| 剪贴板 | 操作 | 勾选 **复制**、**粘贴**。 |
-| 限制 | 复制文本字符限制 | 限制复制文本长度，默认 0。 |
-| 限制 | 粘贴文本字符限制 | 限制粘贴文本长度，默认 0。 |
-| 限制 | 下载文件大小限制 | 限制下载文件大小，默认 0。 |
-| 限制 | 上传文件大小限制 | 限制上传文件大小，默认 0。 |
-| 动作 | 动作 | **同意** 或 **拒绝**。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>默认 50。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}><strong>全部用户</strong>、<strong>指定用户</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}><strong>全部资产</strong>、<strong>指定资产</strong> 或 <strong>属性筛选</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}><strong>所有账号</strong> 或 <strong>指定账号</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>剪贴板</td><td style={{padding:'8px'}}>操作</td><td style={{padding:'8px'}}>勾选 <strong>复制</strong>、<strong>粘贴</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>限制</td><td style={{padding:'8px'}}>复制文本字符限制</td><td style={{padding:'8px'}}>限制复制文本长度，默认 0。</td></tr>
+<tr><td style={{padding:'8px'}}>限制</td><td style={{padding:'8px'}}>粘贴文本字符限制</td><td style={{padding:'8px'}}>限制粘贴文本长度，默认 0。</td></tr>
+<tr><td style={{padding:'8px'}}>限制</td><td style={{padding:'8px'}}>下载文件大小限制</td><td style={{padding:'8px'}}>限制下载文件大小，默认 0。</td></tr>
+<tr><td style={{padding:'8px'}}>限制</td><td style={{padding:'8px'}}>上传文件大小限制</td><td style={{padding:'8px'}}>限制上传文件大小，默认 0。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}><strong>同意</strong> 或 <strong>拒绝</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 ## 8 连接方式
 
