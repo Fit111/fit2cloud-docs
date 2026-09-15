@@ -717,6 +717,86 @@ const sidebars = {
                   "key": "doc:使用手册/管理员手册/系统设置/系统任务"
                 },
                 {
+                  "type": "category",
+                  "label": "设备管理",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/overview",
+                      "label": "概览",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/概览"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/dashboard",
+                      "label": "仪表盘",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/仪表盘"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_network",
+                      "label": "网络配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/网络配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_cert",
+                      "label": "域名配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/域名配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_disk",
+                      "label": "磁盘管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/磁盘管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_auth",
+                      "label": "授权管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/授权管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_settings",
+                      "label": "服务设置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/服务设置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/sys_ha",
+                      "label": "主备管理",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/主备管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_backup",
+                      "label": "数据备份",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/数据备份"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_state",
+                      "label": "应用状态",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用状态"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_config",
+                      "label": "应用配置",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用配置"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/admin/jdmc/app_log",
+                      "label": "应用日志",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/应用日志"
+                    }
+                  ],
+                  "key": "cat:使用手册/管理员手册/系统设置/设备管理"
+                },
+                {
                   "type": "doc",
                   "id": "manual/admin/system_settings/licenses",
                   "label": "许可证",
