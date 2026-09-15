@@ -7,7 +7,7 @@ description: 介绍 JumpServer 工作台文件管理入口，以及 Web 终端�
 
 文件管理用于在已授权资产上浏览和传输文件。路径：登录后将控制台切换到 **工作台**，选择 **我的资产 > 文件管理**，将打开独立的文件管理器（依赖 Koko 组件）。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_user_wb_fm_01.png" alt="图 1  传输中心" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_wb_fm_01.png" alt="图 1  传输中心" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  传输中心</div>
 
@@ -16,7 +16,7 @@ description: 介绍 JumpServer 工作台文件管理入口，以及 Web 终端�
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_user_wb_fm_02.png" alt="图 2  传输中心" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  传输中心</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  传输过程</div>
 
 :::note[组件需可用]
 独立文件管理器依赖 Koko。若打开后无法访问，请检查组件状态，见 [组件设置](../../system_settings/components.md)。向多台 Linux 资产批量上传见 [文件传输](./file_transfer.md)。
