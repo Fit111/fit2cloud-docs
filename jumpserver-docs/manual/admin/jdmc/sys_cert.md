@@ -22,6 +22,8 @@ description: 介绍 JDMC 域名配置中的域名设置、当前证书信息与�
 
 **当前证书信息** 区读取当前服务端证书的主体、签发者和有效期信息，右上角显示 **已配置** 状态。区内的 **普通证书** 与 **国密证书** 两种类型可切换，分别提示「上传单张服务证书和对应私钥」与「上传签名证书、签名私钥、加密证书链和加密私钥」。下方按以下字段展示当前证书：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  当前证书信息字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>

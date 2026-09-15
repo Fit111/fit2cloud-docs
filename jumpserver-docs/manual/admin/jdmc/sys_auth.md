@@ -20,6 +20,8 @@ description: 介绍 JDMC 授权管理中机器码的查看与复制，以及许�
 
 上传许可证后，**机器码** 区块下方展示当前授权信息。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  授权信息字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>

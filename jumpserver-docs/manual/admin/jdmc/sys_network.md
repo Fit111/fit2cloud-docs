@@ -13,6 +13,8 @@ description: 介绍 JDMC 网络配置中的网卡管理、路由与网关、DNS 
 
 左侧列出服务器全部网卡，支持按网卡名、MAC 地址搜索，每项显示地址数量与管理状态。选中网卡后，右侧展示该网卡详情：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  网卡详情字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -37,6 +39,8 @@ description: 介绍 JDMC 网络配置中的网卡管理、路由与网关、DNS 
 ## 3 路由与网关
 
 用于查看当前生效路由、目标网段与网关信息，并执行新增、删除和可达性校验。页面右上角提供搜索框（**搜索目标、网关或设备**）、**列表偏好**、**路由可达性校验** 与 **新增路由** 操作入口。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  路由列表字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
@@ -66,6 +70,8 @@ description: 介绍 JDMC 网络配置中的网卡管理、路由与网关、DNS 
 
 用于查看 Docker 桥接网络、地址范围、已连接容器及网段冲突，点击 **刷新** 重新采集。页面顶部展示四项桥接配置状态：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  桥接配置状态字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -79,6 +85,8 @@ description: 介绍 JDMC 网络配置中的网卡管理、路由与网关、DNS 
 </table>
 
 下方列表展示各 Docker 网络：
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  Docker 网络列表字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

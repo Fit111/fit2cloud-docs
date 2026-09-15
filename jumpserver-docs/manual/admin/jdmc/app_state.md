@@ -16,6 +16,8 @@ description: 介绍 JDMC 应用状态中的应用命令与容器运行状态列�
 
 应用命令用于对 JumpServer 容器执行启动、重启与状态查看，输出实时流式展示，不影响 JDMC 服务。页面提供三个操作按钮：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  应用命令按钮说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>按钮</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -30,6 +32,8 @@ description: 介绍 JDMC 应用状态中的应用命令与容器运行状态列�
 ## 3 应用状态
 
 **应用状态** 列表展示当前服务器上的全部容器，右上角提供搜索框（**搜索容器 ID、容器名称或镜像**）、**列设置** 与刷新操作。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  应用状态列表字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

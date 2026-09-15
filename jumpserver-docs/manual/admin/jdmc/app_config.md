@@ -16,6 +16,8 @@ description: 介绍 JDMC 应用配置中的配置分类、配置项详情与应�
 
 **JumpServer 配置** 区右上角提供 **配置历史** 按钮，并显示当前 **配置版本**（版本哈希值），点击 **刷新** 重新读取。配置项按业务域分类，可通过左侧分类列表过滤，也可使用搜索框（**搜索配置名称、变量名或说明**）与筛选下拉快速定位。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  配置历史分类说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>分类</th><th style={{width:'75%', padding:'8px'}}>配置项数量</th></tr>
@@ -35,6 +37,8 @@ description: 介绍 JDMC 应用配置中的配置分类、配置项详情与应�
 
 每个配置项以卡片形式展示，包含名称、所属分类、风险等级与对应的环境变量名，点击 **打开详细说明** 可展开功能说明。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  配置项卡片说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>区域</th><th style={{width:'75%', padding:'8px'}}>内容</th></tr>
@@ -50,6 +54,8 @@ description: 介绍 JDMC 应用配置中的配置分类、配置项详情与应�
 </table>
 
 常见配置项举例：
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  常见配置项举例</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

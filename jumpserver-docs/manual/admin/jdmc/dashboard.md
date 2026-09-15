@@ -16,6 +16,8 @@ description: 介绍 JDMC 仪表盘的资源占用卡片、CPU 与内存趋势图
 
 页面顶部并排展示 **CPU 占用**、**内存信息**、**磁盘占用** 三个卡片，每个卡片左侧为环形进度与百分比，右侧为明细指标。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  资源占用卡片说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>卡片</th><th style={{width:'75%', padding:'8px'}}>明细指标</th></tr>
@@ -38,6 +40,8 @@ description: 介绍 JDMC 仪表盘的资源占用卡片、CPU 与内存趋势图
 ## 4 主机信息
 
 页面右侧的 **主机信息** 卡片展示服务器基础信息：
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  主机信息字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

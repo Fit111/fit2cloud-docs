@@ -22,6 +22,8 @@ description: 介绍 JDMC 数据备份的备份对象、备份记录与备份设�
 
 备份记录列表按以下列展示：
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  备份记录字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>列</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -44,6 +46,8 @@ description: 介绍 JDMC 数据备份的备份对象、备份记录与备份设�
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  编辑备份配置</div>
 
 在 **SFTP 主机列表** 中点击 **添加主机**，在 **添加主机** 弹窗中填写 SFTP 服务器的连接信息，各字段说明如下：
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  添加主机字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

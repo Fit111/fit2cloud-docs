@@ -20,6 +20,8 @@ description: 介绍 JDMC 服务设置中的更改密码、端口管理、SNMP �
 
 端口管理用于查看当前公网监听端口，并通过防火墙统一控制访问策略，页面提供 **搜索服务、端口、协议...** 搜索框。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  端口列表字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>列</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -40,6 +42,8 @@ description: 介绍 JDMC 服务设置中的更改密码、端口管理、SNMP �
 
 SNMP 设置用于配置 SNMP Agent 用于网络监控，点击 **编辑** 修改配置，点击 **下载 MIB 文件** 获取 MIB 文件。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  SNMP 设置字段说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
@@ -58,6 +62,8 @@ SNMP 设置用于配置 SNMP Agent 用于网络监控，点击 **编辑** 修改
 ## 5 系统时间配置
 
 系统时间配置用于查看当前同步状态、NTP 服务器与系统时间参数，点击 **立即同步** 触发一次同步，点击 **编辑** 修改配置。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  系统时间字段说明</div>
 
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>

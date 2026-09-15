@@ -27,6 +27,8 @@ JDMC 与 JumpServer 共用同一个访问地址，路径为 `/jdmc/`，例如 `h
 
 JDMC 左侧为固定菜单栏，除 **仪表盘** 外，功能入口分为 **系统管理** 与 **应用管理** 两个分组。
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  界面结构说明</div>
+
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'20%', padding:'8px'}}>分组</th><th style={{width:'20%', padding:'8px'}}>菜单项</th><th style={{width:'60%', padding:'8px'}}>主要功能</th></tr>

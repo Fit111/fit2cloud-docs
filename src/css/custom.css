@@ -569,6 +569,40 @@ html[class*='docs-doc-id-manual/pam/introduction'] .theme-doc-markdown table {
   text-transform: none !important;
 }
 
+/* ===== 文档侧栏 NEW 标签 =====
+   在 sidebars.js 中给需要标记的条目增加 className: "sidebar-item-badge-new"。
+   Docusaurus 会把该 class 应用到侧栏 <li>，这里通过 ::after 在链接右侧生成
+   橙色胶囊标签；长标题自动省略，避免 NEW 标签被挤出侧栏。 */
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__link,
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__list-item-collapsible > .menu__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__link > span,
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__list-item-collapsible > .menu__link > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__link > span::after,
+.theme-doc-sidebar-container li.sidebar-item-badge-new > .menu__list-item-collapsible > .menu__link > span::after {
+  content: "NEW";
+  flex: 0 0 auto;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #ff871d;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  vertical-align: middle;
+}
+
 /* ===== navbar 对齐 Figma 首页设计稿 =====
    设计稿导航(节点 492:10073 / Group1 rel=[360,24,1200,70]):
    - 白色圆角悬浮卡: 居中断宽度约1200/顶部留白24/圆角/浅阴影
