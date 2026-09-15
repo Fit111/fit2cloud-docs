@@ -91,18 +91,23 @@ JumpServer 通过网关建立跳转，以访问不能直达的资产。选择 **
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建网关字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。网关显示名。 |
-| 基本设置 | IP/主机 | 必填。网关地址。 |
-| 基本设置 | 平台 | 须选择名称以 Gateway 开头的平台，默认 Gateway。 |
-| 基本设置 | 节点 | 必填。网关所属节点。 |
-| 协议 | 协议 | 默认可包含 ssh / 22、sftp / 22，可增减。 |
-| 账号 | 账号 | 可单击 **新增** 或 **模版添加**，绑定登录网关的账号。 |
-| 其它设置 | 网域 | 自动绑定当前网域。 |
-| 其它设置 | 标签 | 选填。 |
-| 其它设置 | 激活中 | 勾选后网关可用。 |
-| 其它设置 | 备注 | 选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。网关显示名。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>IP/主机</td><td style={{padding:'8px'}}>必填。网关地址。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>平台</td><td style={{padding:'8px'}}>须选择名称以 Gateway 开头的平台，默认 Gateway。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>节点</td><td style={{padding:'8px'}}>必填。网关所属节点。</td></tr>
+<tr><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>默认可包含 ssh / 22、sftp / 22，可增减。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>可单击 <strong>新增</strong> 或 <strong>模版添加</strong>，绑定登录网关的账号。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>网域</td><td style={{padding:'8px'}}>自动绑定当前网域。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>标签</td><td style={{padding:'8px'}}>选填。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后网关可用。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。会在 Luna 的用户授权资产树中悬浮显示，请勿填写敏感信息。</td></tr>
+</tbody>
+</table>
 
 :::important[平台限制]
 网关平台只能选择以 Gateway 开头的平台。协议受平台限制，变更协议能力须更新对应平台。

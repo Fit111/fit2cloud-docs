@@ -248,16 +248,22 @@ const sidebars = {
           "collapsed": true,
           "items": [
             {
-              "type": "doc",
-              "id": "manual/admin/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/管理员手册/个人设置"
-            },
-            {
               "type": "category",
               "label": "控制台",
               "collapsed": true,
               "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/switch_console",
+                  "label": "切换到控制台",
+                  "key": "doc:使用手册/管理员手册/控制台/切换到控制台"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/dashboard",
+                  "label": "仪表盘",
+                  "key": "doc:使用手册/管理员手册/控制台/仪表盘"
+                },
                 {
                   "type": "category",
                   "label": "用户管理",
@@ -602,6 +608,12 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/管理员手册/工作台"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/管理员手册/个人设置"
             },
             {
               "type": "category",
@@ -1109,10 +1121,30 @@ const sidebars = {
       "key": "cat:开发文档"
     },
     {
-      "type": "doc",
-      "id": "user_stories",
+      "type": "category",
       "label": "运维指南",
-      "key": "doc:运维指南"
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "manual/ops/system_params",
+          "label": "系统参数设置",
+          "key": "doc:运维指南/系统参数设置"
+        },
+        {
+          "type": "doc",
+          "id": "manual/ops/log_storage",
+          "label": "日志存储配置",
+          "key": "doc:运维指南/日志存储配置"
+        },
+        {
+          "type": "doc",
+          "id": "manual/ops/cli_tools",
+          "label": "命令行工具",
+          "key": "doc:运维指南/命令行工具"
+        }
+      ],
+      "key": "cat:运维指南"
     },
     {
       "type": "category",

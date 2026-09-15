@@ -42,22 +42,27 @@ description: 介绍 JumpServer 控制台中用户的创建、邀请、导入导�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建用户字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 用户显示名，允许重复。 |
-| 基本设置 | 用户名 | 登录账号，不可重复。 |
-| 基本设置 | 邮箱 | 登录与通知所用邮箱，不可重复。 |
-| 基本设置 | 用户组 | 按组管理用户，资产授权到组后组内用户继承权限。 |
-| 认证 | 密码选项 | **生成重置密码链接，通过邮件发送给用户** 或 **设置密码**。 |
-| 认证 | MFA | **禁用**、**启用** 或 **强制启用**。 |
-| 认证 | 允许的 MFA 类型 | 虚拟 MFA、短信、邮箱、人脸识别、Radius、Passkey、自定义。 |
-| 认证 | 来源 | 手动创建一般为 **数据库**；从 LDAP / AD 导入则为对应目录源。 |
-| 安全 | 系统角色 | 系统级权限，如系统管理员、审计员、用户或自定义角色。 |
-| 安全 | 组织角色 | 组织级权限。可单击 **管理角色** 维护角色。 |
-| 安全 | 激活 | 勾选后允许登录；未激活不可登录。 |
-| 安全 | 失效日期 | 超过该时间后无法登录。 |
-| 其它设置 | 手机 | 选填，用于短信 MFA。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>用户显示名，允许重复。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>用户名</td><td style={{padding:'8px'}}>登录账号，不可重复。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>邮箱</td><td style={{padding:'8px'}}>登录与通知所用邮箱，不可重复。</td></tr>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>用户组</td><td style={{padding:'8px'}}>按组管理用户，资产授权到组后组内用户继承权限。</td></tr>
+<tr><td style={{padding:'8px'}}>认证</td><td style={{padding:'8px'}}>密码选项</td><td style={{padding:'8px'}}><strong>生成重置密码链接，通过邮件发送给用户</strong> 或 <strong>设置密码</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>认证</td><td style={{padding:'8px'}}>MFA</td><td style={{padding:'8px'}}><strong>禁用</strong>、<strong>启用</strong> 或 <strong>强制启用</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>认证</td><td style={{padding:'8px'}}>允许的 MFA 类型</td><td style={{padding:'8px'}}>虚拟 MFA、短信、邮箱、人脸识别、Radius、Passkey、自定义。</td></tr>
+<tr><td style={{padding:'8px'}}>认证</td><td style={{padding:'8px'}}>来源</td><td style={{padding:'8px'}}>手动创建一般为 <strong>数据库</strong>；从 LDAP / AD 导入则为对应目录源。</td></tr>
+<tr><td style={{padding:'8px'}}>安全</td><td style={{padding:'8px'}}>系统角色</td><td style={{padding:'8px'}}>系统级权限，如系统管理员、审计员、用户或自定义角色。</td></tr>
+<tr><td style={{padding:'8px'}}>安全</td><td style={{padding:'8px'}}>组织角色</td><td style={{padding:'8px'}}>组织级权限。可单击 <strong>管理角色</strong> 维护角色。</td></tr>
+<tr><td style={{padding:'8px'}}>安全</td><td style={{padding:'8px'}}>激活</td><td style={{padding:'8px'}}>勾选后允许登录；未激活不可登录。</td></tr>
+<tr><td style={{padding:'8px'}}>安全</td><td style={{padding:'8px'}}>失效日期</td><td style={{padding:'8px'}}>超过该时间后无法登录。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>手机</td><td style={{padding:'8px'}}>选填，用于短信 MFA。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 ## 4 邀请用户
 
@@ -119,14 +124,19 @@ description: 介绍 JumpServer 控制台中用户的创建、邀请、导入导�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  登录规则字段说明</div>
 
-| 字段 | 说明 |
-| --- | --- |
-| 名称 | 规则名称。 |
-| 优先级 | 数字越小优先级越高。 |
-| IP 组 | 限制登录来源 IP，逗号分隔；`*` 表示全部。支持单 IP、网段、范围及 IPv6。 |
-| 时段 | 允许或限制登录的时间段。 |
-| 动作 | **拒绝**、**允许** 或 **登录复核**（需审批通过后登录）。 |
-| 激活中 | 规则是否生效。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'75%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>规则名称。</td></tr>
+<tr><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>数字越小优先级越高。</td></tr>
+<tr><td style={{padding:'8px'}}>IP 组</td><td style={{padding:'8px'}}>限制登录来源 IP，逗号分隔；<code>*</code> 表示全部。支持单 IP、网段、范围及 IPv6。</td></tr>
+<tr><td style={{padding:'8px'}}>时段</td><td style={{padding:'8px'}}>允许或限制登录的时间段。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}><strong>拒绝</strong>、<strong>允许</strong> 或 <strong>登录复核</strong>（需审批通过后登录）。</td></tr>
+<tr><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>规则是否生效。</td></tr>
+</tbody>
+</table>
 
 ### 6.4 用户会话与活动
 

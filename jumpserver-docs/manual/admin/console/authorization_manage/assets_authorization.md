@@ -40,20 +40,25 @@ description: 介绍 JumpServer 控制台中资产授权规则的创建、导入�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建资产授权字段说明</div>
 
-| 分组 | 字段 | 说明 |
-| --- | --- | --- |
-| 基本设置 | 名称 | 必填。授权规则名称。 |
-| 用户 | 用户 | 被授权连接资产的 JumpServer 用户，可多选。 |
-| 用户 | 用户组 | 被授权的用户组。组内用户继承该规则。 |
-| 资产 | 资产 | 用户可连接的资产，可多选。 |
-| 资产 | 节点 | 用户可连接的资产节点。节点下资产随节点变化。 |
-| 账号 | 账号 | **所有账号**、**指定账号**、**排除账号** 或 **无**。可同时勾选 **虚拟账号**。 |
-| 协议 | 协议 | **全部协议** 或 **指定协议**。 |
-| 动作 | 动作 | 用户可执行的操作，见下文。 |
-| 其它设置 | 激活中 | 勾选后规则生效。 |
-| 其它设置 | 开始日期 | 规则开始生效的时间。 |
-| 其它设置 | 失效日期 | 超过该时间后规则不再生效。 |
-| 其它设置 | 备注 | 选填。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'18%', padding:'8px', textAlign:'left'}}>分组</th><th style={{width:'22%', padding:'8px', textAlign:'left'}}>字段</th><th style={{width:'60%', padding:'8px', textAlign:'left'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>基本设置</td><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>必填。授权规则名称。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>被授权连接资产的 JumpServer 用户，可多选。</td></tr>
+<tr><td style={{padding:'8px'}}>用户</td><td style={{padding:'8px'}}>用户组</td><td style={{padding:'8px'}}>被授权的用户组。组内用户继承该规则。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>用户可连接的资产，可多选。</td></tr>
+<tr><td style={{padding:'8px'}}>资产</td><td style={{padding:'8px'}}>节点</td><td style={{padding:'8px'}}>用户可连接的资产节点。节点下资产随节点变化。</td></tr>
+<tr><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}>账号</td><td style={{padding:'8px'}}><strong>所有账号</strong>、<strong>指定账号</strong>、<strong>排除账号</strong> 或 <strong>无</strong>。可同时勾选 <strong>虚拟账号</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}>协议</td><td style={{padding:'8px'}}><strong>全部协议</strong> 或 <strong>指定协议</strong>。</td></tr>
+<tr><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>动作</td><td style={{padding:'8px'}}>用户可执行的操作，见下文。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>激活中</td><td style={{padding:'8px'}}>勾选后规则生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>开始日期</td><td style={{padding:'8px'}}>规则开始生效的时间。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>失效日期</td><td style={{padding:'8px'}}>超过该时间后规则不再生效。</td></tr>
+<tr><td style={{padding:'8px'}}>其它设置</td><td style={{padding:'8px'}}>备注</td><td style={{padding:'8px'}}>选填。</td></tr>
+</tbody>
+</table>
 
 用户与用户组可同时选择；资产与节点也可同时选择。常见写法：
 
