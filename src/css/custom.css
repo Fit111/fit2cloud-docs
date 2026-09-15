@@ -106,6 +106,30 @@
   --ifm-alert-border-color: #00c853;
 }
 
+/* JumpServer：提示框对齐参考样式（1Panel 官方文档）——浅色底 + 同色系深色左条。
+   上面的白底规则会让 :::note / :::tip 变成「白底 + 孤零零一条边」的观感，
+   这里按产品恢复类型底色；同时把左边条从原来的亮绿 (#00c853) 换成与底色同色系的深色调
+   （原来亮绿在浅绿底上过于扎眼，用户称为"包边"），取值量自参考截图：
+     注意 note   → 浅蓝底 #eef5fe + 品牌蓝左条 rgb(12,123,224)
+     提醒 tip / 重要 important → 浅绿底 rgb(229,247,230) + 深绿左条 rgb(20,150,27)
+     警告 warning → 浅黄底 rgb(253,249,231) + 金橙左条 rgb(225,173,38) */
+html[data-docs-product='jumpserver'] .alert--secondary {
+  --ifm-alert-background-color: #eef5fe;
+  background-color: var(--ifm-alert-background-color) !important;
+}
+html[data-docs-product='jumpserver'] .alert--success,
+html[data-docs-product='jumpserver'] .alert--info {
+  --ifm-alert-background-color: #e5f7e6;
+  --ifm-alert-border-color: #14961b;
+  --ifm-alert-foreground-color: var(--ifm-color-success-contrast-foreground);
+  background-color: var(--ifm-alert-background-color) !important;
+}
+html[data-docs-product='jumpserver'] .alert--warning {
+  --ifm-alert-background-color: #fdf9e7;
+  --ifm-alert-border-color: #e1ad26;
+  background-color: var(--ifm-alert-background-color) !important;
+}
+
 
 /* DataEase v2 / v3：去掉 note 正文的蓝色包边。
    两个版本都走 /dataease，docsProduct.js 会打 data-docs-product=dataease。

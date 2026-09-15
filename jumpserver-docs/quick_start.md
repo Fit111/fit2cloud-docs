@@ -1,12 +1,14 @@
 ---
 title: 快速入门
+description: 按顺序完成 JumpServer 的安装部署、添加资产、添加账号、添加用户及权限、Web 终端登录与审计日志查看。
 ---
+
+本文引导用户完成 JumpServer 的完整入门流程，依次为安装 JumpServer、添加资产、添加账号、添加用户及权限、完成 Web 终端登录、查看审计日志。各步骤存在先后依赖，建议按顺序操作。
 
 ## 1 安装 JumpServer
 
-- 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
-- 参照 [Linux 单机安装部署指南](installation/setup_linux_standalone/offline_install) 来快速部署 JumpServer
-
+JumpServer 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统），请参照 [Linux 单机安装部署指南](installation/setup_linux_standalone/offline_install.md) 完成部署。
+安装完成后，使用浏览器访问 JumpServer 控制台，并使用默认账号登录。
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
@@ -14,211 +16,142 @@ title: 快速入门
 密码: ChangeMe
 ```
 
-## 2 资产管理
-### 2.1 准备工作
+首次登录须修改默认密码，修改后即进入 JumpServer 控制台。
 
-[//]: # (- 准备两个测试资产和一个数据库来验证功能。)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_01_login.png" alt="图 1  JumpServer 登录页面" />
 
-[//]: # ()
-[//]: # ()
-[//]: # (|   IP 地址     |    主机名       |    端口    | 操作系统         |  管理员用户    |    密码       |)
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  JumpServer 登录页面</div>
 
-[//]: # (| ------------ | --------------- | ---------- | ---------------- |--- ---------- |--- ---------- |)
+## 2 添加资产
 
-[//]: # (| 172.16.80.11 |    test_ssh01   |     22     |     Centos 7     |      root     |  Test2020.L   |)
+资产是 JumpServer 纳管的目标设备或应用。登录后选择 **控制台 > 资产管理 > 资产列表**。
+列表左侧为节点树，可按用途创建节点，便于后续按节点批量授权。
+单击 **创建**，在 **选择平台** 中单击 **Linux**，在 **创建资产** 抽屉中填写以下信息：
 
-[//]: # (| 172.16.80.21 |    test_rdp01   |    3389    |    Windows 10    | administrator |  Test2020.W   |)
+- **名称**： 必填。资产在 JumpServer 中的显示名，不可重名。
+- **IP/主机**： 必填。资产地址，支持域名或 IP。
+- **平台**： 创建时所选平台，示例为 Linux。
+- **节点**： 必填。资产所属节点，默认为 /Default。
+- **协议**： 访问协议与端口，Linux 默认包含 ssh / 22。
+- **账号**： 单击 **新增** 可在创建时绑定登录账号，也可留待下一步统一创建。
 
-[//]: # (| 172.16.80.31 |   test_mysql01  |    3306    |      MySQL 5     |      root     |  Test2020.M   |)
+单击 **提交** 完成创建。Windows 及其他类型资产的创建流程相同。
 
-:::warning[注意]
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_02_asset_list.png" alt="图 2  资产列表添加资产" />
 
-- Windows 资产如需执行 `更新资产` 信息、`可连接性测试` 等自动化任务，需先完成 Windows SSH 设置；此非登录 Windows 资产的必填项。
-- MySQL 应用需要授权 `Core` 和 `KoKo` 的远程访问权限。
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  资产列表添加资产</div>
 
-### 2.2 编辑资产树
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_03_create_asset.png" alt="图 3  创建 Linux 资产" />
 
-- 点击页面左侧的 `资产管理` - `资产列表`，在根节点 `Default` 右键新建 `SSH Server` 、 `RDP Server` 、`Database` 三个节点。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  创建 Linux 资产</div>
 
-- 资产树样式如下：
+**连通性检查：**
+资产创建后稍等片刻刷新页面，可连接图标显示为绿色，表示 JumpServer 与该资产连通正常。图标为红色时，可对资产执行可连接性测试，并按提示信息排查。
 
-```
-Default
-├─ SSH Server
-└─ RDP Server
-└─ DB Server
-```
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_04_connectivity.png" alt="图 4  测试可连接性" />
 
-:::warning[注意]
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  测试可连接性</div>
 
-- 根节点 `Default` 不能重命名，右击节点可以 `添加`、`删除` 和 `重命名` 节点，以及进行资产相关的操作。
-:::
+## 3 添加账号
 
-### 2.3 创建资产
+账号是 JumpServer 连接资产时使用的登录凭据。选择 **控制台 > 账号管理 > 账号列表**，单击 **创建**。
 
-- 点击页面左侧的 `资产管理` - `资产列表` - `主机` - `创建` 创建一台 Linux 服务器，并在创建资产过程中，创建特权用户，内容就是上面表单的 `管理员用户` 和 `密码`。
-- Windows 资产的创建流程同样如此。
+在右侧 **新增账号** 抽屉中填写以下信息：
 
+- **名称**： 账号显示名，允许重复。
+- **用户名**： 资产上的登录用户名，例如 root。
+- **密文类型**： **密码** 或 **密钥**，二选一。
+- **密码**： 与用户名对应的认证凭据。
+- **资产**： 该账号所属的资产，可多选。
 
-- 创建 Linux 资产样式如下：
+单击 **确认** 完成创建。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  创建 Linux 资产示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'16%', padding:'8px'}}>名称</th><th style={{width:'16%', padding:'8px'}}>IP/主机</th><th style={{width:'16%', padding:'8px'}}>资产平台</th><th style={{width:'22%', padding:'8px'}}>节点</th><th style={{width:'14%', padding:'8px'}}>协议组</th><th style={{width:'16%', padding:'8px'}}>账号列表</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>test_ssh01</td><td style={{padding:'8px'}}>172.16.80.11</td><td style={{padding:'8px'}}>Linux</td><td style={{padding:'8px'}}>/Default/SSH Server</td><td style={{padding:'8px'}}>ssh 22</td><td style={{padding:'8px'}}>添加</td></tr>
-</tbody>
-</table>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_05_create_account.png" alt="图 5  新增账号" />
 
-- 添加登录资产用户样式如下：
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  新增账号</div>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  添加登录资产用户示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'20%', padding:'8px'}}>用户名</th><th style={{width:'20%', padding:'8px'}}>特权用户</th><th style={{width:'20%', padding:'8px'}}>密文类型</th><th style={{width:'20%', padding:'8px'}}>密码</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>172.16.80.11_root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>是</td><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>Test2020.L</td></tr>
-</tbody>
-</table>
+**凭据须与资产一致：**
+账号的 **用户名** 与 **密码（密钥）** 须与资产上实际可用的登录凭据一致，否则后续通过 Web 终端连接资产时会认证失败。
 
-:::warning[注意]
+## 4 添加用户及权限
 
-- `名称` 不能重名，`密码` 或者 `密钥` 二选一即可，一些资产不允许通过 `密码` 认证可以改用 `私钥` 认证。  
-- `特权用户` 仅支持 `SSH` 协议，用于资产 `可连接性测试`、`推送用户`、`批量改密` 等自动化任务。
-- 资产创建信息填写好保存之后隔几秒钟时间刷新一下网页，`ssh` 协议资产的可连接图标会显示 `绿色`，且 `硬件信息` 会显示出来。  
-- 如果 `可连接` 的图标是 `黄色` 或者 `红色`，可以点击 `资产` 的 `名称`，在右侧 `快速修改` - `测试可连接性` 点击 `测试` 按钮，根据错误提示处理。  
-- 被连接 `Linux` 资产需要 `python` 组件，且版本大于等于 `2.6`，`Ubuntu` 等资产默认不允许 `root` 用户远程 `ssh` 登录，请自行处理，`Windows` 资产需要手动安装 `OpenSSH Server `。
-- 如果资产不能正常连接，请检查 特权用户 的 `用户名` 和 `密码` 是否正确以及该 `特权用户` 是否能使用 `SSH` 从 `JumpServer` 主机正确登录到资产主机上。
-:::
+用户是被授权访问资产的对象。创建用户后，还须通过授权规则为其分配可访问的资产，用户登录后才能看到并连接资产。
 
-### 2.4 创建数据库应用
+### 4.1 添加用户
 
-- 点击页面左侧的 `资产管理` - `资产列表` - `创建` - `数据库下选择 MySQL 数据库`。
+选择 **控制台 > 用户管理 > 用户列表**，单击 **创建**，在右侧 **创建用户** 抽屉中填写以下信息：
 
+- **名称**： 用户显示名，允许重复。
+- **用户名**： 登录账号，不可重复。
+- **邮箱**： 登录与通知所用邮箱，不可重复。
+- **密码选项**： **生成重置密码链接，通过邮件发送给用户** 或 **设置密码**。入门验证建议选择 **设置密码**，直接指定初始密码。
+- **系统角色**： 系统级权限，普通使用者保持默认即可。
+- **激活**： 勾选后该用户允许登录。
 
-- 创建 MySQL 数据库应用样式如下：
+单击 **提交** 完成创建。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  创建 MySQL 数据库应用示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'16%', padding:'8px'}}>名称</th><th style={{width:'16%', padding:'8px'}}>地址</th><th style={{width:'16%', padding:'8px'}}>节点</th><th style={{width:'16%', padding:'8px'}}>数据库</th><th style={{width:'18%', padding:'8px'}}>协议组</th><th style={{width:'18%', padding:'8px'}}>账号列表</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>test_mysql01</td><td style={{padding:'8px'}}>172.16.80.31</td><td style={{padding:'8px'}}>/Default/DB Server</td><td style={{padding:'8px'}}>test</td><td style={{padding:'8px'}}>mysql:3306</td><td style={{padding:'8px'}}>添加</td></tr>
-</tbody>
-</table>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_06_create_user.png" alt="图 6  创建用户" />
 
-- 添加登录数据库用户样式如下：
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  创建用户</div>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  添加登录数据库用户示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'20%', padding:'8px'}}>用户名</th><th style={{width:'20%', padding:'8px'}}>特权用户</th><th style={{width:'20%', padding:'8px'}}>密文类型</th><th style={{width:'20%', padding:'8px'}}>密码</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>172.16.80.23_root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>root</td><td style={{padding:'8px'}}>密码</td><td style={{padding:'8px'}}>Test2020.M</td></tr>
-</tbody>
-</table>
+### 4.2 添加权限
 
-:::warning[注意]
+选择 **控制台 > 授权管理 > 资产授权**，单击 **创建**，在右侧 **创建资产授权** 抽屉中填写以下信息：
 
-- 名称、主机、数据库选项为必填项。
-:::
+- **名称**： 授权规则名称，不能重复。
+- **用户**： 被授权访问资产的用户，可多选。
+- **资产**： 用户可访问的资产，可多选。
+- **账号**： 允许使用的登录账号，例如 **所有账号**。
+- **动作**： 允许执行的操作，默认勾选 **全部**。
 
-## 3 创建授权规则
+单击 **提交** 完成授权。授权完成后，用户即可在工作台看到对应资产。
 
-- 点击页面左侧的 `权限管理` - `资产授权` - `创建` 创建一个授权。
-- Windows 资产、MySQL 数据库 的授权流程和下述内容相同。
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_07_create_authorization.png" alt="图 7  创建资产授权" />
 
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  创建资产授权</div>
 
-- 创建登录授权规则（例如 Linux 资产），样式如下：
+**授权对象：**
+**用户** 与 **用户组** 可同时选择，**资产** 与 **节点** 也可同时选择。只授权单个用户访问单台资产时，选择 **用户** 与 **资产**，用户组、节点留空即可。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 5  创建登录授权规则示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'14%', padding:'8px'}}>名称</th><th style={{width:'14%', padding:'8px'}}>用户</th><th style={{width:'14%', padding:'8px'}}>用户组</th><th style={{width:'14%', padding:'8px'}}>资产</th><th style={{width:'14%', padding:'8px'}}>节点</th><th style={{width:'14%', padding:'8px'}}>账号</th><th style={{width:'14%', padding:'8px'}}>动作</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>admin_ssh01</td><td style={{padding:'8px'}}>Administrator(admin)</td><td style={{padding:'8px'}}>-</td><td style={{padding:'8px'}}>test_ssh01(172.16.80.11)</td><td style={{padding:'8px'}}>-</td><td style={{padding:'8px'}}>所有账号</td><td style={{padding:'8px'}}>✓ 全部</td></tr>
-</tbody>
-</table>
+## 5 完成 Web 终端登录
 
-:::warning[注意]
+1. 使用第 4.1 步创建的用户账号登录 JumpServer，并将控制台切换到 **工作台**。
+2. 选择 **我的资产 > 连接资产**，在列表中找到已被授权的资产。
+3. 在资产行操作中单击 **连接**，右击资产选择 **连接** 亦可，页面将打开 Web 终端。
+4. 也可直接单击顶栏的 **Web 终端** 图标进入 Web 终端，再从中选择资产发起连接。
 
-- `名称`，授权的名称，不能重复。  
-- `用户` 和 `用户组` 二选一，不推荐即选择 `用户` 又选择 `用户组`。  
-- `资产` 和 `节点` 二选一，选择 `节点` 会包含 `节点` 下面的所有 `资产`。  
-- `账号`，`账号` 为连接资产的 `认证凭据`。  
-- `用户(组)`，`资产(节点)` 是一对一的关系，所以当拥有 `Linux`、`Windows` 不同类型资产时，应该分别给 `Linux` 资产和 `Windows` 资产创建 `授权规则`。
-:::
+首次进入 Web 终端时可能弹出 **切换组织** 引导，按需选择组织即可。
 
-## 4 用户登录
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_08_assets_connect.png" alt="图 8  连接资产" />
 
-- 点击页面右上角的 `Web 终端` 进行资产连接。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  连接资产</div>
 
-:::warning[注意]
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_09_web_terminal.png" alt="图 9  Web 终端" />
 
-- 用户只能看到自己被管理员授权了的 `资产`，如果登录后无资产，请联系管理员进行确认。
-:::
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  Web 终端</div>
 
-## 5 系统设置
+**资产列表为空：**
+用户只能看到已被授权的资产。若登录后 **连接资产** 列表为空，请确认第 4.2 步的授权规则中已包含该用户与对应资产。
 
-- 点击页面右上角的 `系统设置` 进行配置。
+## 6 查看审计日志
 
-### 5.1 基本设置
+JumpServer 会完整记录平台管理操作与用户登录行为，便于事后审计与追溯。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 6  基本设置示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'35%', padding:'8px'}}>示例</th><th style={{width:'45%', padding:'8px'}}>备注</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>当前站点URL</td><td style={{padding:'8px'}}><code>https://demo.jumpserver.org</code></td><td style={{padding:'8px'}}>不设置的话，邮件收到的地址为 <code>http://localhost</code></td></tr>
-<tr><td style={{padding:'8px'}}>用户向导URL</td><td style={{padding:'8px'}}></td><td style={{padding:'8px'}}>用户首次登录可以看到此 <code>超链接</code>，可以不设置</td></tr>
-<tr><td style={{padding:'8px'}}>忘记密码URL</td><td style={{padding:'8px'}}></td><td style={{padding:'8px'}}>使用了 LDAP, OPENID 等外部认证系统，可以自定义</td></tr>
-</tbody>
-</table>
+1. 使用管理员账号登录 JumpServer，将控制台切换到 **审计台**。
+2. 选择 **会话审计 > 会话记录**，可查看用户连接资产的在线会话与历史会话。
+3. 选择 **日志审计 > 登录日志**，可查看用户登录 JumpServer 的认证方式、登录城市与状态。
+4. 选择 **日志审计 > 操作日志**，可查看用户、资源、动作、资源类型等管理操作记录。
 
-### 5.2 邮件设置
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_10_session_record.png" alt="图 10  会话记录" />
 
-- 我们支持通过`SMTP`或`EXCHANGE`方式来对接邮件配置。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  会话记录</div>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 7  SMTP 配置示例</div>
-<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
-<thead>
-<tr><th style={{width:'20%', padding:'8px'}}>名称</th><th style={{width:'35%', padding:'8px'}}>示例</th><th style={{width:'45%', padding:'8px'}}>备注</th></tr>
-</thead>
-<tbody>
-<tr><td style={{padding:'8px'}}>SMTP主机</td><td style={{padding:'8px'}}>smtp.qq.com</td><td style={{padding:'8px'}}>服务商提供的 smtp 服务器</td></tr>
-<tr><td style={{padding:'8px'}}>SMTP端口</td><td style={{padding:'8px'}}>25</td><td style={{padding:'8px'}}>通常是 <code>25</code></td></tr>
-<tr><td style={{padding:'8px'}}>SMTP账号</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>通常是 <code>user@domain.com</code></td></tr>
-<tr><td style={{padding:'8px'}}>SMTP密码</td><td style={{padding:'8px'}}>{'****************'}</td><td style={{padding:'8px'}}>每次 <code>测试连接</code> 都需要重新输入密码</td></tr>
-<tr><td style={{padding:'8px'}}>使用SSL</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>465</code>，必须勾选此项</td></tr>
-<tr><td style={{padding:'8px'}}>使用TLS</td><td style={{padding:'8px'}}>[ ]</td><td style={{padding:'8px'}}>如果端口使用 <code>587</code>，必须勾选此项</td></tr>
-<tr><td style={{padding:'8px'}}>发件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}><code>测试连接</code> 必须要输入</td></tr>
-<tr><td style={{padding:'8px'}}>主题前缀</td><td style={{padding:'8px'}}>[JMS]</td><td style={{padding:'8px'}}>邮件的标题，收到的邮件是 <code>[JMS]</code> 开头</td></tr>
-<tr><td style={{padding:'8px'}}>测试收件人</td><td style={{padding:'8px'}}>{'**********@qq.com'}</td><td style={{padding:'8px'}}>测试连接必填</td></tr>
-</tbody>
-</table>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_11_login_log.png" alt="图 11  登录日志" />
 
-:::warning[注意]
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  登录日志</div>
 
-- 不可以同时勾选 `使用 SSL` 和 `使用 TLS`。
-:::
-## 6 常用功能操作
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/qs_12_operation_log.png" alt="图 12  操作日志" />
 
-- **[通过 SFTP 上传下载][通过 SFTP 上传下载]**
-- **[Windows 上传下载][Windows 上传下载]**
-- **[限制 IP 登录][限制 IP 登录]**
-- **[纳管数据库应用][纳管数据库应用]**
-- **[Redis 数据库纳管][Redis 数据库纳管]**
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  操作日志</div>
 
-[通过 SFTP 上传下载]: https://kb.fit2cloud.com/?p=115
-[Windows 上传下载]: https://kb.fit2cloud.com/?p=87
-[限制 IP 登录]: https://kb.fit2cloud.com/?p=199
-[Redis 数据库纳管]: https://kb.fit2cloud.com/?p=91
-[纳管数据库应用]: https://kb.fit2cloud.com/?p=79
+能在 **会话记录** 中看到第 5 步产生的资产连接会话，并在 **登录日志** 中看到对应的登录记录，即表示本次入门流程已成功完成。

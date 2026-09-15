@@ -19,6 +19,4 @@ title: 组织管理
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_organization_manage3.png" alt="图 3  设置全局组织显示名称" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  设置全局组织显示名称</div>
 
-:::warning[组织内的角色、资产、账户等信息的更新、删除操作，都应切换至各自的组织内进行操作。]
-
-:::
+- 组织内的角色、资产、账户等信息的更新、删除操作，都应切换至各自的组织内进行操作。
