@@ -1,20 +1,20 @@
 ---
-title: 工作台概览页面
-description: 介绍 JumpServer 工作台概览页面的四个信息区域。
+title: 普通用户概述
+description: 介绍 JumpServer 工作台概述页面的四个信息区域。
 ---
 
 ## 1 功能简介
 
-概览页是工作台的默认页面，集中展示当前账号的最近会话、待我审批、个人信息和最近登录四类信息，用于快速回到常用资产、查看待处理事项。
+概述页是工作台的默认页面，集中展示当前账号的最近会话、待我审批、个人信息和最近登录四类信息，用于快速回到常用资产、查看待处理事项。
 
-路径：登录后将控制台切换到 **工作台**，选择 **概览**；普通用户默认进入工作台，无需切换。
+路径：登录后将控制台切换到 **工作台**，选择 **概述**；普通用户默认进入工作台，无需切换。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workbench_overview.png" alt="图 1  概览页面" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workbench_overview.png" alt="图 1  普通用户概述" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  概览页面</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  普通用户概述</div>
 
 :::note[公告]
-系统管理员在 [功能设置](../../admin/system_settings/feature_settings.md) 中开启公告后，概览页会显示公告内容。
+系统管理员在 [功能设置](../../admin/system_settings/feature_settings.md) 中开启公告后，概述页会显示公告内容。
 :::
 
 ## 2 最近会话

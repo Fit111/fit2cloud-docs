@@ -1,5 +1,5 @@
 ---
-title: 审计台概览
+title: 审计员概述
 description: 介绍 JumpServer 审计台中对用户会话、日志、作业审计。
 ---
 
