@@ -3,7 +3,7 @@ title: 资产连接
 ---
 
 
-## Linux 资产连接
+## 1 Linux 资产连接
 
 
 - 客户端支持 SSH、SFTP、VNC 协议连接目标 Linux 资产，连接后可执行命令，上传下载文件。
@@ -16,16 +16,16 @@ title: 资产连接
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Linux 资产连接</div>
 
-## Windows 资产连接
+## 2 Windows 资产连接
 
 
 - 客户端支持 RDP、VNC、SSH、SFTP 协议连接目标 Windows 资产，连接后可执行命令，上传下载文件。
 - 在 Windows 资产列表中，点击目标资产名称右侧的 **连接** ，弹出连接窗口。
 - 在连接窗口中，选择协议，选择需要使用的账号，点击 **确认** 按钮，即可连接资产。
 
-## 数据库资产连接
+## 3 数据库资产连接
 
-### 本地客户端配置
+### 3.1 本地客户端配置
 
 
 - 在使用客户端方式连接数据库之前，需要先配置本地客户端调用路径。
@@ -38,6 +38,6 @@ title: 资产连接
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  本地客户端配置</div>
 
-### 连接资产
+### 3.2 连接资产
 
 连接资产参考 [Web 终端](../user/web_terminal/assets_connect.md) 中的连接方式

@@ -4,15 +4,15 @@ title: 概览
 
 JumpServer 客户端是一款跨平台的桌面应用程序，支持 Windows、macOS 和 Linux 系统。用户可以使用客户端在本地连接和管理 JumpServer 纳管的远程资产（Windows、Linux、数据库以及网络设备）。
 
-## 功能特性
+## 1 功能特性
 
 - **资产连接**：支持 SSH、SFTP、VNC 等协议连接 Linux 资产，支持 RDP、VNC、SSH、SFTP 等协议连接 Windows 资产，连接后可执行命令、上传下载文件；数据库资产支持调用本地数据库客户端进行连接。
 - **连接设置**：支持调整客户端的语言、字符集、字符终端、分辨率、外观颜色、主色与字体，并可配置本地应用启动路径。
 - **录像处理**：内置播放器与录像转码工具，可将从 JumpServer 下载的录像压缩包（.tar）转换为 mp4 格式。
 
-## 界面预览
+## 2 界面预览
 
-客户端的基本功能与 [Web 终端](../user/web_terminal/overview.md) 大致相仿，界面也是类似的。
+v5版本客户端进行了优化现在的可以直接用客户端使用luna去连接资产与 [Web 终端](../user/web_terminal/overview.md)的内置连接一样
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_index.png" alt="图 1  客户端界面预览" />
 

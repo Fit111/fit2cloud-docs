@@ -15,12 +15,11 @@ AI 助手位于 Web 终端左侧列表中，用于通过对话方式查询资产
 - 当前用户需已被授权相关资产，AI 助手仅能操作已授权的资产。
 
 ## 3 使用 AI 助手
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/web_terminal_ai.png" alt="图 1  AI助手" />
 
-1. 在 Web 终端左侧列表中选择 **AI 助手**。
-2. 在对话框中输入问题，例如查询某台资产的运行状态。
-3. 查看 AI 助手返回的结果。
-4. 如需由 AI 助手接手资产执行操作，按提示确认后继续。
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  AI助手</div>
 
+Luna 运维助手，可以帮你连接和管理授权资产、整理工作区会话布局，并把具体操作任务委派给对应终端执行并反馈结果。
 :::warning[注意操作范围]
 AI 助手的操作会真实作用于已授权的资产，请在确认操作对象和操作内容后再继续。
 :::
