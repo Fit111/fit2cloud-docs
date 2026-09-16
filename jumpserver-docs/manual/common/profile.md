@@ -36,12 +36,54 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 - **激活 / 最后登录日期 / 最后更新密码日期 / 创建日期 / 失效日期 / 备注**： 账号生命周期信息。
 
 ### 2.2 认证配置
+- **MFA 认证：**单击**设置**，跳转 MFA 启动页面。
+- **更新密码：** 单击 **更新**，跳转至 **认证设置 > 登录密码**。
+- **更新SSH公钥：** 单击 **更新**，跳转至 **认证设置 > 登录 SSH 公钥**。
 
-在右侧 **认证配置** 中可绑定 MFA，或跳转更新密码与 SSH 公钥：
+**MFA 认证：**
+在右侧 **认证配置** 中可绑定 MFA，或跳转更新密码与 SSH 公钥。**MFA 认证** 单击 **设置** 后进入多因子认证页面（如图 2 所示）：先通过顶部 **启用 MFA** 开关总控二次验证，再在下方 **设置 MFA 多因子认证** 中为各验证方式分别 **启用** 或 **重置**。未启用的方式会在行内提示启用前提，例如短信提示 **设置手机号码启用**、Passkey 提示 **使用 Passkey 作为 MFA**、人脸提示 **绑定人脸特征以启用**；未在系统设置中启用的方式（如 Radius、Email）不会出现在列表中，页面顶部以横幅提示暂时无法使用并建议联系管理员。绑定成功后，**基本信息** 中的 **多因子认证** 变为启用，后续登录需完成二次验证。
 
-- **MFA 认证**： 单击 **设置**，按页面提示绑定可用的二次验证方式。绑定成功后，**基本信息** 中的 **多因子认证** 变为启用，后续登录需完成二次验证。
-- **更新密码**： 单击 **更新**，跳转至 **认证设置 > 登录密码**。
-- **更新SSH公钥**： 单击 **更新**，跳转至 **认证设置 > 登录 SSH 公钥**。
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_mfa_setting.png" alt="图 2  设置 MFA 多因子认证" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  设置 MFA 多因子认证</div>
+
+多因子认证在密码之外增加第二重验证，账号可同时启用多种方式，登录时任选其一完成验证。各验证方式的说明与启用条件如下表所示。
+
+**支持的验证方式：**
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  多因子认证方式及启用条件</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead><tr><th style={{width:'16%', padding:'8px'}}>验证方式</th><th style={{width:'42%', padding:'8px'}}>说明</th><th style={{width:'42%', padding:'8px'}}>启用条件</th></tr></thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>虚拟 MFA（OTP）</td><td style={{padding:'8px'}}>手机验证器 App（如 Google Authenticator、Microsoft Authenticator）每 30 秒生成一个 6 位动态口令</td><td style={{padding:'8px'}}>无前置条件，任何账号均可直接扫码绑定</td></tr>
+<tr><td style={{padding:'8px'}}>短信</td><td style={{padding:'8px'}}>登录时向绑定手机号发送 4 位验证码</td><td style={{padding:'8px'}}>管理员已开启短信服务，且当前账号已填写手机号</td></tr>
+<tr><td style={{padding:'8px'}}>邮件</td><td style={{padding:'8px'}}>登录时向绑定邮箱发送验证码</td><td style={{padding:'8px'}}>管理员已开启邮件认证，且当前账号已填写邮箱</td></tr>
+<tr><td style={{padding:'8px'}}>人脸识别</td><td style={{padding:'8px'}}>登录时进行人脸比对</td><td style={{padding:'8px'}}>旗舰版功能，需管理员在服务端开启人脸识别并在账号上启用，详见前文 2.4 生物特征</td></tr>
+<tr><td style={{padding:'8px'}}>Radius</td><td style={{padding:'8px'}}>使用外部 Radius 认证服务生成的动态口令</td><td style={{padding:'8px'}}>管理员已开启 Radius 认证</td></tr>
+<tr><td style={{padding:'8px'}}>Passkey</td><td style={{padding:'8px'}}>使用通行密钥（Passkey）完成验证，无需输入动态码</td><td style={{padding:'8px'}}>管理员已开启 Passkey，且账号已注册通行密钥</td></tr>
+</tbody>
+</table>
+
+**为什么有些方式看不到：**
+账号可用的验证方式，是管理员在 **系统设置 > 安全设置** 中开启的方式，与本账号 **允许的 MFA 类型**（用户编辑页中的字段，未单独设置时跟随全局配置）的交集。未在系统设置中启用的方式不会出现在 MFA 设置列表中，页面顶部会以横幅提示暂时无法使用并建议联系管理员；已列出但未启用的方式，请按上表核对启用条件。
+
+**绑定虚拟 MFA（OTP）：**
+1. 在 **MFA 认证** 中单击 **设置**，找到 OTP 行。若已绑定，先单击 **重置** 再启用；未绑定过则直接单击 **启用**，进入验证器绑定流程。若账号已启用其他验证方式，需先完成一次二次验证才能继续。
+2. 按页面提示在手机安装验证器 App（页面提供 Android / iPhone 下载指引）。
+3. 打开验证器 App 扫描页面二维码，或手动输入页面上显示的密钥完成添加。
+4. 输入验证器 App 当前显示的 6 位动态码，单击确认完成绑定。
+5. 绑定成功后当前会话自动退出，返回登录页，使用密码加动态码重新登录即可。
+
+**解绑与更换设备：**
+在对应验证方式行中单击 **重置**，输入当前动态码验证通过后即解绑，解绑后同样会退出登录。若需更换手机，请先在原设备上解绑，再在新设备上重新绑定；已绑定状态下无法直接重复绑定，系统会提示先解绑。
+
+**动态码有效期：**
+动态口令每 30 秒刷新一次，服务端校验时允许前后各 2 个周期的误差，以容忍手机与服务器之间的时间偏差；服务器时间长期不准会导致验证失败。短信与邮件验证码的默认有效期为 60 秒，超时需重新获取；同一验证码仅可使用一次。
+
+**失败锁定：**
+二次验证连续失败次数过多（默认 7 次）时，该账号的 MFA 验证将被临时锁定 30 分钟。锁定期间可等待自动解锁，或联系管理员处理。
+
+**管理员强制开启：**
+管理员可在 **系统设置 > 安全设置** 中将多因子认证设为 **全局开启**（所有用户必须使用）或 **仅管理员开启**（管理员及系统管理员角色用户必须使用）。被强制覆盖的账号即使自行解绑，下次登录仍会被要求完成二次验证；未处于强制范围的账号可自行绑定或解绑。
 
 ### 2.3 通知设置
 
@@ -53,49 +95,49 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 
 目前支持人脸识别，属于旗舰版功能：需要服务器管理员在服务端开启人脸识别（配置详情见 [人脸识别运维设置](../ops/face_recognition)），并在用户的 **允许的 MFA 类型** 中勾选 **人脸识别**，当前账号才会显示绑定入口。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_user_create.png" alt="图 2  新建用户时启用人脸识别" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_user_create.png" alt="图 3  新建用户时启用人脸识别" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  新建用户时启用人脸识别</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  新建用户时启用人脸识别</div>
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_user_update.png" alt="图 3  更新用户时启用人脸识别" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_user_update.png" alt="图 4  更新用户时启用人脸识别" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  更新用户时启用人脸识别</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  更新用户时启用人脸识别</div>
 
-**绑定人脸**：在 **认证配置** 中单击 **MFA 认证** 的 **设置**，选择人脸识别后进入采集流程；正对摄像头，按页面提示依次完成 3 个样本的采集，采集成功后即完成绑定，**基本信息** 中的 **多因子认证** 会变为启用。
+**绑定人脸**：在 **认证配置** 中单击 **MFA 认证** 的 **设置**，在 MFA 设置页找到 Face 行单击 **启用**，进入采集流程（行内提示 **绑定人脸特征以启用** 时，需先在用户信息中维护生物特征）；正对摄像头，按页面提示依次完成 3 个样本的采集，采集成功后即完成绑定，**基本信息** 中的 **多因子认证** 会变为启用。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_bind.png" alt="图 4  绑定人脸" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_bind.png" alt="图 5  绑定人脸" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  绑定人脸</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  绑定人脸</div>
 
-**解绑人脸**：已绑定的账号会显示 **解绑** 按钮，单击后需要先完成一次人脸身份认证，验证通过即解绑（如图 5 所示）；解绑后多因子认证不再使用人脸方式。
+**解绑人脸**：已绑定的账号会显示 **解绑** 按钮，单击后需要先完成一次人脸身份认证，验证通过即解绑（如图 6 所示）；解绑后多因子认证不再使用人脸方式。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_unbind.png" alt="图 5  解绑人脸" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_unbind.png" alt="图 6  解绑人脸" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  解绑人脸</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  解绑人脸</div>
 
 绑定完成后，人脸会在以下场景中参与身份验证：登录时如果启用了多因子认证，可以在认证方式中选择 **Face** 完成人脸比对。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_mfa_login.png" alt="图 6  登录时的多因子认证" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_mfa_login.png" alt="图 7  登录时的多因子认证" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  登录时的多因子认证</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  登录时的多因子认证</div>
 
 连接资产时可作为二次确认或在线监控。其中人脸验证与人脸在线均在 **访问控制** 的 **资产连接** 中作为动作加入规则。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_acl_online.png" alt="图 7  访问控制中的人脸在线动作" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_acl_online.png" alt="图 8  访问控制中的人脸在线动作" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  访问控制中的人脸在线动作</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  访问控制中的人脸在线动作</div>
 
 连接命中人脸验证规则的资产时，需要先通过人脸验证才能建立连接。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_connect_verify.png" alt="图 8  连接资产时的人脸验证" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_connect_verify.png" alt="图 9  连接资产时的人脸验证" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  连接资产时的人脸验证</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  连接资产时的人脸验证</div>
 
 连接命中人脸在线规则的资产后，会话期间会持续进行人脸监控，人脸离开画面超过宽限期时会话会被暂停，重新回到画面后可恢复。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_connect_monitor.png" alt="图 9  连接资产时的人脸在线监控" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_face_connect_monitor.png" alt="图 10  连接资产时的人脸在线监控" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  连接资产时的人脸在线监控</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  连接资产时的人脸在线监控</div>
 
 ### 2.5 信息更改
 
@@ -105,9 +147,9 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 
 路径：选择 **个人设置 > 认证设置**，或在个人信息页单击 **更新密码 / 更新SSH公钥**。该页包含 **登录密码** 与 **登录 SSH 公钥** 两个页签。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_02_auth.png" alt="图 10  认证设置登录密码" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_02_auth.png" alt="图 11  认证设置登录密码" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  认证设置登录密码</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  认证设置登录密码</div>
 
 ### 3.1 登录密码
 
@@ -125,9 +167,9 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 
 路径：选择 **个人设置 > 访问密钥**。访问密钥通过 API Key 签名请求头完成认证，每个请求的头部不同，相对 Token 方式更安全。密钥权限与当前用户角色一致，API 文档地址为堡垒机站点下的 `/api/docs/`。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_03_access_key.png" alt="图 11  访问密钥列表" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_03_access_key.png" alt="图 12  访问密钥列表" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  访问密钥列表</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  访问密钥列表</div>
 
 - 单击 **创建** 生成访问密钥。
 - 列表字段包括 Secret、IP 白名单、激活中、创建时间、最后使用日期。
@@ -139,9 +181,9 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 
 路径：选择 **个人设置 > 连接令牌**。连接令牌将身份验证与连接资产结合起来使用，支持一键登录到资产，目前支持的组件包括 KoKo、Lion、Magnus、Razor 等。本页用于查看令牌并使令牌过期，不在此页直接新建。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_04_connection_token.png" alt="图 12  连接令牌" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_04_connection_token.png" alt="图 13  连接令牌" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  连接令牌</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  连接令牌</div>
 
 常用生成方式：
 
@@ -158,17 +200,17 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 - **语言**：选择界面语言，例如中文（简体）。
 - **文件加密密码**：为从 JumpServer 导出的文件设置加密密码，降低文件泄露风险。显示 **已配置** 为是或否；输入 **新密码** 与 **确认密码** 后单击 **提交**，需放弃修改时单击 **还原**。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_05_preference.png" alt="图 13  偏好设置基本" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_05_preference.png" alt="图 14  偏好设置基本" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  偏好设置基本</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  偏好设置基本</div>
 
 ### 6.2 Web终端
 
 选择 **Web终端** 页签，可覆盖全局默认值，仅对当前用户生效。各项均可单击 **使用全局默认值** 恢复。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_06_web_terminal.png" alt="图 14  Web 终端偏好" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_06_web_terminal.png" alt="图 15  Web 终端偏好" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  Web 终端偏好</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  Web 终端偏好</div>
 
 ## 7 注意事项
 
