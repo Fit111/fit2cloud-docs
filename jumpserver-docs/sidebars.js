@@ -267,122 +267,114 @@ const sidebars = {
           "collapsed": true,
           "items": [
             {
+              "type": "doc",
+              "id": "manual/admin/console/switch_console",
+              "label": "管理员概述",
+              "key": "doc:使用手册/管理员手册/管理员概述"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/console/dashboard",
+              "label": "仪表盘",
+              "key": "doc:使用手册/管理员手册/控制台/仪表盘"
+            },
+            {
               "type": "category",
-              "label": "控制台",
+              "label": "用户管理",
               "collapsed": true,
               "items": [
                 {
                   "type": "doc",
-                  "id": "manual/admin/console/switch_console",
-                  "label": "概览",
-                  "key": "doc:使用手册/管理员手册/控制台/概览"
+                  "id": "manual/admin/console/users/users",
+                  "label": "用户列表",
+                  "key": "doc:使用手册/管理员手册/控制台/用户管理/用户列表"
                 },
                 {
                   "type": "doc",
-                  "id": "manual/admin/console/dashboard",
-                  "label": "仪表盘",
-                  "key": "doc:使用手册/管理员手册/控制台/仪表盘"
-                },
-                {
-                  "type": "category",
-                  "label": "用户管理",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/users/users",
-                      "label": "用户列表",
-                      "key": "doc:使用手册/管理员手册/控制台/用户管理/用户列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/users/user-groups",
-                      "label": "用户组",
-                      "key": "doc:使用手册/管理员手册/控制台/用户管理/用户组"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/控制台/用户管理"
-                },
-                {
-                  "type": "category",
-                  "label": "资产管理",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/assets/assets_list",
-                      "label": "资产列表",
-                      "key": "doc:使用手册/管理员手册/控制台/资产管理/资产列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/assets/net_list",
-                      "label": "网域列表",
-                      "key": "doc:使用手册/管理员手册/控制台/资产管理/网域列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/assets/web_assets",
-                      "label": "Web资产",
-                      "key": "doc:使用手册/管理员手册/控制台/资产管理/Web资产"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/控制台/资产管理"
-                },
-                {
-                  "type": "category",
-                  "label": "账号管理",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/account_management/account_list",
-                      "label": "账号列表",
-                      "key": "doc:使用手册/管理员手册/控制台/账号管理/账号列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/account_management/account_template",
-                      "label": "账号模板",
-                      "key": "doc:使用手册/管理员手册/控制台/账号管理/账号模板"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/控制台/账号管理"
-                },
-                {
-                  "type": "category",
-                  "label": "授权管理",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/authorization_manage/assets_authorization",
-                      "label": "资产授权",
-                      "key": "doc:使用手册/管理员手册/控制台/授权管理/资产授权"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/access_control/acls",
-                      "label": "访问控制",
-                      "key": "doc:使用手册/管理员手册/控制台/授权管理/访问控制"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/console/authorization_manage/session_sharing",
-                      "label": "会话分享",
-                      "key": "doc:使用手册/管理员手册/控制台/授权管理/会话分享"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/控制台/授权管理"
-                },
-                {
-                  "type": "doc",
-                  "id": "manual/admin/console/else/tag_list",
-                  "label": "标签列表",
-                  "key": "doc:使用手册/管理员手册/控制台/标签列表"
+                  "id": "manual/admin/console/users/user-groups",
+                  "label": "用户组",
+                  "key": "doc:使用手册/管理员手册/控制台/用户管理/用户组"
                 }
               ],
-              "key": "cat:使用手册/管理员手册/控制台"
+              "key": "cat:使用手册/管理员手册/用户管理"
+            },
+            {
+              "type": "category",
+              "label": "资产管理",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/assets/assets_list",
+                  "label": "资产列表",
+                  "key": "doc:使用手册/管理员手册/控制台/资产管理/资产列表"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/assets/net_list",
+                  "label": "网域列表",
+                  "key": "doc:使用手册/管理员手册/控制台/资产管理/网域列表"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/assets/web_assets",
+                  "label": "Web资产",
+                  "key": "doc:使用手册/管理员手册/控制台/资产管理/Web资产"
+                }
+              ],
+              "key": "cat:使用手册/管理员手册/资产管理"
+            },
+            {
+              "type": "category",
+              "label": "账号管理",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/account_management/account_list",
+                  "label": "账号列表",
+                  "key": "doc:使用手册/管理员手册/控制台/账号管理/账号列表"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/account_management/account_template",
+                  "label": "账号模板",
+                  "key": "doc:使用手册/管理员手册/控制台/账号管理/账号模板"
+                }
+              ],
+              "key": "cat:使用手册/管理员手册/账号管理"
+            },
+            {
+              "type": "category",
+              "label": "授权管理",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/authorization_manage/assets_authorization",
+                  "label": "资产授权",
+                  "key": "doc:使用手册/管理员手册/控制台/授权管理/资产授权"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/access_control/acls",
+                  "label": "访问控制",
+                  "key": "doc:使用手册/管理员手册/控制台/授权管理/访问控制"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/console/authorization_manage/session_sharing",
+                  "label": "会话分享",
+                  "key": "doc:使用手册/管理员手册/控制台/授权管理/会话分享"
+                }
+              ],
+              "key": "cat:使用手册/管理员手册/授权管理"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/console/else/tag_list",
+              "label": "标签列表",
+              "key": "doc:使用手册/管理员手册/控制台/标签列表"
             },
             {
               "type": "category",
@@ -888,15 +880,15 @@ const sidebars = {
                     },
                     {
                       "type": "doc",
-                      "id": "manual/user/workbench/my_assets/web_terminal",
-                      "label": "Web终端",
-                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/Web终端"
-                    },
-                    {
-                      "type": "doc",
                       "id": "manual/user/workbench/my_assets/file_transfer",
                       "label": "文件传输",
                       "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件传输"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "manual/user/workbench/my_assets/personal_credentials",
+                      "label": "个人凭据",
+                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/个人凭据"
                     },
                     {
                       "type": "doc",
