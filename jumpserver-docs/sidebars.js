@@ -42,6 +42,7 @@ const sidebars = {
           "type": "category",
           "label": "Linux 单机部署",
           "collapsed": true,
+          "className": "sidebar-item-badge-rec",
           "items": [
             {
               "type": "doc",
@@ -380,6 +381,7 @@ const sidebars = {
               "type": "category",
               "label": "PAM",
               "collapsed": true,
+              "className": "sidebar-item-badge-rec",
               "items": [
                 {
                   "type": "doc",
@@ -876,6 +878,7 @@ const sidebars = {
               "type": "category",
               "label": "Web终端",
               "collapsed": true,
+              "className": "sidebar-item-badge-new",
               "items": [
                 {
                   "type": "doc",
@@ -905,6 +908,7 @@ const sidebars = {
                   "type": "doc",
                   "id": "manual/user/web_terminal/ai_assistant",
                   "label": "AI 助手",
+                  "className": "sidebar-item-badge-rec",
                   "key": "doc:使用手册/普通用户手册/Web终端/AI 助手"
                 },
                 {
