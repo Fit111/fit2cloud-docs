@@ -623,7 +623,7 @@ html[class*='docs-doc-id-manual/pam/introduction'] .theme-doc-markdown table {
 }
 .theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__link > span::after,
 .theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__list-item-collapsible > .menu__link > span::after {
-  content: "推荐";
+  content: "推 荐";
   flex: 0 0 auto;
   margin-left: 8px;
   padding: 2px 7px;
