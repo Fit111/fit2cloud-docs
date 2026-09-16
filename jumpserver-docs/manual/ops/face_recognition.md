@@ -34,3 +34,11 @@ FACELIVE_ENABLED=1
 ```sh
 jmsctl restart
 ```
+
+## 4 结果验证
+
+重启完成后，登录 JumpServer，进入 **个人设置 > 个人信息**，页面右侧出现 **生物特征** 区域，并显示 **人脸特征** 与 **绑定** 按钮，即表示人脸识别配置成功。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/ops_face_recognition_success.png" alt="图 1  人脸识别配置成功" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  人脸识别配置成功</div>
