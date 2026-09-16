@@ -50,6 +50,20 @@ title: 功能介绍
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  登录页</div>
 
+### 使用企业账号登录
+
+管理员在「系统设置 → 企业认证」中启用了钉钉、飞书、企业微信、LDAP 或 OIDC 登录方式时，登录页下方会出现「**企业账号登录**」区块，并列展示已启用的登录方式。
+
+1. 单击对应的企业登录按钮（如「企业微信」）。
+2. 浏览器跳转到企业认证页面，按提示完成身份验证。
+3. 认证通过后自动登录进入控制台，无需输入账号密码。
+
+账号密码登录方式不受影响，两种方式可任选使用。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/introduction/image2-enterprise-login.png" alt="含企业账号登录区块的登录页"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  含企业账号登录区块的登录页</div>
+
 ## 5 下一步去哪
 
 登录成功后，建议按下面的顺序熟悉系统：

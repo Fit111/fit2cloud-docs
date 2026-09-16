@@ -36,7 +36,8 @@ const sidebars = {
         { type: "doc", id: "admin-user-manual/content_compliance", label: "内容合规" },
         { type: "doc", id: "admin-user-manual/call-logs", label: "调用日志" },
         { type: "doc", id: "admin-user-manual/usage-statistics", label: "用量统计", key: "admin-manual-usage-statistics" },
-        { type: "doc", id: "admin-user-manual/settings", label: "设置" },
+        { type: "doc", id: "admin-user-manual/settings", label: "网关设置" },
+        { type: "doc", id: "admin-user-manual/system_settings", label: "系统设置" },
       ],
     },
 
