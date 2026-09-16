@@ -37,7 +37,7 @@ description: 介绍如何从控制台、审计台或工作台切换到 PAM，以
 
 ## 5 后续操作
 
-- PAM 模块定位与功能构成见 [PAM 概览](./introduction.md)。
+- PAM 模块定位与功能构成见 [PAM 概述](./introduction.md)。
 - 仪表盘指标说明见 [仪表盘](./dashboard.md)。
 - 账号纳管见 [账号管理](./accounts.md)。
 - 账号发现、推送、备份见 [账号自动化管理](./account_automation.md)。

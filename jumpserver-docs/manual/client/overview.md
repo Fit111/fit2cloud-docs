@@ -1,5 +1,5 @@
 ---
-title: 概览
+title: 客户端概述
 ---
 
 JumpServer 客户端是一款跨平台的桌面应用程序，支持 Windows、macOS 和 Linux 系统。用户可以使用客户端在本地连接和管理 JumpServer 纳管的远程资产（Windows、Linux、数据库以及网络设备）。

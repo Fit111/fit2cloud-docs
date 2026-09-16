@@ -384,8 +384,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/pam/introduction",
-                  "label": "概览",
-                  "key": "doc:使用手册/管理员手册/PAM/概览"
+                  "label": "PAM 概述",
+                  "key": "doc:使用手册/管理员手册/PAM/概述"
                 },
                 {
                   "type": "doc",
@@ -440,8 +440,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/admin/system_settings/overview",
-                  "label": "概览",
-                  "key": "doc:使用手册/管理员手册/系统设置/概览"
+                  "label": "系统设置概述",
+                  "key": "doc:使用手册/管理员手册/系统设置/概述"
                 },
                 {
                   "type": "doc",
@@ -635,8 +635,8 @@ const sidebars = {
                     {
                       "type": "doc",
                       "id": "manual/admin/jdmc/overview",
-                      "label": "概览",
-                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/概览"
+                      "label": "设备管理概述",
+                      "key": "doc:使用手册/管理员手册/系统设置/设备管理/概述"
                     },
                     {
                       "type": "doc",
@@ -727,8 +727,8 @@ const sidebars = {
             {
               "type": "doc",
               "id": "manual/admin/audit/session_audit/audit_desk",
-              "label": "概览",
-              "key": "doc:使用手册/审计员手册/概览"
+              "label": "审计员概述",
+              "key": "doc:使用手册/审计员手册/概述"
             },
             {
               "type": "doc",
@@ -837,8 +837,8 @@ const sidebars = {
             {
               "type": "doc",
               "id": "manual/user/workbench/overview",
-              "label": "概览",
-              "key": "doc:使用手册/普通用户手册/概览"
+              "label": "普通用户概述",
+              "key": "doc:使用手册/普通用户手册/概述"
             },
             {
               "type": "category",
@@ -880,8 +880,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/user/web_terminal/overview",
-                  "label": "概览",
-                  "key": "doc:使用手册/普通用户手册/Web终端/概览"
+                  "label": "Web 终端概述",
+                  "key": "doc:使用手册/普通用户手册/Web终端/概述"
                 },
                 {
                   "type": "doc",
@@ -924,8 +924,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/client/overview",
-                  "label": "概览",
-                  "key": "doc:使用手册/普通用户手册/客户端使用/概览"
+                  "label": "客户端概述",
+                  "key": "doc:使用手册/普通用户手册/客户端使用/概述"
                 },
                 {
                   "type": "doc",

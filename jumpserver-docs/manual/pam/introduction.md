@@ -1,5 +1,5 @@
 ---
-title: PAM 概览
+title: PAM 概述
 description: 介绍 JumpServer PAM（特权访问管理）模块的定位、功能构成、各功能入口与典型使用流程。
 ---
 

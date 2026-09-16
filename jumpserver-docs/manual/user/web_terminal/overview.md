@@ -1,5 +1,5 @@
 ---
-title: 概览
+title: Web 终端概述
 description: 介绍 JumpServer Web 终端（Luna）的入口、界面构成与工具栏常用功能。
 ---
 
