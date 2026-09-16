@@ -274,8 +274,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/admin/console/switch_console",
-                  "label": "控制台概览",
-                  "key": "doc:使用手册/管理员手册/控制台/控制台概览"
+                  "label": "概览",
+                  "key": "doc:使用手册/管理员手册/控制台/概览"
                 },
                 {
                   "type": "doc",
@@ -392,8 +392,8 @@ const sidebars = {
                 {
                   "type": "doc",
                   "id": "manual/pam/introduction",
-                  "label": "PAM 概览",
-                  "key": "doc:使用手册/管理员手册/PAM/PAM 概览"
+                  "label": "概览",
+                  "key": "doc:使用手册/管理员手册/PAM/概览"
                 },
                 {
                   "type": "doc",
@@ -433,190 +433,6 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/管理员手册/PAM"
-            },
-            {
-              "type": "category",
-              "label": "审计台",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "category",
-                  "label": "会话审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/session_record",
-                      "label": "会话记录",
-                      "key": "doc:使用手册/管理员手册/审计台/会话审计/会话记录"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/session_command",
-                      "label": "会话命令",
-                      "key": "doc:使用手册/管理员手册/审计台/会话审计/会话命令"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/file_transfer",
-                      "label": "文件传输",
-                      "key": "doc:使用手册/管理员手册/审计台/会话审计/文件传输"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/online_user",
-                      "label": "在线用户",
-                      "key": "doc:使用手册/管理员手册/审计台/会话审计/在线用户"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/审计台/会话审计"
-                },
-                {
-                  "type": "category",
-                  "label": "日志审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/login_logs",
-                      "label": "登录日志",
-                      "key": "doc:使用手册/管理员手册/审计台/日志审计/登录日志"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/password_change_logs",
-                      "label": "改密日志",
-                      "key": "doc:使用手册/管理员手册/审计台/日志审计/改密日志"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/operation_logs",
-                      "label": "操作日志",
-                      "key": "doc:使用手册/管理员手册/审计台/日志审计/操作日志"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/审计台/日志审计"
-                },
-                {
-                  "type": "category",
-                  "label": "作业审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/job_audit/job_list",
-                      "label": "作业列表",
-                      "key": "doc:使用手册/管理员手册/审计台/作业审计/作业列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/job_audit/job_logs",
-                      "label": "作业日志",
-                      "key": "doc:使用手册/管理员手册/审计台/作业审计/作业日志"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/审计台/作业审计"
-                },
-                {
-                  "type": "doc",
-                  "id": "manual/admin/audit/session_audit/ticket_audit",
-                  "label": "工单审计",
-                  "key": "doc:使用手册/管理员手册/审计台/工单审计"
-                },
-                {
-                  "type": "doc",
-                  "id": "manual/admin/audit/session_audit/reports",
-                  "label": "报表",
-                  "key": "doc:使用手册/管理员手册/审计台/报表"
-                }
-              ],
-              "key": "cat:使用手册/管理员手册/审计台"
-            },
-            {
-              "type": "category",
-              "label": "工作台",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "category",
-                  "label": "我的资产",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/assets_connect",
-                      "label": "连接资产",
-                      "key": "doc:使用手册/管理员手册/工作台/我的资产/连接资产"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/web_terminal",
-                      "label": "Web终端",
-                      "key": "doc:使用手册/管理员手册/工作台/我的资产/Web终端"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/file_transfer",
-                      "label": "文件传输",
-                      "key": "doc:使用手册/管理员手册/工作台/我的资产/文件传输"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/my_assets/file_explorer",
-                      "label": "文件管理",
-                      "key": "doc:使用手册/管理员手册/工作台/我的资产/文件管理"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/工作台/我的资产"
-                },
-                {
-                  "type": "category",
-                  "label": "作业中心",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/job_center/adhoc",
-                      "label": "快捷命令",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/快捷命令"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/job_center/jobs_management",
-                      "label": "作业管理",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/作业管理"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/job_center/templates_management",
-                      "label": "模板管理",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/模板管理"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/job_center/execute_history",
-                      "label": "执行历史",
-                      "key": "doc:使用手册/管理员手册/工作台/作业中心/执行历史"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/工作台/作业中心"
-                },
-                {
-                  "type": "category",
-                  "label": "其他",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/workbench/other/system_tool",
-                      "label": "系统工具",
-                      "key": "doc:使用手册/管理员手册/工作台/其他/系统工具"
-                    }
-                  ],
-                  "key": "cat:使用手册/管理员手册/工作台/其他"
-                }
-              ],
-              "key": "cat:使用手册/管理员手册/工作台"
             },
             {
               "type": "doc",
@@ -933,8 +749,8 @@ const sidebars = {
             {
               "type": "doc",
               "id": "manual/admin/audit/session_audit/audit_desk",
-              "label": "审计台概览",
-              "key": "doc:使用手册/审计员手册/审计台概览"
+              "label": "概览",
+              "key": "doc:使用手册/审计员手册/概览"
             },
             {
               "type": "doc",
