@@ -760,101 +760,93 @@ const sidebars = {
             },
             {
               "type": "category",
-              "label": "审计台",
+              "label": "会话审计",
               "collapsed": true,
               "items": [
                 {
-                  "type": "category",
-                  "label": "会话审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/session_record",
-                      "label": "会话记录",
-                      "key": "doc:使用手册/审计员手册/审计台/会话审计/会话记录"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/session_command",
-                      "label": "会话命令",
-                      "key": "doc:使用手册/审计员手册/审计台/会话审计/会话命令"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/file_transfer",
-                      "label": "文件传输",
-                      "key": "doc:使用手册/审计员手册/审计台/会话审计/文件传输"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/online_user",
-                      "label": "在线用户",
-                      "key": "doc:使用手册/审计员手册/审计台/会话审计/在线用户"
-                    }
-                  ],
-                  "key": "cat:使用手册/审计员手册/审计台/会话审计"
-                },
-                {
-                  "type": "category",
-                  "label": "日志审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/login_logs",
-                      "label": "登录日志",
-                      "key": "doc:使用手册/审计员手册/审计台/日志审计/登录日志"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/password_change_logs",
-                      "label": "改密日志",
-                      "key": "doc:使用手册/审计员手册/审计台/日志审计/改密日志"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/log_audit/operation_logs",
-                      "label": "操作日志",
-                      "key": "doc:使用手册/审计员手册/审计台/日志审计/操作日志"
-                    }
-                  ],
-                  "key": "cat:使用手册/审计员手册/审计台/日志审计"
-                },
-                {
-                  "type": "category",
-                  "label": "作业审计",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/job_audit/job_list",
-                      "label": "作业列表",
-                      "key": "doc:使用手册/审计员手册/审计台/作业审计/作业列表"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/admin/audit/session_audit/job_audit/job_logs",
-                      "label": "作业日志",
-                      "key": "doc:使用手册/审计员手册/审计台/作业审计/作业日志"
-                    }
-                  ],
-                  "key": "cat:使用手册/审计员手册/审计台/作业审计"
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/session_record",
+                  "label": "会话记录",
+                  "key": "doc:使用手册/审计员手册/审计台/会话审计/会话记录"
                 },
                 {
                   "type": "doc",
-                  "id": "manual/admin/audit/session_audit/ticket_audit",
-                  "label": "工单审计",
-                  "key": "doc:使用手册/审计员手册/审计台/工单审计"
+                  "id": "manual/admin/audit/session_audit/session_command",
+                  "label": "会话命令",
+                  "key": "doc:使用手册/审计员手册/审计台/会话审计/会话命令"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/file_transfer",
+                  "label": "文件传输",
+                  "key": "doc:使用手册/审计员手册/审计台/会话审计/文件传输"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/online_user",
+                  "label": "在线用户",
+                  "key": "doc:使用手册/审计员手册/审计台/会话审计/在线用户"
                 }
               ],
-              "key": "cat:使用手册/审计员手册/审计台"
+              "key": "cat:使用手册/审计员手册/审计台/会话审计"
+            },
+            {
+              "type": "category",
+              "label": "日志审计",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/log_audit/login_logs",
+                  "label": "登录日志",
+                  "key": "doc:使用手册/审计员手册/审计台/日志审计/登录日志"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/log_audit/password_change_logs",
+                  "label": "改密日志",
+                  "key": "doc:使用手册/审计员手册/审计台/日志审计/改密日志"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/log_audit/operation_logs",
+                  "label": "操作日志",
+                  "key": "doc:使用手册/审计员手册/审计台/日志审计/操作日志"
+                }
+              ],
+              "key": "cat:使用手册/审计员手册/审计台/日志审计"
+            },
+            {
+              "type": "category",
+              "label": "作业审计",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/job_audit/job_list",
+                  "label": "作业列表",
+                  "key": "doc:使用手册/审计员手册/审计台/作业审计/作业列表"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/audit/session_audit/job_audit/job_logs",
+                  "label": "作业日志",
+                  "key": "doc:使用手册/审计员手册/审计台/作业审计/作业日志"
+                }
+              ],
+              "key": "cat:使用手册/审计员手册/审计台/作业审计"
+            },
+            {
+              "type": "doc",
+              "id": "manual/admin/audit/session_audit/ticket_audit",
+              "label": "工单审计",
+              "key": "doc:使用手册/审计员手册/审计台/工单审计"
             },
             {
               "type": "doc",
               "id": "manual/admin/audit/session_audit/reports",
-              "label": "报表",
-              "key": "doc:使用手册/审计员手册/报表"
+              "label": "报告",
+              "key": "doc:使用手册/审计员手册/报告"
             }
           ],
           "key": "cat:使用手册/审计员手册"

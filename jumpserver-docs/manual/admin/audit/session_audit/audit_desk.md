@@ -11,7 +11,7 @@ description: 介绍 JumpServer 审计台中对用户会话、日志、作业审�
 - 审计台顶部支持组织切换，页面展示的数据以当前所选组织为范围。
 - 各模块的数据均支持按时间与关键字筛选，列表类页面支持导出，便于留存审计材料。
 
-进入方式：点击页面左上角的**切换器**（默认显示「控制台」），在下拉中选择 **审计台**。
+进入方式：点击页面左上角的**切换器**，在下拉中选择 **审计台**。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_session_audit_audit_desk.png" alt="图 1 审计台 仪表盘" />
 

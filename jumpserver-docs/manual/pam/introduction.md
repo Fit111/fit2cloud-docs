@@ -9,7 +9,7 @@ description: 介绍 JumpServer PAM（特权访问管理）模块的定位、功�
 - 它要解决的核心问题是：**账号分散、口令长期不变、特权操作不可追溯**。
 - 在 JumpServer 中，PAM 是与「控制台」「审计台」「工作台」并列的独立模块，拥有自己的左侧导航。
 
-进入方式见 [切换到 PAM](./switch_pam.md)：单击页面左上角的**切换器**（默认显示「控制台」），在下拉中选择 **PAM**。
+进入方式：单击页面左上角的**切换器**，在下拉中选择 **PAM**。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_pam_introduction.png" alt="图 1  PAM 模块仪表盘" />
 
