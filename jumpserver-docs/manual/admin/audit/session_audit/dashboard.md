@@ -9,9 +9,9 @@ title: 审计台仪表盘
 - 仪表盘顶部支持按 **今天 / 近 7 天 / 近 30 天** 切换统计时间范围。
 - 页面由"日志数据"、"会话数据"、"登录日志"、"命令记录"、"作业日志"、"会话趋势"和"会话连接趋势"七个区块组成。
 
-![v5_session_audit_dashboard](/img/jumpserver/v5_session_audit_dashboard.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_session_audit_dashboard.png" alt="图 1  审计台仪表盘" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 审计台仪表盘</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  审计台仪表盘</div>
 ## 2 日志数据
 
 - 展示当前时间段内的日志类审计指标，包含登录日志数、操作日志数、改密日志数三项。

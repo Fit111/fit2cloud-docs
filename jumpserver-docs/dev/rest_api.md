@@ -7,12 +7,15 @@ API 文档默认已经集成在代码里面，部署完成后可以通过下面�
 
 ## 1 API 访问
 
-|  Version                 |       Access method      |               example              |
+| Version | Access method | example |
 | ------------------------ | ------------------------ | ---------------------------------- |
-|  ``  | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
+| — | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
 
-### 1.2 页面效果
-![api_swagger](/img/jumpserver/api_swagger.png)
+### 1.1 页面效果
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/api_swagger.png" alt="图 1  API 文档页面" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  API 文档页面</div>
 
 ## 2 API 认证
 
@@ -26,15 +29,16 @@ Access Key      对 Http Header 进行签名
 
 ### Session
 
-用户通过页面后登录，cookie 中会存在  jms_sessionid，请求时同样把  jms_sessionid 放到 cookie 中
-    ### Token
+用户通过页面登录后，cookie 中会存在 `jms_sessionid`，请求时同样把 `jms_sessionid` 放到 cookie 中。
+
+### Token
 
 ```sh
 curl -X POST http://localhost/api/v1/authentication/auth/ \
      -H 'Content-Type: application/json' \
      -d '{"username": "admin", "password": "admin"}'
 ```
-        ### Python
+### Python
 
 ```python
 # Python 示例
@@ -66,7 +70,7 @@ if __name__ == '__main__':
     token = get_token(jms_url, username, password)
     get_user_info(jms_url, token)
 ```
-        ### Golang
+### Golang
 
 ```go
 // Golang 示例
@@ -136,7 +140,7 @@ func main() {
     GetUserInfo(JmsServerURL, token)
 }
 ```
-        ### Java
+### Java
 
 ```java
 // Java 示例
@@ -154,7 +158,7 @@ import java.util.Map;
 
 public class HttpsClientTest {
 
-    private static final String JMS_URL = "hhttps://demo.jumpserver.org";
+    private static final String JMS_URL = "https://demo.jumpserver.org";
     private static final String JS_USER = "admin";
     private static final String JS_PASSWORD = "admin";
 
@@ -231,7 +235,7 @@ public class HttpsClientTest {
     }
 }
 ```
-    ### Private Token
+### Private Token
 
 ```sh
 docker exec -it jms_core /bin/bash
@@ -252,7 +256,7 @@ curl http://demo.jumpserver.org/api/v1/users/users/ \
      -H 'Content-Type: application/json' \
      -H 'X-JMS-ORG: 00000000-0000-0000-0000-000000000002'
 ```
-        ### Python
+### Python
 
 ```python
 # Python 示例
@@ -273,7 +277,7 @@ if __name__ == '__main__':
     token = '937b38011acf499eb474e2fecb424ab3'
     get_user_info(jms_url, token)
 ```
-        ### Golang
+### Golang
 
 ```go
 // Golang 示例
@@ -315,10 +319,10 @@ func main() {
     GetUserInfo(JmsServerURL, JMSToken)
 }
 ```
-    ### Access Key
+### Access Key
 
-在 Web 页面 API Key 列表创建或获取 AccessKeyID AccessKeySecret
-        ### Python
+在 **个人设置 > 访问密钥** 中创建或获取 AccessKeyID、AccessKeySecret。
+### Python
 
 ```python
 # Python 示例
@@ -350,7 +354,7 @@ if __name__ == '__main__':
     auth = get_auth(KeyID, SecretID)
     get_user_info(jms_url, auth)
 ```
-        ### Golang
+### Golang
 
 ```go
 // Golang 示例
@@ -420,7 +424,7 @@ func main() {
     GetUserInfo(JmsServerURL, &auth)
 }
 ```
-        ### Java
+### Java
 
 ```java
 // Java 示例

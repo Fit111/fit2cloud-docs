@@ -46,7 +46,7 @@ title: 通知设置
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings3.png" alt="图 3  短信服务商配置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  短信服务商配置</div>
 
-- 您的 JumpServer 动态码为：$\{code\}，验证码 1 分钟内有效，请勿泄露！
+- 您的 JumpServer 动态码为：`${code}`，验证码 1 分钟内有效，请勿泄露！
 
 ### 2.3 用户侧配置
 

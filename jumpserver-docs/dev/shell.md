@@ -2,9 +2,10 @@
 title: 交互命令
 ---
 
-:::warning[操作不当将导致数据丢失，操作前请仔细确认]
-
+:::warning[操作不当将导致数据丢失]
+交互命令可直接读写数据库中的用户、资产和密文。操作前请确认组织与对象，避免误改或误删生产数据。
 :::
+
 ## 1 操作方法
 
 
@@ -86,7 +87,7 @@ group.save()
 # 删除用户组
 UserGroup.objects.all().filter(name='Test').delete()
 ```
-    ### Asset
+### Asset
 
 ```python
 from assets.models import *
@@ -120,7 +121,7 @@ node.delete()
 ```
 ## 2 数据解密
 
-### 系统用户
+### 账号
 
 ```sh
 docker exec -it jms_core bash
@@ -170,7 +171,7 @@ NASeo6CC4fxOCfMJN1DT5CLyW4XpRk3GeR4QKSfFkwD2yRqk+7opm8PppdMuLZKU
 LQMMI90AWvU3Cx9aAbl1bLSIT0qRoc5FGwmLEL12yDBZA2l3vYhnaw==
 -----END RSA PRIVATE KEY-----'
 ```
-    ### 系统设置字段
+### 系统设置字段
 
 ```sh
 docker exec -it jms_core bash

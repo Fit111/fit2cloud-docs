@@ -9,7 +9,7 @@ Web 终端（Luna）用于在浏览器中连接已授权资产。工作台侧栏
 
 左侧为组织切换、我的资产、最近连接、我的收藏和脚本库。未连接时，中间显示常用操作：重置连接配置、纯净模式、全屏模式、切换会话。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_wb_luna_01.png" alt="图 1  Web 终端" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_user_wb_luna_01.png" alt="图 1  Web 终端" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Web 终端</div>
 

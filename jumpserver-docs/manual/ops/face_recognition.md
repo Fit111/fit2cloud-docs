@@ -10,7 +10,7 @@ description: 介绍 JumpServer 人脸识别（MFA Facelive）功能的服务端�
 - 旗舰版许可证 5000 个以上的资产
 - 启用 HTTPS 访问
 
-## 2 配置 Faclive
+## 2 配置人脸识别
 
 在 JumpServer 安装目录下编辑 `config.txt`：
 
@@ -32,7 +32,7 @@ FACELIVE_ENABLED=1
 保存配置后重启 JumpServer 服务，使配置生效：
 
 ```sh
-jmsctl restart
+./jmsctl.sh restart
 ```
 
 ## 4 结果验证

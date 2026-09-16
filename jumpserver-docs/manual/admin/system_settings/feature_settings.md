@@ -1,9 +1,11 @@
 ---
 title: 功能设置
-description: 介绍 JumpServer 系统设置中功能设置页的各项开关与配置，包括公告、工单、作业中心、账号存储、智能问答与虚拟应用。
+description: 介绍 JumpServer 系统设置中功能设置页的各项开关与配置，包括公告、工单、作业中心、账号存储、SSH 证书签发与虚拟应用。
 ---
 
-点击页面右上角小齿轮进入 **系统设置** 页面，点击 **功能设置** 即进入功能设置页面。页面顶部按用途分为 **公告**、**工单**、**作业中心**、**账号存储**、**智能问答**、**虚拟应用** 六个部分，用于集中开启或关闭平台级的功能模块，并按各功能的需要完成必要的参数配置。
+单击页面右上角小齿轮进入 **系统设置**，选择 **功能设置**。页面顶部包含 **公告**、**工单**、**作业中心**、**账号存储**、**SSH 证书签发**、**虚拟应用** 六个页签，用于开启或关闭对应功能，并完成必要参数配置。
+
+大模型与助手能力在 **系统设置 > AI 助手** 中配置，详见 [AI 助手](ai_assistant.md)。
 
 ## 1 公告
 
@@ -63,18 +65,42 @@ description: 介绍 JumpServer 系统设置中功能设置页的各项开关与�
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature6.png" alt="图 8  账号存储设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  账号存储设置</div>
 
-## 5 智能问答
+## 5 SSH 证书签发
 
-点击页面上方的 **智能问答** 即可进入智能问答设置页面。智能问答支持对接 ChatGPT、Deepseek 以及自定义模型服务（自定义模型功能需在 &gt;= V4.10.14 版本中才可使用），开启后即可启动聊天 AI 功能进行智能问答。
+选择 **SSH 证书签发**，用于对接 OpenBao，由 JumpServer 签发 SSH 证书。页面分为 **签发服务**、**CA 公钥**、**接入步骤** 和 **Linux 目标服务器配置**。
 
-使用前需要填写聊天服务的基本地址与 API Key，点击 **保存** 后再点击 **测试**；测试连接成功后，即可开始与智能问答小助手进行对话。
+签发服务用于配置 OpenBao 连接信息与 SSH 证书签发策略，包含以下字段：
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature7.png" alt="图 9  智能问答设置" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  智能问答设置</div>
+- **启用 SSH CA**： 开启后才可使用 SSH 证书签发。
+- **OpenBao 地址**： 填写 JumpServer Core 实际能够访问的 OpenBao 地址。
+- **服务令牌**： 使用仅允许该角色签发证书和读取 CA 公钥的最小权限令牌。
+- **请求超时（秒）**： OpenBao 请求超时时间。
+- **验证 TLS 证书**： 是否校验 OpenBao 的 TLS 证书。
+- **SSH 密钥引擎挂载点**： OpenBao 上 SSH 密钥引擎的挂载点。
+- **签发角色**： 用于签发证书的 OpenBao 角色。
+- **证书有效期（秒）**： 签发证书的有效时长。
+- **允许的来源地址**： 限制 SSH 证书只能从指定网络来源使用。填写目标服务器 sshd 实际看到的 Koko 或 SSH 网关出口 CIDR；经过 NAT 时填写转换后的地址，不要填写终端用户 IP。多个 CIDR 用英文逗号分隔，例如 `10.20.30.15/32, 10.20.31.0/24`；留空表示不限制来源。
+
+填写后单击 **保存**，再单击 **测试** 验证 OpenBao 连接。连接成功后，可在 **CA 公钥** 区域单击 **获取 CA 公钥**。该公钥需部署到目标服务器，它不是用户公钥。
+
+接入步骤如下：
+
+1. 保存配置并测试 OpenBao 连接。
+2. 下载 CA 公钥，并在目标服务器配置 `TrustedUserCAKeys`。
+3. 将 JumpServer 资产账号的凭据类型设为 **SSH 证书**。
+
+Linux 目标服务器只需配置一次 CA 信任：
+
+1. 将 CA 公钥保存到目标服务器，例如 `install -o root -g root -m 0644 jumpserver-openbao-ssh-ca.pub /etc/ssh/jumpserver_user_ca.pub`。
+2. 在 `/etc/ssh/sshd_config` 或 `sshd_config.d` 中加入 `TrustedUserCAKeys /etc/ssh/jumpserver_user_ca.pub`。
+3. 校验配置后重新加载 OpenSSH：先执行 `sshd -t`，再执行 `systemctl reload sshd`。Debian / Ubuntu 使用 `systemctl reload ssh`。
+4. 确认目标服务器上的 Linux 登录账号已经存在，并且证书 principal 与登录用户名一致。
+
+已有 `authorized_keys` 无需删除，普通 SSH 公钥登录可以与 SSH CA 证书登录并存。
 
 ## 6 虚拟应用
 
-点击页面上方的 **虚拟应用** 即进入虚拟应用设置页面。JumpServer 支持使用 Linux 系统作为远程应用功能的运行载体，在此页面开启以 Linux 系统为底层的虚拟应用功能，具体使用配置见 [虚拟应用配置说明](virtual_apps.md)。
+单击页面上方的 **虚拟应用** 即进入虚拟应用设置页面。JumpServer 支持使用 Linux 系统作为远程应用功能的运行载体，在此页面开启以 Linux 系统为底层的虚拟应用功能，具体使用配置见 [虚拟应用配置说明](virtual_apps.md)。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature8.png" alt="图 10  虚拟应用设置" />
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  虚拟应用设置</div>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature8.png" alt="图 9  虚拟应用设置" />
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  虚拟应用设置</div>
