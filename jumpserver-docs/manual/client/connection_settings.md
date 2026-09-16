@@ -35,7 +35,7 @@ title: 连接设置
 
 ## 4 应用配置
 
-- 只需要配置对应的应用启动路径即可
+- 只需要配置对应的应用启动路径即可，如果没有对应软件看点击下载路径去下载对应版本然后配置
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_setting_04.png" alt="图 4  应用配置" />
 
