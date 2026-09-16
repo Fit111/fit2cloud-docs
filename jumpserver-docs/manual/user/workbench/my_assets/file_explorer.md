@@ -12,7 +12,7 @@ description: 介绍 JumpServer 工作台文件管理入口，以及 Web 终端�
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  传输中心</div>
 
 
-在 [Web 终端](./web_terminal.md) 中，点击展开**右侧面板**，切换到文件即可进行文件的上传下载，过程可以单击右下角 **传输中心**，查看传输队列（文件、传输方向、进度、速度 / 剩余、状态、操作）。
+在 [Web 终端](../../web_terminal/overview.md) 中，点击展开**右侧面板**，切换到文件即可进行文件的上传下载，过程可以单击右下角 **传输中心**，查看传输队列（文件、传输方向、进度、速度 / 剩余、状态、操作）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_user_wb_fm_02.png" alt="图 2  传输中心" />
 
