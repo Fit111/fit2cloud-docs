@@ -40,19 +40,19 @@ title: 产品 FAQ
 
 ## 4 身份认证相关
 
-- [JumpServer 对接 LDAP 身份认证](../manual/admin/system_settings/authentication_settings/LDAP)
-- [JumpServer 对接 Passkey 身份认证](../manual/admin/system_settings/authentication_settings/Passkey)
-- [JumpServer 对接 CAS 身份认证](../manual/admin/system_settings/authentication_settings/CAS)
-- [JumpServer 对接 LDAP HA 身份认证](../manual/admin/system_settings/authentication_settings/LDAPHA)
-- [JumpServer 对接 OIDC 身份认证](../manual/admin/system_settings/authentication_settings/OIDC)
-- [JumpServer 对接 OAuth2 身份认证](../manual/admin/system_settings/authentication_settings/OAuth2)
-- [JumpServer 对接 SAML2 身份认证](../manual/admin/system_settings/authentication_settings/SAML2)
-- [JumpServer 对接企业微信](../manual/admin/system_settings/authentication_settings/WeCom)
-- [JumpServer 对接钉钉](../manual/admin/system_settings/authentication_settings/DingTalk)
-- [JumpServer 对接飞书](../manual/admin/system_settings/authentication_settings/Feishu)
-- [JumpServer 对接 Lark 身份认证](../manual/admin/system_settings/authentication_settings/Lark)
-- [JumpServer 对接 SLack 身份认证](../manual/admin/system_settings/authentication_settings/Slack)
-- [JumpServer 对接 Radius 身份认证](../manual/admin/system_settings/authentication_settings/Radius)
+- [JumpServer 对接 LDAP 身份认证](../manual/admin/system_settings/authentication_settings/LDAP.md)
+- [JumpServer 对接 Passkey 身份认证](../manual/admin/system_settings/authentication_settings/Passkey.md)
+- [JumpServer 对接 CAS 身份认证](../manual/admin/system_settings/authentication_settings/CAS.md)
+- [JumpServer 对接 LDAP HA 身份认证](../manual/admin/system_settings/authentication_settings/LDAPHA.md)
+- [JumpServer 对接 OIDC 身份认证](../manual/admin/system_settings/authentication_settings/OIDC.md)
+- [JumpServer 对接 OAuth2 身份认证](../manual/admin/system_settings/authentication_settings/OAuth2.md)
+- [JumpServer 对接 SAML2 身份认证](../manual/admin/system_settings/authentication_settings/SAML2.md)
+- [JumpServer 对接企业微信](../manual/admin/system_settings/authentication_settings/WeCom.md)
+- [JumpServer 对接钉钉](../manual/admin/system_settings/authentication_settings/DingTalk.md)
+- [JumpServer 对接飞书](../manual/admin/system_settings/authentication_settings/Feishu.md)
+- [JumpServer 对接 Lark 身份认证](../manual/admin/system_settings/authentication_settings/Lark.md)
+- [JumpServer 对接 Slack 身份认证](../manual/admin/system_settings/authentication_settings/Slack.md)
+- [JumpServer 对接 Radius 身份认证](../manual/admin/system_settings/authentication_settings/Radius.md)
 
 ## 5 版本相关
 

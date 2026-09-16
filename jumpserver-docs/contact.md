@@ -4,16 +4,20 @@ title: 联系我们
 
 ## 1 GitHub 项目地址
 
-- [JumpServer](https://github.com/jumpserver/jumpserver) ![jumpserver stars](/img/jumpserver/jumpserver-stars.svg)
+- [JumpServer](https://github.com/jumpserver/jumpserver)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"156px"}} src="/img/jumpserver/jumpserver-stars.svg" alt="图 1  JumpServer GitHub Stars" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  JumpServer GitHub Stars</div>
 
 ## 2 联系方式
 
 - 官网：[https://www.jumpserver.org/](https://www.jumpserver.org/)
 - 邮箱：[support@fit2cloud.com](mailto:support@fit2cloud.com)
 - 电话：[400-052-0755](tel:4000520755)
-- 社区论坛: [开源社区论坛](https://bbs.fit2cloud.com/c/js/5)
+- 社区论坛：[开源社区论坛](https://bbs.fit2cloud.com/c/js/5)
 - 企业版试用申请：[https://jumpserver.org/enterprise.html](https://jumpserver.org/enterprise.html)
-- 技术咨询: [https://jinshuju.net/f/sQ91MK](https://jinshuju.net/f/sQ91MK)
+- 技术咨询：[https://jinshuju.net/f/sQ91MK](https://jinshuju.net/f/sQ91MK)
 
 ## 3 微信公众号
 <img alt="wechat-official" src="/img/jumpserver/wechat-official.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>

@@ -16,6 +16,6 @@ X-Pack 增强包括一些企业级客户所需的附加功能，比如页面自�
 
 ## 2 如何申请企业版使用？企业版如何收费？
 
-JumpServer 企业版试用申请请点击：`https://jinshuju.net/f/kyOYpi`
+JumpServer 企业版试用申请请访问：`https://jinshuju.net/f/kyOYpi`
 
 我们会安排专人与您联系。
