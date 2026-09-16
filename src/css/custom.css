@@ -387,7 +387,7 @@ aside.theme-doc-sidebar-container {
   /* 侧栏固定: 让侧边栏(Viewport)吸附在顶部导航栏下方, 滚动页面/内容时侧边栏保持不动。
      关键点: sticky 元素的吸附范围受父容器高度限制, 而 aside 会被拉伸到与整行内容同高,
      若 Viewport 高度自适应, 它会在很长一段滚动范围内「跟着内容跑」, 看起来不固定。
-     因此必须把 Viewport 高度锁定为固定视口高度(减掉顶栏)，sticky 才能稳定吸住。
+     因此必须把 Viewport 高度锁定为固定视口高度(减掉顶栏), sticky 才能稳定吸住。
      - top: 与 navbar 吸顶后的底边对齐 (navbar top 32px + 高70px = 102px), 避免滚动时
        Viewport 盖到顶部导航栏上。
      - height: 100vh - 102px, 占满顶栏下方剩余视口; 菜单过长时内部滚动(overflow-y)。 */
@@ -487,7 +487,7 @@ aside.theme-doc-sidebar-container {
 }
 
 /* ===== 顶部导航栏文字字体参考 docs.halo.run「开发者指南」=====
-   halo 顶部导航项样式: 14px / 500 / 行高 22 / 深灰 #242424。
+   halo 顶部导航项样式: 14px / 500 / 行高 22 / 深灰 #242424.
    只设默认(非激活)颜色, hover 与激活态的蓝色仍由 Infima 规则生效。 */
 .navbar__link {
   font-size: 14px;
@@ -594,7 +594,42 @@ html[class*='docs-doc-id-manual/pam/introduction'] .theme-doc-markdown table {
   margin-left: 8px;
   padding: 2px 7px;
   border-radius: 999px;
-  background: #ff871d;
+  background: linear-gradient(120deg, #ffc266 0%, #ff871d 50%, #ff5c00 100%);
+  box-shadow: 0 1px 2px rgba(255, 92, 0, 0.25);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  vertical-align: middle;
+}
+
+/* ===== 文档侧栏 推荐 标签 =====
+   在 sidebars.js 中给需要标记的条目增加 className: "sidebar-item-badge-rec"。
+   样式与 NEW 标签完全一致，仅文案不同。 */
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__link,
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__list-item-collapsible > .menu__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__link > span,
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__list-item-collapsible > .menu__link > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__link > span::after,
+.theme-doc-sidebar-container li.sidebar-item-badge-rec > .menu__list-item-collapsible > .menu__link > span::after {
+  content: "推荐";
+  flex: 0 0 auto;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #ffc266 0%, #ff871d 50%, #ff5c00 100%);
+  box-shadow: 0 1px 2px rgba(255, 92, 0, 0.25);
   color: #ffffff;
   font-size: 10px;
   font-weight: 700;
@@ -611,7 +646,7 @@ html[class*='docs-doc-id-manual/pam/introduction'] .theme-doc-markdown table {
      默认灰字、hover/激活蓝色(首页默认激活=品牌蓝)
    - 右侧仅: 搜索 + 版本切换(多版本才显示) + 中英文切换
    说明: 首页 Hero 自带浅蓝渐变背景, 白色悬浮卡会自然浮在浅蓝之上, 与设计稿一致。 */
-/* Infima 的 .navbar--fixed-top 是 left:0;right:0 满宽 fixed。
+/* Infima 的 .navbar--fixed-top 是 left:0;right:0 满宽 fixed.
    用 margin auto 居中 + 限宽, 不能用 left:50%+translateX(会与 right:0 冲突导致错位) */
 /* 导航栏固定悬浮在页面顶部、始终停留原位, 不随滚动隐藏。
    .navbar-gap 遮挡层(见下方「导航栏空隙遮挡」)以导航栏元素本身为界, 盖住滚动时从
