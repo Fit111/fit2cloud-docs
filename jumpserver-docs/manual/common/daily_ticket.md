@@ -62,7 +62,7 @@ description: 介绍普通用户视角下的工单申请与审批，包括我发�
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder07.png" alt="图 7  企业微信钉钉审批" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  企业微信钉钉审批</div>
 
-## 3 其他角色操作
+## 3 其他操作
 
 工单功能的启用，以及审批人、审批流程等配置属于管理员操作，位于**管理员手册 > 系统设置 > 功能设置 > 工单**：[功能设置 > 工单](../admin/system_settings/feature_settings.md#2-工单)。
 
