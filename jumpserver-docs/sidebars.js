@@ -872,118 +872,90 @@ const sidebars = {
             },
             {
               "type": "category",
-              "label": "工作台",
+              "label": "我的资产",
               "collapsed": true,
               "items": [
                 {
-                  "type": "category",
-                  "label": "我的资产",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/my_assets/assets_connect",
-                      "label": "连接资产",
-                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/连接资产"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/my_assets/web_terminal",
-                      "label": "Web终端",
-                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/Web终端"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/my_assets/file_transfer",
-                      "label": "文件传输",
-                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件传输"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/my_assets/file_explorer",
-                      "label": "文件管理",
-                      "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件管理"
-                    }
-                  ],
-                  "key": "cat:使用手册/普通用户手册/工作台/我的资产"
+                  "type": "doc",
+                  "id": "manual/user/workbench/my_assets/assets_connect",
+                  "label": "连接资产",
+                  "key": "doc:使用手册/普通用户手册/工作台/我的资产/连接资产"
                 },
                 {
-                  "type": "category",
-                  "label": "作业中心",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/job_center/adhoc",
-                      "label": "快捷命令",
-                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/快捷命令"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/job_center/jobs_management",
-                      "label": "作业管理",
-                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/作业管理"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/job_center/templates_management",
-                      "label": "模板管理",
-                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/模板管理"
-                    },
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/job_center/execute_history",
-                      "label": "执行历史",
-                      "key": "doc:使用手册/普通用户手册/工作台/作业中心/执行历史"
-                    }
-                  ],
-                  "key": "cat:使用手册/普通用户手册/工作台/作业中心"
+                  "type": "doc",
+                  "id": "manual/user/workbench/my_assets/file_transfer",
+                  "label": "文件传输",
+                  "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件传输"
                 },
                 {
-                  "type": "category",
-                  "label": "其他",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "doc",
-                      "id": "manual/user/workbench/other/system_tool",
-                      "label": "系统工具",
-                      "key": "doc:使用手册/普通用户手册/工作台/其他/系统工具"
-                    }
-                  ],
-                  "key": "cat:使用手册/普通用户手册/工作台/其他"
+                  "type": "doc",
+                  "id": "manual/user/workbench/my_assets/file_explorer",
+                  "label": "文件管理",
+                  "key": "doc:使用手册/普通用户手册/工作台/我的资产/文件管理"
                 }
               ],
-              "key": "cat:使用手册/普通用户手册/工作台"
-            },
-            {
-              "type": "doc",
-              "id": "manual/user/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/普通用户手册/个人设置"
-            },
-            {
-              "type": "doc",
-              "id": "manual/user/ticket",
-              "label": "工单",
-              "key": "doc:使用手册/普通用户手册/工单"
+              "key": "cat:使用手册/普通用户手册/工作台/我的资产"
             },
             {
               "type": "category",
-              "label": "客户端使用",
+              "label": "Web终端",
               "collapsed": true,
               "items": [
                 {
                   "type": "doc",
-                  "id": "manual/client/client_installation",
-                  "label": "客户端下载与安装",
-                  "key": "doc:使用手册/普通用户手册/客户端使用/客户端下载与安装"
+                  "id": "manual/user/web_terminal/overview",
+                  "label": "概览",
+                  "key": "doc:使用手册/普通用户手册/Web终端/概览"
                 },
                 {
                   "type": "doc",
-                  "id": "manual/client/asset_connection",
-                  "label": "资产连接",
-                  "key": "doc:使用手册/普通用户手册/客户端使用/资产连接"
+                  "id": "manual/user/web_terminal/my_assets",
+                  "label": "我的资产",
+                  "key": "doc:使用手册/普通用户手册/Web终端/我的资产"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/web_terminal/assets_connect",
+                  "label": "连接资产",
+                  "key": "doc:使用手册/普通用户手册/Web终端/连接资产"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/web_terminal/script_library",
+                  "label": "脚本库",
+                  "key": "doc:使用手册/普通用户手册/Web终端/脚本库"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/web_terminal/ai_assistant",
+                  "label": "AI 助手",
+                  "key": "doc:使用手册/普通用户手册/Web终端/AI 助手"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/web_terminal/settings",
+                  "label": "Web 终端设置",
+                  "key": "doc:使用手册/普通用户手册/Web终端/Web 终端设置"
+                }
+              ],
+              "key": "cat:使用手册/普通用户手册/Web终端"
+            },
+            {
+              "type": "category",
+              "label": "客户端",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/client/overview",
+                  "label": "概览",
+                  "key": "doc:使用手册/普通用户手册/客户端使用/概览"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/client/client_installation",
+                  "label": "下载与安装",
+                  "key": "doc:使用手册/普通用户手册/客户端使用/客户端下载与安装"
                 },
                 {
                   "type": "doc",
@@ -993,12 +965,70 @@ const sidebars = {
                 },
                 {
                   "type": "doc",
+                  "id": "manual/client/asset_connection",
+                  "label": "资产连接",
+                  "key": "doc:使用手册/普通用户手册/客户端使用/资产连接"
+                },
+                {
+                  "type": "doc",
                   "id": "manual/client/tool",
-                  "label": "工具",
+                  "label": "录像处理工具",
                   "key": "doc:使用手册/普通用户手册/客户端使用/工具"
                 }
               ],
               "key": "cat:使用手册/普通用户手册/客户端使用"
+            },
+            {
+              "type": "category",
+              "label": "作业中心",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/user/workbench/job_center/adhoc",
+                  "label": "快捷命令",
+                  "key": "doc:使用手册/普通用户手册/工作台/作业中心/快捷命令"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/workbench/job_center/jobs_management",
+                  "label": "作业管理",
+                  "key": "doc:使用手册/普通用户手册/工作台/作业中心/作业管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/workbench/job_center/templates_management",
+                  "label": "模板管理",
+                  "key": "doc:使用手册/普通用户手册/工作台/作业中心/模板管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/user/workbench/job_center/execute_history",
+                  "label": "执行历史",
+                  "key": "doc:使用手册/普通用户手册/工作台/作业中心/执行历史"
+                }
+              ],
+              "key": "cat:使用手册/普通用户手册/工作台/作业中心"
+            },
+            {
+              "type": "category",
+              "label": "其他",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/user/workbench/other/system_tool",
+                  "label": "系统工具",
+                  "key": "doc:使用手册/普通用户手册/工作台/其他/系统工具"
+                }
+              ],
+              "key": "cat:使用手册/普通用户手册/工作台/其他"
+            },
+            {
+              "type": "doc",
+              "id": "manual/user/profile",
+              "label": "个人设置",
+              "key": "doc:使用手册/普通用户手册/个人设置"
             }
           ],
           "key": "cat:使用手册/普通用户手册"
