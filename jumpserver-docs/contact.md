@@ -29,5 +29,4 @@ title: 联系我们
 
 ## 7 在线文档问题反馈
 
-- 如您在阅读该文档时，发现一些问题，欢迎您在 Github 文档仓库中反馈给我们，我们将尽快调整优化。
-- [GitHub 文档仓库](https://github.com/fit2cloud-dev/fit2cloud-docs/issues)
+- 如您在阅读该文档时，发现一些问题，欢迎您在 GitHub 文档仓库中反馈给我们，我们将尽快调整优化。GitHub 仓库地址：[https://github.com/fit2cloud-dev/fit2cloud-docs/issues](https://github.com/fit2cloud-dev/fit2cloud-docs/issues)。
