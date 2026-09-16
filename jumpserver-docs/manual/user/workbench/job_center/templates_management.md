@@ -3,13 +3,13 @@ title: 模板管理
 description: 介绍 JumpServer 工作台作业中心中脚本模板与 Playbook 模板的用途与创建方式。
 ---
 
-**模板管理**（界面标题为 **模版管理**）用于维护快捷命令与作业可以复用的脚本或 Playbook。脚本写好一次就能被多个作业引用：需要调整时只改模板，引用它的作业随之生效，既避免在多个作业里重复维护同一段命令，也便于统一规范巡检与配置脚本。
+**模板管理**用于维护快捷命令与作业可以复用的脚本或 Playbook。脚本写好一次就能被多个作业引用：需要调整时只改模板，引用它的作业随之生效，既避免在多个作业里重复维护同一段命令，也便于统一规范巡检与配置脚本。
 
 ## 1 功能简介
 
 模板管理位于 **工作台 > 作业中心 > 模版管理**：登录后将控制台切换到 **工作台**，在左侧选择 **作业中心 > 模版管理** 即可进入。
 
-页面按类型分为 **脚本管理** 与 **Playbook管理** 两个页签。脚本列表的列字段包括名称、模块、内容、备注、范围、创建日期、创建者及操作；其中 **范围** 表示模板的可见范围，**公有** 模板所有人可用，**私有** 模板仅创建者可见。
+页面按类型分为 **脚本管理** 与 **Playbook管理** 两个页签。脚本列表的列字段包括名称、模块、内容、备注、范围、创建日期、创建者及操作；其中 **范围** 表示模板的可见范围，**公有** 模板所有人可用，**私有** 模板仅创建者可见。Playbook 列表的列字段包括名称、备注、范围、创建日期、创建者及操作。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_wb_tpl_01.png" alt="图 1  模版管理" />
 
@@ -17,7 +17,7 @@ description: 介绍 JumpServer 工作台作业中心中脚本模板与 Playbook 
 
 ## 2 前提条件
 
-使用模板管理前，需要先以工作台账号登录 JumpServer，作业中心功能需由系统管理员在 [功能设置](../../../admin/system_settings/feature_settings.md) 中开启。
+使用模板管理前，需要先以工作台账号登录 JumpServer，作业中心功能需由系统管理员在 [功能设置](../../../admin/system_settings/feature_settings.md) 的 **作业中心** 分区中开启。
 
 ## 3 创建脚本模板
 
@@ -43,3 +43,9 @@ description: 介绍 JumpServer 工作台作业中心中脚本模板与 Playbook 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_admin_wb_tpl_02.png" alt="图 2  创建脚本模板" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建脚本模板</div>
+
+## 4 创建 Playbook 模板
+
+在 **Playbook管理** 页签下单击 **创建**，上传 Playbook 文件即可。Playbook 需包含 `main.yml` 作为入口文件，上传后即可在创建 Playbook 作业时被引用。
+
+模板创建好之后，脚本模板可直接被快捷命令与脚本作业引用，Playbook 模板可在作业管理的 **Playbook管理** 页签下选用，详见 [作业管理](./jobs_management.md)。
