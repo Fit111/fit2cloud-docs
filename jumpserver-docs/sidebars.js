@@ -715,20 +715,6 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/管理员手册/系统设置"
-            },
-            {
-              "type": "category",
-              "label": "其他设置",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "manual/admin/others/MFA_Facelive",
-                  "label": "人脸识别 (X-Pack)",
-                  "key": "doc:使用手册/管理员手册/其他设置/人脸识别 (X-Pack)"
-                }
-              ],
-              "key": "cat:使用手册/管理员手册/其他设置"
             }
           ],
           "key": "cat:使用手册/管理员手册"
@@ -1079,6 +1065,12 @@ const sidebars = {
           "id": "manual/ops/cli_tools",
           "label": "命令行工具",
           "key": "doc:运维指南/命令行工具"
+        },
+        {
+          "type": "doc",
+          "id": "manual/ops/face_recognition",
+          "label": "人脸识别运维设置",
+          "key": "doc:运维指南/人脸识别运维设置"
         }
       ],
       "key": "cat:运维指南"
@@ -1093,12 +1085,6 @@ const sidebars = {
           "id": "faq/faq",
           "label": "产品 FAQ",
           "key": "doc:常见问题/产品 FAQ"
-        },
-        {
-          "type": "doc",
-          "id": "faq/security",
-          "label": "安全建议",
-          "key": "doc:常见问题/安全建议"
         }
       ],
       "key": "cat:常见问题"
