@@ -7,9 +7,24 @@ API 文档默认已经集成在代码里面，部署完成后可以通过下面�
 
 ## 1 API 访问
 
-| Version | Access method | example |
-| ------------------------ | ------------------------ | ---------------------------------- |
-| — | `http://&lt;url&gt;/api/docs/` | `http://192.168.244.144/api/docs/` |
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  API 访问地址</div>
+
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr>
+<th style={{width:'20%', padding:'8px', textAlign:'left'}}>Version</th>
+<th style={{width:'40%', padding:'8px', textAlign:'left'}}>Access method</th>
+<th style={{width:'40%', padding:'8px', textAlign:'left'}}>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style={{padding:'8px'}}>—</td>
+<td style={{padding:'8px'}}><code>http://&lt;url&gt;/api/docs/</code></td>
+<td style={{padding:'8px'}}><code>http://192.168.244.144/api/docs/</code></td>
+</tr>
+</tbody>
+</table>
 
 ### 1.1 页面效果
 
