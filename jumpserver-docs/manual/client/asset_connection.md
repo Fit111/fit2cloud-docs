@@ -40,4 +40,4 @@ title: 资产连接
 
 ### 连接资产
 
-连接资产参考[web终端](../user/workbench/my_assets/web_terminal.md)中的连接方式
+连接资产参考 [Web 终端](../user/web_terminal/assets_connect.md) 中的连接方式

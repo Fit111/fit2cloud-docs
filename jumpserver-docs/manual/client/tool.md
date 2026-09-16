@@ -1,5 +1,5 @@
 ---
-title: 工具
+title: 录像处理工具
 ---
 
 
@@ -18,7 +18,7 @@ title: 工具
 - 点击客户端右上角**我的文件**，在下拉框中选择系统工具，在系统工具中选择 **录像转码**，进入录像转码窗口。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_change_video.png" alt="图 2  录像转码" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  录像转码</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  录像转码</div>
 - 点击右下角的**转码设置**可进行转码设置，支持自定义输出目录、文件名风格、输出分辨率（360p / 720p / 1080p）等。
 - 选择已下载的录像文件后，点击 **开始转码** 即可执行转码操作。
 
