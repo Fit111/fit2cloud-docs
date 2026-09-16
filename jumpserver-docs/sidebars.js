@@ -1008,17 +1008,6 @@ const sidebars = {
             }
           ],
           "key": "cat:使用手册/普通用户手册"
-        },
-        {
-          "type": "category",
-          "label": "第三方集成",
-          "collapsed": true,
-          "link": {
-            "type": "doc",
-            "id": "manual/third_party/index"
-          },
-          "items": [],
-          "key": "doc:使用手册/第三方集成"
         }
       ],
       "key": "cat:使用手册"
