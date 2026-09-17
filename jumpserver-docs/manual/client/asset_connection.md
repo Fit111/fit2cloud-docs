@@ -41,3 +41,15 @@ title: 资产连接
 ### 3.2 连接资产
 
 连接资产参考 [Web 终端](../user/web_terminal/assets_connect.md) 中的连接方式
+
+## 4 Web 资产连接
+
+客户端支持连接 Web 资产，其平台类型为 **网站**，协议为 **HTTP** 或 **HTTPS**。
+
+连接配置中提供 **内置** 类别的 **内置浏览器**，可在客户端内置的浏览器窗口中打开目标站点。该方式使用系统 WebView 打开站点，流量统一通过 Koko Web Proxy 代理转发。
+
+**内置浏览器** 仅在客户端中提供，在浏览器中访问的 Web 终端里不会出现；在 Web 终端中连接 Web 资产需使用 **远程应用** 类别下管理员发布的 JumpServer WebLite，详见 [Web 应用连接](../user/web_terminal/assets_connect.md) 中的 Web 应用连接。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_web.png" alt="图 2  本地客户端连接 Web 资产" />
+
+站点地址与账号信息由管理员在创建 Web 资产时配置，客户端中不提供修改入口。

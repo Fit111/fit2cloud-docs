@@ -26,14 +26,14 @@ title: 数据备份以及恢复指南
   ./jmsctl.sh backup_db
   ```
 
-- 备份文件和当前配置文件会默认保存在持久化文件 /data/jumpserver/backups 目录下，文件名格式为 jumpserver-v4.10.9-ee-xxxx-xx-xx_xx:xx:xx.dump。
-- 如果使用 MySQL 或 MariaDB 作为数据库，文件名格式为 jumpserver-v4.10.9-xxxx-xx-xx_xx:xx:xx.sql。
+- 备份文件和当前配置文件会默认保存在持久化目录 /data/jumpserver/db_backup 下，文件名格式为 jumpserver-v5.0.0-xxxx-xx-xx_xx:xx:xx.dump。
+- 如果使用 MySQL 或 MariaDB 作为数据库，文件名格式为 jumpserver-v5.0.0-xxxx-xx-xx_xx:xx:xx.sql。
 ### 恢复
 
 - 在堡垒机任意一节点（多节点任意一节点即可）执行以下命令恢复数据库信息：
 
   ```sh
-  jmsctl restore_db /data/jumpserver/backups/jumpserver-v4.10.9-ee-xxxx-xx-xx_xx:xx:xx.dump
+  ./jmsctl.sh restore_db /data/jumpserver/db_backup/jumpserver-v5.0.0-xxxx-xx-xx_xx:xx:xx.dump
   ```
 ## 3 静态文件备份
 

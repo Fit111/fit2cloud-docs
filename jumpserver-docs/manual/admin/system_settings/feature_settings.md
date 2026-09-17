@@ -100,7 +100,7 @@ Linux 目标服务器只需配置一次 CA 信任：
 
 ## 6 虚拟应用
 
-单击页面上方的 **虚拟应用** 即进入虚拟应用设置页面。JumpServer 支持使用 Linux 系统作为远程应用功能的运行载体，在此页面开启以 Linux 系统为底层的虚拟应用功能，具体使用配置见 [虚拟应用配置说明](virtual_apps.md)。
+单击页面上方的 **虚拟应用** 即进入虚拟应用设置页面。JumpServer 支持使用 Linux 系统作为远程应用功能的运行载体，在此页面开启以 Linux 系统为底层的虚拟应用功能，具体使用配置见 [虚拟应用配置说明](app_management/virtual_apps.md)。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_feature8.png" alt="图 9  虚拟应用设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  虚拟应用设置</div>

@@ -594,18 +594,6 @@ const sidebars = {
                 },
                 {
                   "type": "doc",
-                  "id": "manual/admin/system_settings/remote_apps",
-                  "label": "远程应用",
-                  "key": "doc:使用手册/管理员手册/系统设置/远程应用"
-                },
-                {
-                  "type": "doc",
-                  "id": "manual/admin/system_settings/virtual_apps",
-                  "label": "虚拟应用",
-                  "key": "doc:使用手册/管理员手册/系统设置/虚拟应用"
-                },
-                {
-                  "type": "doc",
                   "id": "manual/admin/system_settings/security",
                   "label": "安全设置",
                   "key": "doc:使用手册/管理员手册/系统设置/安全设置"
@@ -717,7 +705,33 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/管理员手册/系统设置"
-            }
+            },
+            {
+              "type": "category",
+              "label": "远程应用",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "manual/admin/app_management/remote_apps",
+                  "label": "远程应用",
+                  "key": "doc:使用手册/管理员手册/远程应用/远程应用"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/app_management/virtual_apps",
+                  "label": "虚拟应用",
+                  "key": "doc:使用手册/管理员手册/远程应用/虚拟应用"
+                },
+                {
+                  "type": "doc",
+                  "id": "manual/admin/app_management/marketplace",
+                  "label": "应用市场",
+                  "key": "doc:使用手册/管理员手册/远程应用/应用市场"
+                }
+              ],
+              "key": "cat:使用手册/管理员手册/远程应用"
+            },
           ],
           "key": "cat:使用手册/管理员手册"
         },
@@ -1003,12 +1017,6 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/普通用户手册/工作台/其他"
-            },
-            {
-              "type": "doc",
-              "id": "manual/user/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/普通用户手册/个人设置"
             }
           ],
           "key": "cat:使用手册/普通用户手册"

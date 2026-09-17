@@ -179,7 +179,7 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 
 ## 5 连接令牌
 
-路径：选择 **个人设置 > 连接令牌**。连接令牌将身份验证与连接资产结合起来使用，支持一键登录到资产，目前支持的组件包括 KoKo、Lion、Magnus、Razor 等。本页用于查看令牌并使令牌过期，不在此页直接新建。
+路径：选择 **个人设置 > 连接令牌**。连接令牌将身份验证与连接资产结合起来使用，支持一键登录到资产，目前支持的组件包括 KoKo、Magnus、Razor 等。本页用于查看令牌并使令牌过期，不在此页直接新建。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/profile_04_connection_token.png" alt="图 13  连接令牌" />
 
