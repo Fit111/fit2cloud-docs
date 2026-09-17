@@ -126,3 +126,4 @@ WinRM 是微软推出的一种远程管理服务，可使用管理员账号在 P
 <tr><td style={{padding:'8px'}}>活动</td><td style={{padding:'8px'}}>该模块中记录了远程应用发布机的活动记录信息，点击可查看活动详情。</td></tr>
 </tbody>
 </table>
+

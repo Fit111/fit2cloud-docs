@@ -12,7 +12,7 @@ JumpServer 客户端是一款跨平台的桌面应用程序，支持 Windows、m
 
 ## 2 界面预览
 
-v5版本客户端进行了优化现在的可以直接用客户端使用luna去连接资产与 [Web 终端](../user/web_terminal/overview.md)的内置连接一样
+v5 版本客户端进行了优化，可直接在客户端中连接资产，内置连接方式与 [Web 终端](../user/web_terminal/overview.md) 保持一致。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_index.png" alt="图 1  客户端界面预览" />
 
