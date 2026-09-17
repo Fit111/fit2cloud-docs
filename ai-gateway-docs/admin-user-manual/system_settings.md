@@ -37,7 +37,7 @@ slug: /user_manual/ai_gateway/system_settings
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  应用凭证页查看 AgentId、AppKey 与 AppSecret</div>
 
-4. 在「安全设置」中配置服务器出口 IP 与回调地址：将网关配置抽屉中显示的**授权回调地址**填入。
+4. 在「安全设置」中配置服务器出口 IP 与回调地址：将网关配置抽屉中显示的**授权回调地址**填入（详见[第 6 节](#6-通用配置说明)）。
 5. 完成配置后**发布应用**，钉钉的配置需在应用发布成功后才生效。
 
 **网关侧配置**
@@ -45,7 +45,7 @@ slug: /user_manual/ai_gateway/system_settings
 - **企业 ID / Tenant ID**：钉钉管理后台「企业信息」页的企业标识。
 - **应用 ID / Client ID**：自建应用的 Client ID（即 AppKey）。
 - **应用密钥 / Client Secret**：自建应用的 Client Secret（即 AppSecret）。
-- **授权回调地址**：网关生成的回调地址，填写到钉钉应用的回调配置中。
+- **授权回调地址**：网关生成的回调地址，填写到钉钉应用的回调配置中（格式见[第 6 节](#6-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image2-dingtalk-drawer.png" alt="钉钉配置"/>
 
@@ -75,7 +75,7 @@ slug: /user_manual/ai_gateway/system_settings
 - **企业 ID / Tenant ID**：飞书开放平台可查看的企业标识。
 - **应用 ID / Client ID**：企业自建应用的 App ID。
 - **应用密钥 / Client Secret**：企业自建应用的 App Secret。
-- **授权回调地址**：网关生成的回调地址，填写到飞书应用的重定向 URL 中。
+- **授权回调地址**：网关生成的回调地址，填写到飞书应用的重定向 URL 中（格式见[第 6 节](#6-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image3-feishu-drawer.png" alt="飞书配置"/>
 
@@ -124,7 +124,7 @@ slug: /user_manual/ai_gateway/system_settings
 - **CorpID**：企业微信「我的企业 → 企业信息」页的企业唯一标识。
 - **应用 AgentID（正整数）**：自建应用的 AgentID。
 - **应用密钥 / Client Secret**：自建应用的应用密钥（Secret）。
-- **授权回调地址**：网关生成的回调地址，对应自建应用的网页授权可信域名配置。
+- **授权回调地址**：网关生成的回调地址，对应自建应用的网页授权可信域名配置（格式见[第 6 节](#6-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image4-wecom-drawer.png" alt="企业微信配置"/>
 
@@ -153,7 +153,7 @@ OIDC 用于对接支持 OpenID Connect 协议的身份认证服务（如 Keycloa
 
 - **应用 ID / Client ID**：在身份提供商（IdP）注册的客户端标识。
 - **应用密钥 / Client Secret**：客户端对应的密钥。
-- **授权回调地址**：网关的认证回调地址，需配置到 IdP 的客户端回调设置中。
+- **授权回调地址**：网关的认证回调地址，需配置到 IdP 的客户端回调设置中（格式见[第 6 节](#6-通用配置说明)）。
 - **OIDC Issuer**：身份提供商的 Issuer 标识地址。
 - **附加信任 CA 证书（PEM）**：IdP 使用自签名证书时上传。
 
@@ -169,6 +169,21 @@ OIDC 用于对接支持 OpenID Connect 协议的身份认证服务（如 Keycloa
 - **首次登录用户组**：企业账号首次登录后归入的用户组，决定其可用模型与权限；建议提前在「用户组」中规划好目标用户组。
 - **密钥加密保存**：密钥保存后加密存储；编辑时**留空表示保留原值，填写则替换**。更换企业、应用、Issuer 或目录身份范围时须重新填写。
 - **允许查看密钥**：勾选后管理员可查看已保存的密钥明文。
+
+### 授权回调地址
+
+各认证方式的**授权回调地址**由网关根据访问地址自动生成，并在配置抽屉中展示（可单击复制），无需手动拼接。将其原样填入对应平台的回调 / 重定向配置即可。以网关访问地址为 `https://gateway.example.com` 为例，各认证方式的回调地址路径如下：
+
+- **钉钉**：`https://gateway.example.com/api/v1/auth/enterprise/dingtalk/callback`
+- **飞书**：`https://gateway.example.com/api/v1/auth/enterprise/feishu/callback`
+- **企业微信**：`https://gateway.example.com/api/v1/auth/enterprise/wecom/callback`
+- **OIDC**：`https://gateway.example.com/api/v1/auth/enterprise/oidc/callback`
+
+> 填写时须以 `/api/v1/auth/enterprise/<方式>/callback` 结尾，且认证平台登记的地址必须与网关显示的地址**完全一致**，包括协议、主机、端口与路径（若网关显示的地址带末尾斜杠，也须一并保留），不要在地址后附加 `code`、`state` 等参数。
+
+:::warning[回调地址必须与网关访问地址完全一致]
+授权回调地址的协议与主机取自网关的实际访问地址：以 `https://ip:端口` 访问即为 https，以内网 http 访问则为 http。若平台登记的地址与网关显示存在任何差异（多 / 少斜杠、http 与 https 不符、端口不同），登录跳转都会失败。LDAP 为目录服务直连，不涉及回调地址。
+:::
 
 ## 7 注意事项
 
