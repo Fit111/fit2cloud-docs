@@ -19,14 +19,14 @@ title: 环境要求
 
 ```sh
 apt-get update
-apt-get install -y wget curl tar gettext iptables
+apt-get install -y wget curl tar gettext iptables python3
 ```
 ### RedHat / CentOS
 
 
 ```sh
 yum update
-yum install -y wget curl tar gettext iptables
+yum install -y wget curl tar gettext iptables python3
 ```
 ## 2 数据库
 

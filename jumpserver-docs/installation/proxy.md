@@ -26,8 +26,8 @@ vi /opt/jumpserver/config/config.txt
 
 ## Nginx 配置
 HTTP_PORT=80
-SSH_PORT=2222
-RDP_PORT=3389
+KOKO_SSH_PORT=2222
+RAZOR_RDP_PORT=3389
 
 ## HTTPS 配置
 HTTPS_PORT=443               # 对外 https 端口, 默认 443

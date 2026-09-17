@@ -16,9 +16,12 @@ title: 网络端口说明
 | 3306 | 数据库服务 | MySQL 服务使用 |
 | 6379 | 数据库服务 | Redis 服务使用 |
 | 3389 | Razor 服务端口 | RDP Client 方式连接 Windows 资产 |
+| 3390 | XRDP 服务端口 | XRDP 为企业版可选组件，默认关闭；启用后用于通过 JumpServer Client 方式访问 Windows 2000、XP 等系统的资产 |
 | 2222 | SSH Client | SSH Client 方式使用终端工具连接 JumpServer，比如 Xshell、PuTTY、MobaXterm 等终端工具 |
+| 5001 | Koko Web Proxy 服务端口 | 使用内置浏览器方式访问 Web 资产时使用 |
 | 5525 | Magnus 服务端口 | DB Client 方式连接数据库资产，系统会根据所连接资产的类型自动分配对应端口 |
 | 15900 | NEC 服务端口 |  VNC 服务使用 |
+| 9898 | JDMC 服务端口 | 企业版 JDMC（设备管理控制台）服务使用，采用 HTTPS 协议 |
 
 
 - 自 v4.10.19 版本起，Magnus 的端口统一调整为 **5525**，不再区分数据库类型使用不同的端口。连接数据库资产时，系统会自动根据资产的类型（MySQL、MariaDB、PostgreSQL、Redis、Oracle 等）分配对应的连接端口。

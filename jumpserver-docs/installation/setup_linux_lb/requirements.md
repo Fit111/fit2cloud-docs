@@ -17,14 +17,14 @@ title: 准备工作
 
 | 名称    | 版本 | 默认字符集  | 默认字符编码  | TLS/SSL          |
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
-| PostgreSQL   | 16  | utf8             | utf8_general_ci    | ✓ |
+| PostgreSQL   | &gt;= 16  | UTF8             | en_US.utf8    | ✓ |
 | MariaDB | &gt;= 10.6 | utf8mb3          | utf8mb3_general_ci | ✓ |
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  Redis 要求</div>
 
 | Name    | Version | Sentinel         | Cluster            | TLS/SSL          |
 | :------ | :------ | :--------------- | :----------------- | :--------------- |
-| Redis   | &gt;= 6.0  | ✓ | ✗   | ✓ |
+| Redis   | &gt;= 7.0  | ✓ | ✗   | ✓ |
     
 ### 1.2 服务器要求
 
@@ -34,11 +34,11 @@ title: 准备工作
 | ------------- | ---------------- | ----------------------- | ---------------- | ---------------------- | ----------------------- |
 | NFS           |  192.168.100.11  |  -                      | Core             | 2Core/8GB RAM/100G HDD | 4Core/16GB RAM/1T   SSD |
 | PostgreSQL         |  192.168.100.11  | 5432                    | Core             | 2Core/8GB RAM/90G  HDD | 4Core/16GB RAM/1T   SSD |
-| Redis         |  192.168.100.11  | 6379                    | Core, Koko, Lion | 2Core/8GB RAM/90G  HDD | 4Core/16GB RAM/1T   SSD |
-| HAProxy       |  192.168.100.100 | 80,443,2222,33060,33061 | All              | 2Core/4GB RAM/60G  HDD | 4Core/8GB  RAM/60G  SSD |
-| JumpServer 01 |  192.168.100.21  | 80,2222,33060,33061     | HAProxy          | 2Core/8GB RAM/60G  HDD | 4Core/8GB  RAM/90G  SSD |
-| JumpServer 02 |  192.168.100.22  | 80,2222,33060,33061     | HAProxy          | 2Core/8GB RAM/60G  HDD | 4Core/8GB  RAM/90G  SSD |
-| MinIO         |  192.168.100.41  | 9000,9001               | Core, KoKo, Lion | 2Core/4GB RAM/100G HDD | 4Core/8GB  RAM/1T   SSD |
+| Redis         |  192.168.100.11  | 6379                    | Core, Koko | 2Core/8GB RAM/90G  HDD | 4Core/16GB RAM/1T   SSD |
+| HAProxy       |  192.168.100.100 | 80,443,2222,5525 | All              | 2Core/4GB RAM/60G  HDD | 4Core/8GB  RAM/60G  SSD |
+| JumpServer 01 |  192.168.100.21  | 80,2222,5525     | HAProxy          | 2Core/8GB RAM/60G  HDD | 4Core/8GB  RAM/90G  SSD |
+| JumpServer 02 |  192.168.100.22  | 80,2222,5525     | HAProxy          | 2Core/8GB RAM/60G  HDD | 4Core/8GB  RAM/90G  SSD |
+| MinIO         |  192.168.100.41  | 9000,9001               | Core, KoKo | 2Core/4GB RAM/100G HDD | 4Core/8GB  RAM/1T   SSD |
 | Elasticsearch |  192.168.100.51  | 9200,9300               | Core, KoKo       | 2Core/4GB RAM/100G HDD | 4Core/8GB  RAM/1T   SSD |
     
 ### 1.3 组件容器健康检查
@@ -49,7 +49,7 @@ title: 准备工作
 | ------------- | ------------------------------ | ----------------------------------------- |
 | Core          | `http://core:8080/api/health/`   | `https://demo.jumpserver.org/api/health/`   |
 | KoKo          | `http://koko:5000/koko/health/`  | `https://demo.jumpserver.org/koko/health/`  |
-| Lion          | `http://lion:8081/lion/health/`  | `https://demo.jumpserver.org/lion/health/`  |
+| Razor         | `http://razor:8084/razor/health/`  | `https://demo.jumpserver.org/razor/health/`  |
 
 ## 2 部署顺序
 
@@ -63,8 +63,8 @@ title: 准备工作
 
 5.部署 JumpServer 02 节点 
 
-8.部署 HAProxy 服务 
+6.部署 HAProxy 服务 
 
-9.部署 MinIO 服务 
+7.部署 MinIO 服务 
 
-10.部署 Elasticsearch 服务
+8.部署 Elasticsearch 服务
