@@ -13,22 +13,12 @@ JumpServer 堡垒机支持的资产类型包括：
 
 - SSH  (Linux / Unix / 网络设备 等)
 - Windows (Web 方式连接 / 原生 RDP 连接)
-- 数据库 (MySQL / MariaDB / Oracle / SQLServer / PostgreSQL / ClickHouse 等)
+- 数据库 (MySQL / MariaDB / Oracle / SQLServer / PostgreSQL / ClickHouse / DB2 / Dameng 等)
 - NoSQL (Redis / MongoDB 等)
 - GPT (ChatGPT 等)
 - 云服务 (Kubernetes / VMware vSphere 等)
 - Web 站点 (各类系统的 Web 管理后台)
 - 应用 (通过 Remote App 连接各类应用)
-
-文档指引：
-
-- [**产品官网**](https://jumpserver.org/)
-- [**安装部署**](installation/setup_linux_standalone/requirements)  
-- [**在线体验**](https://demo.jumpserver.org/)  
-- [**企业版试用**](https://jinshuju.net/f/kyOYpi)  
-- [**社区论坛**](https://bbs.fit2cloud.com/c/js/5) 
-- [**视频教学**](https://www.bilibili.com/video/BV11AsDegEo8/) 
-- [**技术白皮书**](https://whitepaper.jumpserver.org/)
 
 ## 2 产品特色
 
