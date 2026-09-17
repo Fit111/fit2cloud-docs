@@ -1017,12 +1017,6 @@ const sidebars = {
                 }
               ],
               "key": "cat:使用手册/普通用户手册/工作台/其他"
-            },
-            {
-              "type": "doc",
-              "id": "manual/user/profile",
-              "label": "个人设置",
-              "key": "doc:使用手册/普通用户手册/个人设置"
             }
           ],
           "key": "cat:使用手册/普通用户手册"

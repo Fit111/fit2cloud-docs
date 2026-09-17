@@ -24,13 +24,7 @@ title: 网络端口说明
 | 9898 | JDMC 服务端口 | 企业版 JDMC（设备管理控制台）服务使用，采用 HTTPS 协议 |
 
 
-- 自 v4.10.19 版本起，Magnus 的端口统一调整为 **5525**，不再区分数据库类型使用不同的端口。连接数据库资产时，系统会自动根据资产的类型（MySQL、MariaDB、PostgreSQL、Redis、Oracle 等）分配对应的连接端口。
-- 旧版本（v4.10.19 之前）使用的 Magnus 端口如下，升级后请按需调整防火墙放行规则：
-    - 33061：Magnus MySQL 服务端口
-    - 33062：Magnus MariaDB 服务端口
-    - 54320：Magnus PostgreSQL 服务端口
-    - 63790：Magnus Redis 服务端口
-    - 15210：Magnus Oracle 服务端口
+- Magnus 服务端口为 **5525**，连接数据库资产时，系统会根据所连接资产的类型（MySQL、MariaDB、PostgreSQL、Redis、Oracle 等）自动分配对应的连接端口。
 
 ## 2 防火墙常用命令
 
