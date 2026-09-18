@@ -167,16 +167,18 @@ ba913b54d026   ghcr.io/open-webui/open-webui:main   "bash start.sh"   10 minutes
 ```
 
 启动完成后，可在浏览器上通过 IP:3000来访问，如下图所示：
-<img src="/img/sqlbot/model_integration/openwebui.png" alt="openwebui" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 OpenWebUI 访问页面</div>
+![openwebui](/img/sqlbot/model_integration/openwebui.png)
+
+图 1 OpenWebUI 访问页面
 
 
 ## 7 安装配置 One API
 
 
 若部署的是 DeepSeek 模型，在对接 SQLBot 时需要 One API 将其转换成兼容 OpenAI 接口，否则在使用时则会出现类似下面的错误：
-<img src="/img/sqlbot/model_integration/deepseek_error.png" alt="deepseek_error" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 DeepSeek 接入报错示例</div>
+![deepseek_error](/img/sqlbot/model_integration/deepseek_error.png)
+
+图 2 DeepSeek 接入报错示例
 
     
 ### 7.1 部署 One API
@@ -197,31 +199,35 @@ docker run --name one-api -d --restart always -p 3001:3000 -e TZ=Asia/Shanghai -
 
 在浏览器输入 IP:3001 访问 One API。  
 先添加一个 DeepSeek 的渠道，注意「模型」输入 Ollama 中 DeepSeek 的模型名称，代理输入 Ollama 的访问地址。
-<img src="/img/sqlbot/model_integration/oneapi_channel.png" alt="oneapi_channel" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加 DeepSeek 渠道</div>
+![oneapi_channel](/img/sqlbot/model_integration/oneapi_channel.png)
+
+图 3 添加 DeepSeek 渠道
 
 
 #### 7.2.2 验证渠道
 
 
 添加渠道后，可以点击「测试」验证是否正常工作t
-<img src="/img/sqlbot/model_integration/oneapi_validate.png" alt="oneapi_validate" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 测试渠道连通性</div>
+![oneapi_validate](/img/sqlbot/model_integration/oneapi_validate.png)
+
+图 4 测试渠道连通性
 
 
 #### 7.2.3 创建令牌
 
 
 此处可以根据自己的实际情况进行相关设置。
-<img src="/img/sqlbot/model_integration/oneapi_create_token.png" alt="oneapi_create_token" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 创建令牌</div>
+![oneapi_create_token](/img/sqlbot/model_integration/oneapi_create_token.png)
+
+图 5 创建令牌
 
 
 #### 7.2.4复制令牌
 
 
-<img src="/img/sqlbot/model_integration/oneapi_copy_token.png" alt="oneapi_copy_token" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 复制令牌</div>
+![oneapi_copy_token](/img/sqlbot/model_integration/oneapi_copy_token.png)
+
+图 6 复制令牌
 
 
 ## 8 接入SQLBot
@@ -232,8 +238,9 @@ docker run --name one-api -d --restart always -p 3001:3000 -e TZ=Asia/Shanghai -
 基础模型此处输入之前安装运行的 qwen3:14b。 
 Ollama 默认运行在 11434 端口上，API 域名输入 `http://47.237.135.165:11434/v1`，注意47.237.135.165换成自己实际的 IP 地址。 
 API Key 可以随意填写，保存即可。 
-<img src="/img/sqlbot/model_integration/ollama_sqlbot.png" alt="ollama" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 SQLBot 接入 Ollama 模型</div>
+![ollama](/img/sqlbot/model_integration/ollama_sqlbot.png)
+
+图 7 SQLBot 接入 Ollama 模型
 
 
 ### 8.2 接入 DeepSeek R1 模型（不兼容 OpenAI）
@@ -242,10 +249,12 @@ API Key 可以随意填写，保存即可。
 基础模型此处输入之前安装运行的 deepseek-r1:8b。
 由于通过 One API 进行了转换，在 API 域名输入 One API 的服务地址，如 `http://47.236.6.226:3001/v1`，注意47.236.6.226:3001 换成自己实际的 IP 地址和运行端口。
 API Key 填写 One API 的令牌。
-<img src="/img/sqlbot/model_integration/oneapi_sqlbot.png" alt="oneapi" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 SQLBot 接入 OneAPI 模型</div>
+![oneapi](/img/sqlbot/model_integration/oneapi_sqlbot.png)
+
+图 8 SQLBot 接入 OneAPI 模型
 
 在 One API 的日志中可以查看大模型的调用情况。
-<img src="/img/sqlbot/model_integration/oneapi_log.png" alt="oneapi_log" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 9 OneAPI 调用日志</div>
+![oneapi_log](/img/sqlbot/model_integration/oneapi_log.png)
+
+图 9 OneAPI 调用日志
 

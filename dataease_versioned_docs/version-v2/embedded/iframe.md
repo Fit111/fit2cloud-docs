@@ -2,8 +2,6 @@
 title: Iframe 嵌入
 ---
 
-:::note
-
 Iframe 嵌入支持嵌入单个数据大屏、仪表板，图表资源。也支持数据集、数据源，仪表板，数据大屏等模块嵌入，提供一个模块的完整能力，可根据实际需要进行选择。
 
 使用 postMessage 方式实现 DataEase 和嵌入系统的页面信息交互。
@@ -11,10 +9,8 @@ Iframe 嵌入支持嵌入单个数据大屏、仪表板，图表资源。也支�
 （postMessage 是挂载在 window下的一个方法，用于不同域名下的两个页面的信息交互，父子页面通过  postMessage() 发送消息，再通过监听 message 事件接收信息。）Iframe 嵌入必须在监听触发后，再初始化图表。
 
 **注意：嵌入需要在 DataEase 的配置文件 /opt/dataease2.0/conf/application.yml 里增加 origin-list 配置，并重启服务。详细见[嵌入式常见问题 2](./question#2-iframe-div-嵌入后提示域名匹配错误)。**
-:::
 
 ##  1 仪表板嵌入
-:::note
 
 仪表板嵌入支持嵌入单个仪表板，并可浏览嵌入的仪表板。仪表板嵌入还支持外部参数设置。
 
@@ -100,17 +96,14 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
+
 ### 1.1 仪表板双向参数传递
-:::note
 
 使用仪表板、数据大屏、图表嵌入，可以通过嵌入式外部参数进行系统的数据交互，具体使用如下，代码采用 [Vue3 代码](https://github.com/dataease/embedded-demo/tree/isv-embedded-demo) ，仪表板、数据大屏、图表双向参数传递等场景参考示例代码中相应部分。
 
 使用外部参数，需要在仪表板或者数据大屏设置好外部参数，具体见外部参数设置。
-:::
 
 双向传参应用场景： <br />
-:::note
 
 第三方系统向 DataEase 传参，依赖于 DataEase 仪表板/数据大屏外部参数实现。
 
@@ -360,8 +353,6 @@ const postMsg = function (user: String) {
 
 </script>
 ```
-:::
-:::note
 
 DataEase 向第三方系统传参 <br />
 
@@ -467,9 +458,8 @@ const onMessage = function (event: any){
 
 </script>
 ```
-:::
+
 ##  2 仪表板设计器嵌入
-:::note
 
 仪表板编辑嵌入支持嵌入整个仪表板设计器界面，用户不仅可以浏览嵌入的仪表板，还可以对其进行编辑：
 
@@ -535,10 +525,8 @@ const onMessage = function (event: any){
 
 </script>
 ```
-:::
 
 ##  3 数据大屏嵌入
-:::note
 
 可以将数据大屏嵌入到第三方业务系统中，用户通过第三方系统访问数据大屏，同时支持外部参数过滤设置。 
 
@@ -624,18 +612,15 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
+
 ### 3.1 数据大屏双向参数传递
-:::note
 
 参考 [1.1 仪表板双向参数传递](#11-仪表板双向参数传递)以及 [3 数据大屏嵌入](#3-数据大屏嵌入)。以及 Iframe 数据大屏嵌入，将相应 busiFlag 修改对应。
 
 - 仪表板图表 busiFlag: dashboard
 - 数据大屏图表 busiFlag: dataV
-:::
 
 ##  4 数据大屏设计器嵌入
-:::note
 
 支持嵌入整个数据大屏设计器界面，用户不仅可以浏览嵌入的数据大屏，还可以对其进行编辑：
 
@@ -704,10 +689,8 @@ contentWindow.postMessage(params , "*")
 @import "index";
 </style>
 ```
-:::
 
 ## 5 图表嵌入
-:::note
 
 图表嵌入支持嵌入单个图表，并可浏览嵌入的图表。图表嵌入还支持外部参数设置。
 
@@ -791,15 +774,12 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
+
 ### 5.1 图表双向参数传递
-:::note
 
 参考 Iframe 仪表板双向参数传递以及 iframe 图表嵌入。
-:::
 
 ## 6 我的填报嵌入
-:::note
 
 支持我的填报嵌入，填报模块信息。
 
@@ -859,12 +839,10 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
 
 ## 7 模块嵌入
 
 ### 7.1 仪表板模块
-:::note
 
 嵌入整个仪表板模块后，可以实现对仪表板模块的整体使用，包括新建、编辑和删除仪表板。
 
@@ -924,9 +902,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
+
 ### 7.2 数据大屏模块
-:::note
 
 嵌入整个数据大屏模块后，可以实现对数据大屏模块的整体使用，包括新建、编辑和删除数据大屏。
 
@@ -990,9 +967,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
+
 ### 7.3 数据集模块
-:::note
 
 嵌入整个数据集模块，嵌入后可实现数据集模块的整体使用，包括新建数据集，编辑数据集，删除数集。
 
@@ -1056,10 +1032,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
 
 ### 7.4 数据源模块
-:::note
 
 嵌入整个数据源，嵌入后可实现数据源模块的整体使用，包括新建数据源，编辑数据源，删除数源。
 
@@ -1123,10 +1097,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
 
 ### 7.5 数据填报模块
-:::note
 
 嵌入整个数据填报，嵌入后可实现数据填报模块的整体使用。
 
@@ -1190,10 +1162,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
 
 ### 7.6 Copilot 模块
-:::note
 
 嵌入 Copilot 模块。
 
@@ -1257,10 +1227,8 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::
 
 ### 7.7 模版管理模块
-:::note
 
 ```
 #
@@ -1323,4 +1291,3 @@ const onMessage = function (event: any){
 @import "index";
 </style>
 ```
-:::

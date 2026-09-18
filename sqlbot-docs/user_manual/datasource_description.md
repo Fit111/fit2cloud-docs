@@ -15,8 +15,9 @@ title: 数据源概览
 - 开启智能问数：对数据源可直接点击按钮启用；
 
 
-<img src="/img/sqlbot/user_manual/datasource/datasource_index.png" alt="数据源管理页面" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 数据源管理页面</div>
+![数据源管理页面](/img/sqlbot/user_manual/datasource/datasource_index.png)
+
+图 1 数据源管理页面
 
 ## 2 支持的数据源类型
 
@@ -27,8 +28,9 @@ title: 数据源概览
 - **数据文件：** Excel/CSV
 
 
-<img src="/img/sqlbot/user_manual/datasource/datasource_list.png" alt="支持的数据源类型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 支持的数据源类型</div>
+![支持的数据源类型](/img/sqlbot/user_manual/datasource/datasource_list.png)
+
+图 2 支持的数据源类型
 
 ## 3 数据源预览与字段结构
 
@@ -43,11 +45,13 @@ title: 数据源概览
 表与字段支持按需启用或禁用，后续智能问数时仅识别已启用的表与字段。
 
 
-<img src="/img/sqlbot/user_manual/datasource/data_index.png" alt="数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 数据源详情页</div>
+![数据源](/img/sqlbot/user_manual/datasource/data_index.png)
 
-<img src="/img/sqlbot/user_manual/datasource/data_pre.png" alt="数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 查看表字段结构</div>
+图 3 数据源详情页
+
+![数据源](/img/sqlbot/user_manual/datasource/data_pre.png)
+
+图 4 查看表字段结构
 
 ## 4 数据源表关系管理
 
@@ -60,5 +64,6 @@ title: 数据源概览
 - 序号3:表关联关系修改完成后，点击【保存】，表关联关系保存成功，并在问数中生效。
 
 
-<img src="/img/sqlbot/user_manual/datasource/table_relationship.png" alt="表关系管理" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 表关系管理</div>
+![表关系管理](/img/sqlbot/user_manual/datasource/table_relationship.png)
+
+图 5 表关系管理

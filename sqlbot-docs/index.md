@@ -10,8 +10,9 @@ SQLBot 是一款基于大语言模型（Large Language Model，LLM）和 RAG（R
 SQLBot 由飞致云的 [DataEase](https://dataease.cn/) 开源团队出品。
 
 
-<img src="/img/sqlbot/index/arch.png" alt="工作原理" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 工作原理</div>
+![工作原理](/img/sqlbot/index/arch.png)
+
+图 1 工作原理
 
 ## 2 产品优势
 
@@ -31,8 +32,9 @@ SQLBot 由飞致云的 [DataEase](https://dataease.cn/) 开源团队出品。
 
 ## 3 界面展示
 
-<img src="/img/sqlbot/index/index.gif" alt="界面展示图" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 界面展示图</div>
+![界面展示图](/img/sqlbot/index/index.gif)
+
+图 2 界面展示图
 
 ## 4 主要功能
 

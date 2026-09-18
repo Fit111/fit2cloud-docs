@@ -19,8 +19,9 @@ title: 成员管理
 - 角色（管理员 / 普通成员）
 
 
-<img src="/img/sqlbot/user_manual/setting/menmber_list.png" alt="成员列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 成员列表</div>
+![成员列表](/img/sqlbot/user_manual/setting/menmber_list.png)
+
+图 1 成员列表
 
 
 在顶部搜索框中输入关键词，支持按以下字段模糊搜索成员：
@@ -32,8 +33,9 @@ title: 成员管理
 支持拼音首字母、模糊匹配、大小写不敏感搜索。
 
 
-<img src="/img/sqlbot/user_manual/setting/member_search.png" alt="成员搜索" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 成员搜索</div>
+![成员搜索](/img/sqlbot/user_manual/setting/member_search.png)
+
+图 2 成员搜索
 
 ## 2 添加成员
 
@@ -49,11 +51,13 @@ title: 成员管理
 添加成功后，用户即可访问当前工作空间资源（如智能问数、数据源、仪表板）。
 
 
-<img src="/img/sqlbot/user_manual/setting/add_member.png" alt="添加成员" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加成员</div>
+![添加成员](/img/sqlbot/user_manual/setting/add_member.png)
 
-<img src="/img/sqlbot/user_manual/setting/add_menber_success.png" alt="添加成功" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 添加成功</div>
+图 3 添加成员
+
+![添加成功](/img/sqlbot/user_manual/setting/add_menber_success.png)
+
+图 4 添加成功
 
 ## 3 移除成员
 
@@ -66,8 +70,10 @@ title: 成员管理
 成员被移除后，立即失去该工作空间的访问权限。该成员账号仍存在，不影响其在其他工作空间的使用。
 
 
-<img src="/img/sqlbot/user_manual/setting/delete_member.png" alt="删除成员" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 删除成员</div>
+![删除成员](/img/sqlbot/user_manual/setting/delete_member.png)
 
-<img src="/img/sqlbot/user_manual/setting/delete_confirm.png" alt="确认删除" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 确认删除</div>
+图 5 删除成员
+
+![确认删除](/img/sqlbot/user_manual/setting/delete_confirm.png)
+
+图 6 确认删除

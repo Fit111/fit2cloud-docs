@@ -4,19 +4,14 @@ title: 命令行工具使用指南
 
 ## 1 DataEase Service
 
-:::note
-
 DataEase 在安装时默认向系统添加了 dataease Service，支持的命令有：
 
 - `start`：启动 DataEase 服务
 - `stop`：停止 DataEase 服务，并删除相关运行容器、docker 网络等资源
 - `restart`：停止后启动 DataEase 服务（先 stop 再 start）
 - `status`：查看 DataEase 服务当前各容器运行状态
-:::
 
 ## 2 dectl
-
-:::note
 
 DataEase 默认内置命令行运维工具 `dectl`，执行 `dectl help` 可查看帮助。常用命令如下：
 
@@ -38,9 +33,5 @@ Commands:
   clear-logs     清理 DATAEASE 历史日志
   version        查看 DATAEASE 版本
 ```
-:::
-
-:::note
 
 DataEase 的日志目录一般为：`/opt/dataease3.0/logs`（以实际安装目录为准）。
-:::

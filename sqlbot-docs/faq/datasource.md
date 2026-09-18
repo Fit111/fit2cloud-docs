@@ -8,8 +8,9 @@ title: 数据源
 达梦数据库在启用安全特性后，在添加 SQLBot 数据源时会遇到下面的错误：
 
     
-<img src="/img/sqlbot/faq/datasource_dameng.jpg" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 达梦数据源连接报错</div>
+![示例](/img/sqlbot/faq/datasource_dameng.jpg)
+
+图 1 达梦数据源连接报错
 
 由于不同数据库版本、不同平台架构、不同操作系统的达梦处理方式不同，无法在 SQLBot 镜像里统一处理，所以需要用户根据达梦官方的方案来解决。
 
@@ -20,8 +21,9 @@ title: 数据源
 docker-compose.yml文件修改示例：
 
 
-<img src="/img/sqlbot/faq/dameng_issue.jpg" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 docker-compose.yml 修改示例</div>
+![示例](/img/sqlbot/faq/dameng_issue.jpg)
+
+图 2 docker-compose.yml 修改示例
 
 ## 2 数据源连接无效？
 

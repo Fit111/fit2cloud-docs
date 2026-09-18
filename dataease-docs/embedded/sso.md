@@ -2,25 +2,17 @@
 title: 单点登录
 ---
 
-:::note
-
 单点协议支持目前支持 OIDC、CAS ，使用方式如下：
-:::
 
 ## 1 OIDC
-
-:::note
 
 DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置】-&gt; 【OIDC】中进行设置。
 
 点击 OIDC 编辑。即可设置 OIDC，填写完相关信息后，测试连接显示成功，即配置成功。
-:::
 
 ![单点登录（1）](/img/dataease/embedded/单点登录（1）.png)
 
 图 1  单点登录
-
-:::note
 
 - Client ID：客户端 id。
 - Client Secret：客户端密码。
@@ -29,7 +21,6 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 - Scope：返回的有关经过身份验证的用户的信息，也称为[声明](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)，可通过发现服务获取，多个参数使用英文逗号分开。
 - Use Pkce：访问令牌。设置为 true 时，在请求标头中设置访问令牌。
 - Redirect Uri：重定向回的 URL。
-:::
 
 ![单点登录（2）](/img/dataease/embedded/单点登录（2）.png)
 
@@ -37,22 +28,16 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 
 ## 2 CAS
 
-:::note
-
 DataEase 企业版支持 CAS 协议，【系统设置】-&gt; 【认证设置】-&gt; 【CAS】中进行设置。
 
 点击 CAS 编辑。即可设置 CAS，填写完相关信息后，测试连接显示成功，即配置成功。
-:::
 
 ![单点登录（3）](/img/dataease/embedded/单点登录（3）.png)
 
 图 3  单点登录
 
-:::note
-
 - IdpUri：IdP 的 URI。
 - 回调域名：登录或注销后，回调的重定向 uri。
-:::
 
 ![单点登录（4）](/img/dataease/embedded/单点登录（4）.png)
 
@@ -60,18 +45,13 @@ DataEase 企业版支持 CAS 协议，【系统设置】-&gt; 【认证设置】
 
 ## 3 LDAP
 
-:::note
-
 DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置】-&gt; 【LDAP】中进行设置。
 
 点击 LDAP 编辑，即可设置 LDAP，填写完相关信息后，测试连接显示成功，即配置成功。
-:::
 
 ![单点登录（5）](/img/dataease/embedded/单点登录（5）.png)
 
 图 5  单点登录
-
-:::note
 
 - DAP地址： LDAP 服务器的地址。
 - 绑定DN：用于认证 LDAP 服务器的身份标识，即登录到 LDAP 服务器时使用的用户身份。
@@ -79,15 +59,12 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 - 用户OU：OU 是组织单元（Organizational Unit）的缩写，用来表示 LDAP 树中存放用户的特定路径（子树或分支）。
 - 用户过滤器：这是一个 LDAP 查询字符串，用于筛选特定的用户对象。可以用来查找满足条件的用户。
 - LDAP属性映射：将 LDAP 服务器中的属性对应到 DataEase 中的字段，account、name、email 为 DataEase 用户信息字段。
-:::
 
 ## 4 OAuth2
 
 ![单点登录（6）](/img/dataease/embedded/单点登录（6）.png)
 
 图 6  单点登录
-
-:::note
 
 - 授权端地址：用户进行授权时访问的 URL，通常用于获取授权码（Authorization Code）。
 - Token 端地址：交换授权码（Authorization Code）或凭证（Client Credentials）以获取访问令牌（Access Token）。
@@ -97,4 +74,3 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 - 客户端密钥：与 Client ID 配合使用，确保应用身份验证的安全性。
 - 回调地址：OAuth2 认证完成后，重定向回应用的地址。
 - 字段映射：将 OAuth2 服务器中的属性对应到 DataEase 中的字段，account、name、email 为 DataEase 用户信息字段。
-:::

@@ -4,31 +4,23 @@ title: 快速入门
 
 ## 1 安装 DataEase
 
-:::note
-
 - 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
 - 推荐使用 [离线安装包方式](../installation/offline_INSTL_and_UPG/) 来部署 DataEase
-:::
 
-:::note[安装成功后，通过浏览器访问登录 DataEase]
+安装成功后，通过浏览器访问登录 DataEase
 
 ```sh
 地址: http://<DataEase服务器IP地址>:<服务运行端口>
 用户名: admin
 密码: DataEase@123456
 ```
-:::
 
 ## 2 界面介绍
 
-:::note
-
 进入 DataEase 主界面后可以看到界面上方导航栏，有【工作台】【仪表板】【数据大屏】【数据准备】四大模块。
-:::
+
 ![界面介绍](/img/dataease-v2/newimg/product_acceptance/首页.png)
 ### 工作台
-
-:::note
 
 【工作台】模块界面主要分为资源概览、快速创建、模板市场和近期动态四个区域。
 
@@ -36,11 +28,9 @@ title: 快速入门
 - 快速创建：不用切换界面即可快捷创建仪表板、数据大屏、数据集或数据源；
 - 模板中心：根据自身的业务需求和使用场景选择对应的模板，并在优质模板的基础上轻松制作自己的仪表板或数据大屏。
 - 近期动态：可以查看最近使用、我的收藏、我的分享的最新操作使用记录。
-:::
+
 ![工作台](/img/dataease-v2/newimg/product_acceptance/工作台.png)
 ### 仪表板
-
-:::note
 
 【仪表板】模块界面主要分为目录区域与预览区域，业务人员可在此创建图表进行可视化分析，更倾向于快速创建及交互操作。
 
@@ -48,11 +38,9 @@ title: 快速入门
 - 预览区域：预览、收藏、导出仪表板等。
 
  详细功能请参考本文档功能手册[仪表板](./user_manual/dashboard_description)。
-:::
+
 ![仪表板](/img/dataease-v2/newimg/product_acceptance/仪表板.png)
 ### 数据大屏
-
-:::note
 
 【数据大屏】模块界面主要分为目录区域与预览区域，业务人员可在此创建图表进行可视化分析，更倾向展示效果。
 
@@ -60,12 +48,10 @@ title: 快速入门
 - 预览区域：预览、收藏、导出数据大屏等。
 
  详细功能请参考本文档功能手册[数据大屏](./user_manual/panel_description)。
-:::
+
 ![数据大屏](/img/dataease-v2/newimg/product_acceptance/数据大屏.png)
 
 ### 数据准备
-
-:::note
 
 【数据准备】模块分为数据源和数据集，进行相关的数据准备.
 
@@ -73,33 +59,24 @@ title: 快速入门
 - **数据集**：为数据分析或可视化分析进行相关的数据准备。详细功能请参考本文档功能手册[数据集](./user_manual/dataset_description)。
 
  详细功能请参考本文档功能手册【数据准备】。
-:::
+
 ![数据源](/img/dataease-v2/newimg/product_acceptance/数据源.png)
 
 ![数据集](/img/dataease-v2/newimg/product_acceptance/数据集.png)
 ## 3 三分钟快速上手
 
-:::note
-
 本章主要介绍如何使用 DataEase 快速制作一个数据看板，帮助大家快速掌握仪表板的制作与分享；  
 仪表板的制作步骤：创建数据源--&gt;创建数据集--&gt;制作仪表板。
-:::
 
 ###　3.1 创建数据源
 
-:::note
-
 在数据准备模块，切换到数据源菜单，新建一个数据源链接，名称为 "GDP 分析"，类型选择 "MySQL"，主机名 "mysql"，数据库名 "dataease"，用户名 "root"，密码 "Password123@mysql" 检验通过后点击保存即可。
-:::
 
 ![添加数据源](/img/dataease-v2/newimg/product_acceptance/连接数据源.png)
 
 ### 3.2 创建数据集
 
-:::note
-
 在数据准备模块，切换到数据集菜单，在【官方示例】分组下添加数据库数据集，选择上一步创建的数据源 "demo"，勾选数据表 "demo_gdp_by_city" 点击确认即可。
-:::
 
 ![添加数据集](/img/dataease-v2/newimg/product_acceptance/新建数据集.png)
 
@@ -109,64 +86,40 @@ title: 快速入门
 
 ### 3.3 可视化分析
 
-:::note
-
 切换到仪表板菜单，在【官方示例】分组下创建仪表板【2021 年全国GDP数据】。
-:::
 
 ![新建仪表板](/img/dataease-v2/newimg/product_acceptance/新建仪表板.png)
 
-:::note
-
 在此步骤选择地图图表，点击确认。
-:::
 
 ![选择地图视图](/img/dataease-v2/newimg/product_acceptance/选择地图视图.png)
-
-:::note
 
 适当调整图表大小；    
 在数据 Tap 页的【地区】选择中国，从右侧【维度】列表中用鼠标拖拽"province"项，拖动到图形区【维度】选择框；  
 同样，从右侧【指标】列表中拖动"gdp"到图形区【指标】选择框；  
 设置钻取目录，分别拖拽钻取字段"province""city"至图形区【钻取/维度】选择框，如下图所示，下钻目录与拖入的字段顺序有关，自上而下依次下钻。
-:::
 
 ![创建地图视图](/img/dataease-v2/newimg/product_acceptance/创建地图视图.png)
 
-:::note
-
 下钻结果展示，如下图所示，展示福建省地图，如果想返回上一级，点击下图中【全部】，返回全国地图。
-:::
 
 ![地图下钻](/img/dataease-v2/newimg/product_acceptance/地图下钻.png)
 
-:::note
-
 调整地图配色，在样式 Tap 页，在基础样式中选择系统配色方案，系统自动根据各省份 GDP 值的大小在地图中着色，GDP 值较小的省份，颜色偏浅；GDP 值较大的省份，颜色偏深，最后点击保存。
-:::
 
 ![地图替换颜色](/img/dataease-v2/newimg/product_acceptance/地图替换颜色.png)
 
 ### 3.4 快速分享
 
-:::note
-
 如下图所示，点击展开功能菜单，创建公共链接。
-:::
 
 ![仪表板分享](/img/dataease-v2/newimg/product_acceptance/仪表板分享.png)
 
-:::note
-
 如下图所示，打开链接分享，并点击复制链接。
-:::
 
 ![创建分享链接](/img/dataease-v2/newimg/product_acceptance/创建分享链接.png)
 
-:::note
-
 分享复制的链接，其他人可查看你创建的仪表板。
-:::
 
 ![访问公共链接](/img/dataease-v2/newimg/product_acceptance/访问公共连接.png)
 
