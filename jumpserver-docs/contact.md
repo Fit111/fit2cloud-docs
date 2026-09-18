@@ -4,11 +4,7 @@ title: 联系我们
 
 ## 1 GitHub 项目地址
 
-- [JumpServer](https://github.com/jumpserver/jumpserver)
-
-<img style={{display:"block",margin:"16px auto",maxWidth:"156px"}} src="/img/jumpserver/jumpserver-stars.svg" alt="图 1  JumpServer GitHub Stars" />
-
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  JumpServer GitHub Stars</div>
+- [JumpServer](https://github.com/jumpserver/jumpserver) <img src="https://img.shields.io/github/stars/jumpserver/jumpserver.svg" alt="jumpserver stars" style={{display:"inline-block",verticalAlign:"middle",marginBottom:"1px"}} />
 
 ## 2 联系方式
 
