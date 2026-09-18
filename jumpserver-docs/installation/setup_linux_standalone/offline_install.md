@@ -2,6 +2,7 @@
 title: 安装指南
 ---
 
+JumpServer 离线安装包支持的系统与架构如下：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  离线安装包</div>
 
@@ -11,12 +12,16 @@ title: 安装指南
 
 ## 1. 安装部署
 
+本节说明离线安装包的下载与安装步骤。
+
 :::warning
 
 - 社区版的离线安装目前只支持 linux/amd64 架构, 其他架构需要： [申请企业版试用](https://jinshuju.net/f/kyOYpi)
 :::
 
 ### linux/amd64
+
+将离线包上传至服务器并解压：
 
 
 从飞致云社区 [下载最新的 linux/amd64 离线包](https://community.fit2cloud.com/#/products/jumpserver/downloads), 并上传到部署服务器的 /opt 目录
@@ -374,6 +379,8 @@ JDMC 支持的操作系统如下：
 | 国产操作系统 | 统信 UOS 服务器版、麒麟 Kylin 服务器版 | x86_64 / aarch64 / loong64 | 4.0 及以上 |
 
 ## 3. 环境访问
+
+执行以下命令管理服务，启动完成后进行访问：
 
 ```sh
 地址: http://<JumpServer服务器IP地址>:<服务运行端口>
