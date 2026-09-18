@@ -20,7 +20,7 @@ title: 下载与安装
 
 [//]: # (| Linux | amd64 &#40;Ubuntu/Debian&#41; | [JumpServerClient_4.1.7_amd64.deb]&#40;https://github.com/jumpserver/client/releases/download/v4.1.7/JumpServerClient_4.1.7_amd64.deb&#41; |)
 
-- 用户可以访问 **‘JumpServer 服务端地址/core/download/'**  页面下载对应平台的客户端安装包，企业版服务端支持内网环境下载。
+- 用户可以访问 **‘JumpServer 服务端地址/core/download/'**  页面下载客户端安装包。页面顶部显示当前服务端的客户端版本，并提供 Windows（Intel / AMD · x64，.exe）与 macOS（Apple silicon · ARM64，.dmg）两个平台的下载卡片；Linux、macOS Intel 及其他版本可单击 **前往 GitHub** 获取。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/client_download_page.png" alt="图 1  下载页面" />
 
