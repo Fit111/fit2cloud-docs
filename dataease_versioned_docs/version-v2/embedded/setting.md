@@ -2,13 +2,9 @@
 title: 基础设置说明
 ---
 
-:::note
-
 注意：本文档所使用代码均为嵌入式官方 [demo 代码](https://github.com/dataease/embedded-demo/tree/isv-embedded-demo)。并在此基础上进行代码的修改进行演示。
-:::
 
 ## 1 嵌入式 Token
-:::note
 
 采用 JWT 认证 ，官方嵌入式代码生成 token 方式如下，需要获取 DataEase 嵌入式应用的 APP ID、APP Secret，以及 DataEase 中的用户账号。
 
@@ -61,15 +57,12 @@ public class IndexController {
     }
  }
 ```
-:::
-:::note
 
 account 获取方式，见下图，可以使用任意符合业务需求的账号，不仅限于 admin 账户，也不推荐使用 admin 账户进行嵌入。
-:::
+
 ![3.1嵌入式 Token.png](/img/dataease-v2/embedded/3.1嵌入式%20Token.png)
 
 ##  2 DataEase 嵌入式 JS
-:::note
 
 当使用 DIV 嵌入时，需引入 DataEase 提供内置的 js 模块，如下 。
 
@@ -82,4 +75,3 @@ account 获取方式，见下图，可以使用任意符合业务需求的账号
 ## 访问地址为 http://ip:9080/js/div_import_0.0.0-dataease.js
 <script crossorigin  type="module" th:src="@{{domain}/js/div_import_0.0.0-dataease.js(domain=${vo.domain})}"></script>
 ```
-:::

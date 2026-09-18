@@ -20,16 +20,17 @@ SQLBot MCP Server 默认监听端口为 8001，使用 SSE 协议进行通信。�
 ```
 
 
-
 SQLBot 运行方式不同，对应的 MCP 参数 SERVER_IMAGE_HOST 的配置方式不同，注意该参数中的 IP 是 SQLBot 服务器的 IP 地址，端口是 MCP 服务的端口，默认情况下，服务端口是 8001（切记不是 3000 端口）。另外，注意跨域 、https 、http协议安全等可能导致图片无法加载。
 
 - 安装包安装方式
     - 确认 SQLBot 的 .env 配置文件(默认位置 /opt/sqlbot/.env)中的 SQLBOT_SERVER_IMAGE_HOST：
-<img src="/img/sqlbot/mcp/sqlbot_mcp_env.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 SQLBot MCP 环境</div>
+![示例](/img/sqlbot/mcp/sqlbot_mcp_env.png)
+
+图 1 SQLBot MCP 环境
     - 确认 SQLBot 运行配置文件(默认位置 /opt/sqlbot/conf/sqlbot.conf)中的 SERVER_IMAGE_HOST：
-<img src="/img/sqlbot/mcp/sqlbot_mcp_conf.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 SQLBot MCP 配置</div>
+![示例](/img/sqlbot/mcp/sqlbot_mcp_conf.png)
+
+图 2 SQLBot MCP 配置
         
         若参数并非实际的 IP 和端口，请修改完上述两个配置参数后，重启一下 SQLBot 服务：
         ```shell
@@ -37,8 +38,9 @@ SQLBot 运行方式不同，对应的 MCP 参数 SERVER_IMAGE_HOST 的配置方�
         ```
 - 1Panel 运行方式
     - 确认相关参数是否正确，若与实际情况部分，请修改后重启 SQLBot 服务：
-<img src="/img/sqlbot/mcp/sqlbot_mcp_1panel.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 SQLBot MCP 1Panel</div>
+![示例](/img/sqlbot/mcp/sqlbot_mcp_1panel.png)
+
+图 3 SQLBot MCP 1Panel
 - docker 一键运行方式
     - 若之前运行方式没有加上 SERVER_IMAGE_HOST 参数，或者参数值不对，则停止 SQLBot 服务并删除容器
     - 修改 MCP 运行参数 SERVER_IMAGE_HOST，注意将 IP 和端口替换成自己的实际 IP 和端口：
@@ -118,7 +120,7 @@ SQLBot 的 MCP Server 对外提供以下工具：
 
 用于登录 SQLBot，获取后续调用所需的 `access_token`。推荐作为对接流程的第一步。
 
-<div style={{textAlign:"left",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 access_token 工具参数</div>
+表 1 access_token 工具参数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | ------ | ---- | ---- | ---- |
@@ -148,7 +150,7 @@ SQLBot 的 MCP Server 对外提供以下工具：
 - **推荐**：先调用 `access_token` 获取 `token`，再传入 `token`（及可选 `oid`）创建会话
 - **兼容**：直接传入 `username`、`password`，`mcp_start` 会同时完成登录并创建会话
 
-<div style={{textAlign:"left",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2 mcp_start 工具参数</div>
+表 2 mcp_start 工具参数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | ------ | ---- | ---- | ---- |
@@ -177,7 +179,7 @@ SQLBot 的 MCP Server 对外提供以下工具：
 
 用于在已初始化的问数上下文中提交用户问题，并返回对应 SQL、可视化结果及图表图片地址。
 
-<div style={{textAlign:"left",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3 mcp_question 工具参数</div>
+表 3 mcp_question 工具参数
 
 | 参数名 | 类型 | 必填 | 默认值 | 说明 |
 | ------ | ---- | ---- | ------ | ---- |
@@ -191,9 +193,7 @@ SQLBot 的 MCP Server 对外提供以下工具：
 | return_img | boolean | 否 | `true` | 是否返回图表图片。`false` 时仅返回数据，不生成图表图片 |
 
 
-
 1.10.0 及以后，`mcp_question` 已移除 `oid` 参数。工作空间请在调用 `mcp_start` 时通过 `oid` 指定。
-
 
 
 返回结果示例（Markdown 格式）：
@@ -286,7 +286,6 @@ SQLBot 的 MCP Server 对外提供以下工具：
 [下载完整示例文件](https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/SQLBot.mk)
 
 
-
 步骤⼀： 创建或进入一个高级编排类型的应用。
 
 步骤二： 在「基本信息」里添加两个用户输入，分别是 username 和 password，添加两个会话变量，分别是 sqlbot_token 和 sqlbot_chat_id。如需指定工作空间，可再增加用户输入 oid。
@@ -361,14 +360,14 @@ question 选择「开始>用户问题」，chat_id 选择「会话变量>sqlbot_
 步骤十：在流程末尾添加指定回复节点，将 MCP 的输出结果作为回复内容。输入有效的 username 与 password 测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_mk_mcp.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 SQLBot Make MCP</div>
+![集成示例](/img/sqlbot/mcp/sqlbot_mk_mcp.png)
+
+图 4 SQLBot Make MCP
 
 ### 3.2 Dify 集成示例
 
 
 [下载完整示例文件](https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/dify.yml)
-
 
 
 步骤⼀： 进入需要配置的工作空间，创建一个 Chatflow 类型的应用；
@@ -477,8 +476,9 @@ return {
 步骤十一：在流程末尾添加回答节点，将 MCP 返回的内容回复给用户。输入有效的 username 与 password 测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_dify_mcp.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 SQLBot Dify MCP</div>
+![集成示例](/img/sqlbot/mcp/sqlbot_dify_mcp.png)
+
+图 5 SQLBot Dify MCP
 
 ### 3.3 Coze 集成示例
 
@@ -551,11 +551,13 @@ return {
 步骤十：在结束节点将 MCP 返回的内容回复给用户。输入有效的 username、password 以及 question，即可测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/coze1.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 Coze 1</div>
+![集成示例](/img/sqlbot/mcp/coze1.png)
 
-<img src="/img/sqlbot/mcp/coze2.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 Coze 2</div>
+图 6 Coze 1
+
+![集成示例](/img/sqlbot/mcp/coze2.png)
+
+图 7 Coze 2
 
 
 方式二：
@@ -602,11 +604,13 @@ return {
 步骤四：添加结束节点，将大模型返回的内容回复给用户。输入有效的 username 与 password 以及输入 question，测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/coze3.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 Coze 3</div>
+![集成示例](/img/sqlbot/mcp/coze3.png)
 
-<img src="/img/sqlbot/mcp/coze4.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 9 Coze 4</div>
+图 8 Coze 3
+
+![集成示例](/img/sqlbot/mcp/coze4.png)
+
+图 9 Coze 4
 
 ### 3.4 n8n 集成示例
 
@@ -649,11 +653,13 @@ password:{{ $json.password }}
 点击【Execute workflow】输入有效的 username 与 password 以及输入 question，测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/n8n1.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 10 n8n 1</div>
+![集成示例](/img/sqlbot/mcp/n8n1.png)
 
-<img src="/img/sqlbot/mcp/n8n2.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 11 n8n 2</div>
+图 10 n8n 1
+
+![集成示例](/img/sqlbot/mcp/n8n2.png)
+
+图 11 n8n 2
 
 
 方式二：
@@ -694,8 +700,10 @@ password:SQLBot@123456
 点击【Execute workflow】，测试登录及 MCP 功能调用是否正常。
 
 
-<img src="/img/sqlbot/mcp/n8n3.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 12 n8n 3</div>
+![集成示例](/img/sqlbot/mcp/n8n3.png)
 
-<img src="/img/sqlbot/mcp/n8n4.png" alt="集成示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 13 n8n 4</div>
+图 12 n8n 3
+
+![集成示例](/img/sqlbot/mcp/n8n4.png)
+
+图 13 n8n 4

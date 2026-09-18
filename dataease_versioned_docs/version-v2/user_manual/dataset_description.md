@@ -4,141 +4,95 @@ title: 数据集概述
 
 ## 1 数据集介绍
 
-:::note
-
 【数据集】为下一步数据分析或报表制作进行相关的数据准备；   
 
 点击【数据准备】，进入【数据源】管理功能模块，该页面包括数据连接的新增（序号 1）、搜索（序号 2）、编辑（序号 3）、复制（序号 4）、删除（序号 5）等功能。
-:::
     
 
 ![数据集概览](/img/dataease-v2/newimg/user_manual/数据集概览.png)
 
-:::note
-
 支持对已创建的数据集进行复制、移动、重命名和删除。
-:::
 
 ![数据集概览](/img/dataease-v2/newimg/user_manual/数据集复制.png)
 
-:::note
-
 数据集数据支持导出。
-:::
 
 ![更新1](/img/dataease-v2/newimg/2.4%20支持数据集数据导出1.png)
 
 ## 2 新建数据集
-:::note
 
 如下图所示，点击序号位置【添加数据集】，跳转到添加数据集页面。
-:::
-![新建数据集](/img/dataease-v2/dataset_configuration/新建数据集.png)
 
-:::note
+![新建数据集](/img/dataease-v2/dataset_configuration/新建数据集.png)
 
 **单源与跨源设置项：**
 
 - 当数据集选择为【单源】时，自定义 SQL 采用数据源自身的 JDBC 语法进行运行校验；若为【跨源】则使用 Calcite 语法进行运行校验。
 
 - 当数据集选择为不同数据源时，多个节点实际构成跨源（跨库），应把选项切换为【跨源】模式。
-:::
 
 ![新建数据库数据集](/img/dataease-v2/dataset_configuration/单源跨源选项.png)
 
-:::note
-
 数据集编辑界面支持下拉框搜索。
-:::
+
 ![更新1](/img/dataease-v2/dataset_configuration/数据集选择数据源和数据表.png)
 
-:::note
-
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧数据库数据表（可利用搜索功能进行快速筛选）后拖拽到右侧数据集编辑区。
-:::
 
 ![新建数据库数据集](/img/dataease-v2/dataset_configuration/新建数据库数据集.png)
 
-:::note
-
 如下图所示，点击【保存】，设置对应名称以及保存文件夹位置，点击【确认】即成功添加数据集。
-:::
 
 ![保存数据库数据集](/img/dataease-v2/dataset_configuration/保存数据库数据集.png)
 
 ![数据库数据集保存成功](/img/dataease-v2/dataset_configuration/数据库数据集保存成功.png)
 
 ## 3 编写 SQL 查询
-:::note
 
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧【自定义 SQL 】拖拽到右侧数据集编辑区，进入到 SQL 编辑界面。
-:::
 
 ![选择SQL数据集](/img/dataease-v2/dataset_configuration/选择SQL数据集.png)
 
 ![SQL编辑界面](/img/dataease-v2/dataset_configuration/SQL编辑界面.png)
 
-:::note
-
 【序号1】位置选择数据库；  
 【序号2】位置为 SQL 语句输入区，在此区域输入正确的 SQL 语句；  
 【序号3】点击可展示预览数据；  
 **注意：当数据集选择为【单源】时，自定义 SQL 采用数据源自身的 JDBC 语法进行运行校验；若为【跨源】则使用 Calcite 语法进行运行校验。**
-:::
 
 ![SQL语句编写](/img/dataease-v2/dataset_configuration/SQL语句编写.png)
 
-:::note
-
 SQL 片段支持注释。
-:::
 
 ![更新1](/img/dataease-v2/dataset_configuration/SQL片段支持注释.png)
 
-:::note
-
 如下图所示，点击【保存】，SQL 查询添加成功。
-:::
 
 ![保存SQL数据集](/img/dataease-v2/dataset_configuration/保存SQL数据集.png)
 
 ## 4 SQL 语句动态传参设置
-
-:::note
 
 **SQL 数据集支持参数传递，如下图所示。**
 
 - 在 SQL 数据集中编写带变量的 SQL 语句，变量定义格式为 \$DE_PARAM\{ field = '\$[xxx]' \}，其中 xxx 为变量名；  
 - 在右上角【参数设置】里对变量进行相关设置，如变量类型、生效模式、默认值（非必填），此处变量为系统根据 SQL 语句自动识别的，例如 province 会被自动带出来；
 - 在仪表板的过滤组件中（文本下拉和数字下拉组件）勾选【参数选项】，并将下拉字段与 SQL 数据集中的变量关联，如下示例以 MySQL 数据库 SQL 语法为例，不同数据库请根据实际情况调整。
-:::
 
 ![SQL参数设置](/img/dataease-v2/dataset_configuration/SQL%20参数设置.png)
 
-:::note
-
 编写带变量的 SQL 语句后，系统默认将参数类型设置为文本，根据需要可在右上角【参数设置】里对变量进行相关设置，示例如：  
 若该变量为时间类型，请手动调整该参数类型的时间类型及时间格式。
-:::
 
 ![SQL参数变量类型](/img/dataease-v2/dataset_configuration/SQL%20参数设置2.png)
 
-:::note
-
 参数设置里面，参数值下拉列表中可以选择“仅编辑时生效”或“数据集预览时全局生效”。   
 区别：仅编辑时生效在SQL数据集编辑界面有效，数据集预览时全局生效在数据集预览界面有效 。
-:::
 
 ![SQL参数生效模式](/img/dataease-v2/dataset_configuration/SQL%20参数设置3.png)
 
-:::note
-
 在仪表板过滤组件绑定 SQL 传参：
-:::
 
 ![更新1](/img/dataease-v2/newimg/1.20%20查询组件绑定参数的方式优化.png)
-
-:::note
 
 **SQL 数据集带参数传递，根据过滤组件的不同，SQL 语法用法上有差异。**
 
@@ -173,9 +127,6 @@ select * from table where name = '${p}'
 ```
 select * from table where $DE_PARAM{name = '$[p]'}
 ```
-:::
-
-:::note
 
 <strong>时间范围参数绑定：</strong>当需要按时间范围查询时，需要在 SQL 中定义两个参数，分别用于接收开始时间和结束时间；并在查询组件中分别绑定这两个参数。
 
@@ -183,11 +134,8 @@ select * from table where $DE_PARAM{name = '$[p]'}
 2. 在仪表板中添加时间范围查询组件。
 3. 在查询组件配置中，将展示类型设置为【时间范围】；在【参数】页签中，分别将开始时间参数和结束时间参数关联为【开始时间】和【结束时间】。
 4. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
-:::
 
 ![过滤组件设置参数设置](/img/dataease-v2/dataset_configuration/时间传参搭配过滤组件.png)
-
-:::note
 
 **SQL 动态参数与过滤组件的区别：**
 
@@ -195,41 +143,29 @@ select * from table where $DE_PARAM{name = '$[p]'}
 - SQL 动态参数可以满足一些过滤组件无法满足的场景，比如需要在 SQL 中对参数值做特殊处理后才能用于 where 过滤条件的情况。    
 
 SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，系统会对 SQL 数据集在查询时的 SQL 进行 Base64 加密处理。
-:::
 
 ![SQL传参安全](/img/dataease-v2/dataset_configuration/SQL传参安全.png)
 
-:::note
-
 数据集自定义 SQL 时支持选择系统变量（企业版 X-Pack 功能）作为查询条件。在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
-:::
 
 ![更新1](/img/dataease-v2/newimg/2.3%20数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)
 
 ## 5 设置数据表间关联关系
-:::note
 
 在新建数据集页面，需要先设置为【跨源】模式，勾选添加数据集对应数据源，将左侧要关联的数据表拖拽到右侧数据集编辑区。    
 
 **注意：如果是跨数据库关联，对应的自定义 SQL 需要使用的是 Calcite 语法。**
-:::
 
 ![拖拽关联表](/img/dataease-v2/dataset_configuration/拖拽关联表.png)
-
-:::note
 
 将关联的数据表拖拽到编辑区后，可编辑关联关系：
 
 -  序号 1 ：设置连接方式；
 -  序号 2 ：添加关联字段；
 -  序号 3 ：选择输出字段。
-:::
 
 ![创建关联关系](/img/dataease-v2/dataset_configuration/创建关联关系.png)
 
-:::note
-
 创建数据集时，同一个数据表可被多次引用。
-:::
 
 ![拖拽关联表](/img/dataease-v2/dataset_configuration/多次引用.png)

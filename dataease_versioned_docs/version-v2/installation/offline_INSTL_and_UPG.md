@@ -4,8 +4,6 @@ title: 安装指南
 
 ## 1 环境要求
 
-:::note
-
 **部署服务器要求：**
 
 * 操作系统: Ubuntu 22.04 / CentOS 7.6 64 位系统
@@ -13,22 +11,15 @@ title: 安装指南
 * 磁盘空间: 200G
 
 **提示：Docker 版本太老可能会导致安装失败，建议使用安装包内的 Docker，或者使用 v23.0.5 版本及以上的 Docker。**
-:::
 
 ## 2 下载离线安装包
 
-:::note
-
 请自行下载 DataEase 最新版本的基础安装包，并复制到目标机器的 /tmp 目录下。  
 安装包下载链接: https://community.fit2cloud.com/#/products/dataease/downloads
-:::
 
 ## 3 端口要求
 
-:::note
-
 部署 DataEase 离线服务需要开通的访问端口说明如下：
-:::
 
 | 端口   |    作用    |       说明        |
 |------|:--------:|:---------------:|
@@ -39,8 +30,6 @@ title: 安装指南
 
 ### 4.1  解压安装包
 
-:::note
-
 以 root 用户 ssh 登录到目标机器, 并执行如下命令：
 
 ``` 
@@ -48,11 +37,8 @@ cd /tmp
 # 解压安装包（dataease-online-installer-v2.0.0.tar.gz 为示例安装包名称，操作时可根据实际安装包名称替换）
 tar zxvf dataease-online-installer-v2.0.0.tar.gz
 ```
-:::
 
 ### 4.2  设置安装参数（可选）
-
-:::note
 
 DataEase 支持以配置文件的形式来设置安装参数，如安装目录、服务运行端口、数据库配置参数等，具体参数请参见安装包中的 install.conf 文件：
 
@@ -81,11 +67,8 @@ DE_MYSQL_PASSWORD=Password123@mysql
 ## 数据库参数
 DE_MYSQL_PARAMS="autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true"
 ```
-:::
 
 ### 4.3  执行安装脚本
-
-:::note
 
 ```
 # 进入安装包目录（dataease-online-installer-v2.0.0 为示例安装包目录名称，操作时可根据实际安装包名称替换）
@@ -94,9 +77,6 @@ cd dataease-online-installer-v2.0.0
 # 运行安装脚本
 /bin/bash install.sh
 ```
-:::
-
-:::note
 
 如果使用外部数据库进行安装，只能使用 MySQL  8.0.16 版本以上数据库。同时 DataEase 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件  
 
@@ -138,9 +118,6 @@ group_concat_max_len=1024000
 ```mysql
 CREATE DATABASE `dataease` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 ```
-:::
-
-:::note
 
 安装脚本使用 /opt/dataease2.0 作为默认安装目录，DataEase 的配置文件、数据及日志等均存放在该安装目录
 安装目录目录结构说明：
@@ -158,15 +135,11 @@ CREATE DATABASE `dataease` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai
 ├── logs                                        #-- DataEase 各组件的日志文件持久化目录
 └── templates                                   #-- DataEase 各组件及数据库等中间件的配置文件的原始文件
 ```
-:::
 
 ## 5  登录访问
-
-:::note
 
 安装成功后，通过浏览器访问如下页面登录：  
 - **访问地址** : `http://目标服务器IP地址:服务运行端口`  
 - **登录用户名**: admin  
 - **登录密码**: DataEase@123456
-:::
 

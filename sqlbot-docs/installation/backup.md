@@ -21,7 +21,7 @@ grep POSTGRES_SERVER /opt/sqlbot/conf/sqlbot.conf
 
 默认安装目录为 `/opt/sqlbot`。docker 一键运行时，路径相对执行目录下的 `./data`。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 备份内容清单</div>
+表 1 备份内容清单
 
 | 内容 | 路径 / 对象 | 说明 |
 | ---- | ----------- | ---- |

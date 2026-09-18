@@ -18,9 +18,9 @@ title: 最佳实践
 
 SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，检索增强生成）的智能问数系统。它利用大语言模型的强大能力，将用户的自然语言问题实时转换为精确的SQL查询语句和可视化图表。其核心目标是让业务人员、运营人员乃至管理层都能在没有SQL基础的情况下，也能够轻松与数据库进行对话，即时获取数据分析的结果。
 
-<img src="/img/sqlbot/best_practice/arch.png" alt="工作原理图" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 工作原理图</div>
+![工作原理图](/img/sqlbot/best_practice/arch.png)
 
+图 1 工作原理图
 
 
 为了解决大语言模型“缺乏业务理解能力”的问题，SQLBot提供了一套强大的业务上下文配置能力，主要包括四大核心功能：
@@ -36,8 +36,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
 我们选择以Cordys CRM系统为问数对象，需要提前在SQLBot中接入Cordys CRM系统的数据库“cordys-crm”作为数据源，并将这个数据源命名为“CordysCRM”。
 
-<img src="/img/sqlbot/best_practice/add_ds.png" alt="添加数据源" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加数据源</div>
+![添加数据源](/img/sqlbot/best_practice/add_ds.png)
+
+图 2 添加数据源
 
 
 ### 第一步：精简数据源（表管理）
@@ -56,9 +57,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
     表管理的操作原则，仅保留业务分析所需的核心表（例如：线索表、客户表、商机表、用户表）。
 
 
-<img src="/img/sqlbot/best_practice/add_tables.png" alt="添加表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 添加表</div>
+![添加表](/img/sqlbot/best_practice/add_tables.png)
 
+图 3 添加表
 
 
 2. 设置字段别名和描述：数据库中的表名和字段名通常过于技术化，无法适配自然语言的提问内容。这种情况下就需要设置字段别名和描述，让大模型可以更好地理解用户的自然语言提问。接下来将以CordysCRM数据源中的线索表“clue”为例进行说明；
@@ -75,8 +76,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
         例如，为“线索状态”字段添加描述：“枚举值：FOLLOWING=跟进中，NEW=新建。”
 
-<img src="/img/sqlbot/best_practice/set_desc.png" alt="添加描述" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 添加描述</div>
+![添加描述](/img/sqlbot/best_practice/set_desc.png)
+
+图 4 添加描述
 
 
 ### 第二步：明确表关联逻辑（表关联关系管理）
@@ -92,8 +94,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
 3. 覆盖所有核心业务关系：确保业务分析可能涉及的所有表都建立了正确的关联关系。
 
-<img src="/img/sqlbot/best_practice/add_relations.png" alt="表关联" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 表关联</div>
+![表关联](/img/sqlbot/best_practice/add_relations.png)
+
+图 5 表关联
 
 
 ### 第三步：提供标准示例（示例SQL）
@@ -159,8 +162,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
     ② 示例SQL：粘贴准备好的对应的标准SQL语句。
 
 
-<img src="/img/sqlbot/best_practice/sql_example.png" alt="SQL示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 SQL 示例</div>
+![SQL示例](/img/sqlbot/best_practice/sql_example.png)
+
+图 6 SQL 示例
 
 
 ### 第四步：消除指标歧义（自定义术语）
@@ -175,8 +179,9 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 - 术语名称：输入“MK/JS/CE/JMS/DE/MS”；
 - 术语描述：用于详细解释术语在数据库的查询逻辑。例如：“如果用户问题中采用了产品简称（MK=MaxKB，CloudExplorer=CE=云管，JS=JMS=JumpServer，DE=DataEase，MS=MeterSphere），在编写SQL时需要将简称转化为产品全称。”
 
-<img src="/img/sqlbot/best_practice/terminology.png" alt="术语" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 术语</div>
+![术语](/img/sqlbot/best_practice/terminology.png)
+
+图 7 术语
 
 
 ## 总结
@@ -184,7 +189,8 @@ SQLBot是一款基于大语言模型和RAG（Retrieval Augmented Generation，�
 
 提升SQLBot智能问数的准确性，是一个系统性配置业务上下文的过程。我们在使用SQL开源智能问数系统时，通过表管理、表关联关系管理、示例SQL、自定义术语这四个步骤，可以很好地配置业务上下文，大幅提高大语言模型生成业务查询的SQL语句的准确率。
 
-<img src="/img/sqlbot/best_practice/result.png" alt="问数结果" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 问数结果</div>
+![问数结果](/img/sqlbot/best_practice/result.png)
+
+图 8 问数结果
 
 

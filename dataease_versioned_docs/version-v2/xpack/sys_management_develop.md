@@ -4,35 +4,23 @@ title: 系统 API
 
 ## 1 系统 API Keys 管理
 
-:::note
-
 对 API Keys 的管理包括"创建"、"复制"、"显示" Secret Key、选择"状态"是否可用和"删除"的操作。
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
 ## 2 系统 API 查看
 
-:::note
-
 用户可通过【创建】获取到 API Key，可供调试的接口如下图所示。
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/API查看.png)
 
-:::note
-
 支持查看 API 文档，如下图所示。
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/API文档.png)
 
 ## 3 系统 API 在线调试
 
-:::note
-
 系统提供了丰富的接口调试功能，用户可以依据下图的操作进行接口的调试。
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/API-KEY.png)
 
@@ -40,19 +28,13 @@ title: 系统 API
 
 ### 4.1 准备 API Key
 
-:::note
-
 进入 API Key 页面，创建 API Key，创建后获取到 accessKey 和 secretKey（API Key 是访问 DataEase API 的密钥，具有账户的完全权限）。
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
 ### 4.2 Java 示例代码
 
-:::note
-
 根据获取到的 accessKey 和 secretKey，生成接口调用需要的 token 认证信息，写入请求头的 x-de-ask-token 参数中进行接口调用，参考以下代码示例。
-:::
 
 ```java
 package io.dataease.api;
@@ -159,21 +141,15 @@ public class Main {
 
 ### 5.1 获取接口信息
 
-:::note
-
 接口地址和请求参数可以通过以下方式获取：
 
 方式一：查看API文档
-:::
 
 ![组件置底_基础功能](/img/dataease-v2/xpack/APIKEY.png)
 
 ![API key Postman-2.png](/img/dataease-v2/xpack/API%20key%20Postman-2.png)
 
-:::note
-
 方式二：通过浏览器控制台查看网络请求。
-:::
 
 ![API key Postman浏览器.png](/img/dataease-v2/xpack/API%20key%20Postman浏览器.png)
 
@@ -181,12 +157,9 @@ public class Main {
 
 ![Postman 配置 Pre-script.png](/img/dataease-v2/xpack/Postman%20配置%20Pre-script.png)
 
-:::note
-
 需将 accessKey 和 secretKey 的值替换为第一步创建的 AccessKey/SecretKey
 
 脚本内容如下：
-:::
 
 ```javascript
 // 定义 accessKey 和 secretKey
@@ -245,10 +218,7 @@ pm.environment.set("x-de-ask-token", token);
 
 ### 5.3 配置 Headers
 
-:::note
-
 Headers 按照图示配置，无需修改
-:::
 
 ![Postman 配置 Headers.png](/img/dataease-v2/xpack/Postman%20配置%20Headers.png)
 
@@ -260,10 +230,7 @@ x-de-ask-token: {{x-de-ask-token}}
 
 ### 5.4 配置请求体并发送请求
 
-:::note
-
 Body 按照 API 请求要求填写，此处以获取仪表板列表树为例
-:::
 
 ![Postmax 配置请求体.png](/img/dataease-v2/xpack/Postmax%20配置请求体.png)
 

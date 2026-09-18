@@ -4,10 +4,7 @@ title: 安装指南
 
 ## 1 环境要求
 
-:::note
-
 **部署服务器要求：**
-:::
 
 表 1  环境要求
 
@@ -17,24 +14,15 @@ title: 安装指南
 | 配置 | 4 核 / 8G 内存 / 200G 硬盘 |
 | 其他 | 无（无需访问互联网） |
 
-:::note
-
 **提示：Docker 版本过旧可能导致安装失败，建议使用安装包内的 Docker，或使用 v23.0.5 及以上版本。**
-:::
 
 ## 2 下载离线安装包
 
-:::note
-
 请到 [DataEase 下载中心](https://community.fit2cloud.com/#/products/dataease/downloads) 下载最新版本的基础安装包，并复制到目标机器的 `/tmp` 目录下。
-:::
 
 ## 3 端口要求
 
-:::note
-
 部署 DataEase 离线服务需要开通的访问端口说明如下：
-:::
 
 表 2  端口要求
 
@@ -47,8 +35,6 @@ title: 安装指南
 
 ### 4.1 解压安装包
 
-:::note
-
 以 root 用户 SSH 登录到目标机器，并执行如下命令：
 
 ```
@@ -58,11 +44,8 @@ tar zxvf dataease-offline-installer-v3.0.0.tar.gz
 ```
 
 安装脚本默认使用 `/opt/dataease3.0` 目录作为安装目录，DataEase 相关安装文件均存放在该目录。
-:::
 
 ### 4.2 设置安装参数（可选）
-
-:::note
 
 DataEase 支持以配置文件设置安装参数（安装目录、服务端口、数据库等）。也可在执行 `install.sh` 时按交互提示选择数据库类型等选项；数据库相关的 JPA / Profile 配置由安装脚本自动完成，无需手工编写方言配置。
 
@@ -128,16 +111,10 @@ DE_SERVERS=dataease
 ## application.yml 文件中可引入的其他配置文件
 DE_SPRING_PROFILE=mysql
 ```
-:::
-
-:::note
 
 使用外部数据库时，请先完成建库，并在 `install.conf` 中设置 `DE_EXTERNAL_DB=true` 以及 `DE_DB_TYPE`、`DE_DB_HOST` 等连接信息；也可在运行 `install.sh` 时按提示选择。详见 [外部数据库部署](./multi_database_deployment)。服务启动时会自动创建所需表结构及初始化数据。
-:::
 
 ### 4.3 执行安装脚本
-
-:::note
 
 ```
 # 进入安装包目录（请替换为实际解压目录名称）
@@ -146,9 +123,6 @@ cd dataease-offline-installer-v3.0.0
 # 运行安装脚本
 /bin/bash install.sh
 ```
-:::
-
-:::note
 
 安装成功后，通过浏览器访问如下页面登录：
 
@@ -157,11 +131,8 @@ cd dataease-offline-installer-v3.0.0
 用户名: admin
 密码: DataEase@123456
 ```
-:::
 
 ## 5 升级步骤
-
-:::note
 
 与安装步骤相同：下载新版本离线安装包并上传解压后，重新执行安装命令进行升级。
 
@@ -174,13 +145,10 @@ cd dataease-offline-installer-v3.0.0
 ```
 
 建议升级前自行备份重要数据与配置。
-:::
 
 ## 6 常用管理命令及日志
 
 ### 6.1 DataEase Service
-
-:::note
 
 DataEase 在安装时默认向系统添加了 dataease Service，支持的命令有：
 
@@ -188,11 +156,8 @@ DataEase 在安装时默认向系统添加了 dataease Service，支持的命令
 - `stop`：停止 DataEase 服务，并删除相关运行容器、docker 网络等资源
 - `restart`：停止后启动 DataEase 服务（先 stop 再 start）
 - `status`：查看 DataEase 服务当前各容器运行状态
-:::
 
 ### 6.2 dectl
-
-:::note
 
 DataEase 默认内置命令行运维工具 `dectl`，执行 `dectl help` 可查看帮助：
 
@@ -218,4 +183,3 @@ Commands:
 DataEase 的日志目录为：`/opt/dataease/logs`（具体路径以实际安装目录为准，默认安装目录下一般为 `/opt/dataease3.0/logs`）。
 
 更完整的说明见 [命令行工具使用指南](./cli)。
-:::
