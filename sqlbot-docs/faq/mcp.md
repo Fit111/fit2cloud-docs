@@ -12,12 +12,12 @@ title: MCP
 - SQLBot 中仅有一个数据源时无需确认，会默认使用该数据源
 
 
-
 1.6.0 版本及以后，新增 mcp_datasource_list 工具用于调取数据源列表，并返回数据源的 ID。 用户在调用 MCP 接口时，可在 question 的中 datasource_id 指定数据源 ID。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_mcp_datasource_id.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 MCP 指定数据源 ID</div>
+![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_datasource_id.png)
+
+图 1 MCP 指定数据源 ID
 
 ## 2 SQLBot 的 MCP 调用支持指定工作空间和禁用图表渲染吗？
 
@@ -28,8 +28,9 @@ title: MCP
 - **禁用图表渲染**：在调用 `mcp_question` 时，可通过 `return_img=false` 关闭图表图片渲染，仅返回 SQL、数据与图表配置结果，减少图片生成耗时。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_mcp_oid_id.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 MCP 指定工作空间 OID</div>
+![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_oid_id.png)
+
+图 2 MCP 指定工作空间 OID
 
 ## 3 SQLBot 的 MCP 中如何进行数据分析，数据预测？
 
@@ -46,8 +47,9 @@ MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一�
 4. 命令需作为独立词出现在 `question` 末尾（可带数字参数），且同一问题中不可混用多个命令。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_mcp_analysis.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 MCP 数据分析与预测</div>
+![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_analysis.png)
+
+图 3 MCP 数据分析与预测
 
 ## 4 SQLBot 的 MCP 指定工作空间失效？
 
@@ -63,8 +65,9 @@ MCP 支持在 mcp_question 的 question 参数中使用快捷命令，对同一�
 若指定工作空间后仍异常，请检查：用户是否属于该工作空间；`oid` 是否在 `mcp_start` 阶段传入；`chat_id` 是否来自该次 `mcp_start` 返回结果。
 
 
-<img src="/img/sqlbot/mcp/sqlbot_mcp_new_oid.png" alt="mcp数据源指定" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 MCP 在 mcp_start 中传入 OID</div>
+![mcp数据源指定](/img/sqlbot/mcp/sqlbot_mcp_new_oid.png)
+
+图 4 MCP 在 mcp_start 中传入 OID
 
 ## 5 SQLBot 的 MCP 如何指定问数使用的模型？
 

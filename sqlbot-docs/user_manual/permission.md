@@ -13,8 +13,9 @@ title: 权限配置
 - 权限规则仅作用于当前工作空间中的数据源。
 
 
-<img src="/img/sqlbot/user_manual/setting/permission.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 权限配置页面</div>
+![规则组](/img/sqlbot/user_manual/setting/permission.png)
+
+图 1 权限配置页面
 
 ## 1 创建规则组
 
@@ -26,11 +27,13 @@ title: 权限配置
 - 点击【保存】，完成规则组创建。
 
 
-<img src="/img/sqlbot/user_manual/setting/add_rule.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 创建规则组</div>
+![规则组](/img/sqlbot/user_manual/setting/add_rule.png)
 
-<img src="/img/sqlbot/user_manual/setting/add_rule_member.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 选择受限成员</div>
+图 2 创建规则组
+
+![规则组](/img/sqlbot/user_manual/setting/add_rule_member.png)
+
+图 3 选择受限成员
 
 
 在添加权限规则时，系统支持以下两种类型：
@@ -48,11 +51,13 @@ title: 权限配置
 每个规则组下可添加多条权限规则，以满足更复杂的权限控制需求。
 
 
-<img src="/img/sqlbot/user_manual/setting/row_permissions.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 配置行权限</div>
+![规则组](/img/sqlbot/user_manual/setting/row_permissions.png)
 
-<img src="/img/sqlbot/user_manual/setting/column_permissions.png" alt="规则组" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 配置列权限</div>
+图 4 配置行权限
+
+![规则组](/img/sqlbot/user_manual/setting/column_permissions.png)
+
+图 5 配置列权限
 
 ## 2 编辑权限组
 
@@ -64,8 +69,9 @@ title: 权限配置
 - 设置用户：添加或移除受限用户；
 
 
-<img src="/img/sqlbot/user_manual/setting/modify_rules.png" alt="修改规则" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 编辑规则组</div>
+![修改规则](/img/sqlbot/user_manual/setting/modify_rules.png)
+
+图 6 编辑规则组
 
 ## 3 删除规则组
 
@@ -74,6 +80,7 @@ title: 权限配置
 **注意：删除规则组后，该组中所有权限规则将立即失效，绑定成员将恢复对相关数据的完整访问权限。**
 
 
-<img src="/img/sqlbot/user_manual/setting/delete_rule.png" alt="删除规则" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 删除规则组</div>
+![删除规则](/img/sqlbot/user_manual/setting/delete_rule.png)
+
+图 7 删除规则组
 

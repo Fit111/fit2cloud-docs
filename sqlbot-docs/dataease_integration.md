@@ -12,8 +12,9 @@ DataEase 版本为 v2.10.13 及以上版本。
 
 添加【新建高级应用】，SQLBot 需要以嵌入式应用方式接入到 DataEase 中，所以需要先在 SQLBot 平台中先创建一个高级应用，如下图所示:
 
-<img src="/img/sqlbot/dataease/dataease_sqlbot_app.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 DataEase SQLBot 应用</div>
+![示例](/img/sqlbot/dataease/dataease_sqlbot_app.png)
+
+图 1 DataEase SQLBot 应用
 
 
 设置基础信息。
@@ -21,8 +22,9 @@ DataEase 版本为 v2.10.13 及以上版本。
 **注意**：跨域设置为 DataEase 服务的访问地址，例如 `https://demo.dataease.cn` 。
 
 
-<img src="/img/sqlbot/dataease/dataease_sqlbot_basic_info.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 DataEase SQLBot 基础信息</div>
+![示例](/img/sqlbot/dataease/dataease_sqlbot_basic_info.png)
+
+图 2 DataEase SQLBot 基础信息
 
 
 进行接口配置。
@@ -42,8 +44,9 @@ JSON.parse(`${source_val}`)['v'].replace(/^['\"]|['\"]$/g, '')
 ```
 
 
-<img src="/img/sqlbot/dataease/dataease_sqlbot_interface_info.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 DataEase SQLBot 接口信息</div>
+![示例](/img/sqlbot/dataease/dataease_sqlbot_interface_info.png)
+
+图 3 DataEase SQLBot 接口信息
 
 
 SQLBot 调用 DataEase 获取数据源的接口返回的信息开启 AES-Key 加密（32 位随机生成即可）。
@@ -51,15 +54,17 @@ SQLBot 调用 DataEase 获取数据源的接口返回的信息开启 AES-Key 加
 **注意**：后续 DataEase 配置中需要使用到 AES-Key 进行数据源加密配置。
 
 
-<img src="/img/sqlbot/dataease/ase-key.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 ASE 密钥</div>
+![示例](/img/sqlbot/dataease/ase-key.png)
+
+图 4 ASE 密钥
 
 
 保存好应用，记录好应用的 ID 号。
 
 
-<img src="/img/sqlbot/dataease/dataease_sqlbot_copy_id.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 DataEase SQLBot 复制 ID</div>
+![示例](/img/sqlbot/dataease/dataease_sqlbot_copy_id.png)
+
+图 5 DataEase SQLBot 复制 ID
 
 ## 2 DataEase 侧配置
 
@@ -67,15 +72,17 @@ SQLBot 调用 DataEase 获取数据源的接口返回的信息开启 AES-Key 加
 
 输入 SQLBot 服务器 URL 和前面步骤获取到的 SQLBot 高级应用的 ID 号，校验通过后保存即可。
 
-<img src="/img/sqlbot/dataease/dataease_settings.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 DataEase 设置</div>
+![示例](/img/sqlbot/dataease/dataease_settings.png)
+
+图 6 DataEase 设置
 
 
 返回工作台后，即可在 DataEase 右上角的快捷工具栏看到 SQLBot。
 
 
-<img src="/img/sqlbot/dataease/dataease_sqlbot.png" alt="示例" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 DataEase SQLBot</div>
+![示例](/img/sqlbot/dataease/dataease_sqlbot.png)
+
+图 7 DataEase SQLBot
 
 
 进入到 DataEase 的安装目录下，找到 DataEase 的配置文件，默认路径为 /opt/dataease2.0/conf/application.yml。在配置文件中添加 sqlbot 相关配置， 配置文件修改后大致如下：

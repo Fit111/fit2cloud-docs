@@ -7,7 +7,6 @@ title: 源码运行
 本文所使用源码为 SQLBot main 分支，操作系统为 Ubuntu 24.04，举例说明如何以源码的形式运行 SQLBot 工程。所有操作均在阿里云（新加坡区） 4核8G 环境中执行。
 
 
-
 目前支持的源码运行环境有： Windows (x86)、Linux（x86 & arm64）、MacOS（x86 & arm64）。
 
 

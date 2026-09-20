@@ -10,8 +10,9 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 模型配置集中在【AI 模型配置】页面进行管理，支持添加、编辑、删除模型，以及设置默认模型，用于控制智能问数时的底层模型调用逻辑。
 
 
-<img src="/img/sqlbot/user_manual/system/model_index.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 AI 模型配置页面</div>
+![模型](/img/sqlbot/user_manual/system/model_index.png)
+
+图 1 AI 模型配置页面
 
 ## 2 模型管理
 
@@ -23,11 +24,13 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 模型参数需与所接入平台保持一致，确保调用成功。
 
 
-<img src="/img/sqlbot/user_manual/system/add_model_supplier.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加模型供应商</div>
+![模型](/img/sqlbot/user_manual/system/add_model_supplier.png)
 
-<img src="/img/sqlbot/user_manual/system/model_info.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 填写模型信息</div>
+图 2 添加模型供应商
+
+![模型](/img/sqlbot/user_manual/system/model_info.png)
+
+图 3 填写模型信息
 
 ### 2.2 编辑模型
 
@@ -36,8 +39,9 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 建议在不影响当前业务使用的情况下进行编辑操作。
 
 
-<img src="/img/sqlbot/user_manual/system/edit_model.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 编辑模型信息</div>
+![模型](/img/sqlbot/user_manual/system/edit_model.png)
+
+图 4 编辑模型信息
 
 ### 2.3 删除模型
 
@@ -45,8 +49,9 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 如某模型已废弃或不再使用，点击【删除】确认后移除。删除后该模型将不可被问数功能调用。
 
 
-<img src="/img/sqlbot/user_manual/system/delete_model.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 删除模型</div>
+![模型](/img/sqlbot/user_manual/system/delete_model.png)
+
+图 5 删除模型
 
 ### 2.4 系统默认模型
 
@@ -56,8 +61,9 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 默认模型将作为 SQLBot 智能问数时的首选调用对象，直接影响问数结果表现。切换默认模型后立即生效，建议结合模型质量与稳定性做出选择。
 
 
-<img src="/img/sqlbot/user_manual/system/sys_model.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 设置系统默认模型</div>
+![模型](/img/sqlbot/user_manual/system/sys_model.png)
+
+图 6 设置系统默认模型
 
 ### 2.5 授权空间
 
@@ -65,9 +71,11 @@ SQLBot 支持集成主流大语言模型（LLM），如 DeepSeek、阿里云百�
 如需为模型授权可访问的工作空间，可在目标模型的菜单栏中点击【授权空间】，进入配置界面后完成模型与工作空间的绑定分配。
 
 
-<img src="/img/sqlbot/user_manual/system/workspace_model1.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 授权空间入口</div>
+![模型](/img/sqlbot/user_manual/system/workspace_model1.png)
 
-<img src="/img/sqlbot/user_manual/system/workspace_model2.png" alt="模型" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 8 选择授权工作空间</div>
+图 7 授权空间入口
+
+![模型](/img/sqlbot/user_manual/system/workspace_model2.png)
+
+图 8 选择授权工作空间
 

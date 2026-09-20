@@ -4,53 +4,35 @@ title: 配置 AWS Redshift 数据源
 
 ## 1 前提条件
 
-:::note
-
 链接 AWS Redshift 数据库之前，请收集以下信息：
 
 - 数据库服务器的 IP 地址和端口号
 - 数据库名称
 - 数据库用户名和密码
-:::
 
 ## 2 配置数据源链接步骤
 
-:::note
-
 步骤一：登入 DataEase 系统。
-:::
-
-:::note
 
 步骤二：按照以下步骤，选择 AWS Redshift 图标。
-:::
 
 ![AWS Redshift](/img/dataease/datasource_configuration/选择AWSRedshift.png)
 
 图 1  选择 AWS Redshift 数据源
 
-:::note
-
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
-:::
 
 ![AWS Redshift](/img/dataease/datasource_configuration/AWS链接信息.png)
 
 图 2  AWS Redshift连接信息
 
-:::note
-
 步骤四：获取 Schema。
-:::
 
 ![AWS Redshift](/img/dataease/datasource_configuration/AWS获取Schema.png)
 
 图 3  AWS 获取 Schema
 
-:::note
-
 详细说明信息如下：
-:::
 
 表 1  基础属性说明
 
@@ -67,10 +49,7 @@ title: 配置 AWS Redshift 数据源
 | 端口             | 填写正确的端口，默认为 1521            |
 | Schema         | 选择对象的集合                    |
 
-:::note
-
 步骤五：数据源检验，校验成功后如下图所示，点击保存即可。
-:::
 
 ![AWS Redshift](/img/dataease/datasource_configuration/AWS校验成功.png)
 

@@ -10,15 +10,12 @@ title: 系统架构
 
 ## 2 组件说明
 
-:::note
-
 - **Frontend**:  DataEase 的前端工程, 基于 Vue.js 进行开发；
 - **Backend**:  DataEase 的后端工程, 基于 Spring Boot 进行开发, 为 DataEase 的功能主体；
 - **元数据库**:  DataEase 项目的主要数据存储。安装器默认使用内置 MySQL，也可将元数据库部署到 MySQL、GreatSQL、达梦、KingbaseES、Oracle、PostgreSQL、SQL Server；
 - **Apache Calcite**: 用于对各个数据源做 SQL 方面的统一处理；
 - **Apache Apisix**: API 网关，用来处理路由、认证、IP 访问限制等；
 - **Quartz**: 定时任务调度框架，任务状态持久化于元数据库。
-:::
 
 各个组件间的关系可参考下图  
 
@@ -27,8 +24,6 @@ title: 系统架构
 图 2  组件关系图
 
 ## 3 关键术语
-
-:::note
 
 **DataEase 中有一些基本概念，下面是这些基本概念的说明：**
 
@@ -40,11 +35,8 @@ title: 系统架构
 - **电子表格**: 类 Excel 表格分析载体，支持绑定数据集自动填充数据，具备公式计算、自由排版能力，可实现中国式复杂报表，兼顾数据展示与轻量分析；
 - **数据填报**: 企业级数据采集模块，支持可视化制作填报表单，填报数据可直接回写数据库，具备数据校验、批量录入与移动端填报能力；
 - **组件**: 仪表板或数据大屏中各种元素的统称，例如图表组件、图片组件、筛选组件等。
-:::
 
 ## 4 技术栈
-
-:::note
 
 - 后端：[Spring Boot](https://spring.io/projects/spring-boot)、[Spring Data JPA](https://spring.io/projects/spring-data-jpa)/[Hibernate](https://hibernate.org/)
 - 前端：[Vue.js](https://vuejs.org/)、[Element](https://element.eleme.cn/)
@@ -53,4 +45,3 @@ title: 系统架构
 - 数据处理：[Apache Calcite](https://calcite.apache.org/)、[Apache SeaTunnel](https://github.com/apache/seatunnel)
 - 调度框架：[Quartz](https://www.quartz-scheduler.org/)
 - 基础设施：[Docker](https://www.docker.com/)
-:::

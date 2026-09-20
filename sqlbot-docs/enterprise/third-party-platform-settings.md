@@ -10,8 +10,10 @@ title: 参数配置
 - 决定默认登录方式的配置；
 
 
-<img src="/img/sqlbot/user_manual/enterprise/登录认证设置.png" alt="登录认证设置" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 登录认证设置</div>
+![登录认证设置](/img/sqlbot/user_manual/enterprise/登录认证设置.png)
 
-<img src="/img/sqlbot/user_manual/enterprise/登录设置.png" alt="登录设置" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 登录设置</div>
+图 1 登录认证设置
+
+![登录设置](/img/sqlbot/user_manual/enterprise/登录设置.png)
+
+图 2 登录设置

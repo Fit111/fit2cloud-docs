@@ -4,10 +4,7 @@ title: 在线安装指南
 
 ## 1 环境要求
 
-:::note
-
 **部署服务器要求：**
-:::
 
 表 1  环境要求
 
@@ -19,19 +16,13 @@ title: 在线安装指南
 
 ## 2 下载在线安装包
 
-:::note
-
 请自行下载 DataEase 最新版本的在线安装包，并复制到目标机器的 `/tmp` 目录下。
 
 安装包下载链接：`https://github.com/dataease/dataease/releases`
-:::
 
 ## 3 端口要求
 
-:::note
-
 部署 DataEase 服务需要开通的访问端口说明如下：
-:::
 
 表 2  端口要求
 
@@ -44,8 +35,6 @@ title: 在线安装指南
 
 ### 4.1 解压安装包
 
-:::note
-
 以 root 用户 SSH 登录到目标机器，并执行如下命令：
 
 ```
@@ -55,11 +44,8 @@ tar zxvf dataease-online-installer-v3.0.0.tar.gz
 ```
 
 安装脚本默认使用 `/opt/dataease3.0` 目录作为安装目录，DataEase 相关安装文件均存放在该目录。
-:::
 
 ### 4.2 设置安装参数（可选）
-
-:::note
 
 DataEase 支持以配置文件设置安装参数（安装目录、服务端口、数据库等）。也可在执行 `install.sh` 时按交互提示选择数据库类型等选项；数据库相关的 JPA / Profile 配置由安装脚本自动完成。
 
@@ -125,16 +111,10 @@ DE_SERVERS=dataease
 ## application.yml 文件中可引入的其他配置文件
 DE_SPRING_PROFILE=mysql
 ```
-:::
-
-:::note
 
 使用外部数据库时，请先完成建库，并在 `install.conf` 中设置 `DE_EXTERNAL_DB=true` 以及 `DE_DB_TYPE`、`DE_DB_HOST` 等连接信息；也可在运行 `install.sh` 时按提示选择。详见 [外部数据库部署](./multi_database_deployment)。服务启动时会自动创建所需表结构及初始化数据。
-:::
 
 ### 4.3 执行安装脚本
-
-:::note
 
 ```
 # 进入安装包目录（请替换为实际解压目录名称）
@@ -143,9 +123,6 @@ cd dataease-online-installer-v3.0.0
 # 运行安装脚本
 /bin/bash install.sh
 ```
-:::
-
-:::note
 
 安装成功后，通过浏览器访问如下页面登录：
 
@@ -154,11 +131,8 @@ cd dataease-online-installer-v3.0.0
 用户名: admin
 密码: DataEase@123456
 ```
-:::
 
 ## 5 升级步骤
-
-:::note
 
 在可连接互联网的情况下，执行以下命令即可完成在线升级：
 
@@ -168,4 +142,3 @@ dectl upgrade
 ```
 
 建议升级前自行备份重要数据与配置。
-:::

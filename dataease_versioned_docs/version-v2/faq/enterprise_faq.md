@@ -8,8 +8,5 @@ title: 版本对比
 
 ## 2 如何申请 DataEase 企业版试用？
 
-:::note
-
 **DataEase 企业版试用申请请点击：https://jinshuju.net/f/TK5TTd**  
 我们会安排专人与您联系。
-:::

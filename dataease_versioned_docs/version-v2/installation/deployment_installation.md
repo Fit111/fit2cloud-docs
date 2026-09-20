@@ -2,11 +2,9 @@
 title: 源码部署
 ---
 
-:::note
-
 请使用 v2.9、v2.8 等已发布分支的代码运行 DataEase。请勿使用 dev 等分支，dev 等分支代码均处于开发或测试阶段，部分依赖并没有上传到中央仓库，编译时可能出现依赖缺失。   
 本文所使用源码为 DataEase v2.9 分支，操作系统为 CentOS 7.9，举例说明如何以源码的形式编译 DataEase 工程。所有操作均在阿里云（新加坡区） 4核8G 环境中执行。
-:::
+
 ## 1 项目结构
 
      ```
@@ -29,7 +27,6 @@ title: 源码部署
 ## 2 配置环境
 
 ### 2.1 安装 JDK 21
-:::note
 
 DataEase v2 使用 JDK21， [Oracle 官网下载 JDK21 安装包](https://www.oracle.com/java/technologies/downloads/#java17)，根据 CPU 架构，选择对应安装包。本文档所用测试服务器 CPU 架构为 x64，下载的 x64 架构的 rpm 安装包。
 ```
@@ -39,8 +36,6 @@ wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm
 # 安装 RPM 安装包
 yum -y install jdk-21_linux-x64_bin.rpm
 ```
-:::
-:::note
 
 验证 JDK 正确安装。
 ```
@@ -49,30 +44,23 @@ java version "21.0.10" 2024-01-16 LTS
 Java(TM) SE Runtime Environment (build 21.0.10+11-LTS-240)
 Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+11-LTS-240, mixed mode, sharing)
 ```
-:::
+
 ### 2.2 安装 Git
-:::note
 
 执行命令安装 Git。
 ```
 yum install -y git
 ```
-:::
-:::note
 
 验证 Git。
 ```
 [root@iZt4n8oa58aqukyv8sf1ciZ ~]# git --version
 git version 1.8.3.1
 ```
-:::
 
 ### 2.3 安装配置 Maven
-:::note
 
 到 Apache Maven 官网下载最新版本的 Maven，官网地址如下：https://maven.apache.org/download.cgi 。
-:::
-:::note
 
 执行命令安装 Maven。
 ```
@@ -86,8 +74,6 @@ echo "export PATH=\$PATH:\$M2_HOME/bin" >> ~/.bashrc
 
 source ~/.bashrc
 ```
-:::
-:::note
 
 验证 Maven。
 ```
@@ -98,9 +84,8 @@ Java version: 17.0.10, vendor: Oracle Corporation, runtime: /usr/lib/jvm/jdk-21-
 Default locale: zh_CN, platform encoding: UTF-8
 OS name: "linux", version: "3.10.0-1160.105.1.el7.x86_64", arch: "amd64", family: "unix"
 ```
-:::
+
 ### 2.4  安装配置 nodejs
-:::note
 
 执行命令安装 nodejs。
 ```
@@ -141,8 +126,6 @@ npm version
     zlib: '1.3.0.1-motley'
 }
 ```
-:::
-:::note
 
 验证 nodejs。
 ```
@@ -171,12 +154,10 @@ v16.15.0
     nghttp3: '0.1.0-DEV'
 }
 ```
-:::
 
 ## 3  代码运行
 
 ### 3.1 源码准备
-:::note
 
 下载源码到本地
 ```
@@ -184,10 +165,8 @@ cd /opt
 git clone -b v2.9 https://github.com/dataease/dataease.git
 ```
 **注意：前后端项目目录在下载后的内容的 core 目录下。**
-:::
 
 ### 3.2 源码编译
-:::note
 
 ```
 cd dataease
@@ -196,27 +175,20 @@ mvn clean install
 cd core
 mvn clean package -Pstandalone -U -Dmaven.test.skip=true
 ```
-:::
-
-:::note
 
 如下图所示输出，则编译成功。
-:::
+
 ![源码部署](/img/dataease-v2/installation/成功编译1.png)
 
 ![源码部署](/img/dataease-v2/installation/编译成功2.png)
-:::note
 
 编译完成后，可以在 core-backend/target 目录下看到编译后的 jar 包 CoreApplication.jar
-:::
+
 ![源码部署](/img/dataease-v2/installation/编译完成.png)
-:::note
 
 core-backend 源码引用到 calcite-core 依赖，是 DataEase 基于 Apache Calcite 工程修改后的依赖包，不属于开源部分。该依赖包会持续迭代，并上传到公共仓库中，对社区版源码的编译和使用不会造成任何影响。
-:::
 
 ### 3.3 配置运行环境
-:::note
 
 **操作系统设置**  
 
@@ -224,8 +196,6 @@ core-backend 源码引用到 calcite-core 依赖，是 DataEase 基于 Apache Ca
 ```
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
-:::
-:::note
 
 **MySQL 配置**  
 
@@ -262,9 +232,6 @@ default-character-set=utf8
 ```
 CREATE DATABASE `dataeaseV2demo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 ```
-:::
-
-:::note
 
 **运行目录设置**  
 
@@ -303,10 +270,8 @@ spring:
         username: YOUR_USER
         password: YOUR_PASSWORD
 ```
-:::
 
 ### 3.4 运行 jar
-:::note
 
 在 core-backend/target 目录下找到编译后的 jar 包 CoreApplication.jar，复制到运行目录下，运行 jar 包。
 ```
@@ -314,16 +279,13 @@ cp /opt/dataease/core/core-backend/target/CoreApplication.jar /opt/dataease2.0/
 cd /opt/dataease2.0
 java -jar CoreApplication.jar
 ```
-:::
-:::note
 
 如下代码准备就绪，说明 DataEase 已成功运行，此时已经可以通过 IP:8100 访问服务。
-:::
+
 ![源码部署](/img/dataease-v2/installation/代码就绪.png)
 
 ## 4 镜像制作
 ### 4.1 安装 Docker
-:::note
 
 在服务器上安装 Docker，本文使用 DataEase 项目组编写安装脚本进行安装，用户可自行选择如何安装 Docker（需安装 docker compsose）。
 ```
@@ -332,26 +294,21 @@ curl -fsSL https://resource.fit2cloud.com/get-docker-linux.sh | bash
 # 设置 docker 开机自启，并启动 docker 服务
 systemctl enable docker; systemctl daemon-reload; service docker start
 ```
-:::
+
 ### 4.2 制作镜像
-:::note
 
 进入 DataEase 项目根目录，执行镜像制作命令。
 ```
 cd /opt/dataease
 docker build -t registry.cn-qingdao.aliyuncs.com/dataease/dataease:v2.3-rc1 .
 ```
-:::
-:::note
 
 如下输出日志参考，使用 docker images 可查看镜像是否成功打包。
-:::
 
 ![源码部署](/img/dataease-v2/installation/输出日志.png)
 
 ## 5 镜像运行
 ### 5.1 配置运行环境
-:::note
 
 创建运行目录。
 ```
@@ -390,21 +347,16 @@ spring:
         username: YOUR_USER
         password: YOUR_PASSWORD
 ```
-:::
 
 ### 5.2 运行镜像
-:::note
 
 在运行目录下执行 docker-compose(docker compose) 命令。
 ```
 docker-compose up -d
 # 或者 docker compose up -d
 ```
-:::
-:::note
 
 验证 DataEase 服务状态，状态为 health 则正常，浏览器输入 IP:PORTS 访问服务。
-:::
 
 ![源码部署](/img/dataease-v2/installation/服务状态.png)
 ![源码部署](/img/dataease-v2/installation/访问服务.png)
