@@ -7,8 +7,9 @@ title: 参数设置
 以 `admin` 管理员账号登录平台后，依次点击【设置】 → 【系统管理】 → 【系统设置】 → 【参数设置】进入功能页面。
 
 
-<img src="/img/sqlbot/user_manual/system/参数设置界面.png" alt="参数设置入口" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 参数设置入口</div>
+![参数设置入口](/img/sqlbot/user_manual/system/参数设置界面.png)
+
+图 1 参数设置入口
 
 ###  问数设置
 
@@ -26,6 +27,7 @@ title: 参数设置
 - 控制查看SQL语句按钮与执行日志按钮的隐藏与展示；
 
 
-<img src="/img/sqlbot/user_manual/system/参数配置功能项.png" alt="问数设置" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 问数设置</div>
+![问数设置](/img/sqlbot/user_manual/system/参数配置功能项.png)
+
+图 2 问数设置
 

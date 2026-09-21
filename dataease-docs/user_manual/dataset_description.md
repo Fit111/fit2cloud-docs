@@ -4,21 +4,15 @@ title: 数据集概述
 
 ## 1 数据集介绍
 
-:::note
-
 【数据集】为下一步数据分析或报表制作进行相关的数据准备；   
 
 点击【数据准备】，进入【数据集】管理功能模块，该页面包括数据连接的新增（序号 1）、搜索（序号 2）、编辑（序号 3）、复制（序号 4）、重命名（序号 5）、删除（序号 6）等功能。
-:::
 
 ![数据集概览](/img/dataease/newimg/user_manual/数据集概览.png)
 
 图 1  数据集概览
 
-:::note
-
 数据集数据支持导出。
-:::
 
 ![数据集数据导出](/img/dataease/newimg/支持数据集数据导出1.png)
 
@@ -30,28 +24,19 @@ title: 数据集概述
 
 ## 2 新建数据集
 
-:::note
-
 如下图所示，点击序号位置【添加数据集】，跳转到添加数据集页面。
-:::
 
 ![新建数据集](/img/dataease/dataset_configuration/新建数据集.png)
 
 图 4  新建数据集
 
-:::note
-
 数据集编辑界面支持下拉框搜索。
-:::
 
 ![数据集选择数据源和数据表](/img/dataease/dataset_configuration/数据集选择数据源和数据表.png)
 
 图 5  数据集选择数据源和数据表
 
-:::note
-
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧数据库数据表（可利用搜索功能进行快速筛选）后拖拽到右侧数据集编辑区。
-:::
 
 ![新建数据库数据集](/img/dataease/dataset_configuration/新建数据库数据集.png)
 
@@ -61,10 +46,7 @@ title: 数据集概述
 
 图 7  新建数据库数据集
 
-:::note
-
 如下图所示，点击【保存】，设置对应名称以及保存文件夹位置，点击【确认】即成功添加数据集。
-:::
 
 ![保存数据库数据集](/img/dataease/dataset_configuration/保存数据库数据集.png)
 
@@ -76,10 +58,7 @@ title: 数据集概述
 
 ## 3 编写 SQL 查询
 
-:::note
-
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧【自定义 SQL 】拖拽到右侧数据集编辑区，进入到 SQL 编辑界面。
-:::
 
 ![选择SQL数据集](/img/dataease/dataset_configuration/选择SQL数据集.png)
 
@@ -89,30 +68,21 @@ title: 数据集概述
 
 图 11  SQL 编辑界面
 
-:::note
-
 【序号1】位置选择数据库；  
 【序号2】位置为 SQL 语句输入区，在此区域输入正确的 SQL 语句；  
 【序号3】点击可展示预览数据；
-:::
 
 ![SQL语句编写](/img/dataease/dataset_configuration/SQL语句编写.png)
 
 图 12  SQL 语句编写
 
-:::note
-
 SQL 片段支持注释。
-:::
 
 ![SQL 片段注释](/img/dataease/dataset_configuration/SQL片段支持注释.png)
 
 图 13  SQL 片段注释
 
-:::note
-
 如下图所示，点击【保存】，SQL 查询添加成功。
-:::
 
 ![保存SQL数据集](/img/dataease/dataset_configuration/保存SQL数据集.png)
 
@@ -120,49 +90,35 @@ SQL 片段支持注释。
 
 ## 4 SQL 语句动态传参设置
 
-:::note
-
 **SQL 数据集支持参数传递，如下图所示。**
 
 - 在 SQL 数据集中编写带变量的 SQL 语句，变量定义格式为 \$DE_PARAM\{ field = '\$[xxx]' \}，其中 xxx 为变量名；  
 - 在右上角【参数设置】里对变量进行相关设置，如变量类型、生效模式、默认值（非必填），此处变量为系统根据 SQL 语句自动识别的，例如 province 会被自动带出来；
 - 在仪表板的查询组件中（文本下拉和数字下拉组件）勾选【参数选项】，并将下拉字段与 SQL 数据集中的变量关联，如下示例以 MySQL 数据库 SQL 语法为例，不同数据库请根据实际情况调整。
-:::
 
 ![SQL参数设置](/img/dataease/dataset_configuration/SQL%20参数设置.png)
 
 图 15  SQL 参数设置
 
-:::note
-
 编写带变量的 SQL 语句后，系统默认将参数类型设置为文本，根据需要可在右上角【参数设置】里对变量进行相关设置，示例如：  
 若该变量为时间类型，请手动调整该参数类型的时间类型及时间格式。
-:::
 
 ![SQL参数变量类型](/img/dataease/dataset_configuration/SQL%20参数设置2.png)
 
 图 16  SQL 参数设置
 
-:::note
-
 参数设置里面，参数值下拉列表中可以选择“仅编辑时生效”或“数据集预览时全局生效”。   
 区别：仅编辑时生效在 SQL 数据集编辑界面有效，数据集预览时全局生效在数据集预览界面有效 。
-:::
 
 ![SQL参数生效模式](/img/dataease/dataset_configuration/SQL%20参数设置3.png)
 
 图 17  SQL 参数设置
 
-:::note
-
 在仪表板查询组件绑定 SQL 传参：
-:::
 
 ![查询组件绑定参数的方式优化-2](/img/dataease/newimg/查询组件绑定参数的方式优化-2.png)
 
 图 18  查询组件绑定参数的方式优化
-
-:::note
 
 **SQL 数据集带参数传递，根据查询组件的不同，SQL 语法用法上有差异。**
 
@@ -197,22 +153,16 @@ select * from table where name = '${p}'
 ```
 select * from table where $DE_PARAM{name = '$[p]'}
 ```
-:::
-
-:::note
 
 <strong>时间范围参数绑定：</strong>当需要按时间范围查询时，需要在 SQL 中定义两个参数，分别用于接收开始时间和结束时间；并在查询组件中分别绑定这两个参数。
 
 1. 在仪表板中添加时间范围查询组件。
 2. 在【参数】页签中，分别将开始时间参数和结束时间参数关联为【开始时间】和【结束时间】。
 3. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
-:::
 
 ![查询组件设置参数设置](/img/dataease/dataset_configuration/时间传参搭配过滤组件.png)
 
 图 19  时间传参搭配过滤组件
-
-:::note
 
 **SQL 动态参数与查询组件的区别：**
 
@@ -220,16 +170,12 @@ select * from table where $DE_PARAM{name = '$[p]'}
 - SQL 动态参数可以满足一些查询组件无法满足的场景，比如需要在 SQL 中对参数值做特殊处理后才能用于 where 过滤条件的情况。    
 
 SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，系统会对 SQL 数据集在查询时的 SQL 进行 Base64 加密处理。
-:::
 
 ![SQL传参安全](/img/dataease/dataset_configuration/SQL传参安全.png)
 
 图 20  SQL 传参安全
 
-:::note
-
 数据集自定义 SQL 时支持选择系统变量（企业版 X-Pack 功能）作为查询条件。在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
-:::
 
 ![数据集自定义 SQL 时支持选择系统变量作为查询条件（XPack）](/img/dataease/newimg/数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)
 
@@ -237,32 +183,23 @@ SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，�
 
 ## 5 设置数据表间关联关系
 
-:::note
-
 在新建数据集页面，勾选添加数据集对应数据源，将左侧要关联的数据表拖拽到右侧数据集编辑区。
-:::
 
 ![拖拽关联表](/img/dataease/dataset_configuration/拖拽关联表.png)
 
 图 22  拖拽关联表
-
-:::note
 
 将关联的数据表拖拽到编辑区后，可编辑关联关系：
 
 -  序号 1 ：设置连接方式；
 -  序号 2 ：添加关联字段；
 -  序号 3 ：选择输出字段。
-:::
 
 ![创建关联关系](/img/dataease/dataset_configuration/创建关联关系.png)
 
 图 23  创建关联关系
 
-:::note
-
 创建数据集时，同一个数据表可被多次引用。
-:::
 
 ![拖拽关联表](/img/dataease/dataset_configuration/多次引用.png)
 

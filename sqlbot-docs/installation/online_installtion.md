@@ -19,7 +19,7 @@ title: 在线安装
 在线部署 SQLBot 需要开通的访问端口说明如下：
 
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 在线部署端口要求</div>
+表 1 在线部署端口要求
 
 | 端口   | 作用       | 说明                        |
 |------|:---------|:--------------------------|
@@ -93,5 +93,6 @@ docker run -d \
 ```
 
 
-<img src="/img/sqlbot/installation/login_sqlbot.png" alt="访问SQLBot" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 访问 SQLBot</div>
+![访问SQLBot](/img/sqlbot/installation/login_sqlbot.png)
+
+图 1 访问 SQLBot

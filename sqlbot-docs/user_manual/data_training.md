@@ -12,15 +12,16 @@ title: SQL 示例库
 - 数据源： 当用户发起问数请求时，只能匹配当前数据源下的 【SQL 示例】。
 
 
-
 进入【SQL 示例库】页面：在系统导航栏点击【设置】>【SQL 示例库】。
 
-<img src="/img/sqlbot/user_manual/setting/data_trainning.png" alt="data_trainning.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 SQL 示例库页面</div>
+![data_trainning.png](/img/sqlbot/user_manual/setting/data_trainning.png)
+
+图 1 SQL 示例库页面
 
 
 点击【添加示例 SQL】按钮，输入问题描述、【示例 SQL】，并选择数据源，进行新建【SQL 示例】，填写完成后点击【保存】，【SQL 示例】创建成功。
 
-<img src="/img/sqlbot/user_manual/setting/add_data_training.png" alt="add_data_training.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 添加示例 SQL</div>
+![add_data_training.png](/img/sqlbot/user_manual/setting/add_data_training.png)
+
+图 2 添加示例 SQL
 

@@ -16,8 +16,9 @@ title: 智能问数
 术语示例如下图所示：
 
 
-<img src="/img/sqlbot/faq/professional..png" alt="professional..png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 专业版</div>
+![professional..png](/img/sqlbot/faq/professional..png)
+
+图 1 专业版
 
 ## 3 SQL 示例怎么使用？
 
@@ -27,8 +28,9 @@ title: 智能问数
 SQL 示例如下图所示：
 
 
-<img src="/img/sqlbot/faq/data_training.png" alt="data_training.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 数据训练</div>
+![data_training.png](/img/sqlbot/faq/data_training.png)
+
+图 2 数据训练
 
 ## 4 SQLBot 在哪些方面会影响到对 token 的消耗？
 
@@ -63,8 +65,9 @@ SQL 示例如下图所示：
 
 SQLBot 对大模型返回的问数结果的结构是有要求的，SQLBot 在提示词模板中对该格式有明确定义。在使用过程中，有些大模型由于理解能力问题，并未按要求返回相应格式的数据，会导致 SQLBot 无法解析返回结果，出现类似下图的错误：
 
-<img src="/img/sqlbot/faq/faq_parse_answer.png" alt="faq_parse_answer.png" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px 0 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 FAQ 解析答案</div>
+![faq_parse_answer.png](/img/sqlbot/faq/faq_parse_answer.png)
+
+图 3 FAQ 解析答案
 
 
 此时建议更换其他模型试试。

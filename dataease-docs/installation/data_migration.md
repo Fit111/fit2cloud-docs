@@ -4,8 +4,6 @@ title: 数据迁移
 
 ## 1 概述
 
-:::note
-
 DataEase 提供官方迁移工具，用于将 **DataEase 2.0** 的文件与元数据库迁移到 **DataEase 3.0**。
 
 工具仓库：[https://github.com/dataease/dataease-migration](https://github.com/dataease/dataease-migration)
@@ -34,7 +32,6 @@ docker run -d --name migration \
 - 直接运行 JAR，或使用 Docker 镜像
 
 迁移内容包括业务数据目录、MySQL 元数据库，以及必要的 V3 升级脚本与插件数据更新。
-:::
 
 ## 2 适用条件
 
@@ -47,27 +44,19 @@ docker run -d --name migration \
 | 元数据库 | **仅支持 MySQL**，JDBC URL 形如 `jdbc:mysql://127.0.0.1:3306/dataease` |
 | 安装目录 | 源端、目标端均需填写对应服务器上的非根目录绝对路径，默认分别为 `/opt/dataease2.0`、`/opt/dataease3.0` |
 
-:::note
-
 运行迁移程序的机器必须能通过 JDBC **直连** 源库和目标库。内置 MySQL 默认不把 3306 映射到宿主机，请提前确认连通性（例如加入同一 Docker 网络、临时映射端口，或改用外部库）。
-:::
 
 ## 3 迁移前准备
-
-:::note
 
 1. 在目标环境安装好 DataEase 3.0，并准备一个可连接的 **空目标数据库**（迁移开始后该库仍会被删除并重建）。
 2. **停止** 源端 V2、目标端 V3 的 DataEase 应用容器，**不要停止 MySQL 容器** 。
 3. 迁移期间暂停源端业务写入，避免文件与库数据被并发修改。
 4. 数据库用户需具备：源库读取权限；目标库 `DROP`、`CREATE`、写入，以及执行升级脚本所需的 `ALTER`、`UPDATE`、`INSERT`、`DELETE` 权限。
 5. 源库与目标库不能是同一个库。
-:::
 
 ## 4 启动迁移工具
 
 ### 4.1 使用 Docker 镜像（推荐）
-
-:::note
 
 可直接使用官方已发布的公共镜像（`docker run` 时会自动拉取）：
 
@@ -79,11 +68,8 @@ docker run -d --name migration \
 ```
 
 浏览器访问 `http://本机IP:8080`。
-:::
 
 ### 4.2 使用 JAR
-
-:::note
 
 也可在具备 JDK 的机器上直接运行发行包中的 JAR（发行包同时包含 `tools`、`plugins` 目录）：
 
@@ -92,11 +78,8 @@ java -jar dataease-migration-1.0.0.jar
 ```
 
 默认控制台端口为 **8080**。
-:::
 
 ## 5 执行迁移
-
-:::note
 
 在页面中分别填写 DataEase 2.0（源端）与 DataEase 3.0（目标端）：
 
@@ -108,13 +91,10 @@ java -jar dataease-migration-1.0.0.jar
 本机地址可填写 `localhost`、`127.x`、`::1` 或本机网卡地址，工具会直接操作本地目录。
 
 确认目标库可被覆盖后，点击「执行迁移」。页面日志会显示各阶段进度。填写完成后如下图所示：
-:::
 
 ![迁移填写信息](/img/dataease/installation/迁移填写信息.png)
 
 图 1  填写连接信息
-
-:::note
 
 迁移顺序概览：
 
@@ -129,32 +109,22 @@ java -jar dataease-migration-1.0.0.jar
 ```
 java -jar dataease-migration-1.0.0.jar --migration.files.copy-sync-task-logs=true
 ```
-:::
 
 ## 6 迁移完成后
 
-:::note
-
 操作日志出现「迁移任务成功完成」即表示本次迁移结束，如下图所示：
-:::
 
 ![迁移任务成功](/img/dataease/installation/迁移任务成功.png)
 
 图 2  迁移任务成功
 
-:::note
-
 1. 启动目标端 DataEase 3.0 服务。
 2. 使用原 V2 账号登录，抽查数据源、数据集、仪表板、大屏及附件类资源。
 3. 企业版如使用插件，请按日志提示更新不兼容插件后重启。
-:::
 
 ## 7 注意事项
-
-:::note
 
 - 目标库会被 **删除并重建** ，请勿填写仍需保留的库。
 - 任一阶段失败会终止整个任务，已完成的文件复制或目标库重建 **不会自动回滚** ，也不会修改 V2 源库。失败后请按日志处理后，换全新目标库重新完整迁移，不要在失败库上补跑。
 - 本地直接操作文件目前适用于 macOS / Linux，并需要本机提供 `/bin/sh` 与 `tar`。
 - 同版本环境搬迁（非 2.0 → 3.0）不属于本工具范围。
-:::

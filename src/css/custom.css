@@ -131,29 +131,17 @@ html[data-docs-product='jumpserver'] .alert--warning {
 }
 
 
-/* DataEase v2 / v3：去掉 note 正文的蓝色包边。
-   两个版本都走 /dataease，docsProduct.js 会打 data-docs-product=dataease。
-   只去掉边框和卡片底，:::note 结构与 warning 提示框保持不变。 */
-/*html[data-docs-product='dataease'] .theme-admonition-note,*/
-/*html[data-docs-product='dataease'] .alert--secondary {*/
-/*  --ifm-alert-border-color: transparent;*/
-/*  --ifm-alert-border-width: 0px;*/
-/*  --ifm-alert-border-left-width: 0px;*/
-/*  --ifm-alert-background-color: transparent;*/
-/*  border: none !important;*/
-/*  background-color: transparent !important;*/
-/*  box-shadow: none !important;*/
-/*  padding: 0 !important;*/
-/*}*/
-
-/* 图用 Markdown ![alt](src)，水平居中且不超过正文栏。表拉满正文栏，表题与表同宽对齐。 */
-html[data-docs-product='dataease'] .theme-doc-markdown table {
+/* DataEase / SQLBot：图用 Markdown ![alt](src)，水平居中且不超过正文栏。
+   表拉满正文栏，表题与表同宽对齐。DataEase 的 note 蓝边已按 SQLBot 方式在正文里拆掉 :::note。 */
+html[data-docs-product='dataease'] .theme-doc-markdown table,
+html[data-docs-product='sqlbot'] .theme-doc-markdown table {
   display: table;
   width: 100%;
   max-width: 100%;
 }
 /* 正文截图居中；列表徽章、链接封面、联系我们二维码不走这套。 */
-html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child {
+html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child,
+html[data-docs-product='sqlbot'] .theme-doc-markdown p > img:only-child {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -161,7 +149,8 @@ html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child {
   height: auto;
 }
 .de-contact .theme-doc-markdown img,
-html[data-docs-product='dataease'] .de-contact .theme-doc-markdown p > img:only-child {
+html[data-docs-product='dataease'] .de-contact .theme-doc-markdown p > img:only-child,
+html[data-docs-product='sqlbot'] .de-contact .theme-doc-markdown p > img:only-child {
   display: inline-block;
   margin-left: 0;
   margin-right: 0;
@@ -173,13 +162,18 @@ html[data-docs-product='dataease'] .de-contact .theme-doc-markdown p > img:only-
 html[data-docs-product='dataease'] .theme-doc-markdown p.de-caption,
 html[data-docs-product='dataease'] .theme-doc-markdown p:has(img) + p,
 html[data-docs-product='dataease'] .theme-doc-markdown p:has(a img) + p,
-html[data-docs-product='dataease'] .theme-doc-markdown img + p {
+html[data-docs-product='dataease'] .theme-doc-markdown img + p,
+html[data-docs-product='sqlbot'] .theme-doc-markdown p.de-caption,
+html[data-docs-product='sqlbot'] .theme-doc-markdown p:has(img) + p,
+html[data-docs-product='sqlbot'] .theme-doc-markdown p:has(a img) + p,
+html[data-docs-product='sqlbot'] .theme-doc-markdown img + p {
   text-align: center;
   color: #8a8f99;
   font-size: 13px;
   margin: 6px 0 20px;
 }
-html[data-docs-product='dataease'] .theme-doc-markdown p:has(+ table) {
+html[data-docs-product='dataease'] .theme-doc-markdown p:has(+ table),
+html[data-docs-product='sqlbot'] .theme-doc-markdown p:has(+ table) {
   text-align: center;
   color: #8a8f99;
   font-size: 13px;

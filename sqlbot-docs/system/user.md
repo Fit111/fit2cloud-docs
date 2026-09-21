@@ -12,8 +12,9 @@ title: 用户管理
 在【用户管理】页面中，展示系统内全部用户，管理员可查看用户基本信息，包括账号、姓名、邮箱、所属工作空间、状态等。
 
 
-<img src="/img/sqlbot/user_manual/system/userlist.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 用户列表</div>
+![用户列表](/img/sqlbot/user_manual/system/userlist.png)
+
+图 1 用户列表
 
 ## 2 创建用户
 
@@ -28,8 +29,9 @@ title: 用户管理
 - 状态：用户状态，默认为启用状态
 
 
-<img src="/img/sqlbot/user_manual/system/create_user.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 2 创建用户</div>
+![用户列表](/img/sqlbot/user_manual/system/create_user.png)
+
+图 2 创建用户
 
 ## 3 编辑用户
 
@@ -37,8 +39,9 @@ title: 用户管理
 账户不可以编辑，其他属性均可以编辑。用户状态已禁用，则用户无法登录 SQLBot。
 
 
-<img src="/img/sqlbot/user_manual/system/edit_userinfo.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 3 编辑用户信息</div>
+![用户列表](/img/sqlbot/user_manual/system/edit_userinfo.png)
+
+图 3 编辑用户信息
 
 ## 4 重置密码
 
@@ -46,8 +49,9 @@ title: 用户管理
 系统管理员可以给每个用户修改密码，在用户列表中，点击【修改密码】，弹出修改密码对话框，保存后修改成功。
 
 
-<img src="/img/sqlbot/user_manual/system/edit_usermessges.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 4 编辑用户消息</div>
+![用户列表](/img/sqlbot/user_manual/system/edit_usermessges.png)
+
+图 4 编辑用户消息
 
 ## 5 删除用户
 
@@ -59,11 +63,13 @@ title: 用户管理
 **注意**：系统内置 admin 用户不能被删除。
 
 
-<img src="/img/sqlbot/user_manual/system/delete_user.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 5 删除用户</div>
+![用户列表](/img/sqlbot/user_manual/system/delete_user.png)
 
-<img src="/img/sqlbot/user_manual/system/delete_user2.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 6 删除用户 2</div>
+图 5 删除用户
+
+![用户列表](/img/sqlbot/user_manual/system/delete_user2.png)
+
+图 6 删除用户 2
 
 ## 6 查询用户
 
@@ -75,6 +81,7 @@ title: 用户管理
 - 支持通过筛选条件（状态、所属工作空间）进行过滤；
 
 
-<img src="/img/sqlbot/user_manual/system/search_user.png" alt="用户列表" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 7 搜索用户</div>
+![用户列表](/img/sqlbot/user_manual/system/search_user.png)
+
+图 7 搜索用户
 

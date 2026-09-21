@@ -46,7 +46,8 @@ function markDeCaptions() {
   if (typeof document === 'undefined') {
     return;
   }
-  if (document.documentElement.dataset.docsProduct !== 'dataease') {
+  const product = document.documentElement.dataset.docsProduct;
+  if (product !== 'dataease' && product !== 'sqlbot') {
     return;
   }
   document.querySelectorAll('.theme-doc-markdown p').forEach((p) => {

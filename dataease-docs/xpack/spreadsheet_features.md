@@ -2,19 +2,13 @@
 title: 电子表格功能详解
 ---
 
-:::note
-
 电子表格编辑能力基于 [Univer Sheets](https://docs.univer.ai/guides/sheets) 引擎；DataEase 在此之上扩展了明细表 / 透视表、查询控件、数据集复制粘贴、发布运维等能力。
 
 DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet_special)；发布与数据集替换见 [发布运维](./spreadsheet_publish)。
-:::
 
 ## 1 界面总览
 
-:::note
-
 编辑器采用类 Excel 布局（自定义 Ribbon，单行分组展示）：
-:::
 
 表 1  界面总览
 
@@ -43,10 +37,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 发布 | 发布上线。下拉项随状态变化：已发布时可【取消发布】；已发布后又修改并保存、尚未再次发布时，可【恢复到发布版本】 |
 | 替换数据集 | 右上角循环箭头图标，批量替换表格内使用的数据集（详见 [数据集替换](./spreadsheet_publish#1-数据集替换)） |
 
-:::note
-
 **典型操作**：预览 → 保存 → 发布。
-:::
 
 表 3  顶部操作区
 
@@ -58,10 +49,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 
 ## 3 工具栏（Ribbon）
 
-:::note
-
 工具栏基于 Univer Ribbon，由 DataEase 重组为若干分组。
-:::
 
 ### 3.1 分组总览
 
@@ -97,10 +85,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 
 图 3  插入
 
-:::note
-
 【插入】下拉 **不包含** 传统 BI 图表类型。数据可视化请用明细表 / 透视表，或通过查询控件联动，详见 [电子表格特殊功能](./spreadsheet_special)。
-:::
 
 ### 3.3 历史
 
@@ -214,10 +199,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 
 ## 4 DataEase 特殊功能（入口）
 
-:::note
-
 以下能力为 DataEase 在 Univer 之上的扩展，本章仅作入口说明，完整操作见 [电子表格特殊功能](./spreadsheet_special)。
-:::
 
 表 13  DataEase 特殊功能（入口）
 

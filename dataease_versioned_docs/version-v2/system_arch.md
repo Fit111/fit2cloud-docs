@@ -8,21 +8,16 @@ title: 系统架构
 
 ## 2 组件说明
 
-:::note
-
 - **Frontend**:  DataEase 的前端工程, 基于 Vue.js 进行开发；
 - **Backend**:  DataEase 的后端工程, 基于 Spring Boot 进行开发, 为 DataEase 的功能主体；
 - **MySQL**:  DataEase 项目的主要数据均存储在 MySQL；
 - **Apache Calcite**: 用于对各个数据源做 SQL 方面的统一处理；
 - **Apache Apisix**: API 网关，用来处理路由、认证、IP 访问限制等。
-:::
 
 各个组件间的关系可参考下图  
 ![组件说明](/img/dataease-v2/newimg/product_acceptance/2.0组件关系图.png)
 
 ## 3 关键术语
-
-:::note
 
 **DataEase 中有一些基本概念，下面是这些基本概念的说明：**
 
@@ -32,11 +27,8 @@ title: 系统架构
 - **仪表板**: 通过可视化效果展示具体数据常见的图形面板，倾向于快速创建及交互操作；
 - **数据大屏**: 通过可视化效果展示具体数据常见的图形面板，更倾向展示效果；
 - **组件**: 仪表板或数据大屏中各种元素的统称，例如图表组件、图片组件、筛选组件等。
-:::
     
 ## 4 技术栈
-
-:::note
 
 - 后端：[Spring Boot](https://spring.io/projects/spring-boot)
 - 前端：[Vue.js](https://vuejs.org/)、[Element](https://element.eleme.cn/)
@@ -44,4 +36,3 @@ title: 系统架构
 - 中间件：[MySQL](https://www.mysql.com/)
 - 数据处理：[Apache Calcite](https://calcite.apache.org/)、[Apache SeaTunnel](https://github.com/apache/seatunnel)
 - 基础设施：[Docker](https://www.docker.com/)
-:::

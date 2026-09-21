@@ -4,8 +4,9 @@ title: 系统架构
 
 ## 1 整体架构
 
-<img src="/img/sqlbot/index/system-arch.png" alt="整体架构" style={{maxWidth:'720px',width:'100%',display:'block',margin:'16px auto 6px',borderRadius:'4px'}} />
-<div style={{fontSize:'14px',color:'#666',margin:'0 0 16px',textAlign:'center'}}>图 1 整体架构</div>
+![整体架构](/img/sqlbot/index/system-arch.png)
+
+图 1 整体架构
 
 ## 2 技术栈
 

@@ -4,44 +4,29 @@ title: 配置 ClickHouse 数据源
 
 ## 1 前提条件
 
-:::note
-
 链接 ClickHouse 数据库之前，请收集以下信息：
 
 - 数据库服务器的 IP 地址和端口号
 - 数据库名称
 - 数据库用户名和密码
-:::
 
 ## 2 配置数据源链接步骤
 
-:::note
-
 步骤一：登入 DataEase 系统。
-:::
-
-:::note
 
 步骤二：按照以下步骤，选择 ClickHouse 图标。
-:::
 
 ![ClickHouse](/img/dataease/datasource_configuration/选择ClickHouse数据源.png)
 
 图 1  选择ClickHouse数据源
 
-:::note
-
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
-:::
 
 ![ClickHouse](/img/dataease/datasource_configuration/CH链接信息.png)
 
 图 2  ClickHouse连接信息
 
-:::note
-
 详细说明信息如下：
-:::
 
 表 1  基础属性说明
 
@@ -57,10 +42,7 @@ title: 配置 ClickHouse 数据源
 | 额外的 JDBC 链接字符集   | 填写连接数据库的 JDBC 字符集                 |
 | 端口               | 填写正确的端口，默认为 8123                  |
 
-:::note
-
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
-:::
 
 ![ClickHouse](/img/dataease/datasource_configuration/CH校验成功.png)
 

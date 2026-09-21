@@ -1,5 +1,6 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
+import {GlobExcludeDefault} from '@docusaurus/utils';
 
 /** @type {import('@docusaurus/types').Config} */
 // 站点标题按语言区分：构建 zh-Hans 时显示中文，构建 en 时显示英文
@@ -143,6 +144,8 @@ const config = {
         path: 'jumpserver-docs',
         routeBasePath: 'jumpserver',
         sidebarPath: 'jumpserver-docs/sidebars.js',
+        // 排除工作区记忆目录(.workbuddy 里的 md 不是文档, 会被当 MDX 编译报错)
+        exclude: [...GlobExcludeDefault, '**/.workbuddy/**'],
         // 版本化: current(jumpserver-docs) = v4.0, 历史版本 v3.0
         lastVersion: 'current',
         versions: {
@@ -271,18 +274,14 @@ const config = {
             position: 'left',
           },
           // 以下官网/论坛/培训认证/关于我们/合作伙伴 对齐 Figma 设计稿: 全部放在左侧(logo 之后),
-          // 与"首页/产品文档"同一行, 右侧只留 搜索 + 版本切换 + 中英文切换。
+          // 与"首页/产品文档"同一行, 右侧只留 搜索 + 中英文切换。
+          // 版本切换已移入文档页左侧「文档选择」一体盒子(见 src/theme/DocsSwitcher)。
           // 外部链接一律用 href(不用 to), NavbarNavLink 会自动加
           // target="_blank" + rel="noopener noreferrer" + 外链小图标
           {href: 'https://bbs.fit2cloud.com/', label: '论坛', position: 'left'},
           {href: 'https://edu.fit2cloud.com/', label: '培训认证', position: 'left'},
           {href: 'https://www.fit2cloud.com/about/index.html', label: '关于我们', position: 'left'},
           // {href: 'https://www.fit2cloud.com/partners/index.html', label: '合作伙伴', position: 'left'},
-          {
-            // 版本切换: 仅在有多版本文档实例的页面显示, 单版本/非文档页自动隐藏(不影响首页)。
-            type: 'custom-VersionSwitcher',
-            position: 'right',
-          },
           {
             // 右上角即时搜索: 复用首页 HomeSearch 的搜索逻辑与结果面板
             // (src/theme/NavbarItem/HomeNavbarSearch.js)。
