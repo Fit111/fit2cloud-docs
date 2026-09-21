@@ -260,9 +260,27 @@ province 需要和国家 geo 文件中 properties 下的 name 字段保持一致
 
 ## 4 引擎设置
 
-默认数据引擎是 DataEase 自带的 MySQL，用以存储 Excel 及 API 数据集数据。目前该引擎跟随元数据的类型进行变化，更改方式参考外部数据库部署文档；  
-系统会自动检查是否设置了引擎参数，若无设置，则读取 dataease.properties 配置文件中 MySQL 连接信息，并填入其中。
+默认数据引擎是 DataEase 自带的 MySQL，用以存储 Excel 及 API 数据集数据。系统会自动检查是否设置了引擎参数，若无设置，则读取 dataease.properties 配置文件中 MySQL 连接信息，并填入其中。
+
+进入【系统设置】→【系统参数】→【引擎设置】，可查看当前引擎连接信息。
 
 ![MySQL设置](/img/dataease/system_management/引擎管理.png)
 
-图 38  填写连接信息
+图 38  引擎设置
+
+### 4.1 切换数据引擎
+
+在引擎设置页面点击编辑，可切换数据引擎类型并重新配置连接信息。当前支持选择 MySQL、PostgreSQL、Oracle、SQL Server、Kingbase、StarRocks 等类型。
+
+操作步骤：
+
+1. 在【引擎设置】页点击编辑，打开引擎配置抽屉；
+2. 在【类型】下拉框中选择目标引擎（如 StarRocks）；
+3. 填写主机 / IP、端口、数据库名、用户名、密码等连接信息，可按需补充额外 JDBC 连接串；
+4. 点击【校验】测试连接，校验通过后点击【保存】。
+
+![引擎设置支持 StarRocks](/img/dataease/newimg/v3.1.0-引擎设置支持StarRocks.png)
+
+图 39  切换数据引擎类型
+
+元数据库类型的整体更换请参考 [外部数据库部署](../../installation/multi_database_deployment)。本节描述的是在系统参数中对数据引擎连接的查看与切换。
