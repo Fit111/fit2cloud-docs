@@ -45,6 +45,61 @@ const PRODUCT_DESC = {
   Halo: 'Halo 是强大易用的开源建站工具，无需太多技术知识就可以快速搭建博客、知识库、企业官网和在线商城。',
 };
 
+/* ------------------------------------------------------------------
+ * MaxKB 智能小助手(浮窗模式) 嵌入
+ * MAXKB_EMBED_SRC 是 MaxKB 控制台"嵌入第三方网站-浮窗模式"生成的 script 地址, 原样 copy。
+ * 注意: React/JSX 里直接写 <script> 标签不会执行, 必须用 DOM API 动态创建。
+ * - embed.js 的唯一初始化入口是脚本末尾的 window.addEventListener('load', embedChatbot),
+ *   而首页组件是懒加载 chunk(挂载时机可能晚于 window load), 因此需要:
+ *   ① script 带 id 防重复注入(重复加载会挂出两个浮窗);
+ *   ② 若注入时 window load 已发生、或 embed.js 下载慢晚于 load 才执行,
+ *      要主动补发一次 load 事件, 否则 embedChatbot 永远不会被调用。
+ * - 拼 query: 追加参数(如 asker / 工作流 API 输入字段)直接拼到 MAXKB_EMBED_SRC 后面;
+ *   浮窗模式后端仅透传工作流已定义的 API 输入字段(白名单过滤, asker 例外)。
+ * ------------------------------------------------------------------ */
+const MAXKB_EMBED_SRC =
+  'https://maxkb-internal.fit2cloud.com/chat/api/embed?protocol=https&host=maxkb-internal.fit2cloud.com&token=d876eead1840ecc7';
+
+function loadMaxkbEmbed() {
+  const SCRIPT_ID = 'maxkb-embed-script';
+  if (document.getElementById(SCRIPT_ID)) {
+    return;
+  }
+  const script = document.createElement('script');
+  script.id = SCRIPT_ID;
+  script.async = true;
+  script.defer = true;
+  script.src = MAXKB_EMBED_SRC;
+
+  // 三种状态都判断过才补发 load: 自然 load 已发生 + embed.js 已执行 + 浮窗 DOM 还不存在。
+  // 同时满足才补发, 避免"自然 load 与补发 load 各触发一次 embedChatbot"挂出双浮窗。
+  let naturalLoaded = document.readyState === 'complete';
+  let executed = false;
+  const replayIfMissing = () => {
+    if (
+      naturalLoaded &&
+      executed &&
+      !document.querySelector('[id^="maxkb-"]')
+    ) {
+      window.dispatchEvent(new Event('load'));
+    }
+  };
+  window.addEventListener(
+    'load',
+    () => {
+      naturalLoaded = true;
+      // 等本轮事件派发结束(embed.js 自己的 load 监听也在本轮执行)再判断
+      setTimeout(replayIfMissing, 0);
+    },
+    {once: true},
+  );
+  script.onload = () => {
+    executed = true;
+    replayIfMissing();
+  };
+  document.body.appendChild(script);
+}
+
 const I18N = {
   zh: {
     title: '文档中心',
@@ -133,8 +188,10 @@ export default function Home() {
 
   // 给 body 挂 home-page: 让顶部(navbar 悬浮卡外围)背景色与 Hero 的 #eaf1ff 一致。
   // 对应 custom.css 的 body.home-page(作为 body:has(.portalPage) 的旧浏览器兜底)。
+  // 同时注入 MaxKB 智能小助手浮窗(见 MAXKB_EMBED 注释)。
   useEffect(() => {
     document.body.classList.add('home-page');
+    loadMaxkbEmbed();
     return () => document.body.classList.remove('home-page');
   }, []);
 
