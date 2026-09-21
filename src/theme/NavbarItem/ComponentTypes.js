@@ -10,7 +10,6 @@ import DocNavbarItem from '@theme/NavbarItem/DocNavbarItem';
 import DocSidebarNavbarItem from '@theme/NavbarItem/DocSidebarNavbarItem';
 import DocsVersionNavbarItem from '@theme/NavbarItem/DocsVersionNavbarItem';
 import DocsVersionDropdownNavbarItem from '@theme/NavbarItem/DocsVersionDropdownNavbarItem';
-import VersionSwitcher from '@theme/NavbarItem/VersionSwitcher';
 import ProductDocs from '@theme/NavbarItem/ProductDocs';
 import HomeNavbarSearch from '@theme/NavbarItem/HomeNavbarSearch';
 
@@ -24,7 +23,6 @@ const ComponentTypes = {
   docSidebar: DocSidebarNavbarItem,
   docsVersion: DocsVersionNavbarItem,
   docsVersionDropdown: DocsVersionDropdownNavbarItem,
-  'custom-VersionSwitcher': VersionSwitcher,
   'custom-ProductDocs': ProductDocs,
   'custom-HomeNavbarSearch': HomeNavbarSearch,
 };
