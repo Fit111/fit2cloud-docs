@@ -8,24 +8,24 @@ title: 源码部署
 
 ## 1 项目结构
 
-     ```
-     ├── CODE_OF_CONDUCT.md
-     ├── CONTRIBUTING.md
-     ├── Dockerfile                                # 构建容器镜像使用的 Dockerfile
-     ├── LICENSE                                   # License 申明
-     ├── README.md
-     ├── SECURITY.md
-     ├── core                                      # 社区版功能源码
-     │   ├── core-backend                          # 后端，产物为 CoreApplication.jar
-     │   └── core-frontend                         # 前端
-     ├── de-xpack                                  # 企业版功能源码（不开源）
-     ├── drivers                                   # 数据源驱动文件
-     ├── installer                                 # 安装工程源码
-     ├── mapFiles                                  # 地图原始文件
-     ├── pom.xml                                   # 整体 Maven 项目使用的 pom 文件
-     ├── sdk                                       # DataEase 基础接口工程源码
-     └── staticResource                            # 静态资源文件
-     ```
+```
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── Dockerfile                                # 构建容器镜像使用的 Dockerfile
+├── LICENSE                                   # License 申明
+├── README.md
+├── SECURITY.md
+├── core                                      # 社区版功能源码
+│   ├── core-backend                          # 后端，产物为 CoreApplication.jar
+│   └── core-frontend                         # 前端
+├── de-xpack                                  # 企业版功能源码（不开源）
+├── drivers                                   # 数据源驱动文件
+├── installer                                 # 安装工程源码
+├── mapFiles                                  # 地图原始文件
+├── pom.xml                                   # 整体 Maven 项目使用的 pom 文件
+├── sdk                                       # DataEase 基础接口工程源码
+└── staticResource                            # 静态资源文件
+```
 
 ## 2 配置环境
 

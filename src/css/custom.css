@@ -416,12 +416,15 @@ aside.theme-doc-sidebar-container {
   /* 主体: 弹性占满剩余宽度 */
   main[class*="docMainContainer"] {
     flex: 1 1 auto;
+    min-width: 0;
     max-width: none !important;
   }
-  /* 内容列: 去掉默认 75% 上限, 让它填满到右侧目录 */
+  /* 内容列: 去掉默认 75% 上限, 让它填满到右侧目录。
+     min-width: 0 允许长代码行留在代码块内滚动，不再把整页和右侧目录撑出视口。 */
   main[class*="docMainContainer"] [class*="docItemCol"] {
     max-width: none !important;
     flex: 1 1 auto;
+    min-width: 0;
   }
   /* 右侧目录: 固定 ~240px 独立一列, 与内容分开 */
   main[class*="docMainContainer"] .col--3 {
