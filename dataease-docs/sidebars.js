@@ -39,6 +39,7 @@ const 数据源 = cat(
     doc("user_manual/datasource_configuration/Oracle_datasource_configuration", "配置 Oracle 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 Oracle 数据源"),
     doc("user_manual/datasource_configuration/PostgreSQL_datasource_configuration", "配置 PostgreSQL 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 PostgreSQL 数据源"),
     doc("user_manual/datasource_configuration/Kingbase_datasource_configuration", "配置 Kingbase 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 Kingbase 数据源"),
+    doc("user_manual/datasource_configuration/GaussDB_datasource_configuration", "配置 GaussDB 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 GaussDB 数据源"),
     doc("user_manual/datasource_configuration/SQL_Server_datasource_configuration", "配置 SQL Server 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 SQL Server 数据源"),
     doc("user_manual/datasource_configuration/StarRocks_datasource_configuration", "配置 StarRocks 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 StarRocks 数据源"),
     doc("user_manual/datasource_configuration/TiDB_datasource_configuration", "配置 TiDB 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 TiDB 数据源"),
