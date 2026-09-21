@@ -6,6 +6,9 @@
  * - 用 useActivePluginAndVersion 精确拿到当前文档实例 id，
  *   并 fallback 到 pathname 首段，保证适配多版本/多实例。
  * - 列出「本站有文档」的产品，跳转各自文档站首页（/xxx/）。
+ *
+ * 盒子布局: 300px 总宽内横向分两块——左侧「选择文档」(约 80%) + 分隔线 +
+ * 右侧「版本切换」(约 20%, 见 VersionControl.js)。单版本产品右侧只显示当前版本标签。
  */
 import React, {useState, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
@@ -13,6 +16,7 @@ import Link from '@docusaurus/Link';
 import {useLocation} from '@docusaurus/router';
 import {useActivePluginAndVersion} from '@docusaurus/plugin-content-docs/client';
 import {sortProducts} from '../../data/productOrder';
+import VersionControl from './VersionControl';
 import styles from './styles.module.css';
 
 // 本站提供文档的产品：routeBasePath 与文档实例路由前缀一致，用于跳转。
@@ -114,16 +118,25 @@ export default function DocsSwitcher() {
 
   return (
     <div className={styles.switcher} ref={ref}>
-      <button
-        ref={btnRef}
-        className={styles.switcherButton}
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-        aria-haspopup="true"
-        title="切换文档">
-        <span className={styles.switcherLabel}>{current.name}</span>
-        <span className={styles.switcherCaret}>▾</span>
-      </button>
+      <div className={styles.switcherRow}>
+        <button
+          ref={btnRef}
+          className={styles.switcherButton}
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-haspopup="true"
+          title="切换文档">
+          <span className={styles.switcherLabel}>{current.name}</span>
+          <span className={styles.switcherCaret}>▾</span>
+        </button>
+        {/* 版本切换: 只在拿到插件 id 时渲染(拿不到时文档选择独占整宽) */}
+        {pluginId && (
+          <>
+            <span className={styles.switcherDivider} aria-hidden="true" />
+            <VersionControl pluginId={pluginId} onOpen={() => setOpen(false)} />
+          </>
+        )}
+      </div>
       {menu}
     </div>
   );
