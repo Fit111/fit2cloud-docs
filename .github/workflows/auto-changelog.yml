@@ -15,6 +15,9 @@
 #     只能用 workflow_dispatch 手动运行（Actions 页面选择本分支后 Run workflow）。
 #   - 需要仓库 Settings -> Actions -> General -> Workflow permissions 设为
 #     "Read and write permissions"，否则最后一步创建 PR 会 403。
+#   - "Generate changelog entry" 步骤若退出码为 3，表示脚本的 sanity check 判定
+#     "版本" 与 "目标文件" 不匹配（通常是新大版本做快照后 TARGET_MAP 未同步更新），
+#     此时不会生成 PR，需人工修正 TARGET_MAP 后重跑。
 
 name: Auto Changelog (JumpServer)
 

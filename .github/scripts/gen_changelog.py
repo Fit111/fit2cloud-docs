@@ -16,7 +16,8 @@ JumpServer 更新日志自动生成脚本（Docusaurus / fit2cloud-docs）
     v4.x        -> jumpserver_versioned_docs/version-v4/change_log.md
     v3.x        -> jumpserver_versioned_docs/version-v3/change_log.md
 
-退出码: 0=成功或已存在无需修改, 1=版本在社区列表中不存在, 2=参数/文件错误
+退出码: 0=成功或已存在无需修改, 1=版本在社区列表中不存在, 2=参数/文件错误,
+        3=版本与目标文件不匹配(见 sanity_check, 路由配置可能已过期)
 """
 from __future__ import annotations
 
@@ -159,6 +160,42 @@ def insert(content: str, block: str) -> str:
     return block + content.lstrip('\r\n')
 
 
+def sanity_check(version: str, path: Path, content: str) -> None:
+    """写入前的护栏：确认 version 与目标文件确实匹配。
+
+    为什么需要: TARGET_MAP 是硬编码的。每次发布新大版本都要做版本快照
+    (docusaurus docs:version:jumpserver v5)，它会把整个 jumpserver-docs/
+    复制成 jumpserver_versioned_docs/version-v5/，而 jumpserver-docs/ 随即
+    代表下一个大版本；但 TARGET_MAP 不会自动跟着变。若不检查，旧大版本的
+    补丁会被静默写进新大版本的文档里，且不报任何错。
+
+    规则:
+      1. 目标是 *_versioned_docs/version-vX/ 时, X 必须等于 version 的主版本
+      2. 目标文件中已出现比 version 更大的主版本 -> 报错(映射漂移的铁证)
+      3. 目标文件中既无同主版本、也无更大主版本 -> 只警告(新大版本首发属正常)
+
+    不匹配时抛 ValueError, 由 main() 转成退出码 3。
+    """
+    major = int(re.match(r'v(\d+)', version).group(1))
+
+    m = re.search(r'version-v(\d+)/', str(path).replace('\\', '/'))
+    if m and int(m.group(1)) != major:
+        raise ValueError(
+            f'目标文件 {path} 是 v{m.group(1)} 的版本快照，与 {version} 的主版本不符；'
+            f'请检查 TARGET_MAP 是否已随版本快照更新')
+
+    majors = {int(x) for x in re.findall(r'^v(\d+)\.', content, re.M)}
+    if not majors:
+        print(f'WARNING: {path} 里没有任何版本条目，无法校验路由是否正确', file=sys.stderr)
+        return
+    if max(majors) > major:
+        raise ValueError(
+            f'{path} 里已有 v{max(majors)} 的条目(比 {version} 更新)，'
+            f'{version} 应写在更旧的版本目录里；TARGET_MAP 很可能已过期')
+    if major not in majors:
+        print(f'WARNING: {path} 里暂无 v{major} 的条目，按新大版本首发处理', file=sys.stderr)
+
+
 def resolve_target(version: str):
     m = re.match(r'v(\d+)', version)
     if not m:
@@ -195,6 +232,13 @@ def main() -> int:
         return 2
 
     content = path.read_text(encoding='utf-8')
+
+    # 先校验路由，再判断"是否已存在"，否则映射漂移时会被静默跳过
+    try:
+        sanity_check(target, path, content)
+    except ValueError as e:
+        print(f'Sanity check failed: {e}', file=sys.stderr)
+        return 3
 
     # 版本号独占一行才算已存在；v4.10.1 不会被 v4.10.19 误判
     if re.search(rf'^{re.escape(target)}$', content, re.M):
