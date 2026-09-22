@@ -30,6 +30,7 @@ const sidebars = {
           "type": "doc",
           "id": "installation/offline_installtion",
           "label": "离线安装",
+          "className": "sidebar-item-badge-rec",
           "key": "doc:安装部署/离线安装"
         },
         {
