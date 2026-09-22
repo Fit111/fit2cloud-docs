@@ -13,7 +13,7 @@ function doc(id, label, key) {
 
 /**
  * @param {string} label
- * @param {import('@docusaurus/plugin-content-docs').PropSidebarItem[]} items
+ * @param {any[]} items
  * @param {string} key
  */
 function cat(label, items, key) {
@@ -212,7 +212,7 @@ const sidebars = {
           "cat:使用手册/通用功能"
         ),
         cat(
-          "管理员使用手册",
+          "管理员手册",
           [
             doc("xpack/user_management_user", "用户管理", "doc:使用手册/管理员使用手册/用户管理"),
             doc("xpack/sys_management_organization", "组织管理", "doc:使用手册/管理员使用手册/组织管理"),
@@ -238,7 +238,7 @@ const sidebars = {
           "cat:使用手册/管理员使用手册"
         ),
         cat(
-          "组织管理员使用手册",
+          "组织管理员手册",
           [
             doc("xpack/org_center_member", "成员管理", "doc:使用手册/组织管理员使用手册/成员管理"),
             doc("xpack/org_center_permission", "权限配置", "doc:使用手册/组织管理员使用手册/权限配置"),
@@ -248,7 +248,7 @@ const sidebars = {
           "cat:使用手册/组织管理员使用手册"
         ),
         cat(
-          "用户使用手册",
+          "用户手册",
           [
             cat("数据准备", [数据源, 数据集], "cat:使用手册/用户使用手册/数据准备"),
             cat(
@@ -287,7 +287,7 @@ const sidebars = {
           "cat:使用手册/用户使用手册"
         ),
         cat(
-          "嵌入式 BI 使用手册",
+          "嵌入式 BI 手册",
           [
             doc("embedded/summary", "嵌入式概述", "doc:使用手册/嵌入式 BI 使用手册/嵌入式概述"),
             doc("embedded/process", "嵌入式流程", "doc:使用手册/嵌入式 BI 使用手册/嵌入式流程"),
