@@ -73,13 +73,16 @@ function loadMaxkbEmbed() {
 
   // 三种状态都判断过才补发 load: 自然 load 已发生 + embed.js 已执行 + 浮窗 DOM 还不存在。
   // 同时满足才补发, 避免"自然 load 与补发 load 各触发一次 embedChatbot"挂出双浮窗。
+  // 注意: 检测浮窗时必须排除 script 自身 —— 注入的 script 带 id="maxkb-embed-script",
+  // 同样匹配 [id^="maxkb-"], 若不过滤则"浮窗不存在"恒为 false, 补发永不执行。
+  // 该场景在 dev 下必现(首页是懒加载 chunk, 挂载时机晚于 window load, 只能靠补发唤醒)。
   let naturalLoaded = document.readyState === 'complete';
   let executed = false;
   const replayIfMissing = () => {
     if (
       naturalLoaded &&
       executed &&
-      !document.querySelector('[id^="maxkb-"]')
+      !document.querySelector('[id^="maxkb-"]:not(script)')
     ) {
       window.dispatchEvent(new Event('load'));
     }
