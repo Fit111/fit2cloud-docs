@@ -35,8 +35,9 @@ const sidebars = {
         {
           "type": "doc",
           "id": "installation/offline_installtion",
-          "label": "离线安装（生产环境推荐）",
-          "key": "doc:安装部署/离线安装（生产环境推荐）"
+          "label": "离线安装",
+          "className": "sidebar-item-badge-rec",
+          "key": "doc:安装部署/离线安装"
         },
         {
           "type": "doc",

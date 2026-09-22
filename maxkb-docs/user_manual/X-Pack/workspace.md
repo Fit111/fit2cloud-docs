@@ -17,7 +17,7 @@ title: 工作空间
 
 创建工作空间：打开创建工作空间对话框，填写工作空间名称（必填，1-64 个字符，名称唯一，不能重复）。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/%20create_workspace.png" alt="图 2  创建工作空间" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_workspace.png" alt="图 2  创建工作空间" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建工作空间</div>
 
