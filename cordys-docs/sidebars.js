@@ -223,9 +223,9 @@ const sidebars = {
           "items": [
             {
               "type": "doc",
-              "id": "user_manual/identity",
-              "label": "标识",
-              "key": "doc:功能手册/通用用户手册/标识"
+              "id": "user_manual/tender",
+              "label": "标讯",
+              "key": "doc:功能手册/通用用户手册/标讯"
             },
             {
               "type": "doc",
