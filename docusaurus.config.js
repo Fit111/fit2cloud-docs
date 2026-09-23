@@ -212,6 +212,13 @@ const config = {
         path: 'ai-gateway-docs',
         routeBasePath: 'ai-gateway',
         sidebarPath: 'ai-gateway-docs/sidebars.js',
+        // 版本化: current = v1, 暂无历史版本(若不声明 versions, Docusaurus 默认
+        // 当前版本名为 "current"/标签 "next", 侧栏版本控件会显示 next)。
+        // 统一声明为 v1, 与 SQLBot/Cordys 等单版本产品一致。
+        lastVersion: 'current',
+        versions: {
+          current: { label: 'v1', badge: false, banner: 'none' },
+        },
       },
     ],
   ],
