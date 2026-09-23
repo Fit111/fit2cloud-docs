@@ -208,7 +208,12 @@ def zhima_base() -> str:
 
 
 def zhima_login() -> str:
-    """账密换 token。管理端 login 接口字段是 username，不是 account。"""
+    """账密换 token。管理端 login 接口字段是 username，不是 account。
+
+    ⚠️ 拿到的 token 必须走 ``Authorization: Bearer <token>``（见 zhima_headers）。
+    裸 token 会被判 ``401 登录过期`` —— 登录明明是成功的，报错却指向登录，
+    2026-09-23 踩过这个坑（误以为是账号密码问题）。
+    """
     account = cfg("ZHIMA_ACCOUNT")
     password = cfg("ZHIMA_PASSWORD")
     if not account or not password:
@@ -226,6 +231,15 @@ def zhima_login() -> str:
     return str(token)
 
 
+def zhima_headers(token: str) -> dict[str, str]:
+    """芝麻接口统一的鉴权头。
+
+    ⚠️ 必须带 ``Bearer `` 前缀：login 返回的 token 是裸 JWT（自身不含 Bearer），
+    少这个前缀会被服务端判 ``401 登录过期``。
+    """
+    return {"Authorization": f"Bearer {token}"}
+
+
 def zhima_groups(token: str) -> list[dict]:
     """拉社区小助手名下全部群（未过滤）。"""
     staff = cfg("ZHIMA_SCOPE_STAFF_USERID", "SheQuXiaoZhuShou")
@@ -237,7 +251,7 @@ def zhima_groups(token: str) -> list[dict]:
             "GET",
             f"{zhima_base()}/api/chats/by/staff/room/conversation/list",
             params={"staff_userid": staff, "page": page, "size": 50},
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             raise fail(1, f"拉取群列表失败: {res.get('error_message') or res}")
@@ -276,7 +290,7 @@ def zhima_staff_directory(token: str) -> list[dict]:
             "GET",
             f"{zhima_base()}/api/staff/list",
             params={"page": page, "limit": 50},
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             raise fail(1, f"拉取员工目录失败: {res.get('error_message') or res}")
@@ -346,7 +360,7 @@ def fetch_day_messages(token: str, chat_id: str, day: str) -> list[dict]:
                 "msg_start_time": f"{day} 00:00:00",
                 "msg_end_time": f"{day} 23:59:59",
             },
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             # 抛给上层统一统计失败次数。这里若只是 log + break，
