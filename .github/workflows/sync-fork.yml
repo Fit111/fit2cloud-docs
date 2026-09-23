@@ -1,17 +1,22 @@
 # 保持 fork 的 main 与官方仓库 upstream 一致（纯镜像维护，轻量、无副作用）
 #
+# ⚠️ 部署位置：本 workflow 部署在 **fork**（shouzhiyuxian/fit2cloud-docs）的 main 上，
+#    职责是「fork 拉取 upstream」。**不要提交到 upstream 仓库** —— 在 upstream 里
+#    origin 就等于 upstream，跑起来只会永远报 already，没有任何意义。
+#    （若不想维护这个 workflow，用 GitHub 界面的 "Sync fork" 按钮也能达到同样效果。）
+#
 # 设计前提（重要）:
 #   - 本 workflow 只做「快进」(fast-forward)，绝不 force push、绝不改写历史；
-#   - 因此 fork 的 main 需要保持"纯镜像"：不要在 fork 的 main 上直接落提交。
+#   - 因此 fork 的 main 需要保持"纯镜像"：不在 fork 的 main 上直接落提交。
 #     一旦它领先 upstream，"与 upstream 完全一致"就不再可能——只能等这些
 #     提交先合并进 upstream，本 workflow 才能继续把 fork 拉齐；
 #   - 若 fork main 与 upstream 已真正分叉（双方各有对方没有的提交），
 #     本 workflow 只告警并跳过，不做任何破坏性操作。
 #
-# 与 auto-community-faq.yml 的分工:
-#   - 本 workflow: 每天定时把 fork main 拉到 upstream 最新（不依赖 FAQ 任务）；
-#   - auto-community-faq.yml 运行前也会自己做一次同样的快进同步，
-#     保证它用到的基线不漏；两者都只快进，重复执行无副作用。
+# 与 auto-community-faq.yml 的分工（两者部署在不同仓库）:
+#   - 本 workflow: 部署在 fork，每天定时把 fork main 拉到 upstream 最新；
+#   - auto-community-faq.yml: 部署在 upstream，运行 / 开 PR / 合并全部在 upstream 内完成，
+#     不向 fork 推任何东西，也就不需要跨仓库 PAT。
 #
 # 触发: 每天 01:00 UTC（北京时间 09:00）定时 + 手动触发
 #

@@ -11,9 +11,16 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
       -> 校验引用路径真实存在、问题未与页面已有条目重复
       -> 追加到 jumpserver-docs/faq/community_faq.md 对应小节
 
+窗口说明:
+    days 默认 8 天（今天含在内，即 today-7 … today）。
+    取 8 而不取 7，是为了补回上一次运行漏掉的那半天：定时任务在周一 09:30 运行，
+    当天 09:30 之后的消息在运行时还不存在，而「7 天」窗口又恰好从上次运行的那一天开始，
+    于是上周一 09:30–23:59 这一段两次运行都覆盖不到；窗口多留一天即闭合。
+    相邻两周因此有约一天重叠，重叠带来的重复问题由页面标题去重拦截。
+
 用法:
-    python .github/scripts/community_faq.py --days 7 --dry-run
-    python .github/scripts/community_faq.py --days 7 --apply --max-items 3
+    python .github/scripts/community_faq.py --days 8 --dry-run
+    python .github/scripts/community_faq.py --days 8 --apply --max-items 3
     python .github/scripts/community_faq.py --pairs-json pairs.json --dry-run
     python .github/scripts/community_faq.py --skip-llm        # 只取数+聚类，不调模型
 
@@ -29,6 +36,11 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
     PRODUCT_KEYWORD            群名过滤关键词，默认 jumpserver
 
 退出码: 0=完成, 1=取数失败, 2=配置/参数错误, 3=无合格新条目（不需要提 PR）
+
+关于退出码 1 与 3 的区别（重要）:
+    3 只用于「确实取到了数据、只是没有合格的新条目」，此时 workflow 视为成功且不提 PR。
+    凡是取数环节出问题（登录失败、接口异常、一条消息都没取到），一律返回 1 并让 job 失败——
+    否则接口整体挂掉时会伪装成「本周无新增」，绿色成功、静默跳过一整周，没人会发现。
 """
 from __future__ import annotations
 
@@ -38,6 +50,7 @@ import os
 import re
 import sys
 import tempfile
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -55,6 +68,8 @@ MSG_PAGE_SIZE = 50
 MSG_MAX_PAGES = 20
 MSG_WORKERS = 8
 HTTP_TIMEOUT = 60
+HTTP_RETRIES = 2          # 网络类瞬时错误的重试次数（4xx 不重试）
+HTTP_RETRY_BACKOFF = 3    # 重试间隔基数（秒），按次数线性退避
 
 SESSION_PATH_RE = re.compile(r"/storage/session/\S+")
 EMOJI_RE = re.compile(r"\[(链接|图片|表情|呲牙|微笑|强|捂脸|破涕为笑|裂开)\]")
@@ -72,11 +87,19 @@ MEDIA_TYPES = frozenset(
 QUESTION_MARKERS = (
     "吗", "么", "怎", "哪", "何", "能否", "可否", "行吗", "怎么", "如何",
     "为啥", "为什么", "帮我", "请问", "？", "?", "@",
+    "是否", "有没有", "能不能", "可不可以", "行不行", "多少", "多久", "几个",
 )
 CLOSING_EXACT = frozenset(
     {"好的", "好", "好哒", "好的谢谢", "好的谢谢你", "好的谢谢您", "谢谢", "谢谢你",
-     "谢谢您", "感谢", "多谢", "ok", "okay", "收到", "嗯", "哦"}
+     "谢谢您", "感谢", "多谢", "ok", "okay", "收到", "嗯", "哦",
+     "好呢", "嗯嗯", "欧克", "okk", "知道了", "明白", "明白了", "没事了",
+     "好啦", "好了", "搞定", "已解决", "没问题了", "可以了", "行了", "不用了"}
 )
+
+# 无问句特征的消息，至少要这么多「有效字符」（normalize 后，忽略标点与空白）
+# 才算开启一个新的提问块。目的：让「好的 / 收到 / 稍等」这类寒暄不要切断上一个问答块。
+# 标记型问句不受此限；无标记的长陈述句仍会开启新块，因此不会漏掉「没写问号的真问题」。
+QUESTION_MIN_CHARS = 8
 
 # 自动应答机器人（欢迎语 / 客服助理），不计为「同事解答」
 BOT_USERIDS = frozenset({"130132198901303490", "wbVkCUDAAAt_oq-BtwsvQ2ImoABXjiuw"})
@@ -87,6 +110,11 @@ DEFAULT_LLM_MODEL = "f2c-auto"
 # 模糊/不确定表述：提示词已明令禁止，这里做机械兜底，命中只记警告、不阻断
 VAGUE_PHRASES = ("可能", "大概", "也许", "或许", "似乎", "估计", "不确定",
                  "建议试试", "应该可以", "应该是", "好像是", "听说")
+
+# 第二轮喂给模型的官方文档原文上限（字符）。一旦发生截断，结论就有可能落在
+# 被截掉的部分之后——这是机械校验查不出来的准确性上限，必须在报告里标出来供人工核对。
+DOC_CHARS_PER_FILE = 5000
+DOC_CHARS_TOTAL = 14000
 
 
 def log(msg: str) -> None:
@@ -133,24 +161,41 @@ def http_json(
         hdrs["Content-Type"] = "application/json"
     hdrs.update(headers or {})
 
-    req = urllib.request.Request(url, data=data, headers=hdrs, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read().decode("utf-8", "replace")
-    except urllib.error.HTTPError as err:
-        detail = ""
+    last_err: Exception | None = None
+    for attempt in range(HTTP_RETRIES + 1):
+        if attempt:
+            wait = HTTP_RETRY_BACKOFF * attempt
+            log(f"[community_faq] 第 {attempt} 次重试（{wait}s 后）: {method} {url}")
+            time.sleep(wait)
+        req = urllib.request.Request(url, data=data, headers=hdrs, method=method)
         try:
-            detail = err.read().decode("utf-8", "replace")[:400]
-        except Exception:
-            pass
-        raise RuntimeError(f"HTTP {err.code} {url} :: {detail}") from err
-    except urllib.error.URLError as err:
-        raise RuntimeError(f"网络不可达 {url} :: {err.reason}") from err
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                raw = resp.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as err:
+            detail = ""
+            try:
+                detail = err.read().decode("utf-8", "replace")[:400]
+            except Exception:
+                pass
+            last_err = RuntimeError(f"HTTP {err.code} {url} :: {detail}")
+            if err.code < 500 and err.code != 429:
+                raise last_err from err  # 4xx 是确定性错误，重试没有意义
+            continue
+        except urllib.error.URLError as err:
+            last_err = RuntimeError(f"网络不可达 {url} :: {err.reason}")
+            continue
+        except TimeoutError as err:
+            last_err = RuntimeError(f"请求超时 {url} :: {err}")
+            continue
 
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError as err:
-        raise RuntimeError(f"响应不是 JSON: {url} :: {raw[:200]}") from err
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError as err:
+            # 网关偶发返回半截响应，重试通常能恢复
+            last_err = RuntimeError(f"响应不是 JSON: {url} :: {raw[:200]}")
+            continue
+
+    raise last_err or RuntimeError(f"请求失败 {method} {url}")
 
 
 # ---------------------------------------------------------------- 芝麻会话取数
@@ -304,8 +349,12 @@ def fetch_day_messages(token: str, chat_id: str, day: str) -> list[dict]:
             headers={"Authorization": token},
         )
         if res.get("status") != "success":
-            log(f"[community_faq] 拉取消息失败 group={chat_id} day={day}: {res.get('error_message')}")
-            break
+            # 抛给上层统一统计失败次数。这里若只是 log + break，
+            # 「接口整体不可用」会被伪装成「本周群里没有消息」，静默跳过一整周。
+            raise RuntimeError(
+                "拉取消息失败 group={0} day={1}: {2}".format(
+                    chat_id, day, res.get("error_message") or str(res)[:200])
+            )
         data = res.get("data") or {}
         items = data.get("items") or []
         rows.extend(x for x in items if isinstance(x, dict))
@@ -353,15 +402,36 @@ def role_of(msg: dict):
 
 
 def is_question(msg: dict) -> bool:
+    """判断这条消息是否「开启一个新的提问块」。
+
+    收窄了原先「只要不是道别语就算提问」的口径：没有问句特征时，要求内容有
+    足够长度（QUESTION_MIN_CHARS）才开启新块，避免「好的 / 收到 / 稍等」这类寒暄
+    把上一个问答块切断。注意收窄**不会丢内容**——提问块一旦已开启，后续客户消息
+    仍会被并入该块（见 extract_pairs 的 role == 1 分支）。
+    """
     text = msg_text(msg)
     if any(mark in text for mark in QUESTION_MARKERS):
         return True
     n = normalize_text(text)
-    return bool(n) and n not in CLOSING_EXACT
+    if not n or n in CLOSING_EXACT:
+        return False
+    return len(n) >= QUESTION_MIN_CHARS
 
 
 def is_noise(text: str) -> bool:
     return len(normalize_text(text)) < 6
+
+
+def strip_trailing_chatter(text: str) -> str:
+    """剥掉提问块尾部粘连的寒暄词（「…能升级吗 好的 收到」→「…能升级吗」）。
+
+    多轮问答里客户的确认语会并进上一个提问块（见 extract_pairs），不清理会污染
+    喂给模型的清单文本。只剥尾部、且要求剥完还剩内容，避免把纯寒暄块剥成空串。
+    """
+    parts = [p for p in str(text or "").split(" ") if p]
+    while len(parts) > 1 and normalize_text(parts[-1]) in CLOSING_EXACT:
+        parts.pop()
+    return " ".join(parts).strip()
 
 
 def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str, day: str) -> list[dict]:
@@ -386,7 +456,7 @@ def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str,
 
     def flush() -> None:
         nonlocal q_buf, a_buf, q_ts
-        q_text = clean_text(" ".join(q_buf))
+        q_text = strip_trailing_chatter(clean_text(" ".join(q_buf)))
         a_text = clean_text(" ".join(a_buf))
         if q_text and not is_noise(q_text) and a_text:
             pairs.append({
@@ -416,7 +486,12 @@ def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str,
     return pairs
 
 
-def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict]]:
+def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict], dict]:
+    """取数并配对。
+
+    返回值第三个元素是取数完整性统计（attempts/failures/rows）——调用方据此区分
+    「接口挂了」和「群里确实没消息」，避免把取数失败当成「本周无新增」。
+    """
     token = zhima_login()
     groups = product_groups(zhima_groups(token), keyword)
     if not groups:
@@ -425,10 +500,14 @@ def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict]]:
     strict = bool(allowed)
     if not strict:
         log("[community_faq] 未配置 ZHIMA_DEPT_STAFF，退化为「员工角色且非机器人」筛选")
+    else:
+        log(f"[community_faq] 计为解答人的部门同事 {len(allowed)} 人")
 
     today = date.today()
     day_list = [(today - timedelta(days=i)).isoformat() for i in range(days - 1, -1, -1)]
+    log("[community_faq] 数据窗口 {0} … {1}（{2} 天）".format(day_list[0], day_list[-1], len(day_list)))
 
+    stats = {"attempts": 0, "failures": 0, "rows": 0}
     all_pairs: list[dict] = []
     by_day: list[dict] = []
     for day in day_list:
@@ -437,16 +516,21 @@ def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict]]:
             futs = {pool.submit(fetch_day_messages, token, g["chat_id"], day): g for g in groups}
             for fut in as_completed(futs):
                 g = futs[fut]
+                stats["attempts"] += 1
                 try:
                     rows = fut.result()
-                except Exception as err:  # 单群失败不影响整体
+                except Exception as err:  # 单群失败不影响整体，但计入 failures
+                    stats["failures"] += 1
                     log(f"[community_faq] 群 {g['label']} {day} 拉取异常: {err}")
                     continue
+                stats["rows"] += len(rows)
                 day_pairs.extend(extract_pairs(rows, allowed, strict, g["label"], day))
         log(f"[community_faq] {day} 问答对 {len(day_pairs)} 条")
         by_day.append({"date": day, "pairs": len(day_pairs)})
         all_pairs.extend(day_pairs)
-    return all_pairs, by_day
+
+    log("[community_faq] 取数统计：请求 {attempts} 次、失败 {failures} 次、消息 {rows} 条".format(**stats))
+    return all_pairs, by_day, stats
 
 
 # ---------------------------------------------------------------- 提问清单
@@ -500,6 +584,15 @@ def valid_question_ids(item: dict, total: int) -> list[int]:
     return out
 
 
+def digest_limit(total: int) -> int:
+    """模型实际能看到的编号上限。
+
+    清单只发前 DIGEST_MAX_ITEMS 条，编号校验必须与清单一致，
+    否则 300 以上的编号会「校验通过、但模型根本没在清单里见过」。
+    """
+    return min(total, DIGEST_MAX_ITEMS)
+
+
 # ---------------------------------------------------------------- 页面读写
 
 def read_page() -> str:
@@ -539,6 +632,52 @@ def existing_question_keys(text: str) -> set[str]:
         if m:
             keys.add(normalize_text(m.group(1))[:40])
     return {k for k in keys if k}
+
+
+def existing_entry_titles(text: str) -> list[str]:
+    """页面已有条目的「编号 + 标题」清单（按文档顺序）。
+
+    用于喂给模型做去重比对：比直接塞 6000 字符正文更全（页面变长后正文会被截断，
+    截断掉的标题模型就看不到了），也更省 token。
+    """
+    out: list[str] = []
+    for line in text.splitlines():
+        m = re.match(r"^###\s+(\d+\.\d+)\s+(.+?)\s*$", line)
+        if m:
+            out.append("{0} {1}".format(m.group(1), m.group(2)))
+    return out
+
+
+NEAR_DUP_THRESHOLD = 0.7
+
+
+def _bigrams(text: str) -> set[str]:
+    s = normalize_text(text)
+    if not s:
+        return set()
+    if len(s) < 2:
+        return {s}
+    return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
+def near_duplicate(title: str, keys: set[str], threshold: float = NEAR_DUP_THRESHOLD) -> str | None:
+    """标题近似重复检测（字符 bigram 的 Dice 系数），命中则返回最像的已有标题。
+
+    精确比对只能抓「一字不差」的标题，换个说法问同一件事就漏了；这里做一层近似兜底。
+    标题太短（bigram < 5，约 6 字以内）时不判断，避免误伤短标题。
+    """
+    a = _bigrams(title)
+    if len(a) < 5:
+        return None
+    best, best_score = None, 0.0
+    for k in keys:
+        b = _bigrams(k)
+        if not b:
+            continue
+        score = 2 * len(a & b) / (len(a) + len(b))
+        if score > best_score:
+            best, best_score = k, score
+    return best if best_score >= threshold else None
 
 
 def doc_index() -> list[str]:
@@ -661,9 +800,11 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
         return []
     sections, _ = page_sections(page)
     section_titles = ["{0} {1}".format(s["no"], s["title"]) for s in sections]
+    titles = existing_entry_titles(page)
     user = (
         "## 现有小节（section 字段只能填这些标题原文）\n" + "\n".join(section_titles) + "\n\n"
-        "## 已有条目（避免重复）\n" + page.strip()[:6000] + "\n\n"
+        "## 已有条目标题（收录时避免与这些语义重复，含换了说法的同义问法）\n"
+        + ("\n".join(titles) if titles else "（页面暂无条目）") + "\n\n"
         "## 官方文档索引（doc_paths 只能从这里挑）\n" + "\n".join(index) + "\n\n"
         "## 最近提问清单\n" + digest
     )
@@ -692,17 +833,21 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         log(f"[community_faq] 无有效文档依据，丢弃: {item.get('title')}")
         return None
 
-    ids = valid_question_ids(item, len(pairs))
+    ids = valid_question_ids(item, digest_limit(len(pairs)))
     source_questions = [scrub_question(pairs[i]["question"]) for i in ids[:3]] or [str(item.get("question") or "")]
     source_answers = [pairs[i]["answer"] for i in ids[:3]]
 
     blocks: list[str] = []
     total = 0
+    truncated: list[str] = []   # 单篇超长被截断的文档
+    omitted: list[str] = []     # 因总字符上限没喂进去的文档
     for rel in cited[:3]:
         text = (DOCS_ROOT / rel).read_text(encoding="utf-8", errors="replace")
-        if len(text) > 5000:
-            text = text[:5000] + "\n...(已截断)"
-        if total + len(text) > 14000:
+        if len(text) > DOC_CHARS_PER_FILE:
+            text = text[:DOC_CHARS_PER_FILE] + "\n...(已截断)"
+            truncated.append(rel)
+        if total + len(text) > DOC_CHARS_TOTAL:
+            omitted.append(rel)
             break
         total += len(text)
         blocks.append(f"### 文档 {rel}\n{text}")
@@ -746,6 +891,19 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
     if vague:
         log("[community_faq] 质量警告：{0} 含模糊表述 {1}".format(title, "、".join(vague)))
 
+    warnings: list[str] = []
+    if vague:
+        warnings.append("正文含模糊表述：{0}（提示词已禁止）".format("、".join(vague)))
+    if truncated or omitted:
+        detail = []
+        if truncated:
+            detail.append("被截断 {0}".format("、".join(truncated)))
+        if omitted:
+            detail.append("未喂入 {0}".format("、".join(omitted)))
+        warnings.append("依据文档超出长度上限（{0}），结论有落在未喂入部分之后的风险，请人工核对"
+                        .format("；".join(detail)))
+        log("[community_faq] 质量警告：{0} 依据文档超长（{1}）".format(title, "；".join(detail)))
+
     return {
         "section": item.get("section"),
         "new_section": item.get("new_section"),
@@ -758,7 +916,9 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         "count": len(ids),
         "sources": ["{0} {1}".format(pairs[i]["date"], pairs[i]["group"]) for i in ids[:3]],
         "reason": str(item.get("reason") or "").strip(),
-        "warnings": ["正文含模糊表述：{0}（提示词已禁止）".format("、".join(vague))] if vague else [],
+        "truncated": truncated,
+        "omitted": omitted,
+        "warnings": warnings,
     }
 
 
@@ -865,15 +1025,27 @@ def insert_entries(page_text: str, entries: list[dict]) -> tuple[str, list[dict]
 
 # ---------------------------------------------------------------- 报告
 
+def fetch_summary(stats: dict | None) -> str:
+    """取数完整性的一句话摘要（写进报告，供人工确认本期数据是否完整）。"""
+    if not stats:
+        return "未取数（使用本地问答对）"
+    if not stats.get("failures"):
+        return "全部成功（请求 {0} 次，消息 {1} 条）".format(stats.get("attempts", 0), stats.get("rows", 0))
+    return "存在失败请求（请求 {0} 次、失败 {1} 次、消息 {2} 条）".format(
+        stats.get("attempts", 0), stats.get("failures", 0), stats.get("rows", 0))
+
+
 def write_report(path: str, *, pairs: list[dict], placed: list[dict],
-                 skipped: list[dict], by_day: list[dict], days: int, applied: bool) -> None:
+                 skipped: list[dict], by_day: list[dict], days: int, applied: bool,
+                 fetch_note: str = "") -> None:
     per_day = ", ".join("{0}={1}".format(d["date"], d["pairs"]) for d in by_day)
     warn_total = sum(len(r["entry"].get("warnings") or []) for r in placed)
     lines = [
         "# 社区常见问题 · 本期自动生成报告",
         "",
-        "- 数据窗口：最近 {0} 天".format(days),
+        "- 数据窗口：最近 {0} 天（含今天）".format(days),
         "- 问答对：{0} 条（按天：{1}）".format(len(pairs), per_day),
+        "- 取数完整性：{0}".format(fetch_note or "未记录"),
         "- 候选主题：{0} 个（入库 {1}，未采纳 {2}）".format(
             len(placed) + len(skipped), len(placed), len(skipped)),
         "- 本次新增：{0} 条（{1}）".format(len(placed), "已写回页面" if applied else "仅预览，未写回"),
@@ -937,7 +1109,8 @@ def load_pairs_from_json(path: str) -> tuple[list[dict], list[dict]]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="从芝麻会话沉淀 JumpServer 社区常见问题")
-    ap.add_argument("--days", type=int, default=7, help="回看天数，默认 7")
+    ap.add_argument("--days", type=int, default=8,
+                    help="回看天数（含今天），默认 8：多留一天以补回上次运行漏掉的那半天")
     ap.add_argument("--max-items", type=int, default=3, help="本期最多新增条目数，默认 3")
     ap.add_argument("--min-count", type=int, default=2, help="簇至少出现 N 次才算高频，默认 2")
     ap.add_argument("--apply", action="store_true", help="写回页面（默认只预览）")
@@ -948,11 +1121,12 @@ def main() -> int:
     args = ap.parse_args()
 
     keyword = cfg("PRODUCT_KEYWORD", "jumpserver")
+    stats: dict | None = None
     if args.pairs_json:
         pairs, by_day = load_pairs_from_json(args.pairs_json)
         log(f"[community_faq] 从 {args.pairs_json} 载入问答对 {len(pairs)} 条")
     else:
-        pairs, by_day = collect_pairs(args.days, keyword)
+        pairs, by_day, stats = collect_pairs(args.days, keyword)
 
     if args.dump_pairs:
         Path(args.dump_pairs).write_text(
@@ -963,6 +1137,9 @@ def main() -> int:
         log(f"[community_faq] 问答对已写出: {args.dump_pairs}")
 
     log("[community_faq] 问答对 {0} 条".format(len(pairs)))
+    if stats and stats.get("failures"):
+        log("[community_faq] 注意：{0}/{1} 个取数请求失败，本期频次统计可能偏低（报告里已标注）".format(
+            stats["failures"], stats["attempts"]))
 
     if args.skip_llm:
         log("[community_faq] --skip-llm：不调模型，仅列出提问清单前 20 行")
@@ -970,7 +1147,16 @@ def main() -> int:
             log("[community_faq]   " + line)
         return 0
     if not pairs:
-        log("[community_faq] 没有取到问答对，跳过")
+        # 必须区分「取数坏了」和「群里确实没消息」：接口整体挂掉若也返回 3，
+        # workflow 会当成「本周无新增」绿色通过，静默跳过一整周而没人发现。
+        if stats and stats.get("failures"):
+            log("[community_faq] 取数失败：{0}/{1} 个请求出错，无法确认本周是否有新问题".format(
+                stats["failures"], stats["attempts"]))
+            return 1
+        if stats and not stats.get("rows"):
+            log("[community_faq] 所有群在所有日期都没取到任何消息，疑似接口异常或群范围配置有误")
+            return 1
+        log("[community_faq] 取到消息但没有形成问答对，跳过")
         return 3
 
     page = read_page()
@@ -985,17 +1171,24 @@ def main() -> int:
 
     entries: list[dict] = []
     skipped: list[dict] = []
+    limit = digest_limit(len(pairs))
     for item in candidates:
         if len(entries) >= args.max_items:
             break
-        ids = valid_question_ids(item, len(pairs))
+        ids = valid_question_ids(item, limit)
         if len(ids) < args.min_count:
             skipped.append({"title": item.get("title"),
                             "reason": "出现次数不足（有效问题编号 {0} < {1}）".format(len(ids), args.min_count)})
             continue
-        probe = normalize_text(str(item.get("title") or ""))[:40]
+        title = str(item.get("title") or "")
+        probe = normalize_text(title)[:40]
         if probe and probe in keys:
             skipped.append({"title": item.get("title"), "reason": "与页面已有条目标题重复"})
+            continue
+        dup = near_duplicate(title, keys)
+        if dup:
+            skipped.append({"title": item.get("title"),
+                            "reason": "与页面已有条目标题近似（最像：{0}）".format(dup)})
             continue
         entry = compose_entry(item, pairs, index)
         if entry is None:
@@ -1005,6 +1198,11 @@ def main() -> int:
         if final_key in keys:
             skipped.append({"title": entry["title"], "reason": "成稿后与页面已有条目重复"})
             continue
+        dup = near_duplicate(entry["title"], keys)
+        if dup:
+            skipped.append({"title": entry["title"],
+                            "reason": "成稿后与页面已有条目标题近似（最像：{0}）".format(dup)})
+            continue
         keys.add(final_key)
         entries.append(entry)
 
@@ -1012,7 +1210,8 @@ def main() -> int:
         log("[community_faq] 没有可入库的新条目")
         report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
         write_report(report, pairs=pairs, placed=[], skipped=skipped,
-                     by_day=by_day, days=args.days, applied=False)
+                     by_day=by_day, days=args.days, applied=False,
+                     fetch_note=fetch_summary(stats))
         set_action_output(False, 0, report)
         print(json.dumps({"changed": False, "count": 0, "report": report}, ensure_ascii=False))
         return 3
@@ -1025,7 +1224,8 @@ def main() -> int:
 
     report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
     write_report(report, pairs=pairs, placed=placed, skipped=skipped,
-                 by_day=by_day, days=args.days, applied=args.apply)
+                 by_day=by_day, days=args.days, applied=args.apply,
+                 fetch_note=fetch_summary(stats))
 
     if args.apply:
         FAQ_PAGE.write_text(new_page, encoding="utf-8")
