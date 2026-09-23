@@ -1,0 +1,303 @@
+# JumpServer 社区常见问题自动补充并提 PR
+#
+# 来源: 从芝麻会话（社区小助手名下 JumpServer 交流群）提取最近一周的
+#       「客户提问 → 部门同事解答」问答对，由大模型按官方文档核实并改写，
+#       追加到 jumpserver-docs/faq/community_faq.md，通过 PR 提交，不直接改动 main。
+#
+# 配套脚本: .github/scripts/community_faq.py（单文件自包含，仅用 Python 标准库；
+#           退出码 0=完成 / 1=取数失败 / 2=配置或参数错误 / 3=无新增条目）
+#
+# 部署位置（重要）:
+#   本 workflow 与 .github/scripts/community_faq.py 部署到**官方仓库**
+#   fit2cloud-dev/fit2cloud-docs，在 upstream 内运行、并在 upstream 内开 PR。
+#   因此**不需要任何跨仓库 PAT**：PR 就是同一个仓库里的「新分支 → main」，
+#   用 Actions 内置的 GITHUB_TOKEN 即可。
+#
+#   upstream 仓库侧需要配置:
+#     1. Settings -> Actions -> General -> Workflow permissions 选 "Read and write"；
+#     2. 同一页勾选 "Allow GitHub Actions to create and approve pull requests"
+#        —— 不勾选时 GITHUB_TOKEN 无法创建 PR，会直接报错；
+#     3. Secrets: ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY
+#        （以上四项**都是必填**；另可选 ZHIMA_DEPT_STAFF / LLM_MODEL；
+#          公司仓库建议配成组织级 Secret）。
+#        缺项时 workflow 会在 Preflight 步骤直接失败并指明缺哪一项，不会跑到一半才报错。
+#
+# 与 fork 的关系:
+#   - fork 只是本地开发副本，本 workflow 不做任何 fork ↔ upstream 的推送；
+#   - fork 与 upstream 的同步方向是「fork 拉取 upstream」，由
+#     .github/workflows/sync-fork.yml 部署在 **fork** 的 main 上完成
+#     （或直接用 GitHub 界面的 "Sync fork" 按钮）。
+#     ⚠️ 不要把 sync-fork.yml 也提交到 upstream：在 upstream 里它等于自己同步自己，无意义。
+#
+# 分支策略:
+#   - 固定分支 chore/weekly-community-faq 每次先变基到 main 最新，再累积本期新增条目；
+#   - PR 以**草稿态**创建，供人工核对内容与措辞后再合并；
+#   - 不直接改 main。
+#
+# 触发与时区（重要）:
+#   - 定时：每周一 03:00（北京时间）→ cron 按 UTC 写 '0 19 * * 0'（周日 19:00 UTC）；
+#   - **必须显式设置 TZ=Asia/Shanghai**：GitHub runner 默认跑在 UTC，而「周一 03:00 北京」
+#     落在 UTC 的周日，脚本里的 date.today() 会退回成周日，导致数据窗口与「周一」错位；
+#   - 回看窗口 8 天（含今天）：比 7 天多留一天，用来补回上一次运行当天 03:00 之后的消息，
+#     否则「上周一 03:00–23:59」这一段两次运行都覆盖不到；
+#   - GitHub 的 schedule 在整点高负载时可能被延迟、极端情况下会被丢弃，
+#     因此同时保留手动触发；窗口按日期计算，延迟几十分钟不影响数据完整性。
+#
+# 注意:
+#   - schedule 只在仓库默认分支(main)上生效；放在功能分支时只能用 workflow_dispatch。
+#   - 上期 PR 若是 **squash 合并**，固定分支的变基会与 main 冲突 → 本 workflow 会
+#     自动放弃变基、从 main 重建分支（只影响上期未合并时的累积，本轮新增不受影响）。
+#   - 在 fork 上测试时：fork 的定时任务默认关闭，用 workflow_dispatch 手动跑即可；
+#     ⚠️ 不要在 fork 上启用定时，否则 fork 与 upstream 会各开一个重复的 PR。
+#
+# 收录口径（见脚本内 PASS1/PASS2 提示词，可按需调整）:
+#   - 只收 V5 相关问题、且同一主题至少出现 min_count 次；
+#   - 只收「判断型/结论型」问题，官方文档与知识库已有完整操作教程的步骤型问题不收；
+#   - 答案只允许依据官方文档原文撰写，引用路径不存在即丢弃，绝不采信群聊里的说法。
+
+name: Auto Community FAQ (JumpServer)
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '回看天数（含今天）'
+        required: false
+        default: '8'
+      max_items:
+        description: '本期最多新增条目数'
+        required: false
+        default: '3'
+      min_count:
+        description: '同一主题至少出现几次才收录'
+        required: false
+        default: '2'
+      dry_run:
+        description: '只预览不提交（仍会调用模型）'
+        type: boolean
+        default: false
+      draft:
+        description: '以草稿方式创建 PR'
+        type: boolean
+        default: true
+  schedule:
+    # 每周一 03:00（北京时间）= 周日 19:00 UTC
+    - cron: '0 19 * * 0'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: community-faq
+  cancel-in-progress: false
+
+env:
+  # 全流程按北京时间计算日期：脚本的 date.today() 依赖它
+  # （周一 03:00 北京 = UTC 周日，不设 TZ 会让窗口与「周一」错位，见文件头说明）
+  TZ: Asia/Shanghai
+  BASE_BRANCH: main
+  BRANCH: chore/weekly-community-faq
+  FAQ_PAGE: jumpserver-docs/faq/community_faq.md
+  ZHIMA_BASE_URL: ${{ secrets.ZHIMA_BASE_URL }}
+  ZHIMA_ACCOUNT: ${{ secrets.ZHIMA_ACCOUNT }}
+  ZHIMA_PASSWORD: ${{ secrets.ZHIMA_PASSWORD }}
+  ZHIMA_DEPT_STAFF: ${{ secrets.ZHIMA_DEPT_STAFF }}
+  ZHIMA_SCOPE_STAFF_USERID: ${{ vars.ZHIMA_SCOPE_STAFF_USERID || 'SheQuXiaoZhuShou' }}
+  LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://ai.fit2cloud.cn/gateway/v1' }}
+  LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+  # 未配置 Variables 时用 f2c-auto（脚本内置默认值同此）
+  LLM_MODEL: ${{ vars.LLM_MODEL || 'f2c-auto' }}
+  PRODUCT_KEYWORD: jumpserver
+
+jobs:
+  community-faq:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 配置自检：缺东西就立刻失败并指明缺哪一项，避免跑到取数阶段才报错
+      - name: Preflight
+        run: |
+          set -e
+          missing=""
+          for name in ZHIMA_BASE_URL ZHIMA_ACCOUNT ZHIMA_PASSWORD LLM_API_KEY; do
+            if [ -z "${!name}" ]; then
+              echo "::error::缺少必需配置 ${name}（仓库 Settings → Secrets and variables → Actions 里添加）"
+              missing="${missing} ${name}"
+            fi
+          done
+          if [ -n "${missing}" ]; then
+            echo "缺失：${missing}"
+            exit 1
+          fi
+          echo "必需配置齐全：ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY"
+          if [ -z "${ZHIMA_DEPT_STAFF}" ]; then
+            echo "::warning::未配置 ZHIMA_DEPT_STAFF，解答人退化为「员工角色且非机器人」，频次统计可能偏宽"
+          else
+            echo "已配置 ZHIMA_DEPT_STAFF（部门名单）"
+          fi
+          echo "模型：${LLM_MODEL} / 网关：${LLM_BASE_URL}"
+
+      # 基线固定取本仓库当前 main 的最新提交（PR 的目标就是它）
+      - name: Prepare fixed branch
+        id: base
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch --no-tags origin "${BASE_BRANCH}"
+          BASE_REF="origin/${BASE_BRANCH}"
+          echo "base_ref=${BASE_REF}" >> "$GITHUB_OUTPUT"
+          echo "工作基线 ${BASE_REF} = $(git rev-parse --short "${BASE_REF}")"
+
+          if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
+            echo "固定分支 ${BRANCH} 已存在，检出并变基到 ${BASE_REF}"
+            git fetch --no-tags origin "${BRANCH}"
+            git checkout -B "${BRANCH}" "origin/${BRANCH}"
+            if ! git rebase "${BASE_REF}"; then
+              git rebase --abort || true
+              echo "::warning::变基到 ${BASE_REF} 失败（多为上期 PR 被 squash 合并所致），改为从基线重建分支"
+              git checkout -B "${BRANCH}" "${BASE_REF}"
+            fi
+          else
+            echo "首次运行，从 ${BASE_REF} 创建固定分支 ${BRANCH}"
+            git checkout -B "${BRANCH}" "${BASE_REF}"
+          fi
+
+      - name: Generate community FAQ entries
+        id: gen
+        env:
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: |
+          set -e
+          APPLY_FLAG="--apply"
+          if [ "${DRY_RUN}" = "true" ]; then
+            echo "dry_run=true：只预览，不写回页面、不推送、不开 PR"
+            APPLY_FLAG=""
+          fi
+
+          set +e
+          python .github/scripts/community_faq.py \
+            --days "${{ github.event.inputs.days || '8' }}" \
+            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --min-count "${{ github.event.inputs.min_count || '2' }}" \
+            --report "${REPORT}" \
+            ${APPLY_FLAG}
+          code=$?
+          set -e
+
+          # 退出码含义：0=完成 1=取数失败 2=配置/参数错误 3=无合格新条目
+          # 只有 3 才算「跑通了但本周没东西可写」；1/2 一律让 job 失败，
+          # 否则接口挂掉会伪装成「本周无新增」，绿色通过、静默跳过一整周。
+          case "${code}" in
+            0) : ;;
+            3) echo "本周没有合格的新条目，无需提 PR。" ;;
+            1) echo "::error::取数失败（退出码 1）：登录失败、接口异常，或所有群都没取到消息。请检查 ZHIMA_BASE_URL / 账号，以及 runner 能否访问该地址。"
+               exit 1 ;;
+            2) echo "::error::配置或参数错误（退出码 2）：请核对 Secrets/Variables，以及 jumpserver-docs/faq/community_faq.md 是否存在。"
+               exit 2 ;;
+            *) echo "::error::community_faq.py 异常退出（退出码 ${code}）"
+               exit "${code}" ;;
+          esac
+
+          echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
+          echo "report=${REPORT}" >> "$GITHUB_OUTPUT"
+          if [ -f "${REPORT}" ]; then
+            cat "${REPORT}"
+            # dry-run 没有 PR 可看，把报告直接写进 Actions 摘要，便于在 fork 上验证内容
+            if [ "${DRY_RUN}" = "true" ]; then
+              { echo; echo "---"; echo; cat "${REPORT}"; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+
+      - name: Commit and push
+        id: commit
+        if: ${{ steps.gen.outputs.changed == 'true' }}
+        run: |
+          set -e
+          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}")" ]; then
+            echo "页面无变化，跳过提交"
+            exit 0
+          fi
+
+          git add "${FAQ_PAGE}"
+          git commit -m "docs(faq): 补充本周社区常见问题"
+          git push --force-with-lease origin "${BRANCH}"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update pull request
+        id: pr
+        if: ${{ steps.commit.outputs.pushed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+        run: |
+          set -e
+          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}"
+
+          BODY="${RUNNER_TEMP}/pr-body.md"
+          {
+            echo "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。"
+            echo
+            echo "- 数据来源：芝麻会话（JumpServer 交流群）、最近 ${{ github.event.inputs.days || '8' }} 天"
+            echo "- 生成方式：\`.github/scripts/community_faq.py\` 依据官方文档改写后追加"
+            echo "- 目标文件：\`${FAQ_PAGE}\`"
+            echo "- 提交分支：\`${BRANCH}\`"
+            echo
+            if [ -f "${REPORT}" ]; then cat "${REPORT}"; fi
+          } > "${BODY}"
+
+          # 按北京时间取日期（job 级 TZ=Asia/Shanghai）
+          TITLE="docs(faq): 补充社区常见问题（$(date +%Y-%m-%d)）"
+
+          PR_NUMBER=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${BRANCH}" --state open \
+            --json number --jq '.[0].number // empty')
+
+          if [ -n "${PR_NUMBER}" ]; then
+            echo "已有开启中的 PR #${PR_NUMBER}，更新标题与描述"
+            gh pr edit "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" --title "${TITLE}" --body-file "${BODY}"
+          else
+            gh pr create --repo "${GITHUB_REPOSITORY}" --base "${BASE_BRANCH}" --head "${BRANCH}" \
+              --title "${TITLE}" --body-file "${BODY}" --draft
+            PR_NUMBER=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${BRANCH}" --state open \
+              --json number --jq '.[0].number // empty')
+          fi
+
+          if [ -n "${PR_NUMBER}" ]; then
+            echo "pr_number=${PR_NUMBER}" >> "$GITHUB_OUTPUT"
+            echo "pr_url=$(gh pr view "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" --json url --jq '.url')" >> "$GITHUB_OUTPUT"
+          fi
+
+          # 默认以草稿方式创建（draft 输入为 false 时再转为可合并状态）
+          if [ -n "${PR_NUMBER}" ] && [ "${{ github.event.inputs.draft }}" = "false" ]; then
+            gh pr ready "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" || true
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Auto Community FAQ (JumpServer)"
+            echo ""
+            echo "- 仓库: \`${GITHUB_REPOSITORY}\`"
+            echo "- 窗口: 最近 \`${{ github.event.inputs.days || '8' }}\` 天（含今天，按北京时间）"
+            echo "- 工作基线: \`${{ steps.base.outputs.base_ref || '-' }}\`"
+            echo "- 固定分支: \`${BRANCH}\`"
+            echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，1=取数失败，2=配置或参数错误，3=无合格新条目）"
+            echo "- 本轮推送: \`${{ steps.commit.outputs.pushed || 'false' }}\`"
+            echo "- 本轮 PR: ${{ steps.pr.outputs.pr_url || '-' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
