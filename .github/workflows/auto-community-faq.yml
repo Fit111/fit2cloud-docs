@@ -1,0 +1,308 @@
+# JumpServer 社区常见问题自动补充并提 PR
+#
+# 来源: 从芝麻会话（社区小助手名下 JumpServer 交流群）提取最近一周的
+#       「客户提问 → 部门同事解答」问答对，由大模型按官方文档核实并改写，
+#       追加到 jumpserver-docs/faq/community_faq.md，通过 PR 提交，不直接改动 main。
+#
+# 配套脚本: .github/scripts/community_faq.py（单文件自包含，退出码 0=完成 / 3=无新增）
+#
+# 分支策略:
+#   - 每次运行**第一步先同步 upstream**：把 fork 的 main 快进到
+#     fit2cloud-dev/fit2cloud-docs 的 main（仅快进 fast-forward，绝不强推；
+#     两边已分叉时只告警并跳过，不破坏 fork 的历史）；
+#   - 固定分支 chore/weekly-community-faq 每次先变基到同步后的最新 main，
+#     再累积本期新增条目；不直接改 main；
+#   - PR 默认提在**本仓库**（fork）内，草稿态，供人工核对；
+#   - 需要同时向官方仓库提 PR 时，手动触发并勾选 open_upstream_pr，
+#     该步骤需要额外配置有 repo 权限的 UPSTREAM_PR_TOKEN。
+#
+# fork 同步失败的情况:
+#   - fork 侧 main 有分支保护、或已与 upstream 分叉时，同步步骤只告警不中断；
+#     工作分支仍基于 fork 的 main（也就是 PR 的目标分支），PR diff 保持干净，
+#     只是 fork 的 main 暂时没跟到 upstream 最新，等人工处理同步即可。
+#   - 仅快进、绝不 force：宁可落后，也不覆盖 fork 上已有的提交。
+#
+# 与 sync-fork.yml 的分工:
+#   - .github/workflows/sync-fork.yml 每天定时把 fork 的 main 拉到 upstream 最新；
+#   - 本 workflow 运行前也做一次同样的快进同步（just-in-time），保证基线不漏；
+#   - 两者都只快进，重复执行无副作用。
+#
+# 关于「fork 与 upstream 完全一致」:
+#   - 只有当 fork 的 main 保持纯镜像（不在它上面直接落提交）时才成立。
+#     若本 workflow 的 PR 合进的是 fork 的 main 而非 upstream，fork main 就会
+#     领先 upstream；此时同步只能保证「已包含 upstream 最新」，无法做到完全一致，
+#     要完全一致需让改动直接合并进 upstream。
+#
+# 注意:
+#   - schedule 只在仓库默认分支(main)上生效；放在功能分支时只能用 workflow_dispatch。
+#   - 需要仓库 Settings -> Actions -> General -> Workflow permissions 设为
+#     "Read and write permissions"，否则推送分支与创建 PR 会 403。
+#   - 以下 Secrets 必填: ZHIMA_ACCOUNT, ZHIMA_PASSWORD, LLM_API_KEY
+#     以下可选: ZHIMA_BASE_URL, ZHIMA_DEPT_STAFF, LLM_MODEL, UPSTREAM_PR_TOKEN
+#     （ZHIMA_DEPT_STAFF 为部门在职名单 JSON，如 [{"name":"张三"}]；
+#      不配则退化为「员工角色且非机器人」，可能把部门外人员也算作解答人；
+#      LLM_MODEL 不配则默认 f2c-auto）
+#
+# 收录口径（见脚本内 PASS1/PASS2 提示词，可按需调整）:
+#   - 只收 V5 相关问题、且同一主题至少出现 min_count 次；
+#   - 只收「判断型/结论型」问题，官方文档与知识库已有完整操作教程的步骤型问题不收；
+#   - 答案只允许依据官方文档原文撰写，引用路径不存在即丢弃，绝不采信群聊里的说法。
+
+name: Auto Community FAQ (JumpServer)
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '回看天数'
+        required: false
+        default: '7'
+      max_items:
+        description: '本期最多新增条目数'
+        required: false
+        default: '3'
+      min_count:
+        description: '同一主题至少出现几次才收录'
+        required: false
+        default: '2'
+      dry_run:
+        description: '只预览不提交（仍会调用模型）'
+        type: boolean
+        default: false
+      draft:
+        description: '以草稿方式创建 PR'
+        type: boolean
+        default: true
+      open_upstream_pr:
+        description: '同时向官方仓库提 PR（需 UPSTREAM_PR_TOKEN）'
+        type: boolean
+        default: false
+  schedule:
+    # 每周一 01:30 UTC（北京时间 09:30）
+    - cron: '30 1 * * 1'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: community-faq
+  cancel-in-progress: false
+
+env:
+  BASE_BRANCH: main
+  BRANCH: chore/weekly-community-faq
+  FAQ_PAGE: jumpserver-docs/faq/community_faq.md
+  UPSTREAM_REPO: fit2cloud-dev/fit2cloud-docs
+  ZHIMA_BASE_URL: ${{ secrets.ZHIMA_BASE_URL }}
+  ZHIMA_ACCOUNT: ${{ secrets.ZHIMA_ACCOUNT }}
+  ZHIMA_PASSWORD: ${{ secrets.ZHIMA_PASSWORD }}
+  ZHIMA_DEPT_STAFF: ${{ secrets.ZHIMA_DEPT_STAFF }}
+  ZHIMA_SCOPE_STAFF_USERID: ${{ vars.ZHIMA_SCOPE_STAFF_USERID || 'SheQuXiaoZhuShou' }}
+  LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://ai.fit2cloud.cn/gateway/v1' }}
+  LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+  # 未配置 Variables 时用 f2c-auto（脚本内置默认值同此）
+  LLM_MODEL: ${{ vars.LLM_MODEL || 'f2c-auto' }}
+  PRODUCT_KEYWORD: jumpserver
+
+jobs:
+  community-faq:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 常驻环节：每次运行都先把 fork 的 main 与 upstream 对齐（仅快进，绝不强推）
+      - name: Sync fork main with upstream
+        id: sync
+        continue-on-error: true
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          UPSTREAM_URL="https://github.com/${UPSTREAM_REPO}.git"
+          if git remote get-url upstream >/dev/null 2>&1; then
+            git remote set-url upstream "${UPSTREAM_URL}"
+          else
+            git remote add upstream "${UPSTREAM_URL}"
+          fi
+          echo "upstream = ${UPSTREAM_URL}"
+
+          git fetch --no-tags upstream "${BASE_BRANCH}"
+          git fetch --no-tags origin "${BASE_BRANCH}"
+
+          # 工作基线取 fork 的 main（PR 的目标分支），与 PR 保持一致；
+          # 它已被上一步同步到 upstream，所以正常情形两者同点。
+          echo "base_ref=origin/${BASE_BRANCH}" >> "$GITHUB_OUTPUT"
+
+          FORK_HEAD=$(git rev-parse "origin/${BASE_BRANCH}")
+          UP_HEAD=$(git rev-parse "upstream/${BASE_BRANCH}")
+          echo "fork/${BASE_BRANCH}=${FORK_HEAD:0:8}  upstream/${BASE_BRANCH}=${UP_HEAD:0:8}"
+
+          if [ "${FORK_HEAD}" = "${UP_HEAD}" ]; then
+            echo "fork 已与 upstream 一致，无需同步"
+            echo "synced=already" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if git merge-base --is-ancestor "origin/${BASE_BRANCH}" "upstream/${BASE_BRANCH}"; then
+            echo "fork 落后 upstream，快进同步到 ${UP_HEAD:0:8}"
+            git push origin "refs/remotes/upstream/${BASE_BRANCH}:refs/heads/${BASE_BRANCH}"
+            git fetch --no-tags origin "${BASE_BRANCH}"
+            echo "synced=fast-forward" >> "$GITHUB_OUTPUT"
+          elif git merge-base --is-ancestor "upstream/${BASE_BRANCH}" "origin/${BASE_BRANCH}"; then
+            echo "fork 领先 upstream（已包含 upstream 全部最新提交），无需同步"
+            echo "synced=ahead" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::fork/${BASE_BRANCH} 与 upstream/${BASE_BRANCH} 已分叉（双方各有对方没有的提交），跳过自动同步，请人工处理"
+            echo "synced=diverged" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prepare fixed branch
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 基线优先用同步步骤给出的 upstream 引用；取不到再回落 fork 的 main
+          BASE_REF="${{ steps.sync.outputs.base_ref }}"
+          if [ -z "${BASE_REF}" ]; then
+            git fetch --no-tags origin "${BASE_BRANCH}"
+            BASE_REF="origin/${BASE_BRANCH}"
+          fi
+          echo "工作基线 ${BASE_REF} = $(git rev-parse --short "${BASE_REF}")"
+
+          if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
+            echo "固定分支 ${BRANCH} 已存在，检出并变基到 ${BASE_REF}"
+            git fetch --no-tags origin "${BRANCH}"
+            git checkout -B "${BRANCH}" "origin/${BRANCH}"
+            git rebase "${BASE_REF}"
+          else
+            echo "首次运行，从 ${BASE_REF} 创建固定分支 ${BRANCH}"
+            git checkout -B "${BRANCH}" "${BASE_REF}"
+          fi
+
+      - name: Generate community FAQ entries
+        id: gen
+        env:
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+        run: |
+          APPLY_FLAG="--apply"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "dry_run=true：只预览，不写回页面"
+            APPLY_FLAG=""
+          fi
+
+          set +e
+          python .github/scripts/community_faq.py \
+            --days "${{ github.event.inputs.days || '7' }}" \
+            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --min-count "${{ github.event.inputs.min_count || '2' }}" \
+            --report "${REPORT}" \
+            ${APPLY_FLAG}
+          code=$?
+          set -e
+
+          if [ "${code}" -eq 3 ]; then
+            echo "本周没有合格的新条目，无需提 PR。"
+          elif [ "${code}" -ne 0 ]; then
+            echo "::error::community_faq.py 退出码 ${code}"
+            exit "${code}"
+          fi
+
+          echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
+          echo "report=${REPORT}" >> "$GITHUB_OUTPUT"
+          if [ -f "${REPORT}" ]; then cat "${REPORT}"; fi
+
+      - name: Commit and push
+        id: commit
+        if: ${{ steps.gen.outputs.changed == 'true' }}
+        run: |
+          set -e
+          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}")" ]; then
+            echo "页面无变化，跳过提交"
+            exit 0
+          fi
+
+          git add "${FAQ_PAGE}"
+          git commit -m "docs(faq): 补充本周社区常见问题"
+          git push --force-with-lease origin "${BRANCH}"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update pull request
+        if: ${{ steps.commit.outputs.pushed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+        run: |
+          set -e
+          BODY="${RUNNER_TEMP}/pr-body.md"
+          {
+            echo "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。"
+            echo
+            echo "- 数据来源：芝麻会话（JumpServer 交流群）、最近 ${{ github.event.inputs.days || '7' }} 天"
+            echo "- 生成方式：\`.github/scripts/community_faq.py\` 依据官方文档改写后追加"
+            echo "- 目标文件：\`${FAQ_PAGE}\`"
+            echo
+            if [ -f "${REPORT}" ]; then cat "${REPORT}"; fi
+          } > "${BODY}"
+
+          TITLE="docs(faq): 补充社区常见问题（$(date -u +%Y-%m-%d)）"
+          OPEN_PR=$(gh pr list --head "${BRANCH}" --state open --json number --jq 'length')
+          if [ "${OPEN_PR}" != "0" ]; then
+            echo "已有开启中的 PR，更新描述"
+            gh pr edit "${BRANCH}" --title "${TITLE}" --body-file "${BODY}"
+          else
+            gh pr create --base "${BASE_BRANCH}" --head "${BRANCH}" \
+              --title "${TITLE}" --body-file "${BODY}" --draft
+          fi
+
+          # 默认以草稿方式创建（draft 输入为 false 时再转为可合并状态）
+          if [ "${{ github.event.inputs.draft }}" = "false" ]; then
+            gh pr ready "${BRANCH}" || true
+          fi
+
+      - name: Open upstream pull request (optional)
+        if: ${{ github.event.inputs.open_upstream_pr == 'true' && steps.commit.outputs.pushed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.UPSTREAM_PR_TOKEN }}
+        run: |
+          set -e
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::warning::未配置 UPSTREAM_PR_TOKEN，跳过向 upstream 提 PR"
+            exit 0
+          fi
+          HEAD_REF="${{ github.repository_owner }}:${BRANCH}"
+          OPEN_COUNT=$(gh pr list --repo "${UPSTREAM_REPO}" --head "${HEAD_REF}" \
+            --state open --json number --jq 'length')
+          if [ "${OPEN_COUNT}" != "0" ]; then
+            echo "upstream 已有对应 PR，跳过"
+            exit 0
+          fi
+          gh pr create --repo "${UPSTREAM_REPO}" --base "main" --head "${HEAD_REF}" \
+            --title "docs(faq): 补充 JumpServer 社区常见问题（$(date -u +%Y-%m-%d)）" \
+            --body-file "${RUNNER_TEMP}/pr-body.md"
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Auto Community FAQ (JumpServer)"
+            echo ""
+            echo "- 窗口: 最近 \`${{ github.event.inputs.days || '7' }}\` 天"
+            echo "- fork 同步: \`${{ steps.sync.outputs.synced || 'skipped' }}\`（already=本就一致 / fast-forward=已快进 / ahead=本地领先且已含最新 / diverged=已分叉跳过）"
+            echo "- 固定分支: \`${BRANCH}\`"
+            echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，3=无新增）"
+            echo "- 本轮推送: \`${{ steps.commit.outputs.pushed || 'false' }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
