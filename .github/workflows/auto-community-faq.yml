@@ -404,53 +404,120 @@ jobs:
           fi
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
+      # ⚠️ **不用 gh CLI**（2026-09-24 实测）：自托管 runner 是自建镜像，里面没有 gh →
+      # `line 20: gh: command not found`、退出码 127。装 gh 又要重建镜像 + 再走一次跨境下载，
+      # 而容器里本来就有 python3（Preflight 已在用）→ 改用标准库直接调 GitHub REST API，
+      # 零新依赖、workspace 与镜像都不用动。
+      # 权限要求与 gh 相同：Settings -> Actions -> General 勾选
+      # "Allow GitHub Actions to create and approve pull requests"，否则会返回
+      # "Resource not accessible by integration"（脚本会把这句提示打到日志里）。
       - name: Create or update pull request
         id: pr
         if: ${{ steps.commit.outputs.pushed == 'true' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPORT: ${{ runner.temp }}/community-faq-report.md
+          DAYS: ${{ github.event.inputs.days || '8' }}
+          DRAFT: ${{ github.event.inputs.draft || 'true' }}
         run: |
           set -e
-          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}"
+          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}（draft=${DRAFT}）"
+          python3 - <<'PY'
+          import datetime, json, os, sys, urllib.error, urllib.request
 
-          BODY="${RUNNER_TEMP}/pr-body.md"
-          {
-            echo "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。"
-            echo
-            echo "- 数据来源：芝麻会话（JumpServer 交流群）、最近 ${{ github.event.inputs.days || '8' }} 天"
-            echo "- 生成方式：\`.github/scripts/community_faq.py\` 依据官方文档改写后追加"
-            echo "- 目标文件：\`${FAQ_PAGE}\`"
-            echo "- 提交分支：\`${BRANCH}\`"
-            echo
-            if [ -f "${REPORT}" ]; then cat "${REPORT}"; fi
-          } > "${BODY}"
+          TOKEN = os.environ["GH_TOKEN"]
+          REPO = os.environ["GITHUB_REPOSITORY"]              # owner/name
+          API = os.environ.get("GITHUB_API_URL") or "https://api.github.com"
+          BASE = os.environ["BASE_BRANCH"]
+          BRANCH = os.environ["BRANCH"]
+          PAGE = os.environ["FAQ_PAGE"]
+          DAYS = os.environ.get("DAYS") or "8"
+          DRAFT = (os.environ.get("DRAFT") or "true").strip().lower() == "true"
+          OWNER = REPO.split("/")[0]
+
+
+          def api(method, path, payload=None):
+              """返回 (status, parsed_json_or_text)；4xx/5xx 不抛异常，交给调用方判断。"""
+              data = json.dumps(payload).encode() if payload is not None else None
+              req = urllib.request.Request(API + path, data=data, method=method)
+              req.add_header("Authorization", "Bearer " + TOKEN)
+              req.add_header("Accept", "application/vnd.github+json")
+              req.add_header("X-GitHub-Api-Version", "2022-11-28")
+              req.add_header("User-Agent", "fit2cloud-docs-community-faq")
+              if data is not None:
+                  req.add_header("Content-Type", "application/json")
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as resp:
+                      raw = resp.read().decode("utf-8", "replace")
+                      return resp.status, (json.loads(raw) if raw.strip() else None)
+              except urllib.error.HTTPError as exc:
+                  return exc.code, exc.read().decode("utf-8", "replace")
+
+
+          # ---- 组装 PR 描述（含本期报告）----
+          lines = [
+              "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。",
+              "",
+              "- 数据来源：芝麻会话（JumpServer 交流群）、最近 %s 天" % DAYS,
+              "- 生成方式：`.github/scripts/community_faq.py` 依据官方文档改写后追加",
+              "- 目标文件：`%s`" % PAGE,
+              "- 提交分支：`%s`" % BRANCH,
+              "",
+          ]
+          report = os.environ.get("REPORT") or ""
+          if report and os.path.isfile(report):
+              with open(report, encoding="utf-8") as fh:
+                  lines.append(fh.read())
+          body = "\n".join(lines)
 
           # 按北京时间取日期（job 级 TZ=Asia/Shanghai）
-          TITLE="docs(faq): 补充社区常见问题（$(date +%Y-%m-%d)）"
+          title = "docs(faq): 补充社区常见问题（%s）" % datetime.date.today().isoformat()
 
-          PR_NUMBER=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${BRANCH}" --state open \
-            --json number --jq '.[0].number // empty')
+          # ---- 查是否已有开启中的 PR：列 open PR 后按 head 自行过滤 ----
+          # 不用 ?head=owner:branch（分支名带 / 时参数转义容易出岔子），自己比 head.ref 更稳
+          status, prs = api("GET", "/repos/%s/pulls?state=open&per_page=100" % REPO)
+          if status != 200:
+              print("::error::列取开启中的 PR 失败（HTTP %s）：%s" % (status, prs))
+              sys.exit(1)
+          existing = None
+          for pr in (prs or []):
+              head = pr.get("head") or {}
+              if head.get("ref") == BRANCH and (head.get("repo") or {}).get("full_name") == REPO:
+                  existing = pr
+                  break
 
-          if [ -n "${PR_NUMBER}" ]; then
-            echo "已有开启中的 PR #${PR_NUMBER}，更新标题与描述"
-            gh pr edit "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" --title "${TITLE}" --body-file "${BODY}"
-          else
-            gh pr create --repo "${GITHUB_REPOSITORY}" --base "${BASE_BRANCH}" --head "${BRANCH}" \
-              --title "${TITLE}" --body-file "${BODY}" --draft
-            PR_NUMBER=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${BRANCH}" --state open \
-              --json number --jq '.[0].number // empty')
-          fi
+          if existing:
+              num = existing["number"]
+              print("已有开启中的 PR #%d，更新标题与描述" % num)
+              status, res = api("PATCH", "/repos/%s/pulls/%d" % (REPO, num),
+                                {"title": title, "body": body})
+          else:
+              print("新建 PR（draft=%s）" % DRAFT)
+              status, res = api("POST", "/repos/%s/pulls" % REPO,
+                                {"title": title, "body": body, "head": BRANCH,
+                                 "base": BASE, "draft": DRAFT})
 
-          if [ -n "${PR_NUMBER}" ]; then
-            echo "pr_number=${PR_NUMBER}" >> "$GITHUB_OUTPUT"
-            echo "pr_url=$(gh pr view "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" --json url --jq '.url')" >> "$GITHUB_OUTPUT"
-          fi
+          if status not in (200, 201):
+              print("::error::创建/更新 PR 失败（HTTP %s）：%s" % (status, res))
+              print("::error::若提示 Resource not accessible by integration，请到仓库 "
+                    "Settings -> Actions -> General 勾选 "
+                    "\"Allow GitHub Actions to create and approve pull requests\"。")
+              sys.exit(1)
 
-          # 默认以草稿方式创建（draft 输入为 false 时再转为可合并状态）
-          if [ -n "${PR_NUMBER}" ] && [ "${{ github.event.inputs.draft }}" = "false" ]; then
-            gh pr ready "${PR_NUMBER}" --repo "${GITHUB_REPOSITORY}" || true
-          fi
+          num = res["number"]
+          url = res["html_url"]
+          print("PR #%d %s" % (num, url))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write("pr_number=%d\npr_url=%s\n" % (num, url))
+
+          # draft 输入为 false 时，把草稿态转成可合并
+          if not DRAFT and res.get("draft"):
+              status, err = api("POST", "/repos/%s/pulls/%d/ready_for_review" % (REPO, num))
+              if status in (200, 201):
+                  print("已转为可合并状态")
+              else:
+                  print("::warning::转为可合并失败（HTTP %s）：%s" % (status, err))
+          PY
 
       - name: Summary
         if: always()
@@ -462,7 +529,7 @@ jobs:
             echo "- 窗口: 最近 \`${{ github.event.inputs.days || '8' }}\` 天（含今天，按北京时间）"
             echo "- 工作基线: \`${{ steps.base.outputs.base_ref || '-' }}\`"
             echo "- 固定分支: \`${BRANCH}\`"
-            echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，1=取数失败，2=配置或参数错误，3=无合格新条目）"
+            echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，1=取数失败，2=配置或参数错误，3=无合格新条目，4=大模型环节失败）"
             echo "- 本轮推送: \`${{ steps.commit.outputs.pushed || 'false' }}\`"
             echo "- 本轮 PR: ${{ steps.pr.outputs.pr_url || '-' }}"
           } >> "$GITHUB_STEP_SUMMARY"
