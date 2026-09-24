@@ -35,12 +35,16 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
     LLM_MODEL                  模型名，默认 f2c-auto（飞致云 AI 网关自动路由）；置空则列出网关可用模型
     PRODUCT_KEYWORD            群名过滤关键词，默认 jumpserver
 
-退出码: 0=完成, 1=取数失败, 2=配置/参数错误, 3=无合格新条目（不需要提 PR）
+退出码: 0=完成, 1=取数失败, 2=配置/参数错误, 3=无合格新条目（不需要提 PR）,
+        4=大模型环节失败（网关不可达 / 鉴权失败 / 模型无返回）
 
-关于退出码 1 与 3 的区别（重要）:
+关于退出码 1 / 3 / 4 的区别（重要）:
     3 只用于「确实取到了数据、只是没有合格的新条目」，此时 workflow 视为成功且不提 PR。
-    凡是取数环节出问题（登录失败、接口异常、一条消息都没取到），一律返回 1 并让 job 失败——
-    否则接口整体挂掉时会伪装成「本周无新增」，绿色成功、静默跳过一整周，没人会发现。
+    1 专指**取数**环节：登录失败、接口异常、一条消息都没取到——若被当成「无新增」，
+      接口整体挂掉时会伪装成绿色成功、静默跳过一整周，没人会发现。
+    4 专指**大模型**环节：LLM_BASE_URL 不可达、LLM_API_KEY 无效、模型无返回。
+      必须单独成码，否则报错文案会指向取数、把排查方向带偏
+      （2026-09-23 实测：取数 321 条全部成功，仅模型网关跨境超时，却被报成「取数失败」）。
 """
 from __future__ import annotations
 
@@ -208,7 +212,12 @@ def zhima_base() -> str:
 
 
 def zhima_login() -> str:
-    """账密换 token。管理端 login 接口字段是 username，不是 account。"""
+    """账密换 token。管理端 login 接口字段是 username，不是 account。
+
+    ⚠️ 拿到的 token 必须走 ``Authorization: Bearer <token>``（见 zhima_headers）。
+    裸 token 会被判 ``401 登录过期`` —— 登录明明是成功的，报错却指向登录，
+    2026-09-23 踩过这个坑（误以为是账号密码问题）。
+    """
     account = cfg("ZHIMA_ACCOUNT")
     password = cfg("ZHIMA_PASSWORD")
     if not account or not password:
@@ -226,6 +235,15 @@ def zhima_login() -> str:
     return str(token)
 
 
+def zhima_headers(token: str) -> dict[str, str]:
+    """芝麻接口统一的鉴权头。
+
+    ⚠️ 必须带 ``Bearer `` 前缀：login 返回的 token 是裸 JWT（自身不含 Bearer），
+    少这个前缀会被服务端判 ``401 登录过期``。
+    """
+    return {"Authorization": f"Bearer {token}"}
+
+
 def zhima_groups(token: str) -> list[dict]:
     """拉社区小助手名下全部群（未过滤）。"""
     staff = cfg("ZHIMA_SCOPE_STAFF_USERID", "SheQuXiaoZhuShou")
@@ -237,7 +255,7 @@ def zhima_groups(token: str) -> list[dict]:
             "GET",
             f"{zhima_base()}/api/chats/by/staff/room/conversation/list",
             params={"staff_userid": staff, "page": page, "size": 50},
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             raise fail(1, f"拉取群列表失败: {res.get('error_message') or res}")
@@ -276,7 +294,7 @@ def zhima_staff_directory(token: str) -> list[dict]:
             "GET",
             f"{zhima_base()}/api/staff/list",
             params={"page": page, "limit": 50},
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             raise fail(1, f"拉取员工目录失败: {res.get('error_message') or res}")
@@ -346,7 +364,7 @@ def fetch_day_messages(token: str, chat_id: str, day: str) -> list[dict]:
                 "msg_start_time": f"{day} 00:00:00",
                 "msg_end_time": f"{day} 23:59:59",
             },
-            headers={"Authorization": token},
+            headers=zhima_headers(token),
         )
         if res.get("status") != "success":
             # 抛给上层统一统计失败次数。这里若只是 log + break，
@@ -720,7 +738,7 @@ def llm_chat(messages: list[dict], *, temperature: float = 0.2, max_tokens: int 
         try:
             available = llm_models(base, key)
         except Exception as err:
-            raise fail(2, f"缺少 LLM_MODEL，且列模型失败: {err}") from err
+            raise fail(4, f"无法确定模型名，且列模型失败（多为网关不可达）: {err}") from err
         raise fail(2, f"缺少 LLM_MODEL，网关可用模型: {', '.join(available) or '(空)'}")
     payload = {"model": model, "messages": messages,
                "temperature": temperature, "max_tokens": max_tokens}
@@ -728,10 +746,10 @@ def llm_chat(messages: list[dict], *, temperature: float = 0.2, max_tokens: int 
         res = http_json("POST", f"{base}/chat/completions", body=payload,
                         headers={"Authorization": f"Bearer {key}"}, timeout=180)
     except RuntimeError as err:
-        raise fail(1, f"模型调用失败: {err}") from err
+        raise fail(4, f"模型调用失败（网关 {base}）: {err}") from err
     choices = res.get("choices") or []
     if not choices:
-        raise fail(1, f"模型无返回: {str(res)[:300]}")
+        raise fail(4, f"模型无返回: {str(res)[:300]}")
     return str((choices[0].get("message") or {}).get("content") or "")
 
 
