@@ -50,9 +50,18 @@
 #     故 runner 容器**不要挂载 /var/run/docker.sock**。
 #
 # 分支策略:
-#   - 固定分支 chore/weekly-community-faq 每次先变基到 main 最新，再累积本期新增条目；
+#   - 固定分支 chore/weekly-community-faq 每次以 main 最新为基线重建（**不做 rebase**，见下），
+#     并把上期分支里那一个页面取回来，累积尚未合并的条目；
 #   - PR 以**草稿态**创建，供人工核对内容与措辞后再合并；
 #   - 不直接改 main。
+#
+# 跨境链路（重要，2026-09-24 实测）:
+#   - 本仓库当前版本就 ~1.9GB / 8393 个文件、全历史 pack ~1.4GB，而本任务只需 0.92MB
+#     （.github/ + jumpserver-docs 下所有 md）。国内自托管 runner 到 GitHub 是「小请求快、
+#     大流量被掐」：实测 curl 226MB 中途 SSL EOF、git fetch 全量 13 分钟后 curl 56 / early EOF。
+#   - 因此 checkout 采用**浅历史 + 部分克隆 + 稀疏检出**（见该步骤注释），且**全程不做 rebase**
+#     —— rebase 需要两个分支的公共祖先，会强迫拉完整历史。
+#     ⚠️ 改动 checkout 与「Prepare fixed branch」前务必意识到这点，否则会重新引入 GB 级传输。
 #
 # 触发与时区（重要）:
 #   - 定时：每周一 03:00（北京时间）→ cron 按 UTC 写 '0 19 * * 0'（周日 19:00 UTC）；
@@ -65,8 +74,8 @@
 #
 # 注意:
 #   - schedule 只在仓库默认分支(main)上生效；放在功能分支时只能用 workflow_dispatch。
-#   - 上期 PR 若是 **squash 合并**，固定分支的变基会与 main 冲突 → 本 workflow 会
-#     自动放弃变基、从 main 重建分支（只影响上期未合并时的累积，本轮新增不受影响）。
+#   - 上期 PR 若是 **squash 合并**：本 workflow 不依赖提交历史（以 main 为基线重建分支 +
+#     取回上期页面），因此 squash 合并不再引起任何冲突或历史问题。
 #   - 在 fork 上测试时：fork 的定时任务默认关闭，用 workflow_dispatch 手动跑即可；
 #     ⚠️ 不要在 fork 上启用定时，否则 fork 与 upstream 会各开一个重复的 PR。
 #
@@ -142,16 +151,34 @@ jobs:
     timeout-minutes: 40
 
     steps:
-      - name: Checkout
+      # ⚠️ 跨境链路优化（2026-09-24）：本仓库当前版本就 ~1.9GB / 8393 个文件，全历史 pack ~1.4GB，
+      # 而本任务真正需要的只有 .github/（脚本）与 jumpserver-docs/ 下的 md —— 合计 0.92MB。
+      # 所以必须「浅历史 + 部分克隆 + 稀疏检出」三者齐上，少任何一个都会退化成 GB 级传输：
+      #   fetch-depth: 1    —— 不拉历史。原先写 0（为了后面 rebase），会拉全部分支+标签+完整历史，
+      #                        2026-09-24 实测必失败：curl 56 GnuTLS recv error / early EOF，13 分钟被掐。
+      #   filter: blob:none —— 只取本次提交的 commit/tree，不下载 blob（文件内容按需再取）
+      #   sparse-checkout   —— 工作区只物化下面两个范围，于是「按需取」的 blob 也只有这 0.92MB
+      # 配套：本 workflow 已**取消 rebase**（见 Prepare fixed branch），因此不再需要完整历史。
+      # 另：不再使用 actions/setup-python —— runner 自带 python3 即可，少一个跨境下载点。
+      - name: Checkout (partial clone + sparse)
         uses: actions/checkout@v4
         with:
           ref: ${{ env.BASE_BRANCH }}
-          fetch-depth: 0
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+          fetch-depth: 1
+          filter: blob:none
+          # 稀疏范围 = 脚本本体 + jumpserver-docs 下**全部 md**（不能只取 faq/）：
+          #   第二轮成稿会 read_text 读取被引用文档的**全文**喂给模型（见 community_faq.py
+          #   的 compose_entry），所以这些 md 必须真实存在。该目录里 73.85MB 是图片、
+          #   md 仅 0.81MB，故用非 cone 模式按扩展名精确包含。
+          #   实测（2026-09-24, a6704ab）：.github 0.11MB + 192 个 md 0.81MB = 0.92MB，
+          #   相对全量 1475MB 省掉 99.94%。
+          #   退路：若非 cone 模式在下游（git checkout 单文件等）出问题，改回 cone 模式并把范围
+          #   换成 jumpserver-docs（74.8MB）即可，功能等价（代价是多传 74MB 图片）。
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+            /jumpserver-docs/*.md
+            /jumpserver-docs/**/*.md
 
       # 配置自检：缺东西就立刻失败并指明缺哪一项，避免跑到取数阶段才报错
       - name: Preflight
@@ -176,12 +203,25 @@ jobs:
           fi
           echo "模型：${LLM_MODEL} / 网关：${LLM_BASE_URL}"
           echo "运行环境：${RUNNER_NAME:-?} / ${RUNNER_OS:-?} ${RUNNER_ARCH:-?} / $(python3 -V 2>&1)"
+          # 不再依赖 actions/setup-python，故自行校验解释器（脚本用到 3.7+ 语法，3.6 会 SyntaxError）
+          if ! python3 -c 'import sys; sys.exit(0 if sys.version_info >= (3, 7) else 1)' 2>/dev/null; then
+            echo "::error::runner 上的 python3 不可用或版本过低（需 >= 3.7）：$(python3 -V 2>&1)"
+            exit 1
+          fi
+          # 稀疏检出防呆：第二轮成稿要读 jumpserver-docs 下被引用文档的原文，若 md 数量异常偏少
+          # （例如 sparse 范围误写成只含 faq/），脚本会静默拿不到依据 —— 这里提前拦下。
+          md_count=$(find jumpserver-docs -name '*.md' 2>/dev/null | wc -l)
+          echo "检出文档：jumpserver-docs 下 ${md_count} 个 md"
+          if [ "${md_count}" -lt 50 ]; then
+            echo "::error::只检出 ${md_count} 个 md（预期约 192 个）—— 稀疏检出范围可能不对，第二轮读文档原文会失败。"
+            exit 1
+          fi
 
           # 出网与外部依赖连通性自检：在发起 288 次取数请求之前就暴露网络问题，
           # 并把「芝麻」与「模型网关」**分别**探明 + 打印解析到的 IP —— 只有一边不通时
           # 一眼就能看出是哪一边（2026-09-23 实测：芝麻通、模型网关跨境超时，
           # 却要等取数跑完 5 分钟才炸，且报错还指向了错误环节）。
-          python - <<'PY'
+          python3 - <<'PY'
           import json, os, socket, sys, urllib.error, urllib.request
 
 
@@ -244,7 +284,13 @@ jobs:
           print("[自检] 通过：芝麻会话与模型网关均可达。")
           PY
 
-      # 基线固定取本仓库当前 main 的最新提交（PR 的目标就是它）
+      # 基线固定取本仓库当前 main 的最新提交（PR 的目标就是它）。
+      # ⚠️ 这里**不做 rebase**（2026-09-24 改）：变基要算 origin/BRANCH 与 origin/main 的公共祖先，
+      # 会强迫 checkout 拉完整历史 —— 跨境 1.4GB，实测必失败。而本分支**只动一个文件**（FAQ_PAGE），
+      # 所以用「以 main 为基线新建分支 + git checkout 取回上期分支里的该文件」等价替代：
+      # 结果同样是「main 的最新内容 + 上期尚未合并的条目」，且只需浅历史。
+      # 唯一的边界情况：若 main 上的该页面被人工改过、而分支版本更旧，则会把旧内容带回来 ——
+      # 这在 PR diff 里表现为删除行，人工合并时可见（旧实现的 rebase 冲突回退反而会丢掉上期条目）。
       - name: Prepare fixed branch
         id: base
         run: |
@@ -252,23 +298,33 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git fetch --no-tags origin "${BASE_BRANCH}"
+          # 浅拉基线：只取 tip，不拉历史；显式指定 remote-tracking ref，
+          # 保证后面 push --force-with-lease 依据的「本地已知远端值」准确。
+          git fetch --no-tags --depth=1 --force origin \
+            "+refs/heads/${BASE_BRANCH}:refs/remotes/origin/${BASE_BRANCH}"
           BASE_REF="origin/${BASE_BRANCH}"
           echo "base_ref=${BASE_REF}" >> "$GITHUB_OUTPUT"
           echo "工作基线 ${BASE_REF} = $(git rev-parse --short "${BASE_REF}")"
 
+          # 首跑与续跑都从干净的基线重建固定分支
+          git checkout -B "${BRANCH}" "${BASE_REF}"
+
           if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
-            echo "固定分支 ${BRANCH} 已存在，检出并变基到 ${BASE_REF}"
-            git fetch --no-tags origin "${BRANCH}"
-            git checkout -B "${BRANCH}" "origin/${BRANCH}"
-            if ! git rebase "${BASE_REF}"; then
-              git rebase --abort || true
-              echo "::warning::变基到 ${BASE_REF} 失败（多为上期 PR 被 squash 合并所致），改为从基线重建分支"
-              git checkout -B "${BRANCH}" "${BASE_REF}"
+            echo "固定分支 ${BRANCH} 已存在，取回其上期的 ${FAQ_PAGE}（保留尚未合并的条目）"
+            git fetch --no-tags --depth=1 --force origin \
+              "+refs/heads/${BRANCH}:refs/remotes/origin/${BRANCH}"
+            if git checkout FETCH_HEAD -- "${FAQ_PAGE}"; then
+              echo "已取回上期页面，本周新增将叠加在其后"
+            else
+              echo "::warning::上期分支中不存在 ${FAQ_PAGE}，按全新生成处理"
             fi
           else
-            echo "首次运行，从 ${BASE_REF} 创建固定分支 ${BRANCH}"
-            git checkout -B "${BRANCH}" "${BASE_REF}"
+            # 远端没有该分支：首跑，或上期 PR 合并后分支被「自动删除分支」清掉了。
+            # ⚠️ 自托管 runner 的 workspace 是**持久化**的，本地可能还残留该分支的
+            # remote-tracking 引用；不清掉的话，后面 push --force-with-lease 会拿这个过期值
+            # 去比对，被误拒为 "stale info"（2026-09-24 实测复现）。
+            git update-ref -d "refs/remotes/origin/${BRANCH}" 2>/dev/null || true
+            echo "首次运行（或固定分支已被删除），从 ${BASE_REF} 创建分支 ${BRANCH}"
           fi
 
       - name: Generate community FAQ entries
@@ -285,7 +341,7 @@ jobs:
           fi
 
           set +e
-          python .github/scripts/community_faq.py \
+          python3 .github/scripts/community_faq.py \
             --days "${{ github.event.inputs.days || '8' }}" \
             --max-items "${{ github.event.inputs.max_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
@@ -334,7 +390,18 @@ jobs:
 
           git add "${FAQ_PAGE}"
           git commit -m "docs(faq): 补充本周社区常见问题"
-          git push --force-with-lease origin "${BRANCH}"
+
+          # 推送：显式给出租约的「期望值」，不用裸 --force-with-lease。
+          # 2026-09-24 实测：裸写法在「远程跟踪引用不是由配置的 refspec 更新」时会误报
+          # "stale info"（本地租约值与远端实际值明明相同却拒绝）；写成 <ref>:<sha> 稳定通过。
+          # 写成显式值还有一个好处：若有人往固定分支推过东西，这里会如实拒绝，而不是覆盖别人的提交。
+          if git rev-parse --verify -q "origin/${BRANCH}" >/dev/null; then
+            git push --force-with-lease="refs/heads/${BRANCH}:$(git rev-parse "origin/${BRANCH}")" \
+              origin "${BRANCH}"
+          else
+            # 固定分支尚不存在（首跑）：普通推送即可，无需 force
+            git push origin "${BRANCH}"
+          fi
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
       - name: Create or update pull request
