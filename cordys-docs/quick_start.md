@@ -2,8 +2,17 @@
 title: 快速入门
 ---
 
-## 1 快速部署
+## 1 体验环境
 
+如需先快速了解产品功能，可直接访问 Demo 环境：
+
+- 访问地址：[https://demo.cordys.cn/](https://demo.cordys.cn/)
+- 用户名：`cordys`
+- 密码：`cordys`
+
+> 说明：Demo 环境仅用于体验与测试，每天 00:00 自动重置数据，不适合作为正式生产环境。
+
+## 2 快速部署
 
 可以通过 1Panel 应用商店快速安装 Cordys CRM：
 
@@ -19,7 +28,7 @@ http://目标服务器 IP 地址:8081
 
 如果是用于生产环境，推荐使用 [**离线包方式**](./installation/offline_installtion) 进行部署。
 
-## 2 界面介绍
+## 3 界面介绍
 
 
 Cordys CRM 主界面导航栏包含：【首页】、【标讯】、【线索】、【客户】、【商机】、【合同】、【订单】、【产品】、【仪表板】、【智能体】和【系统】。
@@ -104,7 +113,7 @@ Cordys CRM 主界面导航栏包含：【首页】、【标讯】、【线索】
  ![系统](/img/cordys/index/set2.png)
 
  <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  系统</div>
-## 3 表单配置
+## 4 表单配置
 
 
 Cordys CRM 现代化的使用体验，灵活可配置的表单、流程和权限，轻松助力企业实现销售自动化。 以 admin 用户登录后，进入【系统管理】→【模块设置】 可以快速自定义业务相关的表单，
@@ -113,7 +122,7 @@ Cordys CRM 现代化的使用体验，灵活可配置的表单、流程和权限
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  表单配置</div>
 
-## 4 安装 Cordys CRM Skill
+## 5 安装 Cordys CRM Skill
 
 
 仓库地址：https://github.com/1Panel-dev/CordysCRM-skills

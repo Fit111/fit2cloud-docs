@@ -74,12 +74,6 @@ const sidebars = {
           "id": "source_run",
           "label": "源码运行",
           "key": "doc:安装部署/源码运行"
-        },
-        {
-          "type": "doc",
-          "id": "installation/faq",
-          "label": "安装常见问题",
-          "key": "doc:安装部署/安装常见问题"
         }
       ],
       "key": "cat:安装部署"
@@ -95,48 +89,40 @@ const sidebars = {
           "collapsed": true,
           "items": [
             {
-              "type": "category",
-              "label": "首页概览",
-              "collapsed": true,
-              "items": [
-                {
-                  "type": "doc",
-                  "id": "user_manual/global_search",
-                  "label": "全局搜索",
-                  "key": "doc:功能手册/通用功能/首页概览/全局搜索"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/followup_plan",
-                  "label": "跟进记录计划",
-                  "key": "doc:功能手册/通用功能/首页概览/跟进记录计划"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/language_switch",
-                  "label": "中英文切换",
-                  "key": "doc:功能手册/通用功能/首页概览/中英文切换"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/help_docs",
-                  "label": "帮助文档",
-                  "key": "doc:功能手册/通用功能/首页概览/帮助文档"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/reminder",
-                  "label": "提醒",
-                  "key": "doc:功能手册/通用功能/首页概览/提醒"
-                },
-                {
-                  "type": "doc",
-                  "id": "user_manual/my_todo",
-                  "label": "我的待办",
-                  "key": "doc:功能手册/通用功能/首页概览/我的待办"
-                }
-              ],
-              "key": "cat:功能手册/通用功能/首页概览"
+              "type": "doc",
+              "id": "user_manual/global_search",
+              "label": "全局搜索",
+              "key": "doc:功能手册/通用功能/全局搜索"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/followup_plan",
+              "label": "跟进记录计划",
+              "key": "doc:功能手册/通用功能/跟进记录计划"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/language_switch",
+              "label": "中英文切换",
+              "key": "doc:功能手册/通用功能/中英文切换"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/help_docs",
+              "label": "帮助文档",
+              "key": "doc:功能手册/通用功能/帮助文档"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/reminder",
+              "label": "提醒",
+              "key": "doc:功能手册/通用功能/提醒"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/my_todo",
+              "label": "我的待办",
+              "key": "doc:功能手册/通用功能/我的待办"
             }
           ],
           "key": "cat:功能手册/通用功能"
@@ -311,10 +297,18 @@ const sidebars = {
       "key": "doc:API 文档"
     },
     {
-      "type": "doc",
-      "id": "trial",
-      "label": "体验环境",
-      "key": "doc:体验环境"
+      "type": "category",
+      "label": "常见问题",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "installation/faq",
+          "label": "安装常见问题",
+          "key": "doc:安装部署/安装常见问题"
+        }
+      ],
+      "key": "cat:常见问题"
     },
     {
       "type": "doc",
