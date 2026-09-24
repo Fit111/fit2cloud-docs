@@ -305,6 +305,12 @@ const sidebars = {
     },
     {
       "type": "doc",
+      "id": "api_docs",
+      "label": "API 文档",
+      "key": "doc:API 文档"
+    },
+    {
+      "type": "doc",
       "id": "trial",
       "label": "体验环境",
       "key": "doc:体验环境"
