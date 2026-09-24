@@ -8,7 +8,7 @@ title: 产品介绍
 DataEase 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。  
 DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
 
-![功能架构图](/img/dataease/newimg/product_acceptance/功能架构图.jpg)
+![功能架构图](/img/dataease/newimg/product_acceptance/功能架构图.png)
 
 图 1  功能架构图
 
@@ -79,5 +79,4 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 - **如何向团队介绍 DataEase？：** [人人可用的开源 BI 工具](https://fit2cloud.com/dataease/download/introduce-dataease_2026.pdf)
 - **DataEase 技术白皮书：**  `https://whitepaper.dataease.cn/`
 - **DataEase 知识库：** `https://kb.fit2cloud.com/categories/dataease`
-- **DataEase 认证培训：** `https://edu.fit2cloud.com/index` 
-- **DataEase 书籍：** [《数据可视化分析与实践》](https://item.jd.com/10207058297099.html)
+- **DataEase 认证培训：** `https://edu.fit2cloud.com/index`
