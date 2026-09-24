@@ -1,0 +1,103 @@
+# 保持 fork 的 main 与官方仓库 upstream 一致（纯镜像维护，轻量、无副作用）
+#
+# ⚠️ 部署位置：本 workflow 部署在 **fork**（shouzhiyuxian/fit2cloud-docs）的 main 上，
+#    职责是「fork 拉取 upstream」。**不要提交到 upstream 仓库** —— 在 upstream 里
+#    origin 就等于 upstream，跑起来只会永远报 already，没有任何意义。
+#    （若不想维护这个 workflow，用 GitHub 界面的 "Sync fork" 按钮也能达到同样效果。）
+#
+# 设计前提（重要）:
+#   - 本 workflow 只做「快进」(fast-forward)，绝不 force push、绝不改写历史；
+#   - 因此 fork 的 main 需要保持"纯镜像"：不在 fork 的 main 上直接落提交。
+#     一旦它领先 upstream，"与 upstream 完全一致"就不再可能——只能等这些
+#     提交先合并进 upstream，本 workflow 才能继续把 fork 拉齐；
+#   - 若 fork main 与 upstream 已真正分叉（双方各有对方没有的提交），
+#     本 workflow 只告警并跳过，不做任何破坏性操作。
+#
+# 与 auto-community-faq.yml 的分工（两者部署在不同仓库）:
+#   - 本 workflow: 部署在 fork，每天定时把 fork main 拉到 upstream 最新；
+#   - auto-community-faq.yml: 部署在 upstream，运行 / 开 PR / 合并全部在 upstream 内完成，
+#     不向 fork 推任何东西，也就不需要跨仓库 PAT。
+#
+# 触发: 每天 01:00 UTC（北京时间 09:00）定时 + 手动触发
+#
+# 注意: 需要仓库 Settings -> Actions -> General -> Workflow permissions
+#       设为 "Read and write permissions"，否则推送 main 会 403。
+
+name: Sync fork main with upstream
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 每天 01:00 UTC（北京时间 09:00）
+    - cron: '0 1 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-fork
+  cancel-in-progress: false
+
+env:
+  BASE_BRANCH: main
+  UPSTREAM_REPO: fit2cloud-dev/fit2cloud-docs
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 0
+
+      - name: Fast-forward fork main to upstream
+        id: sync
+        run: |
+          set -e
+          UPSTREAM_URL="https://github.com/${UPSTREAM_REPO}.git"
+          if git remote get-url upstream >/dev/null 2>&1; then
+            git remote set-url upstream "${UPSTREAM_URL}"
+          else
+            git remote add upstream "${UPSTREAM_URL}"
+          fi
+          echo "upstream = ${UPSTREAM_URL}"
+
+          git fetch --no-tags upstream "${BASE_BRANCH}"
+          git fetch --no-tags origin "${BASE_BRANCH}"
+
+          FORK_HEAD=$(git rev-parse "origin/${BASE_BRANCH}")
+          UP_HEAD=$(git rev-parse "upstream/${BASE_BRANCH}")
+          echo "fork/${BASE_BRANCH}=${FORK_HEAD:0:8}  upstream/${BASE_BRANCH}=${UP_HEAD:0:8}"
+
+          if [ "${FORK_HEAD}" = "${UP_HEAD}" ]; then
+            RESULT="already"
+            echo "fork 已与 upstream 一致，无需同步"
+          elif git merge-base --is-ancestor "origin/${BASE_BRANCH}" "upstream/${BASE_BRANCH}"; then
+            RESULT="fast-forward"
+            echo "fork 落后 upstream，快进到 ${UP_HEAD:0:8}"
+            git push origin "refs/remotes/upstream/${BASE_BRANCH}:refs/heads/${BASE_BRANCH}"
+            git fetch --no-tags origin "${BASE_BRANCH}"
+          elif git merge-base --is-ancestor "upstream/${BASE_BRANCH}" "origin/${BASE_BRANCH}"; then
+            RESULT="ahead"
+            echo "fork 领先 upstream（本地已有未上行的提交），但其已包含 upstream 全部最新提交，无需同步"
+          else
+            RESULT="diverged"
+            echo "::warning::fork/${BASE_BRANCH} 与 upstream/${BASE_BRANCH} 已分叉（双方各有对方没有的提交），跳过自动同步，请人工处理"
+          fi
+
+          echo "result=${RESULT}" >> "$GITHUB_OUTPUT"
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Sync fork main with upstream"
+            echo ""
+            echo "- 结果: \`${{ steps.sync.outputs.result || 'failed' }}\`"
+            echo "  （already=本就一致 / fast-forward=已快进 / ahead=本地领先且已含最新 / diverged=已分叉跳过）"
+            echo "- 目标仓库: \`${UPSTREAM_REPO}\` 分支 \`${BASE_BRANCH}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

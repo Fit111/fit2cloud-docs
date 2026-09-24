@@ -53,9 +53,11 @@ const config = {
   // 客户端模块: 路由更新时给 <html data-docs-product> 打上当前产品标记,
   // 供 custom.css 按产品定制文档页样式(见 src/clientModules/docsProduct.js)。
   // navbarGaps: 注入导航栏左右两侧的空白遮挡元素(见 src/clientModules/navbarGaps.js)。
+  // maxkbEmbed: 全站注入 MaxKB 智能小助手浮窗(见 src/clientModules/maxkbEmbed.js)。
   clientModules: [
     './src/clientModules/docsProduct.js',
     './src/clientModules/navbarGaps.js',
+    './src/clientModules/maxkbEmbed.js',
   ],
 
   url: 'https://docs.fit2cloud.com',
@@ -210,6 +212,13 @@ const config = {
         path: 'ai-gateway-docs',
         routeBasePath: 'ai-gateway',
         sidebarPath: 'ai-gateway-docs/sidebars.js',
+        // 版本化: current = v1, 暂无历史版本(若不声明 versions, Docusaurus 默认
+        // 当前版本名为 "current"/标签 "next", 侧栏版本控件会显示 next)。
+        // 统一声明为 v1, 与 SQLBot/Cordys 等单版本产品一致。
+        lastVersion: 'current',
+        versions: {
+          current: { label: 'v1', badge: false, banner: 'none' },
+        },
       },
     ],
   ],

@@ -1,0 +1,535 @@
+# JumpServer 社区常见问题自动补充并提 PR
+#
+# 来源: 从芝麻会话（社区小助手名下 JumpServer 交流群）提取最近一周的
+#       「客户提问 → 部门同事解答」问答对，由大模型按官方文档核实并改写，
+#       追加到 jumpserver-docs/faq/community_faq.md，通过 PR 提交，不直接改动 main。
+#
+# 配套脚本: .github/scripts/community_faq.py（单文件自包含，仅用 Python 标准库；
+#           退出码 0=完成 / 1=取数失败 / 2=配置或参数错误 / 3=无新增条目
+#                 / 4=大模型环节失败（网关不可达、key 无效、模型无返回））
+#
+# 部署位置（重要）:
+#   本 workflow 与 .github/scripts/community_faq.py 部署到**官方仓库**
+#   fit2cloud-dev/fit2cloud-docs，在 upstream 内运行、并在 upstream 内开 PR。
+#   因此**不需要任何跨仓库 PAT**：PR 就是同一个仓库里的「新分支 → main」，
+#   用 Actions 内置的 GITHUB_TOKEN 即可。
+#
+#   upstream 仓库侧需要配置:
+#     1. Settings -> Actions -> General -> Workflow permissions 选 "Read and write"；
+#     2. 同一页勾选 "Allow GitHub Actions to create and approve pull requests"
+#        —— 不勾选时 GITHUB_TOKEN 无法创建 PR，会直接报错；
+#     3. Secrets: ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY
+#        （以上四项**都是必填**；另可选 ZHIMA_DEPT_STAFF / LLM_MODEL；
+#          公司仓库建议配成组织级 Secret）。
+#        缺项时 workflow 会在 Preflight 步骤直接失败并指明缺哪一项，不会跑到一半才报错。
+#
+# 与 fork 的关系:
+#   - fork 只是本地开发副本，本 workflow 不做任何 fork ↔ upstream 的推送；
+#   - fork 与 upstream 的同步方向是「fork 拉取 upstream」，由
+#     .github/workflows/sync-fork.yml 部署在 **fork** 的 main 上完成
+#     （或直接用 GitHub 界面的 "Sync fork" 按钮）。
+#     ⚠️ 不要把 sync-fork.yml 也提交到 upstream：在 upstream 里它等于自己同步自己，无意义。
+#
+# 运行环境（重要）:
+#   - `ubuntu-latest` = **GitHub 托管 runner，机房在境外**。
+#     ⚠️ 境外 runner **访问不了「仅国内可达」的外部服务**：2026-09-23 实测，
+#     芝麻平台可达（取数 288 次请求 / 0 失败 / 321 条问答对），但模型网关
+#     ai.fit2cloud.cn（解析到国内电信公网 IP 119.147.33.142）**TCP 连接超时**（Errno 110）。
+#   - 该限制与脚本、账号、负载、请求大小都无关，也**不是偶发**：同一地址在国内本机
+#     TCP/TLS/HTTP 全通（HTTP 401 = 服务活着），而在 runner 上三次尝试全部连不上；
+#     **加大超时无效**（是 TCP 连接建不起来，不是响应慢）。
+#   - Preflight 里的连通性自检会把「芝麻」与「模型网关」**分别**探明并打印解析到的 IP，
+#     15 秒内给出结论，不必等取数跑完。
+#   - **国内自托管 runner（跨不过跨境链路时用）**：不要改本文件，只在仓库 Variables 里设
+#     RUNNER_LABELS = ["self-hosted","f2c"]，本任务就会落到那台机器上；不设则用托管 runner。
+#     ⚠️ 该机需 Python ≥ 3.7（脚本用了 3.7+ 语法，3.6 会语法报错），且 glibc 需 2.28+
+#     （actions/checkout 等 node20 action 的要求）→ 老系统（如 CentOS 7 / glibc 2.17）
+#     请用**容器方式**跑 runner，不要裸装。
+#   - 安全提示：本 workflow 只挂 workflow_dispatch 与 schedule，**不接受 PR 触发**，
+#     因此自托管 runner 不会被外部 PR 利用；但该机仍是「仓库写权限 = 该机执行权限」，
+#     故 runner 容器**不要挂载 /var/run/docker.sock**。
+#
+# 分支策略:
+#   - 固定分支 chore/weekly-community-faq 每次以 main 最新为基线重建（**不做 rebase**，见下），
+#     并把上期分支里那一个页面取回来，累积尚未合并的条目；
+#   - PR 以**草稿态**创建，供人工核对内容与措辞后再合并；
+#   - 不直接改 main。
+#
+# 跨境链路（重要，2026-09-24 实测）:
+#   - 本仓库当前版本就 ~1.9GB / 8393 个文件、全历史 pack ~1.4GB，而本任务只需 0.92MB
+#     （.github/ + jumpserver-docs 下所有 md）。国内自托管 runner 到 GitHub 是「小请求快、
+#     大流量被掐」：实测 curl 226MB 中途 SSL EOF、git fetch 全量 13 分钟后 curl 56 / early EOF。
+#   - 因此 checkout 采用**浅历史 + 部分克隆 + 稀疏检出**（见该步骤注释），且**全程不做 rebase**
+#     —— rebase 需要两个分支的公共祖先，会强迫拉完整历史。
+#     ⚠️ 改动 checkout 与「Prepare fixed branch」前务必意识到这点，否则会重新引入 GB 级传输。
+#
+# 触发与时区（重要）:
+#   - 定时：每周一 03:00（北京时间）→ cron 按 UTC 写 '0 19 * * 0'（周日 19:00 UTC）；
+#   - **必须显式设置 TZ=Asia/Shanghai**：GitHub runner 默认跑在 UTC，而「周一 03:00 北京」
+#     落在 UTC 的周日，脚本里的 date.today() 会退回成周日，导致数据窗口与「周一」错位；
+#   - 回看窗口 8 天（含今天）：比 7 天多留一天，用来补回上一次运行当天 03:00 之后的消息，
+#     否则「上周一 03:00–23:59」这一段两次运行都覆盖不到；
+#   - GitHub 的 schedule 在整点高负载时可能被延迟、极端情况下会被丢弃，
+#     因此同时保留手动触发；窗口按日期计算，延迟几十分钟不影响数据完整性。
+#
+# 注意:
+#   - schedule 只在仓库默认分支(main)上生效；放在功能分支时只能用 workflow_dispatch。
+#   - 上期 PR 若是 **squash 合并**：本 workflow 不依赖提交历史（以 main 为基线重建分支 +
+#     取回上期页面），因此 squash 合并不再引起任何冲突或历史问题。
+#   - 在 fork 上测试时：fork 的定时任务默认关闭，用 workflow_dispatch 手动跑即可；
+#     ⚠️ 不要在 fork 上启用定时，否则 fork 与 upstream 会各开一个重复的 PR。
+#
+# 收录口径（见脚本内 PASS1/PASS2 提示词，可按需调整）:
+#   - 只收 V5 相关问题、且同一主题至少出现 min_count 次；
+#   - 只收「判断型/结论型」问题，官方文档与知识库已有完整操作教程的步骤型问题不收；
+#   - 答案只允许依据官方文档原文撰写，引用路径不存在即丢弃，绝不采信群聊里的说法。
+
+name: Auto Community FAQ (JumpServer)
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '回看天数（含今天）'
+        required: false
+        default: '8'
+      max_items:
+        description: '本期最多新增条目数'
+        required: false
+        default: '3'
+      min_count:
+        description: '同一主题至少出现几次才收录'
+        required: false
+        default: '2'
+      dry_run:
+        description: '只预览不提交（仍会调用模型）'
+        type: boolean
+        default: false
+      draft:
+        description: '以草稿方式创建 PR'
+        type: boolean
+        default: true
+  schedule:
+    # 每周一 03:00（北京时间）= 周日 19:00 UTC
+    - cron: '0 19 * * 0'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: community-faq
+  cancel-in-progress: false
+
+env:
+  # 全流程按北京时间计算日期：脚本的 date.today() 依赖它
+  # （周一 03:00 北京 = UTC 周日，不设 TZ 会让窗口与「周一」错位，见文件头说明）
+  TZ: Asia/Shanghai
+  BASE_BRANCH: main
+  BRANCH: chore/weekly-community-faq
+  FAQ_PAGE: jumpserver-docs/faq/community_faq.md
+  ZHIMA_BASE_URL: ${{ secrets.ZHIMA_BASE_URL }}
+  ZHIMA_ACCOUNT: ${{ secrets.ZHIMA_ACCOUNT }}
+  ZHIMA_PASSWORD: ${{ secrets.ZHIMA_PASSWORD }}
+  ZHIMA_DEPT_STAFF: ${{ secrets.ZHIMA_DEPT_STAFF }}
+  ZHIMA_SCOPE_STAFF_USERID: ${{ vars.ZHIMA_SCOPE_STAFF_USERID || 'SheQuXiaoZhuShou' }}
+  LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://ai.fit2cloud.cn/gateway/v1' }}
+  LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+  # 未配置 Variables 时用 f2c-auto（脚本内置默认值同此）
+  LLM_MODEL: ${{ vars.LLM_MODEL || 'f2c-auto' }}
+  PRODUCT_KEYWORD: jumpserver
+
+jobs:
+  community-faq:
+    # runner 由**仓库 Variables** 控制，文件里不写死 —— fork 与 upstream 内容保持一致，
+    # 各自仓库按需配置（不配即为默认值，行为与从前完全相同）：
+    #   未配置 RUNNER_LABELS            -> ["ubuntu-latest"]（GitHub 托管，境外）
+    #   RUNNER_LABELS=["self-hosted","f2c"] -> 落到国内自托管 runner（见文件头「运行环境」）
+    # 托管 runner 访问不了**仅国内可达**的外部服务：2026-09-23 实测芝麻可达、
+    # 模型网关 ai.fit2cloud.cn（国内电信 IP）连接超时。
+    runs-on: ${{ fromJSON(vars.RUNNER_LABELS || '["ubuntu-latest"]') }}
+    timeout-minutes: 40
+
+    steps:
+      # ⚠️ 跨境链路优化（2026-09-24）：本仓库当前版本就 ~1.9GB / 8393 个文件，全历史 pack ~1.4GB，
+      # 而本任务真正需要的只有 .github/（脚本）与 jumpserver-docs/ 下的 md —— 合计 0.92MB。
+      # 所以必须「浅历史 + 部分克隆 + 稀疏检出」三者齐上，少任何一个都会退化成 GB 级传输：
+      #   fetch-depth: 1    —— 不拉历史。原先写 0（为了后面 rebase），会拉全部分支+标签+完整历史，
+      #                        2026-09-24 实测必失败：curl 56 GnuTLS recv error / early EOF，13 分钟被掐。
+      #   filter: blob:none —— 只取本次提交的 commit/tree，不下载 blob（文件内容按需再取）
+      #   sparse-checkout   —— 工作区只物化下面两个范围，于是「按需取」的 blob 也只有这 0.92MB
+      # 配套：本 workflow 已**取消 rebase**（见 Prepare fixed branch），因此不再需要完整历史。
+      # 另：不再使用 actions/setup-python —— runner 自带 python3 即可，少一个跨境下载点。
+      - name: Checkout (partial clone + sparse)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 1
+          filter: blob:none
+          # 稀疏范围 = 脚本本体 + jumpserver-docs 下**全部 md**（不能只取 faq/）：
+          #   第二轮成稿会 read_text 读取被引用文档的**全文**喂给模型（见 community_faq.py
+          #   的 compose_entry），所以这些 md 必须真实存在。该目录里 73.85MB 是图片、
+          #   md 仅 0.81MB，故用非 cone 模式按扩展名精确包含。
+          #   实测（2026-09-24, a6704ab）：.github 0.11MB + 192 个 md 0.81MB = 0.92MB，
+          #   相对全量 1475MB 省掉 99.94%。
+          #   退路：若非 cone 模式在下游（git checkout 单文件等）出问题，改回 cone 模式并把范围
+          #   换成 jumpserver-docs（74.8MB）即可，功能等价（代价是多传 74MB 图片）。
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+            /jumpserver-docs/*.md
+            /jumpserver-docs/**/*.md
+
+      # 配置自检：缺东西就立刻失败并指明缺哪一项，避免跑到取数阶段才报错
+      - name: Preflight
+        run: |
+          set -e
+          missing=""
+          for name in ZHIMA_BASE_URL ZHIMA_ACCOUNT ZHIMA_PASSWORD LLM_API_KEY; do
+            if [ -z "${!name}" ]; then
+              echo "::error::缺少必需配置 ${name}（仓库 Settings → Secrets and variables → Actions 里添加）"
+              missing="${missing} ${name}"
+            fi
+          done
+          if [ -n "${missing}" ]; then
+            echo "缺失：${missing}"
+            exit 1
+          fi
+          echo "必需配置齐全：ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY"
+          if [ -z "${ZHIMA_DEPT_STAFF}" ]; then
+            echo "::warning::未配置 ZHIMA_DEPT_STAFF，解答人退化为「员工角色且非机器人」，频次统计可能偏宽"
+          else
+            echo "已配置 ZHIMA_DEPT_STAFF（部门名单）"
+          fi
+          echo "模型：${LLM_MODEL} / 网关：${LLM_BASE_URL}"
+          echo "运行环境：${RUNNER_NAME:-?} / ${RUNNER_OS:-?} ${RUNNER_ARCH:-?} / $(python3 -V 2>&1)"
+          # 不再依赖 actions/setup-python，故自行校验解释器（脚本用到 3.7+ 语法，3.6 会 SyntaxError）
+          if ! python3 -c 'import sys; sys.exit(0 if sys.version_info >= (3, 7) else 1)' 2>/dev/null; then
+            echo "::error::runner 上的 python3 不可用或版本过低（需 >= 3.7）：$(python3 -V 2>&1)"
+            exit 1
+          fi
+          # 稀疏检出防呆：第二轮成稿要读 jumpserver-docs 下被引用文档的原文，若 md 数量异常偏少
+          # （例如 sparse 范围误写成只含 faq/），脚本会静默拿不到依据 —— 这里提前拦下。
+          md_count=$(find jumpserver-docs -name '*.md' 2>/dev/null | wc -l)
+          echo "检出文档：jumpserver-docs 下 ${md_count} 个 md"
+          if [ "${md_count}" -lt 50 ]; then
+            echo "::error::只检出 ${md_count} 个 md（预期约 192 个）—— 稀疏检出范围可能不对，第二轮读文档原文会失败。"
+            exit 1
+          fi
+
+          # 出网与外部依赖连通性自检：在发起 288 次取数请求之前就暴露网络问题，
+          # 并把「芝麻」与「模型网关」**分别**探明 + 打印解析到的 IP —— 只有一边不通时
+          # 一眼就能看出是哪一边（2026-09-23 实测：芝麻通、模型网关跨境超时，
+          # 却要等取数跑完 5 分钟才炸，且报错还指向了错误环节）。
+          python3 - <<'PY'
+          import json, os, socket, sys, urllib.error, urllib.request
+
+
+          def probe(base, path, headers):
+              """探测可达性，返回 (是否可达, HTTP 状态码, 描述, 响应体)。
+              拿到任何 HTTP 响应（含 4xx/5xx）都算「可达」——那说明网络通，问题在上层。"""
+              if not base:
+                  return False, None, "未配置", ""
+              base = base.rstrip("/")
+              host = base.split("//", 1)[-1].split("/", 1)[0].split(":")[0]
+              try:
+                  ips = sorted({i[4][0] for i in socket.getaddrinfo(host, None, proto=socket.IPPROTO_TCP)})
+              except Exception as err:
+                  return False, None, "DNS 解析失败（{0}）".format(err), ""
+              dns = "DNS=" + "/".join(ips)
+              try:
+                  req = urllib.request.Request(base + path, headers=headers)
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      code, text = resp.status, resp.read().decode("utf-8", "replace")
+                  return True, code, "{0}；HTTP {1}".format(dns, code), text
+              except urllib.error.HTTPError as err:
+                  return True, err.code, "{0}；HTTP {1}".format(dns, err.code), ""
+              except Exception as err:
+                  return False, None, "{0}；{1}: {2}".format(dns, type(err).__name__, err), ""
+
+
+          key = os.environ.get("LLM_API_KEY") or ""
+          model = os.environ.get("LLM_MODEL") or ""
+          z_ok, _z_code, z_desc, _z_text = probe(os.environ.get("ZHIMA_BASE_URL") or "", "/", {})
+          l_ok, l_code, l_desc, l_text = probe(os.environ.get("LLM_BASE_URL") or "", "/models",
+                                               {"Authorization": "Bearer " + key})
+          print("  [自检] 芝麻会话   {0}   {1}".format("可达  " if z_ok else "不可达", z_desc))
+          print("  [自检] 模型网关   {0}   {1}".format("可达  " if l_ok else "不可达", l_desc))
+
+          if not z_ok and not l_ok:
+              print("::error::芝麻与模型网关都不可达 —— runner 自身出网可能有问题，或两个地址都只在特定网络内可达。")
+              sys.exit(1)
+          if not l_ok:
+              print("::error::只有模型网关不可达（芝麻正常）→ 属「该网关对境外来源不通 / 跨境链路问题」，"
+                    "与脚本、账号、负载、请求大小都无关，加大超时也不会变好。")
+              print("::error::出路：用仓库 Variables 覆盖 LLM_BASE_URL 指向公网可达的网关，或把 workflow 放到国内机器上运行。")
+              sys.exit(1)
+          if not z_ok:
+              print("::error::只有芝麻会话不可达（模型网关正常）—— 请检查 ZHIMA_BASE_URL 与 runner 到该地址的网络。")
+              sys.exit(1)
+          if l_code in (401, 403):
+              print("::error::模型网关可达但鉴权失败（HTTP {0}）：LLM_API_KEY 无效或已过期。".format(l_code))
+              sys.exit(1)
+          if l_code not in (None, 200):
+              print("::warning::模型网关 /models 返回 HTTP {0}（可能未实现该接口），继续交由 chat/completions 实测。".format(l_code))
+          if l_code == 200 and model:
+              try:
+                  ids = [str(x.get("id")) for x in (json.loads(l_text).get("data") or [])
+                         if isinstance(x, dict) and x.get("id")]
+                  if ids and model not in ids:
+                      print("::warning::LLM_MODEL={0} 不在网关模型列表里（自动路由别名可忽略）：{1}"
+                            .format(model, ", ".join(ids[:20])))
+              except Exception:
+                  pass
+          print("[自检] 通过：芝麻会话与模型网关均可达。")
+          PY
+
+      # 基线固定取本仓库当前 main 的最新提交（PR 的目标就是它）。
+      # ⚠️ 这里**不做 rebase**（2026-09-24 改）：变基要算 origin/BRANCH 与 origin/main 的公共祖先，
+      # 会强迫 checkout 拉完整历史 —— 跨境 1.4GB，实测必失败。而本分支**只动一个文件**（FAQ_PAGE），
+      # 所以用「以 main 为基线新建分支 + git checkout 取回上期分支里的该文件」等价替代：
+      # 结果同样是「main 的最新内容 + 上期尚未合并的条目」，且只需浅历史。
+      # 唯一的边界情况：若 main 上的该页面被人工改过、而分支版本更旧，则会把旧内容带回来 ——
+      # 这在 PR diff 里表现为删除行，人工合并时可见（旧实现的 rebase 冲突回退反而会丢掉上期条目）。
+      - name: Prepare fixed branch
+        id: base
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 浅拉基线：只取 tip，不拉历史；显式指定 remote-tracking ref，
+          # 保证后面 push --force-with-lease 依据的「本地已知远端值」准确。
+          git fetch --no-tags --depth=1 --force origin \
+            "+refs/heads/${BASE_BRANCH}:refs/remotes/origin/${BASE_BRANCH}"
+          BASE_REF="origin/${BASE_BRANCH}"
+          echo "base_ref=${BASE_REF}" >> "$GITHUB_OUTPUT"
+          echo "工作基线 ${BASE_REF} = $(git rev-parse --short "${BASE_REF}")"
+
+          # 首跑与续跑都从干净的基线重建固定分支
+          git checkout -B "${BRANCH}" "${BASE_REF}"
+
+          if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
+            echo "固定分支 ${BRANCH} 已存在，取回其上期的 ${FAQ_PAGE}（保留尚未合并的条目）"
+            git fetch --no-tags --depth=1 --force origin \
+              "+refs/heads/${BRANCH}:refs/remotes/origin/${BRANCH}"
+            if git checkout FETCH_HEAD -- "${FAQ_PAGE}"; then
+              echo "已取回上期页面，本周新增将叠加在其后"
+            else
+              echo "::warning::上期分支中不存在 ${FAQ_PAGE}，按全新生成处理"
+            fi
+          else
+            # 远端没有该分支：首跑，或上期 PR 合并后分支被「自动删除分支」清掉了。
+            # ⚠️ 自托管 runner 的 workspace 是**持久化**的，本地可能还残留该分支的
+            # remote-tracking 引用；不清掉的话，后面 push --force-with-lease 会拿这个过期值
+            # 去比对，被误拒为 "stale info"（2026-09-24 实测复现）。
+            git update-ref -d "refs/remotes/origin/${BRANCH}" 2>/dev/null || true
+            echo "首次运行（或固定分支已被删除），从 ${BASE_REF} 创建分支 ${BRANCH}"
+          fi
+
+      - name: Generate community FAQ entries
+        id: gen
+        env:
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: |
+          set -e
+          APPLY_FLAG="--apply"
+          if [ "${DRY_RUN}" = "true" ]; then
+            echo "dry_run=true：只预览，不写回页面、不推送、不开 PR"
+            APPLY_FLAG=""
+          fi
+
+          set +e
+          python3 .github/scripts/community_faq.py \
+            --days "${{ github.event.inputs.days || '8' }}" \
+            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --min-count "${{ github.event.inputs.min_count || '2' }}" \
+            --report "${REPORT}" \
+            ${APPLY_FLAG}
+          code=$?
+          set -e
+
+          # 退出码含义：0=完成 1=取数失败 2=配置/参数错误 3=无合格新条目 4=大模型环节失败
+          # 只有 3 才算「跑通了但本周没东西可写」；1/2/4 一律让 job 失败，
+          # 否则接口挂掉会伪装成「本周无新增」，绿色通过、静默跳过一整周。
+          # 1 与 4 分开，是为了让报错指向真正出问题的环节（取数 / 大模型）。
+          case "${code}" in
+            0) : ;;
+            3) echo "本周没有合格的新条目，无需提 PR。" ;;
+            1) echo "::error::取数失败（退出码 1）：芝麻会话登录失败、接口异常，或所有群都没取到消息。请检查 ZHIMA_BASE_URL / 账号，以及 runner 能否访问该地址。"
+               exit 1 ;;
+            2) echo "::error::配置或参数错误（退出码 2）：请核对 Secrets/Variables，以及 jumpserver-docs/faq/community_faq.md 是否存在。"
+               exit 2 ;;
+            4) echo "::error::大模型环节失败（退出码 4）：无法访问模型网关 ${LLM_BASE_URL}、LLM_API_KEY 无效，或模型无返回。"
+               echo "::error::若该网关仅在国内网络可达，跑在 GitHub 托管 runner（境外）上必然连接超时 —— 把仓库 Variables 的 RUNNER_LABELS 设为 [\"self-hosted\",\"f2c\"]，让本任务落到国内自托管 runner；或用 LLM_BASE_URL 指向公网可达的网关。"
+               exit 4 ;;
+            *) echo "::error::community_faq.py 异常退出（退出码 ${code}）"
+               exit "${code}" ;;
+          esac
+
+          echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
+          echo "report=${REPORT}" >> "$GITHUB_OUTPUT"
+          if [ -f "${REPORT}" ]; then
+            cat "${REPORT}"
+            # dry-run 没有 PR 可看，把报告直接写进 Actions 摘要，便于在 fork 上验证内容
+            if [ "${DRY_RUN}" = "true" ]; then
+              { echo; echo "---"; echo; cat "${REPORT}"; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+
+      - name: Commit and push
+        id: commit
+        if: ${{ steps.gen.outputs.changed == 'true' }}
+        run: |
+          set -e
+          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}")" ]; then
+            echo "页面无变化，跳过提交"
+            exit 0
+          fi
+
+          git add "${FAQ_PAGE}"
+          git commit -m "docs(faq): 补充本周社区常见问题"
+
+          # 推送：显式给出租约的「期望值」，不用裸 --force-with-lease。
+          # 2026-09-24 实测：裸写法在「远程跟踪引用不是由配置的 refspec 更新」时会误报
+          # "stale info"（本地租约值与远端实际值明明相同却拒绝）；写成 <ref>:<sha> 稳定通过。
+          # 写成显式值还有一个好处：若有人往固定分支推过东西，这里会如实拒绝，而不是覆盖别人的提交。
+          if git rev-parse --verify -q "origin/${BRANCH}" >/dev/null; then
+            git push --force-with-lease="refs/heads/${BRANCH}:$(git rev-parse "origin/${BRANCH}")" \
+              origin "${BRANCH}"
+          else
+            # 固定分支尚不存在（首跑）：普通推送即可，无需 force
+            git push origin "${BRANCH}"
+          fi
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # ⚠️ **不用 gh CLI**（2026-09-24 实测）：自托管 runner 是自建镜像，里面没有 gh →
+      # `line 20: gh: command not found`、退出码 127。装 gh 又要重建镜像 + 再走一次跨境下载，
+      # 而容器里本来就有 python3（Preflight 已在用）→ 改用标准库直接调 GitHub REST API，
+      # 零新依赖、workspace 与镜像都不用动。
+      # 权限要求与 gh 相同：Settings -> Actions -> General 勾选
+      # "Allow GitHub Actions to create and approve pull requests"，否则会返回
+      # "Resource not accessible by integration"（脚本会把这句提示打到日志里）。
+      - name: Create or update pull request
+        id: pr
+        if: ${{ steps.commit.outputs.pushed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT: ${{ runner.temp }}/community-faq-report.md
+          DAYS: ${{ github.event.inputs.days || '8' }}
+          DRAFT: ${{ github.event.inputs.draft || 'true' }}
+        run: |
+          set -e
+          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}（draft=${DRAFT}）"
+          python3 - <<'PY'
+          import datetime, json, os, sys, urllib.error, urllib.request
+
+          TOKEN = os.environ["GH_TOKEN"]
+          REPO = os.environ["GITHUB_REPOSITORY"]              # owner/name
+          API = os.environ.get("GITHUB_API_URL") or "https://api.github.com"
+          BASE = os.environ["BASE_BRANCH"]
+          BRANCH = os.environ["BRANCH"]
+          PAGE = os.environ["FAQ_PAGE"]
+          DAYS = os.environ.get("DAYS") or "8"
+          DRAFT = (os.environ.get("DRAFT") or "true").strip().lower() == "true"
+          OWNER = REPO.split("/")[0]
+
+
+          def api(method, path, payload=None):
+              """返回 (status, parsed_json_or_text)；4xx/5xx 不抛异常，交给调用方判断。"""
+              data = json.dumps(payload).encode() if payload is not None else None
+              req = urllib.request.Request(API + path, data=data, method=method)
+              req.add_header("Authorization", "Bearer " + TOKEN)
+              req.add_header("Accept", "application/vnd.github+json")
+              req.add_header("X-GitHub-Api-Version", "2022-11-28")
+              req.add_header("User-Agent", "fit2cloud-docs-community-faq")
+              if data is not None:
+                  req.add_header("Content-Type", "application/json")
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as resp:
+                      raw = resp.read().decode("utf-8", "replace")
+                      return resp.status, (json.loads(raw) if raw.strip() else None)
+              except urllib.error.HTTPError as exc:
+                  return exc.code, exc.read().decode("utf-8", "replace")
+
+
+          # ---- 组装 PR 描述（含本期报告）----
+          lines = [
+              "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。",
+              "",
+              "- 数据来源：芝麻会话（JumpServer 交流群）、最近 %s 天" % DAYS,
+              "- 生成方式：`.github/scripts/community_faq.py` 依据官方文档改写后追加",
+              "- 目标文件：`%s`" % PAGE,
+              "- 提交分支：`%s`" % BRANCH,
+              "",
+          ]
+          report = os.environ.get("REPORT") or ""
+          if report and os.path.isfile(report):
+              with open(report, encoding="utf-8") as fh:
+                  lines.append(fh.read())
+          body = "\n".join(lines)
+
+          # 按北京时间取日期（job 级 TZ=Asia/Shanghai）
+          title = "docs(faq): 补充社区常见问题（%s）" % datetime.date.today().isoformat()
+
+          # ---- 查是否已有开启中的 PR：列 open PR 后按 head 自行过滤 ----
+          # 不用 ?head=owner:branch（分支名带 / 时参数转义容易出岔子），自己比 head.ref 更稳
+          status, prs = api("GET", "/repos/%s/pulls?state=open&per_page=100" % REPO)
+          if status != 200:
+              print("::error::列取开启中的 PR 失败（HTTP %s）：%s" % (status, prs))
+              sys.exit(1)
+          existing = None
+          for pr in (prs or []):
+              head = pr.get("head") or {}
+              if head.get("ref") == BRANCH and (head.get("repo") or {}).get("full_name") == REPO:
+                  existing = pr
+                  break
+
+          if existing:
+              num = existing["number"]
+              print("已有开启中的 PR #%d，更新标题与描述" % num)
+              status, res = api("PATCH", "/repos/%s/pulls/%d" % (REPO, num),
+                                {"title": title, "body": body})
+          else:
+              print("新建 PR（draft=%s）" % DRAFT)
+              status, res = api("POST", "/repos/%s/pulls" % REPO,
+                                {"title": title, "body": body, "head": BRANCH,
+                                 "base": BASE, "draft": DRAFT})
+
+          if status not in (200, 201):
+              print("::error::创建/更新 PR 失败（HTTP %s）：%s" % (status, res))
+              print("::error::若提示 Resource not accessible by integration，请到仓库 "
+                    "Settings -> Actions -> General 勾选 "
+                    "\"Allow GitHub Actions to create and approve pull requests\"。")
+              sys.exit(1)
+
+          num = res["number"]
+          url = res["html_url"]
+          print("PR #%d %s" % (num, url))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write("pr_number=%d\npr_url=%s\n" % (num, url))
+
+          # draft 输入为 false 时，把草稿态转成可合并
+          if not DRAFT and res.get("draft"):
+              status, err = api("POST", "/repos/%s/pulls/%d/ready_for_review" % (REPO, num))
+              if status in (200, 201):
+                  print("已转为可合并状态")
+              else:
+                  print("::warning::转为可合并失败（HTTP %s）：%s" % (status, err))
+          PY
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Auto Community FAQ (JumpServer)"
+            echo ""
+            echo "- 仓库: \`${GITHUB_REPOSITORY}\`"
+            echo "- 窗口: 最近 \`${{ github.event.inputs.days || '8' }}\` 天（含今天，按北京时间）"
+            echo "- 工作基线: \`${{ steps.base.outputs.base_ref || '-' }}\`"
+            echo "- 固定分支: \`${BRANCH}\`"
+            echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，1=取数失败，2=配置或参数错误，3=无合格新条目，4=大模型环节失败）"
+            echo "- 本轮推送: \`${{ steps.commit.outputs.pushed || 'false' }}\`"
+            echo "- 本轮 PR: ${{ steps.pr.outputs.pr_url || '-' }}"
+          } >> "$GITHUB_STEP_SUMMARY"

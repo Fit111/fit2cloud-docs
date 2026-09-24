@@ -2,7 +2,17 @@
 title: 快速入门
 ---
 
-## 1 安装 DataEase
+## 1 体验环境
+
+如需先快速了解产品功能，可直接访问 Demo 环境：
+
+- 访问地址：[https://demo.dataease.cn/](https://demo.dataease.cn/)
+- 用户名：`admin`
+- 密码：`DataEase@123456`
+
+> 说明：Demo 环境仅用于体验与测试，每天 00:00 自动重置数据，不适合作为正式生产环境。
+
+## 2 安装 DataEase
 
 - 支持主流 Linux 发行版本（基于 Debian / RedHat，包括国产操作系统）
 - 推荐使用 [离线安装包方式](../installation/offline_INSTL_and_UPG/) 来部署 DataEase
@@ -15,7 +25,7 @@ title: 快速入门
 密码: DataEase@123456
 ```
 
-## 2 界面介绍
+## 3 界面介绍
 
 进入 DataEase 主界面后可以看到界面上方导航栏，有【工作台】【仪表板】【数据大屏】【数据准备】四大模块。
 
@@ -63,18 +73,18 @@ title: 快速入门
 ![数据源](/img/dataease-v2/newimg/product_acceptance/数据源.png)
 
 ![数据集](/img/dataease-v2/newimg/product_acceptance/数据集.png)
-## 3 三分钟快速上手
+## 4 三分钟快速上手
 
 本章主要介绍如何使用 DataEase 快速制作一个数据看板，帮助大家快速掌握仪表板的制作与分享；  
 仪表板的制作步骤：创建数据源--&gt;创建数据集--&gt;制作仪表板。
 
-###　3.1 创建数据源
+### 4.1 创建数据源
 
 在数据准备模块，切换到数据源菜单，新建一个数据源链接，名称为 "GDP 分析"，类型选择 "MySQL"，主机名 "mysql"，数据库名 "dataease"，用户名 "root"，密码 "Password123@mysql" 检验通过后点击保存即可。
 
 ![添加数据源](/img/dataease-v2/newimg/product_acceptance/连接数据源.png)
 
-### 3.2 创建数据集
+### 4.2 创建数据集
 
 在数据准备模块，切换到数据集菜单，在【官方示例】分组下添加数据库数据集，选择上一步创建的数据源 "demo"，勾选数据表 "demo_gdp_by_city" 点击确认即可。
 
@@ -84,7 +94,7 @@ title: 快速入门
 
 ![数据集创建成功](/img/dataease-v2/newimg/product_acceptance/数据集创建成功.png)
 
-### 3.3 可视化分析
+### 4.3 可视化分析
 
 切换到仪表板菜单，在【官方示例】分组下创建仪表板【2021 年全国GDP数据】。
 
@@ -109,7 +119,7 @@ title: 快速入门
 
 ![地图替换颜色](/img/dataease-v2/newimg/product_acceptance/地图替换颜色.png)
 
-### 3.4 快速分享
+### 4.4 快速分享
 
 如下图所示，点击展开功能菜单，创建公共链接。
 

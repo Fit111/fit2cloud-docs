@@ -60,7 +60,8 @@ const sidebars = {
         {
           "type": "doc",
           "id": "installation/enterprise-installation",
-          "label": "离线安装"
+          "label": "离线安装",
+          "className": "sidebar-item-badge-rec"
         },
         {
           "type": "doc",

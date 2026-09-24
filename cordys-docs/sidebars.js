@@ -1,5 +1,5 @@
 // @ts-check
-// Cordys CRM 侧边栏(中文 label, 顺序与 mkdocs.yml nav 一致)
+// Cordys CRM 侧边栏（按 JumpServer 的分层结构整理，保持现有文档不变）
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   "cordys": [
@@ -22,6 +22,12 @@ const sidebars = {
       "key": "doc:更新日志"
     },
     {
+      "type": "link",
+      "label": "购买指南",
+      "href": "https://cordys.cn/pricing.html",
+      "key": "link:购买指南"
+    },
+    {
       "type": "category",
       "label": "安装部署",
       "collapsed": true,
@@ -30,6 +36,7 @@ const sidebars = {
           "type": "doc",
           "id": "installation/offline_installtion",
           "label": "离线安装",
+          "className": "sidebar-item-badge-rec",
           "key": "doc:安装部署/离线安装"
         },
         {
@@ -67,7 +74,233 @@ const sidebars = {
           "id": "source_run",
           "label": "源码运行",
           "key": "doc:安装部署/源码运行"
+        }
+      ],
+      "key": "cat:安装部署"
+    },
+    {
+      "type": "category",
+      "label": "使用手册",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "category",
+          "label": "通用功能",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/global_search",
+              "label": "全局搜索",
+              "key": "doc:功能手册/通用功能/全局搜索"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/followup_plan",
+              "label": "跟进记录计划",
+              "key": "doc:功能手册/通用功能/跟进记录计划"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/language_switch",
+              "label": "中英文切换",
+              "key": "doc:功能手册/通用功能/中英文切换"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/help_docs",
+              "label": "帮助文档",
+              "key": "doc:功能手册/通用功能/帮助文档"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/reminder",
+              "label": "提醒",
+              "key": "doc:功能手册/通用功能/提醒"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/my_todo",
+              "label": "我的待办",
+              "key": "doc:功能手册/通用功能/我的待办"
+            }
+          ],
+          "key": "cat:功能手册/通用功能"
         },
+        {
+          "type": "category",
+          "label": "管理手册",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "category",
+              "label": "系统配置",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "user_manual/org_manage",
+                  "label": "组织架构管理",
+                  "key": "doc:功能手册/管理手册/系统配置/组织架构管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/role_permission",
+                  "label": "角色权限管理",
+                  "key": "doc:功能手册/管理手册/系统配置/角色权限管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/module_config",
+                  "label": "模块配置管理",
+                  "key": "doc:功能手册/管理手册/系统配置/模块配置管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/message_setting",
+                  "label": "消息设置管理",
+                  "key": "doc:功能手册/管理手册/系统配置/消息设置管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/workflow_setting",
+                  "label": "流程设置管理",
+                  "key": "doc:功能手册/管理手册/系统配置/流程设置管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/enterprise_setting",
+                  "label": "企业设置管理",
+                  "key": "doc:功能手册/管理手册/系统配置/企业设置管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/system_log",
+                  "label": "系统日志管理",
+                  "key": "doc:功能手册/管理手册/系统配置/系统日志管理"
+                }
+              ],
+              "key": "cat:功能手册/管理手册/系统配置"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/form_config",
+              "label": "自定义表单",
+              "key": "doc:功能手册/管理手册/自定义表单"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/product_entry",
+              "label": "产品",
+              "key": "doc:功能手册/管理手册/产品"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/dashboard",
+              "label": "仪表板",
+              "key": "doc:功能手册/管理手册/仪表板"
+            }
+          ],
+          "key": "cat:功能手册/管理手册"
+        },
+        {
+          "type": "category",
+          "label": "普通用户手册",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/tender",
+              "label": "标讯",
+              "key": "doc:功能手册/通用用户手册/标讯"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/sales_manage",
+              "label": "线索管理",
+              "key": "doc:功能手册/通用用户手册/线索管理"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/customer_manage",
+              "label": "客户管理",
+              "key": "doc:功能手册/通用用户手册/客户管理"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/contract",
+              "label": "合同管理",
+              "key": "doc:功能手册/通用用户手册/合同管理"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/order",
+              "label": "订单管理",
+              "key": "doc:功能手册/通用用户手册/订单管理"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/mobile",
+              "label": "移动端",
+              "key": "doc:功能手册/通用用户手册/移动端"
+            }
+          ],
+          "key": "cat:功能手册/通用用户手册"
+        },
+        {
+          "type": "category",
+          "label": "第三方集成",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/dataease",
+              "label": "BI 集成指南",
+              "key": "doc:功能手册/第三方集成/BI 集成指南"
+            },
+            {
+              "type": "category",
+              "label": "Skills 集成指南",
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "skill/workbuddy",
+                  "label": "集成到 WorkBuddy",
+                  "key": "doc:功能手册/第三方集成/Skills 集成指南/集成到 WorkBuddy"
+                },
+                {
+                  "type": "doc",
+                  "id": "skill/openclaw",
+                  "label": "集成到 OpenClaw",
+                  "key": "doc:功能手册/第三方集成/Skills 集成指南/集成到 OpenClaw"
+                }
+              ],
+              "key": "cat:功能手册/第三方集成/Skills 集成指南"
+            },
+            {
+              "type": "doc",
+              "id": "mcp_server",
+              "label": "MCP 服务",
+              "key": "doc:功能手册/第三方集成/MCP 服务"
+            }
+          ],
+          "key": "cat:功能手册/第三方集成"
+        }
+      ],
+      "key": "cat:功能手册"
+    },
+    {
+      "type": "doc",
+      "id": "api_docs",
+      "label": "API 文档",
+      "key": "doc:API 文档"
+    },
+    {
+      "type": "category",
+      "label": "常见问题",
+      "collapsed": true,
+      "items": [
         {
           "type": "doc",
           "id": "installation/faq",
@@ -75,181 +308,7 @@ const sidebars = {
           "key": "doc:安装部署/安装常见问题"
         }
       ],
-      "key": "cat:安装部署"
-    },
-    {
-      "type": "category",
-      "label": "功能手册",
-      "collapsed": true,
-      "items": [
-        {
-          "type": "doc",
-          "id": "user_manual/sales_manage",
-          "label": "销售流程管理",
-          "key": "doc:功能手册/销售流程管理"
-        },
-        {
-          "type": "doc",
-          "id": "user_manual/product_entry",
-          "label": "产品资料录入",
-          "key": "doc:功能手册/产品资料录入"
-        },
-        {
-          "type": "category",
-          "label": "销售合同管理",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "user_manual/contract",
-              "label": "合同",
-              "key": "doc:功能手册/销售合同管理/合同"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/contractPaymentPlan",
-              "label": "回款计划",
-              "key": "doc:功能手册/销售合同管理/回款计划"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/contractPaymentRecord",
-              "label": "回款记录",
-              "key": "doc:功能手册/销售合同管理/回款记录"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/contractInvoice",
-              "label": "发票记录",
-              "key": "doc:功能手册/销售合同管理/发票记录"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/contractBusinessTitle",
-              "label": "工商抬头",
-              "key": "doc:功能手册/销售合同管理/工商抬头"
-            }
-          ],
-          "key": "cat:功能手册/销售合同管理"
-        },
-        {
-          "type": "doc",
-          "id": "user_manual/order",
-          "label": "销售订单管理",
-          "key": "doc:功能手册/销售订单管理"
-        },
-        {
-          "type": "category",
-          "label": "系统设置",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "user_manual/org_manage",
-              "label": "组织架构配置",
-              "key": "doc:功能手册/系统设置/组织架构配置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/role_permission",
-              "label": "角色权限配置",
-              "key": "doc:功能手册/系统设置/角色权限配置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/form_config",
-              "label": "业务表单配置",
-              "key": "doc:功能手册/系统设置/业务表单配置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/approval_flow",
-              "label": "审批流配置",
-              "key": "doc:功能手册/系统设置/审批流配置"
-            }
-          ],
-          "key": "cat:功能手册/系统设置"
-        },
-        {
-          "type": "category",
-          "label": "企业协同配置",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "user_manual/wecom",
-              "label": "企业微信集成配置",
-              "key": "doc:功能手册/企业协同配置/企业微信集成配置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/dingtalk",
-              "label": "钉钉系统集成配置",
-              "key": "doc:功能手册/企业协同配置/钉钉系统集成配置"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/lark",
-              "label": "飞书系统集成配置",
-              "key": "doc:功能手册/企业协同配置/飞书系统集成配置"
-            }
-          ],
-          "key": "cat:功能手册/企业协同配置"
-        },
-        {
-          "type": "doc",
-          "id": "user_manual/mobile",
-          "label": "移动端访问指南",
-          "key": "doc:功能手册/移动端访问指南"
-        },
-        {
-          "type": "category",
-          "label": "BI 集成指南",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "user_manual/dataease",
-              "label": "集成 DataEase 进行数据分析",
-              "key": "doc:功能手册/BI 集成指南/集成 DataEase 进行数据分析"
-            }
-          ],
-          "key": "cat:功能手册/BI 集成指南"
-        },
-        {
-          "type": "category",
-          "label": "Skills 集成指南",
-          "collapsed": true,
-          "items": [
-            {
-              "type": "doc",
-              "id": "skill/workbuddy",
-              "label": "集成到 WorkBuddy",
-              "key": "doc:功能手册/Skills 集成指南/集成到 WorkBuddy"
-            },
-            {
-              "type": "doc",
-              "id": "skill/openclaw",
-              "label": "集成到 OpenClaw",
-              "key": "doc:功能手册/Skills 集成指南/集成到 OpenClaw"
-            }
-          ],
-          "key": "cat:功能手册/Skills 集成指南"
-        },
-        {
-          "type": "doc",
-          "id": "mcp_server",
-          "label": "MCP 服务开放",
-          "key": "doc:功能手册/MCP 服务开放"
-        }
-      ],
-      "key": "cat:功能手册"
-    },
-    {
-      "type": "doc",
-      "id": "trial",
-      "label": "体验环境",
-      "key": "doc:体验环境"
+      "key": "cat:常见问题"
     },
     {
       "type": "doc",

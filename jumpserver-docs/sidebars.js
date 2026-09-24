@@ -1086,6 +1086,12 @@ const sidebars = {
           "id": "faq/faq",
           "label": "产品 FAQ",
           "key": "doc:常见问题/产品 FAQ"
+        },
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "社区常见问题",
+          "key": "doc:常见问题/社区常见问题"
         }
       ],
       "key": "cat:常见问题"
