@@ -147,7 +147,7 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "管理手册",
+          "label": "管理员手册",
           "collapsed": true,
           "items": [
             {
@@ -218,10 +218,24 @@ const sidebars = {
                   "key": "doc:功能手册/管理手册/系统配置/消息设置管理"
                 },
                 {
-                  "type": "doc",
-                  "id": "user_manual/workflow_setting",
+                  "type": "category",
                   "label": "流程设置",
-                  "key": "doc:功能手册/管理手册/系统配置/流程设置管理"
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "type": "doc",
+                      "id": "user_manual/workflow_setting",
+                      "label": "流程设置",
+                      "key": "doc:功能手册/管理手册/系统配置/流程设置管理"
+                    },
+                    {
+                      "type": "doc",
+                      "id": "user_manual/approval_flow",
+                      "label": "审批流配置",
+                      "key": "doc:功能手册/管理手册/系统配置/流程设置/审批流配置"
+                    }
+                  ],
+                  "key": "cat:功能手册/管理手册/系统配置/流程设置"
                 },
                 {
                   "type": "doc",
@@ -266,9 +280,47 @@ const sidebars = {
             },
             {
               "type": "doc",
-              "id": "user_manual/contract",
+              "id": "user_manual/opportunity",
+              "label": "商机管理",
+              "key": "doc:功能手册/通用用户手册/商机管理"
+            },
+            {
+              "type": "category",
               "label": "合同管理",
-              "key": "doc:功能手册/通用用户手册/合同管理"
+              "collapsed": true,
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "user_manual/contract",
+                  "label": "合同",
+                  "key": "doc:功能手册/通用用户手册/合同管理"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/contractBusinessTitle",
+                  "label": "工商抬头",
+                  "key": "doc:功能手册/通用用户手册/合同管理/工商抬头"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/contractPaymentPlan",
+                  "label": "回款计划",
+                  "key": "doc:功能手册/通用用户手册/合同管理/回款计划"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/contractPaymentRecord",
+                  "label": "回款记录",
+                  "key": "doc:功能手册/通用用户手册/合同管理/回款记录"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/contractInvoice",
+                  "label": "发票记录",
+                  "key": "doc:功能手册/通用用户手册/合同管理/发票记录"
+                }
+              ],
+              "key": "cat:功能手册/通用用户手册/合同管理"
             },
             {
               "type": "doc",
@@ -279,8 +331,8 @@ const sidebars = {
             {
               "type": "doc",
               "id": "user_manual/product_entry",
-              "label": "产品",
-              "key": "doc:功能手册/通用用户手册/产品"
+              "label": "产品管理",
+              "key": "doc:功能手册/通用用户手册/产品管理"
             },
             {
               "type": "doc",
@@ -293,6 +345,12 @@ const sidebars = {
               "id": "user_manual/custom_form",
               "label": "自定义表单",
               "key": "doc:功能手册/通用用户手册/自定义表单"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/agent",
+              "label": "智能体",
+              "key": "doc:功能手册/通用用户手册/智能体"
             },
             {
               "type": "doc",
@@ -345,6 +403,12 @@ const sidebars = {
         }
       ],
       "key": "cat:功能手册"
+    },
+    {
+      "type": "doc",
+      "id": "enterprise_features",
+      "label": "企业版功能",
+      "key": "doc:企业版功能"
     },
     {
       "type": "doc",
