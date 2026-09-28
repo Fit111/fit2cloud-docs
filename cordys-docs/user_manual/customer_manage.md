@@ -1,6 +1,6 @@
 ---
 title: 客户管理
-description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查看、新建和领取方式。
+description: 介绍 Cordys CRM 客户模块中客户、联系人、公海与客户合并的使用方式。
 ---
 
 客户管理是销售团队沉淀客户资产的模块，用于维护已转化客户的全生命周期资料，包括客户主体信息、对接联系人以及未分配客户的公海池。线索转为客户后即进入本模块，销售在这里持续跟进、管理人员在这里分配与回收资源。
@@ -9,11 +9,11 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 
 客户模块由**客户、联系人、公海**三个页签组成，分别承载三类数据：客户页签维护客户主体及其归属关系，联系人页签维护客户下的对接人，公海页签汇总无负责人的客户资源供成员领取。
 
-客户列表支持按视图组织数据，内置“所有客户 / 我的客户 / 部门客户 / 协作客户”四个视图，并可通过“+ 新建视图”保存自定义筛选条件；列表行内提供跟进、编辑、转移、更多操作。公海客户在领取后会受归属规则约束，到期未跟进或未成交时可能被自动回收。
+客户列表支持按视图组织数据，内置**所有客户 / 我的客户 / 部门客户 / 协作客户**四个视图，并可通过**+ 新建视图**保存自定义筛选条件；列表行内提供跟进、编辑、转移、更多操作。公海客户在领取后会受归属规则约束，到期未跟进或未成交时可能被自动回收。
 
 ## 2 入口位置
 
-在左侧导航点击“客户”，进入客户管理页面。页面顶部通过页签在客户、联系人与公海之间切换。
+在左侧导航点击**客户**，进入客户管理页面。页面顶部通过页签在客户、联系人与公海之间切换。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/customer-list.png" alt="图 1  客户列表" />
 
@@ -28,7 +28,7 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 
 ## 3 新建客户
 
-点击列表左上角的“新建客户”，页面右侧滑出新建客户表单，按基本信息与地址信息两段填写。
+点击列表左上角的**新建客户**，页面右侧滑出新建客户表单，按基本信息与地址信息两段填写。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/customer-create.png" alt="图 2  新建客户表单" />
 
@@ -41,7 +41,7 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 - **客户标签**：输入内容后回车即可直接添加标签。
 - **地区 / 详细地址**：填写客户的地址信息。
 
-填写完成后点击“保存”创建客户；点击“取消”放弃本次录入。
+填写完成后点击**保存**创建客户；点击**取消**放弃本次录入。
 
 :::note[说明]
 客户表单支持自定义。管理员可在 **系统 › 模块配置 › 客户表单设置** 中调整字段、布局与联动规则，新增字段后本表单会同步展示，具体操作请参见[模块配置](./module_config.md)。
@@ -49,7 +49,7 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 
 ## 4 联系人
 
-切换至“联系人”页签可维护客户下的对接人，支持“添加联系人”“导入联系人”“导出所有页”，并按全部联系人、我的联系人、部门联系人及自定义视图组织数据。
+切换至**联系人**页签可维护客户下的对接人，支持**添加联系人**、**导入联系人**、**导出所有页**，并按全部联系人、我的联系人、部门联系人及自定义视图组织数据。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/customer-contacts.png" alt="图 3  联系人列表" />
 
@@ -59,7 +59,7 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 
 ## 5 公海
 
-“公海”页签汇总没有负责人的客户资源，成员可按视图筛选后领取。公海列表字段与客户列表一致，顶部同样提供名称搜索与视图切换。
+**公海**页签汇总没有负责人的客户资源，成员可按视图筛选后领取。公海列表字段与客户列表一致，顶部同样提供名称搜索与视图切换。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/customer-pool.png" alt="图 4  公海列表" />
 
@@ -69,4 +69,30 @@ description: 介绍 Cordys CRM 客户模块中客户、联系人与公海的查�
 
 :::warning[警告]
 将客户移入公海后，客户将不再有负责人，请谨慎操作；回收规则更新后仅对新产生的数据生效。
+:::
+
+## 6 合并客户
+
+重复录入的客户可以合并为一条。在客户列表中先勾选要合并的客户，再在批量操作中选择**合并客户**。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/merge-customers12.png" alt="图 5  客户合并" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  客户合并</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/merge-customers42.png" alt="图 6  选择要合并的客户" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  选择要合并的客户</div>
+
+确认时系统会提示“合并后，数据不可回退”。选择合并到**已选客户**或**其他客户**，并指定合并后的客户负责人。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/merge-customers22.png" alt="图 7  合并确认" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  合并确认</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/merge-customers32.png" alt="图 8  选择合并后的负责人" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  选择合并后的负责人</div>
+
+:::warning[警告]
+客户合并后不能撤销，请先确认保留哪一条客户以及合并后的负责人。
 :::

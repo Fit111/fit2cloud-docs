@@ -12,7 +12,7 @@ title: 合同
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建合同</div>
 
 
-用户可以“新建合同”或“导出合同”。
+用户可以**新建合同**或**导出合同**。
 ![合同列表](/img/cordys/user_manual/contractlist2.png)
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  合同列表</div>
@@ -26,7 +26,7 @@ title: 合同
 ## 2 合同关联其他模块
 
 
-管理员进入【系统-模块设置】，点击“合同表单设置”，选择“数据源”，设置要关联模块。
+管理员进入【系统-模块配置】，点击**合同表单设置**，选择**数据源**，设置要关联模块。
     
 ![合同关联](/img/cordys/user_manual/contractassociation2.png)
 
@@ -37,3 +37,5 @@ title: 合同
 ![合同审批](/img/cordys/user_manual/contractapproval2.png)
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  合同审批</div>
+
+合同页顶部还有 [工商抬头](./contractBusinessTitle.md)、[回款计划](./contractPaymentPlan.md)、[回款记录](./contractPaymentRecord.md) 和 [发票记录](./contractInvoice.md)。
