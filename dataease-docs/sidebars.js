@@ -182,6 +182,7 @@ const sidebars = {
       [
         doc("installation/offline_INSTL_and_UPG", "安装指南", "doc:安装部署/安装指南", "sidebar-item-badge-rec"),
         doc("installation/online_INSTL_and_UPG", "在线安装指南", "doc:安装部署/在线安装指南"),
+        doc("installation/1panel_installation", "1Panel 安装指南", "doc:安装部署/1Panel 安装指南"),
         doc("installation/multi_database_deployment", "外部数据库部署", "doc:安装部署/外部数据库部署"),
         doc("installation/offline_upgrade", "升级指南", "doc:安装部署/升级指南"),
         doc("installation/online_upgrade", "在线升级", "doc:安装部署/在线升级"),
