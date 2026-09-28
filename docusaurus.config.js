@@ -282,6 +282,16 @@ const config = {
             type: 'custom-ProductDocs',
             position: 'left',
           },
+          {
+            // 一体机: 仿 fit2cloud 官网顶部「一体机」菜单(4 项, 均跳官网外链)。
+            // 产品/链接/图标集中维护在 src/theme/NavbarItem/Appliance.js 的 APPLIANCES 表。
+            // 注意: 该组件是 src/theme 下的新文件, @theme/* 别名表在 dev server 启动时生成,
+            //       新增文件后需重启 docusaurus start 才会生效(生产构建不受影响)。
+            type: 'custom-Appliance',
+            position: 'left',
+          },
+          // 如何购买: 对齐官网顶部同名入口(官网该处为平级普通链接, 非下拉菜单)。
+          {href: 'https://www.fit2cloud.com/purchase/index.html', label: '如何购买', position: 'left'},
           // 以下官网/论坛/培训认证/关于我们/合作伙伴 对齐 Figma 设计稿: 全部放在左侧(logo 之后),
           // 与"首页/产品文档"同一行, 右侧只留 搜索 + 中英文切换。
           // 版本切换已移入文档页左侧「文档选择」一体盒子(见 src/theme/DocsSwitcher)。
@@ -322,7 +332,7 @@ const config = {
               {label: '400-052-0755', to: 'tel:400-052-0755'},
               {label: '客户支持门户', to: 'https://support.fit2cloud.com/'},
               {label: '产品预约演示', to: 'https://jsj.top/f/UFPJsq'},
-              {label: '合作伙伴', to: 'https://fit2cloud.com/partners/index.html'},
+              {label: '申请成为合作伙伴', to: 'https://jsj.top/f/vKGHRP'},
             ],
           },
           {
