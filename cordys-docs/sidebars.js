@@ -251,6 +251,36 @@ const sidebars = {
                 }
               ],
               "key": "cat:功能手册/管理手册/系统配置"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/product_entry",
+              "label": "产品",
+              "key": "doc:功能手册/管理手册/产品管理"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/dashboard",
+              "label": "仪表板",
+              "key": "doc:功能手册/管理手册/仪表板"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/custom_form",
+              "label": "自定义表单",
+              "key": "doc:功能手册/管理手册/自定义表单"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/agent",
+              "label": "智能体",
+              "key": "doc:功能手册/管理手册/智能体"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/mobile",
+              "label": "移动端",
+              "key": "doc:功能手册/管理手册/移动端"
             }
           ],
           "key": "cat:功能手册/管理手册"
@@ -327,36 +357,6 @@ const sidebars = {
               "id": "user_manual/order",
               "label": "订单管理",
               "key": "doc:功能手册/通用用户手册/订单管理"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/product_entry",
-              "label": "产品管理",
-              "key": "doc:功能手册/通用用户手册/产品管理"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/dashboard",
-              "label": "仪表板",
-              "key": "doc:功能手册/通用用户手册/仪表板"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/custom_form",
-              "label": "自定义表单",
-              "key": "doc:功能手册/通用用户手册/自定义表单"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/agent",
-              "label": "智能体",
-              "key": "doc:功能手册/通用用户手册/智能体"
-            },
-            {
-              "type": "doc",
-              "id": "user_manual/mobile",
-              "label": "移动端",
-              "key": "doc:功能手册/通用用户手册/移动端"
             }
           ],
           "key": "cat:功能手册/通用用户手册"

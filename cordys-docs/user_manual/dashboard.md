@@ -3,7 +3,7 @@ title: 仪表板
 description: 介绍 Cordys CRM 仪表板模块的入口、看板组织方式与 DataEase 集成关系。
 ---
 
-仪表板模块用于在 Cordys CRM 内查看数据分析结果，把 Cordys 的业务数据交给 DataEase 做可视化呈现。管理者无需在多个系统之间来回切换，登录 Cordys 后即可查看商机、客户、线索、赢单等主题的看板。
+仪表板模块用于在 Cordys CRM 内查看数据分析结果，把 Cordys 的业务数据交给 DataEase 做可视化呈现。管理者无需在多个系统之间来回切换，登录 Cordys 后即可查看商机、客户、线索、赢单等主题的看板。配置详情见[BI 集成指南](./dataease.md)。
 
 ## 1 功能简介
 
