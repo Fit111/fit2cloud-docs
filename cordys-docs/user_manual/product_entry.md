@@ -13,11 +13,11 @@ title: 产品
 
  **提示**：产品表单可以根据公司产品特性在表单设置中进行自定义。
 
-![添加产品](/img/cordys/user_manual/add-product2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/add-product2.png" alt="图 1  添加产品" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  添加产品</div>
 
-![产品表单设置](/img/cordys/user_manual/product-form-settings2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-form-settings2.png" alt="图 2  产品表单设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  产品表单设置</div>
 
@@ -26,7 +26,7 @@ title: 产品
 
 点击下载模板，将产品信息维护到模板中，再拖拽到文件区域，点击校验模板即可完成导入产品。
 
-![导入产品](/img/cordys/user_manual/product-import2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-import2.png" alt="图 3  导入产品" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  导入产品</div>
 
@@ -38,7 +38,7 @@ title: 产品
 - 调整产品排序
 - 批量产品操作
 
-![产品管理](/img/cordys/user_manual/manage-products2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/manage-products2.png" alt="图 4  产品管理" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  产品管理</div>
 
@@ -47,7 +47,7 @@ title: 产品
 
 点击产品名称可查看产品详情。
 
-![产品管理](/img/cordys/user_manual/Product_Details3.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/Product_Details3.png" alt="图 5  产品管理" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  产品管理</div>
 
@@ -58,7 +58,7 @@ title: 产品
 
 在左侧菜单点击【系统-模块配置】，点击价格表表单设置。
 
-![价格表表单设置](/img/cordys/user_manual/product-price-list2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list2.png" alt="图 6  价格表表单设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  价格表表单设置</div>
 
@@ -75,7 +75,7 @@ title: 产品
 - 支持设置表格汇总
 - 支持固定表格列
 
-![](/img/cordys/user_manual/product-price-list22.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list22.png" alt="图 7  产品表格字段" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  产品表格字段</div>
 
@@ -87,7 +87,7 @@ title: 产品
 - **显示字段**：设置选择产品时，同步显示关联的字段，依次展示在表格列中
     
 
-![image-20251210154921725](/img/cordys/user_manual/product-price-list12.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list12.png" alt="图 8  产品表格-数据源字段" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  产品表格-数据源字段</div>
 
@@ -116,11 +116,11 @@ title: 产品
   确认信息填写完整后，点击弹窗底部 **保存** 按钮，完成价格表创建；若需放弃操作，点击 **取消** 即可
     
 
-![image-20251210161304428](/img/cordys/user_manual/product-price-list32.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list32.png" alt="图 9  新建价格表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  新建价格表</div>
 
-![image-20251210161340016](/img/cordys/user_manual/product-price-list42.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list42.png" alt="图 10  新建价格表详情" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  新建价格表详情</div>
 
@@ -131,7 +131,7 @@ title: 产品
 
 **注意:** 因价格表存在包含多个产品的场景， 请严格按照模板完成价格表信息维护。
 
-![image-20251210162840222](/img/cordys/user_manual/product-price-list5.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list5.png" alt="图 11  导入价格表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  导入价格表</div>
 
@@ -143,11 +143,11 @@ title: 产品
 - 导出支持勾选导出字段
 - 导出完成后在【左下角头像-我的导出】中查看导出任务进度或下载文件
 
-![image-20251210163159433](/img/cordys/user_manual/product-price-list6.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list6.png" alt="图 12  导出价格表步骤1" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  导出价格表步骤1</div>
 
-![image-20251210163515333](/img/cordys/user_manual/product-price-list7.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list7.png" alt="图 13  导出价格表步骤2" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  导出价格表步骤2</div>
 
@@ -159,6 +159,6 @@ title: 产品
 - 调整价格表排序
 - 批量修改价格表操作
 
-![image-20251210164156657](/img/cordys/user_manual/product-price-list8.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/product-price-list8.png" alt="图 15  管理价格表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  管理价格表</div>

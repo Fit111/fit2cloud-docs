@@ -68,6 +68,7 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 
 
 安装完成后，在对话窗口中通过 + 技能即可调用。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/workbuddy_invoke_skill.png" alt="图 2  调用技能" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  调用技能</div>
@@ -125,6 +126,7 @@ MaxKB 社区版未开放知识库 API，仅开放三类智能体相关 API：
 
 
 本技能将 MaxKB 平台的常见运维操作收敛为自然语言指令，用户无需记忆命令或 API 细节，只需在 WorkBuddy 对话框中描述需求即可。以下是常用指令速查表：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  常用指令速查</div>
 
 | 需求 | 推荐指令（示例） |

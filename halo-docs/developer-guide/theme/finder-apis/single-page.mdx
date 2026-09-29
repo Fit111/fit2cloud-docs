@@ -37,6 +37,7 @@ singlePageFinder.getByName(pageName);
     th:text="${singlePage.spec.title}"
   ></a>
 </div>
+
 ```
 
 ## content(pageName)
@@ -63,6 +64,7 @@ singlePageFinder.content(pageName);
 <div th:with="content = ${singlePageFinder.content('page-foo')}">
   <div th:utext="${content.content}"></div>
 </div>
+
 ```
 
 ## list(page,size)

@@ -9,7 +9,8 @@ title: PHP
 
 - 1Panel 支持维护 5.x、7.x 和 8.x 三个大版本，用户可以根据自己的需求选择合适的版本
 
-![img.png](/img/1panel/websites/runtime_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_list.png" alt="图 1 创建 PHP 运行环境——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建 PHP 运行环境——应用卡片</div>
 
 ### 1.1.创建 本地 PHP 运行环境
@@ -18,7 +19,8 @@ title: PHP
 
 - 需要先在服务器上安装 php-fpm。
 
-![img.png](/img/1panel/websites/runtime_local.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_local.png" alt="图 2 创建 本地 PHP 运行环境界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 创建 本地 PHP 运行环境界面</div>
 
 **1Panel 离线版**
@@ -27,21 +29,24 @@ title: PHP
 - 创建运行环境网站，选择刚刚创建的 PHP 运行环境，修改端口为刚才启动的端口
 - 详细操作步骤可参考：[PHP 离线版使用文档](../../installation/package-installation.md#8-php-离线版)
 
-![img.png](/img/1panel/websites/runtime_local_website.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_local_website.png" alt="图 3 创建 本地 PHP 运行环境界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 创建 本地 PHP 运行环境界面（续）</div>
 
 ## 2 管理 PHP 扩展
 
 点击 PHP 运行环境列表中的【扩展】按钮，可以查看当前 PHP 运行环境已加载的扩展，同时支持安装、卸载扩展。
 
-![img.png](/img/1panel/websites/runtime_php_extensions.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_php_extensions.png" alt="图 4 管理 PHP 扩展界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 管理 PHP 扩展界面</div>
 
 ## 3 修改 PHP 配置
 
 点击 PHP 运行环境列表中的【更多】操作中的【配置】选项，可以查看并修改当前 PHP 运行环境的配置。
 
-![img.png](/img/1panel/websites/runtime_php_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_php_config.png" alt="图 5 修改 PHP 配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 修改 PHP 配置</div>
 
 ## 4 配置进程守护
@@ -50,7 +55,8 @@ title: PHP
 
 适用于 PHP 应用需要额外的常驻进程的场景。
 
-![img.png](/img/1panel/websites/runtime_php_daemon.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/runtime_php_daemon.png" alt="图 6 配置进程守护界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 配置进程守护界面</div>
 
 ## 5 PHP 扩展列表 {/* #php_1 */}

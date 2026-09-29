@@ -95,6 +95,7 @@ MaxKB 容器需要可正常访问 Ollama 服务。在 MaxKB 容器中访问 Olla
 :::
 
 ### 2.2 对接图片生成模型时验证失败
+
 <img alt="doc" src="/img/maxkb-v1/FAQ/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5.png" width="900" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note

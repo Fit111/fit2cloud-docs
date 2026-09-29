@@ -85,6 +85,7 @@ MaxKB 容器需要可正常访问 Ollama 服务。在 MaxKB 容器中访问 Olla
 对于 Window 环境安装 Ollama 可进一步参考：[Windows 系统本地部署 Ollama + MaxKB 安装教程](https://kb.fit2cloud.com/?p=349d848b-7a0a-421b-8029-38e0440f35d4)。**
 
 ### 2.2 对接图片生成模型时验证失败
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5.png" alt="图 5  对接图片生成模型验证失败" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  对接图片生成模型验证失败</div>
@@ -97,6 +98,7 @@ MaxKB 容器需要可正常访问 Ollama 服务。在 MaxKB 容器中访问 Olla
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  设置参数步长为 1</div>
 
 ### 2.3 对接 XInference 语音合成模型验证失败
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/%E5%AF%B9%E6%8E%A5XInferenc%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9E%8B%E5%A4%B1%E8%B4%A5.png" alt="图 7  对接 XInference 语音模型失败" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  对接 XInference 语音模型失败</div>

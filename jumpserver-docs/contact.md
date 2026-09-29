@@ -16,15 +16,19 @@ title: 联系我们
 - 技术咨询：[https://jinshuju.net/f/sQ91MK](https://jinshuju.net/f/sQ91MK)
 
 ## 3 微信公众号
+
 <img alt="wechat-official" src="/img/jumpserver/wechat-official.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 4 微信群
+
 <img alt="wechat-group" src="/img/jumpserver/weixin_group.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 5 智能客服
+
 <img alt="evo-bot" src="/img/jumpserver/AI_helper.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 6 学习认证
+
 <img alt="contact01" src="/img/jumpserver/contact01.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 7 在线文档问题反馈

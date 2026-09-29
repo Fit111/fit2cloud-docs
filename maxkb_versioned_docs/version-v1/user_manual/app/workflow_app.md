@@ -185,6 +185,7 @@ title: 高级编排应用
 
 节点说明：根据文本描述生成对应的图片。
 :::
+
 <img alt="图片生成" src="/img/maxkb-v1/app/vision_gen.png" width="300" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
@@ -370,6 +371,7 @@ title: 高级编排应用
 
 节点说明：将音频文件转换为文本。
 :::
+
 <img alt="语音转文本" src="/img/maxkb-v1/app/audio2text.png" width="280" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
@@ -394,6 +396,7 @@ title: 高级编排应用
 
 节点说明：将文本转换为音频。
 :::
+
 <img alt="文本转语音" src="/img/maxkb-v1/app/text2audio.png" width="280" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note

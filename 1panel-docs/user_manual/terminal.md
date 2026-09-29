@@ -14,7 +14,8 @@ keywords: [1Panel 终端, Web 终端, SSH 终端, 远程主机, 快速命令, �
 
 打开页面后，可以连接当前节点的本地服务器、选择已保存的远程主机，或通过 **新建连接** 临时添加主机。终端支持多标签、重新连接、全屏、批量输入和快速命令。
 
-![终端](/img/1panel/hosts/terminal.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/terminal.png" alt="图 1 终端" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 终端</div>
 
 本地终端无法自动连接时，按页面提示填写当前节点的 SSH 用户和认证信息。远程主机支持密码或私钥认证，保存前可执行 **连接测试**。
@@ -27,7 +28,8 @@ keywords: [1Panel 终端, Web 终端, SSH 终端, 远程主机, 快速命令, �
 
 **主机** 标签页用于维护远程 SSH 连接和主机分组。添加或编辑时配置名称、地址、端口、用户、认证方式、密码或私钥，并先测试连接。
 
-![主机管理](/img/1panel/hosts/host.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/host.png" alt="图 2 主机界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 主机界面</div>
 
 认证信息仅应授予必要权限。删除主机记录不会删除远程服务器数据，也不会停止远程服务器上的服务。

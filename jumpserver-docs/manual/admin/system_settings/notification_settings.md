@@ -8,6 +8,7 @@ title: 通知设置
 ## 1 邮箱设置
 
 - 邮件设置界面主要配置邮件的发件邮箱信息，用于发送创建用户密码设置邮件、危险命令邮件、授权过期邮件等邮件到JumpServer用户邮箱。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings1.png" alt="图 1  邮箱设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  邮箱设置</div>
 
@@ -37,12 +38,14 @@ title: 通知设置
 
 - 可以设置短信MFA认证方式(目前支持阿里云、腾讯云、华为云、CMPP V2.0和自定义方式对接)。
 - JumpServer还支持使用手机短信找回用户密码，管理员需要开启SMS服务，且用户信息需要配置手机号。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings2.png" alt="图 2  短信设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  短信设置</div>
 
 ### 2.2 配置说明
 
 - 选择对应的短信服务商，填入服务商平台认证相关信息，点击 **测试** 按钮可测试配置是否正确。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings3.png" alt="图 3  短信服务商配置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  短信服务商配置</div>
 
@@ -51,12 +54,14 @@ title: 通知设置
 ### 2.3 用户侧配置
 
 - 点击用户头像-个人信息在手机一栏配置用户个人手机号。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings4.png" alt="图 4  配置用户手机号" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  配置用户手机号</div>
 
 
 - 点击MFA认证设置按钮，进入设置页面。
 - 点击启用MFA按钮，再点击启用SMS按钮即可使用短信认证功能。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings5.png" alt="图 5  启用 MFA 认证" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  启用 MFA 认证</div>
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings6.png" alt="图 6  启用短信认证" />
@@ -67,11 +72,14 @@ title: 通知设置
 
 - 可以设置 JumpServer 平台监控消息的接收人。
 - 可以设置监控消息的发送方式(站内信和邮件)。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings7.png" alt="图 7  消息订阅" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  消息订阅</div>
+
 ### 3.2 设置消息接收人
 
 - 点击 **编辑消息接收人** 按钮，进入设置界面。
 - 在可选择列表中勾选用户，会将其移入已选择。在已选择列表中勾选用户，会将其移入未选择。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_systemsetting_notification_settings8.png" alt="图 8  设置消息接收人" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  设置消息接收人</div>

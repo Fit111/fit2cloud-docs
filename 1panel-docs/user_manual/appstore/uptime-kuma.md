@@ -10,14 +10,16 @@ title: Uptime Kuma
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 Uptime Kuma 并安装
 
 在右上角搜索框输入 **Uptime Kuma**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251021163433091](/img/1panel/app/uptime-kuma.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/uptime-kuma.png" alt="图 2 搜索 Uptime Kuma 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 Uptime Kuma 并安装</div>
 
 ## 3. 配置安装参数
@@ -31,7 +33,8 @@ title: Uptime Kuma
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251021163633965](/img/1panel/app/uptime-kuma_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/uptime-kuma_install.png" alt="图 3 配置安装参数——安装 Uptime Kuma 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Uptime Kuma 的参数配置</div>
 
 等待安装完成即可
@@ -40,15 +43,18 @@ title: Uptime Kuma
 
 安装完成后，确认 1Panel 配置默认访问地址，已配置过可忽略
 
-![image-20251016172322315](/img/1panel/app/setting_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/setting_ip.png" alt="图 4 访问 Uptime Kuma 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 Uptime Kuma 服务界面</div>
 
 返回应用商店，点击 **跳转** 即可访问 Uptime Kuma 服务
 
-![image-20251021163916064](/img/1panel/app/uptime-kuma_jump.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/uptime-kuma_jump.png" alt="图 5 访问 Uptime Kuma 服务——打开 Uptime Kuma 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 Uptime Kuma 服务——打开 Uptime Kuma 服务地址</div>
 
 创建管理员账户即可使用
 
-![image-20251021163947718](/img/1panel/app/uptime-kuma_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/uptime-kuma_view.png" alt="图 6 访问 Uptime Kuma 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 Uptime Kuma 服务界面</div>

@@ -26,7 +26,8 @@ AI 网关页面顶部展示服务状态和外部连接地址，并提供以下�
 - **日志**：查看 AI 网关运行日志
 - **外部连接地址**：客户端配置的 Base URL，可直接复制
 
-![AI 网关账号池](/img/1panel/ai/ai_gateway_account_pool.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_account_pool.jpg" alt="图 1 运行状态与基础操作界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 运行状态与基础操作界面</div>
 
 
@@ -45,7 +46,9 @@ AI 网关页面顶部展示服务状态和外部连接地址，并提供以下�
     - **启用**：控制该账号是否参与网关转发
 
 :::
-![导入模型账号](/img/1panel/ai/ai_gateway_import_account.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_import_account.png" alt="图 2 账号池界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 账号池界面</div>
 
 > 模型映射左侧填写客户端请求中的 `model`，右侧填写真实上游模型。客户端只需要感知映射后的请求模型名。
@@ -56,14 +59,16 @@ AI 网关页面顶部展示服务状态和外部连接地址，并提供以下�
 
 `auto` 是客户端触发智能路由时使用的虚拟模型名，不需要添加到模型组中。
 
-![AI 网关模型组](/img/1panel/ai/ai_gateway_model_groups.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_model_groups.jpg" alt="图 3 模型组界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 模型组界面</div>
 
 ## 4 用户组
 
 **用户组** 用于统一管理一组 API Key 的调用配额和模型范围。创建用户组后，再将 API Key 绑定到该用户组。
 
-![AI 网关用户组](/img/1panel/ai/ai_gateway_user_groups.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_user_groups.jpg" alt="图 4 用户组界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 用户组界面</div>
 
 :::tip[用户组参数]
@@ -83,8 +88,10 @@ AI 网关页面顶部展示服务状态和外部连接地址，并提供以下�
 
 API Key 只会在创建时完整展示，请妥善保存。重置 Token 后，原 Token 将无法继续使用，需要同步更新客户端配置。
 
-![创建 API Key](/img/1panel/ai/ai_gateway_api_key_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_api_key_create.png" alt="图 5 API Key界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 API Key界面</div>
+
 :::tip[客户端调用示例]
     ```bash
     curl http://<服务器 IP>:4000/v1/chat/completions \
@@ -122,23 +129,35 @@ API Key 只会在创建时完整展示，请妥善保存。重置 Token 后，�
 :::tip[样本]
     样本用于描述简单或复杂问题。列表展示标签、样本文本、向量模型和向量维度，新增或调整 Embedding 配置后可以点击 **重建向量**。
 :::
-![智能路由样本](/img/1panel/ai/ai_gateway_smart_routing_sample.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_smart_routing_sample.png" alt="图 6 功能说明" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 功能说明</div>
+
 :::tip[预览]
     输入一段请求文本，查看它会被判定为简单还是复杂，并显示判定来源。预览只执行路由判断，不会真实调用上游模型。
 :::
-![智能路由预览](/img/1panel/ai/ai_gateway_smart_routing_sample_yulan.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_smart_routing_sample_yulan.png" alt="图 7 功能说明（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 功能说明（续）</div>
+
 :::tip[决策日志]
     记录请求 ID、判定标签、最终模型、判定来源、置信度、耗时和创建时间。判定来源包括样本匹配和规则判断，并可跳转到对应调用日志。
 :::
-![智能路由决策](/img/1panel/ai/ai_gateway_smart_routing_sample_juece.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_smart_routing_sample_juece.png" alt="图 8 功能说明" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 功能说明</div>
+
 :::tip[统计信息]
     展示简单/复杂请求占比、样本匹配占比、总 Token、平均 Token、失败请求，以及按标签、来源、模型和 Token 的分布。
 :::
-![智能路由统计](/img/1panel/ai/ai_gateway_smart_routing_sample_tongji.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_smart_routing_sample_tongji.png" alt="图 9 功能说明（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 功能说明（续）</div>
+
 ## 7 内容合规
 
 内容合规支持敏感词匹配和基于 Embedding 的语义审核样本。启用前，需要先在 **设置 -> 内容合规** 中打开总开关；使用审核样本时，还需要完成 **设置 -> Embedding** 配置。
@@ -147,24 +166,34 @@ API Key 只会在创建时完整展示，请妥善保存。重置 Token 后，�
     支持创建和批量导入敏感词，并设置敏感词分组、归一化词、状态和备注。归一化词用于将不同写法统一为同一个匹配词。
 
 :::
-![AI 网关内容合规](/img/1panel/ai/ai_gateway_compliance.jpg)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_compliance.jpg" alt="图 10 内容合规界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10 内容合规界面</div>
 
 :::tip[敏感词分组]
     为一组敏感词设置处理动作、风险等级、状态和描述。处理动作包括 **阻断** 和 **仅记录**。
 :::
-![AI 网关内容合规](/img/1panel/ai/ai_gateway_compliance_fenzu.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_compliance_fenzu.png" alt="图 11 内容合规界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 内容合规界面（续）</div>
+
 :::tip[审核样本]
     维护用于语义匹配的审核文本，并设置标签。列表展示向量模型和维度，样本变更或 Embedding 配置调整后可以重建向量。
 :::
-![AI 网关内容合规](/img/1panel/ai/ai_gateway_compliance_shenheyangben.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_compliance_shenheyangben.png" alt="图 12 内容合规界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12 内容合规界面</div>
+
 :::tip[审计日志]
     记录 Request ID、请求模型、命中词、命中分组、处理动作、状态码和创建时间，用于追踪被记录或阻断的请求。
 
 :::
-![ai_gateway_compliance_log.png](/img/1panel/ai/ai_gateway_compliance_log.png)    
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_compliance_log.png" alt="图 13 内容合规界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13 内容合规界面（续）</div>
 
 ## 8 用量统计
@@ -175,28 +204,36 @@ API Key 只会在创建时完整展示，请妥善保存。重置 Token 后，�
     按模型供应商、模型、模型账号、用户组和用户统计请求数、Token 用量、缓存 Token 和占比。
 
 :::
-![AI 网关用量分布](/img/1panel/ai/ai_gateway_usage_new_fenbu.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_usage_new_fenbu.png" alt="图 14 用量统计" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14 用量统计</div>
 
 :::tip[排行榜]
     按用户展示请求数、输入 Token、输出 Token、Token 总量和缓存 Token，并支持按指标排序。
 
 :::
-![AI 网关用量排行榜](/img/1panel/ai/ai_gateway_usage_new_paihangbang.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_usage_new_paihangbang.png" alt="图 15 用量统计（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15 用量统计（续）</div>
 
 :::tip[调用日志]
     展示 Request ID、模型供应商、请求模型、上游模型、用户、用户组、输入/输出/总 Token、缓存 Token、状态码、响应时间和请求时间。点击 **详情** 可以查看单次调用信息。
 :::
-![AI 网关用量调用日志](/img/1panel/ai/ai_gateway_usage_new_diaoyongrizhi.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_usage_new_diaoyongrizhi.png" alt="图 16 用量统计" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16 用量统计</div>
+
 ## 9 网关设置
 
 ### 9.1 基础设置
 
 **基础设置** 用于控制网关开关、监听端口、外部连接地址和负载策略。外部连接地址应填写客户端实际可访问的地址，并包含 `/v1` 路径。
 
-![AI 网关基础设置](/img/1panel/ai/ai_gateway_settings_basic.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_settings_basic.jpg" alt="图 17 基础设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17 基础设置</div>
 
 ### 9.2 性能设置
@@ -211,7 +248,9 @@ API Key 只会在创建时完整展示，请妥善保存。重置 Token 后，�
     - **Runtime 刷新间隔**：运行时配置刷新间隔
 
 :::
-![AI 网关性能设置](/img/1panel/ai/ai_gateway_settings_performance.jpg)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_settings_performance.jpg" alt="图 18 性能设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18 性能设置</div>
 
 ### 9.3 Embedding 设置
@@ -222,7 +261,8 @@ Embedding 服务同时用于智能路由样本和内容合规审核样本的语�
 
 1. 进入 **AI -> 模型 -> 下载器**，下载 `Qwen3-Embedding-0.6B-GGUF` 模型，并确认模型文件中包含 `qwen3-embedding-0.6b-q8_0.gguf`。
 
-![下载 Qwen3 Embedding 模型](/img/1panel/ai/ai_gateway_embedding_model_download.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_embedding_model_download.jpg" alt="图 19 部署 Embedding 模型界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19 部署 Embedding 模型界面</div>
 
 2. 进入 **应用商店**，搜索并安装 `llama.cpp`。
@@ -238,7 +278,8 @@ Embedding 服务同时用于智能路由样本和内容合规审核样本的语�
     -m /models/Qwen3-Embedding-0.6B-GGUF/qwen3-embedding-0.6b-q8_0.gguf --host 0.0.0.0 --port 8080 --embedding --pooling last -c 32768
     ```
 
-![llama.cpp Embedding 参数配置](/img/1panel/ai/ai_gateway_embedding_llama_cpp.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_embedding_llama_cpp.jpg" alt="图 20 部署 Embedding 模型界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20 部署 Embedding 模型界面（续）</div>
 
 5. 完成安装，并确认 `llama.cpp` 应用处于运行状态。
@@ -255,7 +296,9 @@ Embedding 服务同时用于智能路由样本和内容合规审核样本的语�
     - **API Key**：本地 `llama.cpp` 未配置认证时留空
 
 :::
-![AI 网关 Embedding 设置](/img/1panel/ai/ai_gateway_embedding_settings.jpg)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_embedding_settings.jpg" alt="图 21 连接 AI 网关界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21 连接 AI 网关界面</div>
 
 >点击 **连接测试**。测试成功后保存配置，再到智能路由样本或内容审核样本页面生成或重建向量。
@@ -272,7 +315,8 @@ Embedding 服务同时用于智能路由样本和内容合规审核样本的语�
 
 在 **智能路由** 标签页中打开开关，并选择简单模型组和复杂模型组。简单模型组适合低成本任务，复杂模型组适合代码分析、架构设计和故障排查等任务。
 
-![AI 网关智能路由设置](/img/1panel/ai/ai_gateway_settings_smart_routing.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_settings_smart_routing.jpg" alt="图 22 智能路由与内容合规设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22 智能路由与内容合规设置</div>
 
 在 **内容合规** 标签页中可以统一启用或停用内容合规检查。
@@ -289,7 +333,8 @@ Embedding 服务同时用于智能路由样本和内容合规审核样本的语�
 
 Elasticsearch 用于保存 AI 网关请求和响应内容，便于检索、审计和问题排查。页面支持连接测试，确认连接可用后再保存配置。
 
-![AI 网关 Elasticsearch 设置](/img/1panel/ai/ai_gateway_settings_elasticsearch.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_gateway_settings_elasticsearch.jpg" alt="图 23 Elasticsearch 设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23 Elasticsearch 设置</div>
 
 :::tip[参数说明]

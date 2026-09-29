@@ -25,11 +25,13 @@ OpenClaw v7.1 无法通过应用商店直接升级到 v9.1 或更高版本，需
 
 1. 进入 OpenClaw v7.1 的安装目录，修改 Compose 文件中的 Image 版本为 v9.1。
 
-    ![应用列表中选择 OpenClaw 参数设置](/img/1panel/faq/openclaw_upgrade_image_version.png)
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面</div>
+    <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/faq/openclaw_upgrade_image_version.png" alt="图 1 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面" />
 
-    ![修改 docker-compose.yml 中的 image 版本](/img/1panel/faq/openclaw_upgrade_compose_edit.png)
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面（续）</div>
+    <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面</div>
+
+    <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/faq/openclaw_upgrade_compose_edit.png" alt="图 2 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面（续）" />
+
+    <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？界面（续）</div>
 
 2. 在 OpenClaw 目录下执行以下命令：
 

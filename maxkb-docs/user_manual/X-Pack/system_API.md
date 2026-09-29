@@ -29,6 +29,7 @@ title: 系统API
 
 
 注意：当使用的接口涉及应用对话时，Authorize 需填写应用的 API Key（application-0d5722xxxxxxxxx），否则会出现如下报错：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/swagger_apinotice.png" alt="图 4  API调用未授权的报错提示" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  API调用未授权的报错提示</div>
@@ -36,6 +37,7 @@ title: 系统API
 ## 3 开启身份验证的 API 调用
 
 开启身份验证后的 API 调用使用的 Authorize 与[通过 API Key 进行对话](../chat_to_API)的获取方式有所不同，以账号登录为例。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_login.png" alt="图 5  登录认证" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  登录认证</div>
@@ -43,18 +45,21 @@ title: 系统API
 ### 3.1 登录 API 地址
 
 点击用户头像，选择【API Key 管理】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_open_apikey.png" alt="图 6  打开api key管理" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  打开api key管理</div>
 
 
 创建 API Key，复制并打开【API 服务地址】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_create_apikey.png" alt="图 7  打开api文档" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  打开api文档</div>
 
 
 点击【Authorize】，在【value】中输入系统的 API Key。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_login_apikey.png" alt="图 8  API文档填写API Key授权" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  API文档填写API Key授权</div>
@@ -64,18 +69,21 @@ title: 系统API
 调用 captcha 接口，获取验证码，获取到的验证码是 Base64 编码的 PNG 图片数据。
 
 **注意：需自行将 Base64 数据解码并转换为图片文件。**
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_captcha.png" alt="图 9  验证码接口返回示例" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  验证码接口返回示例</div>
 
 
 在应用概览页面复制应用的 access_token。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_access_token.png" alt="图 10  应用概览复制access_token" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  应用概览复制access_token</div>
 
 
 在 API 地址找到对话用户/登录，输入 access_token，填入账号密码等信息，生成登录的 token。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_authorize.png" alt="图 11  对话用户登录接口请求配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  对话用户登录接口请求配置</div>
@@ -87,6 +95,7 @@ title: 系统API
 ### 3.3 API 调用
 
 进入应用【概览】的 API 文档地址，将获取的 token 填入【Authorize】中，即可根据：[通过 API Key 进行对话](../chat_to_API)，正常进行 API 对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/api_login_auth.png" alt="图 13  API文档填入Token授权" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  API文档填入Token授权</div>

@@ -17,14 +17,16 @@ title: Zabbix
 
 登录 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ### 1.2 搜索并安装
 
 在右上角搜索框输入 **Zabbix**，点击 **Zabbix Server** 应用卡片进入详情页，选择 **安装**。
 
-![image-20251021163433091](/img/1panel/app/zabbix.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix.png" alt="图 2 搜索并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索并安装</div>
 
 ### 1.3 配置安装参数
@@ -45,7 +47,8 @@ title: Zabbix
 
 配置完成后，点击 **确认** 开始安装。
 
-![image-20251021163633965](/img/1panel/app/zabbix-server_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-server_install.png" alt="图 3 配置安装参数——安装 Zabbix Server Server 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Zabbix Server Server 的参数配置</div>
 
 ### 1.4 访问 Zabbix Server 服务
@@ -55,14 +58,16 @@ title: Zabbix
     - 用户名：`Admin`
     - 密码：`zabbix`
 
-![image-20251021163916064](/img/1panel/app/zabbix-server_jump.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-server_jump.png" alt="图 4 访问 Zabbix Server 服务——打开 Zabbix Server 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 Zabbix Server 服务——打开 Zabbix Server 服务地址</div>
 
 首次进入系统，可以根据以下步骤切换为中文界面：
 
 进入 **Administration** > **General** > **GUI**，在 **Default language** 中选择 **Chinese (zh_CN)**，然后点击 **Update** 保存。
 
-![image-20251021163916064](/img/1panel/app/zabbix-language.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-language.png" alt="图 5 访问 Zabbix Server 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 Zabbix Server 服务界面</div>
 
 ### 1.5 添加监控主机
@@ -77,7 +82,8 @@ title: Zabbix
 
 配置完成后点击 **添加** 保存。
 
-![image-20251021163916064](/img/1panel/app/zabbix-hosts-add.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-hosts-add.png" alt="图 6 添加监控主机——添加监控主机" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 添加监控主机——添加监控主机</div>
 
 ## 2. 安装 Zabbix Agent
@@ -86,7 +92,8 @@ title: Zabbix
 
 回到应用商店列表，在右上角输入 **Zabbix**，点击 **Zabbix Agent** 应用卡片进入详情页，选择 **安装**。
 
-![image-20251021163433091](/img/1panel/app/zabbix.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix.png" alt="图 7 搜索并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 搜索并安装</div>
 
 ### 2.2 配置安装参数
@@ -102,12 +109,14 @@ title: Zabbix
 
 配置完成后，点击 **确认** 开始安装。
 
-![image-20251021163633965](/img/1panel/app/zabbix-agent_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-agent_install.png" alt="图 8 配置安装参数——安装 Zabbix Agent 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 配置安装参数——安装 Zabbix Agent 的参数配置</div>
 
 ### 2.3 查看 Agent 主机状态
 
 进入 **数据采集** > **主机** 页面，查看 Agent 主机状态，若 **可用性** 列为绿色，表示 Agent 已成功连接到 Server。
 
-![image-20251021163916064](/img/1panel/app/zabbix-agent-status.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/zabbix-agent-status.png" alt="图 9 查看 Agent 主机状态Agent 主机在线状态" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 查看 Agent 主机状态Agent 主机在线状态</div>

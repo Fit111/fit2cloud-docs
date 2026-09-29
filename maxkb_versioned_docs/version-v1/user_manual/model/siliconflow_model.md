@@ -35,22 +35,26 @@ SILICONFLOW-大语言模型配置样例图示如下：
 
 SILICONFLOW-向量模型配置样例图示如下：
 :::
+
 <img alt="SILICONFLOW" src="/img/maxkb-v1/model/siliconflow_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 SILICONFLOW-语音识别配置样例图示如下：
 :::
+
 <img alt="SILICONFLOW" src="/img/maxkb-v1/model/siliconflow_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 SILICONFLOW-图片生成配置样例图示如下：
 :::
+
 <img alt="SILICONFLOW" src="/img/maxkb-v1/model/siliconflow_vision_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 SILICONFLOW-重排模型配置样例图示如下：
 :::
+
 <img alt="SILICONFLOW" src="/img/maxkb-v1/model/siliconflow_rerank.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

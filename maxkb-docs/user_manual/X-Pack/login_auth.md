@@ -36,6 +36,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 配置 LDAP 的过程可参考下图，注意勾选下方"启用 LDAP 认证"后开启此功能。     
 提示：配置完成可点击上方【测试连接】即时测试配置信息是否正确，网络是否连通。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/LDAP.png" alt="图 4  LDAP 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  LDAP 单点认证配置</div>
@@ -45,6 +46,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 配置 CAS 的过程可参考下图，注意勾选下方"启用 CAS 认证"后开启此功能。    
 **说明：** CAS 回调地址即 MaxKB 访问地址加上 /api/cas ，例如：`http://40.100.86.240:8080/admin/api/cas`。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/CAS.png" alt="图 5  CAS 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  CAS 单点认证配置</div>
@@ -54,6 +56,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 配置 OIDC 的过程可参考下图，注意勾选下方"启用 OIDC 认证"后开启此功能。   
 **说明：** OIDC 回调地址即 MaxKB 访问地址加上 /api/oidc ，例如：`http://40.100.86.240:8080/admin/api/oidc`。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/OIDC.png" alt="图 6  OIDC 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  OIDC 单点认证配置</div>
@@ -63,6 +66,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 配置 OAUTH2 的过程可参考下图（授权端以 github 为例），注意勾选下方"启用 OAHTU2 认证"后开启此功能。   
 **说明：** OAUTH2 回调地址即 MaxKB 访问地址加上 /api/oauth2 ，例如：`http://40.100.86.240:8080/admin/api/oauth2`。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/oauth2.png" alt="图 7  OAuth2 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  OAuth2 单点认证配置</div>
@@ -128,18 +132,21 @@ MaxKB 配置企业微信扫码登录时，需要企业微信管理员登录 [企
 
 
 第三步：授权回调域。在【企业微信授权】中设置授权回调域。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_callback.png" alt="图 15  设置回调域" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  设置回调域</div>
 
 
 第三步：配置企业可信IP。在【企业可信IP】中配置可信ip。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_ip.png" alt="图 16  配置可信IP" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  配置可信IP</div>
 
 
 完成企业微信应用的配置和发布后，在 MaxKB 企业微信登录扫码配置页面配置相应信息并通过效验。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_setting.png" alt="图 17  MaxKB企业微信扫码配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  MaxKB企业微信扫码配置</div>
@@ -188,6 +195,7 @@ MaxKB 对接钉钉，需要填写以下信息：
 MaxKB 配置钉钉扫码登录时，需要在 [**钉钉开放平台**](https://open-dev.dingtalk.com/) 创建应用并进行配置。
 
 第一步：创建应用。在【应用开发-钉钉应用】中点击【创建应用】，应用创建完后在【凭证与基础信息】可查案 APPKey 和 APPSecret 信息。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_app_create.png" alt="图 20  钉钉开放平台创建应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  钉钉开放平台创建应用</div>
@@ -221,6 +229,7 @@ MaxKB 配置钉钉扫码登录时，需要在 [**钉钉开放平台**](https://o
 
 
 第三步：在【版本管理与发布】中，填写应用版本号、版本描述等信息，点击【保存】，发布应用。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_app_release.png" alt="图 25  钉钉发布应用版本" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  钉钉发布应用版本</div>
@@ -260,12 +269,14 @@ MaxKB 配置钉钉扫码登录时，需要在 [**钉钉开放平台**](https://o
 
 
 安全设置。在【安全设置】中设置重定向 URL 和端内免登录地址。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_security_config.png" alt="图 30  钉钉重定向URL安全设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  钉钉重定向URL安全设置</div>
 
 
 分享设置，在【接入登录】中设置【回调域名】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_share_config.png" alt="图 31  钉钉分享设置回调域名" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  钉钉分享设置回调域名</div>
@@ -294,6 +305,7 @@ MaxKB 配置飞书扫码登录时，需要在 [**飞书开放平台**](https://o
 
 
 第一步：创建企业自建应用。点击【创建企业自建应用】，输入应用名称、描述以及上传应用图标后，点击【创建】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_create_app.png" alt="图 33  飞书创建应用入口" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  飞书创建应用入口</div>
@@ -306,18 +318,21 @@ MaxKB 配置飞书扫码登录时，需要在 [**飞书开放平台**](https://o
 第二步：权限配置
 
 - 配置重定向 URL。在【开发配置-安全设置】中，输入 MaxKB 飞书扫码配置弹出框中的回调地址，点击【添加】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_url.png" alt="图 35  飞书配置回调URL" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  飞书配置回调URL</div>
 
 
 - 应用授权，在应用的【权限管理】里进行应用的相关授权，具体权限参考下图：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_permissions.png" alt="图 36  飞书应用授权" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 36  飞书应用授权</div>
 
 
 第三步：发布应用。在【版本管理与发布】中，输入应用版本号、更新说明等信息，点击【保存】，完成应用发布。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_app_release.png" alt="图 37  飞书发布应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 37  飞书发布应用</div>
@@ -328,6 +343,7 @@ MaxKB 配置飞书扫码登录时，需要在 [**飞书开放平台**](https://o
 
 
 发布应用后，即可在 MaxKB 登陆页面点击选择飞书进行扫码登陆。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_deplay.jpg" alt="图 39  飞书展示" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 39  飞书展示</div>
@@ -343,6 +359,7 @@ MaxKB 配置飞书扫码登录时，需要在 [**飞书开放平台**](https://o
 
 
 配置桌面主页，例如：配置中填写 桌面端主页地址，如：http(s)://xxx.xxx.xxx/admin/login?client=lark&appId=cli_a7e1c1ddexxxxx。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_webapp_config.png" alt="图 41  飞书页面应用配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  飞书页面应用配置</div>

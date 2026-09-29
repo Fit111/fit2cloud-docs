@@ -29,6 +29,7 @@ MaxKB 支持内置函数库，目前包括数据库查询以及页面搜索两�
 :::
 
 <img alt="启动函数" src="/img/maxkb-v1/fx/system_func_params1.png" width="800" style={{maxWidth:'100%', height:'auto'}}/>
+
 ![启动函数](/img/maxkb-v1/fx/system_func_params2.png)
 
 ## 2.自定义函数

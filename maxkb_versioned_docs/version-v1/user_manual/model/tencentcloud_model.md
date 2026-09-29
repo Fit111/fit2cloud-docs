@@ -29,4 +29,5 @@ title: 对接腾讯知识引擎原子能力
 
 腾讯云知识引擎原子能力-大语言模型配置样例图示如下：
 :::
+
 <img alt="知识引擎原子 大语言模型" src="/img/maxkb-v1/model/tencent_atomicpower_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

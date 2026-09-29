@@ -137,6 +137,7 @@ MaxKB 提供预配置模板和组件，可快速创建基础问答智能体，�
 ### 4.7 复制
 
 点击智能体面板的【复制】，设置复制后智能体的名称和描述后保存，即可复制智能体。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/copy_app.png" alt="图 17  复制" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  复制</div>
@@ -163,6 +164,7 @@ MaxKB 提供预配置模板和组件，可快速创建基础问答智能体，�
 点击工具面板的【删除】按钮，即可对智能体进行删除。点击删除后，会有二次确定弹框，点击确定后，智能体被删除。
 
 **注意： 工具删除后，不可恢复。**
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/del_app.png" alt="图 20  删除" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  删除</div>

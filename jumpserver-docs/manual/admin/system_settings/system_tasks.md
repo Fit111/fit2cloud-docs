@@ -7,26 +7,32 @@ title: 系统任务
 ## 任务列表
 
 - JumpServer 支持使用 Ansible 等技术实现自动化执行任务，系统任务页面可查看任务执行的日志信息以及执行自动化任务的组件 Celery 的状态与已执行任务的历史记录等。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_system_task_01.png" alt="图 1  系统任务页面" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  系统任务页面</div>
 
 - 该页面可查看所有自动化任务，其中包含账号备份计划，推送账号，检查资产连接性、邮件发送自动化任务等。
 - 点击自动化任务名称即可进入该自动化任务的详情页面，在该自动化任务的详情页面可查看任务详情信息，执行历史等信息。
 - 点击页面左上角的 **任务监控** 按钮，可查看 JumpServer 后端批量任务组件的相关状态。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_system_task_02.png" alt="图 2  任务监控" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  任务监控</div>
 
 - 点击页面上部分的任务状态可查看成功任务的日志或失败任务的日志，查看后端 celery 组件与 ansible 服务的相关信息。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_system_task_03.png" alt="图 3  任务日志" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  任务日志</div>
 
 - 点击已处理和成功总数，将显示任务的详细信息。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_system_task_04.png" alt="图 4  任务详情" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  任务详情</div>
+
 ## 定期清理
 
 - 点击 **定期清理** 按钮，进入定期清理设置页面，配置登录、任务、操作、上传下载日志和数据库记录等审计任务的定时清理周期，为服务器存储减轻压力。
 - 该页面的配置主要控制本地保存的记录，当录像与日志存储到外部存储中，不受该页面配置影响。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_system_task_05.png" alt="图 5  定期清理设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  定期清理设置</div>
 

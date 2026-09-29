@@ -10,14 +10,16 @@ title: Bitwarden
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 Bitwarden 并安装
 
 在右上角搜索框输入 **Bitwarden**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251020154143141](/img/1panel/app/bitwarden.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden.png" alt="图 2 搜索 Bitwarden 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 Bitwarden 并安装</div>
 
 ## 3. 配置安装参数
@@ -31,7 +33,8 @@ title: Bitwarden
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251020154143141](/img/1panel/app/bitwarden_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_install.png" alt="图 3 配置安装参数——安装 Bitwarden 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Bitwarden 的参数配置</div>
 
 等待安装完成即可
@@ -40,42 +43,50 @@ title: Bitwarden
 
 注意 Bitwarden 需要配置 SSL证书访问，直接访问会一直转圈
 
-![image-20251021103933402](/img/1panel/app/bitwarden_error.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_error.png" alt="图 4 配置 Bitwarden SSL 访问的 SSL 证书错误提示" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 配置 Bitwarden SSL 访问的 SSL 证书错误提示</div>
 
 点击左侧菜单的网站，选择创建网站
 
-![image-20251021104405151](/img/1panel/app/bitwarden_creat_proxy.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_creat_proxy.png" alt="图 5 配置 Bitwarden SSL 访问——创建反向代理" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 配置 Bitwarden SSL 访问——创建反向代理</div>
 
 点击反向代理
 
-![image-20251021104522152](/img/1panel/app/bitwarden_proxy.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_proxy.png" alt="图 6 配置 Bitwarden SSL 访问——反向代理列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 配置 Bitwarden SSL 访问——反向代理列表</div>
 
 输入反向代理后的域名和端口，应用选择 Bitwarden，点击确认
 
-![image-20251021111122113](/img/1panel/app/bitwarden_proxy_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_proxy_info.png" alt="图 7 配置 Bitwarden SSL 访问——反向代理配置详情" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 配置 Bitwarden SSL 访问——反向代理配置详情</div>
 
 网站创建成功后，点击配置
 
-![image-20251021110218133](/img/1panel/app/bitwarden_con.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_con.png" alt="图 8 配置 Bitwarden SSL 访问——进入 Bitwarden 服务入口" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 配置 Bitwarden SSL 访问——进入 Bitwarden 服务入口</div>
 
 左侧选择 HTTPS ，启用 HTTPS
 
-![image-20251021110452921](/img/1panel/app/bitwarden_https.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_https.png" alt="图 9 配置 Bitwarden SSL 访问——开启 HTTPS 访问" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 配置 Bitwarden SSL 访问——开启 HTTPS 访问</div>
 
 导入你的证书，或者选择已有证书，配置好后点击保存即可
 
-![image-20251021110637134](/img/1panel/app/bitwarden_https_save.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_https_save.png" alt="图 10 配置 Bitwarden SSL 访问——保存 HTTPS 配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10 配置 Bitwarden SSL 访问——保存 HTTPS 配置</div>
 
 ## 5. 访问 Bitwarden 服务
 
 访问反向代理的域名和端口地址即可
 
-![image-20251021112440459](/img/1panel/app/bitwarden_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/bitwarden_view.png" alt="图 11 访问 Bitwarden 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 访问 Bitwarden 服务界面</div>

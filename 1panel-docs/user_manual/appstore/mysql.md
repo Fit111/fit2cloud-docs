@@ -10,14 +10,16 @@ title: MySQL
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 MySQL 并安装
 
 在应用商店中（首页或数据库分类下），找到并点击 **MySQL** 应用卡片进入详情页，然后选择 **安装**。
 
-![image-20251016110903786](/img/1panel/app/database_mysql.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_mysql.png" alt="图 2 搜索 MySQL 并安装——应用商店中的 MySQL 应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 MySQL 并安装——应用商店中的 MySQL 应用卡片</div>
 
 ## 3. 配置安装参数
@@ -32,7 +34,8 @@ title: MySQL
 
 确认设置无误后，点击 **确认** 开始安装。
 
-![](/img/1panel/app/MySQL_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/MySQL_install.png" alt="图 3 配置安装参数——安装 MySQL 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 MySQL 的参数配置</div>
 
 ## 4. 创建 MySQL 数据库
@@ -48,14 +51,16 @@ title: MySQL
 
 设置完成后点击 **确认** 创建数据库。
 
-![image-20251016113634840](/img/1panel/app/database_creat.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_creat.png" alt="图 4 创建 MySQL 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 创建 MySQL 数据库</div>
 
 ## 5. 连接 MySQL 数据库
 
 点击数据库后可查看连接信息，用于客户端或程序进行访问。
 
-![image-20251016114303123](/img/1panel/app/database_message.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_message.png" alt="图 5 连接 MySQL 数据库——查看 MySQL 连接信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 连接 MySQL 数据库——查看 MySQL 连接信息</div>
 
 ## 6. 查看与管理备份
@@ -63,14 +68,16 @@ title: MySQL
 - 支持查看备份列表，点击备份后可对数据库执行备份。  
 - 备份时可设置 **压缩密码**，备份文件支持 **恢复**、**下载** 等操作。
 
-![image-20251016114303123](/img/1panel/app/database_backup.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_backup.png" alt="图 6 查看与管理备份——备份列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 查看与管理备份——备份列表</div>
 
 ## 7. 导入数据库备份
 
 支持 **导入备份**，可选择 **本地上传文件** 或 **服务器已有的备份文件** 进行导入。
 
-![image-20251016114303123](/img/1panel/app/database_import_backup.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_import_backup.png" alt="图 7 导入数据库备份——备份列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 导入数据库备份——备份列表</div>
 
 ## 8. 添加远程数据库
@@ -79,33 +86,38 @@ title: MySQL
 - 添加的远程数据库同样支持 **备份与恢复** 操作
 - 在安装应用时，也可以选择已添加的远程数据库进行使用
 
-![image-20251016114303123](/img/1panel/app/database_remote.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_remote.png" alt="图 8 添加远程数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 添加远程数据库</div>
 
 ## 9. 从服务器同步数据库
 
 支持 **从远程服务器同步数据库** 到本地，实现跨服务器的数据同步。
 
-![image-20251016114303123](/img/1panel/app/database_sync.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_sync.png" alt="图 9 从服务器同步数据库——同步数据库列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 从服务器同步数据库——同步数据库列表</div>
 
 ## 10. 修改用户密码与权限
 
 可对数据库用户执行 **修改密码**、**修改权限** 等维护操作。
 
-![image-20251016114303123](/img/1panel/app/database_user.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_user.png" alt="图 10 修改用户密码与权限——修改数据库用户密码与权限" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10 修改用户密码与权限——修改数据库用户密码与权限</div>
 
 ## 11. 使用 phpMyAdmin / Adminer 可视化管理
 
 可通过 **phpMyAdmin** 或 **Adminer** 对数据库进行更完整的可视化管理。
 
-![image-20251016114303123](/img/1panel/app/database_management.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_management.png" alt="图 11 使用 phpMyAdmin / Adminer 可视化管理——使用可视化工具管理数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 使用 phpMyAdmin / Adminer 可视化管理——使用可视化工具管理数据库</div>
 
 ## 12. 使用计划任务定时备份数据库
 
 在 **计划任务** 中选择 **备份数据库** 类型，可配置定时自动备份目标数据库。
 
-![image-20251016114303123](/img/1panel/app/database_cronjob.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/database_cronjob.png" alt="图 12 使用计划任务定时备份数据库——创建数据库备份计划任务" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12 使用计划任务定时备份数据库——创建数据库备份计划任务</div>

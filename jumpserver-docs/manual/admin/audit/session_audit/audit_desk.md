@@ -16,6 +16,7 @@ description: 介绍 JumpServer 审计台中对用户会话、日志、作业审�
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_session_audit_audit_desk.png" alt="图 1 审计台 仪表盘" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 审计台仪表盘</div>
+
 :::note[审计台与控制台的分工]
 **控制台** 负责"配置"，即创建与修改用户、资产、账号、授权与访问控制等；**审计台** 负责"回看"，即查看这些配置与操作留下的历史记录。审计台不参与配置变更。
 :::

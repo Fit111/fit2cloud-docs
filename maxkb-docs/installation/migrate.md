@@ -24,6 +24,7 @@ title: 迁移工具
 ## 2 迁移工具下载
 
 打开 [MaxKB 迁移工具下载](https://github.com/1Panel-dev/MaxKB-v1-to-v2-migrator)页面，下载最新版本工具，并上传至部署服务器。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/migrate_step.png" alt="图 2  MaxKB 迁移工具下载页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 迁移工具下载页面</div>
@@ -71,6 +72,7 @@ bash import_v2_data.sh <v2_container_name>
 
 
 导入成功后，需要重启 MaxKB 服务。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/migrate_linux_import1.png" alt="图 5  Linux 导入完成提示" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  Linux 导入完成提示</div>
@@ -115,6 +117,7 @@ bash import_v2_data.sh <v2_container_name>
 ```
 
 **注意**：v1 社区版只能迁移到 v2 社区版，v1 专业版只能迁移到 v2 专业版，且 v1 和 v2 的专业版必须有有效的 license 许可。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/index/migrate_windows_import.png" alt="图 7  Windows 导入数据" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  Windows 导入数据</div>

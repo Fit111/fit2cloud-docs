@@ -13,7 +13,8 @@ keywords: [1Panel 智能体, AI Agent, OpenClaw, 智能体管理, 模型配置, 
 
 1Panel 在 **AI -> 智能体** 中集中安装和管理受支持的智能体应用。当前页面包含智能体列表、模型账号，以及按智能体类型和版本动态显示的配置能力。
 
-![智能体列表](/img/1panel/ai/agent_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_list.png" alt="图 1 智能体——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 智能体——应用卡片</div>
 
 ## 1 使用前提
@@ -25,7 +26,8 @@ keywords: [1Panel 智能体, AI Agent, OpenClaw, 智能体管理, 模型配置, 
 
 ## 2 安装智能体
 
-![创建智能体](/img/1panel/ai/agent_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_create.png" alt="图 2 安装智能体界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 安装智能体界面</div>
 
 1. 进入 **AI -> 智能体**。
@@ -42,28 +44,32 @@ keywords: [1Panel 智能体, AI Agent, OpenClaw, 智能体管理, 模型配置, 
 
 智能体列表支持查看状态和版本，并根据当前状态执行概览、配置、终端、对话、启动、停止、重启、升级和删除等操作。不同智能体类型支持的按钮可能不同。
 
-![AI Agent日常管理](/img/1panel/ai/ai_agent_normal.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_agent_normal.png" alt="图 3 日常管理" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 日常管理</div>
 
 ### 3.1 概览
 
 概览展示运行状态、主模型、频道数量、技能数量、定时任务数量和会话数量等摘要。页面数据取决于智能体类型及其版本是否支持对应接口。
 
-![概览](/img/1panel/ai/agent_overview.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_overview.png" alt="图 4 概览" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 概览</div>
 
 ### 3.2 模型
 
 模型页用于选择主模型、维护可用模型和备用模型。修改模型账号时，可以选择是否同步更新关联智能体的配置文件。
 
-![模型配置](/img/1panel/ai/agent_config_model.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_config_model.png" alt="图 5 模型界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 模型界面</div>
 
 ### 3.3 频道
 
 频道配置按智能体类型提供微信、企业微信、钉钉、飞书、QQ、Telegram、Discord 等接入项。实际可用频道、插件要求和字段由当前智能体版本决定；保存频道配置后，系统可能自动重启容器使配置生效。
 
-![QQ 频道配置](/img/1panel/ai/agent_channel_qq.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_channel_qq.png" alt="图 6 频道界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 频道界面</div>
 
 ### 3.4 技能与角色
@@ -71,18 +77,21 @@ keywords: [1Panel 智能体, AI Agent, OpenClaw, 智能体管理, 模型配置, 
 - **技能**：查看内置、外部和工作区技能，并从页面支持的技能来源搜索和安装。
 - **角色**：维护智能体工作区中的角色 Markdown 文件。保存后按页面提示重启容器。
 
-![技能市场](/img/1panel/ai/agent_skills_js.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_skills_js.png" alt="图 7 技能与角色界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 技能与角色界面</div>
 
 
-![技能市场](/img/1panel/ai/agent_skills_market.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_skills_market.png" alt="图 8 技能与角色界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 技能与角色界面（续）</div>
 
 ### 3.5 设置
 
 设置页包含安全、其他和配置文件等标签，可配置认证方式、时区、浏览器开关、NPM 源等。直接编辑配置文件前建议先备份；保存后需要重启的配置以页面提示为准。
 
-![设置-其他](/img/1panel/ai/agent_settings_other.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/agent_settings_other.png" alt="图 9 设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 设置</div>
 
 ## 4 多节点与批量操作

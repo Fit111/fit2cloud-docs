@@ -22,34 +22,40 @@ title: 对接OpenAI
 
 OpenAI-大语言模型配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 OpenAI-向量模型配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 OpenAI-语音识别模型配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 OpenAI-语音合成配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 OpenAI-视觉模型配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 OpenAI-图片生成模型配置样例图示：
 :::
+
 <img alt="OpenAI 模型" src="/img/maxkb-v1/model/openai_verison_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

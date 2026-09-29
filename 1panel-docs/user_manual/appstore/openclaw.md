@@ -27,7 +27,8 @@ title: OpenClaw
 
 点击 **添加模型账号**，根据实际使用的模型供应商填写对应信息并保存。
 
-![OpenClaw 模型账号](/img/1panel/ai/openclaw_model_account.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_model_account.png" alt="图 2 添加模型账号管理" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 添加模型账号管理</div>
 
 ## 2. 创建 OpenClaw 智能体
@@ -36,7 +37,8 @@ title: OpenClaw
 
 按页面要求填写 OpenClaw 的部署参数。
 
-![创建 OpenClaw 智能体](/img/1panel/ai/openclaw_create_agent.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_create_agent.png" alt="图 3 创建 OpenClaw 智能体" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 创建 OpenClaw 智能体</div>
 
 **参数说明**
@@ -49,12 +51,14 @@ title: OpenClaw
 - **Token**：用于访问 OpenClaw WebUI，系统会自动生成
 - **其他参数**：一般保持默认即可
 
-![选择模型供应商](/img/1panel/ai/openclaw_agent_provider.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_agent_provider.png" alt="图 4 创建 OpenClaw 智能体——为智能体选择模型供应商" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 创建 OpenClaw 智能体——为智能体选择模型供应商</div>
 
 选择模型供应商后，系统会自动加载已维护的模型账号。若已配置多个模型，也可以在这里选择具体模型；如有需要，也可勾选手动输入模型。
 
-![选择模型账号或模型](/img/1panel/ai/openclaw_agent_model.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_agent_model.png" alt="图 5 创建 OpenClaw 智能体——为智能体选择模型账号或模型" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 创建 OpenClaw 智能体——为智能体选择模型账号或模型</div>
 
 ## 3. 开始安装并确认完成
@@ -63,14 +67,16 @@ title: OpenClaw
 
 当页面显示安装完成后，即表示 OpenClaw 已成功部署。
 
-![OpenClaw 安装完成](/img/1panel/ai/openclaw_install_done.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_install_done.png" alt="图 6 开始安装并确认完成安装完成" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 开始安装并确认完成安装完成</div>
 
 ## 4. 访问 OpenClaw WebUI
 
 安装完成后，返回 **智能体** 列表页面，找到 OpenClaw，点击 **WebUI** 即可直接跳转访问。
 
-![OpenClaw WebUI 入口](/img/1panel/ai/openclaw_webui_entry.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_webui_entry.png" alt="图 7 访问 OpenClaw WebUI——OpenClaw WebUI 入口" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 访问 OpenClaw WebUI——OpenClaw WebUI 入口</div>
 
 ## 5. 验证部署结果
@@ -79,7 +85,8 @@ title: OpenClaw
 
 如果助手能够正常回复，则说明 OpenClaw 已部署成功。
 
-![OpenClaw 对话验证](/img/1panel/ai/openclaw_verify_chat.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/openclaw_verify_chat.png" alt="图 8 验证部署结果对话验证" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 验证部署结果对话验证</div>
 
 ## 6. 后续配置说明

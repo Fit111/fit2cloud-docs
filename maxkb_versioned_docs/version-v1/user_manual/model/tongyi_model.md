@@ -28,18 +28,21 @@ title: 对接通义千问
 
 通义千问-大语言模型配置样例图示如下：
 :::
+
 <img alt="通义千问 大语言模型" src="/img/maxkb-v1/model/tongyi_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 通义千问-视觉模型模型配置样例图示如下：
 :::
+
 <img alt="通义千问 图片模型" src="/img/maxkb-v1/model/tongyi_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 通义千问-图片生成模型默认图像尺寸为 1024 * 1024，图片数量 1 张，风格为 &lt;auto&gt;，即由模型随机输出图像风格，配置样例图示如下：
 :::
+
 <img alt="通义千问 图片模型" src="/img/maxkb-v1/model/tongyi_vision_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/> 
 
 <img alt="通义千问 图片模型" src="/img/maxkb-v1/model/tongyi_vision_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

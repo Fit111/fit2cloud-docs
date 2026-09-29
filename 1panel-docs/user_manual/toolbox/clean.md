@@ -32,5 +32,6 @@ title: 缓存清理
     - 容器操作日志文件
     - 计划任务执行日志文件
 
-![img.png](/img/1panel/toolbox/clean.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/toolbox/clean.png" alt="图 1 清理系统垃圾文件" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 清理系统垃圾文件</div>

@@ -56,6 +56,7 @@ public class LinkFinderImpl implements LinkFinder {
 
 ```html
 <div th:text="${myPluginLinkFinder.listAll()}"></div>
+
 ```
 
 模板语法参考：[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#standard-expression-syntax)。

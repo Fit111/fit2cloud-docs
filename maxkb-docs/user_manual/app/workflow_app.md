@@ -201,12 +201,14 @@ title: 高级智能体
 - 变量支持：如 \{data\} 自动插入知识库片段，\{question\} 引用用户问题，实现精准、可控、低幻觉的智能回复。
 
 AI 对话节点支持基于用户输入的主题内容，自动生成高质量、结构完整的系统提示词，辅助用户快速构建适用于当前场景的提示文本。通过合理编排提示词，管理员可在不更换模型的前提下，实现多场景、多角色的快速切换，显著降低大模型幻觉风险并提升用户体验。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_prompt.png" alt="图 12  智能体设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  智能体设置</div>
 
 
 MCP：引用 MCP和自定义 MCP Server Config。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_MCP.png" alt="图 13  AI对话MCP" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  AI对话MCP</div>
@@ -217,18 +219,21 @@ MCP：引用 MCP和自定义 MCP Server Config。
 
 
 工具：支持添加【工具】中已启用的工具。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_new_tool.png" alt="图 15  AI对话工具" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  AI对话工具</div>
 
 
 Skills：支持添加【工具】中已启用的 Skills。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_skills.png" alt="图 16  AI对话技能" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  AI对话技能</div>
 
 
 智能体：支持添加已创建的其他智能体。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ai_chat_agent.png" alt="图 17  AI对话智能体" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  AI对话智能体</div>
@@ -248,6 +253,7 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 - 分类 \{category\}：根据意图分类的类型，返回分类名称。 
 - 理由 \{reason\}：判断意图分类的理由。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/intent_classification.png" alt="图 18  意图识别" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  意图识别</div>
@@ -352,6 +358,7 @@ Skills：支持添加【工具】中已启用的 Skills。
 参数输出：
 
 - 视频 \{video\}：根据文本生成的视频内容。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/text2video.png" alt="图 23  文生视频节点" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  文生视频节点</div>
@@ -609,12 +616,14 @@ Skills：支持添加【工具】中已启用的 Skills。
 
 
 输出参数：在循环体中【循环开始】设置的循环变量，可以作为循环节点的输出参数，供各工作流节点调用。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_output.png" alt="图 41  输出参数" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  输出参数</div>
 
 
 循环体：循环体画布用于编排循环的逻辑，每次循环时，工作流会执行循环体画布中的工作流。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop.png" alt="图 42  循环" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 42  循环</div>
@@ -634,6 +643,7 @@ Skills：支持添加【工具】中已启用的 Skills。
 * 循环元素\{item\}：数组中的单个数据。数组由多个元素组成，每个元素可以是数字、字符、字符串等数据类型。
     
         例如：数组 array=[23,26,37,88,90]，array[0]的 index 是 0，item 为 23； array[4]的 index 是 4，item 为 90。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loop_begins.png" alt="图 43  循环开始" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 43  循环开始</div>
@@ -899,6 +909,7 @@ MaxKB 工作流中支持多出多进，在这个情况下，汇集节点可以�
 
 
 智能体支持编辑历史发布版本的名称，默认发布名称为发布的时间，同时支持恢复历史版本的工作流。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_history_edit.png" alt="图 63  编辑发布版本名称" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 63  编辑发布版本名称</div>

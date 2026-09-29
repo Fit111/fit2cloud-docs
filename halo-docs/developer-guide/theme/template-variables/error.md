@@ -48,4 +48,5 @@ description: 配置 Halo 主题的 404、4xx、500、5xx 与默认错误模板�
     th:text="${error.detail}"
   ></p>
 </div>
+
 ```

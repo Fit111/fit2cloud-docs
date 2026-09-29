@@ -9,7 +9,8 @@ keywords: [1Panel 申请证书, SSL 证书申请, ACME, DNS 验证, HTTP 验证,
 - 已经创建 ACME 账户
 - 如果是 DNS 验证模式，需要提前准备 DNS 账号
 
-![img.png](/img/1panel/websites/certificate_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_create.png" alt="图 1 前置条件界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 前置条件界面</div>
 
 ## 2 DNS 账号模式申请证书

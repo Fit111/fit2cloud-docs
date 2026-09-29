@@ -10,14 +10,16 @@ title: RustDesk
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 RustDesk 并安装
 
 在右上角搜索框输入 **RustDesk**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251021135819982](/img/1panel/app/rustdesk.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk.png" alt="图 2 搜索 RustDesk 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 RustDesk 并安装</div>
 
 ## 3. 配置安装参数
@@ -36,7 +38,8 @@ title: RustDesk
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251021140057677](/img/1panel/app/rustdesk_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_install.png" alt="图 3 配置安装参数——安装 RustDesk 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 RustDesk 的参数配置</div>
 
 等待安装完成即可
@@ -45,30 +48,36 @@ title: RustDesk
 
 点击参数获取配置信息
 
-![image-20251021142500835](/img/1panel/app/rustdesk_get_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_get_info.png" alt="图 4 配置 RustDesk 并使用——查看 RustDesk 连接信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 配置 RustDesk 并使用——查看 RustDesk 连接信息</div>
 
 进入安装目录
 
-![image-20251021142617880](/img/1panel/app/rustdesk_install_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_install_view.png" alt="图 5 配置 RustDesk 并使用服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 配置 RustDesk 并使用服务界面</div>
 
 根据找到对应的 pub 文件，获取key
 
-![image-20251021142841367](/img/1panel/app/rustdesk_key.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_key.png" alt="图 6 配置 RustDesk 并使用——查看 RustDesk 连接密钥" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 配置 RustDesk 并使用——查看 RustDesk 连接密钥</div>
 
 下载客户端[https://github.com/rustdesk/rustdesk/releases](https://github.com/rustdesk/rustdesk/releases)，下载后，打开客户端，进入设置选择中继服务器
 
-![image-20251021141554097](/img/1panel/app/rustdesk_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_info.png" alt="图 7 配置 RustDesk 并使用——查看 RustDesk 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 配置 RustDesk 并使用——查看 RustDesk 服务参数信息</div>
 
 填入对应的信息
 
-![image-20251021142939475](/img/1panel/app/rustdesk_creat.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_creat.png" alt="图 8 配置 RustDesk 并使用——创建 RustDesk 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 配置 RustDesk 并使用——创建 RustDesk 数据库</div>
 
 在另外一台主机的客户端，也填入相同的信息，输入连接信息远程连接即可
 
-![image-20251021143340226](/img/1panel/app/rustdesk_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/rustdesk_view.png" alt="图 9 配置 RustDesk 并使用服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 配置 RustDesk 并使用服务界面</div>

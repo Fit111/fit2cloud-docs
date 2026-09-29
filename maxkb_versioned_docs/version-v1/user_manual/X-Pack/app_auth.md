@@ -16,4 +16,5 @@ MaxKB X-Pack 支持通过身份验证的方式对应用进行访问限制，进�
 :::
 
 ![身份验证](/img/maxkb-v1/app/app_password1.png)
+
 <img alt="身份验证" src="/img/maxkb-v1/app/app_password2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

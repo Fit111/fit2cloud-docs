@@ -10,14 +10,16 @@ title: MongoDB
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 MongoDB 并安装
 
 在右上角搜索框输入 **MongoDB**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251016155319717](/img/1panel/app/MongoDB.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/MongoDB.png" alt="图 2 搜索 MongoDB 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 MongoDB 并安装</div>
 
 ## 3. 配置安装参数
@@ -32,7 +34,8 @@ title: MongoDB
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251016155828329](/img/1panel/app/mongodb_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mongodb_install.png" alt="图 3 配置安装参数——安装 MongoDB 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 MongoDB 的参数配置</div>
 
 等待安装完成即可
@@ -41,15 +44,18 @@ title: MongoDB
 
 安装完成后，获取 MongoDB 配置信息，点击 **已安装** 选择 **参数** 
 
-![image-20251016162420157](/img/1panel/app/mongodb_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mongodb_info.png" alt="图 4 连接 MongoDB 数据库——查看 MongoDB 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 连接 MongoDB 数据库——查看 MongoDB 服务参数信息</div>
 
 得到配置信息
 
-![image-20251016162604193](/img/1panel/app/mongodb_passwd.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mongodb_passwd.png" alt="图 5 连接 MongoDB 数据库查看默认账号密码" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 连接 MongoDB 数据库查看默认账号密码</div>
 
 使用本地工具连接 MongoDB
 
-![image-20251016162737239](/img/1panel/app/mongodb_conn.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mongodb_conn.png" alt="图 6 连接 MongoDB 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 连接 MongoDB 数据库</div>

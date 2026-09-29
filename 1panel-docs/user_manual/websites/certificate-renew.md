@@ -16,7 +16,8 @@ keywords: [1Panel 证书续签, SSL 自动续签, ACME 续签, HTTPS 证书, 证
 
 点击证书所在行的 **申请** 可手动触发续签。手动 DNS 类型会显示需要添加的解析记录，完成解析后再继续申请。任务状态和错误信息可在证书日志或任务日志中查看。
 
-![续签证书](/img/1panel/websites/certificate_renew.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_renew.png" alt="图 1 手动续签界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 手动续签界面</div>
 
 **续签后的网站证书**：续签成功后，应确认使用该证书的网站已经加载新证书，并从客户端检查到期时间。业务侧存在 CDN、负载均衡或外部代理时，还需同步更新对应入口。

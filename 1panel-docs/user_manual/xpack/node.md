@@ -24,7 +24,8 @@ keywords: [1Panel 节点管理, 多节点管理, 服务器集群, 节点监控, 
 
 在节点概览页面，可以查看当前集群所有节点的整体状态，包括节点数量、在线状态、资源使用情况、应用分布等统计信息。
 
-![img.png](/img/1panel/xpack/node_overview.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_overview.png" alt="图 1 节点概览" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 节点概览</div>
 
 ## 3 添加节点
@@ -52,21 +53,24 @@ keywords: [1Panel 节点管理, 多节点管理, 服务器集群, 节点监控, 
     - **自定义应用仓库**
     - **备份账号设置**
 
-![img.png](/img/1panel/xpack/node_add.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_add.png" alt="图 2 节点信息配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 节点信息配置</div>
 
 ### 3.2 可用性检查
 
 添加节点前，需要先进行可用性检查，以验证网络连通性和认证信息的正确性。只有通过可用性检查的节点才能成功添加。
 
-![img.png](/img/1panel/xpack/node_add_check.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_add_check.png" alt="图 3 可用性检查界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 可用性检查界面</div>
 
 ### 3.3 添加节点
 
 可用性检查通过后，点击【确定】按钮，完成节点添加。
 
-![img.png](/img/1panel/xpack/node_add_success.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_add_success.png" alt="图 4 添加节点界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 添加节点界面</div>
 
 ## 4 节点管理
@@ -80,7 +84,8 @@ keywords: [1Panel 节点管理, 多节点管理, 服务器集群, 节点监控, 
 - **资源使用率**：显示 CPU、内存、磁盘、网络的使用情况 
 - **数据同步状态**：显示节点的数据同步状态 
 
-![img.png](/img/1panel/xpack/node_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_list.png" alt="图 5 节点状态监控——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 节点状态监控——应用卡片</div>
 
 ### 4.2 节点操作
@@ -98,24 +103,28 @@ keywords: [1Panel 节点管理, 多节点管理, 服务器集群, 节点监控, 
 
 节点分组功能允许用户按照业务需求、环境类型或地理位置对节点进行分类管理。
 
-![img.png](/img/1panel/xpack/node_group.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_group.png" alt="图 6 节点分组管理" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 节点分组管理</div>
 
 ## 6 节点切换
 
 在面板管理页面左下角，显示当前节点信息，点击节点名称，可以切换到其他节点。后续进行的所有操作，例如应用部署、网站管理等，都会在当前节点上进行。
 
-![img.png](/img/1panel/xpack/node_switch.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_switch.png" alt="图 7 节点切换" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 节点切换</div>
 
 ## 7 故障处理
 
-![img.png](/img/1panel/xpack/node_fault.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_fault.png" alt="图 8 故障处理界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 故障处理界面</div>
 
 当节点状态异常时，可以点击节点列表状态列上的异常图标，查看异常原因。
 
 节点添加和日常通信依赖管理端到节点的网络连通性。排查时应依次确认 SSH、Agent 端口、节点服务状态、证书与版本兼容性，不要在未确认数据备份的情况下直接删除节点。
 
-![img.png](/img/1panel/xpack/node_fault_detail.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/xpack/node_fault_detail.png" alt="图 9 故障处理——应用详情" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 故障处理——应用详情</div>

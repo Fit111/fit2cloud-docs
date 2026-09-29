@@ -10,14 +10,16 @@ title: Redis
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 Redis 并安装
 
 在右上角搜索框输入 **Redis**，选择第一个，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251016141645215](/img/1panel/app/appstore_redis.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstore_redis.png" alt="图 2 搜索 Redis 并安装——应用商店中的 Redis 应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 Redis 并安装——应用商店中的 Redis 应用卡片</div>
 
 ## 3. 配置安装参数
@@ -32,7 +34,8 @@ title: Redis
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251016141905753](/img/1panel/app/redis_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/redis_install.png" alt="图 3 配置安装参数——安装 Redis 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Redis 的参数配置</div>
 
 等待安装完成即可
@@ -41,15 +44,18 @@ title: Redis
 
 点击左侧菜单的 **「数据库」** 选择Redis，即可输入命令
 
-![image-20251016142801288](/img/1panel/app/redis_message.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/redis_message.png" alt="图 4 连接 Redis 数据库——查看 Redis 连接信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 连接 Redis 数据库——查看 Redis 连接信息</div>
 
 使用工具进行连接。点击 **连接信息** 获取连接配置
 
-![image-20251016143234658](/img/1panel/app/redis_information.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/redis_information.png" alt="图 5 连接 Redis 数据库——查看 Redis 连接信息（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 连接 Redis 数据库——查看 Redis 连接信息（续）</div>
 
 本地输入连接信息进行连接
 
-![image-20251016144637758](/img/1panel/app/redis_conn.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/redis_conn.png" alt="图 6 连接 Redis 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 连接 Redis 数据库</div>

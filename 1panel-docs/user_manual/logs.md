@@ -12,31 +12,36 @@ keywords: [1Panel 日志审计, 操作日志, 访问日志, 网站日志, 登录
 
 记录用户在 1Panel 中执行的操作，可按时间、用户、来源 IP、状态或操作内容筛选。排查配置被修改、资源被删除或权限操作时，应结合操作时间和操作详情确认执行人及结果。
 
-![操作日志](/img/1panel/logs/panel-operation-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/panel-operation-logs.png" alt="图 1 操作日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 操作日志</div>
 
 ## 2 访问日志
 
 记录对 1Panel 控制台的访问请求，用于排查异常请求、接口错误或来源 IP。访问日志不是 SSH 登录日志，两者的数据来源和用途不同。
 
-![访问日志](/img/1panel/logs/panel-access-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/panel-access-logs.png" alt="图 2 访问日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 访问日志</div>
 
 ## 3 网站日志
 
 选择网站后查看 OpenResty 访问日志和错误日志，可按关键字或时间排查网站访问问题。页面能否读取日志取决于网站类型、OpenResty 状态和日志配置。
 
-![网站访问日志](/img/1panel/logs/website-run-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/website-run-logs.png" alt="图 3 网站日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 网站日志</div>
 
-![网站错误日志](/img/1panel/logs/website-error-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/website-error-logs.png" alt="图 4 网站日志（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 网站日志（续）</div>
 
 ## 4 系统日志
 
 查看 1Panel 服务运行日志，可按日志级别筛选并下载。升级、任务下发、接口调用或服务异常时，可先在此定位错误时间和上下文。
 
-![系统日志](/img/1panel/logs/panel-system-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/panel-system-logs.png" alt="图 5 系统日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 系统日志</div>
 
 ## 5 登录日志
@@ -45,7 +50,8 @@ keywords: [1Panel 日志审计, 操作日志, 访问日志, 网站日志, 登录
 
 **日志来源**：清理或轮转系统 SSH 日志会同步影响页面可查询的历史记录。1Panel 不会为被操作系统删除的 SSH 日志单独保留完整副本。
 
-![SSH 登录日志](/img/1panel/logs/login-logs.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/login-logs.png" alt="图 6 登录日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 登录日志</div>
 
 ## 6 任务日志

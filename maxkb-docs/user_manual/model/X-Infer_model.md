@@ -20,42 +20,49 @@ title: 对接Xorbits Inference
 
 
 Xorbits Inference-大语言模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_llm.png" alt="图 1  Xorbits Inference 大语言模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  Xorbits Inference 大语言模型 配置样例图</div>
 
 
 Xorbits Inference-向量模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_embed.png" alt="图 2  Xorbits Inference 向量模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  Xorbits Inference 向量模型 配置样例图</div>
 
 
 Xorbits Inference-重排模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_reranker.png" alt="图 3  Xorbits Inference 重排模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Xorbits Inference 重排模型 配置样例图</div>
 
 
 Xorbits Inference-语音识别模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_asr.png" alt="图 4  Xorbits Inference 语音识别模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  Xorbits Inference 语音识别模型 配置样例图</div>
 
 
 Xorbits Inference-语音合成模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_tts.png" alt="图 5  Xorbits Inference 语音合成模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  Xorbits Inference 语音合成模型 配置样例图</div>
 
 
 Xorbits Inference-视觉模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_version.png" alt="图 6  Xorbits Inference 视觉模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  Xorbits Inference 视觉模型 配置样例图</div>
 
 
 Xorbits Inference-图片生成模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/xinfo_version_gen.png" alt="图 7  Xorbits Inference 图片生成模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  Xorbits Inference 图片生成模型 配置样例图</div>

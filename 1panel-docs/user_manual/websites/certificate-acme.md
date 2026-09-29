@@ -12,5 +12,6 @@ keywords: [1Panel ACME, ACME 账户, Let's Encrypt, ZeroSSL, SSL 证书, 自动�
 
 创建 ACME 账户时填写的邮箱可以用于接收证书相关通知。自定义 ACME 服务还需要按页面填写目录地址等信息。
 
-![img.png](/img/1panel/websites/certificate_acme.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_acme.png" alt="图 1 ACME 账户界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 ACME 账户界面</div>

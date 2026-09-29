@@ -27,6 +27,7 @@ description: 介绍 Halo 主题模板的 annotations 表达式对象，演示获
     </li>
   </ul>
 </div>
+
 ```
 
 ## #annotations.getOrDefault(extension,key,defaultValue)
@@ -49,6 +50,7 @@ description: 介绍 Halo 主题模板的 annotations 表达式对象，演示获
     </li>
   </ul>
 </div>
+
 ```
 
 ## #annotations.contains(extension,key)
@@ -74,4 +76,5 @@ description: 介绍 Halo 主题模板的 annotations 表达式对象，演示获
     </li>
   </ul>
 </div>
+
 ```

@@ -32,6 +32,7 @@ title: 用户管理
 
 
 当创建用户为普通用户或继承普通用户的角色时，支持设置默认权限，即对所选工作空间下所有资源的默认权限进行设置。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/create_user1.png" alt="图 3  创建用户默认权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  创建用户默认权限</div>

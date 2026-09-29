@@ -39,6 +39,7 @@ categoryFinder.getByName(name);
     th:text="${category.spec.displayName}"
   ></a>
 </div>
+
 ```
 
 ## getByNames(names)
@@ -75,6 +76,7 @@ List\<[#CategoryVo](#categoryvo)\>
     th:text="${category.spec.displayName}"
   ></a>
 </div>
+
 ```
 
 ## list(page,size)
@@ -168,6 +170,7 @@ List\<[#CategoryTreeVo](#categorytreevo)\>
     />
   </ul>
 </div>
+
 ```
 
 ```html title="/templates/category-tree.html"
@@ -218,6 +221,7 @@ List\<[#CategoryTreeVo](#categorytreevo)\>
     </li>
   </ul>
 </div>
+
 ```
 
 从 Halo 2.26.0 开始，分类层级以 `Category.spec.parent` 为准。不要通过已弃用的 `Category.spec.children` 获取子分类；该字段仅为旧数据兼容而保留，不会随层级调整继续更新。
@@ -252,6 +256,7 @@ categoryFinder.getParentByName(name);
     th:text="${parent.spec.displayName}"
   ></a>
 </div>
+
 ```
 
 ## getBreadcrumbs(name)
@@ -288,6 +293,7 @@ List\<[#CategoryVo](#categoryvo)\>
     <span th:if="${!stats.last}">/</span>
   </th:block>
 </div>
+
 ```
 
 ## 类型定义

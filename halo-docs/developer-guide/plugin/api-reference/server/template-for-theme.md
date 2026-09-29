@@ -107,6 +107,7 @@ public class MomentRouter {
 >
   <th:block th:fragment="content"> Hello World </th:block>
 </div>
+
 ```
 
 `plugin:plugin-moment:fragments/layout` 即为使用 `layout.html` 模板的路径，必须以 `plugin:<your-plugin-name>:`前缀作为开头，`fragments/layout` 为模板相对于 `resources/templates` 的路径，`<your-plugin-name>` 即为你的插件名称。
