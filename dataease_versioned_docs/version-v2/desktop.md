@@ -35,7 +35,7 @@ title: 桌面版指南
 
 双击解压文件后，点击应用图标启动程序。如有安全提示，一律信任。 
 
-注意：如 M1 等 arm 架构的设备提示文件损坏，可参考：https://kb.fit2cloud.com/?p=2b3dcedd-bec9-47dd-863f-ef8e1571fc51。
+注意：如 M1 等 arm 架构的设备提示文件损坏，可参考：[https://kb.fit2cloud.com/?p=2b3dcedd-bec9-47dd-863f-ef8e1571fc51](https://kb.fit2cloud.com/?p=2b3dcedd-bec9-47dd-863f-ef8e1571fc51)。
 
 **Linux 系统**：  
 以 Ubuntu 系统为例的安装步骤： 
@@ -80,4 +80,4 @@ DataEase 静态资源目录为用户主目录，具体存放位置根据系统�
 - 移动端支持：仅限桌面环境运行，不支持移动设备访问。
 - **X-Pack 功能：不支持升级为企业版，无法使用如平台对接等功能。**
 
-详细功能请参考本文档 [**快速入门**](../quick_start/) 和 [**功能手册**](../user_manual/general/) 。
+详细功能请参考本文档 [**快速入门**](../quick_start/) 和 [**功能手册**](./user_manual/general.md) 。

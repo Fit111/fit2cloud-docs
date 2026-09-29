@@ -60,7 +60,7 @@ docker run -d --name cordys-crm --restart unless-stopped -p 8081:8081 -p 8082:80
 ## 3 在线升级
 
 
-详细步骤参考 [**在线升级 Cordys CRM**](./online_installtion#4) 。
+详细步骤参考 [**在线升级 Cordys CRM**](./online_installtion#4-在线升级) 。
 
 ## 4 登录访问
 

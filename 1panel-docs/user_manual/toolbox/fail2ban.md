@@ -7,7 +7,7 @@ title: Fail2ban
 
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 **1、安装 epel 源**
 
 ```bash
@@ -37,10 +37,10 @@ systemctl enable fail2ban
 ```bash
 systemctl status fail2ban
 ```
-
+:::
 
 #### "Ubuntu / Debian"
-!!! note ""
+:::note
 **1、安装 Fail2ban**
 
 ```bash
@@ -70,6 +70,7 @@ sudo systemctl enable fail2ban
 ```bash
 sudo systemctl status fail2ban
 ```
+:::
 
 ## 2 默认配置
 

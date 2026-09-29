@@ -149,7 +149,7 @@ title: 对话用户
 - 链接格式：https://open.weixin.qq.com/connect/oauth2/authorize?appid=CORPID&redirect_uri=REDIRECT_URI/chat/api/auth/wecom/oauth2?accessToken=ACCESSTOKEN&response_type=code&scope=snsapi_privateinfo&agentid=AGENTID&state=STATE#wechat_redirect
 - CORPID： 企业微信的 CorpID
 - REDIRECT_URI：授权后重定向的回调链接地址，需要使用 urlencode 对链接进行处理，例如：https%3A%2F%2Fmaxkbk.fit2cloud.cn，调整域名部分即可
-- ACCESSTOKEN：智能体 ID，如公开访问连接为 https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe，e113a4980984be3fe 即为相应的智能体 ID
+- ACCESSTOKEN：智能体 ID，如公开访问连接为 `https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe`，e113a4980984be3fe 即为相应的智能体 ID
 - AGENTID：企微应用 ID，如 1000001
 
 主页地址示例：https://open.weixin.qq.com/connect/oauth2/authorize?appid=ww8ef82888c6f6e33&redirect_uri=https%3A%2F%2Fmaxkb.fit2cloud.cn/chat/api/auth/wecom/oauth2?accessToken=e113a4980984be3fe&response_type=code&scope=snsapi_privateinfo&agentid=1000002&state=STATE#wechat_redirect
@@ -205,7 +205,7 @@ title: 对话用户
 链接格式即参数说明如下：
 
 - 链接格式：http(s)://xxx.xxx.xxx/chat/login/ACCESSTOKEN?client=dingtalk&corpId=CORPID。
-- ACCESSTOKEN：智能体 ID，例如，公开访问连接为 https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe，e113a4980984be3fe 即为相应的智能体 ID
+- ACCESSTOKEN：智能体 ID，例如，公开访问连接为 `https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe`，e113a4980984be3fe 即为相应的智能体 ID
 - CORPID：钉钉企业的 CorpId，例如 dinge20bxxxxxxxxxxxxx53d9884
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_url_set.png" alt="图 22  钉钉应用配置" />
@@ -270,7 +270,7 @@ title: 对话用户
 链接格式即参数说明如下：
 
 - 链接格式：http(s)://xxx.xxx.xxx/chat/login/ACCESSTOKEN?client=lark&appId=AppID。
-- ACCESSTOKEN：智能体 ID，例如，公开访问连接为 https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe，e113a4980984be3fe 即为相应的智能体 ID
+- ACCESSTOKEN：智能体 ID，例如，公开访问连接为 `https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe`，e113a4980984be3fe 即为相应的智能体 ID
 - AppID：飞书应用的 App ID
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_web_set.png" alt="图 30  飞书页面应用配置" />
 
@@ -282,7 +282,7 @@ title: 对话用户
 链接格式即参数说明如下：
 
 - 【系统管理】-【对话用户】-【登录认证】-【扫码登录】中，飞书的回调地址：http(s)://xxx.xxx.xxx/chat/api/auth/lark
-- http(s)://xxx.xxx.xxx/chat/login/ACCESSTOKEN 。其中 ACCESSTOKEN 为智能体 ID，例如，公开访问连接为 https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe，e113a4980984be3fe 即为相应的 ACCESSTOKEN
+- http(s)://xxx.xxx.xxx/chat/login/ACCESSTOKEN 。其中 ACCESSTOKEN 为智能体 ID，例如，公开访问连接为 `https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe`，e113a4980984be3fe 即为相应的 ACCESSTOKEN
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_security_set.png" alt="图 31  飞书安全设置重定向URL" />
 

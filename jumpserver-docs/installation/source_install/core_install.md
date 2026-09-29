@@ -57,7 +57,7 @@ apt-get install -y libmariadb-dev
 ```
 ### 1.3 安装 Python3
 
-- 从 [Python][python] 网站获取部署 Python3 的方法，请根据 [环境要求](#_3)，通过命令行中判断是否安装完成：
+- 从 [Python][python] 网站获取部署 Python3 的方法，请根据 [环境要求](#11-环境要求)，通过命令行中判断是否安装完成：
 
 
 ```bash

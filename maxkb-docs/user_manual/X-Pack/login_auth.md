@@ -44,7 +44,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 
 配置 CAS 的过程可参考下图，注意勾选下方"启用 CAS 认证"后开启此功能。    
-**说明：** CAS 回调地址即 MaxKB 访问地址加上 /api/cas ，例如：http://40.100.86.240:8080/admin/api/cas。
+**说明：** CAS 回调地址即 MaxKB 访问地址加上 /api/cas ，例如：`http://40.100.86.240:8080/admin/api/cas`。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/CAS.png" alt="图 5  CAS 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  CAS 单点认证配置</div>
@@ -53,7 +53,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 
 配置 OIDC 的过程可参考下图，注意勾选下方"启用 OIDC 认证"后开启此功能。   
-**说明：** OIDC 回调地址即 MaxKB 访问地址加上 /api/oidc ，例如：http://40.100.86.240:8080/admin/api/oidc。
+**说明：** OIDC 回调地址即 MaxKB 访问地址加上 /api/oidc ，例如：`http://40.100.86.240:8080/admin/api/oidc`。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/OIDC.png" alt="图 6  OIDC 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  OIDC 单点认证配置</div>
@@ -62,7 +62,7 @@ MaxKB 支持对默认登录方式和账号登录验证码进行设置。
 
 
 配置 OAUTH2 的过程可参考下图（授权端以 github 为例），注意勾选下方"启用 OAHTU2 认证"后开启此功能。   
-**说明：** OAUTH2 回调地址即 MaxKB 访问地址加上 /api/oauth2 ，例如：http://40.100.86.240:8080/admin/api/oauth2。
+**说明：** OAUTH2 回调地址即 MaxKB 访问地址加上 /api/oauth2 ，例如：`http://40.100.86.240:8080/admin/api/oauth2`。
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/oauth2.png" alt="图 7  OAuth2 单点认证配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  OAuth2 单点认证配置</div>

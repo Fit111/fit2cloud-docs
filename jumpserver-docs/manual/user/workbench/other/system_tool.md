@@ -14,7 +14,7 @@ description: 介绍 JumpServer 工作台中 Ping、Telnet、Nmap、Tcpdump 和 T
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  系统工具</div>
 
 :::note[功能需开启]
-系统工具需由系统管理员在 [功能设置](../../system_settings/feature_settings.md) 中开启。
+系统工具需由系统管理员在 [功能设置](../../../admin/system_settings/feature_settings.md) 中开启。
 :::
 
 ## 2 前提条件

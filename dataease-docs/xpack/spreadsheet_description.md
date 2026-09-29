@@ -30,7 +30,7 @@ title: 电子表格概述
 - 支持手动 / 自动刷新绑定数据；
 - 编辑区支持预览、保存、发布全流程。
 
-**与 Excel 的关系**：单元格编辑能力基于 Univer 引擎，与 Excel 重合度约 90%。DataEase 独有数据集绑定、发布共享、查询控件、明细表 / 透视表对象、数据集替换等。通用编辑见 [电子表格功能详解](./spreadsheet_features)，特有能力见 [电子表格特殊功能](./spreadsheet_special)，对照表见 [与 Excel / Univer 的关系](./spreadsheet_features#5-与-excel-univer-的关系)。
+**与 Excel 的关系**：单元格编辑能力基于 Univer 引擎，与 Excel 重合度约 90%。DataEase 独有数据集绑定、发布共享、查询控件、明细表 / 透视表对象、数据集替换等。通用编辑见 [电子表格功能详解](./spreadsheet_features)，特有能力见 [电子表格特殊功能](./spreadsheet_special)，对照表见 [与 Excel / Univer 的关系](./spreadsheet_features#5-与-excel--univer-的关系)。
 
 **术语说明**
 

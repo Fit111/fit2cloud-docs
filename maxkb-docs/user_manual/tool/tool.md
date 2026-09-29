@@ -115,7 +115,7 @@ Python 代码编写完成后，点击【调试】进行代码功能的验证。�
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  工作流开始节点</div>
 
 
-其他组件的使用可参照：[基本组件](../app/workflow_app#2)
+其他组件的使用可参照：[基本组件](../app/workflow_app#2-基本组件)
 
 ## 4 创建 Skills
 

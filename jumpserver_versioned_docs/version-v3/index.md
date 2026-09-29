@@ -68,11 +68,11 @@ JumpServer 堡垒机支持的资产类型包括：
 
       [**资产登录复核**](guide/admin/permission/host_acls)  &emsp;&emsp;&emsp; [**连接方式控制**](guide/admin/permission/connect_method_acls)
 
-      [**工单**](guide/admin/admin_tickets) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; [**云同步**](guide/admin/asset/asset_list/#33)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  [**角色列表**](guide/admin/user/role_list)
+      [**工单**](guide/admin/admin_tickets) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; [**云同步**](guide/admin/asset/asset_list/#33-云同步)  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  [**角色列表**](guide/admin/user/role_list)
 
       [**帐号收集**](guide/admin/account/account_gather) &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号改密**](guide/admin/account/account_change_secret)  &emsp;&emsp;&emsp;&emsp;&emsp; [**帐号备份**](guide/admin/account/account_backup) 
 
-      [**短信设置**](guide/system/message/#2-x-pack)  &emsp;&emsp;&emsp;&emsp;&emsp; [**界面设置**](guide/system/index_logo)  &emsp;&emsp;&emsp;&emsp;&emsp; [**组织管理**](guide/system/organization)  &emsp;&emsp;&emsp;&emsp;&emsp; [**认证设置**](faq/faq/#4)
+      [**短信设置**](guide/system/message/#2-短信设置x-pack)  &emsp;&emsp;&emsp;&emsp;&emsp; [**界面设置**](guide/system/index_logo)  &emsp;&emsp;&emsp;&emsp;&emsp; [**组织管理**](guide/system/organization)  &emsp;&emsp;&emsp;&emsp;&emsp; [**认证设置**](faq/faq.md#4-身份认证相关)
 
   - **进阶学习** 
 

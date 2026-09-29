@@ -402,7 +402,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **5 安全设置**
 
-  - 重定向URL-添加重定向 URL 作为免登授权码跳转地址。其他重定向 URL 将无法获取免登授权码。（必须添加 Cordys CRM 可访问的域名，eg:https://example.com (域名后缀不要有/)，如需在移动端访问，还需添加 Cordys CRM 可访问的移动端URL，eg:https://example.com/mobile）
+  - 重定向URL-添加重定向 URL 作为免登授权码跳转地址。其他重定向 URL 将无法获取免登授权码。（必须添加 Cordys CRM 可访问的域名，eg: `https://example.com`（域名后缀不要有 /），如需在移动端访问，还需添加 Cordys CRM 可访问的移动端URL，eg: `https://example.com/mobile`）
   - IP白名单-开启 IP 白名单后，仅白名单中的来源请求可以正常调用开放平台 API，不在白名单中的来源请求会被拒绝
   - H5可信域名-添加可信域名，确保在飞书内访问时不会被拦截
 

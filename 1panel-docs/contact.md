@@ -9,11 +9,11 @@ title: 联系我们
 
 ## 2 联系方式
 
-- 官网：[[https://1panel.cn/](https://1panel.cn/)](https://1panel.cn/)
+- 官网：[https://1panel.cn/](https://1panel.cn/)
 - 邮箱：[support@fit2cloud.com](mailto:support@fit2cloud.com)
 - 电话：[400-052-0755](tel:400-052-0755)
 - 社区论坛：[开源社区论坛](https://bbs.fit2cloud.com/c/1p/7)
-- 企业版试用申请：[[https://1panel.cn/enterprise.html](https://1panel.cn/enterprise.html)](https://1panel.cn/enterprise.html)
+- 企业版试用申请：[https://1panel.cn/enterprise.html](https://1panel.cn/enterprise.html)
 
 ## 3 微信交流群
 
