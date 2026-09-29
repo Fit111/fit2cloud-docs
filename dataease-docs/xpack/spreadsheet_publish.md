@@ -12,7 +12,7 @@ title: 发布运维
 
 左侧展示当前表格已使用的数据集及引用次数；右侧为【替换为新数据集】，用于选择目标数据集。
 
-![替换全局数据集入口](/img/dataease/newimg/xpack/替换全局数据集入口.png)
+![替换全局数据集入口](/img/dataease/newimg/xpack/tihuanquanjushujujirukou.png)
 
 图 1  选择数据源
 
@@ -20,7 +20,7 @@ title: 发布运维
 
 点击右侧下拉框，搜索或选择要替换到的数据集。列表底部支持【+ 新建数据集】。
 
-![替换全局数据集选择](/img/dataease/newimg/xpack/替换全局数据集选择.png)
+![替换全局数据集选择](/img/dataease/newimg/xpack/tihuanquanjushujujixuanze.png)
 
 图 2  替换全局数据集选择
 
@@ -30,7 +30,7 @@ title: 发布运维
 
 界面会显示已匹配字段数量（如「已匹配字段: 3/4」）。名称或类型不一致的字段需手动选择；未完成映射时，下拉框会标红，确定按钮不可用。
 
-![替换全局数据集字段映射](/img/dataease/newimg/xpack/替换全局数据集字段映射.png)
+![替换全局数据集字段映射](/img/dataease/newimg/xpack/tihuanquanjushujujiziduanyingshe.png)
 
 图 3  替换全局数据集字段映射
 
@@ -38,7 +38,7 @@ title: 发布运维
 
 配置完成后点击【确定】，完成数据集替换。
 
-![替换全局数据集确认](/img/dataease/newimg/xpack/替换全局数据集确认.png)
+![替换全局数据集确认](/img/dataease/newimg/xpack/tihuanquanjushujujiqueren.png)
 
 图 4  替换全局数据集确认
 
@@ -54,7 +54,7 @@ title: 发布运维
 | 目录区【全屏预览】 | 浏览器全屏预览 |
 | 编辑器【预览】 | 编辑态预览；可下拉全屏预览 |
 
-![替换全局数据集确认](/img/dataease/newimg/xpack/电子表格预览.png)
+![替换全局数据集确认](/img/dataease/newimg/xpack/dianzibiaogeyulan.png)
 
 图 5  电子表格预览
 

@@ -14,7 +14,7 @@ DataEase 支持通过 HTTP(S)/FTP 协议远程读取 Excel/CSV 文件，并将�
 
 **注意：远程 Excel/CSV 数据源是  DataEase  从远程服务器读取的 Excel 或 CSV 文件。而本地 Excel/CSV 指的是用户通过浏览器，将本地的  Excel/CSV  文件上传到 DataEase 中。**
 
-![Excel1](/img/dataease/datasource_configuration/添加远程Excel.png)
+![Excel1](/img/dataease/datasource_configuration/tianjiayuanchengexcel.png)
 
 图 1  选择数据源
 
@@ -25,16 +25,16 @@ DataEase 支持通过 HTTP(S)/FTP 协议远程读取 Excel/CSV 文件，并将�
 - 填写认证信息（如适用）：如果远程服务器需要身份验证，输入用户名和对应密码。
 可点击 【加载数据】进行数据预览，以确保远程文件能够正确解析。点击 【校验】 以验证数据源的连通性。
 
-![校验成功](/img/dataease/newimg/新增远程%20Excel：CSV%20数据源2.png)
+![校验成功](/img/dataease/newimg/xinzengyuancheng-excel-csv-shujuyuan2.png)
 
 图 2  校验成功
 
 步骤四：设置更新方式和更新频率，可定期拉取远程 Excel/CSV 文件实现数据自动更新。
 
-![远程 Excel：CSV 数据源](/img/dataease/newimg/新增远程%20Excel：CSV%20数据源3.png)
+![远程 Excel：CSV 数据源](/img/dataease/newimg/xinzengyuancheng-excel-csv-shujuyuan3.png)
 
 图 3  远程 Excel：CSV 数据源
 
-![远程 Excel：CSV 数据源](/img/dataease/newimg/新增远程%20Excel：CSV%20数据源4.png)
+![远程 Excel：CSV 数据源](/img/dataease/newimg/xinzengyuancheng-excel-csv-shujuyuan4.png)
 
 图 4  远程 Excel：CSV 数据源

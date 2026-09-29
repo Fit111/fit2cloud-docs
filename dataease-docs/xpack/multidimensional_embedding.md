@@ -14,7 +14,7 @@ title: 嵌入式管理
 
 以下是嵌入式示例工程运行后的效果，顶部菜单的右侧 4 个菜单对应的即为仪表板、数据大屏、数据源、数据集页面（带左侧的树形菜单）。
 
-![资源预览](/img/dataease/xpack/嵌入式增强.png)
+![资源预览](/img/dataease/xpack/qianrushizengqiang.png)
 
 图 1  嵌入式增强
 
@@ -49,7 +49,7 @@ title: 嵌入式管理
 嵌入式管理创建嵌入式应用。  
 **注意：** 每个 DataEase 实例默认最多可创建 5 个嵌入式应用。
 
-![视图预览](/img/dataease/xpack/multidimensional_embedding/嵌入式管理.png)
+![视图预览](/img/dataease/xpack/multidimensional_embedding/qianrushiguanli.png)
 
 图 6  嵌入式管理
 
@@ -58,12 +58,12 @@ title: 嵌入式管理
 - 【序号 1】应用名称：自定义；
 - 【序号 2】跨域设置：在使用嵌入式时遇到跨域问题时，可以通过设置目标系统的域名进行跨域设置。
 
-![视图预览](/img/dataease/xpack/multidimensional_embedding/创建嵌入式应用.png)
+![视图预览](/img/dataease/xpack/multidimensional_embedding/chuangjianqianrushiyingyong.png)
 
 图 7  创建嵌入式应用
 
 创建完嵌入式应用后，可以获取到该应用对应的 APP ID 和 APP Secret（**嵌入式对接时需要用到**）。
 
-![视图预览](/img/dataease/xpack/multidimensional_embedding/嵌入式应用列表.png)
+![视图预览](/img/dataease/xpack/multidimensional_embedding/qianrushiyingyongliebiao.png)
 
 图 8  嵌入式应用列表

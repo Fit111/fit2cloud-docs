@@ -4,7 +4,7 @@ title: 系统架构
 
 ## 1 整体架构
 
-![整体架构](/img/dataease/newimg/product_acceptance/功能架构图.png)
+![整体架构](/img/dataease/newimg/product_acceptance/gongnengjiagoutu.png)
 
 图 1  功能架构图
 
@@ -19,7 +19,7 @@ title: 系统架构
 
 各个组件间的关系可参考下图  
 
-![组件说明](/img/dataease/newimg/product_acceptance/组件关系图.png)
+![组件说明](/img/dataease/newimg/product_acceptance/zujianguanxitu.png)
 
 图 2  组件关系图
 

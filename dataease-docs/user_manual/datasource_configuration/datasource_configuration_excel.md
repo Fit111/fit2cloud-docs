@@ -18,13 +18,13 @@ title: 配置本地 Excel/CSV 数据
 
 **注意：本地 Excel/CSV 指的是用户通过浏览器，将本地的  Excel/CSV  文件上传到 DataEase 中。而远程 Excel/CSV 数据源是  DataEase  从远程服务器读取的 Excel 或 CSV 文件。**
 
-![Excel1](/img/dataease/datasource_configuration/添加Excel.png)
+![Excel1](/img/dataease/datasource_configuration/tianjiaexcel.png)
 
 图 1  选择数据源
 
 步骤三：点击【上传文件】并自定义数据源名称，上传成功后可对数据进行预览。
 
-![Excel上传](/img/dataease/datasource_configuration/Excel上传.png)
+![Excel上传](/img/dataease/datasource_configuration/excelshangchuan.png)
 
 图 2  Excel 上传
 
@@ -34,13 +34,13 @@ title: 配置本地 Excel/CSV 数据
 - 对已有 Excel/CSV 数据源进行数据替换时，同样支持字段选择和字段长度调整。
 - 上传后可在字段选择中设置字段类型以及字段长度。
 
-![修改 Excel 字段类型](/img/dataease/newimg/%20Excel%20数据源支持上传后修改字段类型.png)
+![修改 Excel 字段类型](/img/dataease/newimg/excel-shujuyuanzhichishangchuanhouxiugaiziduanleixing.png)
 
 图 3  修改 Excel 字段类型
 
 步骤四：点击保存即可，如下图所示。
 
-![Excel保存成功](/img/dataease/datasource_configuration/Excel保存成功.png)
+![Excel保存成功](/img/dataease/datasource_configuration/excelbaocunchenggong.png)
 
 图 4  Excel 保存成功
 

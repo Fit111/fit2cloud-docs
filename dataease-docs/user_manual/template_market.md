@@ -13,7 +13,7 @@ title: 模板市场
 支持通过 DataEase 内置的模板市场模块，预览模板。   
 **注意：查看内置的模板市场需要与模板市场（[https://templates.dataease.cn/](https://templates.dataease.cn/)）网络连通。**
 
-![模板市场入口](/img/dataease/template_market/模板市场入口.png)
+![模板市场入口](/img/dataease/template_market/mubanshichangrukou.png)
 
 图 1  模板市场入口
 
@@ -25,7 +25,7 @@ title: 模板市场
 
 **关于样式模板与应用模板的详细差异可参考** ：[https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0](https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0)。
 
-![模板内容](/img/dataease/template_market/模板内容.png)
+![模板内容](/img/dataease/template_market/mubanneirong.png)
 
 图 2  模板内容
 
@@ -33,15 +33,15 @@ title: 模板市场
 
 点击【应用】，根据模板属于仪表板还是数据大屏，会自动跳转到该仪表板或者数据大屏的编辑界面下。
 
-![点击应用模板](/img/dataease/template_market/点击应用模板.png)
+![点击应用模板](/img/dataease/template_market/dianjiyingyongmuban.png)
 
 图 3  点击应用模板
 
-![点击应用模板](/img/dataease/template_market/点击应用模板2.png)
+![点击应用模板](/img/dataease/template_market/dianjiyingyongmuban2.png)
 
 图 4  点击应用模板
 
-![应用模板](/img/dataease/template_market/应用模板.png)
+![应用模板](/img/dataease/template_market/yingyongmuban.png)
 
 图 5  应用模板
 
@@ -51,27 +51,27 @@ title: 模板市场
 
 点击[模板市场](https://templates-de.fit2cloud.com/)，如下图所示，打开模板市场主页。
 
-![线上模板市场](/img/dataease/template_market/线上模板市场.png)
+![线上模板市场](/img/dataease/template_market/xianshangmubanshichang.png)
 
 图 6  线上模板市场
 
 如下图所示，可通过切换版本，快速查看 v1 和 v2 下的模板(v2 与 v3 的模块可通用 )。
 可通过切换模板类型，快速查看仪表板和数据大屏应用下的模板。
 
-![版本切换](/img/dataease/template_market/版本切换.gif)
+![版本切换](/img/dataease/template_market/banbenqiehuan.gif)
 
 图 7  版本切换
 
 如下图所示，可通过切换模板分类，快速查看样式模板和应用模板下的模板。
 可通过快速检索功能，进行关键字搜索或分类切换，目前上架的仪表板模板不仅涉及零售、证券、制造、电商、教育、医疗、物流、能源、旅游、金融等多种行业和场景应用，还涵括 JumpServer、MeterSphere 等专题分析，后续更多优质模板将持续增加。
 
-![主题切换](/img/dataease/template_market/主题切换.gif)
+![主题切换](/img/dataease/template_market/zhutiqiehuan.gif)
 
 图 8  主题切换
 
 如需预览或下载模板，可点击对应模板进入详情界面，点击”下载“按钮后可将对应模板下载至本地。 模板文件不包含仪表板所用到的数据集与数据源信息，需手动替换数据；
 
-![模板市场_下载](/img/dataease/template_market/模板下载.png)
+![模板市场_下载](/img/dataease/template_market/mubanxiazai.png)
 
 图 9  模板下载
 
@@ -79,7 +79,7 @@ title: 模板市场
 
 用户可以在模板管理中进行模板上传，并为模板进行分组分类，可以更方便的对模板进行管理和查找。点击[模板管理](./system_management/module)，如下图所示，打开模板市场主页。
 
-![模板管理界面](/img/dataease/system_management/模板管理界面.png)
+![模板管理界面](/img/dataease/system_management/mubanguanlijiemian.png)
 
 图 10  模板管理界面
 
@@ -87,19 +87,19 @@ title: 模板市场
 
 应用模板后如下图所示，该模板的各组件、样式、背景及仪表板数据等均被导入到新建仪表板中。
 
-![模板导入成功](/img/dataease/template_market/应用模板.png)
+![模板导入成功](/img/dataease/template_market/yingyongmuban.png)
 
 图 11  应用模板
 
 编辑图表，根据情况替换为自己的数据。
 
-![模板市场_替换数据集](/img/dataease/template_market/模板替换数据集.png)
+![模板市场_替换数据集](/img/dataease/template_market/mubantihuanshujuji.png)
 
 图 12  模板替换数据集
 
 将视图所关联的数据集替换为自己的实际数据集。
 
-![模板市场_替换数据](/img/dataease/template_market/替换数据集.png)
+![模板市场_替换数据](/img/dataease/template_market/tihuanshujuji.png)
 
 图 13  替换数据集
 
@@ -107,6 +107,6 @@ title: 模板市场
 
 如下图所示，模板的各组件、样式、背景已带入到新建的仪表板或数据大屏中，如需修改可在模板的基础上再根据自己的实际情况，自行调整样式、组件和视图等。
 
-![仪表板市场_样式调整](/img/dataease/template_market/样式调整.png)
+![仪表板市场_样式调整](/img/dataease/template_market/yangshitiaozheng.png)
 
 图 14  样式调整

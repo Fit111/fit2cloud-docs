@@ -6,11 +6,11 @@ title: 仪表板基础功能
 
 点击下图所示的位置或者新建仪表板，进入仪表板编辑界面。
 
-![编辑仪表板](/img/dataease/dashboard_generation/编辑仪表板.png)
+![编辑仪表板](/img/dataease/dashboard_generation/bianjiyibiaoban.png)
 
 图 1  编辑仪表板
 
-![新建仪表板2](/img/dataease/dashboard_generation/新建仪表板2.png)
+![新建仪表板2](/img/dataease/dashboard_generation/xinjianyibiaoban2.png)
 
 图 2  新建仪表板
 
@@ -24,11 +24,11 @@ title: 仪表板基础功能
 - 点击【取消发布】，则撤销已发布版本，使其变为草稿版本。
 - 若需要调整内容，可修改并【保存】，生成新的草稿版本。点击【恢复到已发布版本】，放弃当前修改，将草稿版本还原至已发布版本。
 
-![仪表板和数据大屏发布](/img/dataease/newimg/仪表板和数据大屏支持发布功能1.png)
+![仪表板和数据大屏发布](/img/dataease/newimg/yibiaobanheshujudapingzhichifabugongneng1.png)
 
 图 3  仪表板和数据大屏发布
 
-![仪表板和数据大屏发布](/img/dataease/newimg/仪表板和数据大屏支持发布功能2.png)
+![仪表板和数据大屏发布](/img/dataease/newimg/yibiaobanheshujudapingzhichifabugongneng2.png)
 
 图 4  仪表板和数据大屏发布
 
@@ -51,11 +51,11 @@ title: 仪表板基础功能
     - 取消发布或者仅存在草稿版本在列表中置灰，不可查看、分享、收藏；
     - 已发布过的仪表板和数据大屏若取消发布后（即仅存在草稿版本），原先创建的分享链接和收藏记录不删除。通过分享链接访问时，将提示仪表板未发布，同时在收藏栏中无法点击查看。
 
-![仪表板和数据大屏发布](/img/dataease/newimg/仪表板和数据大屏支持发布功能3.png)
+![仪表板和数据大屏发布](/img/dataease/newimg/yibiaobanheshujudapingzhichifabugongneng3.png)
 
 图 5  仪表板和数据大屏发布
 
-![仪表板和数据大屏发布](/img/dataease/newimg/仪表板和数据大屏支持发布功能4.png)
+![仪表板和数据大屏发布](/img/dataease/newimg/yibiaobanheshujudapingzhichifabugongneng4.png)
 
 图 6  仪表板和数据大屏发布
 
@@ -63,7 +63,7 @@ title: 仪表板基础功能
 
 点击下图按钮，撤销上一步操作。
 
-![撤销](/img/dataease/dashboard_generation/撤销.png)
+![撤销](/img/dataease/dashboard_generation/chexiao.png)
 
 图 7  撤销
 
@@ -71,7 +71,7 @@ title: 仪表板基础功能
 
 **点击下图按钮，可以对组件操作恢复。**
 
-![恢复](/img/dataease/dashboard_generation/恢复.png)
+![恢复](/img/dataease/dashboard_generation/huifu.png)
 
 图 8  恢复
 
@@ -79,7 +79,7 @@ title: 仪表板基础功能
 
 点击【样式】按钮，左侧弹出仪表板样式编辑页面。
 
-![样式](/img/dataease/dashboard_generation/仪表板配置.png)
+![样式](/img/dataease/dashboard_generation/yibiaobanpeizhi.png)
 
 图 9  样式设计界面
 
@@ -87,7 +87,7 @@ title: 仪表板基础功能
 
 可在此位置设置仪表板的主题，包括系统主题与自定义主题，如下图所示，点击【保存】，可保存为仪表板主题。
 
-![仪表板主题](/img/dataease/dashboard_generation/仪表板风格.png)
+![仪表板主题](/img/dataease/dashboard_generation/yibiaobanfengge.png)
 
 图 10  仪表板风格
 
@@ -99,32 +99,32 @@ title: 仪表板基础功能
 - 按画布比例缩放：高度和宽度独立按画布比例缩放。组件在设计阶段于画布中所占的比例将在预览阶段保持一致，从而确保布局的高度还原。
 - 按组件比例缩放：保持组件高度与宽度的比例固定。设计阶段设置的组件高度与宽度的比例将在预览阶段严格保持不变，确保视觉一致性。
 
-![仪表板主题色、组件间隙](/img/dataease/dashboard_generation/仪表板整体配置.png)
+![仪表板主题色、组件间隙](/img/dataease/dashboard_generation/yibiaobanzhengtipeizhi.png)
 
 图 11  仪表板整体配置
 
 仪表板支持间距大小设置，支持自定义组件间距提供大、中、小三种内置间距选项，支持自定义间距范围为 0 到 10。
 
-![仪表板间距大小设置](/img/dataease/newimg/仪表板新增间距大小设置，支持自定义组件间距2.png)
+![仪表板间距大小设置](/img/dataease/newimg/yibiaobanxinzengjianjudaxiaoshezhi-zhichizidingyizujianjianju2.png)
 
 图 12  仪表板间距大小设置
 
 仪表板支持字体更换。
 
-![仪表板和数据大屏字体更换](/img/dataease/dashboard_generation/仪表板和数据大屏支持字体更换.png)
+![仪表板和数据大屏字体更换](/img/dataease/dashboard_generation/yibiaobanheshujudapingzhichizitigenghuan.png)
 
 图 13  仪表板和数据大屏字体更换
 
 如下图所示，可设置仪表板的刷新频率，支持到秒级刷新时间。  
 **提示：** 此设置在仪表板编辑页面不生效。
 
-![仪表板刷新时间](/img/dataease/dashboard_generation/刷新频率.png)
+![仪表板刷新时间](/img/dataease/dashboard_generation/shuaxinpinlv.png)
 
 图 14  刷新频率
 
 如下图所示，可调整图表展示结果，选择【仪表板】，则覆盖图表的结果展示数量，取值范围 1~10000。
 
-![仪表板视图结果展示](/img/dataease/dashboard_generation/视图结果数量.png)
+![仪表板视图结果展示](/img/dataease/dashboard_generation/shitujieguoshuliang.png)
 
 图 15  视图结果数量
 
@@ -132,7 +132,7 @@ title: 仪表板基础功能
 
 如下图所示，点击【仪表板背景】，设置仪表板背景颜色或图片，支持重新上传背景图片。
 
-![仪表板背景](/img/dataease/dashboard_generation/仪表板背景.png)
+![仪表板背景](/img/dataease/dashboard_generation/yibiaobanbeijing.png)
 
 图 16  仪表板背景
 
@@ -141,7 +141,7 @@ title: 仪表板基础功能
 仪表板的样式设置支持调整所有组件的共用样式，即将影响整个仪表板已存在的组件，同时在图表层面也可做微调；  
 如下图所示，支持设置组件内边距、背景颜色、透明度、边框半径以及背景；
 
-![仪表版_其他样式](/img/dataease/dashboard_generation/图表样式.png)
+![仪表版_其他样式](/img/dataease/dashboard_generation/tubiaoyangshi.png)
 
 图 17  图表样式
 
@@ -149,7 +149,7 @@ title: 仪表板基础功能
 
 如下图所示，支持调整图表的配色方案，支持调整卡片的配色，包括文本卡与指标卡的配色，支持调整表格的配色，包括汇总表、明细表与透视表。
 
-![仪表板_组件配色](/img/dataease/dashboard_generation/图表配色.png)
+![仪表板_组件配色](/img/dataease/dashboard_generation/tubiaopeise.png)
 
 图 18  图表配色
 
@@ -157,7 +157,7 @@ title: 仪表板基础功能
 
 如下图所示，支持统一设置标题样式，标题样式首先基于仪表板，各图表可再在组件层面做微调。
 
-![仪表板_图表标题](/img/dataease/dashboard_generation/图表标题.png)
+![仪表板_图表标题](/img/dataease/dashboard_generation/tubiaobiaoti.png)
 
 图 19  图表标题
 
@@ -165,7 +165,7 @@ title: 仪表板基础功能
 
 如下图所示，支持设置查询组件标题样式，包括位置调整与颜色调整，支持输入框样式调整。
 
-![仪表板_查询组件](/img/dataease/dashboard_generation/查询组件样式.png)
+![仪表板_查询组件](/img/dataease/dashboard_generation/chaxunzujianyangshi.png)
 
 图 20  查询组件样式
 
@@ -176,11 +176,11 @@ title: 仪表板基础功能
 新版本中，对关联组件做了分类，分为查询组件和图表两类。查询组件的关联需要选择关联条件。图表关联则可以通过数据集批量关联，减少重复操作。且图表的关联支持直接选择与数据集参数进行关联。  
 **注意：外部传参同时关联查询组件与图表时，以查询组件的优先级优先。**
 
-![仪表板外部参数入口](/img/dataease/dashboard_generation/仪表板外部参数入口.png)
+![仪表板外部参数入口](/img/dataease/dashboard_generation/yibiaobanwaibucanshurukou.png)
 
 图 21  仪表板外部参数入口
 
-![外部参数设置页面](/img/dataease/dashboard_generation/外部参数设置页面.png)
+![外部参数设置页面](/img/dataease/dashboard_generation/waibucanshushezhiyemian.png)
 
 图 22  外部参数设置页面
 
@@ -196,7 +196,7 @@ echo '{"省份":"北京市"}'|base64
 构建完整的 URL 为：&lt;仪表板公共链接&gt;?attachParams=eyLnnIHku70iOiLljJfkuqzluIIifQo=
 以公共链接的形式访问仪表板，关联的内容被过滤。
 
-![仪表板_批量操作](/img/dataease/dashboard_generation/外部传参示例.png)
+![仪表板_批量操作](/img/dataease/dashboard_generation/waibuchuancanshili.png)
 
 图 23  外部传参示例
 
@@ -227,19 +227,19 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 - 点击除组件右上角隐藏图标以外的任意区域，如点击仪表板，显示仪表板属性设置栏。
 - 点击顶部功能按钮（如外部参数、仪表板配置、移动端布局、图表、复用等），退出隐藏设置状态并执行相应操作。
 
-![仪表板组件隐藏](/img/dataease/newimg/仪表板支持组件隐藏1.PNG)
+![仪表板组件隐藏](/img/dataease/newimg/yibiaobanzhichizujianyincang1.png)
 
 图 24  仪表板组件隐藏
 
 在单个组件的右上角菜单中，点击【隐藏】选项，可直接进入隐藏设置状态，并将该组件添加至【已隐藏组件列表】。其余操作与隐藏设置流程一致。
 
-![仪表板组件隐藏](/img/dataease/newimg/仪表板支持组件隐藏2.PNG)
+![仪表板组件隐藏](/img/dataease/newimg/yibiaobanzhichizujianyincang2.png)
 
 图 25  仪表板组件隐藏
 
 在【已隐藏组件】列表中，点击组件可恢复显示，操作方式与移动端布局一致。
 
-![仪表板组件隐藏](/img/dataease/newimg/仪表板支持组件隐藏3.gif)
+![仪表板组件隐藏](/img/dataease/newimg/yibiaobanzhichizujianyincang3.gif)
 
 图 26  仪表板组件隐藏
 
@@ -247,13 +247,13 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 
 点击批量操作按钮，选择图表，可批量设置图表样式属性，且根据所选择的图表不同，可修改的属性不同，如下图所示。
 
-![仪表板_批量操作](/img/dataease/dashboard_generation/批量操作.png)
+![仪表板_批量操作](/img/dataease/dashboard_generation/piliangcaozuo.png)
 
 图 27  批量操作
 
 **请注意：当勾选多个不同类别的图形时，只能批量修改共性的属性。**
 
-![仪表板_批量操作](/img/dataease/dashboard_generation/批量样式调整.png)
+![仪表板_批量操作](/img/dataease/dashboard_generation/piliangyangshitiaozheng.png)
 
 图 28  批量管理模板
 
@@ -261,13 +261,13 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 
 支持复用所有的组件，复用图表支持适配当前仪表板样式。
 
-![仪表板_复用](/img/dataease/dashboard_generation/复用.png)
+![仪表板_复用](/img/dataease/dashboard_generation/fuyong.png)
 
 图 29  复用
 
 复制上图不一样样式的仪表板中的图表会自动适配当前仪表板下的样式。
 
-![仪表板_复用](/img/dataease/dashboard_generation/进行复用.png)
+![仪表板_复用](/img/dataease/dashboard_generation/jinxingfuyong.png)
 
 图 30  进行复用
 
@@ -275,6 +275,6 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 
 点击下图所示的返回按钮，关闭仪表板。
 
-![仪表板_关闭](/img/dataease/dashboard_generation/返回.png)
+![仪表板_关闭](/img/dataease/dashboard_generation/fanhui.png)
 
 图 31  返回

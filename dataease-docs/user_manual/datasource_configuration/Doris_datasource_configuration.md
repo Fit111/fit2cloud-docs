@@ -16,13 +16,13 @@ title: 配置 Doris 数据源
 
 步骤二：按照以下步骤，选择 Doris 图标。
 
-![Doris](/img/dataease/datasource_configuration/选择Doris.png)
+![Doris](/img/dataease/datasource_configuration/xuanzedoris.png)
 
 图 1  选择Doris数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![Doris](/img/dataease/datasource_configuration/Doris链接信息.png)
+![Doris](/img/dataease/datasource_configuration/dorislianjiexinxi.png)
 
 图 2  Doris 连接信息
 
@@ -44,6 +44,6 @@ title: 配置 Doris 数据源
 
 步骤四：数据源检验，校验成功后如下图所示，点击右上角的保存即可。
 
-![Doris](/img/dataease/datasource_configuration/Doris校验成功.png)
+![Doris](/img/dataease/datasource_configuration/dorisjiaoyanchenggong.png)
 
 图 3  Doris 校验成功

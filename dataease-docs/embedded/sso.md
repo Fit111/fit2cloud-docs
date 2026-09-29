@@ -10,7 +10,7 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 
 点击 OIDC 编辑。即可设置 OIDC，填写完相关信息后，测试连接显示成功，即配置成功。
 
-![单点登录（1）](/img/dataease/embedded/单点登录（1）.png)
+![单点登录（1）](/img/dataease/embedded/dandiandenglu-1.png)
 
 图 1  单点登录
 
@@ -22,7 +22,7 @@ DataEase 企业版支持 OIDC 协议，【系统设置】-&gt; 【认证设置�
 - Use Pkce：访问令牌。设置为 true 时，在请求标头中设置访问令牌。
 - Redirect Uri：重定向回的 URL。
 
-![单点登录（2）](/img/dataease/embedded/单点登录（2）.png)
+![单点登录（2）](/img/dataease/embedded/dandiandenglu-2.png)
 
 图 2  单点登录
 
@@ -32,14 +32,14 @@ DataEase 企业版支持 CAS 协议，【系统设置】-&gt; 【认证设置】
 
 点击 CAS 编辑。即可设置 CAS，填写完相关信息后，测试连接显示成功，即配置成功。
 
-![单点登录（3）](/img/dataease/embedded/单点登录（3）.png)
+![单点登录（3）](/img/dataease/embedded/dandiandenglu-3.png)
 
 图 3  单点登录
 
 - IdpUri：IdP 的 URI。
 - 回调域名：登录或注销后，回调的重定向 uri。
 
-![单点登录（4）](/img/dataease/embedded/单点登录（4）.png)
+![单点登录（4）](/img/dataease/embedded/dandiandenglu-4.png)
 
 图 4  单点登录
 
@@ -49,7 +49,7 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 
 点击 LDAP 编辑，即可设置 LDAP，填写完相关信息后，测试连接显示成功，即配置成功。
 
-![单点登录（5）](/img/dataease/embedded/单点登录（5）.png)
+![单点登录（5）](/img/dataease/embedded/dandiandenglu-5.png)
 
 图 5  单点登录
 
@@ -62,7 +62,7 @@ DataEase 企业版支持 LDAP 协议，【系统设置】-&gt; 【认证设置�
 
 ## 4 OAuth2
 
-![单点登录（6）](/img/dataease/embedded/单点登录（6）.png)
+![单点登录（6）](/img/dataease/embedded/dandiandenglu-6.png)
 
 图 6  单点登录
 

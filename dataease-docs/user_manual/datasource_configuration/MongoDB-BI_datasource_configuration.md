@@ -16,13 +16,13 @@ title: 配置 MongoDB-BI 数据源
 
 步骤二：按照以下步骤，选择 MongoDB-BI 图标。
 
-![MongoDB](/img/dataease/datasource_configuration/选择Mongodb-BI.png)
+![MongoDB](/img/dataease/datasource_configuration/xuanzemongodb-bi.png)
 
 图 1  选择MongoDB-BI数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![MongoDB](/img/dataease/datasource_configuration/Mongodb链接信息.png)
+![MongoDB](/img/dataease/datasource_configuration/mongodblianjiexinxi.png)
 
 图 2  MongoDB-BI连接信息
 
@@ -45,6 +45,6 @@ title: 配置 MongoDB-BI 数据源
 
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
 
-![MongoDB](/img/dataease/datasource_configuration/Mongodb校验成功.png)
+![MongoDB](/img/dataease/datasource_configuration/mongodbjiaoyanchenggong.png)
 
 图 3  MongoDB-BI校验成功

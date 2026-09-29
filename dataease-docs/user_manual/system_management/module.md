@@ -2,7 +2,7 @@
 title: 工具箱
 ---
 
-![百宝箱入口](/img/dataease/system_management/百宝箱.png)
+![百宝箱入口](/img/dataease/system_management/baibaoxiang.png)
 
 图 1  工具箱入口
 
@@ -13,14 +13,14 @@ title: 工具箱
 用户可以在创建仪表板的时候，通过选择已有的模板，快速创建所需的仪表板和数据大屏，减少创建可视化图表的工作量。  
 可以通过点击【添加分类】按钮，给模板新建分类，为模板进行分组分类，可以更方便的对模板进行管理和查找。
 
-![模板管理界面](/img/dataease/system_management/模板管理界面.png)
+![模板管理界面](/img/dataease/system_management/mubanguanlijiemian.png)
 
 图 2  模板管理界面
 
 - 支持批量修改模板分类。
 - 支持批量删除模板。
 
-![批量管理模板](/img/dataease/newimg/批量管理模板.png)
+![批量管理模板](/img/dataease/newimg/piliangguanlimuban.png)
 
 图 3  批量管理模板
 
@@ -28,15 +28,15 @@ title: 工具箱
 
 样式模板来源于仪表板、数据大屏的转换，可在仪表板、数据大屏预览界面"保存为样式模板"。如下图所示，也可点击【导入模板】，上传模板文件，添加模板。
 
-![导出为模板](/img/dataease/system_management/导出为模板.png)
+![导出为模板](/img/dataease/system_management/daochuweimuban.png)
 
 图 4  保存为样式模板
 
-![上传模板](/img/dataease/system_management/上传模板.png)
+![上传模板](/img/dataease/system_management/shangchuanmuban.png)
 
 图 5  上传模板
 
-![模板导入成功](/img/dataease/system_management/模板导入成功.png)
+![模板导入成功](/img/dataease/system_management/mubandaoruchenggong.png)
 
 图 6  模板导入成功
 
@@ -50,32 +50,32 @@ title: 工具箱
 
 关于模板文件与应用文件的区别可参考：[https://kb.fit2cloud.com/?p=211](https://kb.fit2cloud.com/?p=211)。
 
-![新增应用功能1](/img/dataease/newimg/新增应用功能1.png)
+![新增应用功能1](/img/dataease/newimg/xinzengyingyonggongneng1.png)
 
 图 7  应用模板说明
 
-![新增应用功能2](/img/dataease/newimg/新增应用功能2.png)
+![新增应用功能2](/img/dataease/newimg/xinzengyingyonggongneng2.png)
 
 图 8  应用模板示例
 
 可在【模板管理】中上传应用模板。
 
-![新增应用功能3](/img/dataease/newimg/新增应用功能3.png)
+![新增应用功能3](/img/dataease/newimg/xinzengyingyonggongneng3.png)
 
 图 9  上传应用模板
 
 使用模板新建仪表板或数据大屏时可选择使用存在的应用文件。
 
-![新增应用功能4](/img/dataease/newimg/新增应用功能4.png)
+![新增应用功能4](/img/dataease/newimg/xinzengyingyonggongneng4.png)
 
 图 10  使用应用模板创建
 
-![新增应用功能5](/img/dataease/newimg/新增应用功能5.png)
+![新增应用功能5](/img/dataease/newimg/xinzengyingyonggongneng5.png)
 
 图 11  选择应用文件
 
 使用应用创建的资源，会自动弹出相关配置项，需要用户进一步填写。
 
-![新增应用功能6](/img/dataease/newimg/新增应用功能6.png)
+![新增应用功能6](/img/dataease/newimg/xinzengyingyonggongneng6.png)
 
 图 12  填写应用配置

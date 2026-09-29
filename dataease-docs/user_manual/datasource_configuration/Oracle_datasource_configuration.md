@@ -16,19 +16,19 @@ title: 配置 Oracle 数据源
 
 步骤二：按照以下步骤，选择 Oracle 图标。
 
-![Oracle](/img/dataease/datasource_configuration/选择Oracle.png)
+![Oracle](/img/dataease/datasource_configuration/xuanzeoracle.png)
 
 图 1  选择Oracle数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![Oracle](/img/dataease/datasource_configuration/Oracle链接信息.png)
+![Oracle](/img/dataease/datasource_configuration/oraclelianjiexinxi.png)
 
 图 2  Oracle连接信息
 
 步骤四：获取 Schema。
 
-![Oracle](/img/dataease/datasource_configuration/Oracle获取Schema.png)
+![Oracle](/img/dataease/datasource_configuration/oraclehuoquschema.png)
 
 图 3  Oracle获取Schema
 
@@ -54,6 +54,6 @@ title: 配置 Oracle 数据源
 
 步骤五：数据源检验，校验成功后如下图所示，点击保存即可。
 
-![Oracle](/img/dataease/datasource_configuration/Oracle校验成功.png)
+![Oracle](/img/dataease/datasource_configuration/oraclejiaoyanchenggong.png)
 
 图 4  Oracle校验成功

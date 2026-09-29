@@ -28,11 +28,11 @@ title: 电子表格特殊功能
 3. 设置【结果展示】条数（默认 1000，上限受系统参数「电子表格查询数量上限」约束）；
 4. 点击【确定】后，在右侧配置数据集与字段。
 
-![插入明细表](/img/dataease/newimg/xpack/插入图表1.png)
+![插入明细表](/img/dataease/newimg/xpack/charutubiao1.png)
 
 图 1  插入图表
 
-![插入明细表](/img/dataease/newimg/xpack/插入数据对象1.png)
+![插入明细表](/img/dataease/newimg/xpack/charushujuduixiang1.png)
 
 图 2  插入数据对象
 
@@ -60,7 +60,7 @@ title: 电子表格特殊功能
 - 渲染区域受保护，不可直接编辑单元格内容；
 - 支持行列冻结。
 
-![插入明细表](/img/dataease/newimg/xpack/插入数据对象2.png)
+![插入明细表](/img/dataease/newimg/xpack/charushujuduixiang2.png)
 
 图 3  插入数据对象
 
@@ -86,7 +86,7 @@ title: 电子表格特殊功能
 - 渲染区域受保护；
 - 支持行列冻结。
 
-![插入透视表](/img/dataease/newimg/xpack/插入透视表.png)
+![插入透视表](/img/dataease/newimg/xpack/charutoushibiao.png)
 
 图 4  插入透视表
 
@@ -111,7 +111,7 @@ title: 电子表格特殊功能
 
 查询条件用于过滤并联动刷新表格内的明细表 / 透视表对象。
 
-![查询控件](/img/dataease/newimg/xpack/查询控件.png)
+![查询控件](/img/dataease/newimg/xpack/chaxunkongjian.png)
 
 图 5  查询控件
 
@@ -131,7 +131,7 @@ title: 电子表格特殊功能
 | 时间 | 日期 | 单个时间点，支持固定 / 动态时间 |
 | 时间范围 | 日期 | 起止时间，支持固定 / 动态时间 |
 
-![查询控件](/img/dataease/newimg/xpack/查询条件类型.png)
+![查询控件](/img/dataease/newimg/xpack/chaxuntiaojianleixing.png)
 
 图 6  查询条件类型
 
@@ -147,15 +147,15 @@ title: 电子表格特殊功能
 4. 可通过【打开样式面板】配置查询栏样式：排列方式、位置、条件名称样式、是否展示查询 / 重置 / 清空按钮；
 5. 保存配置。不需要查询栏时，可【删除查询组件】。
 
-![添加查询条件](/img/dataease/newimg/xpack/添加查询组件1.png)
+![添加查询条件](/img/dataease/newimg/xpack/tianjiachaxunzujian1.png)
 
 图 7  添加查询组件
 
-![添加查询条件配置](/img/dataease/newimg/xpack/添加查询组件2.png)
+![添加查询条件配置](/img/dataease/newimg/xpack/tianjiachaxunzujian2.png)
 
 图 8  添加查询组件
 
-![查询条件关联字段](/img/dataease/newimg/xpack/添加查询组件3.png)
+![查询条件关联字段](/img/dataease/newimg/xpack/tianjiachaxunzujian3.png)
 
 图 9  添加查询组件
 
@@ -167,11 +167,11 @@ title: 电子表格特殊功能
 - 条件为空或填写不完整时会提示；
 - 查询后，关联的明细表 / 透视表按条件过滤数据，多个条件之间按配置逻辑共同生效。
 
-![添加查询条件](/img/dataease/newimg/xpack/查询行为1.png)
+![添加查询条件](/img/dataease/newimg/xpack/chaxunxingwei1.png)
 
 图 10  查询行为
 
-![添加查询条件](/img/dataease/newimg/xpack/查询行为2.png)
+![添加查询条件](/img/dataease/newimg/xpack/chaxunxingwei2.png)
 
 图 11  查询行为
 
@@ -186,7 +186,7 @@ title: 电子表格特殊功能
 | 复制数据集 / 剪切数据集 | 选中已绑定数据集的明细表 / 透视表时，对象操作条提供复制 / 剪切数据集 |
 | 粘贴数据集 | 在目标位置右键【粘贴数据集】，将已复制 / 剪切的数据对象粘贴过去 |
 
-![查询条件关联字段](/img/dataease/newimg/xpack/数据集复制剪切.png)
+![查询条件关联字段](/img/dataease/newimg/xpack/shujujifuzhijianqie.png)
 
 图 12  数据集复制剪切
 
@@ -200,14 +200,14 @@ title: 电子表格特殊功能
 
 最右侧【数据集】面板可切换当前对象绑定的数据集，并按维度 / 指标浏览字段。
 
-![配置面板](/img/dataease/newimg/xpack/配置面板1.png)
+![配置面板](/img/dataease/newimg/xpack/peizhimianban1.png)
 
 图 13  配置面板
 
-![配置面板](/img/dataease/newimg/xpack/配置面板2.png)
+![配置面板](/img/dataease/newimg/xpack/peizhimianban2.png)
 
 图 14  配置面板
 
-![配置面板](/img/dataease/newimg/xpack/配置面板3.png)
+![配置面板](/img/dataease/newimg/xpack/peizhimianban3.png)
 
 图 15  配置面板

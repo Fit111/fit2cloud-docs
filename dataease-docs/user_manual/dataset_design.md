@@ -6,7 +6,7 @@ title: 数据集功能设计
 
 点击左侧数据表，右侧默认展示预览数据。切换 Tab 页,可切换至结构预览、行权限、列权限(行列权限为 X-Pack 功能)。
 
-![数据集界面](/img/dataease/dataset_configuration/数据集界面.png)
+![数据集界面](/img/dataease/dataset_configuration/shujujijiemian.png)
 
 图 1  数据集界面
 
@@ -14,23 +14,23 @@ title: 数据集功能设计
 
 点击右上角【编辑】按钮。进入数据编辑界面。切换到【批量管理】可对数据集字段进行批量操作。
 
-![数据集编辑界面](/img/dataease/dataset_configuration/数据集编辑界面.png)
+![数据集编辑界面](/img/dataease/dataset_configuration/shujujibianjijiemian.png)
 
 图 2  数据集编辑界面
 
 勾选排序后，数据会进行升序排序。
 
-![数据集排序](/img/dataease/quick_start/数据集排序.png)
+![数据集排序](/img/dataease/quick_start/shujujipaixu.png)
 
 图 3  数据集排序
 
 在数据集预览界面导出数据集后依旧会对导出的数据进行升序排列。
 
-![数据集排序2](/img/dataease/quick_start/数据集排序1.png)
+![数据集排序2](/img/dataease/quick_start/shujujipaixu1.png)
 
 图 4  数据集排序
 
-![数据集排序2](/img/dataease/quick_start/数据集排序2.png)
+![数据集排序2](/img/dataease/quick_start/shujujipaixu2.png)
 
 图 5  数据集排序
 
@@ -40,7 +40,7 @@ title: 数据集功能设计
 
 如下图所示，切换到【批量管理】，可修改字段名。
 
-![数据集字段重命名](/img/dataease/dataset_configuration/数据集字段重命名.png)
+![数据集字段重命名](/img/dataease/dataset_configuration/shujujiziduanzhongmingming.png)
 
 图 6  数据集字段重命名
 
@@ -48,7 +48,7 @@ title: 数据集功能设计
 
 字段显示支持全选/全不选，也可单独勾选。
 
-![数据集字段选中](/img/dataease/dataset_configuration/数据集字段选中.png)
+![数据集字段选中](/img/dataease/dataset_configuration/shujujiziduanxuanzhong.png)
 
 图 7  数据集字段选中
 
@@ -56,7 +56,7 @@ title: 数据集功能设计
 
 如下图所示，支持更换字段类型。可全选后统一进行修改。
 
-![数据集字段更改类型](/img/dataease/dataset_configuration/数据集字段更改类型.png)
+![数据集字段更改类型](/img/dataease/dataset_configuration/shujujiziduangenggaileixing.png)
 
 图 8  数据集字段更改类型
 
@@ -65,7 +65,7 @@ title: 数据集功能设计
 示例：数据库中以 2000/01/01 文本存储的数据，由于格式差异性，日期类查询组件无法过滤出来这些数据；  
 可将该文本字段改为时间类型，并选择 Y/m/d 格式（具体格式看数据源），则日期类查询组件可以过滤出来这些数据。
 
-![字段时间解析](/img/dataease/dataset_configuration/字段时间解析.png)
+![字段时间解析](/img/dataease/dataset_configuration/ziduanshijianjiexi.png)
 
 图 9  字段时间解析
 
@@ -73,21 +73,21 @@ title: 数据集功能设计
 
 数据集字段类型支持“URL”类型。URL 字段数据在明细表中会自动展示为图片。
 
-![字段时间解析](/img/dataease/dataset_configuration/支持图片url.png)
+![字段时间解析](/img/dataease/dataset_configuration/zhichitupianurl.png)
 
 图 10  图片url
 
-![明细表显示图片](/img/dataease/newimg/明细表支持显示图片2.png)
+![明细表显示图片](/img/dataease/newimg/mingxibiaozhichixianshitupian2.png)
 
 图 11  明细表显示图片
 
 图片展示高度根据所设置单元格行高自适应。鼠标悬浮在单元格上，会出现图片原始链接。鼠标点击单元格图片，图片会放大展示。
 
-![明细表支持显示图片3](/img/dataease/newimg/明细表支持显示图片3.png)
+![明细表支持显示图片3](/img/dataease/newimg/mingxibiaozhichixianshitupian3.png)
 
 图 12  明细表显示图片
 
-![明细表支持显示图片4](/img/dataease/newimg/明细表支持显示图片4.png)
+![明细表支持显示图片4](/img/dataease/newimg/mingxibiaozhichixianshitupian4.png)
 
 图 13  明细表显示图片
 
@@ -95,7 +95,7 @@ title: 数据集功能设计
 
 如下图所示，支持将字段转换为维度或指标。
 
-![切换维度](/img/dataease/dataset_configuration/切换维度.png)
+![切换维度](/img/dataease/dataset_configuration/qiehuanweidu.png)
 
 图 14  切换维度
 
@@ -103,7 +103,7 @@ title: 数据集功能设计
 
 点击【新建计算字段】按钮，弹出新建计算字段页面，在此页面输入字段名，字段表达式，通过引用函数，生成新的数据集字段。
 
-![新建计算字段](/img/dataease/dataset_configuration/新建计算字段.png)
+![新建计算字段](/img/dataease/dataset_configuration/xinjianjisuanziduan.png)
 
 图 15  新建计算字段
 
@@ -114,7 +114,7 @@ title: 数据集功能设计
 - 【序号 5】引用字段栏，点击数据集原有的字段，字段表达式栏引用到对应的字段；
 - 【序号 6】函数栏，使用的函数支持对应数据集的数据库函数。
 
-![新建计算字段设计](/img/dataease/dataset_configuration/新建计算字段设计.png)
+![新建计算字段设计](/img/dataease/dataset_configuration/xinjianjisuanziduansheji.png)
 
 图 16  新建计算字段设计
 
@@ -126,7 +126,7 @@ title: 数据集功能设计
 
 在计算字段编辑页面新增校验按钮，用户可在保存前对计算字段的语法有效性进行校验，确保配置正确。
 
-![校验成功](/img/dataease/newimg/计算字段编辑页面支持语法校验功能1.png)
+![校验成功](/img/dataease/newimg/jisuanziduanbianjiyemianzhichiyufajiaoyangongneng1.png)
 
 图 17  校验成功
 
@@ -134,7 +134,7 @@ title: 数据集功能设计
 
 【分组字段】功能支持用户通过可视化方式对字段值进行分类，无需编写 SQL 语法或使用函数，即可完成数据分组。例如，可将“广东省”归入“华南”区域，实现灵活的数据分类与分析。
 
-![字段分组功能](/img/dataease/newimg/新增数据集分组字段功能1.png)
+![字段分组功能](/img/dataease/newimg/xinzengshujujifenzuziduangongneng1.png)
 
 图 18  字段分组功能
 
@@ -144,7 +144,7 @@ title: 数据集功能设计
 - 配置分组规则：添加分组类别（如“华北”“华南”），并将相应字段值拖入或选择归属类别。可添加默认“其他”类别，存放未分组的值。  
 创建分组字段后，可直接在数据预览界面查看分组结果，分组字段会新增至维度列表中。
 
-![字段分组功能](/img/dataease/newimg/新增数据集分组字段功能2.png)
+![字段分组功能](/img/dataease/newimg/xinzengshujujifenzuziduangongneng2.png)
 
 图 19  字段分组功能
 
@@ -153,7 +153,7 @@ title: 数据集功能设计
 支持对字段进行【复制】操作，复制后的字段相当于新建一个计算字段，复制后的字段，字段名：原字段名_Copy。  
 **注意：** 仅数据集字段管理的字段支持复制。
 
-![字段复制](/img/dataease/dataset_configuration/字段复制.png)
+![字段复制](/img/dataease/dataset_configuration/ziduanfuzhi.png)
 
 图 20  字段复制
 
@@ -161,7 +161,7 @@ title: 数据集功能设计
 
 支持对字段进行【删除】操作。
 
-![字段删除](/img/dataease/dataset_configuration/字段删除.png)
+![字段删除](/img/dataease/dataset_configuration/ziduanshanchu.png)
 
 图 21  字段删除
 
@@ -171,7 +171,7 @@ title: 数据集功能设计
 
 如下图，在关联数据集设置页面，选择左连接，即 LEFT JOIN，连接取左表所有数据记录，当关联字段中匹配到右表的字段，则检索出右表的数据记录，否则以 null 显示。
 
-![左连接](/img/dataease/dataset_configuration/左连接.png)
+![左连接](/img/dataease/dataset_configuration/zuolianjie.png)
 
 图 22  左连接
 
@@ -179,7 +179,7 @@ title: 数据集功能设计
 
 如下图，在关联数据集设置页面，选择右连接，即 RIGHT JOIN，连接取右表所有数据记录，当关联字段中匹配到左表的字段，则检索出左表的数据记录，否则以 null 显示。
 
-![右连接](/img/dataease/dataset_configuration/右连接.png)
+![右连接](/img/dataease/dataset_configuration/youlianjie.png)
 
 图 23  右连接
 
@@ -187,7 +187,7 @@ title: 数据集功能设计
 
 如下图，在关联数据集设置页面，选择内连接，即 INNER JOIN，当左表和右表的数据记录存在匹配时，数据记录才被检索出来。
 
-![内连接](/img/dataease/dataset_configuration/内连接.png)
+![内连接](/img/dataease/dataset_configuration/neilianjie.png)
 
 图 24  内连接
 
@@ -198,6 +198,6 @@ title: 数据集功能设计
 - MySQL，API，Excel 数据源目前不支持全连接；
 - 由于交互问题，校验放在后端执行，若不支持全连接，会返回提示。
 
-![校验成功](/img/dataease/dataset_configuration/全连接.png)
+![校验成功](/img/dataease/dataset_configuration/quanlianjie.png)
 
 图 25  校验成功

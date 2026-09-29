@@ -8,17 +8,17 @@ title: 数据集概述
 
 点击【数据准备】，进入【数据集】管理功能模块，该页面包括数据连接的新增（序号 1）、搜索（序号 2）、编辑（序号 3）、复制（序号 4）、重命名（序号 5）、删除（序号 6）等功能。
 
-![数据集概览](/img/dataease/newimg/user_manual/数据集概览.png)
+![数据集概览](/img/dataease/newimg/user_manual/shujujigailan.png)
 
 图 1  数据集概览
 
 数据集数据支持导出。
 
-![数据集数据导出](/img/dataease/newimg/支持数据集数据导出1.png)
+![数据集数据导出](/img/dataease/newimg/zhichishujujishujudaochu1.png)
 
 图 2  数据集数据导出
 
-![数据集数据导出](/img/dataease/newimg/支持数据集数据导出2.png)
+![数据集数据导出](/img/dataease/newimg/zhichishujujishujudaochu2.png)
 
 图 3  数据集数据导出
 
@@ -26,33 +26,33 @@ title: 数据集概述
 
 如下图所示，点击序号位置【添加数据集】，跳转到添加数据集页面。
 
-![新建数据集](/img/dataease/dataset_configuration/新建数据集.png)
+![新建数据集](/img/dataease/dataset_configuration/xinjianshujuji.png)
 
 图 4  新建数据集
 
 数据集编辑界面支持下拉框搜索。
 
-![数据集选择数据源和数据表](/img/dataease/dataset_configuration/数据集选择数据源和数据表.png)
+![数据集选择数据源和数据表](/img/dataease/dataset_configuration/shujujixuanzeshujuyuanheshujubiao.png)
 
 图 5  数据集选择数据源和数据表
 
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧数据库数据表（可利用搜索功能进行快速筛选）后拖拽到右侧数据集编辑区。
 
-![新建数据库数据集](/img/dataease/dataset_configuration/新建数据库数据集.png)
+![新建数据库数据集](/img/dataease/dataset_configuration/xinjianshujukushujuji.png)
 
 图 6  新建数据库数据集
 
-![新建数据库数据集](/img/dataease/dataset_configuration/新建数据库数据集1.png)
+![新建数据库数据集](/img/dataease/dataset_configuration/xinjianshujukushujuji1.png)
 
 图 7  新建数据库数据集
 
 如下图所示，点击【保存】，设置对应名称以及保存文件夹位置，点击【确认】即成功添加数据集。
 
-![保存数据库数据集](/img/dataease/dataset_configuration/保存数据库数据集.png)
+![保存数据库数据集](/img/dataease/dataset_configuration/baocunshujukushujuji.png)
 
 图 8  保存数据库数据集
 
-![数据库数据集保存成功](/img/dataease/dataset_configuration/数据库数据集保存成功.png)
+![数据库数据集保存成功](/img/dataease/dataset_configuration/shujukushujujibaocunchenggong.png)
 
 图 9  数据库数据集保存成功
 
@@ -60,11 +60,11 @@ title: 数据集概述
 
 在新建数据集页面，勾选添加数据集对应的数据源，将左侧【自定义 SQL 】拖拽到右侧数据集编辑区，进入到 SQL 编辑界面。
 
-![选择SQL数据集](/img/dataease/dataset_configuration/选择SQL数据集.png)
+![选择SQL数据集](/img/dataease/dataset_configuration/xuanzesqlshujuji.png)
 
 图 10  选择SQL数据集
 
-![SQL编辑界面](/img/dataease/dataset_configuration/SQL编辑界面.png)
+![SQL编辑界面](/img/dataease/dataset_configuration/sqlbianjijiemian.png)
 
 图 11  SQL 编辑界面
 
@@ -72,19 +72,19 @@ title: 数据集概述
 【序号2】位置为 SQL 语句输入区，在此区域输入正确的 SQL 语句；  
 【序号3】点击可展示预览数据；
 
-![SQL语句编写](/img/dataease/dataset_configuration/SQL语句编写.png)
+![SQL语句编写](/img/dataease/dataset_configuration/sqlyujubianxie.png)
 
 图 12  SQL 语句编写
 
 SQL 片段支持注释。
 
-![SQL 片段注释](/img/dataease/dataset_configuration/SQL片段支持注释.png)
+![SQL 片段注释](/img/dataease/dataset_configuration/sqlpianduanzhichizhushi.png)
 
 图 13  SQL 片段注释
 
 如下图所示，点击【保存】，SQL 查询添加成功。
 
-![保存SQL数据集](/img/dataease/dataset_configuration/保存SQL数据集.png)
+![保存SQL数据集](/img/dataease/dataset_configuration/baocunsqlshujuji.png)
 
 图 14  保存SQL数据集
 
@@ -96,27 +96,27 @@ SQL 片段支持注释。
 - 在右上角【参数设置】里对变量进行相关设置，如变量类型、生效模式、默认值（非必填），此处变量为系统根据 SQL 语句自动识别的，例如 province 会被自动带出来；
 - 在仪表板的查询组件中（文本下拉和数字下拉组件）勾选【参数选项】，并将下拉字段与 SQL 数据集中的变量关联，如下示例以 MySQL 数据库 SQL 语法为例，不同数据库请根据实际情况调整。
 
-![SQL参数设置](/img/dataease/dataset_configuration/SQL%20参数设置.png)
+![SQL参数设置](/img/dataease/dataset_configuration/sql-canshushezhi.png)
 
 图 15  SQL 参数设置
 
 编写带变量的 SQL 语句后，系统默认将参数类型设置为文本，根据需要可在右上角【参数设置】里对变量进行相关设置，示例如：  
 若该变量为时间类型，请手动调整该参数类型的时间类型及时间格式。
 
-![SQL参数变量类型](/img/dataease/dataset_configuration/SQL%20参数设置2.png)
+![SQL参数变量类型](/img/dataease/dataset_configuration/sql-canshushezhi2.png)
 
 图 16  SQL 参数设置
 
 参数设置里面，参数值下拉列表中可以选择“仅编辑时生效”或“数据集预览时全局生效”。   
 区别：仅编辑时生效在 SQL 数据集编辑界面有效，数据集预览时全局生效在数据集预览界面有效 。
 
-![SQL参数生效模式](/img/dataease/dataset_configuration/SQL%20参数设置3.png)
+![SQL参数生效模式](/img/dataease/dataset_configuration/sql-canshushezhi3.png)
 
 图 17  SQL 参数设置
 
 在仪表板查询组件绑定 SQL 传参：
 
-![查询组件绑定参数的方式优化-2](/img/dataease/newimg/查询组件绑定参数的方式优化-2.png)
+![查询组件绑定参数的方式优化-2](/img/dataease/newimg/chaxunzujianbangdingcanshudefangshiyouhua-2.png)
 
 图 18  查询组件绑定参数的方式优化
 
@@ -160,7 +160,7 @@ select * from table where $DE_PARAM{name = '$[p]'}
 2. 在【参数】页签中，分别将开始时间参数和结束时间参数关联为【开始时间】和【结束时间】。
 3. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
 
-![查询组件设置参数设置](/img/dataease/dataset_configuration/时间传参搭配过滤组件.png)
+![查询组件设置参数设置](/img/dataease/dataset_configuration/shijianchuancandapeiguolvzujian.png)
 
 图 19  时间传参搭配过滤组件
 
@@ -171,13 +171,13 @@ select * from table where $DE_PARAM{name = '$[p]'}
 
 SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，系统会对 SQL 数据集在查询时的 SQL 进行 Base64 加密处理。
 
-![SQL传参安全](/img/dataease/dataset_configuration/SQL传参安全.png)
+![SQL传参安全](/img/dataease/dataset_configuration/sqlchuancananquan.png)
 
 图 20  SQL 传参安全
 
 数据集自定义 SQL 时支持选择系统变量（企业版 X-Pack 功能）作为查询条件。在 SQL 查询中可以使用系统变量，实现行权限的效果。该条件在数据集预览和仪表板/数据大屏展示中均会生效。
 
-![数据集自定义 SQL 时支持选择系统变量作为查询条件（XPack）](/img/dataease/newimg/数据集自定义%20SQL%20时支持选择系统变量作为查询条件（XPack）.png)
+![数据集自定义 SQL 时支持选择系统变量作为查询条件（XPack）](/img/dataease/newimg/shujujizidingyi-sql-shizhichixuanzexitongbianliangzuoweichaxuntiaojian-xpack.png)
 
 图 21  SQL 中选择系统变量
 
@@ -185,7 +185,7 @@ SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，�
 
 在新建数据集页面，勾选添加数据集对应数据源，将左侧要关联的数据表拖拽到右侧数据集编辑区。
 
-![拖拽关联表](/img/dataease/dataset_configuration/拖拽关联表.png)
+![拖拽关联表](/img/dataease/dataset_configuration/tuozhuaiguanlianbiao.png)
 
 图 22  拖拽关联表
 
@@ -195,12 +195,12 @@ SQL 数据集支持参数传递，且 SQL 数据集参数化支持子查询，�
 -  序号 2 ：添加关联字段；
 -  序号 3 ：选择输出字段。
 
-![创建关联关系](/img/dataease/dataset_configuration/创建关联关系.png)
+![创建关联关系](/img/dataease/dataset_configuration/chuangjianguanlianguanxi.png)
 
 图 23  创建关联关系
 
 创建数据集时，同一个数据表可被多次引用。
 
-![拖拽关联表](/img/dataease/dataset_configuration/多次引用.png)
+![拖拽关联表](/img/dataease/dataset_configuration/duociyinyong.png)
 
 图 24  多次引用

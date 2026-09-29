@@ -363,6 +363,6 @@ docker compose up -d
 
 登录成功后进入工作台，源码启动效果如下：
 
-![源码启动效果](/img/dataease/installation/源码启动效果.png)
+![源码启动效果](/img/dataease/installation/yuanmaqidongxiaoguo.png)
 
 图 1  源码启动效果

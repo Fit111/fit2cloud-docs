@@ -14,7 +14,7 @@ wrapperClassName: de-contact
 
 ## 3 学习认证
 
-<img alt="学习认证" src="/img/dataease/学习认证.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
+<img alt="学习认证" src="/img/dataease/xuexirenzheng.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 4 项目地址
 

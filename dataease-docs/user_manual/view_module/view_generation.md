@@ -38,6 +38,6 @@ title: 图表概述
 - 【序号 13】：数据刷新按钮
 - 【序号 14】：图表展示
 
-![视图主功能区](/img/dataease/view_generation/视图概览.png)
+![视图主功能区](/img/dataease/view_generation/shitugailan.png)
 
 图 1  视图概览
