@@ -23,6 +23,7 @@ title: 对接腾讯云
 
 
 腾讯云知识引擎原子能力-大语言模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/tencent_atomicpower_llm.png" alt="图 2  腾讯云知识引擎原子能力 大语言模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  腾讯云知识引擎原子能力 大语言模型 配置样例图</div>

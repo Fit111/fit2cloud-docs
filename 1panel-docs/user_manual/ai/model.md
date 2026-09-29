@@ -23,7 +23,8 @@ keywords: [1Panel 模型管理, Ollama, vLLM, 模型账号, 模型下载器, 本
 - **API 类型**：按提供商支持情况选择兼容协议。
 - **模型池**：维护模型 ID、显示名称、Context Window、Max Tokens、输入类型和推理能力。
 
-![在线模型管理](/img/1panel/ai/cloud_model.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/cloud_model.png" alt="图 1 模型账号界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 模型账号界面</div>
 
 >创建完成后，可以在列表中验证连接、编辑账号、维护模型池或删除账号。编辑已经被智能体使用的账号时，可按页面选项同步更新相关智能体配置。
@@ -38,19 +39,22 @@ keywords: [1Panel 模型管理, Ollama, vLLM, 模型账号, 模型下载器, 本
 
 使用 Ollama 管理前，需要先从 **应用商店** 安装 Ollama。安装完成后，页面会显示应用运行状态，并提供启动、停止、重启和连接信息等操作。
 
-![Ollama 管理](/img/1panel/ai/overview.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/overview.png" alt="图 2 使用前提界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 使用前提界面</div>
 
 ### 2.2 添加和运行模型
 
 >点击 **添加模型**，输入 [Ollama 模型库](https://ollama.com/search)中的模型名称后确认，1Panel 将创建后台拉取任务。模型可用后，可以执行运行、重建或删除等操作。
 
-![添加 Ollama 模型](/img/1panel/ai/model_pull.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/model_pull.png" alt="图 3 添加和运行模型界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 添加和运行模型界面</div>
 
 >点击模型所在行的 **运行**，可在页面内打开终端与模型对话。
 
-![运行 Ollama 模型](/img/1panel/ai/model_run.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/model_run.png" alt="图 4 添加和运行模型界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 添加和运行模型界面（续）</div>
 
 ### 2.3 连接和同步

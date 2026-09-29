@@ -25,7 +25,7 @@ title: 移动端访问指南
 1. 企业管理员账号登录后，在左侧菜单选择【应用管理】&gt;【工作台】或【工作台管理】
 2. 点击**创建应用**- 选择**添加自建应用**
 
-![创建应用](/img/cordys/user_manual/wecom-create-app2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom-create-app2.png" alt="图 1  创建应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建应用</div>
 
@@ -52,7 +52,7 @@ title: 移动端访问指南
 
 **注意**：对指定可见范围的成员，系统将自动在工作台显示应用，详情可参照 [企业微信开发者中心文档](https://developer.work.weixin.qq.com/)
 
-![应用配置](/img/cordys/user_manual/wecom-app-config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom-app-config2.png" alt="图 2  应用配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  应用配置</div>
 
@@ -64,6 +64,7 @@ title: 移动端访问指南
 1. 打开手机企业微信
 2. 进入【工作台】
 3. 找到配置的小程序并点击进入
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  工作台访问和移动端界面</div>
 
 | 工作台访问 | 移动端界面 |
@@ -74,6 +75,7 @@ title: 移动端访问指南
 
 
 在手机端浏览器地址栏输入 Cordys CRM 部署地址，即可完成系统访问。
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  手机浏览器访问和移动端界面</div>
 
 | 手机浏览器访问 | 移动端界面 |

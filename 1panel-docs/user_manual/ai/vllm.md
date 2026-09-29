@@ -25,7 +25,8 @@ vLLM 是面向大语言模型的高吞吐、内存高效推理与服务引擎。
 
 按页面要求填写 vLLM 的部署参数后，点击 **确认** 即可开始创建。创建过程会以任务的方式在后台执行，完成后可在列表中查看服务状态。
 
-![img.png](/img/1panel/ai/vllm_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/vllm_create.png" alt="图 1 创建 vLLM 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建 vLLM 服务界面</div>
 
 :::tip[参数说明]
@@ -44,7 +45,8 @@ vLLM 是面向大语言模型的高吞吐、内存高效推理与服务引擎。
 
 如需对容器运行方式做进一步控制，可展开 **高级设置**。
 
-![img.png](/img/1panel/ai/vllm_create_hight.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/vllm_create_hight.png" alt="图 2 高级设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 高级设置</div>
 
 :::tip[高级设置说明]

@@ -144,6 +144,7 @@ Setting 资源的 `metadata.name` 必须和 `theme.yaml` 中的 `spec.settingNam
 <div th:if="${theme.config.layout.nav == 'double'}">
   <!-- do something -->
 </div>
+
 ```
 
 ## 更新配置

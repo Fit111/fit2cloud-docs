@@ -231,6 +231,7 @@ cd /opt/jumpserver-installer-v4.10.17
 用户名: admin
 密码: ChangeMe
 ```
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/online_install_01.png" alt="图 1  登录页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  登录页面</div>

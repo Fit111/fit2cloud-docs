@@ -181,6 +181,7 @@ MaxKB 应用接入企业微信应用后，在此基础上，还可以将此应�
 
 根据以上步骤完成配置后，就可以群里@机器人中进行对话，或与机器人应用一对一对话。
 :::
+
 <img alt="钉钉对话" src="/img/maxkb-v1/app/dingding_dialog.jpeg" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 ### 5 飞书应用接入
@@ -261,6 +262,7 @@ MaxKB 应用接入企业微信应用后，在此基础上，还可以将此应�
 
 根据以上步骤完成配置后，即可打开飞书客户端搜索`MaxKB 小助手`，点击【添加】后进行一对一对话。
 :::
+
 <img alt="飞书对话" src="/img/maxkb-v1/app/feishu_app_search.jpg" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 <img alt="飞书对话" src="/img/maxkb-v1/app/feishu_dialog.jpeg" width="500" style={{maxWidth:'100%', height:'auto'}}/>

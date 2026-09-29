@@ -60,7 +60,7 @@ Cordys CRM MCP Server 默认监听端口为 8082，支持 SSE 和 Streamable-HTT
 
 登录 Cordys CRM 从左下角 【 个人中心 - API Keys 】中获取 Access Key 和 Secret Key
 
-![APIKeys](/img/cordys/index/api_keys2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/index/api_keys2.png" alt="图 1  API Keys" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  API Keys</div>
 
@@ -70,7 +70,9 @@ Cordys CRM 的 MCP Server 和 基础镜像安装方式相同，具体可以参�
 ## 3 MCP 工具说明
 
 Cordys CRM 的 MCP Server 提供以下工具。
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1 工具说明</div>
+
 | 工具名称            | 功能描述     | 输入参数参考 input_schema | 输出结果                |
 |---------------------|------------|--------------------------|------------------------|
 | global_search       | 通用查询     | 查询关键字                | 查询结果集 ｜ 失败原因   |
@@ -127,7 +129,9 @@ Cordys CRM 的 MCP Server 提供以下工具。
 ```
 
 参数说明：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  参数说明</div>
+
 | 字段         | 说明       | 示例/可选值                     |
 | ------------ | ---------- | ------------------------------- |
 | `type`       | 参数类型   | `string` / `number` / `array`… |
@@ -139,7 +143,7 @@ Cordys CRM 的 MCP Server 提供以下工具。
 
 ###  4.1 MaxKB 集成示例
 
-![agent](/img/cordys/mcp/agent_mcp2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/mcp/agent_mcp2.png" alt="图 2  MaxKB 集成示例" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 集成示例</div>
 
@@ -172,14 +176,14 @@ Cordys CRM 的 MCP Server 提供以下工具。
 
 方式一：Cordys CRM 智能查询效果
 
-![智能查询客户](/img/cordys/user_manual/agent-query-customer2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/agent-query-customer2.png" alt="图 3  智能查询客户" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  智能查询客户</div>
 
 
 方式二：Cordys CRM 智能添加效果
 
-![智能创建线索](/img/cordys/user_manual/agent-Create-lead2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/agent-Create-lead2.png" alt="图 4  智能创建线索" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智能创建线索</div>
 
@@ -201,6 +205,6 @@ Cordys CRM 的 MCP Server 提供以下工具。
 
 第二步: 通过`Agent`对话验证工具可用性
 
-![Trae.png](/img/cordys/mcp/trae.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/mcp/trae.png" alt="图 5  验证" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  验证</div>

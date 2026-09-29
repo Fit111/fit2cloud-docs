@@ -31,6 +31,7 @@ MaxKB 默认的切分规则，本质上是按照特定的正则表达式进行�
     
 
 将上传文档后，如果选择默认的分段规则，分段预览效果不佳，可以使用高级分段。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/doc_default_split.png" alt="图 2  默认分段效果" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  默认分段效果</div>

@@ -105,14 +105,16 @@ sudo ufw enable
 
 **点击防火墙开关按钮，即可开启或关闭防火墙。**
 
-![img.png](/img/1panel/hosts/firewall_switch.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_switch.png" alt="图 1 防火墙状态界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 防火墙状态界面</div>
 
 **点击禁 ping 按钮，即可开启或关闭 PING 命令。**
 
 - 禁用 PING 命令的主要功能是：为了防止用户频繁 PING 服务器而导致服务器性能下降
 
-![img.png](/img/1panel/hosts/firewall_ping.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_ping.png" alt="图 2 防火墙状态界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 防火墙状态界面（续）</div>
 
 ## 3 端口规则
@@ -126,10 +128,12 @@ sudo ufw enable
 
 **端口放行成功后，可以查看防火墙列表查看当前端口的运行情况。**
 
-![img.png](/img/1panel/hosts/firewall_port_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_port_list.png" alt="图 3 端口规则——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 端口规则——应用卡片</div>
 
-![img.png](/img/1panel/hosts/firewall_port_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_port_create.png" alt="图 4 端口规则" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 端口规则</div>
 
 ## 4 端口转发
@@ -141,7 +145,8 @@ sudo ufw enable
 - 目标 IP：如果是本机端口转发，目标IP为：127.0.0.1；如果目标IP不填写，则默认为本机端口转发
 - 目标端口：接收转发报文的目标端口
 
-![img.png](/img/1panel/hosts/firewall_port_forward.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_port_forward.png" alt="图 5 端口转发界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 端口转发界面</div>
 
 ## 5 IP 规则
@@ -151,10 +156,12 @@ sudo ufw enable
 - 指定 IP
 - 策略：默认为放行，有放行、屏蔽
 
-![img.png](/img/1panel/hosts/firewall_ip_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_ip_list.png" alt="图 6 IP 规则——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 IP 规则——应用卡片</div>
 
-![img.png](/img/1panel/hosts/firewall_ip_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_ip_create.png" alt="图 7 IP 规则" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 IP 规则</div>
 
 ## 6 iptables 高级控制

@@ -4,6 +4,7 @@ description: 了解 Halo、发行版本、应用生态，以及部署前所需�
 ---
 
 <div class="rp-project-header">
+
   <p align="center">
     <a href="https://www.halo.run" target="_blank" rel="noopener noreferrer"><img width="100" src="https://www.halo.run/logo" alt="Halo logo" class="no-zoom" /></a>
   </p>
@@ -17,6 +18,7 @@ description: 了解 Halo、发行版本、应用生态，以及部署前所需�
     <a href="https://github.com/halo-dev/halo/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/halo-dev/halo/halo.yaml?branch=main&style=flat-square" class="no-zoom" /></a>
     <a href="https://codecov.io/gh/halo-dev/halo"><img alt="Codecov percentage" src="https://img.shields.io/codecov/c/github/halo-dev/halo/main?style=flat-square&token=YsRUg9fall" class="no-zoom" /></a>
   </p>
+
 </div>
 
 ## Halo 是什么？
@@ -24,7 +26,9 @@ description: 了解 Halo、发行版本、应用生态，以及部署前所需�
 Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。
 
 <a href="https://www.bilibili.com/video/BV15x4y1U7RU" target="_blank" rel="noopener noreferrer" aria-label="播放 Halo 介绍视频" title="播放 Halo 介绍视频" style={{position:"relative", display:"inline-block", maxWidth:"100%"}}>
+
   <img src="https://www.halo.run/upload/dashboard-2026-03-26-5.png" alt="Halo 管理后台界面" style={{display:"block", maxWidth:"100%", height:"auto"}} />
+
   <span aria-hidden="true" style={{position:"absolute", left:"50%", top:"50%", transform:"translate(-50%, -50%)", width:"68px", height:"68px", borderRadius:"50%", background:"rgba(0,0,0,.55)", color:"#fff", display:"flex", alignItems:"center", justifyContent:"center"}}>
     <svg viewBox="0 0 24 24" width="32" height="32" focusable="false"><path fill="currentColor" d="M5.669 4.76a1.47 1.47 0 0 1 2.04-1.177c1.062.453 3.442 1.532 6.462 3.276c3.021 1.744 5.146 3.266 6.069 3.958c.788.59.79 1.763.001 2.355c-.914.687-3.013 2.191-6.07 3.956c-3.06 1.766-5.412 2.832-6.464 3.28a1.467 1.467 0 0 1-2.038-1.177c-.138-1.141-.396-3.734-.396-7.236c0-3.5.257-6.092.396-7.235" /></svg>
   </span>

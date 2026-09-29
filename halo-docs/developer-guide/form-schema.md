@@ -891,6 +891,7 @@ menuSelect 基于 select，并兼容 select 的[参数](#select-params)。
 
 <!-- dataurl 或者 url -->
 <img th:src="${theme.config.group.social_icon.value}" />
+
 ```
 
 开发者可根据具体使用情况自行选择图标格式，通常推荐 `svg` 或者 `dataurl`，因为这样无需任何网络请求，确保图标可以稳定地正常加载。
@@ -898,7 +899,9 @@ menuSelect 基于 select，并兼容 select 的[参数](#select-params)。
 UI 效果：
 
 <p>
+
 <img src="/img/halo/formkit/formkit-iconify.png" width="50%" class="medium-zoom-image" />
+
 </p>
 
 ### array
@@ -1028,7 +1031,9 @@ UI 效果：
 #### UI 效果
 
 <p>
+
 <img src="/img/halo/formkit/formkit-toggle.png" width="50%" class="medium-zoom-image" />
+
 </p>
 
 ### secret

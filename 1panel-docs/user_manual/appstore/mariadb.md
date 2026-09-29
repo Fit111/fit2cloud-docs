@@ -10,14 +10,16 @@ title: MariaDB
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 MariaDB 并安装
 
 在右上角搜索框输入 **MariaDB**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251016150309590](/img/1panel/app/mariadb.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb.png" alt="图 2 搜索 MariaDB 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 MariaDB 并安装</div>
 
 ## 3. 配置安装参数
@@ -31,7 +33,8 @@ title: MariaDB
 - **端口外部访问** （开启后，允许从外部网络连接到此数据库端口）
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251016150632846](/img/1panel/app/mariadb_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb_install.png" alt="图 3 配置安装参数——安装 MariaDB 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 MariaDB 的参数配置</div>
 
 等待安装完成即可
@@ -40,7 +43,8 @@ title: MariaDB
 
 安装完成后，点击左侧菜单的 **「数据库」**。
 
-![image-20251016151214894](/img/1panel/app/mariadb_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb_view.png" alt="图 4 创建 MariaDB 数据库服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 创建 MariaDB 数据库服务界面</div>
 
 选择 **创建数据库**
@@ -53,17 +57,20 @@ title: MariaDB
 
 确认配置无误后，点击 **确认** 按钮开始创建。
 
-![image-20251016151324505](/img/1panel/app/mariadb_creat.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb_creat.png" alt="图 5 创建 MariaDB 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 创建 MariaDB 数据库</div>
 
 ## 5. 连接 MariaDB 数据库
 
 获取数据库配置信息
 
-![image-20251016151517183](/img/1panel/app/mariadb_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb_info.png" alt="图 6 连接 MariaDB 数据库——查看 MariaDB 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 连接 MariaDB 数据库——查看 MariaDB 服务参数信息</div>
 
 使用本地工具连接数据库
 
-![image-20251016151836387](/img/1panel/app/mariadb_conn.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/mariadb_conn.png" alt="图 7 连接 MariaDB 数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 连接 MariaDB 数据库</div>

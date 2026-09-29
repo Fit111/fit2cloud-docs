@@ -13,6 +13,7 @@ description: 使用 AttachmentFileTypeIcon 根据附件文件名显示对应的�
 <template>
   <AttachmentFileTypeIcon fileName="example.png" />
 </div>
+
 ```
 
 ## Props

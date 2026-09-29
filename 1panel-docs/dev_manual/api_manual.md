@@ -15,7 +15,8 @@ API Key 需要在面板中创建并启用，同时配置 IP 白名单和有效�
 v2.2.1 版本之前，API 接口设置入口位于「面板设置」中。
 v2.2.1 版本之后，点击左下角用户菜单，进入用户信息抽屉，可在「API 接口」区域启用或关闭 API 接口访问，并点击「详情」维护 API Key、IP 白名单和有效时间。
 
-![API 接口入口](/img/1panel/dev_manual/api_interface_entry.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/dev_manual/api_interface_entry.png" alt="图 1 API 接口入口界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 API 接口入口界面</div>
 
 ## 2 请求鉴权

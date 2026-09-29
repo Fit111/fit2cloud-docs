@@ -35,6 +35,7 @@ title: 工单
 ### 1.3 查看工单
 
 - 点击创建好的&lt;工单标题&gt;按钮，可进入工单详情页中。工单详情页中包含该工单的基本信息、申请信息以及审批人，同时该页面可以与审批人进行对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder03.png" alt="图 3  工单详情" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  工单详情</div>
@@ -42,6 +43,7 @@ title: 工单
 ### 1.4 取消工单
 
 - 在工单详情页可以手动取消工单
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/workorder04.png" alt="图 4  取消工单" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  取消工单</div>

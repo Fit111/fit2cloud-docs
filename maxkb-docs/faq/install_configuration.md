@@ -58,6 +58,7 @@ docker rm maxkb
 
 ## 5 迁移常见问题
 ### 5.1 无法执行 PowerShell 脚本
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/error1.png" alt="图 4  无法执行powershell脚本" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  无法执行powershell脚本</div>
@@ -75,18 +76,21 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```
 
 ### 5.2 执行脚本后出现乱码报错
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/error2.png" alt="图 5  执行powershell脚本乱码" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  执行powershell脚本乱码</div>
 
 
 用记事本打开文件，将文件另存为 ANSI 格式的文本。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/solution1.png" alt="图 6  脚本文件另存为 ANSI" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  脚本文件另存为 ANSI</div>
 
 
 重新执行 PowerShell 即可正常执行迁移命令。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/solution2.png" alt="图 7  重新执行 PowerShell" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  重新执行 PowerShell</div>
@@ -94,6 +98,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 ### 5.3 Docker Desktop 安装的 MaxKB 迁移后目录路径内容为空，但 MaxKB 能正常运行
 
 Docker Desktop 安装的 MaxKB 迁移后挂载路径内容为空，但 MaxKB 能正常运行。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/Path%20missing.png" alt="图 8  挂载目录路径为空" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  挂载目录路径为空</div>

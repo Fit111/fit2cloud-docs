@@ -28,40 +28,47 @@ title: 对接Xorbits Inference
 
 Xorbits Inference-大语言模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-向量模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-重排模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-语音识别模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-语音合成模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-视觉模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_version.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 Xorbits Inference-图片生成模型配置样例图示如下：
 :::
+
 <img alt="Xorbits Inference" src="/img/maxkb-v1/model/xinfo_version_gen.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

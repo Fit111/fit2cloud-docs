@@ -24,12 +24,14 @@ title: 智能体概览
 
 
 在问答后，可以点击右上角的导出按钮，可以选择将当前的对话记录导出为 Markdown、HTML 和 PDF 文件。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/QA_down.png" alt="图 4  问答导出对话" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  问答导出对话</div>
 
 
 当选择导出为 PDF 时，支持选择导出为 PDF 或图片。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/QA_down1.png" alt="图 5  导出 PDF 或图片" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  导出 PDF 或图片</div>

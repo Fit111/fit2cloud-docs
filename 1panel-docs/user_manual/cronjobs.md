@@ -27,14 +27,16 @@ keywords: [1Panel 计划任务, 定时任务, Cron, 网站备份, 数据库备�
 
 填写脚本内容并选择解释器，也可以从脚本库或服务器文件中选择脚本。启用 **在容器中执行** 后，需要选择容器、用户和命令执行器。
 
-![Shell 计划任务](/img/1panel/cronjobs/shell.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/cronjobs/shell.png" alt="图 1 Shell 脚本界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 Shell 脚本界面</div>
 
 ### 2.2 备份应用、网站和数据库
 
 选择一个、多个或全部对象，并配置备份账号、保留份数及备份选项。数据库任务还会根据数据库类型显示相应的备份参数。
 
-![应用备份任务](/img/1panel/cronjobs/app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/cronjobs/app.png" alt="图 2 备份应用、网站和数据库界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 备份应用、网站和数据库界面</div>
 
 :::caution[备份可恢复性]
@@ -45,7 +47,8 @@ keywords: [1Panel 计划任务, 定时任务, Cron, 网站备份, 数据库备�
 
 选择主机上的文件或目录，并配置压缩、排除规则和备份目标。避免把备份输出目录再次包含进源目录，否则可能造成递归归档或空间快速增长。
 
-![目录备份任务](/img/1panel/cronjobs/dir.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/cronjobs/dir.png" alt="图 3 备份目录界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 备份目录界面</div>
 
 ### 2.4 备份日志
@@ -88,10 +91,12 @@ keywords: [1Panel 计划任务, 定时任务, Cron, 网站备份, 数据库备�
 
 点击计划任务的 **报告** 查看每次执行时间、状态和日志。执行中的任务可查看实时输出；备份类任务还可以查看备份文件并按权限下载。
 
-![备份文件](/img/1panel/cronjobs/backup_list.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/cronjobs/backup_list.png" alt="图 4 执行报告——应用卡片" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 执行报告——应用卡片</div>
 
-![执行记录](/img/1panel/cronjobs/record.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/cronjobs/record.png" alt="图 5 执行报告界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 执行报告界面</div>
 
 ## 5 导入和导出

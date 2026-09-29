@@ -7,6 +7,7 @@ title: 安全设置
 - 安全设置页面主要配置 JumpServer安全相关信息，编辑认证安全以及密码等校验规则。
 
 ## 1 认证安全
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_security_01.png" alt="图 1  认证安全设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  认证安全设置</div>
 
@@ -31,6 +32,7 @@ title: 安全设置
 </table>
 
 ## 2 登录限制
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_security_02.png" alt="图 2  登录限制设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  登录限制设置</div>
 
@@ -56,6 +58,7 @@ title: 安全设置
 </table>
 
 ## 3 密码安全
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_security_03.png" alt="图 3  密码安全设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  密码安全设置</div>
 
@@ -79,6 +82,7 @@ title: 安全设置
 </table>
 
 ## 4 会话安全
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_security_04.png" alt="图 4  会话安全设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  会话安全设置</div>
 

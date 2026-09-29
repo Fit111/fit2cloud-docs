@@ -188,6 +188,7 @@ MaxKB 知识库支持同步、重新向量化、设置、导出以及删除操�
 :::
 
 ![知识库导出](/img/maxkb-v1/dataset/dataset_export.png)
+
 <img alt="知识库导出" src="/img/maxkb-v1/dataset/dataset_zip.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 ### 2.5 删除知识库

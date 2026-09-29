@@ -10,14 +10,16 @@ title: MinIO
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 MinIO 并安装
 
 在右上角搜索框输入 **MinIO**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251016165333807](/img/1panel/app/MinIO.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/MinIO.png" alt="图 2 搜索 MinIO 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 MinIO 并安装</div>
 
 ## 3. 配置安装参数
@@ -37,7 +39,8 @@ title: MinIO
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251016170535427](/img/1panel/app/minio_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/minio_install.png" alt="图 3 配置安装参数——安装 MinIO 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 MinIO 的参数配置</div>
 
 等待安装完成即可
@@ -46,25 +49,30 @@ title: MinIO
 
 安装完成后，获取 MinIO 配置信息，点击 **已安装** 选择 **参数** 
 
-![image-20251016171810134](/img/1panel/app/minio_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/minio_info.png" alt="图 4 访问 MinIO 服务——查看 MinIO 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 MinIO 服务——查看 MinIO 服务参数信息</div>
 
 得到配置信息
 
-![image-20251016172011132](/img/1panel/app/minio_passwd.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/minio_passwd.png" alt="图 5 访问 MinIO 服务查看默认账号密码" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 MinIO 服务查看默认账号密码</div>
 
 配置默认访问地址
 
-![image-20251016172322315](/img/1panel/app/setting_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/setting_ip.png" alt="图 6 访问 MinIO 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 MinIO 服务界面</div>
 
 返回应用商店，点击 **跳转** 即可访问 MinIO 服务
 
-![image-20251016172526853](/img/1panel/app/minio_jump.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/minio_jump.png" alt="图 7 访问 MinIO 服务——打开 MinIO 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 访问 MinIO 服务——打开 MinIO 服务地址</div>
 
 输入上面得到的 **用户名和密码** ，进入 **MinIO Web 服务**
 
-![image-20251016173115776](/img/1panel/app/minio_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/minio_view.png" alt="图 8 访问 MinIO 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 访问 MinIO 服务界面</div>

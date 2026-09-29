@@ -7,7 +7,7 @@ title: 审批流配置
  - 权限：新建审批流需要**系统管理-流程设置**的**添加**权限。
  - 点击新建审批流进入流程设计页面。
 
-![审批流页面](/img/cordys/user_manual/approval1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval1.png" alt="图 1  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  审批流页面</div>
 
@@ -31,7 +31,7 @@ title: 审批流配置
 - 4.描述信息（选填）
     - 在**描述信息**输入框中，填写流程的补充说明（如审批规则、适用范围、注意事项等），便于其他管理员理解流程用途。
 
-![审批流页面](/img/cordys/user_manual/approval2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval2.png" alt="图 2  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  审批流页面</div>
 
@@ -40,14 +40,14 @@ title: 审批流配置
 
 流程设计画布采用可视化拖拽配置，基础流程包含“开始节点 - 审批节点 - 结束节点”。
 
-![审批流页面](/img/cordys/user_manual/approval3.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval3.png" alt="图 3  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  审批流页面</div>
 
 
 在**开始**节点，点击节点连接点（蓝色小圆点），可添加**审批人**节点或**触发条件**节点至画布。
 
-![审批流页面](/img/cordys/user_manual/approval4.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval4.png" alt="图 4  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  审批流页面</div>
 
@@ -60,7 +60,7 @@ title: 审批流配置
     - 审批人节点是 Cordys 审批流的核心执行节点，用于定义谁来审批、如何审批、异常情况如何处理。支持单人 / 多人审批、多级审批、条件分支审批等多种场景，满足企业复杂的审批流程需求。
     - 进入节点配置面板：点击画布中的**审批人**节点，右侧将弹出**审批人设置**面板，开始配置。
 
-![审批流页面](/img/cordys/user_manual/approval5.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval5.png" alt="图 5  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  审批流页面</div>
 
@@ -74,6 +74,7 @@ title: 审批流配置
         - 输入清晰易识别的节点名称，如“部门负责人审批”“财务主管终审”，便于流程维护与日志查看。
         - 审批人（必填）
     - 支持多种审批人规则，可根据业务场景选择：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  多种审批人规则</div>
 
 | 审批人规则         | 适用场景                                       | 配置示例                                                     |
@@ -114,6 +115,7 @@ title: 审批流配置
     - **表单权限**是审批流节点的精细化配置项，用于定义当前节点的审批人 / 处理人对单据各字段的操作权限，控制字段在该节点是隐藏、仅可查看，还是可编辑。它能确保数据安全，避免敏感信息泄露或被误修改，常见于报价、合同、订单等业务审批流中。
 
  - **注意**：目前仅单行文本与多行文本类型的字段支持配置编辑权限
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  权限模式说明</div>
 
 | 权限模式 | 说明                                                         | 适用场景                                                     |
@@ -122,7 +124,7 @@ title: 审批流配置
 | 查看     | 处理人仅能查看字段内容，无法修改，字段只为只读状态。         | 常规业务信息（如客户名称、报价日期），审批人仅需核对信息，无需修改。 |
 | 编辑     | 处理人可查看并修改字段内容，修改后的数据会同步更新到单据中。 | 审批人需补充/修正信息的场景（如财务审批修改报价金额、法务补充条款）。 |
 
-![审批流页面](/img/cordys/user_manual/approval6.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval6.png" alt="图 6  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  审批流页面</div>
 
@@ -130,7 +132,7 @@ title: 审批流配置
  - 审批后操作 
     - **审批后操作**是审批流节点的自动化规则配置项，用于定义当前节点审批通过 / 驳回后，系统自动执行的动作，最常见的是**字段更新**，也可拓展至通知、状态变更等。它能减少人工操作，实现流程与数据的联动，例如审批通过后自动更新报价单有效期、状态等字段。
 
-![审批流页面](/img/cordys/user_manual/approval7.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval7.png" alt="图 7  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  审批流页面</div>
 
@@ -139,7 +141,7 @@ title: 审批流配置
     - 触发条件节点（也叫条件分支节点）是审批流的核心逻辑节点，用于根据业务单据的字段值，自动判断流程走向，实现“不同条件走不同审批路径”的复杂场景。例如 “报价金额大于 10 万走多级审批，否则走部门负责人审批”。
     - 进入条件配置面板：点击条件分支的**设置**入口，弹出配置窗口，开始配置规则。
 
-![审批流页面](/img/cordys/user_manual/approval8.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval8.png" alt="图 8  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  审批流页面</div>
 
@@ -188,7 +190,7 @@ title: 审批流配置
 
   **更多设置**是审批流的全局配置模块，用于定义整个流程的通用权限规则、自动化逻辑和数据操作权限，这些配置对流程中的所有节点和参与者生效，是审批流安全与效率的关键补充。
 
-![审批流页面](/img/cordys/user_manual/approval9.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval9.png" alt="图 9  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  审批流页面</div>
 
@@ -225,6 +227,7 @@ title: 审批流配置
                 - 示例中未勾选此选项，代表审批意见为选填项。
     - 审批状态权限（状态 - 操作矩阵）
         - 定义不同状态下，单据可执行的操作权限（查看 / 编辑 / 删除 / 下载 / 作废），示例配置如下：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  单据状态说明</div>
 
 | 单据状态 | 查看 | 编辑 | 删除 | 下载 | 作废 |
@@ -250,7 +253,9 @@ title: 审批流配置
 
 
   审批流列表是 Cordys 系统中管理所有审批流程的入口，可在此查看、新建、编辑、删除和搜索审批流，同时控制流程的启用 / 停用状态。
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 4  审批流字段说明</div>
+
 | 字段      | 说明                                                         |
 | --------- | ------------------------------------------------------------ |
 | 序号 / ID | 系统自动生成的审批流唯一标识（如示例中的 QTE-APV-00001）     |
@@ -260,7 +265,7 @@ title: 审批流配置
 | 执行时机  | 流程触发场景（如示例中的**创建**，表示单据新建提交时触发审批） |
 | 操作      | 提供**编辑**、**删除**功能                                     |
 
-![审批流页面](/img/cordys/user_manual/approval10.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval10.png" alt="图 10  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  审批流页面</div>
 
@@ -274,14 +279,14 @@ title: 审批流配置
 
 报价审批流的执行时间为创建，在新建报价时，表单展示**提审**按钮。
 
-![审批流页面](/img/cordys/user_manual/approval11.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval11.png" alt="图 11  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  审批流页面</div>
 
 
 保存新创建的报价，在报价列表可以看到创建的数据审批状态为**待审批**，用户可以进行提审操作，系统会修改审批状态为**审批中**，该条数据正式进入审批流程。
 
-![审批流页面](/img/cordys/user_manual/approval12.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval12.png" alt="图 12  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  审批流页面</div>
 
@@ -310,7 +315,7 @@ title: 审批流配置
       - 结束节点
          - 流程的终点，所有审批节点完成后，单据将流转至此节点，代表审批流程结束。
 
-![审批流页面](/img/cordys/user_manual/approval13.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval13.png" alt="图 13  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  审批流页面</div>
 
@@ -319,18 +324,18 @@ title: 审批流配置
 
   审批人在**首页-我的待办**以及**消息通知**均会收到提醒。
 
-![审批流页面](/img/cordys/user_manual/approval14.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval14.png" alt="图 14  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  审批流页面</div>
 
-![审批流页面](/img/cordys/user_manual/approval15.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval15.png" alt="图 15  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  审批流页面</div>
 
 
   进入**我的待办**点击报价名称，进入审批详情页。
 
-![审批流页面](/img/cordys/user_manual/approval16.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval16.png" alt="图 16  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  审批流页面</div>
 
@@ -339,7 +344,7 @@ title: 审批流配置
 
  **注意**：第一个审批节点不支持退回操作。
 
-![审批流页面](/img/cordys/user_manual/approval17.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval17.png" alt="图 17  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  审批流页面</div>
 
@@ -348,14 +353,14 @@ title: 审批流配置
 
  提审人在消息通知会收到审批通过的消息。
 
-![审批流页面](/img/cordys/user_manual/approval18.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval18.png" alt="图 18  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  审批流页面</div>
 
 
    报价完成后，顶部左侧会展示**已通过**状态，右侧展示完整审批过程。
 
-![审批流页面](/img/cordys/user_manual/approval19.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/approval19.png" alt="图 19  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  审批流页面</div>
 
@@ -363,7 +368,7 @@ title: 审批流配置
 
 ### 4.1 基础信息挪到独立Tab页
 
-![审批流页面](/img/cordys/user_manual/shenpiliu1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu1.png" alt="图 20  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  审批流页面</div>
 
@@ -375,7 +380,7 @@ title: 审批流配置
 - 编辑增加说明：编辑专项审批仅作用于已通过单据。
 - 取消选中执行时间，则相应画布不展示，但画布内容依旧保留。
 
-![审批流页面](/img/cordys/user_manual/shenpiliu2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu2.png" alt="图 21  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  审批流页面</div>
 
@@ -401,7 +406,7 @@ title: 审批流配置
 - 一次编辑修改多个值，则按条件优先级进行匹配
 - 审批状态权限，禁用审批中-编辑、删除
 
-![审批流页面](/img/cordys/user_manual/shenpiliu3.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu3.png" alt="图 22  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22  审批流页面</div>
 
@@ -413,10 +418,10 @@ title: 审批流配置
 
 - 变更说明展示在审批记录提交申请处，同审批意见样式。
 
-![审批流页面](/img/cordys/user_manual/shenpiliu4.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu4.png" alt="图 23  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  审批流页面</div>
-![审批流页面](/img/cordys/user_manual/shenpiliu5.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu5.png" alt="图 24  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  审批流页面</div>
 
@@ -438,7 +443,9 @@ title: 审批流配置
 
 
 审批人卡片：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 5  审批人卡片</div>
+
 | 类型 | 说明 |
 |----|----|
 | 指定成员  |  展示具体成员头像/姓名，超出宽度hover展示  |
@@ -447,13 +454,13 @@ title: 审批流配置
 
 触发条件卡片：展示具体条件，超出宽度hover展示。
 
-![审批流页面](/img/cordys/user_manual/shenpiliu6.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu6.png" alt="图 25  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  审批流页面</div>
-![审批流页面](/img/cordys/user_manual/shenpiliu7.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu7.png" alt="图 26  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  审批流页面</div>
-![审批流页面](/img/cordys/user_manual/shenpiliu8.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu8.png" alt="图 27  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  审批流页面</div>
 
@@ -462,14 +469,14 @@ title: 审批流配置
 
 点击**删除**匹配删除时机的审批流，点击**确认并提审**进入审批流程，审批流执行结果为**已通过**后，系统执行删除操作。
 
-![审批流页面](/img/cordys/user_manual/shenpiliu9.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu9.png" alt="图 28  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  审批流页面</div>
 
 
 审批记录增加删除说明：删除当前业务类型-业务名称，如：删除当前报价-深圳非常棒公司报价。
 
-![审批流页面](/img/cordys/user_manual/shenpiliu10.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/shenpiliu10.png" alt="图 29  审批流页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  审批流页面</div>
 

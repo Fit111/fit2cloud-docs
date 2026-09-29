@@ -37,18 +37,21 @@ title: 对接腾讯混元
 
 腾讯混元-向量模型配置样例图示如下：
 :::
+
 <img alt="hunyuan 向量模型" src="/img/maxkb-v1/model/hunyuan_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 腾讯混元-视觉模型模型配置样例图示如下：
 :::
+
 <img alt="hunyuan 视觉模型模型" src="/img/maxkb-v1/model/hunyuan_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 腾讯混元-图片生成模型默认图像尺寸为 768 * 768，图片数量 1 张，风格为201，即日系动漫风格，默认配置样例图示如下：
 :::
+
 <img alt="hunyuan 图片生成模型" src="/img/maxkb-v1/model/hunyuan_vision_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 <img alt="hunyuan 图片生成模型" src="/img/maxkb-v1/model/hunyuan_vision_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

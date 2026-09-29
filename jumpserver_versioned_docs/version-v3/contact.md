@@ -3,9 +3,11 @@ title: 联系我们
 ---
 
 ## 1 微信公众号
+
 <img alt="wechat-official" src="/img/jumpserver-v3/wechat-official.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 2 微信群
+
 <img alt="wechat-group" src="/img/jumpserver-v3/weixin_group.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 3 开源社区论坛
@@ -13,6 +15,7 @@ title: 联系我们
 - 飞致云官方开源社区论坛：[开源社区论坛][开源社区论坛]
 
 ## 4 学习认证
+
 <img alt="contact01" src="/img/jumpserver-v3/contact01.png" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 5 项目地址

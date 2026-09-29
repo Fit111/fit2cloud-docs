@@ -74,7 +74,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **2 登录** [企业微信管理后台](https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome)
 
-![企业微信管理后台](/img/cordys/user_manual/wecom_bg.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_bg.png" alt="图 5  企业微信管理后台" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  企业微信管理后台</div>
 
@@ -86,7 +86,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
   - 通讯录组织架构只读（同步组织结构）
   - 通讯录组织架构读写（创建/修改部门和成员）
 
-![配置](/img/cordys/user_manual/wecom-settings.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom-settings.png" alt="图 6  配置通讯录 API 权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  配置通讯录 API 权限</div>
 
@@ -99,10 +99,10 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
  - 应用的 AgentId
  - 应用的 Secret
 
-![配置](/img/cordys/user_manual/wecom_app.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_app.png" alt="图 7  创建应用并获取凭证步骤1" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  创建应用并获取凭证步骤1</div>
-![配置](/img/cordys/user_manual/wecom_app_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_app_create.png" alt="图 8 创建应用并获取凭证步骤2" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 创建应用并获取凭证步骤2</div>
 
@@ -113,7 +113,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
   - 部署 HTTPS 服务
   - 配置回调 URL
 
-![配置](/img/cordys/user_manual/wecom_app_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_app_config.png" alt="图 9  安全配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  安全配置</div>
 
@@ -147,7 +147,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
      }
      ```
 
-![配置](/img/cordys/user_manual/wecom_app_domain.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_app_domain.png" alt="图 10  设置可信任域名" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  设置可信任域名</div>
 
@@ -167,7 +167,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 ##### 2.1 配置企业微信信息
 
-![开启同步开关示意图](/img/cordys/user_manual/wecom-enable2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom-enable2.png" alt="图 11  开启同步开关示意图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  开启同步开关示意图</div>
 
@@ -180,7 +180,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **后续维护说明**：当企业微信中新增成员或调整组织架构后，只需重复执行上述**企业微信同步**操作，即可完成最新组织架构的更新。
 
-![同步组织架构](/img/cordys/user_manual/wecom-sync2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom-sync2.png" alt="图 12  同步组织架构" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  同步组织架构</div>
 
@@ -195,10 +195,10 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 #### 3 企业微信工作台访问 Cordys CRM
 
-![工作台访问](/img/cordys/user_manual/wecom_workbench2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_workbench2.png" alt="图 13  工作台访问" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  工作台访问</div>
-![移动端界面](/img/cordys/user_manual/wecom_workbench_main2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/wecom_workbench_main2.png" alt="图 14  移动端界面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  移动端界面</div>
 
@@ -216,7 +216,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 - 企业 ID（CorpID）
 
-![钉钉管理后台](/img/cordys/user_manual/dingtalk_bg2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_bg2.png" alt="图 15  钉钉管理后台" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  钉钉管理后台</div>
 
@@ -227,7 +227,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 - 创建应用
 
-![配置](/img/cordys/user_manual/dingtalk_app2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_app2.png" alt="图 16  创建应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  创建应用</div>
 
@@ -237,7 +237,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
      - 应用的 Client ID (应用id)
      - 应用的 Client Secret  (应用密钥)
 
-![配置](/img/cordys/user_manual/dingtalk_config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_config2.png" alt="图 17  获取凭证" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  获取凭证</div>
 
@@ -251,7 +251,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
     - 通讯录管理-通讯录部门信息读取权限（同步组织结构）
     - 通讯录管理-成员信息读取权限（同步组织结构）
 
-![配置](/img/cordys/user_manual/dingtalk-settings2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk-settings2.png" alt="图 18  配置通讯录 API 权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 18  配置通讯录 API 权限</div>
 
@@ -261,7 +261,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
     - 安全设置-服务器IP出口配置应用的**可信 IP 白名单**，确保调用 API 时不被拒绝, 配置回调 URL
     - 分享设置-配置回调 URL(用户免登录)
 
-![配置](/img/cordys/user_manual/dingtalk_app_config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_app_config2.png" alt="图 19  安全配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 19  安全配置</div>
 
@@ -280,7 +280,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
         或  
         `https://login.dingtalk.com/oauth2/auth?redirect_uri=https://你的域名%2Fmobile&response_type=code&client_id=dingxxxxxxx&scope=openid&state=dddd&prompt=consent`
     
-![配置](/img/cordys/user_manual/dingtalk_net_work_settings2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_net_work_settings2.png" alt="图 20  网页应用配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  网页应用配置</div>
 
@@ -291,7 +291,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
         或  
         `https://login.dingtalk.com`
 
-![配置](/img/cordys/user_manual/dingtalk_net_work_config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_net_work_config2.png" alt="图 21  配置分享设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 21  配置分享设置</div>
 
@@ -306,7 +306,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 ##### 2.1 配置钉钉信息
 
-![开启同步开关示意图](/img/cordys/user_manual/dingtalk-enable2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk-enable2.png" alt="图 22  开启同步开关示意图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 22  开启同步开关示意图</div>
 
@@ -319,7 +319,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **后续维护说明**：当钉钉中新增成员或调整组织架构后，只需重复执行上述**钉钉同步**操作，即可完成最新组织架构的更新。
 
-![同步组织架构](/img/cordys/user_manual/dingtalk-sync2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk-sync2.png" alt="图 23  同步组织架构" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  同步组织架构</div>
 
@@ -329,17 +329,17 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 钉钉官方文档：[通讯录同步](https://open.dingtalk.com/document/orgapp/contacts-overview)
       
-![发布应用](/img/cordys/user_manual/dingtalk_public2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_public2.png" alt="图 24  发布应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  发布应用</div>
 
 #### 2.2 钉钉工作台访问 Cordys CRM
 
-![工作台访问](/img/cordys/user_manual/dingtalk_workbench2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_workbench2.png" alt="图 25  工作台访问" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  工作台访问</div>
 
-![移动端界面](/img/cordys/user_manual/dingtalk_workbench_main2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/dingtalk_workbench_main2.png" alt="图 26  移动端界面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  移动端界面</div>
 
@@ -355,7 +355,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **2 登录** [飞书管理后台](https://open.feishu.cn/app) 创建应用：
 
-![飞书管理后台](/img/cordys/user_manual/lark_bg2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_bg2.png" alt="图 27  飞书管理后台" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  飞书管理后台</div>
 
@@ -368,7 +368,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
      - 应用的 App ID (应用id)
      - 应用的 App Secret  (应用密钥)
 
-![配置](/img/cordys/user_manual/lark_app2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_app2.png" alt="图 28  获取应用凭证1" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  获取应用凭证1</div>
 
@@ -377,10 +377,10 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
  - 企业编码（CorpID）
 
-![配置](/img/cordys/user_manual/lark_config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_config2.png" alt="图 29  获取应用凭证2" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  获取应用凭证2</div>
-![配置](/img/cordys/user_manual/lark_corp2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_corp2.png" alt="图 30  获取应用凭证3" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  获取应用凭证3</div>
 
@@ -395,7 +395,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
   - 通讯录-获取通讯录，部门，用户基本信息，获取通讯录部门组织架构， 用户组织架构信息， 获取用户 user ID（同步组织结构）
   - 消息与群组-获取与发送单聊、群组消息，以应用的身份发消息（Cordys CRM 通过应用发送通知）
 
-![配置](/img/cordys/user_manual/lark_permission2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_permission2.png" alt="图 31  配置通讯录 API 权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  配置通讯录 API 权限</div>
 
@@ -406,7 +406,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
   - IP白名单-开启 IP 白名单后，仅白名单中的来源请求可以正常调用开放平台 API，不在白名单中的来源请求会被拒绝
   - H5可信域名-添加可信域名，确保在飞书内访问时不会被拦截
 
-![配置](/img/cordys/user_manual/lark_app_config2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_app_config2.png" alt="图 32  安全配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 32  安全配置</div>
 
@@ -426,7 +426,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
         `https://open.feishu.cn/open-apis/authen/v1/authorize?app_id=cli_****************&redirect_uri=https%3A%2F%2F你的域名&state=LARK`
 
     
-![配置](/img/cordys/user_manual/lark_net_work_settings2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_net_work_settings2.png" alt="图 33  网页应用配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  网页应用配置</div>
 
@@ -442,7 +442,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 ##### 2.1 配置飞书信息
 
-![开启同步开关示意图](/img/cordys/user_manual/lark_enable2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_enable2.png" alt="图 34  开启同步开关示意图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 34  开启同步开关示意图</div>
 
@@ -455,7 +455,7 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
 
 **后续维护说明**：当飞书中新增成员或调整组织架构后，只需重复执行上述**飞书同步**操作，即可完成最新组织架构的更新。
 
-![同步组织架构](/img/cordys/user_manual/lark_sync2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_sync2.png" alt="图 35  同步组织架构" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  同步组织架构</div>
 
@@ -466,17 +466,17 @@ description: 介绍 Cordys CRM 企业设置中的界面设置、三方设置、�
      
   👉 飞书官方文档：[通讯录同步](https://open.feishu.cn/document/server-docs/contact-v3/department/children)
 
-![发布应用](/img/cordys/user_manual/lark_public2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_public2.png" alt="图 36  发布应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 36  发布应用</div>
 
 #### 3 飞书工作台访问 Cordys CRM 
 
-![工作台访问](/img/cordys/user_manual/lark_workbench2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_workbench2.png" alt="图 37  工作台访问" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 37  工作台访问</div>
 
-![打开应用](/img/cordys/user_manual/lark_workbench_main2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/user_manual/lark_workbench_main2.png" alt="图 38  打开应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 38  打开应用</div>
 

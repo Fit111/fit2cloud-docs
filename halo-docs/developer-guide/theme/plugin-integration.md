@@ -45,6 +45,7 @@ description: 在 Halo 主题中检查可用插件、保护插件专属调用，�
     th:attr="name=${post.metadata.name}"
   />
 </div>
+
 ```
 
 公共布局的页脚中应保留 `<halo:footer />`，让 Halo 设置和插件可以注入所需内容：

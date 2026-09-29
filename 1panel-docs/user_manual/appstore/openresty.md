@@ -11,14 +11,16 @@ title: OpenResty
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 OpenResty 并安装
 
 在右上角搜索框输入 **OpenResty**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251022205345484](/img/1panel/app/openresty.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/openresty.png" alt="图 2 搜索 OpenResty 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 OpenResty 并安装</div>
 
 ## 3. 配置安装参数
@@ -33,7 +35,8 @@ title: OpenResty
 
 确认设置无误后，点击 **确定** 按钮开始安装。
 
-![image-20251022205428034](/img/1panel/app/openresty_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/openresty_install.png" alt="图 3 配置安装参数——安装 OpenResty 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 OpenResty 的参数配置</div>
 
 ## 4. 查看运行状态
@@ -49,12 +52,14 @@ title: OpenResty
 - **进入容器终端**：在容器内执行命令
 - **备份 / 恢复**：对应用数据进行备份和恢复
 
-![image-20251022205720006](/img/1panel/app/openresty_installed.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/openresty_installed.png" alt="图 4 查看运行状态安装完成后的运行状态" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 查看运行状态安装完成后的运行状态</div>
 
 ## 5. 使用 OpenResty
 
 进入 1Panel 左侧的 **网站** 菜单，即可创建新网站并使用 OpenResty 服务。
 
-![image-20251022205757786](/img/1panel/app/openresty_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/openresty_view.png" alt="图 5 使用 OpenResty——OpenResty 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 使用 OpenResty——OpenResty 服务界面</div>

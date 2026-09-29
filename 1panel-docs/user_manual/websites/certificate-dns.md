@@ -26,7 +26,8 @@ keywords: [1Panel DNS 账户, DNS API, 域名验证, SSL 证书, Cloudflare, 阿
 - 火山引擎
 - DNSPod（即将废弃）
 
-![img.png](/img/1panel/websites/certificate_dns.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_dns.png" alt="图 1 创建 DNS 账户" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建 DNS 账户</div>
 
 关于不同类型 DNS 账户需要的认证信息如何获取，请查阅对应服务商的 API 文档获取支持。

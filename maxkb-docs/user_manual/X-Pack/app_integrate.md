@@ -9,6 +9,7 @@ title: 接入第三方
 
 
 企业微信机器人支持在 **企业微信内部群聊** 中@智能机器人进行问答对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/wechat_ai_asker.png" alt="图 1  企业微信群聊@智能机器人问答" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  企业微信群聊@智能机器人问答</div>
@@ -170,18 +171,21 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 对接后，可直接通过微信公众号实现问答对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_dialog.png" alt="图 24  公众号问答对话效果" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  公众号问答对话效果</div>
 
 
 在智能体接入中点击【公众号】的【配置】按钮，配置信息中会自动生成回调 URL,并需要复制到【微信公众平台-设置与开发-基本配置-服务器配置】服务器地址 URL 中，除此之外的其它信息，将在微信公众平台中生成并获取。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting_empty.png" alt="图 25  公众号配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  公众号配置</div>
 
 
 获取 APP ID、APP Secret、Token 和消息加解密密钥：在微信公众平台-设置与开发-基本配置中获取 APP ID、APP Secret 信息，并启动服务器配置，生成 Token 和消息加解密密钥。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_basicinfo.png" alt="图 26  微信公众平台基本配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  微信公众平台基本配置</div>
@@ -192,6 +196,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 将生成的 APP ID、APP Secret、Token 和消息加解密密钥信息输入到 MaxKB 公众号配置窗口中，并保存。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting2.png" alt="图 28  公众号服务器URL配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  公众号服务器URL配置</div>
@@ -205,12 +210,14 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 开启客服接口权限。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_enable_api.png" alt="图 30  客服接口权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  客服接口权限</div>
 
 
 设置 IP 白名单：进入公众号基本配置的【IP 白名单】中，添加 MaxKB 服务器的 IP 地址。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_ip.png" alt="图 31  公众号IP白名单" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  公众号IP白名单</div>
@@ -226,6 +233,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 接入钉钉后，可在群聊中@机器人，进行问答对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/ding_dialog1.png" alt="图 33  钉钉机器人对话" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 33  钉钉机器人对话</div>
@@ -260,6 +268,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 点击【添加智能体能力】，选择 【机器人】能力，点击 【添加】，输入机器人基本配置信息后，将【消息接收模式】设置为 HTTP 模式，并将 MaxKB 钉钉智能体配置中的回调地址的URL填写到消息接收地址中，然后点击【发布】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/dingding_robot_add.png" alt="图 38  钉钉机器人添加" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 38  钉钉机器人添加</div>
@@ -278,6 +287,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 ### 6 飞书智能体
 
 接入飞书后，可在智能体中找到对应智能体，进行问答对话。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_dialog1.png" alt="图 41  飞书智能体对话效果" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  飞书智能体对话效果</div>
@@ -291,12 +301,14 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 创建飞书机器人：首先在 [飞书开发平台](https://open.feishu.cn/app/)的【企业自建智能体】中，点击【创建企业自建智能体】，填写智能体信息。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_create_app.png" alt="图 43  飞书创建企业自建应用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 43  飞书创建企业自建应用</div>
 
 
 点击【添加智能体能力】，选择 【按能力添加-机器人】，点击【添加】
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_add_robot.png" alt="图 44  飞书添加机器人能力" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 44  飞书添加机器人能力</div>
@@ -314,6 +326,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 获取 APP ID、APP Secret 和 Verification Token：进入创建好的飞书智能体，打开【凭证与基础信息】页面，获取 APP ID 和 APP Secret。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_app_info.png" alt="图 46  飞书智能体信息i" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 46  飞书智能体信息i</div>
@@ -334,6 +347,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 配置回调URL：在飞书开放平台中打开【事件与回调】-【回调配置】的订阅方式中，将MaxKB中飞书智能体的回调地址的URL填写到【请求地址】中。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_event_config1.png" alt="图 49  飞书回调请求地址配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 49  飞书回调请求地址配置</div>
@@ -344,6 +358,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 发布智能体：点击【创建版本】，填写版本信息后，点击【保存】。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_app_create1.png" alt="图 51  飞书创建发布版本" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 51  飞书创建发布版本</div>
@@ -354,6 +369,7 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 
 
 确认发布后，智能体状态将更新为`已启用`。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_app_enabled.png" alt="图 53  飞书智能体已启用" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 53  飞书智能体已启用</div>

@@ -36,6 +36,7 @@ postFinder.getByName(postName);
 <div th:with="post = ${postFinder.getByName('post-foo')}">
   <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>
 </div>
+
 ```
 
 ## content(postName)
@@ -62,6 +63,7 @@ postFinder.content(postName);
 <div th:with="content = ${postFinder.content('post-foo')}">
   <div th:utext="${content.content}"></div>
 </div>
+
 ```
 
 ## cursor(postName)
@@ -103,6 +105,7 @@ postFinder.cursor(postName);
     <span th:text="${postCursor.next.spec.title}"></span>
   </a>
 </div>
+
 ```
 
 ## cursorByCategory(postName)
@@ -154,6 +157,7 @@ GET /apis/api.content.halo.run/v1alpha1/posts/{name}/navigation?scope=category
     <span th:text="${postCursor.next.spec.title}"></span>
   </a>
 </div>
+
 ```
 
 ## listAll()

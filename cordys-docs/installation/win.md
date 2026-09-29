@@ -16,21 +16,21 @@ title: Windows 安装
 
 1.打开 docker desktop, 在顶部搜索栏输入 ` cordys ` 关键字进行搜索，然后下载镜像。
 
-![下载镜像](/img/cordys/installation/win_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/win_install.png" alt="图 1  下载镜像" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  下载镜像</div>
 
 
 2.下载完成后, 点击左侧的 `Images` 选项卡, 找到对应的 `1panel/cordys-crm` 镜像, 点击 `Run` 按钮, 填写相关参数后, 点击 `Run` 即可启动容器。
 
-![运行镜像](/img/cordys/installation/win_run.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/win_run.png" alt="图 2  运行镜像" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  运行镜像</div>
 
 
 3.启动完成后, 点击左侧的 `Containers` 选项卡, 可以看到正在运行的 `cordys-crm` 容器。
 
-![容器运行中](/img/cordys/installation/win_click_success.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/win_click_success.png" alt="图 3  容器运行中" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  容器运行中</div>
 
@@ -50,7 +50,7 @@ docker run -d --name cordys-crm --restart unless-stopped -p 8081:8081 -p 8082:80
    
 3.容器启动成功示例：
 
-![容器启动成功](/img/cordys/installation/win_cmd_success.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/win_cmd_success.png" alt="图 4  容器启动成功" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  容器启动成功</div>
 
@@ -72,7 +72,8 @@ docker run -d --name cordys-crm --restart unless-stopped -p 8081:8081 -p 8082:80
 
 默认密码：CordysCRM
 ```
-![访问 Cordys CRM](/img/cordys/installation/login.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/login.png" alt="图 5  访问 Cordys CRM" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  访问 Cordys CRM</div>
 

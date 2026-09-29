@@ -29,6 +29,7 @@ MaxKB 支持与多种供应商模型的集成，支持对接当前主流的大�
 
 
 支持编辑、模型参数设置、资源授权、查看关联资源和删除。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/edit_model.png" alt="图 3  模型更多操作菜单" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  模型更多操作菜单</div>

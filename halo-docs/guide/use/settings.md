@@ -166,7 +166,9 @@ Halo 提供了以下站点基本信息设置：
 :::
 
 <p>
+
 <img src="/img/halo/user-guide/settings/brand.png" width="50%" class="medium-zoom-image" />
+
 </p>
 
 - **登录页 Logo**：登录、注册等页面的 Logo 设置，如果不填写将默认使用 Halo 的标志。

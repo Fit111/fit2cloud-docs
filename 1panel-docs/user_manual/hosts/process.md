@@ -12,7 +12,8 @@ title: 进程管理
 - 点击操作列的 `详情`，可以查看进程的更多信息，包括基本信息、内存信息、打开的文件、环境变量及网络连接信息等
 - 点击操作列的 `结束`，可以结束掉指定进程
 
-![img.png](/img/1panel/hosts/processes.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/processes.png" alt="图 1 查看进程界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 查看进程界面</div>
 
 ## 2 查看网络连接信息
@@ -23,5 +24,6 @@ title: 进程管理
 - 列表上方筛选组件可以根据进程 ID、进程名称、端口号进行筛选
 - 列表中可以根据 PID 进行排序，根据连接状态进行筛选
 
-![img.png](/img/1panel/hosts/netstat.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/netstat.png" alt="图 2 查看网络连接信息界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 查看网络连接信息界面</div>

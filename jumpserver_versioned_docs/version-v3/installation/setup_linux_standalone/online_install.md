@@ -23,7 +23,9 @@ $ curl -sSL https://resource.fit2cloud.com/jumpserver/jumpserver/releases/downlo
 
 For more commands, you can enter <span style="color: red;">jmsctl --help</span> to view help information.
 ```
+
 </div>
+
 ### 其他地区
 
 
@@ -41,6 +43,7 @@ $ curl -sSL https://github.com/jumpserver/jumpserver/releases/download/v3.10.21/
 
 For more commands, you can enter <span style="color: red;">jmsctl --help</span> to view help information.
 ```
+
 </div>
 
 - 首次安装后需要修改配置文件，定义 DOMAINS 字段后即可正常使用

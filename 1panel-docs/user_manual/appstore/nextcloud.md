@@ -10,14 +10,16 @@ title: Nextcloud
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 Nextcloud 并安装
 
 在右上角搜索框输入 **Nextcloud**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251017113630514](/img/1panel/app/nextcloud.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/nextcloud.png" alt="图 2 搜索 Nextcloud 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 Nextcloud 并安装</div>
 
 ## 3. 配置安装参数
@@ -32,7 +34,8 @@ title: Nextcloud
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251017133618550](/img/1panel/app/nextcloud_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/nextcloud_install.png" alt="图 3 配置安装参数——安装 Nextcloud 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Nextcloud 的参数配置</div>
 
 等待安装完成即可
@@ -41,15 +44,18 @@ title: Nextcloud
 
 默认端口为 443，因此初次访问时，需要在浏览器地址栏使用 `https://IP:端口` 的格式
 
-![image-20251017134623486](/img/1panel/app/nextcloud_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/nextcloud_view.png" alt="图 4 访问 Nextcloud 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 Nextcloud 服务界面</div>
 
 可以在 **容器** 页面点击 **编辑** 修改端口配置
 
-![image-20251017134941753](/img/1panel/app/nextcloud_port.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/nextcloud_port.png" alt="图 5 访问 Nextcloud 服务容器端口映射" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 Nextcloud 服务容器端口映射</div>
 
 修改为 80 端口即可
 
-![image-20251017135035543](/img/1panel/app/nextcloud_portchange.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/nextcloud_portchange.png" alt="图 6 访问 Nextcloud 服务——修改 Nextcloud 容器端口映射" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 Nextcloud 服务——修改 Nextcloud 容器端口映射</div>

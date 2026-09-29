@@ -12,7 +12,8 @@ title: 编排
 
 [了解更多容器编排相关的知识](https://docs.docker.com/compose)
 
-![img.png](/img/1panel/containers/compose_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/compose_create.png" alt="图 1 创建编排界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建编排界面</div>
 
 ## 2 编辑编排
@@ -29,5 +30,6 @@ Compose 按照来源可以区分为三种：
 
 点击编排列表名称，进入编排详情界面，详情界面实现该 Compose 对应的容器列表，仅当该 Compose 为 1Panel 创建时，支持对 Compose 进行启停操作。
 
-![img.png](/img/1panel/containers/compose_detail.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/compose_detail.png" alt="图 2 编排详情——应用详情" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 编排详情——应用详情</div>

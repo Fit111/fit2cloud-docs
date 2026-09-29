@@ -35,6 +35,7 @@ tagFinder.getByName(name);
 <div th:with="tag = ${tagFinder.getByName('tag-foo')}">
   <a th:href="@{${tag.status.permalink}}" th:text="${tag.spec.displayName}"></a>
 </div>
+
 ```
 
 ## getByNames(names)
@@ -69,6 +70,7 @@ List\<[#TagVo](#tagvo)\>
     th:text="${tag.spec.displayName}"
   ></a>
 </div>
+
 ```
 
 ## list(page,size)

@@ -22,7 +22,8 @@ keywords: [1Panel 网站管理, 网站部署, OpenResty, 运行环境, 反向代
 
 列表支持按类型、分组和名称筛选，显示网站类型、目录、状态、协议和到期时间。可直接启动或停止 HTTP 网站，并进入配置、备份、恢复和删除操作；TCP/UDP 代理的状态和操作方式以页面显示为准。
 
-![网站列表](/img/1panel/websites/website.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/website.png" alt="图 1 网站列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 网站列表</div>
 
 页面还提供分组、网站默认设置和批量操作。多节点环境下，网站及其 OpenResty、目录和证书都属于当前节点，操作前应确认节点选择器。

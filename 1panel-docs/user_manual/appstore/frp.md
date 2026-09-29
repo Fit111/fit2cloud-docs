@@ -10,14 +10,16 @@ title: frp
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 frp 并安装
 
 在右上角搜索框输入 **frp**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251022210133411](/img/1panel/app/frp.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp.png" alt="图 2 搜索 frp 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 frp 并安装</div>
 
 ## 3. 配置安装参数
@@ -34,7 +36,8 @@ title: frp
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251022210239559](/img/1panel/app/frp_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp_install.png" alt="图 3 配置安装参数——安装 frp 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 frp 的参数配置</div>
 
 等待安装完成即可
@@ -43,25 +46,30 @@ title: frp
 
 配置默认访问地址，已配置则忽略此步骤
 
-![image-20251016172322315](/img/1panel/app/setting_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/setting_ip.png" alt="图 4 访问 frp 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 frp 服务界面</div>
 
 返回应用商店，点击 **跳转** 即可访问 frp web 服务
 
-![image-20251022210650881](/img/1panel/app/frp_jump.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp_jump.png" alt="图 5 访问 frp 服务——打开 frp 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 frp 服务——打开 frp 服务地址</div>
 
 输入账户密码即可
 
-![image-20251022210723926](/img/1panel/app/frp_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp_view.png" alt="图 6 访问 frp 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 frp 服务界面</div>
 
 如需修改配置，首先进入安装目录
 
-![image-20251022210836670](/img/1panel/app/frp_change.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp_change.png" alt="图 7 访问 frp 服务访问地址设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 访问 frp 服务访问地址设置</div>
 
 修改frp配置文件即可
 
-![image-20251022210951332](/img/1panel/app/frp_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/frp_info.png" alt="图 8 访问 frp 服务——查看 frp 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 访问 frp 服务——查看 frp 服务参数信息</div>

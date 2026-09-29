@@ -18,9 +18,11 @@ description: 介绍 JumpServer Web 终端左侧脚本库的用途、脚本来源
 2. 找到具体要执行的脚本，点击复制粘贴到控制台终端，或者使用ai助手执行这个脚本
 
 ## 4 批量执行命令
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/web_terminal_coding.png" alt="图 1  批量执行脚本" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  批量执行脚本</div>
+
 1. 选择脚本要执行的资产范围。
 2. 输入或粘贴要执行的脚本，可从脚本库复制
 3. 点击发送到终端，在对应资产控制台查看执行情况。

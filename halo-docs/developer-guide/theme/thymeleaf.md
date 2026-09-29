@@ -255,18 +255,18 @@ Halo 内容时间通常使用 `java.time` 类型，应使用 `#temporals` 格式
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  常见错误</div>
 
-| 错误做法 | 问题 | 推荐做法 | — | — |
-| --- | --- | --- | --- | --- |
-| `${#request.getRequestURI()}` | Thymeleaf 3.1 不再提供 `#request` | 使用 Halo 页面变量、`status.permalink` 和路由变量 | — | — |
-| `${#ctx.exchange...}` | 依赖 Halo 未承诺的底层 Web 上下文 | 只使用 Halo 文档公开的主题变量和 API | — | — |
-| `${post.spec.title} + ' - ' + ${site.title}` | 重复表达式边界且容易写错引号 | `\ | ${post.spec.title} - ${site.title}\ | ` |
-| `th:href="${post.status.permalink}"` | 绕过 Thymeleaf URL 表达式处理 | `th:href="@{${post.status.permalink}}"` | — | — |
-| `th:utext` 输出普通文本 | 绕过 HTML 转义，可能产生 XSS | 普通文本使用 `th:text` | — | — |
-| `#strings.escapeJson(...)` | Thymeleaf 没有该方法 | 使用 `th:inline="javascript"` 序列化 | — | — |
-| 在带引号的 JS 字符串中使用 `[(${...})]` | 未转义内容可能破坏 JavaScript | 使用 `/*[[${...}]]*/` 自然模板写法 | — | — |
-| 为可空链只加一次 `?.` | 后续属性仍可能访问空值 | 对照变量类型逐层判空或拆分表达式 | — | — |
-| 使用 `th:class` 添加一个状态类 | 容易覆盖已有类名 | 使用 `th:classappend` | — | — |
-| 重复输出 SEO meta 或代码注入 | 与 Halo 或插件产生重复标签和脚本 | 参考[主题 SEO](./seo.md)和[设置选项](./settings.md) | — | — |
+| 错误做法 | 问题 | 推荐做法 |
+| --- | --- | --- |
+| `${#request.getRequestURI()}` | Thymeleaf 3.1 不再提供 `#request` | 使用 Halo 页面变量、`status.permalink` 和路由变量 |
+| `${#ctx.exchange...}` | 依赖 Halo 未承诺的底层 Web 上下文 | 只使用 Halo 文档公开的主题变量和 API |
+| `${post.spec.title} + ' - ' + ${site.title}` | 重复表达式边界且容易写错引号 | `\|${post.spec.title} - ${site.title}\|` |
+| `th:href="${post.status.permalink}"` | 绕过 Thymeleaf URL 表达式处理 | `th:href="@{${post.status.permalink}}"` |
+| `th:utext` 输出普通文本 | 绕过 HTML 转义，可能产生 XSS | 普通文本使用 `th:text` |
+| `#strings.escapeJson(...)` | Thymeleaf 没有该方法 | 使用 `th:inline="javascript"` 序列化 |
+| 在带引号的 JS 字符串中使用 `[(${...})]` | 未转义内容可能破坏 JavaScript | 使用 `/*[[${...}]]*/` 自然模板写法 |
+| 为可空链只加一次 `?.` | 后续属性仍可能访问空值 | 对照变量类型逐层判空或拆分表达式 |
+| 使用 `th:class` 添加一个状态类 | 容易覆盖已有类名 | 使用 `th:classappend` |
+| 重复输出 SEO meta 或代码注入 | 与 Halo 或插件产生重复标签和脚本 | 参考[主题 SEO](./seo.md)和[设置选项](./settings.md) |
 
 ## 排查模板错误
 

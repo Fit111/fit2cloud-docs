@@ -11,7 +11,7 @@ Cordys CRM 能够帮助企业实现从线索到回款（L2C）的全流程精细
 关于 AI CRM 的落地，可进一步阅读这篇文章：[飞致云 AI CRM 实战：Cordys × WorkBuddy 赋能百人销售团队](https://cordys.cn/blog/fit2cloud-ai-crm-case-study.html)
 ## 1 整体架构 
 
-![功能架构](https://cordys.cn/images/cordyscrm-202607.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="https://cordys.cn/images/cordyscrm-202607.png" alt="图 1  功能架构" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  功能架构</div>
 
@@ -25,16 +25,22 @@ Cordys CRM 能够帮助企业实现从线索到回款（L2C）的全流程精细
 
 <table style={{borderCollapse:'collapse', border:'1px solid black'}}>
   <tr>
+
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/setting.png" alt="Settings" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  模块配置</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/rbac.png" alt="RBAC" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  角色设置</div></td>
+
   </tr>
   <tr>
+
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/opportunity.png" alt="Opportunity List" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  商机列表</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/opportunity-detail.png" alt="Opportunity Detail" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  商机详情</div></td>
+
   </tr>
   <tr>
+
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/bi.png" alt="BI" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  仪表板</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/ai.png" alt="AI" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  对接AI</div></td>
+
   </tr> 
 </table>
 

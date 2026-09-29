@@ -108,6 +108,7 @@ title: 对话用户
 ## 3 登录认证
 
 系统支持灵活配置对话用户的登录认证方式，包括集成主流第三方平台的扫码登录功能，适用于构建安全、高效、统一的对话用户管理体系。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/chat_authentication.png" alt="图 10  扫码登录认证配置页" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  扫码登录认证配置页</div>
@@ -167,6 +168,7 @@ title: 对话用户
 
 
 配置企业可信IP。在【企业可信IP】中配置可信ip。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/qiwei_ip.png" alt="图 17  配置可信IP" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  配置可信IP</div>
@@ -188,6 +190,7 @@ title: 对话用户
 
 
 智能体开启【访问限制】-【身份验证】-【登录认证】并勾选钉钉后，保存登录认证设置。同时在【对话用户】中，给相应的对话用户进行授权。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_login_auth.png" alt="图 20  钉钉免密" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 20  钉钉免密</div>
@@ -216,6 +219,7 @@ title: 对话用户
 安全设置。在【安全设置】中设置重定向 URL。
 
 注意：该地址是在【系统管理】-【对话用户】-【登录认证】-【扫码登录】中，钉钉的回调地址。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_save_setting.png" alt="图 23  钉钉安全设置回调地址配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 23  钉钉安全设置回调地址配置</div>
@@ -224,6 +228,7 @@ title: 对话用户
 分享设置，在【接入登录】中设置【回调域名】。
 
 注意：该地址是在【系统管理】-【对话用户】-【登录认证】-【扫码登录】中，钉钉的回调地址。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_share_setting.png" alt="图 24  钉钉接入登录回调域名设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  钉钉接入登录回调域名设置</div>
@@ -272,6 +277,7 @@ title: 对话用户
 - 链接格式：http(s)://xxx.xxx.xxx/chat/login/ACCESSTOKEN?client=lark&appId=AppID。
 - ACCESSTOKEN：智能体 ID，例如，公开访问连接为 `https://maxkb.fit2cloud.cn/chat/e113a4980984be3fe`，e113a4980984be3fe 即为相应的智能体 ID
 - AppID：飞书应用的 App ID
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/feishu_web_set.png" alt="图 30  飞书页面应用配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  飞书页面应用配置</div>

@@ -12,6 +12,7 @@ description: 在 Halo 主题中通过 Thymeleaf 资源链接和 theme.assets() A
 <script th:src="@{/assets/dist/main.iife.js}"></script>
 
 <img th:src="@{/assets/images/logo.png}" />
+
 ```
 
 其中 `@{/assets/dist/style.css}` 表示引用 `/templates/assets/dist/style.css` 文件。最终会被渲染为：

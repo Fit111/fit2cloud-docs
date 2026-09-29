@@ -39,7 +39,8 @@ Hermes Agent 不绑定在本地电脑上，既可以运行在 VPS、GPU 集群�
 
 在智能体类型中选择 **Hermes Agent**，然后按页面要求填写部署参数。
 
-![Hermes_Agent_install.png](/img/1panel/app/Hermes_Agent_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/Hermes_Agent_install.png" alt="图 2 创建 Hermes Agent 智能体——安装 Hermes Agent 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 创建 Hermes Agent 智能体——安装 Hermes Agent 的参数配置</div>
 
 
@@ -73,7 +74,8 @@ Hermes Agent 不绑定在本地电脑上，既可以运行在 VPS、GPU 集群�
 
 首次打开时，如页面仍在初始化，可稍等片刻后再刷新访问。
 
-![Hermes_Agent_index.png](/img/1panel/app/Hermes_Agent_index.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/Hermes_Agent_index.png" alt="图 3 访问 Hermes Agent WebUI界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 访问 Hermes Agent WebUI界面</div>
 
 ## 5. 后续配置说明

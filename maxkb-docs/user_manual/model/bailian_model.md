@@ -37,6 +37,7 @@ title: 对接阿里云百炼
 
 
 阿里云百炼-重排模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_reranker.png" alt="图 4  阿里云百炼 重排模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  阿里云百炼 重排模型 配置样例图</div>
@@ -50,6 +51,7 @@ title: 对接阿里云百炼
 
 
 阿里云百炼-语音识别模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_asr.png" alt="图 6  阿里云百炼 语音识别模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  阿里云百炼 语音识别模型 配置样例图</div>
@@ -60,18 +62,21 @@ title: 对接阿里云百炼
 
 
 阿里云百炼-语音合成模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_tts.png" alt="图 8  阿里云百炼 语音合成模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  阿里云百炼 语音合成模型 配置样例图</div>
 
 
 阿里云百炼-视觉模型模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_vision.png" alt="图 9  阿里云百炼 视觉模型模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  阿里云百炼 视觉模型模型 配置样例图</div>
 
 
 阿里云百炼-图片生成模型默认图像尺寸为 1024 * 1024，图片数量 1 张，风格为 &lt;auto&gt;，即由模型随机输出图像风格，配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_vision_gen1.png" alt="图 10  阿里云百炼 图片生成模型默认图像尺寸为 1024 * 1024，图片数量 1 张，风格为 &lt;auto&gt;，即由模型随机输出图像风格， 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  阿里云百炼 图片生成模型默认图像尺寸为 1024 * 1024，图片数量 1 张，风格为 &lt;auto&gt;，即由模型随机输出图像风格， 配置样例图</div>
@@ -82,6 +87,7 @@ title: 对接阿里云百炼
 
 
 阿里云百炼-文生视频模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_text2video.png" alt="图 12  阿里云百炼 文生视频模型参数配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12  阿里云百炼 文生视频模型参数配置</div>
@@ -92,6 +98,7 @@ title: 对接阿里云百炼
 
 
 阿里云百炼-图生视频模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/bailian_picture2video.png" alt="图 14  阿里云百炼 图生视频模型参数配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  阿里云百炼 图生视频模型参数配置</div>

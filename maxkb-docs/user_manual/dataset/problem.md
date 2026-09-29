@@ -4,6 +4,7 @@ title: 问题
 
 
 MaxKB 知识库管理权限用户可以收集用户可能提出的相关问题，创建问题并关联知识库文档中的内容，维护知识库常见问题列表，以提高问答的准确度。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/problem_list.png" alt="图 1  问题列表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  问题列表</div>
@@ -12,6 +13,7 @@ MaxKB 知识库管理权限用户可以收集用户可能提出的相关问题�
 
 
 点击【创建问题】，分行输入问题列表。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_problem.png" alt="图 2  创建问题" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建问题</div>
@@ -20,6 +22,7 @@ MaxKB 知识库管理权限用户可以收集用户可能提出的相关问题�
 
 
 点击【关联分段】，问题添加完成后，可以与文档中的分段进行关联，当用户提问时会优先匹配问题库来查询相关的分段。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/problem_segmentation.png" alt="图 3  问题关联分段" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  问题关联分段</div>

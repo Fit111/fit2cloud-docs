@@ -257,7 +257,8 @@ mv ~/appstore.tar.gz ./
 
 在 1Panel 外网环境创建 PHP 运行环境，并安装相应扩展（需要记录 **镜像名称** 和端口）
 
-![offline_php_01](/img/1panel/offline/offline_php_01.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/offline/offline_php_01.png" alt="图 1 外网 1Panel界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 外网 1Panel界面</div>
 
 使用上一步的 **镜像名称** 打包 PHP 镜像，在 `/opt/1panel/runtime/php/&lt;PHP 运行环境名称&gt;` 下执行：
@@ -294,13 +295,15 @@ docker compose up
 
 创建本地 PHP 运行环境
 
-![offline_php_02](/img/1panel/offline/offline_php_02.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/offline/offline_php_02.png" alt="图 2 离线 1Panel界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 离线 1Panel界面</div>
 
 创建 PHP 网站
 > 注意：端口填写你启动的 PHP 运行环境端口。
 
-![offline_php_03](/img/1panel/offline/offline_php_03.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/offline/offline_php_03.png" alt="图 3 离线 1Panel界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 离线 1Panel界面（续）</div>
 
 ## 9. 应用安装方式说明
