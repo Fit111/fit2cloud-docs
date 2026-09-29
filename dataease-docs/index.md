@@ -3,7 +3,7 @@ title: 产品介绍
 ---
 
 🎉 **DataEase 荣获 Gitee 年度开源项目评选「大数据与云计算赛道」第一名**  
-👉 活动结果：`https://gitee.com/activity/2025opensource/top`
+👉 活动结果：[https://gitee.com/activity/2025opensource/top](https://gitee.com/activity/2025opensource/top)
 
 DataEase 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。  
 DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
@@ -26,7 +26,7 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 
 ## 2 模板市场
 
-模板市场链接地址：`https://templates.dataease.cn` 。
+模板市场链接地址：[https://templates.dataease.cn](https://templates.dataease.cn) 。
 
 ![模板市场图](/img/dataease/newimg/product_acceptance/模板市场.png)
 
@@ -77,6 +77,6 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 ## 7 了解更多
 
 - **如何向团队介绍 DataEase？：** [人人可用的开源 BI 工具](https://fit2cloud.com/dataease/download/introduce-dataease_2026.pdf)
-- **DataEase 技术白皮书：**  `https://whitepaper.dataease.cn/`
-- **DataEase 知识库：** `https://kb.fit2cloud.com/categories/dataease`
-- **DataEase 认证培训：** `https://edu.fit2cloud.com/index`
+- **DataEase 技术白皮书：**  [https://whitepaper.dataease.cn/](https://whitepaper.dataease.cn/)
+- **DataEase 知识库：** [https://kb.fit2cloud.com/categories/dataease](https://kb.fit2cloud.com/categories/dataease)
+- **DataEase 认证培训：** [https://edu.fit2cloud.com/index](https://edu.fit2cloud.com/index)
