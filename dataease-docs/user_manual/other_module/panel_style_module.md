@@ -79,7 +79,7 @@ title: 其他组件
 
 ### 2.2 视频
 
-不能上传本地视频，需要填写视频链接信息。如果需要搭建视频服务器可参考知识库：`https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b`、`https://kb.fit2cloud.com/?p=15` 。
+不能上传本地视频，需要填写视频链接信息。如果需要搭建视频服务器可参考知识库：[https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b](https://kb.fit2cloud.com/?p=0e763f1d-a175-49e0-ac69-af8d39fb789b)、[https://kb.fit2cloud.com/?p=15](https://kb.fit2cloud.com/?p=15) 。
 
 ![数据大屏视频组件](/img/dataease/newimg/数据大屏视频组件.png)
 
@@ -91,7 +91,7 @@ title: 其他组件
 
 ### 2.3 流媒体
 
-流媒体只支持 flv 格式，如果需要使用 rtsp 格式，可参考知识库文章：`https://kb.fit2cloud.com/?p=182` 。
+流媒体只支持 flv 格式，如果需要使用 rtsp 格式，可参考知识库文章：[https://kb.fit2cloud.com/?p=182](https://kb.fit2cloud.com/?p=182) 。
 
 ![数据大屏流媒体组件](/img/dataease/newimg/数据大屏流媒体组件.png)
 

@@ -74,7 +74,7 @@ title: 数据大屏使用
 - **样式模板** ：更注重数据大屏本身的样式设计布局等内容，DataEase 生成数据大屏并附带示例数据，需要根据自己的数据情况自行手动创建数据源、数据集并将数据大屏中的示例数据替换为自己的真实数据；
 - **应用模板** ：有一定的针对性，适用于应用系统的对接，例如 DataEase 日志应用。DataEase 生成数据大屏并同时生成其所对应的数据集，无需再手动替换数据。
 
-**关于样式模板与应用模板的详细差异可参考** ：`https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0`。
+**关于样式模板与应用模板的详细差异可参考** ：[https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0](https://kb.fit2cloud.com/?p=72aab3f5-2706-4c6c-a0e9-6dcd58aa00a0)。
 
 ![模板内容](/img/dataease/template_market/模板内容.png)
 
