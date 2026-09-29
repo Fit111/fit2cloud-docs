@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "node tools/dev-start.mjs",
-    "dev": "cross-env DOCS_DEV_LITE=1 node tools/dev-start.mjs --no-open",
+    "start": "docusaurus start",
+    "dev": "cross-env DOCS_DEV_LITE=1 docusaurus start --no-open",
     "build": "docusaurus build --locale zh-Hans",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
