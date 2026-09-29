@@ -46,7 +46,7 @@ slug: /ai-gateway/integrate-third-party
 
 WorkBuddy 是一款 AI 办公桌面客户端，支持 Windows 和 macOS，双击安装包、像装普通软件一样下一步到底即可。
 
-- **官方下载页**：https://www.workbuddy.cn/（打开网页后点击页面上的"立即下载"，按自己的电脑系统选择：Windows 选 **Windows x64**；Mac 电脑按芯片选 **Apple 芯片（M 系列）** 或 **Intel** 版本）
+- **官方下载页**：[https://www.workbuddy.cn/](https://www.workbuddy.cn/)（打开网页后点击页面上的"立即下载"，按自己的电脑系统选择：Windows 选 **Windows x64**；Mac 电脑按芯片选 **Apple 芯片（M 系列）** 或 **Intel** 版本）
 
 **温馨提示**：怎么知道自己的 Mac 是苹果芯片还是 Intel？点屏幕左上角苹果图标 →「关于本机」，"芯片"一栏写着 Apple Mx 就选 ARM64/Apple 芯片版，写着 Intel 就选 x64/Intel 版。
 
@@ -105,7 +105,7 @@ DeepSeek Harness 是 DeepSeek 官方开源的 Agent 运行工具，它不是"下
   git clone https://github.com/deepseek-ai/deepseek-harness
   ```
   然后按照仓库里的说明完成安装。
-- **官方渠道入口**：官网 https://www.deepseek.com（DeepSeek 官网首页可找到 Harness 相关入口）；GitHub 仓库 https://github.com/deepseek-ai/deepseek-harness。
+- **官方渠道入口**：官网 [https://www.deepseek.com](https://www.deepseek.com)（DeepSeek 官网首页可找到 Harness 相关入口）；GitHub 仓库 [https://github.com/deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)。
 
 :::warning[认准官方渠道]
 
@@ -163,7 +163,7 @@ npm install -g @openai/codex
 
 安装完输入 `codex --version`，能显示版本号即成功。
 
-- **官方仓库**：https://github.com/openai/codex（也可从仓库的 Releases 页下载免 Node.js 的预编译版本）
+- **官方仓库**：[https://github.com/openai/codex](https://github.com/openai/codex)（也可从仓库的 Releases 页下载免 Node.js 的预编译版本）
 
 ### 4.2 CC Switch 配置
 
@@ -218,7 +218,7 @@ CC Switch 下载地址（GitHub Releases 发布页）：https://github.com/fario
 
 Claude Code 是 Anthropic 推出的终端编程助手（与 codex 类似，在命令行里敲 `claude` 命令使用），支持 Windows、macOS 和 Linux。
 
-打开官方文档页 https://docs.anthropic.com/en/docs/claude-code/getting-started，按自己电脑的系统选择安装方式：
+打开官方文档页 [https://docs.anthropic.com/en/docs/claude-code/getting-started](https://docs.anthropic.com/en/docs/claude-code/getting-started)，按自己电脑的系统选择安装方式：
 
 - **Windows**：在 PowerShell 里执行官方安装命令（也可先安装 Node.js 22 及以上，再执行 `npm install -g @anthropic-ai/claude-code`）
 - **macOS / Linux**：在终端执行官方安装命令
@@ -276,7 +276,7 @@ Claude Code 本身没有可视化配置界面，这里与 codex 一样借助 CC 
 
 ### 6.1 下载并安装 Cursor
 
-Cursor 是一款 AI 编程编辑器（可理解为"内置 AI 助手的 VS Code"），支持 Windows、macOS 和 Linux。打开官网 https://cursor.com/download，点击「Download for Windows / Mac」下载安装包，双击安装即可，无需额外配置环境。
+Cursor 是一款 AI 编程编辑器（可理解为"内置 AI 助手的 VS Code"），支持 Windows、macOS 和 Linux。打开官网 [https://cursor.com/download](https://cursor.com/download)，点击「Download for Windows / Mac」下载安装包，双击安装即可，无需额外配置环境。
 
 ### 6.2 添加自定义模型
 

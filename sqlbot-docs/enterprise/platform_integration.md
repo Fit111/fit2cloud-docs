@@ -151,7 +151,7 @@ DataEase 对接钉钉，需要填写以下信息：
 - 应用密钥
 
 
-获取应用 ID 和应用密钥，需要在钉钉工作台的【应用管理】中创建一个对应的应用，可以先登录工作台 `https://oa.dingtalk.com/index.htm#/microApp/microAppList`；  
+获取应用 ID 和应用密钥，需要在钉钉工作台的【应用管理】中创建一个对应的应用，可以先登录工作台 [https://oa.dingtalk.com/index.htm#/microApp/microAppList](https://oa.dingtalk.com/index.htm#/microApp/microAppList)；  
 创建应用，需要在【应用管理】中，滚动到页面最下方，点击【自建应用】。
 
 

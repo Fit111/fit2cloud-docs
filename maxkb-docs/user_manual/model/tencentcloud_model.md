@@ -12,7 +12,7 @@ title: 对接腾讯云
 * 模型名称：MaxKB 中自定义的模型名称。     
 * 模型类型：大语言模型。   
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。
-* API URL：https://api.lkeap.cloud.tencent.com/v1/chat/completions。
+* API URL：`https://api.lkeap.cloud.tencent.com/v1/chat/completions`。
 * API Key：在控制台新建的OpenAI API KEY。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/tencent_atomicpower_apikey.png" alt="图 1  腾讯云 API Key" />

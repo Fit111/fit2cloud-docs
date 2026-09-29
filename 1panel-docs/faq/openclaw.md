@@ -17,7 +17,7 @@ OpenClaw 支持通过 1Panel 的智能体功能快速部署，具体可参考 [�
 
 OpenClaw 支持对接 Ollama 本地大模型，无需依赖云端 Token，即可在本地完成对话与推理，兼顾隐私与成本。
 
-了解更多 OpenClaw 与 Ollama 的集成方式，请参考：[OpenClaw 集成 Ollama 本地模型](https://openclaw.club/quick-start) 。
+了解更多 OpenClaw 与 Ollama 的集成方式，请参考：[OpenClaw 集成 Ollama 本地模型](https://openclaw.club/) 。
 
 ## 4 OpenClaw 从 v7.1 升级到 v9.1 或更高版本失败怎么办？
 

@@ -7,7 +7,7 @@ title: FTP
 
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 **1、安装 epel 源**
 
 ```bash
@@ -46,10 +46,10 @@ systemctl start pure-ftpd.service
 ```bash
 systemctl status pure-ftpd.service
 ```
-
+:::
 
 #### "Ubuntu / Debian"
-!!! note ""
+:::note
 **1、安装 Pure-FTPd**
 
 ```bash
@@ -89,6 +89,7 @@ sudo systemctl start pure-ftpd.service
 ```bash
 sudo systemctl status pure-ftpd.service
 ```
+:::
 
 ## 2 故障排除
 

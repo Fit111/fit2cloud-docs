@@ -8,7 +8,7 @@ Cordys CRM Skills + OpenClaw + 企微机器人/飞书机器人，可快速构建
 ## 1 部署 OpenClaw 实例
 
 
-推荐使用 [**1Panel**](/1panel/) 一键部署，过程简单且稳定：[**👉 快速开始**](https://openclaw.club/zh-cn/guides/quick-start)
+推荐使用 [**1Panel**](/1panel/) 一键部署，过程简单且稳定：[**👉 快速开始**](/1panel/user_manual/appstore/openclaw)
 
 ![OpenCLaw-1p](/img/cordys/openclaw/1panel-docs2.png)
 

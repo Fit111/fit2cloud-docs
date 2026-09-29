@@ -14,7 +14,7 @@ title: 防火墙
 
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 **1、更新软件包**
 
 ```bash
@@ -60,10 +60,10 @@ sudo firewall-cmd --reload
 ```bash
 sudo systemctl enable firewalld
 ```
-
+:::
 
 #### "Ubuntu / Debian"
-!!! note ""
+:::note
 **1、更新软件包**
 
 ```bash
@@ -97,6 +97,7 @@ sudo ufw allow 8090/tcp
 ```bash
 sudo ufw enable
 ```
+:::
 
 ## 2 防火墙状态
 

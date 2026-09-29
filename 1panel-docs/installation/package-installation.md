@@ -14,7 +14,7 @@
         - **x86_64 包**：`8.4.6`、`8.0.43`、`5.7.44`、`5.6.51`
         - **arm64 包**：`8.4.6`、`8.0.43`
 - 除了内置镜像，用户还可以通过导入外部镜像的方式来安装其他应用。
-    - 其他应用需要用户手动导入镜像后才能使用，导入教程参考 [导入应用镜像](#6)。
+    - 其他应用需要用户手动导入镜像后才能使用，导入教程参考 [导入应用镜像](#6-登录访问)。
 - 镜像一旦导入成功，即可在 1Panel 应用商店中显示并安装，灵活性高。
 
 **支持主流信创**
@@ -127,22 +127,22 @@ http://目标服务器IP地址:目标端口/安全入口
 
 
 #### "应用镜像"
-!!! note ""
+:::note
 点击应用 **「安装」** 按钮后，在 **「高级设置」** → **「编辑 Compose 文件」** 中查看 `image:` 字段，其后的内容即为目标镜像名称。
-
+:::
 
 #### "Java 运行环境"
-!!! note ""
+:::note
 - bitnamilegacy/java:1.8
 - 1panel/java:11
 - 1panel/java:17
 - 1panel/java:21
 - 1panel/java:22
 - 1panel/java:25
-
+:::
 
 #### "Node.js 运行环境"
-!!! note ""
+:::note
 - node:12.22.12
 - node:14.21.3
 - node:16.20.2
@@ -151,33 +151,34 @@ http://目标服务器IP地址:目标端口/安全入口
 - 1panel/node:21.7.3
 - 1panel/node:22.21.0
 - 1panel/node:24.10.0
-
+:::
 
 #### "Go 运行环境"
-!!! note ""
+:::note
 - golang:1.21
 - golang:1.22
 - golang:1.23
 - golang:1.24
 - golang:1.25
-
+:::
 
 #### "Python 运行环境"
-!!! note ""
+:::note
 - python:3.10.19
 - python:3.11.14
 - python:3.12.12
 - python:3.13.9
 - python:3.14.0
-
+:::
 
 #### ".NET 运行环境"
-!!! note ""
+:::note
 - mcr.microsoft.com/dotnet/aspnet:6.0
 - mcr.microsoft.com/dotnet/aspnet:7.0
 - mcr.microsoft.com/dotnet/aspnet:8.0
 - mcr.microsoft.com/dotnet/aspnet:9.0
 - mcr.microsoft.com/dotnet/aspnet:10.0
+:::
 
 ### 7.2 导入镜像
 

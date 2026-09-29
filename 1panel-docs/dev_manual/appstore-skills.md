@@ -5,7 +5,7 @@ keywords: [1Panel-appstore-skills, 1Panel 应用商店, 应用安装包, Docker 
 ---
 
 本文档介绍如何使用 `1panel-appstore-skills`，将已经支持 Docker 部署的应用转换为符合 1Panel 应用商店格式的应用安装包。
-项目仓库地址：[[https://github.com/1Panel-dev/1Panel-appstore-skills](https://github.com/1Panel-dev/1Panel-appstore-skills)](https://github.com/1Panel-dev/1Panel-appstore-skills)
+项目仓库地址：[https://github.com/1Panel-dev/1Panel-appstore-skills](https://github.com/1Panel-dev/1Panel-appstore-skills)
 
 ## 1 功能概述
 

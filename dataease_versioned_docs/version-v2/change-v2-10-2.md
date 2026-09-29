@@ -134,7 +134,7 @@ title: v2.10.2
 ### 1.21 支持自定义地图风格
 
 用户可在高德地图上创建并发布自定义地图样式，并将生成的地图 URL 及 API Key 添加至 DataEase 的地图设置中。设置完成后，可在地图图表中选择自定义地图风格，以实现个性化的地图展示效果求。    
-登录高德地图网站，访问高德地图的样式编辑页面：https://geohub.amap.com/mapstyle/index。
+登录高德地图网站，访问高德地图的样式编辑页面：[https://geohub.amap.com/mapstyle/index](https://geohub.amap.com/mapstyle/index)。
 
 ![更新1](/img/dataease-v2/newimg/自定义地图风格1.png)
 
@@ -148,7 +148,7 @@ title: v2.10.2
 
 ![更新1](/img/dataease-v2/newimg/自定义地图风格4.png)
 
-登录高德地图开发者控制台：https://console.amap.com/dev/key/app。在【我的应用】中找到对应的 API Key 和安全密钥。
+登录高德地图开发者控制台：[https://console.amap.com/dev/key/app](https://console.amap.com/dev/key/app)。在【我的应用】中找到对应的 API Key 和安全密钥。
 
 ![更新1](/img/dataease-v2/newimg/自定义地图风格5.png)
 

@@ -19,7 +19,7 @@ title: 对接腾讯知识引擎原子能力
 * 权限：分为私有和公用两种权限，私有模型仅当前用户可用，公用模型即系统内所有用户均可使用，但其它用户不能编辑和删除。    
 * 模型类型：大语言模型。   
 * 基础模型：不同类型模型下的基础模型名称，下拉选项是常用的一些基础模型名称，支持自定义输入。
-* API URL：https://api.lkeap.cloud.tencent.com/v1/chat/completions。
+* API URL：`https://api.lkeap.cloud.tencent.com/v1/chat/completions`。
 * API Key：在控制台新建的OpenAI API KEY。
 :::
 

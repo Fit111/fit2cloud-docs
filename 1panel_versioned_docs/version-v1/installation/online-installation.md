@@ -30,28 +30,28 @@ title: 在线安装
 :::
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 ```properties
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sh quick_start.sh
 ```
-
+:::
 
 #### "Ubuntu"
-!!! note ""
+:::note
 ```properties
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
 ```
-
+:::
 
 #### "Debian"
-!!! note ""
+:::note
 ```properties
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && bash quick_start.sh
 ```
-
+:::
 
 #### "openEuler / 其他"
-!!! note ""
+:::note
 第一步：安装 docker
 
 ```properties
@@ -63,6 +63,7 @@ bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 ```properties
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sh quick_start.sh
 ```
+:::
 
 :::note
 如果遇到 Docker 安装失败等问题，可以尝试运行以下脚本：

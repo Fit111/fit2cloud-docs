@@ -4,7 +4,7 @@ title: 1Panel 安装指南
 
 ## 1 安装 1Panel
 
-关于 1Panel 的安装部署与基础功能介绍，请参考 [1Panel 官方文档](https://1panel.cn/docs/installation/online_installation/)。在完成了 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，如下界面。  
+关于 1Panel 的安装部署与基础功能介绍，请参考 [1Panel 官方文档](/1panel/installation/online-installation)。在完成了 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，如下界面。  
 **注意：暂不支持使用 1Panel 部署企业版/嵌入式版。**
 
 ![安装1Panel](/img/dataease-v2/installation/1panel安装1.png)
