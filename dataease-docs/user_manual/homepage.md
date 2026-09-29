@@ -29,6 +29,6 @@ title: 工作台
     * 我的分享
     * 我的填报
 
-![工作台展示](/img/dataease/newimg/user_manual/工作台展示.png)
+![工作台展示](/img/dataease/newimg/user_manual/gongzuotaizhanshi.png)
 
 图 1  工作台展示

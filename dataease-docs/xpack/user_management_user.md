@@ -8,7 +8,7 @@ title: 用户管理
 
 系统管理员在此维护 **全平台** 用户账号。列表包含全部用户，并显示其所属组织与角色；未加入任何组织的用户，组织列为空、角色显示为 `-`。
 
-![系统设置用户列表](/img/dataease/newimg/xpack/用户管理.png)
+![系统设置用户列表](/img/dataease/newimg/xpack/yonghuguanli.png)
 
 图 1  用户管理
 
@@ -48,7 +48,7 @@ title: 用户管理
 
 组织管理员账号若同时被授予系统设置权限，也可进入本页；未加入组织的用户（组织列为空、角色为 `-`）不会出现在对应组织的【组织管理中心-成员管理】中。
 
-![系统设置用户列表](/img/dataease/newimg/xpack/用户管理用户编辑.png)
+![系统设置用户列表](/img/dataease/newimg/xpack/yonghuguanliyonghubianji.png)
 
 图 2  用户管理用户编辑
 
@@ -69,7 +69,7 @@ title: 用户管理
 
 添加用户时可指定其加入某个组织及角色。若用户已存在、只需加入其他组织，请到 [组织管理](./sys_management_organization) 中操作。
 
-![添加用户](/img/dataease/newimg/xpack/新建用户.png)
+![添加用户](/img/dataease/newimg/xpack/xinjianyonghu.png)
 
 图 3  新建用户
 
@@ -79,11 +79,11 @@ title: 用户管理
 
 操作顺序：点击【批量导入】→ 下载导入用户模板 → 填写后上传 `.xlsx` / `.xls` 文件 → 点击【导入】。
 
-![批量导入](/img/dataease/xpack/批量导入.png)
+![批量导入](/img/dataease/xpack/piliangdaoru.png)
 
 图 4  校验成功
 
-![数据导入完成情况](/img/dataease/xpack/数据导入完成情况.png)
+![数据导入完成情况](/img/dataease/xpack/shujudaoruwanchengqingkuang.png)
 
 图 5  校验成功
 
@@ -95,11 +95,11 @@ title: 用户管理
 
 用户来源支持的选项同列表中的【用户来源】字段：LOCAL、企业微信、钉钉、飞书、国际飞书、CAS、OIDC、LDAP。
 
-![批量导入第三方用户3](/img/dataease/newimg/支持通过%20Excel%20批量导入第三方平台用户3.png)
+![批量导入第三方用户3](/img/dataease/newimg/zhichitongguo-excel-piliangdaorudisanfangpingtaiyonghu3.png)
 
 图 6  填写连接信息
 
-![批量导入第三方用户4](/img/dataease/newimg/支持通过%20Excel%20批量导入第三方平台用户4.png)
+![批量导入第三方用户4](/img/dataease/newimg/zhichitongguo-excel-piliangdaorudisanfangpingtaiyonghu4.png)
 
 图 7  填写连接信息
 
@@ -107,7 +107,7 @@ title: 用户管理
 
 支持管理员编辑用户信息。账号信息不支持修改，可改姓名、邮箱、手机、所属组织、角色及启用状态。
 
-![编辑用户](/img/dataease/xpack/编辑用户.png)
+![编辑用户](/img/dataease/xpack/bianjiyonghu.png)
 
 图 8  编辑用户
 
@@ -115,7 +115,7 @@ title: 用户管理
 
 支持管理员将用户密码重置为系统默认密码。确认弹窗中会显示默认密码，可复制后告知用户。
 
-![重置密码](/img/dataease/xpack/重置密码.png)
+![重置密码](/img/dataease/xpack/zhongzhimima.png)
 
 图 9  重置密码
 
@@ -123,11 +123,11 @@ title: 用户管理
 
 从平台删除该用户。删除前请确认其在各组织下的角色与资源授权是否需要迁移。
 
-![删除用户](/img/dataease/xpack/删除用户.png)
+![删除用户](/img/dataease/xpack/shanchuyonghu.png)
 
 图 10  删除用户
 
-![删除用户](/img/dataease/xpack/删除用户2.png)
+![删除用户](/img/dataease/xpack/shanchuyonghu2.png)
 
 图 11  删除用户
 

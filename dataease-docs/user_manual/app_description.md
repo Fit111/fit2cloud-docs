@@ -17,41 +17,41 @@ title: 移动端
 - 移动端仅支持查看仪表板资源（数据大屏由于使用场景和分辨率问题，不考虑在移动端支持）；
 - 支持在“我的”中切换当前组织。
 
-![移动端工作台](/img/dataease/newimg/移动端1.png)
+![移动端工作台](/img/dataease/newimg/yidongduan1.png)
 
 图 1  移动端工作台
 
-![移动端仪表板](/img/dataease/newimg/移动端2.png)
+![移动端仪表板](/img/dataease/newimg/yidongduan2.png)
 
 图 2  移动端仪表板
 
-![移动端我的](/img/dataease/newimg/移动端3.png)
+![移动端我的](/img/dataease/newimg/yidongduan3.png)
 
 图 3  移动端我的
 
 可在移动端的编辑界面设置是否【开启移动端】。
 
-![开启移动端](/img/dataease/newimg/开启移动端配置.png)
+![开启移动端](/img/dataease/newimg/kaiqiyidongduanpeizhi.png)
 
 图 4  开启移动端
 
 移动端支持收藏仪表板。
 
-![移动端收藏仪表板](/img/dataease/newimg/移动端支持收藏仪表板1.png)
+![移动端收藏仪表板](/img/dataease/newimg/yidongduanzhichishoucangyibiaoban1.png)
 
 图 5  移动端收藏仪表板
 
-![移动端收藏仪表板](/img/dataease/newimg/移动端支持收藏仪表板2.png)
+![移动端收藏仪表板](/img/dataease/newimg/yidongduanzhichishoucangyibiaoban2.png)
 
 图 6  移动端收藏仪表板
 
 移动端支持展示数据填报，并支持移动端填报数据（数据填报为企业版 X-Pack 功能）。
 
-![移动端数据填报](/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据1.png)
+![移动端数据填报](/img/dataease/newimg/yidongduanzhichizhanshishujutianbao-bingzhichiyidongduantianbaoshuju1.png)
 
 图 7  移动端数据填报
 
-![移动端展示数据填报](/img/dataease/newimg/移动端支持展示数据填报，并支持移动端填报数据2.png)
+![移动端展示数据填报](/img/dataease/newimg/yidongduanzhichizhanshishujutianbao-bingzhichiyidongduantianbaoshuju2.png)
 
 图 8  移动端展示数据填报
 
@@ -61,18 +61,18 @@ title: 移动端
 移动端的布局设计操作相对也比较简单，可点击组件左上角选中后展示在移动端，并可通过拖拉调整组件的位置、大小等；  
 移动端支持自定义背景，可单独设置移动端的背景颜色或背景图片。
 
-![设置移动端样式](/img/dataease/newimg/设置移动端样式.png)
+![设置移动端样式](/img/dataease/newimg/shezhiyidongduanyangshi.png)
 
 图 9  设置移动端样式
 
  移动端组件可设置与 PC 样式同步功能。同步后，移动端组件的样式将与 PC 端保持一致；未同步时，若未单独设置移动端样式，则为最初选中时的 PC 端样式。
 
-![移动端组件PC样式同步](/img/dataease/newimg/移动端组件新增PC样式同步功能.png)
+![移动端组件PC样式同步](/img/dataease/newimg/yidongduanzujianxinzengpcyangshitongbugongneng.png)
 
 图 10  移动端组件PC样式同步
 
 仪表板组件在移动端支持独立样式配置，便于与PC端样式区分，更好地适配移动端展示需求。
 
-![移动端独立样式配置](/img/dataease/newimg/移动端支持独立样式配置2.png)
+![移动端独立样式配置](/img/dataease/newimg/yidongduanzhichiduliyangshipeizhi2.png)
 
 图 11  移动端独立样式配置

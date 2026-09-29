@@ -60,7 +60,7 @@ public class IndexController {
 
 account 获取方式，见下图，可以使用任意符合业务需求的账号，不仅限于 admin 账户，也不推荐使用 admin 账户进行嵌入。
 
-![嵌入式 Token](/img/dataease/embedded/嵌入式%20Token.png)
+![嵌入式 Token](/img/dataease/embedded/qianrushi-token.png)
 
 图 1  嵌入式 Token
 

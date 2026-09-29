@@ -16,13 +16,13 @@ title: 配置 ClickHouse 数据源
 
 步骤二：按照以下步骤，选择 ClickHouse 图标。
 
-![ClickHouse](/img/dataease/datasource_configuration/选择ClickHouse数据源.png)
+![ClickHouse](/img/dataease/datasource_configuration/xuanzeclickhouseshujuyuan.png)
 
 图 1  选择ClickHouse数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![ClickHouse](/img/dataease/datasource_configuration/CH链接信息.png)
+![ClickHouse](/img/dataease/datasource_configuration/chlianjiexinxi.png)
 
 图 2  ClickHouse连接信息
 
@@ -44,6 +44,6 @@ title: 配置 ClickHouse 数据源
 
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
 
-![ClickHouse](/img/dataease/datasource_configuration/CH校验成功.png)
+![ClickHouse](/img/dataease/datasource_configuration/chjiaoyanchenggong.png)
 
 图 3  ClickHouse校验成功

@@ -11,7 +11,7 @@ title: 资源目录与管理
 
 未选中资源时，右侧提示从左侧选择。选中后标题旁可收藏，并显示创建人等信息。
 
-![选中表格预览](/img/dataease/newimg/xpack/02_选中表格预览.png)
+![选中表格预览](/img/dataease/newimg/xpack/02-xuanzhongbiaogeyulan.png)
 
 图 1  选中表格预览
 
@@ -25,7 +25,7 @@ title: 资源目录与管理
 | 标题旁【新建表格】图标 | 新建电子表格并进入编辑 |
 | 文件夹行【+】菜单 | 【新建表格】【新建文件夹】，在指定文件夹下创建 |
 
-![文件夹新建菜单](/img/dataease/newimg/xpack/文件夹新建菜单.png)
+![文件夹新建菜单](/img/dataease/newimg/xpack/wenjianjiaxinjiancaidan.png)
 
 图 2  文件夹新建菜单
 
@@ -34,7 +34,7 @@ title: 资源目录与管理
 - **搜索**：在目录区搜索框按名称过滤资源；
 - **排序**：点击筛选图标，支持按时间升序 / 降序、按名称升序 / 降序。
 
-![目录排序](/img/dataease/newimg/xpack/目录排序下拉.png)
+![目录排序](/img/dataease/newimg/xpack/mulupaixuxiala.png)
 
 图 3  目录排序下拉
 
@@ -50,7 +50,7 @@ title: 资源目录与管理
 | 重命名 | 修改表格或文件夹名称 |
 | 删除 | 删除资源；删除文件夹会同时删除其下全部资源 |
 
-![表格更多菜单](/img/dataease/newimg/xpack/表格更多菜单.png)
+![表格更多菜单](/img/dataease/newimg/xpack/biaogegengduocaidan.png)
 
 图 4  表格更多菜单
 
@@ -76,7 +76,7 @@ title: 资源目录与管理
 
 右下角可开启指标高亮、网格展示，并用滑块调整电子表格的显示占比（缩放）。
 
-![表格预览区操作](/img/dataease/newimg/xpack/表格预览区操作.png)
+![表格预览区操作](/img/dataease/newimg/xpack/biaogeyulanqucaozuo.png)
 
 图 5  表格预览区操作
 

@@ -8,7 +8,7 @@ title: v3.1.0
 
 新增箱线图，位于【分布图】分类下，可用于展示数据分布、四分位与异常点。支持配置类别轴、子类别与数值指标。
 
-![新增箱线图](/img/dataease/newimg/v3.1.0-箱线图.png)
+![新增箱线图](/img/dataease/newimg/v3-1-0-xiangxiantu.png)
 
 图 1  新增箱线图
 
@@ -24,7 +24,7 @@ title: v3.1.0
 
 图表图例新增平铺展示方式，并支持滚动与自适应占位，适配图例项较多的场景。
 
-![图例平铺滚动](/img/dataease/newimg/v3.1.0-图例平铺滚动.png)
+![图例平铺滚动](/img/dataease/newimg/v3-1-0-tulipingpugundong.png)
 
 图 2  图例平铺与滚动显示
 
@@ -38,11 +38,11 @@ title: v3.1.0
 - 表格自定义汇总支持校验；
 - 透视表总计行列支持自定义背景颜色和字体样式。
 
-![表格自定义汇总支持校验](/img/dataease/newimg/v3.1.0-表格自定义汇总支持校验.png)
+![表格自定义汇总支持校验](/img/dataease/newimg/v3-1-0-biaogezidingyihuizongzhichijiaoyan.png)
 
 图 3  表格自定义汇总支持校验
 
-![透视表总计行列样式](/img/dataease/newimg/v3.1.0-透视表总计行列样式.png)
+![透视表总计行列样式](/img/dataease/newimg/v3-1-0-toushibiaozongjihanglieyangshi.png)
 
 图 4  透视表总计行列自定义背景颜色和字体样式
 
@@ -52,7 +52,7 @@ title: v3.1.0
 
 数据源新增 GaussDB 类型（OLTP 分类），可对接 GaussDB 数据库创建数据集与图表。
 
-![新增 GaussDB 数据源](/img/dataease/newimg/v3.1.0-新增GaussDB数据源.png)
+![新增 GaussDB 数据源](/img/dataease/newimg/v3-1-0-xinzenggaussdbshujuyuan.png)
 
 图 5  新增 GaussDB 数据源
 
@@ -60,7 +60,7 @@ title: v3.1.0
 
 系统参数中的【引擎设置】支持将数据引擎配置为 StarRocks。
 
-![引擎设置支持 StarRocks](/img/dataease/newimg/v3.1.0-引擎设置支持StarRocks.png)
+![引擎设置支持 StarRocks](/img/dataease/newimg/v3-1-0-yinqingshezhizhichistarrocks.png)
 
 图 6  引擎设置支持 StarRocks
 
@@ -76,7 +76,7 @@ title: v3.1.0
 
 新建链接默认仅查看，权限仅对当前公共链接生效；分享页面仍遵循仪表板或数据大屏的按钮显示设置，允许权限不会重新显示已隐藏的按钮。
 
-![公共链接访客操作权限](/img/dataease/newimg/v3.1.0-公共链接访客操作权限.png)
+![公共链接访客操作权限](/img/dataease/newimg/v3-1-0-gonggonglianjiefangkecaozuoquanxian.png)
 
 图 7  公共链接访客操作权限
 
@@ -86,7 +86,7 @@ title: v3.1.0
 
 电子表格中的明细表支持自定义汇总：在指标字段旁打开设置，可配置【自定义聚合公式】（字段表达式与函数引用）。
 
-![电子表格明细表自定义汇总](/img/dataease/newimg/v3.1.0-电子表格明细表自定义汇总.png)
+![电子表格明细表自定义汇总](/img/dataease/newimg/v3-1-0-dianzibiaogemingxibiaozidingyihuizong.png)
 
 图 8  电子表格明细表自定义汇总
 
@@ -95,11 +95,11 @@ title: v3.1.0
 - 电子表格支持收藏与最近使用；
 - 电子表格支持嵌入到其他页面或系统中使用。
 
-![电子表格支持收藏](/img/dataease/newimg/v3.1.0-电子表格支持收藏.png)
+![电子表格支持收藏](/img/dataease/newimg/v3-1-0-dianzibiaogezhichishoucang.png)
 
 图 9  电子表格支持收藏
 
-![电子表格最近使用](/img/dataease/newimg/v3.1.0-电子表格最近使用.png)
+![电子表格最近使用](/img/dataease/newimg/v3-1-0-dianzibiaogezuijinshiyong.png)
 
 图 10  工作台最近使用中的电子表格
 
@@ -109,6 +109,6 @@ title: v3.1.0
 
 默认系统变量新增「组织名」，可在权限、过滤等场景中引用当前用户所属组织名称。
 
-![系统变量新增组织名](/img/dataease/newimg/v3.1.0-系统变量新增组织名.png)
+![系统变量新增组织名](/img/dataease/newimg/v3-1-0-xitongbianliangxinzengzuzhiming.png)
 
 图 11  系统变量新增组织名

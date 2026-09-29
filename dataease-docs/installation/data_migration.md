@@ -92,7 +92,7 @@ java -jar dataease-migration-1.0.0.jar
 
 确认目标库可被覆盖后，点击「执行迁移」。页面日志会显示各阶段进度。填写完成后如下图所示：
 
-![迁移填写信息](/img/dataease/installation/迁移填写信息.png)
+![迁移填写信息](/img/dataease/installation/qianyitianxiexinxi.png)
 
 图 1  填写连接信息
 
@@ -114,7 +114,7 @@ java -jar dataease-migration-1.0.0.jar --migration.files.copy-sync-task-logs=tru
 
 操作日志出现「迁移任务成功完成」即表示本次迁移结束，如下图所示：
 
-![迁移任务成功](/img/dataease/installation/迁移任务成功.png)
+![迁移任务成功](/img/dataease/installation/qianyirenwuchenggong.png)
 
 图 2  迁移任务成功
 

@@ -8,7 +8,7 @@ title: 产品介绍
 DataEase 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。  
 DataEase 支持丰富的数据源连接，能够通过拖拉拽方式快速制作图表，并可以方便地与他人分享。
 
-![功能架构图](/img/dataease/newimg/product_acceptance/功能架构图.png)
+![功能架构图](/img/dataease/newimg/product_acceptance/gongnengjiagoutu.png)
 
 图 1  功能架构图
 
@@ -20,7 +20,7 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 
 ## 1 界面展示
 
-![界面展示图](/img/dataease/newimg/product_acceptance/界面介绍.gif)
+![界面展示图](/img/dataease/newimg/product_acceptance/jiemianjieshao.gif)
 
 图 2  界面介绍
 
@@ -28,7 +28,7 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 
 模板市场链接地址：[https://templates.dataease.cn](https://templates.dataease.cn) 。
 
-![模板市场图](/img/dataease/newimg/product_acceptance/模板市场.png)
+![模板市场图](/img/dataease/newimg/product_acceptance/mubanshichang.png)
 
 图 3  模板市场
 
@@ -49,7 +49,7 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 
 ## 5 版本对比
 
-![版本对比图](/img/dataease/newimg/product_acceptance/版本对比.jpg)
+![版本对比图](/img/dataease/newimg/product_acceptance/banbenduibi.jpg)
 
 图 4  版本对比
 
@@ -70,7 +70,7 @@ DataEase 功能架构分为数据准备、可视化分析和工作台三层：
 <br />
 :::
 
-![书籍封面](/img/dataease/newimg/ad/数据可视化分析与实践书籍封面.jpg)
+![书籍封面](/img/dataease/newimg/ad/shujukeshihuafenxiyushijianshujifengmian.jpg)
 
 图 5  书籍封面
 

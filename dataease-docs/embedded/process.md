@@ -12,7 +12,7 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 在 DataEase 中创建嵌入式应用后，首先获取其 APP ID 和 APP Secret，同时获取 DataEase 用户账号。使用这些信息生成 token，并利用生成的 token 进行认证。引入 DataEase 提供的嵌入式 js 文件后，使用指定参数创建 DataEaseBi 对象，并渲染 DIV 容器即可实现嵌入式应用的集成与展示。
 
-![2. DataEase 嵌入式流程.jpg](/img/dataease/embedded/2.%20DataEase%20嵌入式流程.jpg)
+![2. DataEase 嵌入式流程.jpg](/img/dataease/embedded/2-dataease-qianrushiliucheng.jpg)
 
 图 1  DataEase 嵌入式流程
 
@@ -20,7 +20,7 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 在 DataEase 中创建嵌入式应用后，首先获取其 APP ID 和 APP Secret，同时获取 DataEase 用户账号。使用这些信息生成 token，并利用生成的 token 进行认证。使用 postMessage 通信并传入相应参数，即可实现嵌入式应用的集成与展示。
 
-![2. DataEase 嵌入式流程（2）.jpg](/img/dataease/embedded/2.%20DataEase%20嵌入式流程（2）.jpg)
+![2. DataEase 嵌入式流程（2）.jpg](/img/dataease/embedded/2-dataease-qianrushiliucheng-2.jpg)
 
 图 2  DataEase 嵌入式流程
 
@@ -46,15 +46,15 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 - APP Secret ：嵌入式获取 JWT token 需要填写的 Secret。
 
-![嵌入式 APP 创建](/img/dataease/embedded/嵌入式%20APP%20创建.png)
+![嵌入式 APP 创建](/img/dataease/embedded/qianrushi-app-chuangjian.png)
 
 图 3  嵌入式 APP 创建
 
-![嵌入式 APP 创建（2）](/img/dataease/embedded/嵌入式%20APP%20创建（2）.png)
+![嵌入式 APP 创建（2）](/img/dataease/embedded/qianrushi-app-chuangjian-2.png)
 
 图 4  嵌入式 APP 创建
 
-![嵌入式 APP 创建（3）](/img/dataease/embedded/嵌入式%20APP%20创建（3）.png)
+![嵌入式 APP 创建（3）](/img/dataease/embedded/qianrushi-app-chuangjian-3.png)
 
 图 5  嵌入式 APP 创建
 
@@ -101,20 +101,20 @@ DataEase 支持使用 Iframe 以及 DIV 进行嵌入，两种方法的流程如�
 
 数据大屏 ID（编辑或预览界面均可获取） 及图表 ID 获取。
 
-![1数据大屏id.jpg](/img/dataease/embedded/1数据大屏id.jpg)
+![1数据大屏id.jpg](/img/dataease/embedded/1shujudapingid.jpg)
 
 图 6  数据大屏 ID
 
-![1数据大屏-图表 id.jpg](/img/dataease/embedded/1数据大屏-图表%20id.jpg)
+![1数据大屏-图表 id.jpg](/img/dataease/embedded/1shujudaping-tubiao-id.jpg)
 
 图 7  数据大屏图表 ID
 
 仪表板 ID（编辑或预览界面均可获取） 以及图表 ID  获取。
 
-![1图表id.jpg](/img/dataease/embedded/1图表id.jpg)
+![1图表id.jpg](/img/dataease/embedded/1tubiaoid.jpg)
 
 图 8  图表 ID
 
-![1仪表板-图表id.jpg](/img/dataease/embedded/1仪表板-图表id.jpg)
+![1仪表板-图表id.jpg](/img/dataease/embedded/1yibiaoban-tubiaoid.jpg)
 
 图 9  仪表板图表 ID

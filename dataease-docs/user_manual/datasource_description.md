@@ -8,13 +8,13 @@ title: 数据源概述
 点击【数据准备】，进入【数据源】管理功能模块。点击右上角可进行编辑选择的数据源。  
 该页面包括数据连接的新增（序号 1）、搜索（序号 2）、复制（序号 3）、移动（序号 4）、重命名（序号 5）、删除（序号 6）等功能。
 
-![数据源概览](/img/dataease/newimg/user_manual/数据源概览.png)
+![数据源概览](/img/dataease/newimg/user_manual/shujuyuangailan.png)
 
 图 1  数据源概览
 
 成功添加数据源后，支持获取数据源数据表以及数据集字段的描述信息
 
-![数据表与字段描述](/img/dataease/newimg/支持获取数据源数据表以及数据集字段的描述信息.png)
+![数据表与字段描述](/img/dataease/newimg/zhichihuoqushujuyuanshujubiaoyijishujujiziduandemiaoshuxinxi.png)
 
 图 2  数据表与字段描述
 
@@ -26,7 +26,7 @@ title: 数据源概述
 - **数据文件：** Excel、CSV
 - **API 数据源：** API、飞书数据源（插件）
 
-![支持数据源类型](/img/dataease/newimg/user_manual/支持数据源类型.png)
+![支持数据源类型](/img/dataease/newimg/user_manual/zhichishujuyuanleixing.png)
 
 图 3  数据源类型
 
@@ -52,13 +52,13 @@ title: 数据源概述
 
 支持 ssh 隧道方式，通过跳板机连接其他网络环境中的数据源。支持密码和密钥两种方式。
 
-![数据源ssh隧道](/img/dataease/newimg/数据源支持ssh隧道.png)
+![数据源ssh隧道](/img/dataease/newimg/shujuyuanzhichisshsuidao.png)
 
 图 4  数据源ssh隧道
 
 支持设置连接数、查询超时。
 如果在数据源校验时成功，但是创建数据集时出现"数据源无效"的报错，请减少连接数的再次尝试。
 
-![校验成功](/img/dataease/newimg/数据源高级设置.png)
+![校验成功](/img/dataease/newimg/shujuyuangaojishezhi.png)
 
 图 5  高级设置

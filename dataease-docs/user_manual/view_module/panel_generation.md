@@ -36,6 +36,6 @@ title: 图表概述
 - 【序号 11】：数据刷新按钮
 - 【序号 12】：图表展示
 
-![视图主功能区](/img/dataease/view_generation/数据大屏图表功能区.png)
+![视图主功能区](/img/dataease/view_generation/shujudapingtubiaogongnengqu.png)
 
 图 1  图表功能区

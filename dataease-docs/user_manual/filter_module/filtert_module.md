@@ -11,31 +11,31 @@ title: 查询组件概览
 - 【序号 3】：设置查询组件的样式，包括标题、边框、展示按钮、标签位置等；
 - 【序号 4】：选择数据集，并将数据集的字段拖拽至查询组件中。
 
-![查询组件_标题设置](/img/dataease/dashboard_generation/查询组件.png)
+![查询组件_标题设置](/img/dataease/dashboard_generation/chaxunzujian.png)
 
 图 1  查询组件
 
 如下图所示，选择数据集，并将数据集中的区域字段拖拽至查询组件中。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件拖拽字段.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/guolvzujiantuozhuaiziduan.png)
 
 图 2  过滤组件拖拽字段
 
 支持在【展示按钮】处去掉【查询】的勾选，在不展示【查询】按钮的情况下，选择完下拉选项后会立即触发数据查询。
 
-![查询组件无查询按钮直接查询](/img/dataease/dashboard_generation/查询组件支持无查询按钮直接查询.png)
+![查询组件无查询按钮直接查询](/img/dataease/dashboard_generation/chaxunzujianzhichiwuchaxunanniuzhijiechaxun.png)
 
 图 3  查询组件无查询按钮直接查询
 
 如下图所示，点击查询组件的编辑按钮，设置查询条件。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件编辑.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/guolvzujianbianji.png)
 
 图 4  过滤组件编辑
 
 查询组件支持下拉选项设置为必填。
 
-![添加查询组件](/img/dataease/newimg/添加查询组件.png)
+![添加查询组件](/img/dataease/newimg/tianjiachaxunzujian.png)
 
 图 5  添加查询组件
 
@@ -50,11 +50,11 @@ title: 查询组件概览
 
 当绑定参数时，选项值来源不能为自动，否则选项值为空。因此当绑定了图表的参数时，将选项值来源的「自动」选项置灰，为不可用状态。
 
-![查询组件绑定参数的方式优化](/img/dataease/newimg/查询组件绑定参数的方式优化.png)
+![查询组件绑定参数的方式优化](/img/dataease/newimg/chaxunzujianbangdingcanshudefangshiyouhua.png)
 
 图 6  查询组件绑定参数的方式优化
 
-![查询组件绑定参数的方式优化](/img/dataease/newimg/查询组件绑定参数的方式优化2.png)
+![查询组件绑定参数的方式优化](/img/dataease/newimg/chaxunzujianbangdingcanshudefangshiyouhua2.png)
 
 图 7  查询组件绑定参数的方式优化
 
@@ -62,15 +62,15 @@ title: 查询组件概览
 
 进行选项选择，并点击【查询】后，被关联的图表中只显示选中的区域的数据。如果是多选，在勾选完点击【确认】后，再点击【查询】。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/进行查询.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/jinxingchaxun.png)
 
 图 8  进行查询
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件选项多选确认.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/guolvzujianxuanxiangduoxuanqueren.png)
 
 图 9  过滤组件选项多选确认
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/过滤组件多选确定.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/guolvzujianduoxuanqueding.png)
 
 图 10  过滤组件多选确定
 
@@ -80,11 +80,11 @@ title: 查询组件概览
 - 选项值来源为数据集；
 - 支持跨源级联，目前初版仅支持 2 级级联。
 
-![查询组件级联设置](/img/dataease/dashboard_generation/查询组件支持级联设置1.png)
+![查询组件级联设置](/img/dataease/dashboard_generation/chaxunzujianzhichijilianshezhi1.png)
 
 图 11  查询组件级联设置
 
-![查询组件级联设置](/img/dataease/dashboard_generation/查询组件支持级联设置2.png)
+![查询组件级联设置](/img/dataease/dashboard_generation/chaxunzujianzhichijilianshezhi2.png)
 
 图 12  查询组件级联设置
 
@@ -95,7 +95,7 @@ title: 查询组件概览
 - 仪表板主画布中，可设置查询组件位置为【置顶】或【默认】；同一仪表板仅允许一个置顶查询组件。
 - 支持组件背景设置，包括内边距、圆角、背景颜色、背景图片等。
 
-![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置.png)
+![查询组件_输入框](/img/dataease/dashboard_generation/zujianyangshishezhi.png)
 
 图 13  组件样式设置
 
@@ -104,7 +104,7 @@ title: 查询组件概览
 - 支持统一设置查询条件间距、查询条件高度（高度最小 32）。
 - 开启【自定义条件样式】后，可设置输入文字颜色与字号；并可按单个查询条件分别设置提示词、查询条件宽度（宽度最小 100）。
 
-![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置1.png)
+![查询组件_输入框](/img/dataease/dashboard_generation/zujianyangshishezhi1.png)
 
 图 14  组件样式设置
 
@@ -113,7 +113,7 @@ title: 查询组件概览
 - 支持调整标签位置：【上侧】或【左侧】。
 - 支持设置标签文字颜色、字号、加粗、斜体，以及名称与选框间距。
 
-![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置2.png)
+![查询组件_输入框](/img/dataease/dashboard_generation/zujianyangshishezhi2.png)
 
 图 15  组件样式设置
 
@@ -122,21 +122,21 @@ title: 查询组件概览
 - 展示【查询】时，需点击后才触发图表查询；不展示时，选择完查询条件后立即触发查询。
 - 支持设置按钮颜色，以及按钮文字颜色、字号、加粗、斜体。
 
-![查询组件_输入框](/img/dataease/dashboard_generation/组件样式设置3.png)
+![查询组件_输入框](/img/dataease/dashboard_generation/zujianyangshishezhi3.png)
 
 图 16  组件样式设置
 
 仪表板查询组件支持顶部冻结，当选择【置顶】时，查询组件在仪表板滚动至其触及画布上边界时会自动固定在顶部。    
 **注意：每个仪表板仅支持一个查询组件置顶，若已有置顶查询组件，再次置顶其他查询组件时，原有组件将自动取消置顶。**
 
-![仪表板查询组件顶部冻结](/img/dataease/newimg/仪表板查询组件支持顶部冻结1.png)
+![仪表板查询组件顶部冻结](/img/dataease/newimg/yibiaobanchaxunzujianzhichidingbudongjie1.png)
 
 图 17  仪表板查询组件顶部冻结
 
-![仪表板查询组件顶部冻结](/img/dataease/newimg/仪表板查询组件支持顶部冻结2.png)
+![仪表板查询组件顶部冻结](/img/dataease/newimg/yibiaobanchaxunzujianzhichidingbudongjie2.png)
 
 图 18  仪表板查询组件顶部冻结
 
-![仪表板查询组件滚动](/img/dataease/newimg/仪表板查询组件滚动.gif)
+![仪表板查询组件滚动](/img/dataease/newimg/yibiaobanchaxunzujiangundong.gif)
 
 图 19  仪表板查询组件滚动
