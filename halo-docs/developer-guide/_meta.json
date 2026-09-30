@@ -1,10 +1,5 @@
 [
   {
-    "type": "file",
-    "name": "index",
-    "label": "内容导航"
-  },
-  {
     "type": "dir",
     "name": "core",
     "label": "系统开发",

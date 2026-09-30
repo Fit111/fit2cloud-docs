@@ -15,15 +15,9 @@ const sidebars = {
       "key": "cat:guide",
       "items": [
         {
-          "type": "doc",
-          "id": "guide/index",
-          "label": "内容导航",
-          "key": "doc:guide/index"
-        },
-        {
           "type": "category",
           "label": "入门",
-          "key": "cat:guide#1:入门",
+          "key": "cat:guide#0:入门",
           "collapsed": false,
           "items": [
             {
@@ -96,12 +90,6 @@ const sidebars = {
                   "items": [
                     {
                       "type": "doc",
-                      "id": "guide/install/cloud/index",
-                      "label": "内容导航",
-                      "key": "doc:guide/install/cloud/index"
-                    },
-                    {
-                      "type": "doc",
                       "id": "guide/install/cloud/alibaba-cloud-computenest",
                       "key": "doc:guide/install/cloud/alibaba-cloud-computenest"
                     },
@@ -125,12 +113,6 @@ const sidebars = {
                   "items": [
                     {
                       "type": "doc",
-                      "id": "guide/install/other/index",
-                      "label": "内容导航",
-                      "key": "doc:guide/install/other/index"
-                    },
-                    {
-                      "type": "doc",
                       "id": "guide/install/other/nginxproxymanager",
                       "key": "doc:guide/install/other/nginxproxymanager"
                     },
@@ -148,7 +130,7 @@ const sidebars = {
         {
           "type": "category",
           "label": "开始使用",
-          "key": "cat:guide#5:开始使用",
+          "key": "cat:guide#4:开始使用",
           "collapsed": false,
           "items": [
             {
@@ -350,7 +332,7 @@ const sidebars = {
         {
           "type": "category",
           "label": "其他",
-          "key": "cat:guide#12:其他",
+          "key": "cat:guide#11:其他",
           "collapsed": false,
           "items": [
             {
@@ -373,12 +355,6 @@ const sidebars = {
       "label": "开发者指南",
       "key": "cat:developer-guide",
       "items": [
-        {
-          "type": "doc",
-          "id": "developer-guide/index",
-          "label": "内容导航",
-          "key": "doc:developer-guide/index"
-        },
         {
           "type": "category",
           "label": "系统开发",
@@ -1369,7 +1345,7 @@ const sidebars = {
         {
           "type": "category",
           "label": "通用参考",
-          "key": "cat:developer-guide#6:通用参考",
+          "key": "cat:developer-guide#5:通用参考",
           "collapsed": false,
           "items": [
             {
