@@ -10,4 +10,4 @@ Halo 是一款强大易用的开源建站工具，可以通过丰富的主题和
 - 多种部署方式：支持 Docker、Docker Compose、Helm、宝塔面板、1Panel、云平台等多种安装方式。
 - 开放 API：提供 RESTful API 与完善的插件/主题开发接口。
 
-> 使用文档请见[使用指南](/halo/guide/)，开发文档请见[开发者指南](/halo/developer-guide/)。如需更多帮助，可访问 [Halo 官网](https://www.halo.run/) 或社区论坛。
+> 使用文档请见[使用指南](/halo/guide/prepare)，开发文档请见[开发者指南](/halo/developer-guide/core/prepare)。如需更多帮助，可访问 [Halo 官网](https://www.halo.run/) 或社区论坛。
