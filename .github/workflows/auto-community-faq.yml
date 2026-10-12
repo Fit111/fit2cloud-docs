@@ -65,9 +65,34 @@
 #
 # 分支策略:
 #   - 固定分支 chore/weekly-community-faq 每次以 main 最新为基线重建（**不做 rebase**，见下），
-#     并把上期分支里那一个页面取回来，累积尚未合并的条目；
+#     页面内容**永远百分之百取自 main**；上期分支只作为「待续接条目的来源」，由脚本做条目级续接
+#     （**永不整份覆盖、永不文件级合并**）；
 #   - PR 以**草稿态**创建，供人工核对内容与措辞后再合并；
 #   - 不直接改 main。
+#
+# 固定分支的维护方式（2026-10-12 修复，务必先读）:
+#   本任务只改一个文件（jumpserver-docs/faq/community_faq.md），且全程不做 rebase（避免拉完整历史）。
+#   做法是：以 origin/main 为基线新建固定分支，**当前页面一律取自 main**，
+#   上期分支只被当作「待续接条目的来源」，由脚本做**条目级**续接（见下）。
+#
+#   ⚠️ 两次踩坑记录，改这一步骤前必须读完：
+#   [坑 1｜整份覆盖] 最初是 `git checkout FETCH_HEAD -- <页面>`——用上期分支的**整份**文件
+#     覆盖当前工作区。上期分支是个「世代相传的快照」，凡是 main 上已有、而上期分支还停在旧版
+#     的内容，都会被静默回退。实测事故：前端标题被还原成旧名（`常见问题`→`社区常见问题`）、
+#     已改好的正文错别字（`DOMAINS`←`DOAMINS`）被改回旧版，且**每周复发**。
+#   [坑 2｜三方合并] 改用行级三方合并（git merge-file，base=上期基线）同样无效。实测证明
+#     上期基线（上期分支父提交里的该页面）与当前 main 的该页面**逐字节相同**；三方合并里
+#     base == ours 时，theirs 的每一处差异（正是那些回退内容）都会被当成「新增改动」重放回来。
+#     根因：这个长寿命累积分支没有干净的 base，差异里混着回退，任何文件级合并都无法把
+#     「上期真正新增的条目」和「陈旧回退」分开。
+#
+#   → 最终方案：**文件级合并不做，只做条目级续接**。workflow 只把上期分支的该页面导出到
+#     临时文件（绝不写入工作区），由 community_faq.py 的 `--reuse-page` 解析出其中多出来的
+#     `### N.N` 条目块，按当前页面判重后追加。页面其余部分（front matter、标题、正文）
+#     百分之百来自最新 main。脚本侧实现在 `reuse_entries_from_page()`，那里也记了这段事故。
+#   ⚠️ 改动本步骤前务必同时意识到：① 不做 rebase 是硬约束；② 不得退回文件级覆盖/合并。
+#   长期正解：合入 PR 后删除固定分支（开启仓库 "Automatically delete head branches"），
+#     让 `--reuse-page` 自然落空，避免长期累积分支越拖越脏。
 #
 # 跨境链路（重要，2026-09-24 实测）:
 #   - 本仓库当前版本就 ~1.9GB / 8393 个文件、全历史 pack ~1.4GB，而本任务只需 0.92MB
@@ -89,7 +114,7 @@
 # 注意:
 #   - schedule 只在仓库默认分支(main)上生效；放在功能分支时只能用 workflow_dispatch。
 #   - 上期 PR 若是 **squash 合并**：本 workflow 不依赖提交历史（以 main 为基线重建分支 +
-#     取回上期页面），因此 squash 合并不再引起任何冲突或历史问题。
+#     从基线快照里取上期新增条目），因此 squash 合并不再引起任何冲突或历史问题。
 #   - 在 fork 上测试时：fork 的定时任务默认关闭，用 workflow_dispatch 手动跑即可；
 #     ⚠️ 不要在 fork 上启用定时，否则 fork 与 upstream 会各开一个重复的 PR。
 #
@@ -376,11 +401,13 @@ jobs:
 
       # 基线固定取本仓库当前 main 的最新提交（PR 的目标就是它）。
       # ⚠️ 这里**不做 rebase**（2026-09-24 改）：变基要算 origin/BRANCH 与 origin/main 的公共祖先，
-      # 会强迫 checkout 拉完整历史 —— 跨境 1.4GB，实测必失败。而本分支**只动一个文件**（FAQ_PAGE），
-      # 所以用「以 main 为基线新建分支 + git checkout 取回上期分支里的该文件」等价替代：
-      # 结果同样是「main 的最新内容 + 上期尚未合并的条目」，且只需浅历史。
-      # 唯一的边界情况：若 main 上的该页面被人工改过、而分支版本更旧，则会把旧内容带回来 ——
-      # 这在 PR diff 里表现为删除行，人工合并时可见（旧实现的 rebase 冲突回退反而会丢掉上期条目）。
+      # 会强迫 checkout 拉完整历史 —— 跨境 1.4GB，实测必失败。本分支**只动一个文件**（FAQ_PAGE）。
+      #
+      # ⚠️ 2026-10-12 修复（第二次）：曾经先用 `git checkout FETCH_HEAD -- <页面>` 整份覆盖，
+      # 后改 `git merge-file` 三方合并，两者都被实测证伪（覆盖会回退 main 上的人工修改且每周复发；
+      # 三方合并的 base 与 ours 逐字节相同，等于把回退内容当新增重放）。
+      # 现在**不再把上期分支的文件写进工作区**：只导出到临时文件，交给脚本按条目续接。
+      # 详细踩坑记录见文件头「固定分支的维护方式」。
       - name: Prepare fixed branch
         id: base
         run: |
@@ -396,17 +423,22 @@ jobs:
           echo "base_ref=${BASE_REF}" >> "$GITHUB_OUTPUT"
           echo "工作基线 ${BASE_REF} = $(git rev-parse --short "${BASE_REF}")"
 
-          # 首跑与续跑都从干净的基线重建固定分支
+          # 首跑与续跑都从干净的基线重建固定分支：页面内容永远是 main 的最新版
           git checkout -B "${BRANCH}" "${BASE_REF}"
 
+          # 上期分支只作为「待续接条目」的来源，导出成临时文件即可，**不写入工作区**
+          PREV_PAGE_FILE="${RUNNER_TEMP}/community-faq-prev-page.md"
+          rm -f "${PREV_PAGE_FILE}"
+          echo "prev_page=${PREV_PAGE_FILE}" >> "$GITHUB_OUTPUT"
           if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
-            echo "固定分支 ${BRANCH} 已存在，取回其上期的 ${FAQ_PAGE}（保留尚未合并的条目）"
-            git fetch --no-tags --depth=1 --force origin \
-              "+refs/heads/${BRANCH}:refs/remotes/origin/${BRANCH}"
-            if git checkout FETCH_HEAD -- "${FAQ_PAGE}"; then
-              echo "已取回上期页面，本周新增将叠加在其后"
+            echo "固定分支 ${BRANCH} 已存在，导出其上期页面用于条目级续接（main 上的人工修改不受影响）"
+            if git fetch --no-tags --depth=1 --force origin \
+                 "+refs/heads/${BRANCH}:refs/remotes/origin/${BRANCH}" \
+               && git show "refs/remotes/origin/${BRANCH}:${FAQ_PAGE}" > "${PREV_PAGE_FILE}" 2>/dev/null; then
+              echo "已导出上期页面：$(wc -c < "${PREV_PAGE_FILE}") 字节"
             else
-              echo "::warning::上期分支中不存在 ${FAQ_PAGE}，按全新生成处理"
+              rm -f "${PREV_PAGE_FILE}"
+              echo "::warning::取回上期分支失败，退化为仅在 ${BASE_REF} 上新增（本期将不含上期未合并条目）"
             fi
           else
             # 远端没有该分支：首跑，或上期 PR 合并后分支被「自动删除分支」清掉了。
@@ -423,6 +455,8 @@ jobs:
           REPORT: ${{ runner.temp }}/community-faq-report.md
           PAIRS: ${{ runner.temp }}/community-faq-pairs.json
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          # 上期固定分支页面（仅用于条目级续接，**绝不覆盖当前页面**，见 Prepare fixed branch）
+          PREV_PAGE: ${{ steps.base.outputs.prev_page }}
         run: |
           set -e
           APPLY_FLAG="--apply"
@@ -431,6 +465,20 @@ jobs:
             APPLY_FLAG=""
           fi
 
+          REUSE_FLAG=""
+          if [ -n "${PREV_PAGE}" ] && [ -f "${PREV_PAGE}" ]; then
+            echo "发现上期页面 ${PREV_PAGE}，将做条目级续接（只补 main 上还没有的条目）"
+            REUSE_FLAG="--reuse-page ${PREV_PAGE}"
+          else
+            echo "无上期页面可比对（首跑或上期分支已删除），本期按全新生成处理"
+          fi
+          # ${REUSE_FLAG} 是按空格拆分的，路径里出现空白字符会拆错参数 —— 先挡住
+          case "${PREV_PAGE}" in
+            *[[:space:]]*)
+              echo "::warning::上期页面路径含空白字符，跳过条目级续接以策安全：${PREV_PAGE}"
+              REUSE_FLAG="" ;;
+          esac
+
           set +e
           python3 .github/scripts/community_faq.py \
             --days "${{ github.event.inputs.days || '8' }}" \
@@ -438,6 +486,7 @@ jobs:
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
             --report "${REPORT}" \
             --dump-pairs "${PAIRS}" \
+            ${REUSE_FLAG} \
             ${APPLY_FLAG}
           code=$?
           set -e
