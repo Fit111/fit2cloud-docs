@@ -330,8 +330,14 @@ def parse_br(note: str):
                 head = lines[0]
                 rest = [re.sub(r'^[●•·]\s*', '', x) for x in lines[1:]]
                 if rest:
-                    desc = ''.join(x if x.endswith(('；', '。', ';', '.')) else x + '；' for x in rest)
-                    items.append('%s：%s' % (head, desc.rstrip('；;')))
+                    # 已以冒号、句号、分号收尾的行直接衔接，避免「包括：；下一条」
+                    parts = []
+                    for x in rest:
+                        if parts and not parts[-1].endswith(('；', '。', ';', '.', '：', ':', '！', '？')):
+                            parts.append('；')
+                        parts.append(x)
+                    desc = ''.join(parts).rstrip('；;')
+                    items.append('%s：%s' % (head, desc))
                 else:
                     items.append(head)
         if items:
