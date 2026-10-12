@@ -844,6 +844,11 @@ const sidebars = {
       "items": [
         {
           "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题"
+        },
+        {
+          "type": "doc",
           "id": "faq/faq",
           "label": "产品 FAQ"
         },
