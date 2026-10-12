@@ -6,9 +6,9 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
 数据流:
     芝麻会话（社区小助手名下 JumpServer 交流群）
       -> 最近 N 天的「客户提问 → 部门同事解答」问答对
-      -> 大模型把近义问题归组，挑出反复出现、且文档可核实的高频问题
-      -> 再按官方文档原文成稿（只允许依据给定文档，并给出引用路径）
-      -> 校验引用路径真实存在、问题未与页面已有条目重复
+      -> 大模型把近义问题归组，挑出**可复用（别人也会问）且有明确答案**的问题
+      -> 再按官方文档原文或官方人员答复成稿（读了正文后才裁决「文档是否已能直接回答」）
+      -> 校验引用路径真实存在（模糊纠错后仍找不到只当没有文档依据）、问题未与页面已有条目重复
       -> 追加到 jumpserver-docs/faq/community_faq.md 对应小节
 
 窗口说明:
@@ -19,17 +19,19 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
     相邻两周因此有约一天重叠，重叠带来的重复问题由页面标题去重拦截。
 
 用法:
-    python .github/scripts/community_faq.py --days 8 --dry-run
+    python .github/scripts/community_faq.py --days 8 --skip-llm     # 只取数+配对，不调模型
+    python .github/scripts/community_faq.py --days 8               # 预览（默认不写回）
     python .github/scripts/community_faq.py --days 8 --apply --max-items 3
-    python .github/scripts/community_faq.py --pairs-json pairs.json --dry-run
-    python .github/scripts/community_faq.py --skip-llm        # 只取数+聚类，不调模型
+    python .github/scripts/community_faq.py --pairs-json pairs.json
 
 环境变量:
     ZHIMA_BASE_URL             芝麻会话管理端地址（无尾斜杠），如 http://host:8002
     ZHIMA_ACCOUNT/PASSWORD     管理端登录账密（用来自动换 token）
     ZHIMA_SCOPE_STAFF_USERID   社区小助手 userid，默认 SheQuXiaoZhuShou
-    ZHIMA_DEPT_STAFF           部门在职名单 JSON，如 [{"name":"张三"},{"name":"李四","aliases":["小李"]}]
-                               未设置时退化为「员工角色且不在机器人黑名单」
+    ZHIMA_DEPT_STAFF           官方人员名单 JSON，如 [{"name":"张三"},{"name":"李四","aliases":["小李"]}]
+                               仅用于**标记**「这是官方人员的答复」（高信任来源），**不做过滤**：
+                               名单外同事的答复仍会保留，只是标记为「普通同事答复」（低信任），
+                               两级来源都交给第二轮按分级标准审核。未设置时全部按普通同事处理
     LLM_BASE_URL               模型网关（OpenAI 兼容），默认 https://ai.fit2cloud.cn/gateway/v1
     LLM_API_KEY                模型 Key
     LLM_MODEL                  模型名，默认 f2c-auto（飞致云 AI 网关自动路由）；置空则列出网关可用模型
@@ -317,36 +319,54 @@ def zhima_staff_directory(token: str) -> list[dict]:
     return out
 
 
-def dept_whitelist(token: str) -> set[str]:
-    """返回「计为解答人」的 userid 集合；未配置 ZHIMA_DEPT_STAFF 时返回空集合。"""
+def staff_roster(token: str) -> tuple[set[str], dict[str, str]]:
+    """返回 (官方人员 userid 集合, userid→姓名 映射)。
+
+    ZHIMA_DEPT_STAFF 只用于**标记**「官方人员」（高信任来源），**不做过滤**：
+    名单外同事的答复仍会保留，只是标记为「普通同事答复」（低信任）。
+
+    姓名映射始终尝试拉取（报告与提示词里要标注「是谁答的」）；目录接口抖动时
+    只记警告、不中断整周任务 —— 名单与姓名退化为空，问答对照常生成。
+    """
     raw = cfg("ZHIMA_DEPT_STAFF")
-    if not raw:
-        return set()
-    try:
-        spec = json.loads(raw)
-    except json.JSONDecodeError as err:
-        raise fail(2, f"ZHIMA_DEPT_STAFF 不是合法 JSON: {err}") from err
-    if isinstance(spec, dict):
-        spec = spec.get("staff") or []
-    if not isinstance(spec, list):
-        raise fail(2, "ZHIMA_DEPT_STAFF 应为 [{\"name\": \"...\"}, ...]")
-
     wanted: list[tuple[str, list[str]]] = []
-    for row in spec:
-        if isinstance(row, str) and row.strip():
-            wanted.append((row.strip(), []))
-        elif isinstance(row, dict) and str(row.get("name") or "").strip():
-            aliases = [str(a).strip() for a in (row.get("aliases") or []) if str(a).strip()]
-            wanted.append((str(row["name"]).strip(), aliases))
-    if not wanted:
-        raise fail(2, "ZHIMA_DEPT_STAFF 里没有有效姓名")
+    if raw:
+        try:
+            spec = json.loads(raw)
+        except json.JSONDecodeError as err:
+            raise fail(2, f"ZHIMA_DEPT_STAFF 不是合法 JSON: {err}") from err
+        if isinstance(spec, dict):
+            spec = spec.get("staff") or []
+        if not isinstance(spec, list):
+            raise fail(2, "ZHIMA_DEPT_STAFF 应为 [{\"name\": \"...\"}, ...]")
+        for row in spec:
+            if isinstance(row, str) and row.strip():
+                wanted.append((row.strip(), []))
+            elif isinstance(row, dict) and str(row.get("name") or "").strip():
+                aliases = [str(a).strip() for a in (row.get("aliases") or []) if str(a).strip()]
+                wanted.append((str(row["name"]).strip(), aliases))
+        if not wanted:
+            raise fail(2, "ZHIMA_DEPT_STAFF 里没有有效姓名")
 
-    directory = zhima_staff_directory(token)
+    try:
+        directory = zhima_staff_directory(token)
+    except SystemExit:
+        raise
+    except Exception as err:  # 目录接口抖动不应让整周任务失败（姓名/标记退化为空即可）
+        log(f"[community_faq] 拉取员工目录失败，解答人姓名与官方标记将为空: {err}")
+        directory = []
+
     by_name: dict[str, str] = {}
+    names: dict[str, str] = {}
     for rec in directory:
         uid = str(rec.get("userid") or "")
-        if uid:
-            by_name[str(rec.get("name") or "").strip()] = uid
+        if not uid:
+            continue
+        name = str(rec.get("name") or "").strip()
+        names[uid] = name or "同事"
+        if name and name not in by_name:
+            by_name[name] = uid
+
     ids: set[str] = set()
     missed: list[str] = []
     for name, aliases in wanted:
@@ -355,8 +375,9 @@ def dept_whitelist(token: str) -> set[str]:
             ids.add(uid)
         else:
             missed.append(name)
-    log(f"[community_faq] 部门名单命中 {len(ids)}/{len(wanted)} 人" + (f"，未匹配: {missed}" if missed else ""))
-    return ids
+    if wanted:
+        log(f"[community_faq] 官方人员名单命中 {len(ids)}/{len(wanted)} 人" + (f"，未匹配: {missed}" if missed else ""))
+    return ids, names
 
 
 def fetch_day_messages(token: str, chat_id: str, day: str) -> list[dict]:
@@ -461,10 +482,18 @@ def strip_trailing_chatter(text: str) -> str:
     return " ".join(parts).strip()
 
 
-def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str, day: str) -> list[dict]:
+def is_staff(msg: dict) -> bool:
+    """我方员工角色且不在机器人黑名单。官方名单只用于**标记**，不参与过滤。"""
+    return str(msg.get("from") or "") not in BOT_USERIDS
+
+
+def extract_pairs(msgs: list[dict], official: set[str], names: dict[str, str],
+                  group: str, day: str) -> list[dict]:
     """按时间序把「客户提问块 → 同事解答块」配对。
 
-    strict=True 时只认白名单 userid；否则认所有员工角色且非机器人。
+    official 是官方人员 userid 集合，**只用于给问答对打标记**（official=True/False），
+    不再据此丢弃名单外同事的回复 —— 名单外同事的答复同样是「员工已答」的证据，
+    只是信任级别更低，交由第二轮按分级来源标准审核（猜测/只给排查方向会被放弃）。
     """
     timed = sorted(
         ((str(m.get("msg_time") or ""), m) for m in msgs if m.get("msg_time")),
@@ -474,15 +503,11 @@ def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str,
     q_buf: list[str] = []
     q_ts = ""
     a_buf: list[str] = []
-
-    def answerer_ok(msg: dict) -> bool:
-        sender = str(msg.get("from") or "")
-        if sender in BOT_USERIDS:
-            return False
-        return sender in allowed if strict else True
+    a_ids: list[str] = []      # 本次解答块的发言人 userid（去重、保持出现顺序）
+    a_names: list[str] = []    # 与 a_ids 一一对应的显示名
 
     def flush() -> None:
-        nonlocal q_buf, a_buf, q_ts
+        nonlocal q_buf, a_buf, q_ts, a_ids, a_names
         q_text = strip_trailing_chatter(clean_text(" ".join(q_buf)))
         a_text = clean_text(" ".join(a_buf))
         if q_text and not is_noise(q_text) and a_text:
@@ -492,8 +517,11 @@ def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str,
                 "time": q_ts[11:16],
                 "question": q_text[:600],
                 "answer": a_text[:1200],
+                "answerer": "、".join(a_names) or "",
+                "answerer_ids": a_ids,
+                "official": any(i in official for i in a_ids),
             })
-        q_buf, a_buf, q_ts = [], [], ""
+        q_buf, a_buf, q_ts, a_ids, a_names = [], [], "", [], []
 
     for ts, msg in timed:
         role = role_of(msg)
@@ -506,9 +534,13 @@ def extract_pairs(msgs: list[dict], allowed: set[str], strict: bool, group: str,
                     q_ts = ts
             if text:
                 q_buf.append(text)
-        elif role == 2 and answerer_ok(msg):  # 我方同事
+        elif role == 2 and is_staff(msg):  # 我方同事
             if q_buf or a_buf:
                 a_buf.append(text)
+                sender = str(msg.get("from") or "")
+                if sender and sender not in a_ids:
+                    a_ids.append(sender)
+                    a_names.append(names.get(sender) or "同事")
     flush()
     return pairs
 
@@ -523,12 +555,11 @@ def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict], dict
     groups = product_groups(zhima_groups(token), keyword)
     if not groups:
         raise fail(1, "没有匹配到任何交流群，请检查 PRODUCT_KEYWORD")
-    allowed = dept_whitelist(token)
-    strict = bool(allowed)
-    if not strict:
-        log("[community_faq] 未配置 ZHIMA_DEPT_STAFF，退化为「员工角色且非机器人」筛选")
+    official, names = staff_roster(token)
+    if official:
+        log("[community_faq] 官方人员 {0} 人：其答复标记为高信任来源，名单外同事的答复仍保留（低信任来源）".format(len(official)))
     else:
-        log(f"[community_faq] 计为解答人的部门同事 {len(allowed)} 人")
+        log("[community_faq] 未配置或未匹配 ZHIMA_DEPT_STAFF，所有员工答复一律按「普通同事答复」处理")
 
     today = date.today()
     day_list = [(today - timedelta(days=i)).isoformat() for i in range(days - 1, -1, -1)]
@@ -551,7 +582,7 @@ def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict], dict
                     log(f"[community_faq] 群 {g['label']} {day} 拉取异常: {err}")
                     continue
                 stats["rows"] += len(rows)
-                day_pairs.extend(extract_pairs(rows, allowed, strict, g["label"], day))
+                day_pairs.extend(extract_pairs(rows, official, names, g["label"], day))
         log(f"[community_faq] {day} 问答对 {len(day_pairs)} 条")
         by_day.append({"date": day, "pairs": len(day_pairs)})
         all_pairs.extend(day_pairs)
@@ -591,7 +622,9 @@ def build_question_digest(pairs: list[dict]) -> str:
     rows: list[tuple[str, str]] = []
     for idx, pair in enumerate(pairs[:DIGEST_MAX_ITEMS]):
         q = scrub_question(pair["question"])[:DIGEST_QUESTION_CHARS]
-        rows.append((normalize_text(q), "[{0}] {1} {2} | {3}".format(idx, pair["date"], pair["group"], q)))
+        flag = "[官方已答] " if pair.get("official") else ""
+        rows.append((normalize_text(q), "[{0}] {1} {2} | {3}{4}".format(
+            idx, pair["date"], pair["group"], flag, q)))
     rows.sort()
     digest = "\n".join(line for _, line in rows)
     log("[community_faq] 第一轮模型输入：提问清单 {0} 行 / {1} 字符".format(len(rows), len(digest)))
@@ -707,6 +740,58 @@ def near_duplicate(title: str, keys: set[str], threshold: float = NEAR_DUP_THRES
     return best if best_score >= threshold else None
 
 
+def resolve_doc_path(raw: str, index: list[str]) -> str:
+    """把模型给出的文档路径纠正为索引里真实存在的路径（精确 -> 逐步放宽）。
+
+    模型经常把目录拼错（例如把 workbench/my_assets/file_transfer.md 写成
+    web_terminal/file_transfer.md）。若严格要求 `raw in index`，一条有价值的问题会因为
+    一个拼错路径被整条判死，所以这里做模糊纠正。
+    确实找不到时返回空字符串——**只表示本条没有文档依据，不表示条目作废**
+    （依据可以来自群内答复）。
+    """
+    p = (raw or "").strip().strip("\"'").split("#", 1)[0].split("?", 1)[0].strip()
+    if not p:
+        return ""
+    low = p.lower()
+    for pref in ("docs/", "jumpserver-docs/", "/"):
+        if low.startswith(pref):
+            p, low = p[len(pref):], low[len(pref):]
+    p = p.lstrip("./")
+    if p in index:
+        return p
+
+    def norm(s: str) -> str:
+        # 忽略大小写与 - _ . / 差异："workbench/my-assets.md" 与 "workbench/my_assets.md" 视为同一篇
+        return re.sub(r"[-_/.]", "", s).lower()
+
+    np = norm(p)
+    if np:
+        hits = [c for c in index if norm(c) == np]
+        if len(hits) == 1:
+            return hits[0]
+
+    name = p.rsplit("/", 1)[-1]
+    same = [c for c in index if c.rsplit("/", 1)[-1] == name]
+    if len(same) == 1:
+        return same[0]
+    if len(same) > 1:
+        # 多个同名文件：选父目录片段命中最多的（模型常只写错中间一层目录）
+        parents = [s for s in p.split("/")[:-1] if s]
+        scored = sorted(same, key=lambda c: -sum(1 for s in parents if s in c.split("/")))
+        if parents and sum(1 for s in parents if s in scored[0].split("/")):
+            return scored[0]
+
+    if "/" in p:
+        suffix = [c for c in index if c.endswith("/" + p)]
+        if len(suffix) == 1:
+            return suffix[0]
+    if np:
+        fuzzy = [c for c in index if np in norm(c)]
+        if len(fuzzy) == 1:
+            return fuzzy[0]
+    return ""
+
+
 def doc_index() -> list[str]:
     out: list[str] = []
     for path in sorted(DOCS_ROOT.rglob("*.md")):
@@ -718,7 +803,18 @@ def doc_index() -> list[str]:
 
 
 def rel_link(doc_path: str) -> str:
-    target = DOCS_ROOT / doc_path
+    """把文档相对路径转成 FAQ 页面可用的相对链接。
+
+    非法路径（空、带协议、绝对路径、含 ..）一律返回空串——宁可少一个链接，
+    也不要在页面里生成指向不存在文档的裸链接（会 404）。
+    """
+    p = (doc_path or "").strip()
+    if not p or "://" in p or p.startswith("/") or ".." in p.split("/"):
+        return ""
+    root = DOCS_ROOT.resolve()
+    target = (root / p).resolve()
+    if str(target) != str(root) and not str(target).startswith(str(root) + os.sep):
+        return ""
     return os.path.relpath(target, FAQ_PAGE.parent).replace(os.sep, "/")
 
 
@@ -779,75 +875,93 @@ PASS1_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的
 ■ 第一原则（最重要）：
   FAQ 不是社区问题的简单搬运，也不是官方文档的二次摘要。
   **相关文档 ≠ 有 FAQ 价值；能回答 ≠ 值得沉淀。**
-  FAQ 只沉淀社区里具有长期复用价值的「疑难点、限制、变化、异常原因、常见误区」。
-  判断标准是「长期复用价值」，**不是出现频率**，也不是「文档里能不能找到相关内容」。
-  追求「数量少但每条都有长期价值」，不追求每周多产出。
+  这一页是「社区常见问题」：只沉淀**别人也会遇到、且有明确答案**的问题。
+  判断标准就两条：① **可复用**——换个人、换个群、过一阵子，是不是还会有人问同一件事；
+  ② **有答案**——群里或官方资料里有一个**说得清**的结论。
+  满足这两条就收，**不要求问题有多深**（常见的配置、限制、踩坑都算）；
+  但一次性个案、没结论、纯寒暄这三类，即使有答案也不要。
+  判断依据是「可复用 + 有答案」，**不是出现频率**。
+  （「官方文档里已经写得很清楚」的问题不在这里淘汰——你这里看不到文档正文，
+    先照收，由后面读了正文的环节裁决。）
 
 ■ 对每个主题，先归类，再决定是否收录（四类）：
-  A. 知识型 FAQ（值得收录）：为什么升级后行为变了 / 某功能在哪个版本调整或废弃 /
-     某组件是否被合并替换 / 老配置升级后是否还适用 / 支持哪些数据库或环境 /
-     某功能有什么限制或使用前提 / 某参数有哪些明确限制 / 看似正确其实还需额外配置、
-     改参数必须重启、配置方式在某版本变了、操作顺序有明确要求等常见误区。
-  B. 使用手册（**不收录**）：本质是「我不知道 UI 怎么操作」——怎么进 Web 终端、
-     怎么返回首页、怎么打开某页面、某按钮在哪、怎么新建连接、怎么切换/关闭窗口等
-     页面导航与纯点击操作；以及官方文档已有完整教程的纯操作步骤（如「怎么配置 LDAP」）。
-     FAQ 解决的是「为什么这样配 / 为什么会失败 / 有什么限制」，不是复制用户手册。
-  C. 故障排查（**有潜力，但必须有证据才收录**）：如「LDAP 测试连接成功但导入用户失败，为什么」。
-     只有当官方资料能明确说明「现象 → 原因 → 处理方式」时才收录；
-     若只有「用户遇到问题 + 同事猜测原因 + 文档只有正常操作步骤」，**不能把猜测包装成确定答案**，不选。
-  D. 未解决 Bug / 个案（**不收录为已解决问题**）：某客户环境偶发报错、疑似 Bug 但无官方确认。
-     疑似 Bug ≠ FAQ，不能包装成「解决方案」。
+  A. 常见问题（**收录**）：换个人也会问、且有明确答案。两类都属于 A：
+     - 知识型：为什么升级后行为变了 / 某功能在哪个版本调整或废弃 / 某组件是否被合并替换 /
+       老配置升级后是否还适用 / 支持哪些数据库或环境 / 某功能有什么限制或使用前提 /
+       某参数有哪些明确限制 / 看似正确其实还需额外配置、改参数必须重启、
+       操作顺序有明确要求等常见误区。
+     - 常见使用与配置咨询：反复有人问、且群里有明确答复的配置类问题
+       （如某功能要开哪个开关才生效、某处必须改哪个参数）。
+       **不要求是疑难**，只要对后来的人有参考价值就收。
+  B. 一次性个案（**不收录**）：只对提问者本人 / 他自己那套环境成立的问题——
+     「我这边报了这个错（见截图）」、「我们的环境是……」、「帮我看看我这台机器」，
+     无法抽象成别人也会遇到的问题。
+  C. 故障排查（**有明确结论才收录**）：如「LDAP 测试连接成功但导入用户失败，为什么」。
+     只有当官方资料（文档或官方人员答复）能明确说明「现象 → 原因 → 处理方式」时才收录；
+     若只有「用户遇到问题 + 同事猜测原因」，**不能把猜测包装成确定答案**，不选。
+  D. 未解决 / 无结论（**不收录**）：答复只是猜测、「你试试」、「先排查下」；疑似 Bug 但无官方确认；
+     纯寒暄或已解决的确认语（「好的」「收到了」）。
 
 ■ 明确排除（命中任一即不选）：
-  - 普通用户手册 / 页面导航 / UI 操作问题（哪怕官方文档里介绍了相关按钮、页面结构，也不选）；
-  - 官方文档已有完整教程的纯操作步骤；
   - 一次性特殊环境问题（某客户特殊网络/代理/防火墙、某台机器浏览器异常等），
-    除非能抽象成产品级、普遍存在的知识；
+    除非能抽象成产品级、普遍存在的问题；
   - 没有明确结论、只能靠猜测或「视情况而定」的问题；
+  - 纯寒暄、纯确认语；
   - 与「已有条目」重复或语义相同（含换说法的同义问法）——问的是同一件事就跳过。
 
 ■ 决策链（逐条走，任一关键条件不满足就倾向不选）：
-  这个问题是否具有长期复用价值？
-  → 是不是「为什么 / 为什么不能 / 有什么限制 / 发生了什么变化 / 异常怎么处理」？
-  → 是不是普通 UI 操作或用户手册问题？（是则淘汰）
-  → 官方文档是否能明确支撑其「原因 / 限制 / 结论 / 处理方式」？
-  → 能否得到确定结论？（不能则淘汰，不靠猜）
-  → 全部满足才选。
+  换个人、换个群，是不是也会问同一件事？（不会 → 属一次性个案，淘汰）
+  → 群里或官方资料里，有没有一个**说得清**的答案？（只有猜测 / 排查方向 / 没结论 → 淘汰）
+  → 是不是只有提问者自己的环境才成立的现象？（是 → 淘汰）
+  → 与「已有条目」是否重复？（重复 → 淘汰）
+  → 全部满足才选。「文档里有没有写」不在这一环判断。
 
 ■ 判例（照此尺度判断）：
-  - 「关闭 Web 终端控制台后如何返回？」→ 即使文档里有「我的资产 / 新建连接 / 最近连接」等按钮，
-    本质是页面导航 / UI 操作 → **淘汰**，不要抽取页面结构编造「处理方式」。
-  - 「LDAP 测试成功但导入用户报 500」→ 若文档明确写了「必须先同步用户否则导入失败」→ 可选；
-    若文档只写「点同步用户→选用户→导入」而没说「不同步会导致 500」→ **不能把『先同步』当成 500 的根因，不选**；
-    若官方已确认是 Bug → 也不在此自动发布。
+  - 「关闭 Web 终端控制台后如何返回？」→ 问的人多、答案也明确，**这里可以选**；
+    不要因为「看起来像 UI 操作」就淘汰——它收不收，交给后面读了文档正文的环节决定。
+  - 「LDAP 测试成功但导入用户报 500」→ 群里或官方资料明确说了原因 → **选**；
+    若只有同事猜「可能要先同步用户」而无任何确认 → **不选**（不能把猜测当结论）。
+  - 「我们内网环境部署时连不上外网」→ 一次性环境个案 → **淘汰**。
 
 ■ 其它硬性约束：
   - 只收 JumpServer V5 相关。群聊多数不写版本，**未标注版本的一律按当前主线 V5 处理**，
     不要因「没写版本」就排除；只有明确指向旧版本特性（v3/v4 独有、明说「老版本/升级前」）才不选。
-  - 出现次数是参考而非门槛：高价值主题哪怕只出现 1 次也可选；凑数、无复用价值的高频问题不要选。
+  - 出现次数是参考而非门槛：有复用价值的主题哪怕只出现 1 次也可选；凑数、无复用价值的高频问题不要选。
     question_ids 里编号个数即出现次数，如实填。
-  - 事实来源优先级（判断能否核实时遵循）：官方文档 > 官方 FAQ > 群管理员/同事回答 > 用户描述 > 你自身知识。
-    doc_paths 尽量给出官方文档依据；确实找不到可留空数组，交第二轮/人工把关，但**不要为了凑依据硬塞不相关文档**。
+  - 事实来源优先级（判断能否核实时遵循）：官方文档 > 官方 FAQ > 官方人员明确答复 > 普通同事答复
+    > 用户描述 > 你自身知识。doc_paths 尽量给出官方文档依据；确实找不到可留空数组，
+    但**不要为了凑依据硬塞不相关文档**。
+  - 注意：官方文档里**没有**相关内容，不能作为排除理由——社区里「文档没写、但官方人员已明确答复」
+    的问题恰恰最该沉淀，也是本页相对手册最大的价值。提问带 `[官方已答]` 时优先考虑收录。
 
 ■ 输出要求：
 1. question_ids 只能用清单里**原样出现过**的编号，不得编造；语义相同才算一组。
-2. 最多选 {max_items} 条；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
-3. doc_paths 尽量从给定文档索引里挑**原样存在**的相对路径，一条优先给一个依据，找不到留空数组，不要编造。
+2. 最多选 {max_items} 条，**按收录价值从高到低排列**（成稿环节会依次取用，
+   排在前面的先被采纳）；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
+3. doc_paths 尽量从给定文档索引里挑**原样存在**的相对路径，一条优先给一个依据；
+   **不确定的路径宁可留空数组，也不要编造**（留空不影响收录，见下面的来源分级）。
 4. section 填现有小节标题原文；确实不属于任何现有小节时才填 new_section。
-5. kind 填 A/B/C/D 之一（上面四类）；只有 A、或有明确证据的 C 才应出现在结果里。
-6. value 用一句话说清「为什么值得长期沉淀」（属于哪类、回答的是为什么/限制/变化/异常原因/误区中的哪个），
-   不要写「因为出现 N 次」或「文档里有相关内容」。
+5. kind 填 A/B/C/D 之一（上面四类）；只有 A、或有明确结论的 C 应出现在结果里。
+6. value 用一句话说清「为什么值得沉淀成社区常见问题」（可复用在哪：别人会怎么再问一遍；
+   以及答案的确定性来自哪里），不要写「因为出现 N 次」或「文档里有相关内容」。
 
 只输出 JSON，不要任何解释文字。格式：
 {{"items":[{{"question_ids":[12,88],"title":"短标题（疑问句，20 字以内）","question":"一句话问题描述",
 "section":"现有小节标题或null","new_section":"新小节标题或null","kind":"A或C",
-"doc_paths":["installation/xxx.md"],"value":"该主题的长期复用价值属于哪类、为何值得沉淀"}}]}}"""
+"doc_paths":["installation/xxx.md"],"value":"可复用在哪 + 答案来自哪里"}}]}}"""
 
 PASS2_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的撰写者。
-任务：基于给定的官方文档原文，写一条「社区常见问题」条目，直接进官方文档，质量要求最高。
+任务：基于给定的官方文档原文与群内答复，写一条「社区常见问题」条目，直接进官方文档。
+要求事实准确、表述简洁，不追求长篇——把问题说清楚就够了。
 
 ■ 你的任务是**回答这一个具体问题**，不是总结整篇文档。
   只提取「能回答当前问题」的必要事实，其余文档内容一律不写。
+
+■ 结论可以来自两个地方（按优先级）：
+  1. **官方文档原文**：最可靠，优先用它。
+  2. **官方人员在群里的明确答复**（下方标注为「官方人员答复」）：当官方文档确实没有写清楚时，
+     这是可用的第二依据，**不再只是线索**。「文档缺失 + 官方已明确答复」正是最值得沉淀的一类。
+  普通同事（标注为「普通同事答复」）的回复也可参考，但只在表述确定、能形成明确结论时才采纳。
 
 ■ 固定结构（编号由程序生成，你不要写编号；正文只有下面两部分）：
   **问题**：一句话描述用户问题
@@ -856,22 +970,33 @@ PASS2_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的
 
 ■ 硬性要求（违反任一条即放弃生成）：
   1. 只回答当前问题，不回答用户没问的问题，不为「看起来完整」而扩写或介绍整个功能。
-  2. 只使用官方文档能证明的事实；涉及**版本号、参数、命令、路径、配置项**必须逐字来自文档原文，不得改写或自造。
-  3. **不根据常识自行推导根因**，不把同事在群里的猜测当作官方结论，
+  2. 只使用给定依据（官方文档原文 / 群内答复）能证明的事实；涉及**版本号、参数、命令、路径、配置项**
+     必须逐字来自依据文本，不得改写或自造。
+  3. **不根据常识自行推导根因**，不把猜测当作结论，
      不把普通操作步骤包装成故障解决方案。
   4. **严禁「用户问为什么报错、你找不到原因就转而介绍该功能怎么用」**——这是最不可接受的错误。
   5. 严禁出现「可能/大概/不确定/建议试试/请以…为准/视…而定/具体…请参见」等模糊或甩锅表述。
-  6. **禁止用你自身知识补充**文档没写的内容；群聊回复只是线索，不能当作事实来源。
-  7. **正文必须能被 MDX 安全编译**：不要写尖括号占位符，例如写「参数」而不是「<参数>」；
+  6. **不得把任何一方的猜测当作结论**。判断一条答复能不能当作依据，看它是否给出了**明确结论**：
+     有「现象 → 原因 / 处理方式」的确定表述（如「这个参数改了必须重启才生效」）才算结论；
+     只是「可能是…」「你试试…」「先排查下…」「不确定，等确认」这类猜测、建议、只给排查方向的，
+     一律不能当事实依据。
+  7. **官方人员答复放宽一档**：下方「官方人员答复」只要给出了**可执行的处置**（即使表述简短、
+     不完整）就可采纳；而「普通同事答复」必须达到「明确结论」标准才能采纳——达不到就别用它推导，
+     宁可放弃生成。
+  8. **禁止用你自身知识补充**依据里没有的内容（自身知识只能用来组织语句，不能当事实来源）。
+  9. **正文必须能被 MDX 安全编译**：不要写尖括号占位符，例如写「参数」而不是「<参数>」；
      文档里的真实尖括号写法（如 `<域名>`）必须包在反引号里写成 `` `<域名>` ``，或放进代码块。
      不要写 `<br>`、`<https://…>` 这类裸 HTML 标签或裸链接。
 
-■ 事实来源优先级（硬性）：官方文档 > 官方 FAQ > 群管理员/同事回答 > 用户描述 > 你自身知识。
+■ 依据分级（硬性）：官方文档原文 > 官方人员明确答复 > 普通同事明确答复 > 用户描述 > 你自身知识。
 
 ■ 放弃生成（宁缺毋滥）：以下任一情况，把 body 输出为空字符串，表示这条不该自动入库：
-  - 官方文档没有明确结论、或只给了你无法确认的间接信息；
+  - 官方文档与员工答复**都**没有明确结论，或只给了你无法确认的间接信息；
   - 只能靠猜测、常识推导或「视情况而定」才能回答；
+  - 答复只是猜测/建议尝试/只给排查方向，拿不出确定结论；
   - 下方「官方文档原文」标注了「已截断」，而你要用的结论可能落在被截掉的部分；
+  - **官方文档原文已经能直接、完整地回答这个问题**（用户照着文档做就能解决）——
+    这类属常规使用问题，官方手册已经覆盖，再进 FAQ 只是重复手册，请把 body 输出为空字符串；
   - 你只能给出「该功能怎么操作」这类答非所问的内容，而无法给出问题真正要的原因/限制/结论。
 
 ■ 其它：
@@ -908,7 +1033,7 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
     raw = llm_chat(
         [{"role": "system", "content": PASS1_SYSTEM.format(max_items=max_items)},
          {"role": "user", "content": user}],
-        temperature=0.1, max_tokens=3000,
+        temperature=0.1, max_tokens=4000,
     )
     try:
         payload = json_block(raw)
@@ -920,24 +1045,37 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
 
 
 def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | None:
-    """第二轮：用官方文档原文生成条目。
+    """第二轮：用官方文档原文 + 群内答复生成条目。
 
-    宁缺毋滥：无有效文档依据、或模型判定依据不足（body 置空）时，直接返回 None 跳过，
-    不据群聊猜测硬写，交人工处理。
+    依据来源二选一即可：有可用的文档原文，或有所在群内的答复（官方人员答复信任度更高）。
+    文档路径先经 resolve_doc_path 模糊纠错；纠正不出来只当「没有文档依据」，
+    **不作为丢弃条目的理由**。
+    宁缺毋滥：两者都给不出明确结论、或模型判定依据不足（body 置空）时，直接返回 None 跳过。
     """
     raw_paths = [str(p) for p in (item.get("doc_paths") or [])]
-    cited = [p for p in raw_paths if p in index]
-    dropped = [p for p in raw_paths if p not in index]
+    cited: list[str] = []
+    fixed: list[str] = []      # 被自动纠正的路径（原样 -> 真实）
+    dropped: list[str] = []    # 索引里确实找不到的路径（只忽略引用，不影响收录）
+    for raw in raw_paths:
+        got = resolve_doc_path(raw, index)
+        if not got:
+            dropped.append(raw)
+            continue
+        if got not in cited:
+            cited.append(got)
+        if got != raw.strip():
+            fixed.append("{0} -> {1}".format(raw, got))
+    if fixed:
+        log("[community_faq] 自动纠正文档路径 {0} <- {1}".format("；".join(fixed), item.get("title")))
     if dropped:
-        log(f"[community_faq] 丢弃不存在的引用路径 {dropped} <- {item.get('title')}")
-    # 无有效文档依据：不再据群聊硬写（新策略宁缺毋滥），直接跳过交人工
-    if not cited:
-        log(f"[community_faq] 无有效文档依据，跳过（不自动入库）: {item.get('title')}")
-        return None
+        log("[community_faq] 索引里找不到这些引用，已忽略（条目仍可基于群内答复成稿）{0} <- {1}"
+            .format(dropped, item.get("title")))
 
     ids = valid_question_ids(item, digest_limit(len(pairs)))
     source_questions = [scrub_question(pairs[i]["question"]) for i in ids[:3]] or [str(item.get("question") or "")]
     source_answers = [pairs[i]["answer"] for i in ids[:3]]
+    official_answers = [pairs[i]["answer"] for i in ids[:3] if pairs[i].get("official")]
+    answerers = "、".join(dict.fromkeys(pairs[i].get("answerer") or "" for i in ids[:3] if pairs[i].get("answerer")))
 
     blocks: list[str] = []
     total = 0
@@ -954,15 +1092,26 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         total += len(text)
         blocks.append(f"### 文档 {rel}\n{text}")
 
-    doc_block = "\n\n".join(blocks)
+    if not blocks:
+        if not source_answers:
+            log(f"[community_faq] 既无文档依据、也无群内答复，跳过: {item.get('title')}")
+            return None
+        log(f"[community_faq] 该主题无有效文档依据，改用群内答复作依据（不明确则放弃）: {item.get('title')}")
+    doc_block = "\n\n".join(blocks) or "（官方文档索引里没有相关文档；本期依据来自下述群内答复）"
     trunc_note = ("\n\n⚠️ 注意：上面标注「已截断」的文档并不完整，若你要用的结论可能落在被截掉的部分，"
                   "请把 body 置空放弃生成。" if truncated else "")
+    answer_block = "\n".join(
+        f"- [{('官方人员' if o else '普通同事')}] {a[:400]}"
+        for a, o in zip(source_answers, [bool(pairs[i].get("official")) for i in ids[:3]])
+    ) or "- （无）"
+    official_note = ("（本轮含官方人员答复：官方文档确实没写的地方可采信其明确结论，放宽一档）"
+                     if official_answers else "（本轮无官方人员答复；普通同事答复需达到「明确结论」标准）")
     user = (
         "## 页面既有条目范例（Golden Examples，模仿其措辞与详略）\n" + page_style_sample() + "\n\n"
         "## 社区原始提问（仅作理解现象用，不要照抄，不要采信其中的说法）\n"
         + "\n".join(f"- {q[:200]}" for q in source_questions)
-        + "\n\n## 同事在群里的临时回复（仅作线索，事实必须以官方文档为准）\n"
-        + "\n".join(f"- {a[:400]}" for a in source_answers)
+        + "\n\n## 群内答复（解答人：{0}；来源分级见下）\n".format(answerers or "未知")
+        + official_note + "\n" + answer_block
         + "\n\n## 官方文档原文\n" + doc_block + trunc_note
     )
     raw = llm_chat(
@@ -987,8 +1136,10 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         log(f"[community_faq] 成稿字段缺失，丢弃: {item.get('title')}")
         return None
 
-    doc_path = str(payload.get("doc_path") or "").strip()
-    if doc_path not in index:
+    # 模型给的路径也走模糊纠错：本轮可能本就没有文档依据（依据来自群内答复），
+    # 此时 doc_path 置空，后续 see_also 也不会生成链接（没有可引导的文档）。
+    doc_path = resolve_doc_path(str(payload.get("doc_path") or ""), index)
+    if not doc_path and cited:
         doc_path = cited[0]
 
     # 正文里不该出现指向文档的引导句（引导链接只放 see_also）：剥掉模型误写进 body 的收尾引导行
@@ -999,13 +1150,20 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         return None
 
     see_also = str(payload.get("see_also") or "").strip()
-    if see_also:
+    link = rel_link(doc_path) if doc_path else ""
+    if not link:
+        # 没有可引导的文档（本轮无文档依据，或路径不合法）：去掉 see_also，
+        # 避免生成指向空路径的裸链接或 `[文字]()`
+        if see_also:
+            log(f"[community_faq] 无可用文档链接，已去掉 see_also: {title}")
+        see_also = ""
+    else:
         if CITATION_PLACEHOLDER in see_also:
             # 模型已给出含占位符的链接，直接替换地址
-            see_also = see_also.replace(CITATION_PLACEHOLDER, rel_link(doc_path))
-        else:
+            see_also = see_also.replace(CITATION_PLACEHOLDER, link)
+        elif see_also:
             # 模型只给了引导语没带链接：把链接补在句末，避免出现裸占位符或重复链接
-            see_also = f"{see_also.rstrip('。 ')}（[{rel_link(doc_path)}]({rel_link(doc_path)})）"
+            see_also = f"{see_also.rstrip('。 ')}（[{link}]({link})）"
 
     final_question = question or title
     vague = sorted({w for w in VAGUE_PHRASES if w in body or w in final_question})
@@ -1015,6 +1173,11 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
     warnings: list[str] = []
     if vague:
         warnings.append("正文含模糊表述：{0}（提示词已禁止）".format("、".join(vague)))
+    if not blocks:
+        src = "官方人员" if official_answers else "普通同事"
+        warnings.append("本条**无官方文档依据**，依据来自群内答复（{0}{1}），请人工核对"
+                        .format(src, "：" + answerers if answerers else ""))
+        log("[community_faq] 质量提示：{0} 无文档依据，依据来自{1}答复".format(title, src))
     if truncated or omitted:
         detail = []
         if truncated:
@@ -1036,6 +1199,9 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         "question_ids": ids,
         "count": len(ids),
         "sources": ["{0} {1}".format(pairs[i]["date"], pairs[i]["group"]) for i in ids[:3]],
+        "answerers": answerers,
+        "official": bool(official_answers),
+        "evidence": "官方文档" if blocks else ("官方人员答复" if official_answers else "普通同事答复"),
         "reason": str(item.get("value") or item.get("reason") or "").strip(),
         "truncated": truncated,
         "omitted": omitted,
@@ -1242,19 +1408,58 @@ def fetch_summary(stats: dict | None) -> str:
         stats.get("attempts", 0), stats.get("failures", 0), stats.get("rows", 0))
 
 
+def funnel_stats(stats: dict | None, pairs: list[dict], candidates: list[dict],
+                 placed: int, skipped: int) -> dict:
+    """漏斗数据：消息 → 问答对 → 模型初选 → 入库，附初选结果的分类计数。
+
+    这条链每一环都会掉数据，掉在哪一环决定了要改哪一步。没有它，报告只看得出
+    「入库 0 条」，看不出是群里本来就没问题、被初选淘汰、还是成稿环节全被否掉。
+    """
+    kinds = {"A": 0, "B": 0, "C": 0, "D": 0, "?": 0}
+    for item in candidates:
+        if not isinstance(item, dict):
+            continue
+        k = str(item.get("kind") or "").strip().upper()
+        kinds[k if k in ("A", "B", "C", "D") else "?"] += 1
+    return {
+        "messages": (stats or {}).get("rows"),
+        "pairs": len(pairs),
+        "candidates": len(candidates),
+        "placed": placed,
+        "skipped": skipped,
+        "kinds": kinds,
+    }
+
+
 def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                  skipped: list[dict], by_day: list[dict], days: int, applied: bool,
-                 fetch_note: str = "") -> None:
+                 fetch_note: str = "", note: str = "", funnel: dict | None = None) -> None:
     per_day = ", ".join("{0}={1}".format(d["date"], d["pairs"]) for d in by_day)
     warn_total = sum(len(r["entry"].get("warnings") or []) for r in placed)
     lines = [
         "# 社区常见问题 · 本期自动生成报告",
         "",
+    ]
+    if note:
+        lines += ["> {0}".format(note), ""]
+    lines += [
         "- 数据窗口：最近 {0} 天（含今天）".format(days),
         "- 问答对：{0} 条（按天：{1}）".format(len(pairs), per_day),
         "- 取数完整性：{0}".format(fetch_note or "未记录"),
-        "- 候选主题：{0} 个（入库 {1}，未采纳 {2}）".format(
-            len(placed) + len(skipped), len(placed), len(skipped)),
+    ]
+    if funnel:
+        kinds = funnel.get("kinds") or {}
+        msg_n = funnel.get("messages")
+        lines.append(
+            "- 漏斗：消息 {0} 条 → 问答对 {1} 条 → 模型初选 {2} 个"
+            "（A {3} / B {4} / C {5} / D {6} / 缺分类 {7}）→ 入库 {8} 条，未采纳 {9} 条".format(
+                "-" if msg_n is None else msg_n, funnel.get("pairs", 0), funnel.get("candidates", 0),
+                kinds.get("A", 0), kinds.get("B", 0), kinds.get("C", 0), kinds.get("D", 0),
+                kinds.get("?", 0), funnel.get("placed", 0), funnel.get("skipped", 0)))
+    else:
+        lines.append("- 候选主题：{0} 个（入库 {1}，未采纳 {2}）".format(
+            len(placed) + len(skipped), len(placed), len(skipped)))
+    lines += [
         "- 本次新增：{0} 条（{1}）".format(len(placed), "已写回页面" if applied else "仅预览，未写回"),
         "- 质量检查：{0}".format("无警告" if not warn_total else "{0} 条警告（见下方 ⚠️）".format(warn_total)),
         "",
@@ -1263,11 +1468,18 @@ def write_report(path: str, *, pairs: list[dict], placed: list[dict],
         lines += ["## 新增条目", ""]
         for row in placed:
             e = row["entry"]
-            doc_shown = "`{0}`".format(e["doc_path"])
+            doc_shown = "`{0}`".format(e["doc_path"]) if e.get("doc_path") else "（无，依据来自群内答复）"
+            evidence = e.get("evidence") or "官方文档"
+            answerer_line = "- 解答人：{0}{1}".format(
+                e.get("answerers") or "未知",
+                "（官方人员）" if e.get("official") else "（普通同事）",
+            ) if evidence != "官方文档" else "- 解答人：-"
             block = [
                 f"### {row['no']} {e['title']}",
                 f"- 小节：{row['section']}",
+                f"- 依据类型：{evidence}",
                 f"- 依据文档：{doc_shown}",
+                answerer_line,
                 f"- 社区出现次数：{e['count']}",
                 f"- 来源：{'；'.join(e['sources']) or '-'}",
                 f"- 入选理由：{e['reason'] or '-'}",
@@ -1522,7 +1734,8 @@ def ensure_mdx_safe_entry(entry: dict) -> dict | None:
 
 
 def load_pairs_from_json(path: str) -> tuple[list[dict], list[dict]]:
-    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    # utf-8-sig：容忍带 BOM 的文件（Windows 下手写/PowerShell 导出的 JSON 很常见）
+    payload = json.loads(Path(path).read_text(encoding="utf-8-sig"))
     pairs = payload.get("pairs") if isinstance(payload, dict) else payload
     if not isinstance(pairs, list):
         raise fail(2, f"{path} 里没有 pairs 列表")
@@ -1594,18 +1807,33 @@ def main() -> int:
         log("[community_faq] 取到消息但没有形成问答对，跳过")
         return 3
 
+    def emit_empty_report(note: str, funnel: dict | None = None) -> None:
+        """无新增条目时也落一份报告，否则 Actions 摘要在「本周无新增」时一片空白，
+        长达一整周都只能翻日志才能知道为什么没产出。"""
+        try:
+            report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
+            write_report(report, pairs=pairs, placed=[], skipped=skipped,
+                         by_day=by_day, days=args.days, applied=False,
+                         fetch_note=fetch_summary(stats), note=note, funnel=funnel)
+            set_action_output(False, 0, report)
+            log("[community_faq] 已写出报告：{0}".format(report))
+        except OSError as err:
+            log("[community_faq] 写报告失败（忽略）: {0}".format(err))
+
     page = read_page()
     index = doc_index()
     keys = existing_question_keys(page)
 
+    entries: list[dict] = []
+    skipped: list[dict] = []
     candidates = screen_questions(pairs, page, index, args.max_items * 2)
     log("[community_faq] 模型初选 {0} 条".format(len(candidates)))
     if not candidates:
         log("[community_faq] 模型没有选出合格问题")
+        emit_empty_report("模型初选为 0：本期没有值得沉淀的主题（全部被判为一次性个案/无结论/重复）。",
+                          funnel_stats(stats, pairs, [], 0, 0))
+        print(json.dumps({"changed": False, "count": 0}, ensure_ascii=False))
         return 3
-
-    entries: list[dict] = []
-    skipped: list[dict] = []
     limit = digest_limit(len(pairs))
     for item in candidates:
         if len(entries) >= args.max_items:
@@ -1614,7 +1842,7 @@ def main() -> int:
         if kind in ("B", "D"):
             skipped.append({"title": item.get("title"),
                             "reason": "模型判定为{0}（{1}），不具沉淀价值".format(
-                                kind, "使用手册/UI 操作" if kind == "B" else "未解决 Bug/个案")})
+                                kind, "一次性个案" if kind == "B" else "未解决/无结论")})
             continue
         ids = valid_question_ids(item, limit)
         if not ids:
@@ -1633,7 +1861,7 @@ def main() -> int:
             continue
         entry = compose_entry(item, pairs, index)
         if entry is None:
-            skipped.append({"title": item.get("title"), "reason": "缺少可核实的文档依据或成稿失败"})
+            skipped.append({"title": item.get("title"), "reason": "模型判定依据不足或成稿失败"})
             continue
         # MDX 安全护栏：原文能编译就不动刀（避免误伤合法 HTML/JSX）；
         # 编译不过则自动转义挽救；转义后仍不合法就丢弃这一条，绝不把词法炸弹写进页面
@@ -1659,7 +1887,10 @@ def main() -> int:
         report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
         write_report(report, pairs=pairs, placed=[], skipped=skipped,
                      by_day=by_day, days=args.days, applied=False,
-                     fetch_note=fetch_summary(stats))
+                     fetch_note=fetch_summary(stats),
+                     note="模型初选 {0} 个主题，但全部在成稿环节被否决（逐条原因见下方「未采纳的候选」）。"
+                          .format(len(candidates)),
+                     funnel=funnel_stats(stats, pairs, candidates, 0, len(skipped)))
         set_action_output(False, 0, report)
         print(json.dumps({"changed": False, "count": 0, "report": report}, ensure_ascii=False))
         return 3
@@ -1680,7 +1911,8 @@ def main() -> int:
     report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
     write_report(report, pairs=pairs, placed=placed, skipped=skipped,
                  by_day=by_day, days=args.days, applied=args.apply,
-                 fetch_note=fetch_summary(stats))
+                 fetch_note=fetch_summary(stats),
+                 funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)))
 
     if args.apply:
         FAQ_PAGE.write_text(new_page, encoding="utf-8")

@@ -31,6 +31,10 @@
 #     3. Secrets: ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY
 #        （以上四项**都是必填**；另可选 ZHIMA_DEPT_STAFF / LLM_MODEL；
 #          公司仓库建议配成组织级 Secret）。
+#        ZHIMA_DEPT_STAFF = 官方人员名单 JSON，如 [{"name":"张三"},{"name":"李四","aliases":["小李"]}]。
+#        ⚠️ 它**不是过滤白名单**，而是「官方人员」身份标记：名单内的人的答复被标为高信任来源，
+#        名单外同事的答复一样保留（标为低信任），两级都交给模型按分级标准审核。
+#        未配置时，所有员工答复一律按「普通同事答复」处理。
 #        缺项时 workflow 会在 Preflight 步骤直接失败并指明缺哪一项，不会跑到一半才报错。
 #
 # 与 fork 的关系:
@@ -94,8 +98,13 @@
 #     参数限制/使用前提等高价值问题优先；单次特殊环境问题、纯操作步骤、文档已有完整教程的不收。
 #     高频≠必须收录，低频但高价值也可收录（min_count 已弱化为参考值）。
 #   - 只收 V5 相关问题（未标版本默认按 V5）。
-#   - 事实来源优先级：官方文档 > 官方 FAQ > 群管理员/同事回答 > 用户描述 > AI 自身知识；
-#     版本/参数/命令/路径必须有官方文档依据，文档无明确结论或被截断则放弃生成，绝不采信群聊说法。
+#   - 事实来源分级：官方文档 > 官方 FAQ > 官方人员明确答复 > 普通同事明确答复 > 用户描述 > AI 自身知识；
+#     官方人员（ZHIMA_DEPT_STAFF 名单内）的答复放宽一档：给出可执行处置即可采纳；
+#     普通同事答复必须给出「现象 → 原因/处理」的明确结论才采纳 ——
+#     猜测 /「建议试试」/ 只给排查方向的一律放弃生成（body 置空）。
+#     版本/参数/命令/路径必须逐字来自依据文本，不得自造。
+#   - 「官方文档里没有」不再作为排除理由：文档缺失 + 官方人员已明确答复，
+#     恰恰是社区 FAQ 最该沉淀的一类（也是本页相对使用手册最大的价值）。
 
 name: Auto Community FAQ (JumpServer)
 
@@ -278,9 +287,9 @@ jobs:
           fi
           echo "必需配置齐全：ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY"
           if [ -z "${ZHIMA_DEPT_STAFF}" ]; then
-            echo "::warning::未配置 ZHIMA_DEPT_STAFF，解答人退化为「员工角色且非机器人」，频次统计可能偏宽"
+            echo "::warning::未配置 ZHIMA_DEPT_STAFF，所有员工答复一律按「普通同事答复」处理（不区分高信任来源，名单外同事的答复本就都会保留）"
           else
-            echo "已配置 ZHIMA_DEPT_STAFF（部门名单）"
+            echo "已配置 ZHIMA_DEPT_STAFF（官方人员名单）：名单内的答复标记为高信任来源，名单外同事的答复仍保留"
           fi
           echo "模型：${LLM_MODEL} / 网关：${LLM_BASE_URL}"
           echo "运行环境：${RUNNER_NAME:-?} / ${RUNNER_OS:-?} ${RUNNER_ARCH:-?} / $(python3 -V 2>&1)"
@@ -412,6 +421,7 @@ jobs:
         id: gen
         env:
           REPORT: ${{ runner.temp }}/community-faq-report.md
+          PAIRS: ${{ runner.temp }}/community-faq-pairs.json
           DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
           set -e
@@ -427,6 +437,7 @@ jobs:
             --max-items "${{ github.event.inputs.max_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
             --report "${REPORT}" \
+            --dump-pairs "${PAIRS}" \
             ${APPLY_FLAG}
           code=$?
           set -e
@@ -456,13 +467,25 @@ jobs:
 
           echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
           echo "report=${REPORT}" >> "$GITHUB_OUTPUT"
+          # 报告**无条件**写入 Actions 摘要：定时跑出的「本周无新增」也要能看到原因
+          # （哪些主题入选、逐条因何被拒），否则每周只能靠翻日志猜。
           if [ -f "${REPORT}" ]; then
+            { echo; echo "---"; echo; cat "${REPORT}"; } >> "$GITHUB_STEP_SUMMARY"
             cat "${REPORT}"
-            # dry-run 没有 PR 可看，把报告直接写进 Actions 摘要，便于在 fork 上验证内容
-            if [ "${DRY_RUN}" = "true" ]; then
-              { echo; echo "---"; echo; cat "${REPORT}"; } >> "$GITHUB_STEP_SUMMARY"
-            fi
           fi
+
+      # 诊断产物：问答对 + 生成报告，便于排查「模型没选中任何问题」与
+      # 「选中了但逐条被拒」两种情形（需 `if: always()`，失败时也要落盘）。
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: community-faq-diagnostics
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            ${{ runner.temp }}/community-faq-report.md
+            ${{ runner.temp }}/community-faq-pairs.json
 
       - name: Commit and push
         id: commit
