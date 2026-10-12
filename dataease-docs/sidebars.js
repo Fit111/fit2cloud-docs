@@ -345,7 +345,10 @@ const sidebars = {
     ),
     cat(
       "运维指南",
-      [doc("installation/cli", "命令行工具", "doc:运维指南/命令行工具")],
+      [
+        doc("installation/cli", "命令行工具", "doc:运维指南/命令行工具"),
+        doc("installation/system_logs", "查看系统日志", "doc:运维指南/查看系统日志"),
+      ],
       "cat:运维指南"
     ),
     cat(
