@@ -67,13 +67,23 @@ slug: /user_manual/ai_gateway/settings
 
 ## 5 智能路由
 
-智能路由通过样本文本对请求进行分类，并选择对应模型组处理。其开关与判定参数需要在此统一配置，是智能路由功能能否生效的前提。可在页面中启用或停用智能路由，并设置分类判定的各项参数。
+智能路由负责按请求内容选择对应模型组处理，其开关、路由模式与判定参数需要在此统一配置，是智能路由功能能否生效的前提。可在页面中启用或停用智能路由，并在**本地/向量**与**模型决策**之间切换，配置各模式的判定参数。模式的原理对比与完整配置流程参见[智能路由](./smart_route)。
 
-主要配置项包括：
+### 5.1 通用配置
 
-- **状态**：智能路由的总开关，启用后能力生效。
+- **状态**：智能路由（路由策略）的总开关，启用后能力生效。
 
-- **虚拟模型名称**：对外暴露的模型名称，客户端使用该模型名发起文本请求时即触发智能路由（如 `1Panel-Auto`）。
+- **路由模式**：在「路由模式」中选择 **本地/向量** 或 **模型决策**。同一时间仅运行选中的一种模式；切换模式时，另一种模式的既有配置会被保留，便于随时切回。
+
+- **虚拟模型名称**：对外暴露的虚拟模型名，客户端使用该模型名发起文本请求时即触发智能路由。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image4-Smart-Routing-Settings.png" alt="智能路由设置页"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智能路由设置页（路由策略、本地/向量模式与模型决策整页配置）</div>
+
+### 5.2 本地/向量模式参数
+
+选择「本地/向量」模式后，配置本地规则与向量相似度判定所需的参数：
 
 - **简单请求模型组**：判定为简单，以及无法可靠判定的请求所使用的模型组。
 
@@ -81,15 +91,35 @@ slug: /user_manual/ai_gateway/settings
 
 - **分类阈值**：请求与样本的相似度达到该值时才参与分类判定，否则按简单请求处理。
 
-- **置信度差距值**：最高与次高分类的置信度差距低于该值时，按简单请求处理。
+- **置信差阈值**：最高与次高分类的置信度差距低于该值时，按简单请求处理。
 
 - **Top K**：决策详情中最多展示的相似样本数。
 
-以上参数与「智能路由」模块配合：样本在模块中维护，判定规则在此配置。请确保模型组已正确设置，并根据实测效果调整阈值与置信度差距值，以获得理想的路由结果。
+以上参数与「智能路由」模块配合：样本在模块中维护，判定规则在此配置。请确保模型组已正确设置，并根据实测效果调整阈值与置信差阈值，以获得理想的路由结果。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image4-Smart-Routing-Settings.png" alt="智能路由设置"/>
+### 5.3 模型决策模式参数
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  智能路由设置</div>
+选择「模型决策」模式后，「模型决策」块显示语义决策所需的凭据与目标配置：
+
+- **决策提供商与模型**：显示为 `1Panel-laya-server / auto`，即模型决策所用的外部服务与决策模型。
+
+- **1Panel-laya-server 服务地址**：外部决策服务的地址。
+
+- **1Panel-laya-server API Key**：外部决策服务的访问凭据。保存后可通过「测试连接」检查服务与凭据是否可用。
+
+- **兜底模型组**：当决策模型判定为其他目标，或决策失败、不可用时，请求会调用此模型组。
+
+- **路由目标（2–10 个）**：按业务需要定义目标，每个目标包含目标名称、关联模型组、适用说明、排除说明，列表中可对单个目标进行编辑与删除。启用模型决策至少需要 2 个路由目标。
+
+- **测试模型决策**：输入请求样本，查看命中的目标名称与置信度，用于验证目标定义是否清晰。
+
+:::note[数据边界]
+模型决策为外部服务，启用后请求内容会发往 1Panel-laya-server。请根据自身业务的数据合规要求评估是否启用，并务必配置兜底模型组。
+:::
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image4b-Smart-Routing-Decision.png" alt="模型决策模式配置"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  模型决策模式配置（服务地址、兜底模型组与路由目标）</div>
 
 ## 6 内容合规
 
@@ -105,7 +135,7 @@ slug: /user_manual/ai_gateway/settings
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image5-Content-Compliance-Settings.png" alt="内容合规设置"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  内容合规设置</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  内容合规设置</div>
 
 ## 7 Elasticsearch
 
@@ -119,7 +149,7 @@ slug: /user_manual/ai_gateway/settings
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image7-Elasticsearch-App-Store.png" alt="在 1Panel 应用商店安装 Elasticsearch"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  在 1Panel 应用商店安装 Elasticsearch</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  在 1Panel 应用商店安装 Elasticsearch</div>
 
 主要配置项包括：
 
@@ -138,7 +168,7 @@ slug: /user_manual/ai_gateway/settings
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/settings/image6-Elasticsearch-Settings.png" alt="Elasticsearch 设置"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  Elasticsearch 设置</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  Elasticsearch 设置</div>
 
 ## 8 注意事项
 
