@@ -304,6 +304,12 @@ const sidebars = {
       "items": [
         {
           "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题",
+          "key": "doc:faq/community_faq @ 常见问题"
+        },
+        {
+          "type": "doc",
           "id": "faq/installation",
           "label": "安装部署",
           "key": "doc:faq/installation @ 常见问题"
