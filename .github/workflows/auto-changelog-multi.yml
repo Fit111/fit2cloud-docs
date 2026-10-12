@@ -1,4 +1,4 @@
-# 多产品更新日志自动生成并提 PR（dataease / 1panel / cordys / ai-gateway）
+# 多产品更新日志自动生成并提 PR（dataease / 1panel / cordys / ai-gateway / maxkb / sqlbot）
 #
 # 与 auto-changelog.yml（JumpServer 专用）相互独立：
 #   - 产品清单与格式规则由 .github/scripts/gen_changelog_multi.py 的 PRODUCTS 配置驱动，
@@ -22,7 +22,7 @@ on:
   workflow_dispatch:
     inputs:
       product:
-        description: '仅运行指定产品(dataease/1panel/cordys/ai-gateway，逗号分隔)；留空则运行全部'
+        description: '仅运行指定产品(dataease/1panel/cordys/ai-gateway/maxkb/sqlbot，逗号分隔)；留空则运行全部'
         required: false
         default: ''
       version:

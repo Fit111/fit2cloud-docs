@@ -60,17 +60,11 @@ TZ = timezone(timedelta(hours=8))
 #   enabled            是否纳入自动流程（默认 True）；False 时 --list 不输出，
 #                      workflow 也不会为其创建任务
 #
-# 当前启用: dataease / 1panel / cordys / ai-gateway
-# 当前停用: sqlbot / maxkb
-#   这两个产品的社区 API 发布说明是「开发视角」的原始条目（带 feat/refactor/build
-#   前缀与 issue 号），与文档里「产品视角」的人工整理内容并非同一份数据；用现有最新
-#   版本逐行比对差异达 50 行以上，自动生成会改变文档既有风格，故暂不纳入自动流程。
-#   待数据源对齐后，把对应的 enabled 改为 True 即可。
+# 当前启用: dataease / 1panel / cordys / ai-gateway / maxkb / sqlbot
 # ---------------------------------------------------------------------------
 PRODUCTS = {
     'maxkb': {
         'api': 'maxkb',
-        'enabled': False,
         'targets': {'1': 'maxkb_versioned_docs/version-v1/changelog.md'},
         'default_target': 'maxkb-docs/changelog.md',
         'source': 'br',
@@ -121,7 +115,6 @@ PRODUCTS = {
     },
     'sqlbot': {
         'api': 'sqlbot',
-        'enabled': False,
         'targets': {},
         'default_target': 'sqlbot-docs/changelog.md',
         'source': 'ul',
