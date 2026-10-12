@@ -350,7 +350,10 @@ const sidebars = {
     ),
     cat(
       "常见问题",
-      [doc("faq/system_management", "系统管理", "doc:常见问题/系统管理")],
+      [
+        doc("faq/community_faq", "常见问题", "doc:常见问题/常见问题"),
+        doc("faq/system_management", "系统管理", "doc:常见问题/系统管理"),
+      ],
       "cat:常见问题"
     ),
     cat(
