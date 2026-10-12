@@ -682,7 +682,13 @@ def page_sections(text: str) -> tuple[list[dict], int]:
     return sections, max((s["no"] for s in sections), default=0)
 
 
-def existing_question_keys(text: str) -> set[str]:
+def existing_entry_keys(text: str) -> set[str]:
+    """页面已有条目的「标题 + 问题描述」清单，编号前缀已剥离。
+
+    机械判重用的 key（精确比对 + bigram 近似比对都基于它）。标题去掉了「1.3 」这类
+    编号，避免编号噪声；同时把「**问题**」那行也纳进来——同义问法经常只差在问题描述里
+    （例如新问题与既有条目的**问题**行同义）。
+    """
     keys: set[str] = set()
     for line in text.splitlines():
         m = re.match(r"^###\s+\d+\.\d+\s+(.+?)\s*$", line)
@@ -694,24 +700,39 @@ def existing_question_keys(text: str) -> set[str]:
     return {k for k in keys if k}
 
 
-def existing_entry_titles(text: str) -> list[str]:
-    """页面已有条目的「编号 + 标题」清单（按文档顺序）。
+def existing_entries_digest(text: str, max_items: int = 120) -> str:
+    """页面已有条目的「编号 标题 ｜ 问题：描述」清单（喂给模型判重用）。
 
-    用于喂给模型做去重比对：比直接塞 6000 字符正文更全（页面变长后正文会被截断，
-    截断掉的标题模型就看不到了），也更省 token。
+    只给标题时，换了说法的同义问法容易漏判——例如新问题「升级后提示 Lion 组件离线
+    如何处理」与旧标题「升级到 v5 后发现没有 lion 组件？」字面几乎不重合，但两者指的
+    是同一件事。带上「**问题**」那行后，语义重复更容易被模型识破。
     """
     out: list[str] = []
+    cur = ""
     for line in text.splitlines():
         m = re.match(r"^###\s+(\d+\.\d+)\s+(.+?)\s*$", line)
         if m:
-            out.append("{0} {1}".format(m.group(1), m.group(2)))
-    return out
+            if cur:
+                out.append(cur)
+            cur = "{0} {1}".format(m.group(1), m.group(2)[:60])
+            continue
+        m = re.match(r"^\*\*问题\*\*[：:]\s*(.+?)\s*$", line)
+        if m and cur and "｜" not in cur:
+            cur = "{0} ｜ 问题：{1}".format(cur, m.group(1)[:80])
+    if cur:
+        out.append(cur)
+    return "\n".join(out[:max_items])
 
 
 NEAR_DUP_THRESHOLD = 0.7
 
 
 def _bigrams(text: str) -> set[str]:
+    """标题去重用的字符 bigram 集合。
+
+    比中文单字粒度大：单字会引入大量口水字（如提示/如何/处理），把「A 组件离线」
+    与「B 组件离线」错判成重复；bigram 保留「Lion」「组件」这类词形，噪声更低。
+    """
     s = normalize_text(text)
     if not s:
         return set()
@@ -997,6 +1018,8 @@ PASS2_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的
   - 下方「官方文档原文」标注了「已截断」，而你要用的结论可能落在被截掉的部分；
   - **官方文档原文已经能直接、完整地回答这个问题**（用户照着文档做就能解决）——
     这类属常规使用问题，官方手册已经覆盖，再进 FAQ 只是重复手册，请把 body 输出为空字符串；
+  - **与页面已有条目讲的是同一件事**：若下方「页面已有条目」清单里已经有表达了同一问题
+    （只是换了说法、指同一现象/同一结论）的条目，不要重复入库，请把 body 输出为空字符串；
   - 你只能给出「该功能怎么操作」这类答非所问的内容，而无法给出问题真正要的原因/限制/结论。
 
 ■ 其它：
@@ -1022,11 +1045,11 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
         return []
     sections, _ = page_sections(page)
     section_titles = ["{0} {1}".format(s["no"], s["title"]) for s in sections]
-    titles = existing_entry_titles(page)
+    existing = existing_entries_digest(page)
     user = (
         "## 现有小节（section 字段只能填这些标题原文）\n" + "\n".join(section_titles) + "\n\n"
-        "## 已有条目标题（收录时避免与这些语义重复，含换了说法的同义问法）\n"
-        + ("\n".join(titles) if titles else "（页面暂无条目）") + "\n\n"
+        "## 页面已有条目（收录时避免与这些语义重复，含换了说法的同义问法；已附问题描述便于按语义判断）\n"
+        + (existing if existing else "（页面暂无条目）") + "\n\n"
         "## 官方文档索引（doc_paths 只能从这里挑）\n" + "\n".join(index) + "\n\n"
         "## 最近提问清单\n" + digest
     )
@@ -1217,11 +1240,23 @@ def page_style_sample(max_examples: int = 8) -> str:
     """
     try:
         text = read_page()
-    except SystemExit:
+    except BaseException:  # 页面读取失败（SystemExit）等一律降级：缺范例不致失败
         return "（页面暂无条目）"
     blocks = re.findall(r"^###\s+\d+\.\d+.*?(?=^###\s|^##\s|\Z)", text, re.S | re.M)
     if not blocks:
         return text.strip()[:600]
+    # 去 git 冲突标记行（否则范例会把冲突标记当正文喂给模型）：冲突期宁可跳过本批条目。
+    # 同时按「处理方式」那行去掉模型可能潜写的「- 阅读方式」前缀，避免范例被污染。
+    blocks = [b for b in blocks if not re.search(r"^(<{7}|={7}|>{7})", b, re.M)]
+    cleaned: list[str] = []
+    for b in blocks:
+        keep: list[str] = []
+        for ln in b.splitlines():
+            if re.match(r"^\*\*处理方式\*\*\s*[：:]\s*-", ln):
+                continue
+            keep.append(ln)
+        cleaned.append("\n".join(keep))
+    blocks = cleaned
     # 按所属小节分组后轮转取样，保证覆盖不同类型而非集中在同一小节
     grouped: dict[str, list[str]] = {}
     for b in blocks:
@@ -1394,6 +1429,209 @@ def insert_entries(page_text: str, entries: list[dict]) -> tuple[str, list[dict]
     if len(placed) < len(entries):
         log("[community_faq] 警告：{0} 条既未匹配现有小节、也未给出新小节标题，已跳过".format(len(entries) - len(placed)))
     return text, placed
+
+
+# ---------------------------------------------------------------- 跨期续接
+
+def entry_from_block(block: str) -> dict | None:
+    """把页面上一条 `### N.N` 条目块还原成 entry dict（跨期续接用）。
+
+    只认页面固定结构（标题 / **问题** / **处理方式**）；缺任一必要字段就返回 None。
+    末尾的引导句（see_also）与正文分开，避免重复渲染。
+    """
+    lines = (block or "").rstrip().splitlines()
+    if not lines:
+        return None
+    m = re.match(r"^###\s+\d+\.\d+\s+(.+?)\s*$", lines[0])
+    if not m:
+        return None
+    title = m.group(1).strip()
+    question, body_start = "", 0
+    for idx in range(1, len(lines)):
+        mm = re.match(r"^\*\*问题\*\*[：:]\s*(.+?)\s*$", lines[idx])
+        if mm:
+            question = mm.group(1).strip()
+            body_start = idx + 1
+            break
+    i = body_start
+    while i < len(lines) and lines[i].strip() == "":
+        i += 1
+    # 页面里 `**处理方式**` 存在两种写法：独占一行，或行内直接跟正文。
+    # 两种都要吃掉这个标记——否则 insert_entries 再渲染一次会变成两行 `**处理方式**：`。
+    if i < len(lines):
+        mm = re.match(r"^\*\*处理方式\*\*\s*[：:]?\s*(.*)$", lines[i])
+        if mm:
+            rest = mm.group(1).strip()
+            if rest:
+                lines[i] = rest
+            else:
+                del lines[i]
+    body_lines: list[str] = []
+    see_also = ""
+    for idx in range(i, len(lines)):
+        if re.match(r"^\s*(?:详细|完整|更多|具体)?[^。\n]{0,40}?"
+                    r"(?:请参阅|详见|参见|参考|见)\s*\[[^\]]*\]\([^)]*\)", lines[idx]):
+            see_also = lines[idx].strip()
+            break
+        body_lines.append(lines[idx])
+    body = "\n".join(body_lines).rstrip()
+    if not title or not question or not body:
+        return None
+    return {
+        "section": "", "new_section": None, "title": title, "question": question,
+        "body": body, "see_also": see_also, "doc_path": "", "question_ids": [],
+        "count": 0, "sources": [], "answerers": "", "official": False,
+        "evidence": "上期未合并条目", "reason": "上期已入选但尚未合并，本期续接",
+        "truncated": [], "omitted": [], "warnings": [], "reused": True,
+    }
+
+
+def entries_from_page(text: str) -> list[dict]:
+    """把一份页面的所有条目块解析成 entry dict，并带上所属小节标题。"""
+    sections, _ = page_sections(text)
+    lines = text.splitlines()
+    out: list[dict] = []
+    for sec in sections:
+        seg = "\n".join(lines[sec["line_start"] + 1:sec["line_end"]])
+        for m in re.finditer(r"^###\s+\d+\.\d+\s+.*?(?=^###\s+\d+\.\d+\s|\Z)", seg, re.S | re.M):
+            entry = entry_from_block(m.group(0))
+            if entry:
+                entry["section"] = "{0} {1}".format(sec["no"], sec["title"])
+                out.append(entry)
+    return out
+
+
+REUSE_DEDUP_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的编辑，正在做「入库前查重」。
+
+下面给你两组条目：
+- 【待入库条目】：上一期已入选、但因 PR 尚未合并而需要顺延到本期的条目；
+- 【页面已有条目】：当前页面里已经存在的条目（含标题与问题描述）。
+
+请逐条判断每个【待入库条目】与【页面已有条目】讲的是不是**同一件事**：
+同一个现象的同一套结论就算同一件事，即使措辞、视角、标题完全不同（例如「升级到 v5 后发现
+没有 lion 组件」与「升级后提示 Lion 组件离线如何处理」说的是同一件事：lion 已并入 koko、
+残留的 lion 应删除）。反之，问的是不同现象、或结论不同（需要不同处理动作）就算不同的事。
+
+只输出 JSON，不要任何解释文字。格式：
+{"items":[{"title":"原样复制待入库条目的标题","duplicate":true或false,
+"duplicate_of":"若重复，填页面已有条目的标题；否则留空字符串"}]}
+要求：待入库条目**必须逐条给出判断**，条数与输入一致，标题原样复制。"""
+
+
+def is_llm_configured() -> bool:
+    """能否调用大模型（缺 key 时静默降级为机械判重，不抛异常）。"""
+    return bool(cfg("LLM_API_KEY"))
+
+
+def _parse_dedup_reply(raw: str, titles: list[str]) -> dict[str, str]:
+    """从模型输出里取出 {待入库标题 -> 重复于哪条(空串=不重复)}。"""
+    payload = json_block(raw)
+    items = payload.get("items")
+    if not isinstance(items, list):
+        return {}
+    want = {normalize_text(t)[:40]: t for t in titles}
+    out: dict[str, str] = {}
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        key = normalize_text(str(it.get("title") or ""))[:40]
+        if key not in want:
+            continue
+        dup = str(it.get("duplicate") or "").strip().lower() in ("true", "1", "yes", "是")
+        out[want[key]] = str(it.get("duplicate_of") or "").strip() if dup else ""
+    return out
+
+
+def _llm_dedup_chunks(page: str, titles: list[str], chunk: int = 8) -> dict[str, str]:
+    """分批把待入库条目的标题交给模型判重，返回 {标题 -> 重复于哪条(空串=不重复)}。
+
+    为什么要走模型：机械 bigram 判重在「换了说法的同义问法」上完全失效——实测
+    「升级后提示 Lion 组件离线如何处理」（待入库）与「升级到 v5 后发现没有 lion 组件？」
+    （页面已有）只共享 3 个 bigram，相似度约 0.34，远低于阈值，但它们结论完全一致，
+    入库就是重复条目（2026-10-12 用户投诉的就是这一条）。
+    """ 
+    existing = existing_entries_digest(page)
+    if not existing:
+        return {}
+    verdict: dict[str, str] = {}
+    for start in range(0, len(titles), chunk):
+        batch = titles[start:start + chunk]
+        user = ("## 待入库条目（上一期已入选，尚未合并）\n"
+                + "\n".join("- {0}".format(t) for t in batch)
+                + "\n\n## 页面已有条目\n" + existing)
+        try:
+            raw = llm_chat([{"role": "system", "content": REUSE_DEDUP_SYSTEM},
+                            {"role": "user", "content": user}],
+                           temperature=0.0, max_tokens=2000)
+            verdict.update(_parse_dedup_reply(raw, batch))
+        except SystemExit:
+            raise
+        except Exception as err:      # 网络/解析异常时保守放行，交由人工在 PR 里核对
+            log("[community_faq] 续接条目语义判重失败（放行待人工核对）: {0}".format(err))
+    return verdict
+
+
+def reuse_entries_from_page(path: Path, page: str) -> tuple[list[dict], list[dict]]:
+    """上期固定分支页面里、当前页面还没有的条目。
+
+    ⚠️ 这是 2026-10-12 事故的修复点。旧实现用 `git checkout FETCH_HEAD -- <页面>` 把上期分支的
+    **整份文件**盖到最新 main 上，于是 main 上的人工修改（前端标题、正文订正）被静默回退；
+    三方合并（git merge-file）也救不了 —— 旧分支是「世代相传的陈旧快照」，其 parent→branch
+    的差异里混着回退内容，合并会把回退一并重放。
+    现在只做「条目级续接」：只取上期多出来的 `### N.N` 条目块，按当前页面判重后追加，
+    页面其余部分（含 front matter）完全以 main 为准。
+
+    判重分两层：① 机械——标题 / **问题** 行的精确与 bigram 近似比对（快、零依赖）；
+    ② 语义——配上「已并入页面、但不回退任何内容」的语义判重。
+    """
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError as err:
+        log("[community_faq] 读取上期候选页失败（忽略）: {0}".format(err))
+        return [], []
+
+    def probe_of(entry: dict) -> str:
+        return normalize_text(str(entry.get("title") or ""))[:40]
+
+    # 机械判重：标题与问题描述一起比，任一命中即视为已并入页面
+    keys = existing_entry_keys(page)
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    for entry in entries_from_page(text):
+        title = str(entry.get("title") or "")
+        question = str(entry.get("question") or "")
+        dup = ""
+        for probe_src in (title, question):
+            probe = normalize_text(probe_src)[:40]
+            if probe and probe in keys:
+                dup = "标题/问题与页面已有条目相同"
+                break
+            hit = near_duplicate(probe_src, keys)
+            if hit:
+                dup = "与页面已有条目近似（最像：{0}）".format(hit)
+                break
+        if dup:
+            dropped.append({"title": title, "reason": "上期条目已并入页面，不再重复追加（{0}）".format(dup)})
+            continue
+        keys.add(probe_of(entry))
+        kept.append(entry)
+
+    # 语义判重：机械比对抓不住「换说法的同一件事」
+    if kept and is_llm_configured():
+        try:
+            verdict = _llm_dedup_chunks(page, [e["title"] for e in kept])
+        except SystemExit:
+            verdict = {}
+        survivors: list[dict] = []
+        for entry in kept:
+            hit = verdict.get(entry["title"])
+            if hit:
+                dropped.append({"title": entry["title"],
+                                "reason": "语义重复于页面已有条目「{0}」，不再重复追加".format(hit)})
+                continue
+            survivors.append(entry)
+        kept = survivors
+    return kept, dropped
 
 
 # ---------------------------------------------------------------- 报告
@@ -1766,6 +2004,8 @@ def main() -> int:
     ap.add_argument("--pairs-json", default="", help="改用本地问答对 JSON，跳过取数")
     ap.add_argument("--dump-pairs", default="", help="把问答对写入该 JSON，便于排查")
     ap.add_argument("--report", default="", help="变更报告输出路径（markdown）")
+    ap.add_argument("--reuse-page", default="",
+                    help="上期固定分支的页面文件：只取其中多出来的条目续接进来（**整份文件永不覆盖当前页面**）")
     args = ap.parse_args()
 
     keyword = cfg("PRODUCT_KEYWORD", "jumpserver")
@@ -1822,13 +2062,21 @@ def main() -> int:
 
     page = read_page()
     index = doc_index()
-    keys = existing_question_keys(page)
+    keys = existing_entry_keys(page)
 
     entries: list[dict] = []
     skipped: list[dict] = []
+    reused: list[dict] = []
+    if args.reuse_page:
+        # 先把上期未合并的条目续接进来，再跑本期模型选题，避免同一问题本期重复入选
+        reused, reused_skipped = reuse_entries_from_page(Path(args.reuse_page), page)
+        skipped.extend(reused_skipped)
+        for entry in reused:
+            keys.add(normalize_text(entry["title"])[:40])
+        log("[community_faq] 从上期页面续接条目 {0} 条".format(len(reused)))
     candidates = screen_questions(pairs, page, index, args.max_items * 2)
     log("[community_faq] 模型初选 {0} 条".format(len(candidates)))
-    if not candidates:
+    if not candidates and not reused:
         log("[community_faq] 模型没有选出合格问题")
         emit_empty_report("模型初选为 0：本期没有值得沉淀的主题（全部被判为一次性个案/无结论/重复）。",
                           funnel_stats(stats, pairs, [], 0, 0))
@@ -1881,6 +2129,35 @@ def main() -> int:
             continue
         keys.add(final_key)
         entries.append(entry)
+
+    if reused:
+        entries = reused + entries
+        log("[community_faq] 入库 {0} 条（其中上期续接 {1} 条，本期新增 {2} 条）".format(
+            len(entries), len(reused), len(entries) - len(reused)))
+        new_page, placed = insert_entries(page, entries)
+        if new_page == page:
+            log("[community_faq] 页面无变化")
+            set_action_output(False, 0, "")
+            return 3
+        page_ok, page_note = mdx_compile_check(new_page, label=str(FAQ_PAGE), baseline=page)
+        log("[community_faq] 整页 MDX 校验：{0}".format(page_note))
+        if not page_ok:
+            log("[community_faq] 拒绝写回：页面无法通过 MDX 编译，页面保持原样")
+            return 5
+        report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
+        write_report(report, pairs=pairs, placed=placed, skipped=skipped,
+                     by_day=by_day, days=args.days, applied=args.apply,
+                     fetch_note=fetch_summary(stats),
+                     funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)))
+        if args.apply:
+            FAQ_PAGE.write_text(new_page, encoding="utf-8")
+            log("[community_faq] 已写回 {0}（新增/续接 {1} 条）".format(FAQ_PAGE, len(placed)))
+        else:
+            log("[community_faq] 预览模式，未写回（新增/续接 {0} 条）".format(len(placed)))
+        set_action_output(True, len(placed), report)
+        print(json.dumps({"changed": bool(placed), "count": len(placed), "report": report},
+                         ensure_ascii=False))
+        return 0
 
     if not entries:
         log("[community_faq] 没有可入库的新条目")
