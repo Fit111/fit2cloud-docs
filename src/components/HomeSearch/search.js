@@ -40,17 +40,29 @@ export function productOf(permalink) {
   return PRODUCT_BY_ROUTE[seg] || (seg ? seg.toUpperCase() : '文档中心');
 }
 
-/* 精简索引: 只取每个产品的最新版本, 避免 v1/v2 内容重复出现在结果里 */
-/* 补上产品名与检索用小写串(插件已去好重、只留最新版本) */
-export function buildIndex(items) {
-  return (items || []).map((it) => {
-    const product = productOf(it.permalink);
-    return {
-      ...it,
-      product,
-      haystack: `${it.title} ${it.desc} ${product}`.toLowerCase(),
-    };
-  });
+/*
+ * 构建索引。
+ * scope = {versionPath: string} | null:
+ *   - 传了 scope(在某产品某版本文档页): 只取 versionPath 匹配该版本的项, 精确限定;
+ *   - 没传(首页/查看全部): 只取每产品最新版本(isLast), 避免 v1/v2 重复。
+ * 补上产品名与检索用小写串。
+ */
+export function buildIndex(items, scope) {
+  return (items || [])
+    .filter((it) => {
+      if (scope) {
+        return it.versionPath === scope.versionPath;
+      }
+      return it.isLast !== false;
+    })
+    .map((it) => {
+      const product = productOf(it.permalink);
+      return {
+        ...it,
+        product,
+        haystack: `${it.title} ${it.desc} ${product}`.toLowerCase(),
+      };
+    });
 }
 
 /* 子串匹配: 空格分隔的多个词需全部命中, 标题命中优先于摘要命中 */

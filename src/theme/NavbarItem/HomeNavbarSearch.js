@@ -15,6 +15,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useHistory} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {usePluginData} from '@docusaurus/useGlobalData';
+import {useActivePluginAndVersion} from '@docusaurus/plugin-content-docs/client';
 import styles from './HomeNavbarSearch.module.css';
 import {buildIndex, searchDocs, I18N, MAX_RESULTS, searchUrlFor} from '../../components/HomeSearch/search';
 import ResultsPanel from '../../components/HomeSearch/ResultsPanel';
@@ -28,7 +29,15 @@ export default function HomeNavbarSearch() {
 
   const history = useHistory();
   const {items} = usePluginData('home-search-index');
-  const index = useMemo(() => buildIndex(items), [items]);
+  // 当前所在文档实例的「产品+版本」作用域(纯 useLocation 路径匹配, 任意页面可用):
+  //   处于某产品某版本文档页时 → 非空, 搜索限定到该版本;
+  //   首页 / /search 等无文档路由匹配时 → undefined → 全局搜索。
+  const apv = useActivePluginAndVersion();
+  const scope = useMemo(
+    () => (apv?.activeVersion ? {versionPath: apv.activeVersion.path} : null),
+    [apv],
+  );
+  const index = useMemo(() => buildIndex(items, scope), [items, scope]);
 
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
