@@ -547,6 +547,12 @@ const sidebars = {
       "items": [
         {
           "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题",
+          "key": "doc:常见问题/常见问题"
+        },
+        {
+          "type": "doc",
           "id": "faq/install_configuration",
           "label": "安装部署",
           "key": "doc:常见问题/安装部署"
