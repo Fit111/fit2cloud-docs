@@ -62,6 +62,16 @@ const sidebars = {
 
     { type: "doc", id: "integrate_third_party", label: "接入第三方" },
 
+    // ── ops：运维指南 ──
+    {
+      type: "category",
+      label: "运维指南",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "ops/system_logs", label: "查看系统日志" },
+      ],
+    },
+
     // ── faq：常见问题 ──
     {
       type: "category",

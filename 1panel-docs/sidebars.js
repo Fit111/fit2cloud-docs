@@ -839,9 +839,26 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "运维指南",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "ops/system_logs",
+          "label": "查看系统日志"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "常见问题",
       "collapsed": true,
       "items": [
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题"
+        },
         {
           "type": "doc",
           "id": "faq/faq",
