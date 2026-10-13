@@ -261,7 +261,7 @@ MaxKB 配置钉钉扫码登录时，需要在 [**钉钉开放平台**](https://o
 
 设置【应用首页】和【PC 端首页地址】。
 
-地址格式为：http(s)://xxx.xxx.xxx/?client=dingtalk&corpId=CORPID。注意 corpId=CORPID 需替换成真正的 CORPID。
+地址格式为：http(s)://xxx.xxx.xxx/admin/login?client=dingtalk&corpId=CORPID。注意 corpId=CORPID 需替换成真正的 CORPID。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/system/dingding_webapp_config.png" alt="图 29  钉钉应用配置" />
 
