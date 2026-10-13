@@ -6,7 +6,37 @@ title: 常见问题
 
 ## 1 安装部署
 
+### 1.1 V2能否直接升级到V3
+
+**问题**：DataEase V2 能否在同一台服务器上直接升级到 V3？
+
+**处理方式**：
+
+不支持直接升级。V2 与 V3 架构不兼容，安装脚本会检测当前版本并阻止升级。需在新环境安装 V3，并使用官方迁移工具将 V2 数据迁移至 V3。
+
+迁移步骤请参阅[V2-V3 数据迁移指南](../installation/data_migration.md)
+
+### 1.2 外部数据库安装后缺表或Schema配置错误怎么办？
+
+**问题**：使用外部数据库（如PostgreSQL）进行脚本化安装时，提示缺表或Schema配置错误，应如何修正？
+
+**处理方式**：
+
+DataEase 安装脚本会自动在目标库中建表并写入初始数据。若出现缺表或 Schema 错误，通常是因为 `install.conf` 中的 `DE_DB_SCHEMA` 配置不正确或为空。
+
+请在安装目录的 `install.conf` 文件中修改 `DE_DB_SCHEMA` 为正确的 Schema 名称（PostgreSQL 默认为 `public`，若未指定则可能默认为用户名或空），保存后执行 `dectl restart` 重启服务。
+
+详细配置参数请参阅[外部数据库部署](../installation/multi_database_deployment.md)
+
 ## 2 数据源与数据集
+
+### 2.1 跨源查询 Doris 报错怎么办？
+
+**问题**：在多源跨源查询时，Doris 数据源因自动添加的分页语法不支持而报错，该如何处理？
+
+**处理方式**：
+
+跨源查询需使用 Calcite 语法编写。目前 DataEase 对跨源兼容性存在已知问题，建议向 GitHub 提交 Issue 以获取研发反馈。
 
 ## 3 图表与视图
 
