@@ -807,9 +807,58 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "典型应用场景",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "link",
+          "label": "MiniMax H3 本地视频生成方案",
+          "href": "https://mp.weixin.qq.com/s/Z3DKuqLRW2aeNdkdKD2OzQ"
+        },
+        {
+          "type": "link",
+          "label": "通过 1Panel MCP 管理 Linux服务器",
+          "href": "https://mp.weixin.qq.com/s/oFKuETROT2hYydh6Sd_TPQ"
+        },
+        {
+          "type": "link",
+          "label": "智能路由配置方法与实测效果",
+          "href": "https://mp.weixin.qq.com/s/gfdBZMso2x1_u-uCEOBWaw"
+        },
+        {
+          "type": "link",
+          "label": "企业全员落地 WorkBuddy 的好帮手",
+          "href": "https://mp.weixin.qq.com/s/SfiY9NgqP3tK1wd51lIX3Q"
+        },
+        {
+          "type": "link",
+          "label": "开源三件套部署个人 AI 助理",
+          "href": "https://mp.weixin.qq.com/s/qyQyRoI1GW7y_sfRmPJt6w"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "运维指南",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "ops/system_logs",
+          "label": "查看系统日志"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "常见问题",
       "collapsed": true,
       "items": [
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题"
+        },
         {
           "type": "doc",
           "id": "faq/faq",

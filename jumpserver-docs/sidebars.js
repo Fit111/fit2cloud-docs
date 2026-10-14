@@ -1071,6 +1071,12 @@ const sidebars = {
         },
         {
           "type": "doc",
+          "id": "manual/ops/system_logs",
+          "label": "查看系统日志",
+          "key": "doc:运维指南/查看系统日志"
+        },
+        {
+          "type": "doc",
           "id": "manual/ops/cli_tools",
           "label": "命令行工具",
           "key": "doc:运维指南/命令行工具"
