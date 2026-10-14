@@ -177,50 +177,50 @@ MaxKB 智能体接入企业微信智能体后，在此基础上，还可以将�
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 24  公众号问答对话效果</div>
 
 
-在智能体接入中点击【公众号】的【配置】按钮，配置信息中会自动生成回调 URL,并需要复制到【微信公众平台-设置与开发-基本配置-服务器配置】服务器地址 URL 中，除此之外的其它信息，将在微信公众平台中生成并获取。
+在智能体接入中点击【公众号】的【配置】按钮，配置信息中会自动生成回调 URL，并需要复制到【微信开发者平台-我的业务与服务-公众号-基础信息-域名与消息推送配置-消息推送】的 URL 中，除此之外的其它信息，将在微信开发者平台中生成并获取。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting_empty.png" alt="图 25  公众号配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  公众号配置</div>
 
 
-获取 APP ID、APP Secret、Token 和消息加解密密钥：在微信公众平台-设置与开发-基本配置中获取 APP ID、APP Secret 信息，并启动服务器配置，生成 Token 和消息加解密密钥。
+获取 APP ID、APP Secret、Token 和消息加解密密钥：在微信开发者平台-我的业务与服务-公众号-【基础信息】中获取 APP ID，在【基础信息-开发密钥】中获取 APP Secret，并在【基础信息-域名与消息推送配置-消息推送】中配置 Token 和消息加解密密钥。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_basicinfo.png" alt="图 26  微信公众平台基本配置" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_basicinfo.png" alt="图 26  微信开发者平台公众号基础信息" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  微信公众平台基本配置</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  微信开发者平台公众号基础信息</div>
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting1.png" alt="图 27  MaxKB公众号配置窗口" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting1.png" alt="图 27  编辑消息推送" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  MaxKB公众号配置窗口</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  编辑消息推送</div>
 
 
 将生成的 APP ID、APP Secret、Token 和消息加解密密钥信息输入到 MaxKB 公众号配置窗口中，并保存。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting2.png" alt="图 28  公众号服务器URL配置" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting2.png" alt="图 28  MaxKB 公众号配置窗口" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  公众号服务器URL配置</div>
-
-
-将【公众号-基本配置-服务器配置】中的 URL 设置为 MaxKB 公众号配置窗口中的回调地址 URL，然后提交，并启用服务器配置。
-
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting_url.png" alt="图 29  启用公众号服务器配置" />
-
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  启用公众号服务器配置</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 28  MaxKB 公众号配置窗口</div>
 
 
-开启客服接口权限。
+将【基础信息-域名与消息推送配置-消息推送】的 URL 设置为 MaxKB 公众号配置窗口中的回调地址 URL，并填写 Token、EncodingAESKey 和消息加密方式，点击【确定】即可启用消息推送。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_setting_url.png" alt="图 29  配置消息推送 URL" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 29  配置消息推送 URL</div>
+
+
+开启客服接口权限：在【接口管理-接口权限与额度-服务端接口】的客服消息中，确认「发送客服消息」接口已获得权限；若显示无权限，需完成账号主体认证后重新查看。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_enable_api.png" alt="图 30  客服接口权限" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 30  客服接口权限</div>
 
 
-设置 IP 白名单：进入公众号基本配置的【IP 白名单】中，添加 MaxKB 服务器的 IP 地址。
+设置 IP 白名单：进入【基础信息-开发密钥-API IP 白名单】的【设置名单】中，添加 MaxKB 服务器的 IP 地址。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_ip.png" alt="图 31  公众号IP白名单" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/public_account_ip.png" alt="图 31  API IP 白名单设置" />
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  公众号IP白名单</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 31  API IP 白名单设置</div>
 
 
 根据以上步骤完成配置后，即可在公众号中发送消息进行对话。
