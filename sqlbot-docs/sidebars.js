@@ -304,6 +304,12 @@ const sidebars = {
       "items": [
         {
           "type": "doc",
+          "id": "ops/config_files",
+          "label": "配置文件说明",
+          "key": "doc:运维指南/配置文件说明"
+        },
+        {
+          "type": "doc",
           "id": "ops/system_logs",
           "label": "查看系统日志",
           "key": "doc:运维指南/查看系统日志"
