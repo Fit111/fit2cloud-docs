@@ -23,7 +23,7 @@ keywords: [1Panel 防火墙, 主机防火墙, 容器端口防护, 端口转发, 
 | 端口转发 | 将服务器收到的连接转到本机其他端口或其他服务器 | 将本机 `8080` 转发到内网服务器的 `80` |
 | 设置 | 选择管理方式，配置 IPv6、禁 ping 和端口白名单 | 保护面板和 SSH 端口 |
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_overview.jpg" alt="图 1 防火墙首页与主机规则列表" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_overview.png" alt="图 1 防火墙首页与主机规则列表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 防火墙首页与主机规则列表</div>
 
@@ -103,7 +103,7 @@ Docker 发布端口可能经过独立的转发路径。若页面提示前往容�
 
 例如，限制 `宿主机 13306 → 容器 3306` 仅供办公网络使用，应选择对应的 **13306 发布端口**，设置“仅允许指定来源”，填写办公出口 IP 或网段。允许来源仍需满足云安全组等其他访问条件。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_docker_overview.jpg" alt="图 3 容器端口防护列表" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_docker_overview.png" alt="图 3 容器端口防护列表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 容器端口防护列表</div>
 
@@ -148,7 +148,7 @@ Docker 发布端口可能经过独立的转发路径。若页面提示前往容�
 
 IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA 风险提示时，按文末步骤处理。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_forward_overview.jpg" alt="图 6 端口转发规则列表" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_forward_overview.png" alt="图 6 端口转发规则列表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 端口转发规则列表</div>
 
@@ -184,7 +184,7 @@ IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA
 
 在白名单中填写面板或 SSH 端口不会修改服务的监听端口；服务端口应到对应服务设置中修改。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_settings.jpg" alt="图 8 防火墙设置" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_settings.png" alt="图 8 防火墙设置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 防火墙设置</div>
 
@@ -211,7 +211,7 @@ IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA
 
 自动备份位于安装基础目录下的 `1panel/backup/firewall/`，按 `host`、`forward`、`docker` 分类，实际路径以弹窗显示为准。重置会影响当前模块的访问限制或转发，请提前确认恢复方式。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_backup_reset.jpg" alt="图 11 备份规则后重置" />
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_backup_reset.png" alt="图 11 备份规则后重置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 备份规则后重置</div>
 
