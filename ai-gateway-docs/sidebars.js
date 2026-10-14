@@ -68,6 +68,7 @@ const sidebars = {
       label: "运维指南",
       collapsed: false,
       items: [
+        { type: "doc", id: "ops/config_files", label: "配置文件说明" },
         { type: "doc", id: "ops/system_logs", label: "查看系统日志" },
       ],
     },
