@@ -12,7 +12,7 @@ title: 常见问题
 
 **处理方式**：
 
-2核2G配置过低，不建议用于生产环境。2核4G配置仅适用于个人学习或单人测试，多人并发访问时内存占用较高，体验较差。生产环境建议使用更高配置的服务器。
+官方推荐配置为 **4 核 8G**（磁盘建议 100G）。2核2G 配置过低，不建议用于生产环境。2核4G 配置仅适用于个人学习或单人测试，多人并发访问时内存占用较高，体验较差。生产环境请按官方要求使用 4 核 8G 及以上配置。
 
 详细安装要求请参阅[离线安装指南](../installation/offline_installtion.md)
 
@@ -22,7 +22,13 @@ title: 常见问题
 
 **处理方式**：
 
-离线安装包部署时，容器内部自带 MySQL 数据库。数据文件持久化在宿主机挂载目录 `~/cordys` 中（对应容器内 `/opt/cordys`）。
+离线安装包默认启用内置 MySQL（`CORDYS_EXTERNAL_MYSQL=false`）。数据文件目录为容器内 `/opt/cordys/data/mysql`，默认持久化到宿主机 **`/opt/cordys/data/mysql`**（由 `install.conf` 中的 `CORDYS_BASE` 决定，默认 `CORDYS_BASE=/opt`，即宿主机路径为 `${CORDYS_BASE}/cordys`）。
+
+说明：
+
+- 若安装时修改了 `CORDYS_BASE`，请按实际安装路径查找。
+- 若启用了外置数据库（`CORDYS_EXTERNAL_MYSQL=true`），数据不在上述目录，而在外部数据库中。
+- 在线 Docker 一键安装的默认挂载是 `~/cordys:/opt/cordys`，与离线包默认路径不同，请勿混淆。
 
 ## 2 客户与商机管理
 
@@ -34,4 +40,4 @@ title: 常见问题
 
 **处理方式**：
 
-需前往企查查开放平台申请并获取 API 权限，确保接口已开通后再在系统中配置 Key 和密钥。
+该提示通常来自企查查开放平台侧，表示当前账号尚未开通 Cordys CRM 所需的 API 接口（如企业模糊搜索 `FuzzySearch/GetList`、企业信息核验 `EnterpriseInfo/Verify` 等）。请前往[企查查开放平台](https://openapi.qcc.com/)申请并开通对应接口权限，获取 AccessKey、SecretKey 后，在 Cordys CRM 系统设置的企查查集成中填写地址（默认 `https://api.qichacha.com`）、AccessKey 与 SecretKey，保存后再测试连接。
