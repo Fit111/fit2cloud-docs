@@ -17,7 +17,9 @@ keywords: [1Panel 防火墙, 主机防火墙, 容器端口防护, 端口转发, 
 | 端口转发 | 将服务器收到的连接转到本机其他端口或其他服务器 | 将本机 `8080` 转发到内网服务器的 `80` |
 | 设置 | 选择管理方式，配置 IPv6、禁 ping 和端口白名单 | 保护面板和 SSH 端口 |
 
-{/* 待补充截图 01：防火墙首页，展示四个功能页签和顶部状态栏 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_overview.jpg" alt="图 1 防火墙首页与主机规则列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 防火墙首页与主机规则列表</div>
 
 ## 2 首次使用
 
@@ -64,7 +66,9 @@ IP 和端口至少填写一项。需要匹配所有 IPv6 来源时填写 `::/0`�
 
 示例地址需替换为实际地址。**添加一条指定来源的允许规则，不等于自动禁止其他来源。** 如果目标是“只允许办公 IP”，还需检查已有的广泛放行规则、拒绝规则及其顺序。
 
-{/* 待补充截图 03：创建主机规则，以允许指定 IP 访问 3306 为例 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_host_create.jpg" alt="图 2 创建主机规则：允许指定 IP 访问 3306" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 创建主机规则：允许指定 IP 访问 3306</div>
 
 ### 管理已有规则
 
@@ -91,7 +95,17 @@ Docker 发布端口可能经过独立的转发路径。若页面提示前往容�
 
 例如，限制 `宿主机 13306 → 容器 3306` 仅供办公网络使用，应选择对应的 **13306 发布端口**，设置“仅允许指定来源”，填写办公出口 IP 或网段。允许来源仍需满足云安全组等其他访问条件。
 
-{/* 待补充截图 04：容器列表、端口详情及“仅允许指定来源”配置 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_docker_overview.jpg" alt="图 3 容器端口防护列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 容器端口防护列表</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_docker_ports.jpg" alt="图 4 容器发布端口详情：宿主机 3306 → 容器 3306" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 容器发布端口详情：宿主机 3306 → 容器 3306</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_docker_policy.jpg" alt="图 5 容器端口防护：仅允许指定来源" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 容器端口防护：仅允许指定来源</div>
 
 使用时注意：
 
@@ -126,7 +140,13 @@ Docker 发布端口可能经过独立的转发路径。若页面提示前往容�
 
 IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA 风险提示时，按文末步骤处理。
 
-{/* 待补充截图 05：端口转发列表和创建弹窗，以 8080 转发到内网 80 为例 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_forward_overview.jpg" alt="图 6 端口转发规则列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 端口转发规则列表</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_forward_create.jpg" alt="图 7 创建端口转发：8080 转发到内网服务器的 80" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 创建端口转发：8080 转发到内网服务器的 80</div>
 
 ## 6 设置
 
@@ -156,7 +176,17 @@ IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA
 
 在白名单中填写面板或 SSH 端口不会修改服务的监听端口；服务端口应到对应服务设置中修改。
 
-{/* 待补充截图 06：设置页及端口白名单编辑弹窗 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_settings.jpg" alt="图 8 防火墙设置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 防火墙设置</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_whitelist.jpg" alt="图 9 端口白名单列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 端口白名单列表</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_whitelist_edit.jpg" alt="图 10 编辑 SSH 端口白名单" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10 编辑 SSH 端口白名单</div>
 
 ## 7 导入、导出与恢复
 
@@ -173,7 +203,9 @@ IPv6 转发会在添加或恢复 IPv6 规则时检查并按需启用。出现 RA
 
 自动备份位于安装基础目录下的 `1panel/backup/firewall/`，按 `host`、`forward`、`docker` 分类，实际路径以弹窗显示为准。重置会影响当前模块的访问限制或转发，请提前确认恢复方式。
 
-{/* 待补充截图 07：备份重置及初始化恢复弹窗，展示备份文件、规则数和时间 */}
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/firewall_backup_reset.jpg" alt="图 11 备份规则后重置" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 备份规则后重置</div>
 
 ## 8 使用注意事项
 
