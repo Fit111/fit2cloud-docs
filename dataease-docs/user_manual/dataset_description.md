@@ -136,12 +136,14 @@ SELECT ORDER_ID, ORDER_DATE, PROJ_ID, ORDER_EMP FROM ORDERS WHERE ORDER_EMP IN (
 ```
 SELECT ORDER_ID, ORDER_DATE, PROJ_ID, ORDER_EMP FROM ORDERS WHERE (ORDER_EMP IN ${USER_NAME} AND PROJ_ID IN ${USER_PROJ_ID})
 ```
-情况四：结合两个时间查询组件进行日期范围（变以文本格式传入的需在 SQL 中自行处理时间格式）传参，使用 BETWEEN 或者用 &lt;、 &gt; ：
+情况四：结合两个时间查询组件进行日期范围传参，使用 BETWEEN 或者用小于、大于：
 ```
 SELECT * FROM SALES WHERE 记录时间 BETWEEN '${BEGINTIME}' AND '${ENDTIME}';
 
 SELECT * FROM SALES WHERE 记录时间 > '${BEGINTIME}' AND 记录时间 < '${ENDTIME}'
 ```
+
+**注意：时间参数始终以文本形式传入 SQL。** 系统默认将参数类型设置为文本。用于时间过滤时，请在右上角【参数设置】中将类型改为【时间】，并填写与字段一致的时间格式（如 `yyyy-MM-dd HH:mm:ss`）。改为时间类型后，系统会把查询组件传入的时间戳按该格式转成字符串，再以文本写入 SQL，并不是数据库的日期类型。因此 SQL 中需用单引号包裹变量，写法见上方示例。若保持默认文本类型，查询组件可能传入毫秒时间戳，需在 SQL 中自行处理时间格式。
 
 【 3.0.0 及之后版本变量使用方法 】
 
@@ -156,9 +158,10 @@ select * from table where $DE_PARAM{name = '$[p]'}
 
 <strong>时间范围参数绑定：</strong>当需要按时间范围查询时，需要在 SQL 中定义两个参数，分别用于接收开始时间和结束时间；并在查询组件中分别绑定这两个参数。
 
-1. 在仪表板中添加时间范围查询组件。
-2. 在【参数】页签中，分别将开始时间参数和结束时间参数关联为【开始时间】和【结束时间】。
-3. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
+1. 在 SQL 数据集的【参数设置】中，将开始时间和结束时间参数的参数类型设置为【时间】，并根据字段实际格式设置时间格式。
+2. 在仪表板中添加时间范围查询组件。
+3. 在查询组件配置中，将展示类型设置为【时间范围】；在【参数】页签中，分别将开始时间参数和结束时间参数关联为【开始时间】和【结束时间】。
+4. 保存后，查询组件选择的时间范围会分别传入两个 SQL 参数。
 
 ![查询组件设置参数设置](/img/dataease/dataset_configuration/shijianchuancandapeiguolvzujian.png)
 
