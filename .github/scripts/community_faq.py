@@ -37,9 +37,11 @@
                                仅用于**标记**「这是官方人员的答复」（高信任来源），**不做过滤**：
                                名单外同事的答复仍会保留，只是标记为「普通同事答复」（低信任），
                                两级来源都交给第二轮按分级标准审核。未设置时全部按普通同事处理
-    LLM_BASE_URL               模型网关（OpenAI 兼容），默认 https://ai.fit2cloud.cn/gateway/v1
-    LLM_API_KEY                模型 Key
-    LLM_MODEL                  模型名，默认 f2c-auto（飞致云 AI 网关自动路由）；置空则列出网关可用模型
+    LLM_BASE_URL               模型网关（OpenAI 兼容）。默认 https://qianfan.baidubce.com/v2，
+    LLM_API_KEY                模型 Key（百度千帆用 IAM/API Key 形式的 Bearer Token）
+                               由 workflow 从 secrets.LLM_API_KEY 注入，不要写进仓库文件
+    LLM_MODEL                  模型名，默认 deepseek-v4.1-flash；置空则列出网关可用模型
+    LLM_DISABLE_REASONING      非 0 即关闭推理型模型的思维链，默认开启（见脚本内常量注释）
     PRODUCT_KEYWORD            群名过滤关键词**覆盖项**：只对 jumpserver 生效（历史兼容）；
                                其它产品的关键词一律取自 PRODUCTS 表。传 --product 时，
                                若 PRODUCT_KEYWORD 与该产品的默认关键词不同，则仍以环境变量为准
@@ -107,6 +109,7 @@ PRODUCTS: dict[str, dict] = {
         "keyword": "jumpserver",
         "exclude": [],
         "version_scope": "V5",
+        "owner": "fanzhoui",
         "enabled": True,
         "branch": "chore/weekly-community-faq",
         "min_md": 50,
@@ -118,6 +121,7 @@ PRODUCTS: dict[str, dict] = {
         "keyword": "dataease",
         "exclude": [],
         "version_scope": "v3",
+        "owner": "Fit111",
         "enabled": True,
         "branch": "chore/weekly-community-faq-dataease",
         "min_md": 50,
@@ -129,6 +133,7 @@ PRODUCTS: dict[str, dict] = {
         "keyword": "maxkb",
         "exclude": [],
         "version_scope": "v2",
+        "owner": "shouzhiyuxian",
         "enabled": True,
         "branch": "chore/weekly-community-faq-maxkb",
         "min_md": 50,
@@ -141,6 +146,7 @@ PRODUCTS: dict[str, dict] = {
         # 「1Panel VIP 交流群8/7/9」不是普通用户交流群，剔除
         "exclude": ["vip"],
         "version_scope": "v2",
+        "owner": "gitplayer4",
         "enabled": True,
         "branch": "chore/weekly-community-faq-1panel",
         "min_md": 50,
@@ -152,6 +158,7 @@ PRODUCTS: dict[str, dict] = {
         "keyword": "sqlbot",
         "exclude": [],
         "version_scope": "v1",
+        "owner": "yangjie-sister",
         "enabled": True,
         "branch": "chore/weekly-community-faq-sqlbot",
         "min_md": 30,
@@ -163,6 +170,7 @@ PRODUCTS: dict[str, dict] = {
         "keyword": "cordys",
         "exclude": [],
         "version_scope": "v1",
+        "owner": "yangjie-sister",
         "enabled": True,
         "branch": "chore/weekly-community-faq-cordys",
         "min_md": 30,
@@ -170,6 +178,61 @@ PRODUCTS: dict[str, dict] = {
 }
 
 DEFAULT_PRODUCT = "jumpserver"
+
+# ---------------------------------------------------------------- 社区值班人轮换
+# 「社区常见问题」PR 的双复核规则：产品负责人（PRODUCTS[key]["owner"]，各产品固定）
+# + 当周社区值班人，两人 Approve 后任意一人可合并。
+#
+# 轮换本来是四人一轮回（付伟博 / 杨洁 / 邵文杰 / 王光禄），但**存在换班特例**
+# （第七轮付伟博与第十轮王光禄互换），因此这里写成「周起点日期 -> 账号」的显式表，
+# 不做取模推算 —— 取模遇到换班必然算错，而错挂 reviewer 会静默漏掉一次复核。
+#
+# 键 = 该轮所在周的**周一**日期（ISO），值 = 该周社区值班人的 GitHub 账号。
+# 定时任务在周一 03:00（北京时间）运行，取运行当天所在周（周一~周日）查表。
+# 表未覆盖的周（例如约满到期后新增的周）→ oncall_for() 返回空串，
+# PR 只挂产品负责人，并在 body 与 Actions 摘要里显式提示「本周值班人未配置」，
+# 绝不猜测值班人。
+ONCALL_ROTA: dict[str, str] = {
+    "2026-10-05": "shouzhiyuxian",   # 第六轮 付伟博
+    "2026-10-12": "shouzhiyuxian",   # 第七轮 付伟博（原第十轮，与王光禄换班）
+    "2026-10-19": "yangjie-sister",  # 第八轮 杨洁
+    "2026-10-26": "fanzhoui",        # 第九轮 邵文杰
+    "2026-11-02": "Fit111",          # 第十轮 王光禄（原第七轮，与付伟博换班）
+}
+
+# 账号 -> 姓名，仅供 PR body / 日志展示（不参与调度）
+ONCALL_NAMES: dict[str, str] = {
+    "shouzhiyuxian": "付伟博",
+    "yangjie-sister": "杨洁",
+    "fanzhoui": "邵文杰",
+    "Fit111": "王光禄",
+    "gitplayer4": "阮皓",
+}
+
+
+def oncall_for(day=None) -> str:
+    """返回 day（默认今天）所在周的社区值班人账号；表未覆盖时返回空串。
+
+    day 可以是 datetime.date；传入 None 时用 date.today()（依赖 TZ=Asia/Shanghai）。
+    该函数只看「周一对齐」的日期键，避免跨时区/跨天误差：先算本周周一，再查表。
+    """
+    import datetime as _dt
+    if day is None:
+        day = _dt.date.today()
+    monday = day - _dt.timedelta(days=day.weekday())
+    val = ONCALL_ROTA.get(monday.isoformat(), "")
+    if not val:
+        log("[community_faq] 本周（{0} 起）未在 ONCALL_ROTA 中配置社区值班人，"
+            "PR 将只挂产品负责人".format(monday.isoformat()))
+    return val
+
+
+def owners_for(conf: dict, day=None) -> tuple[str, str]:
+    """返回 (产品负责人账号, 当周值班人账号)；两者可能相同（此时调用方去重）。"""
+    owner = str(conf.get("owner") or "").strip()
+    oncall = oncall_for(day)
+    return owner, oncall
+
 
 # 由 resolve_product() 在 main() 里按 --product 重绑；模块级先给默认值，
 # 目的是让所有既有函数（read_page / doc_index / rel_link / compose_entry ...）
@@ -254,8 +317,23 @@ QUESTION_MIN_CHARS = 8
 # 自动应答机器人（欢迎语 / 客服助理），不计为「同事解答」
 BOT_USERIDS = frozenset({"130132198901303490", "wbVkCUDAAAt_oq-BtwsvQ2ImoABXjiuw"})
 
-# 默认模型：飞致云 AI 网关的自动路由模型，可用 LLM_MODEL 覆盖
-DEFAULT_LLM_MODEL = "f2c-auto"
+# 默认模型：百度千帆 v2（OpenAI 兼容）上的 deepseek-v4.1-flash。
+# ⚠️ workflow 的 env 里已把同一对「网关 + 模型名」写死，env 优先于这里的默认值；
+# 换模型时两处都要改（见文件头「模型相关配置」）。
+DEFAULT_LLM_MODEL = "deepseek-v4.1-flash"
+
+# 默认网关：必须与 DEFAULT_LLM_MODEL 在同一处维护，避免「模型换了、默认地址没换」
+DEFAULT_LLM_BASE_URL = "https://qianfan.baidubce.com/v2"
+
+
+# 是否关闭推理型模型的思维链（payload 里发 thinking={"type": "disabled"}），默认关。
+# 为什么默认关：reasoning token **计入 max_tokens**，而本任务三次调用都是「按固定格式吐 JSON」，
+# 思维链毫无收益却挤占正文预算。实测（deepseek-v4.1-flash，max_tokens=600，同一提问）：
+#   不关思考 → completion_tokens 600，其中 reasoning 582，finish_reason=length，正文只剩残句；
+#   关掉思考 → completion_tokens 38，finish_reason=stop，正文完整。
+# ⚠️ 换用不支持该字段的模型会返回 HTTP 400，届时把 LLM_DISABLE_REASONING 设为 0（报错里也写了）。
+def llm_disable_reasoning() -> bool:
+    return cfg("LLM_DISABLE_REASONING", "1") not in ("0", "false", "False")
 
 # 模糊/不确定表述：提示词已明令禁止，这里做机械兜底，命中只记警告、不阻断
 VAGUE_PHRASES = ("可能", "大概", "也许", "或许", "似乎", "估计", "不确定",
@@ -1019,7 +1097,7 @@ def rel_link(doc_path: str) -> str:
 # ---------------------------------------------------------------- 大模型
 
 def llm_endpoint() -> tuple[str, str, str]:
-    base = cfg("LLM_BASE_URL", "https://ai.fit2cloud.cn/gateway/v1").rstrip("/")
+    base = cfg("LLM_BASE_URL", DEFAULT_LLM_BASE_URL).rstrip("/")
     key = cfg("LLM_API_KEY")
     model = cfg("LLM_MODEL", DEFAULT_LLM_MODEL)
     if not key:
@@ -1045,15 +1123,34 @@ def llm_chat(messages: list[dict], *, temperature: float = 0.2, max_tokens: int 
         raise fail(2, f"缺少 LLM_MODEL，网关可用模型: {', '.join(available) or '(空)'}")
     payload = {"model": model, "messages": messages,
                "temperature": temperature, "max_tokens": max_tokens}
+    if llm_disable_reasoning():
+        # 关掉推理型模型的思维链：deepseek-v4.1-flash 等会先输出 reasoning_content，
+        # 而 reasoning token **同样计入 max_tokens** —— 预算被「思考」吃掉后 content 就成了空串/残句。
+        # 本任务三次调用都是「按固定格式吐 JSON」，不需要思维链；关掉后 Token 全用于正文、响应更快。
+        payload["thinking"] = {"type": "disabled"}
     try:
         res = http_json("POST", f"{base}/chat/completions", body=payload,
                         headers={"Authorization": f"Bearer {key}"}, timeout=180)
     except RuntimeError as err:
-        raise fail(4, f"模型调用失败（网关 {base}）: {err}") from err
+        if llm_disable_reasoning() and "400" in str(err):
+            raise fail(4, "模型网关拒绝了 thinking={'type':'disabled'}（HTTP 400）：该模型不支持关闭"
+                          "思维链。请把 LLM_DISABLE_REASONING 设为 0 后重试，或改用支持关闭的非推理"
+                          "模型。模型={0} / 网关={1}".format(model, base)) from err
+        raise fail(4, "模型调用失败（网关 {0}）: {1}".format(base, err)) from err
     choices = res.get("choices") or []
     if not choices:
         raise fail(4, f"模型无返回: {str(res)[:300]}")
-    return str((choices[0].get("message") or {}).get("content") or "")
+    choice = choices[0] or {}
+    message = choice.get("message") or {}
+    content = str(message.get("content") or "")
+    # 兜底：正常情况下思维链已被 thinking=disabled 关掉，不会走到这里。
+    # 保留是为了 LLM_DISABLE_REASONING 被置 False、或静默降级的老网关仍返回推理内容时，
+    # 能明确报出「预算被思考吃掉」而不是让调用方拿空串去 json_block() 后误报「模型不会输出 JSON」。
+    if not content and choice.get("finish_reason") == "length":
+        raise fail(4, "模型输出被 max_tokens 截断（reasoning_content 占满了预算，content 为空）："
+                      "请调大 max_tokens 后重试，或确认 LLM_DISABLE_REASONING 未被设为 0。模型={0}"
+                      .format(model))
+    return content
 
 
 def json_block(text: str):
@@ -2250,8 +2347,11 @@ def main() -> int:
         return emit_matrix(args.matrix)
     if args.print_config:
         conf = resolve_product(args.product)
-        print(json.dumps({k: conf[k] for k in ("key", "docs", "faq_rel", "branch", "min_md")},
-                         ensure_ascii=False))
+        owner, oncall = owners_for(conf)
+        out = {k: conf[k] for k in ("key", "docs", "faq_rel", "branch", "min_md")}
+        out["owner"] = owner
+        out["oncall"] = oncall
+        print(json.dumps(out, ensure_ascii=False))
         return 0
 
     conf = use_product(args.product)
