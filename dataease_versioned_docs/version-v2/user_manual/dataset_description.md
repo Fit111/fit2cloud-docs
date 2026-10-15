@@ -110,12 +110,14 @@ SELECT ORDER_ID, ORDER_DATE, PROJ_ID, ORDER_EMP FROM ORDERS WHERE ORDER_EMP IN �
 ```
 SELECT ORDER_ID, ORDER_DATE, PROJ_ID, ORDER_EMP FROM ORDERS WHERE (ORDER_EMP IN ${USER_NAME} AND PROJ_ID IN ${USER_PROJ_ID})
 ```
-情况四：结合两个时间过滤组件进行日期范围（变以文本格式传入的需在 SQL 中自行处理时间格式）传参，使用 BETWEEN 或者用 &lt;、 &gt; ：
+情况四：结合两个时间过滤组件进行日期范围传参，使用 BETWEEN 或者用小于、大于：
 ```
 SELECT * FROM SALES WHERE 记录时间 BETWEEN '${BEGINTIME}' AND '${ENDTIME}';
 
 SELECT * FROM SALES WHERE 记录时间 > '${BEGINTIME}' AND 记录时间 < '${ENDTIME}'
 ```
+
+**注意：时间参数始终以文本形式传入 SQL。** 系统默认将参数类型设置为文本。用于时间过滤时，请在右上角【参数设置】中将类型改为【时间】，并填写与字段一致的时间格式（如 `yyyy-MM-dd HH:mm:ss`）。改为时间类型后，系统会把过滤组件传入的时间戳按该格式转成字符串，再以文本写入 SQL，并不是数据库的日期类型。因此 SQL 中需用单引号包裹变量，写法见上方示例。若保持默认文本类型，过滤组件可能传入毫秒时间戳，需在 SQL 中自行处理时间格式。
 
 【 2.10.10 及及之后版本变量使用方法 】
 
