@@ -335,6 +335,17 @@ DEFAULT_LLM_BASE_URL = "https://qianfan.baidubce.com/v2"
 def llm_disable_reasoning() -> bool:
     return cfg("LLM_DISABLE_REASONING", "1") not in ("0", "false", "False")
 
+# 采样种子：按 OpenAI 协议透传给网关。
+# ⚠️ 不要把可复现性寄托在这个参数上：2026-10-15 实测百度千帆 v2 会**静默忽略** seed
+# （同一个 seed 连发两次，返回的正文仍逐字不同），且同一份请求体还会随机返回空结果
+# `{"items":[]}`。真正保证「同一批候选里选出同一批条目」的是脚本侧的
+# rank_candidates() 按 score 排序，以及 screen_questions() 对空结果的重试。
+LLM_SEED = 20261015
+
+# 第一轮选题的空结果重试次数。网关会在**完全相同的请求**上随机返回 `{"items":[]}`，
+# 而空数组是合法 JSON、解析不报错，直接采信会把「本期无货」这个错误结论写进报告。
+PASS1_ATTEMPTS = 3
+
 # 模糊/不确定表述：提示词已明令禁止，这里做机械兜底，命中只记警告、不阻断
 VAGUE_PHRASES = ("可能", "大概", "也许", "或许", "似乎", "估计", "不确定",
                  "建议试试", "应该可以", "应该是", "好像是", "听说")
@@ -1122,7 +1133,10 @@ def llm_chat(messages: list[dict], *, temperature: float = 0.2, max_tokens: int 
             raise fail(4, f"无法确定模型名，且列模型失败（多为网关不可达）: {err}") from err
         raise fail(2, f"缺少 LLM_MODEL，网关可用模型: {', '.join(available) or '(空)'}")
     payload = {"model": model, "messages": messages,
-               "temperature": temperature, "max_tokens": max_tokens}
+               "temperature": temperature, "max_tokens": max_tokens,
+               # 采样种子按协议透传。注意千帆 v2 实测会忽略它（见 LLM_SEED 注释），
+               # 别指望靠它复现；真正决定入选集合的是 rank_candidates() 的脚本侧排序。
+               "seed": LLM_SEED}
     if llm_disable_reasoning():
         # 关掉推理型模型的思维链：deepseek-v4.1-flash 等会先输出 reasoning_content，
         # 而 reasoning token **同样计入 max_tokens** —— 预算被「思考」吃掉后 content 就成了空串/残句。
@@ -1256,19 +1270,32 @@ PASS1_SYSTEM = """你是 {product} 官方文档的维护者。
 
 ■ 输出要求：
 1. question_ids 只能用清单里**原样出现过**的编号，不得编造；语义相同才算一组。
-2. 最多选 {max_items} 条，**按收录价值从高到低排列**（成稿环节会依次取用，
-   排在前面的先被采纳）；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
+2. 最多选 {max_items} 条，每条都要给 score（0-100 整数）。排序由脚本按 score 做，
+   你**只需把 score 打准**，不必操心数组顺序；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
 3. doc_paths 尽量从给定文档索引里挑**原样存在**的相对路径，一条优先给一个依据；
    **不确定的路径宁可留空数组，也不要编造**（留空不影响收录，见下面的来源分级）。
 4. section 填现有小节标题原文；确实不属于任何现有小节时才填 new_section。
-5. kind 填 A/B/C/D 之一（上面四类）；只有 A、或有明确结论的 C 应出现在结果里。
-6. value 用一句话说清「为什么值得沉淀成社区常见问题」（可复用在哪：别人会怎么再问一遍；
+5. kind 填 A/B/C/D 之一（上面四类）。
+6. confidence 标「结论是否明确」（high/low）：只有官方资料里能读出
+   「现象 → 原因 → 处理方式」的完整链条时才填 high；
+   只是有人给了个说法、但没被确认，或你自己也拿不准，填 low。
+   **两个取值都要敢用**：绝大多数社区常见问题在官方文档里都能找到完整链条，此时必须填
+   high——全部填 low 等于把一半候选直接判死（A 类 confidence=low 会被丢弃），
+   反而违背「宁缺毋滥」的初衷。只有真的只有猜测性说法时才填 low。
+7. value 用一句话说清「为什么值得沉淀成社区常见问题」（可复用在哪：别人会怎么再问一遍；
    以及答案的确定性来自哪里），不要写「因为出现 N 次」或「文档里有相关内容」。
+
+■ score 打分口径（先按这两条给分，再按参考维度微调）：
+  可复用性（换个人、换个群、过一阵子是否还会问）占大头，答案确定性其次。
+  参考区间：70-100 = 强可复用且结论明确，本期优先收录；
+           40-69  = 有价值但偏窄或结论一般；
+           0-39   = 勉强沾边、更像个案或没结论。
+  同一批候选之间要有区分度：不要给所有条目都打 80 分，那等于没排序。
 
 只输出 JSON，不要任何解释文字。格式：
 {{"items":[{{"question_ids":[12,88],"title":"短标题（疑问句，20 字以内）","question":"一句话问题描述",
-"section":"现有小节标题或null","new_section":"新小节标题或null","kind":"A或C",
-"doc_paths":["installation/xxx.md"],"value":"可复用在哪 + 答案来自哪里"}}]}}"""
+"section":"现有小节标题或null","new_section":"新小节标题或null","kind":"A","confidence":"high",
+"score":85,"doc_paths":["installation/xxx.md"],"value":"可复用在哪 + 答案来自哪里"}}]}}"""
 
 PASS2_SYSTEM = """你是 {product} 官方文档的撰写者。
 任务：基于给定的官方文档原文与群内答复，写一条「社区常见问题」条目，直接进官方文档。
@@ -1336,6 +1363,73 @@ PASS2_SYSTEM = """你是 {product} 官方文档的撰写者。
 
 # ---------------------------------------------------------------- 选题与成稿
 
+# 结论不明确就丢弃的 kind：A(常见问题) 要求结论明确；C(故障排查) 的 prompt 已明确
+# 「有明确结论才收录」，故 C 只有 confidence=high 才放行——之前只按字母 kind 判断，
+# 导致「同事猜测原因」的 C 类也能入库。
+KIND_NEEDS_HIGH = frozenset({"A", "C"})
+
+
+def _to_score(raw) -> int:
+    """把模型给的 score 收敛成 0-100 整数；缺失/非法给一个保守中位分，保证仍可排序。"""
+    try:
+        val = int(float(str(raw).strip()))
+    except (TypeError, ValueError):
+        return 50
+    return max(0, min(100, val))
+
+
+def _to_confidence(raw) -> str:
+    return "high" if str(raw or "").strip().lower() == "high" else "low"
+
+
+def _as_int_ids(raw) -> list[int]:
+    """把模型给的 question_ids 收敛成整型集合，便于与落地条目按「同一批问答对」比对。"""
+    out: list[int] = []
+    for x in raw or []:
+        try:
+            out.append(int(x))
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def rank_candidates(candidates: list[dict]) -> list[dict]:
+    """把模型初选按「分数降序」重排，并剔除结论不明确的 A/C。
+
+    排序刻意放在脚本里做，而不是信模型数组的先后顺序：prompt 让模型同时干
+    「打分」和「排序」两件事时，order 是它顺手给的、不可复现（见 LLM_SEED 说明）。
+    交给脚本按数值排，才能审计「为什么这条进了、那条没进」。
+
+    confidence 护栏带「全灭保护」：实测该模型会把 confidence 一律填成 low（40+ 次
+    采样里 100% 是 low），若照搬规则会把整批候选判死、退化成「本周无货」。
+    因此只有当批里还存在 high 候选时才用 confidence 淘汰，否则视为模型没按字段
+    作答、退回按 kind 判断，避免一个不可靠字段接管整个流程。
+
+    返回的候选会补上 score / confidence 两个整型化字段供报告展示。
+    """
+    scored: list[dict] = []
+    for item in candidates:
+        if not isinstance(item, dict):
+            continue
+        item = dict(item)
+        item["score"] = _to_score(item.get("score"))
+        item["confidence"] = _to_confidence(item.get("confidence"))
+        scored.append(item)
+    any_high = any(x["confidence"] == "high" for x in scored)
+    if not any_high and scored:
+        log("[community_faq] 注意：候选里没有任何 confidence=high，"
+            "本轮不做 confidence 淘汰（该字段疑似未被模型正确填充）")
+    for item in scored:
+        kind = str(item.get("kind") or "").strip().upper()
+        if any_high and kind in KIND_NEEDS_HIGH and item["confidence"] != "high":
+            # 打 0 分让它沉底，reason 里说明是护栏拦的而非模型判断
+            item["score"] = 0
+            item["rejected_by"] = "confidence=low"
+    # 分数相同的用标题兜底，避免依赖输入顺序（保证排序结果完全确定）
+    scored.sort(key=lambda x: (-x["score"], normalize_text(str(x.get("title") or ""))))
+    return scored
+
+
 def screen_questions(pairs: list[dict], page: str, index: list[str],
                      max_items: int) -> list[dict]:
     """第一轮：模型归组并按「长期复用价值」挑选值得沉淀的问题，同时给出文档依据。"""
@@ -1352,19 +1446,40 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
         "## 官方文档索引（doc_paths 只能从这里挑）\n" + "\n".join(index) + "\n\n"
         "## 最近提问清单\n" + digest
     )
-    raw = llm_chat(
-        [{"role": "system", "content": PASS1_SYSTEM.format(
+    messages = [
+        {"role": "system", "content": PASS1_SYSTEM.format(
             max_items=max_items, **product_prompt_vars())},
-         {"role": "user", "content": user}],
-        temperature=0.1, max_tokens=4000,
-    )
-    try:
-        payload = json_block(raw)
-    except (ValueError, json.JSONDecodeError) as err:
-        log(f"[community_faq] 第一轮筛选输出无法解析: {err}")
-        return []
-    items = payload.get("items")
-    return [x for x in items if isinstance(x, dict)] if isinstance(items, list) else []
+        {"role": "user", "content": user},
+    ]
+    # 千帆 v2 上 deepseek-v4.1-flash 对**完全相同的请求**会随机返回 `{"items":[]}`
+    # （实测 8 次里有 4 次），而 seed 参数被网关静默忽略、无从复现。空数组是合法 JSON、
+    # 解析不报错，直接采信就会把「本期没有值得沉淀的主题」这个错误结论写进报告，
+    # 线上因此出现过两次跑出零交集结果。这里只对「空结果」重试，非空结果一律采信，
+    # 避免把模型真正的「本期无货」判断重试掉。
+    last_err = ""
+    for attempt in range(1, PASS1_ATTEMPTS + 1):
+        raw = llm_chat(messages, temperature=0.1, max_tokens=4000)
+        try:
+            payload = json_block(raw)
+        except (ValueError, json.JSONDecodeError) as err:
+            last_err = str(err)
+            log("[community_faq] 第一轮筛选输出无法解析（第 {0}/{1} 次）：{2}".format(
+                attempt, PASS1_ATTEMPTS, err))
+            continue
+        items = payload.get("items")
+        candidates = [x for x in items if isinstance(x, dict)] if isinstance(items, list) else []
+        if candidates:
+            if attempt > 1:
+                log("[community_faq] 第一轮筛选第 {0} 次拿到 {1} 个候选".format(
+                    attempt, len(candidates)))
+            return rank_candidates(candidates)
+        log("[community_faq] 第一轮筛选返回空候选（第 {0}/{1} 次），重试".format(
+            attempt, PASS1_ATTEMPTS))
+    if last_err:
+        log("[community_faq] 第一轮筛选连续 {0} 次无法解析，按无候选处理".format(PASS1_ATTEMPTS))
+    else:
+        log("[community_faq] 第一轮筛选连续 {0} 次返回空候选，按无候选处理".format(PASS1_ATTEMPTS))
+    return []
 
 
 def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | None:
@@ -1527,6 +1642,8 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         "official": bool(official_answers),
         "evidence": "官方文档" if blocks else ("官方人员答复" if official_answers else "普通同事答复"),
         "reason": str(item.get("value") or item.get("reason") or "").strip(),
+        "score": item.get("score", 0),
+        "confidence": item.get("confidence", "low"),
         "truncated": truncated,
         "omitted": omitted,
         "warnings": warnings,
@@ -1987,7 +2104,8 @@ def funnel_stats(stats: dict | None, pairs: list[dict], candidates: list[dict],
 
 def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                  skipped: list[dict], by_day: list[dict], days: int, applied: bool,
-                 fetch_note: str = "", note: str = "", funnel: dict | None = None) -> None:
+                 fetch_note: str = "", note: str = "", funnel: dict | None = None,
+                 candidates: list[dict] | None = None) -> None:
     per_day = ", ".join("{0}={1}".format(d["date"], d["pairs"]) for d in by_day)
     warn_total = sum(len(r["entry"].get("warnings") or []) for r in placed)
     lines = [
@@ -2037,10 +2155,36 @@ def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                 f"- 社区出现次数：{e['count']}",
                 f"- 来源：{'；'.join(e['sources']) or '-'}",
                 f"- 入选理由：{e['reason'] or '-'}",
+                f"- 评分：{e.get('score', '-')}（confidence={e.get('confidence', '-')}）",
             ]
             block += [f"- ⚠️ {w}" for w in (e.get("warnings") or [])]
             block.append("")
             lines += block
+    if candidates:
+        lines += ["## 本期候选排序（脚本按 score 降序取用）", ""]
+        lines += ["| # | score | kind | confidence | 标题 | 结果 |",
+                  "|---|---|---|---|---|---|"]
+        placed_titles = {normalize_text(str(r["entry"].get("title") or "")) for r in placed}
+        # PASS2 会重写标题（「文档分块后标题内容检索不出来怎么办？」→「标题内容检索不出来怎么办？」），
+        # 只按标题比对会把已收录的候选误判成「未轮到」。question_ids 指向同一批社区问答对、
+        # 不会被改写，故优先按它匹配，标题只作兜底。
+        placed_ids = {frozenset(r["entry"].get("question_ids") or []) for r in placed}
+        placed_ids.discard(frozenset())
+        skipped_reason = {normalize_text(str(r.get("title") or "")): r.get("reason")
+                          for r in skipped}
+        for i, item in enumerate(candidates, 1):
+            key = normalize_text(str(item.get("title") or ""))
+            ids = frozenset(_as_int_ids(item.get("question_ids")))
+            if (ids and ids in placed_ids) or key in placed_titles:
+                outcome = "✅ 收录"
+            elif item.get("rejected_by"):
+                outcome = "🚫 结论不明确"
+            else:
+                outcome = skipped_reason.get(key) or "未轮到（已满 {0} 条）".format(len(placed))
+            lines.append("| {0} | {1} | {2} | {3} | {4} | {5} |".format(
+                i, item.get("score", "-"), str(item.get("kind") or "?").upper(),
+                item.get("confidence", "-"), item.get("title") or "-", outcome))
+        lines.append("")
     if skipped:
         lines += ["## 未采纳的候选", ""]
         for row in skipped:
@@ -2296,9 +2440,20 @@ def load_pairs_from_json(path: str) -> tuple[list[dict], list[dict]]:
     clean: list[dict] = []
     for p in pairs:
         if isinstance(p, dict) and p.get("question") and p.get("answer"):
-            clean.append({"date": str(p.get("date") or ""), "group": str(p.get("group") or ""),
-                          "time": str(p.get("time") or ""), "question": str(p["question"]),
-                          "answer": str(p["answer"])})
+            # 必须原样带回 answerer / answerer_ids / official：build_question_digest 会
+            # 依据 official 打「[官方已答]」标记，compose_entry 也会用它们判断依据是否
+            # 来自官方。丢字段会让 --pairs-json 的复现结果与线上跑出来的不一样。
+            item = {"date": str(p.get("date") or ""), "group": str(p.get("group") or ""),
+                    "time": str(p.get("time") or ""), "question": str(p["question"]),
+                    "answer": str(p["answer"])}
+            if p.get("answerer"):
+                item["answerer"] = str(p["answerer"])
+            ids = p.get("answerer_ids")
+            if isinstance(ids, list):
+                item["answerer_ids"] = [str(i) for i in ids]
+            if p.get("official"):
+                item["official"] = True
+            clean.append(item)
     stats: dict[str, int] = {}
     for p in clean:
         stats[p["date"]] = stats.get(p["date"], 0) + 1
@@ -2415,14 +2570,16 @@ def main() -> int:
         log("[community_faq] 取到消息但没有形成问答对，跳过")
         return 3
 
-    def emit_empty_report(note: str, funnel: dict | None = None) -> None:
+    def emit_empty_report(note: str, funnel: dict | None = None,
+                          candidates: list[dict] | None = None) -> None:
         """无新增条目时也落一份报告，否则 Actions 摘要在「本周无新增」时一片空白，
         长达一整周都只能翻日志才能知道为什么没产出。"""
         try:
             report = args.report or str(Path(tempfile.gettempdir()) / "community-faq-report.md")
             write_report(report, pairs=pairs, placed=[], skipped=skipped,
                          by_day=by_day, days=args.days, applied=False,
-                         fetch_note=fetch_summary(stats), note=note, funnel=funnel)
+                         fetch_note=fetch_summary(stats), note=note, funnel=funnel,
+                         candidates=candidates)
             set_action_output(False, 0, report)
             log("[community_faq] 已写出报告：{0}".format(report))
         except OSError as err:
@@ -2444,6 +2601,10 @@ def main() -> int:
         log("[community_faq] 从上期页面续接条目 {0} 条".format(len(reused)))
     candidates = screen_questions(pairs, page, index, args.max_items * 2)
     log("[community_faq] 模型初选 {0} 条".format(len(candidates)))
+    for item in candidates:
+        log("[community_faq]   候选 kind={0} conf={1} score={2} ｜ {3}".format(
+            str(item.get("kind") or "?").upper(), item.get("confidence"),
+            item.get("score"), item.get("title")))
     if not candidates and not reused:
         log("[community_faq] 模型没有选出合格问题")
         emit_empty_report("模型初选为 0：本期没有值得沉淀的主题（全部被判为一次性个案/无结论/重复）。",
@@ -2459,6 +2620,11 @@ def main() -> int:
             skipped.append({"title": item.get("title"),
                             "reason": "模型判定为{0}（{1}），不具沉淀价值".format(
                                 kind, "一次性个案" if kind == "B" else "未解决/无结论")})
+            continue
+        if item.get("rejected_by") == "confidence=low":
+            # 分数沉底只是排序手段，这里明确记一条，避免「分数低但没说为什么」
+            skipped.append({"title": item.get("title"),
+                            "reason": "结论不明确（kind={0} 但同批存在 confidence=high 候选，本条只标 low）".format(kind)})
             continue
         ids = valid_question_ids(item, limit)
         if not ids:
@@ -2516,7 +2682,8 @@ def main() -> int:
         write_report(report, pairs=pairs, placed=placed, skipped=skipped,
                      by_day=by_day, days=args.days, applied=args.apply,
                      fetch_note=fetch_summary(stats),
-                     funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)))
+                     funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
+                     candidates=candidates)
         if args.apply:
             FAQ_PAGE.write_text(new_page, encoding="utf-8")
             log("[community_faq] 已写回 {0}（新增/续接 {1} 条）".format(FAQ_PAGE, len(placed)))
@@ -2535,7 +2702,8 @@ def main() -> int:
                      fetch_note=fetch_summary(stats),
                      note="模型初选 {0} 个主题，但全部在成稿环节被否决（逐条原因见下方「未采纳的候选」）。"
                           .format(len(candidates)),
-                     funnel=funnel_stats(stats, pairs, candidates, 0, len(skipped)))
+                     funnel=funnel_stats(stats, pairs, candidates, 0, len(skipped)),
+                     candidates=candidates)
         set_action_output(False, 0, report)
         print(json.dumps({"changed": False, "count": 0, "report": report}, ensure_ascii=False))
         return 3
@@ -2557,7 +2725,8 @@ def main() -> int:
     write_report(report, pairs=pairs, placed=placed, skipped=skipped,
                  by_day=by_day, days=args.days, applied=args.apply,
                  fetch_note=fetch_summary(stats),
-                 funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)))
+                 funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
+                 candidates=candidates)
 
     if args.apply:
         FAQ_PAGE.write_text(new_page, encoding="utf-8")
