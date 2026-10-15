@@ -40,6 +40,7 @@ const sidebars = {
         { type: "doc", id: "admin-user-manual/smart_route", label: "智能路由" },
         { type: "doc", id: "admin-user-manual/content_compliance", label: "内容合规" },
         { type: "doc", id: "admin-user-manual/call-logs", label: "调用日志" },
+        { type: "doc", id: "admin-user-manual/tasks", label: "任务中心" },
         { type: "doc", id: "admin-user-manual/usage-statistics", label: "用量统计", key: "admin-manual-usage-statistics" },
         { type: "doc", id: "admin-user-manual/settings", label: "网关设置" },
         { type: "doc", id: "admin-user-manual/system_settings", label: "系统设置" },
