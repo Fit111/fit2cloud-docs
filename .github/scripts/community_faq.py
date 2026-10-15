@@ -1643,10 +1643,25 @@ def _strip_trailing_citation(body: str) -> str:
     return stripped if stripped else body.rstrip()
 
 
+# prompt 里「页面固定结构」那段范例把 `**处理方式**：` 展示成独占一行，
+# 模型会误以为 body 字段也要自带该标签而重复输出一次。_render_entry 自己会补标签，
+# 这里先剥掉开头那个，否则页面上会出现连续两行 `**处理方式**：`（2026-10-15 PR #200 实测）。
+# 只剥**起始处**：正文中间若真写了这个标签，那是模型有意的分段，不该动。
+_BODY_LABEL_RE = re.compile(r"^\s*\*\*\s*处理方式\s*\*\*\s*[：:]?\s*")
+
+
+def _strip_body_label(body: str) -> str:
+    """剥掉 body 开头模型误加的 `**处理方式**：` 标签。"""
+    if not body:
+        return body
+    # 标签后原本跟着换行时会留下空行，一并去掉（渲染时空行会原样带出去）
+    return _BODY_LABEL_RE.sub("", body).lstrip("\n")
+
+
 def _render_entry(no: int, minor: int, entry: dict) -> list[str]:
     lines = [f"### {no}.{minor} {entry['title']}", "", f"**问题**：{entry['question']}", "",
              "**处理方式**：", ""]
-    lines += entry["body"].splitlines()
+    lines += _strip_body_label(entry["body"]).splitlines()
     lines.append("")
     if entry.get("see_also"):
         lines += [entry["see_also"], ""]
