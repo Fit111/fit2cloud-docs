@@ -418,9 +418,29 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "运维指南",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "ops/system_logs",
+          "label": "查看系统日志",
+          "key": "doc:运维指南/查看系统日志"
+        }
+      ],
+      "key": "cat:运维指南"
+    },
+    {
+      "type": "category",
       "label": "常见问题",
       "collapsed": true,
       "items": [
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题",
+          "key": "doc:常见问题/常见问题"
+        },
         {
           "type": "doc",
           "id": "installation/faq",

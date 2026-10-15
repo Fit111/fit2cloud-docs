@@ -1,8 +1,16 @@
-# JumpServer 社区常见问题自动补充并提 PR
+# 社区常见问题自动补充并提 PR（多产品 matrix）
 #
-# 来源: 从芝麻会话（社区小助手名下 JumpServer 交流群）提取最近一周的
+# 来源: 从芝麻会话（社区小助手名下各产品的交流群）提取最近一周的
 #       「客户提问 → 部门同事解答」问答对，由大模型按官方文档核实并改写，
-#       追加到 jumpserver-docs/faq/community_faq.md，通过 PR 提交，不直接改动 main。
+#       追加到 <product>-docs/faq/community_faq.md，通过 PR 提交，不直接改动 main。
+#
+# 支持产品: jumpserver / dataease / maxkb / 1panel / sqlbot / cordys
+#   - 每个产品一个 matrix job，**互不干扰**：独立分支、独立诊断产物、独立 PR；
+#   - 产品清单与各自参数（文档目录 / 固定分支 / 关键词 / 排除群 / 版本口径 / md 数量下限）
+#     由脚本里的 PRODUCTS 表统一定义（.github/scripts/community_faq.py），本文件不再重复列举；
+#   - matrix 由 `community_faq.py --matrix` 生成，写法与 auto-changelog-multi.yml 保持一致；
+#   - 默认只跑 PRODUCTS 里 enabled=true 的产品；workflow_dispatch 可用 product 输入框
+#     传逗号分隔的白名单（如 `dataease,maxkb`）灰度试跑。
 #
 # 配套脚本: .github/scripts/community_faq.py（单文件自包含，仅用 Python 标准库；
 #           退出码 0=完成 / 1=取数失败 / 2=配置或参数错误 / 3=无新增条目
@@ -64,14 +72,19 @@
 #     故 runner 容器**不要挂载 /var/run/docker.sock**。
 #
 # 分支策略:
-#   - 固定分支 chore/weekly-community-faq 每次以 main 最新为基线重建（**不做 rebase**，见下），
+#   - **每个产品一个固定分支**（来自 PRODUCTS[key]['branch']）：
+#       jumpserver -> chore/weekly-community-faq        （历史沿用，不可改名，否则线上任务会另开分支）
+#       其它产品   -> chore/weekly-community-faq-<product>
+#     ⚠️ 分支名必须按产品区分：origin 与 upstream 各自都存在 chore/weekly-community-faq，
+#     多个产品共用同名分支会互相覆盖对方的页面（跨仓库更会撞车）。
+#   - 固定分支每次以 main 最新为基线重建（**不做 rebase**，见下），
 #     页面内容**永远百分之百取自 main**；上期分支只作为「待续接条目的来源」，由脚本做条目级续接
 #     （**永不整份覆盖、永不文件级合并**）；
 #   - PR 以**草稿态**创建，供人工核对内容与措辞后再合并；
 #   - 不直接改 main。
 #
 # 固定分支的维护方式（2026-10-12 修复，务必先读）:
-#   本任务只改一个文件（jumpserver-docs/faq/community_faq.md），且全程不做 rebase（避免拉完整历史）。
+#   本任务只改一个文件（<product>-docs/faq/community_faq.md），且全程不做 rebase（避免拉完整历史）。
 #   做法是：以 origin/main 为基线新建固定分支，**当前页面一律取自 main**，
 #   上期分支只被当作「待续接条目的来源」，由脚本做**条目级**续接（见下）。
 #
@@ -95,11 +108,16 @@
 #     让 `--reuse-page` 自然落空，避免长期累积分支越拖越脏。
 #
 # 跨境链路（重要，2026-09-24 实测）:
-#   - 本仓库当前版本就 ~1.9GB / 8393 个文件、全历史 pack ~1.4GB，而本任务只需 0.92MB
-#     （.github/ + jumpserver-docs 下所有 md）。国内自托管 runner 到 GitHub 是「小请求快、
+#   - 本仓库当前版本就 ~1.9GB / 8393 个文件、全历史 pack ~1.4GB，而本任务只需不到 1MB
+#     （.github/ + 各 <product>-docs 下所有 md）。国内自托管 runner 到 GitHub 是「小请求快、
 #     大流量被掐」：实测 curl 226MB 中途 SSL EOF、git fetch 全量 13 分钟后 curl 56 / early EOF。
 #   - 因此 checkout 采用**浅历史 + 部分克隆 + 稀疏检出**（见该步骤注释），且**全程不做 rebase**
 #     —— rebase 需要两个分支的公共祖先，会强迫拉完整历史。
+#   - 稀疏范围从「只含 jumpserver-docs」放宽为「所有 <product>-docs 下的 md」：
+#     6 个产品的 md 合计约 3.1MB，相对全量 1.9GB 仍省掉 99.8%；
+#     之所以一次全量检出而不是按 matrix 变量动态指定产品目录，是因为
+#     actions/checkout 的 sparse-checkout 用的是静态字符串，动态拼 product 会让
+#     retry-checkout 步骤（直接跑 git-helper）与环境变量两处都要同步改写，容易写歪。
 #     ⚠️ 改动 checkout 与「Prepare fixed branch」前务必意识到这点，否则会重新引入 GB 级传输。
 #
 # 触发与时区（重要）:
@@ -108,6 +126,10 @@
 #     落在 UTC 的周日，脚本里的 date.today() 会退回成周日，导致数据窗口与「周一」错位；
 #   - 回看窗口 8 天（含今天）：比 7 天多留一天，用来补回上一次运行当天 03:00 之后的消息，
 #     否则「上周一 03:00–23:59」这一段两次运行都覆盖不到；
+#   - 6 个产品**并行**跑（fail-fast: false + max-parallel: 2）：单个产品失败不影响其它产品，
+#     同时把并发压在 2 以内，避免自托管 runner 上同时开 6 个进程互相抢带宽、放大跨境链路抖动；
+#   - 计时提醒：原单产品 job 超时 40 分钟。改成 6 产品后**每产品仍是 40 分钟上限**
+#     （矩阵各 job 的超时是独立的），所以总线时长取决于并发度，不是 6×40。
 #   - GitHub 的 schedule 在整点高负载时可能被延迟、极端情况下会被丢弃，
 #     因此同时保留手动触发；窗口按日期计算，延迟几十分钟不影响数据完整性。
 #
@@ -122,7 +144,9 @@
 #   - 选题以「长期复用价值」为准，不按频率：版本升级/兼容性/功能变化/环境要求/报错根因/
 #     参数限制/使用前提等高价值问题优先；单次特殊环境问题、纯操作步骤、文档已有完整教程的不收。
 #     高频≠必须收录，低频但高价值也可收录（min_count 已弱化为参考值）。
-#   - 只收 V5 相关问题（未标版本默认按 V5）。
+#   - **版本口径按产品**：由 PRODUCTS[key]['version_scope'] 决定（jumpserver=V5、dataease=v3、
+#     maxkb=v2、1panel=v2、sqlbot=v1、cordys=v1），未标注版本的一律按该产品当前主线处理。
+#     ⚠️ 这几个取值需人工确认；口径写错会静默漏收或误收（详见 PRODUCTS 表上方注释）。
 #   - 事实来源分级：官方文档 > 官方 FAQ > 官方人员明确答复 > 普通同事明确答复 > 用户描述 > AI 自身知识；
 #     官方人员（ZHIMA_DEPT_STAFF 名单内）的答复放宽一档：给出可执行处置即可采纳；
 #     普通同事答复必须给出「现象 → 原因/处理」的明确结论才采纳 ——
@@ -131,11 +155,15 @@
 #   - 「官方文档里没有」不再作为排除理由：文档缺失 + 官方人员已明确答复，
 #     恰恰是社区 FAQ 最该沉淀的一类（也是本页相对使用手册最大的价值）。
 
-name: Auto Community FAQ (JumpServer)
+name: Auto Community FAQ (multi-product)
 
 on:
   workflow_dispatch:
     inputs:
+      product:
+        description: '产品白名单（逗号分隔，如 dataease,maxkb）；留空=跑 PRODUCTS 表里全部启用产品'
+        required: false
+        default: ''
       days:
         description: '回看天数（含今天）'
         required: false
@@ -165,7 +193,9 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: community-faq
+  # 按产品分组：不同产品互不阻塞（用同一个组会把 6 个产品的矩阵 job 串成一条队列），
+  # 同一产品的重复触发仍保持串行（不取消前一次，避免打断在跑的 PR 生成）。
+  group: community-faq-${{ github.event.inputs.product || 'all' }}
   cancel-in-progress: false
 
 env:
@@ -173,8 +203,12 @@ env:
   # （周一 03:00 北京 = UTC 周日，不设 TZ 会让窗口与「周一」错位，见文件头说明）
   TZ: Asia/Shanghai
   BASE_BRANCH: main
-  BRANCH: chore/weekly-community-faq
-  FAQ_PAGE: jumpserver-docs/faq/community_faq.md
+  SCRIPT: .github/scripts/community_faq.py
+  # ⚠️ BRANCH / FAQ_PAGE / PRODUCT_KEYWORD 这三个**不能**写在 job 级 env 里：
+  #    它们随矩阵产品变化，而 job 级 env 不支持表达式引用 matrix。
+  #    - BRANCH     ：由 Preflight 步骤从 PRODUCTS 表解析后写入 $GITHUB_ENV；
+  #    - FAQ_PAGE   ：由脚本自己推导（PRODUCTS[key]['docs'] + faq_rel），workflow 不再重复定义；
+  #    - 群名关键词 ：默认取自 PRODUCTS 表；下面的 PRODUCT_KEYWORD 只是历史兼容覆盖口。
   ZHIMA_BASE_URL: ${{ secrets.ZHIMA_BASE_URL }}
   ZHIMA_ACCOUNT: ${{ secrets.ZHIMA_ACCOUNT }}
   ZHIMA_PASSWORD: ${{ secrets.ZHIMA_PASSWORD }}
@@ -184,10 +218,48 @@ env:
   LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
   # 未配置 Variables 时用 f2c-auto（脚本内置默认值同此）
   LLM_MODEL: ${{ vars.LLM_MODEL || 'f2c-auto' }}
-  PRODUCT_KEYWORD: jumpserver
+  # 群名过滤关键词覆盖项；**留空**即每个产品各自用 PRODUCTS 表里的 keyword。
+  # 仅当需要临时改口径时（如某产品群名带了额外前缀）才把仓库变量 PRODUCT_KEYWORD 配上。
+  PRODUCT_KEYWORD: ${{ vars.PRODUCT_KEYWORD || '' }}
 
 jobs:
+  # 先解析出要跑哪些产品，再按矩阵展开 —— 与 auto-changelog-multi.yml 同一套写法，
+  # 好处是「该跑哪些产品」只在工件（脚本 PRODUCTS 表）里维护一份，workflow 不抄第二遍。
+  list:
+    runs-on: ${{ fromJSON(vars.RUNNER_LABELS || '["ubuntu-latest"]') }}
+    timeout-minutes: 10
+    outputs:
+      products: ${{ steps.resolve.outputs.products }}
+    steps:
+      # 该 job 只需脚本本身，但 checkout 的 sparse 输入是静态的：
+      # 写成「所有 <product>-docs 下的 md」即可一次覆盖全部产品（合计约 3.1MB，仍是轻量）。
+      - name: Checkout (script only)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+
+      # 不依赖 actions/setup-python（runner 自带 python3 即可，少一个跨境下载点）
+      - name: Resolve product matrix
+        id: resolve
+        run: |
+          set -e
+          if ! python3 -c 'import sys; sys.exit(0 if sys.version_info >= (3, 7) else 1)' 2>/dev/null; then
+            echo "::error::runner 上的 python3 不可用或版本过低（需 >= 3.7）：$(python3 -V 2>&1)"
+            exit 1
+          fi
+          products=$(python3 "${SCRIPT}" --matrix "${{ github.event.inputs.product }}")
+          echo "Products: ${products}"
+          echo "products=${products}" >> "$GITHUB_OUTPUT"
+
   community-faq:
+    needs: list
+    # 白名单里写了未知产品时 --matrix 会返回空数组，这里直接整体跳过，不再展开空矩阵
+    if: ${{ needs.list.outputs.products != '[]' }}
     # runner 由**仓库 Variables** 控制，文件里不写死 —— fork 与 upstream 内容保持一致，
     # 各自仓库按需配置（不配即为默认值，行为与从前完全相同）：
     #   未配置 RUNNER_LABELS            -> ["ubuntu-latest"]（GitHub 托管，境外）
@@ -196,15 +268,23 @@ jobs:
     # 模型网关 ai.fit2cloud.cn（国内电信 IP）连接超时。
     runs-on: ${{ fromJSON(vars.RUNNER_LABELS || '["ubuntu-latest"]') }}
     timeout-minutes: 40
+    strategy:
+      # 单产品失败不连坐：6 个产品并行时，某个产品取数失败不应把其它已成功的结果一起回滚/标记失败
+      fail-fast: false
+      # 并发上限 2：自托管 runner 上同时开 6 个进程会互相抢带宽、放大跨境抖动；
+      # 而每个产品本身已是「取数 + 两轮模型」的长任务。2 是吞吐与稳定性的折中。
+      max-parallel: 2
+      matrix:
+        product: ${{ fromJson(needs.list.outputs.products) }}
 
     steps:
       # ⚠️ 跨境链路优化（2026-09-24）：本仓库当前版本就 ~1.9GB / 8393 个文件，全历史 pack ~1.4GB，
-      # 而本任务真正需要的只有 .github/（脚本）与 jumpserver-docs/ 下的 md —— 合计 0.92MB。
+      # 而本任务真正需要的只有 .github/（脚本）与各 <product>-docs 下的 md —— 合计约 3.1MB。
       # 所以必须「浅历史 + 部分克隆 + 稀疏检出」三者齐上，少任何一个都会退化成 GB 级传输：
       #   fetch-depth: 1    —— 不拉历史。原先写 0（为了后面 rebase），会拉全部分支+标签+完整历史，
       #                        2026-09-24 实测必失败：curl 56 GnuTLS recv error / early EOF，13 分钟被掐。
       #   filter: blob:none —— 只取本次提交的 commit/tree，不下载 blob（文件内容按需再取）
-      #   sparse-checkout   —— 工作区只物化下面两个范围，于是「按需取」的 blob 也只有这 0.92MB
+      #   sparse-checkout   —— 工作区只物化下面这些范围，于是「按需取」的 blob 也只有这 ~3.1MB
       # 配套：本 workflow 已**取消 rebase**（见 Prepare fixed branch），因此不再需要完整历史。
       # 另：不再使用 actions/setup-python —— runner 自带 python3 即可，少一个跨境下载点。
       # 跨境抖动重试（2026-10-08）：本仓库到 GitHub 的跨境链路是「概率性被掐」——
@@ -223,19 +303,22 @@ jobs:
           ref: ${{ env.BASE_BRANCH }}
           fetch-depth: 1
           filter: blob:none
-          # 稀疏范围 = 脚本本体 + jumpserver-docs 下**全部 md**（不能只取 faq/）：
+          # 稀疏范围 = 脚本本体 + **所有 <product>-docs 下全部 md**（不能只取各自 faq/）：
           #   第二轮成稿会 read_text 读取被引用文档的**全文**喂给模型（见 community_faq.py
-          #   的 compose_entry），所以这些 md 必须真实存在。该目录里 73.85MB 是图片、
-          #   md 仅 0.81MB，故用非 cone 模式按扩展名精确包含。
-          #   实测（2026-09-24, a6704ab）：.github 0.11MB + 192 个 md 0.81MB = 0.92MB，
-          #   相对全量 1475MB 省掉 99.94%。
+          #   的 compose_entry），所以这些 md 必须真实存在。各产品目录里图片占大头
+          #   （jumpserver 一家就 73.85MB）、md 仅合计约 3.1MB，故用非 cone 模式按扩展名精确包含。
+          #   实测（2026-09-24, a6704ab，当时仅 jumpserver）：.github 0.11MB + 192 个 md 0.81MB
+          #   = 0.92MB，相对全量 1475MB 省掉 99.94%；扩到 6 个产品后仍约 3.1MB（省掉 99.8%）。
+          #   ⚠️ 这里刻意**不按 matrix.product 动态指定目录**：sparse-checkout 是静态字符串，
+          #     动态拼接会让 retry-checkout 步骤里的 INPUT_SPARSE_CHECKOUT 与环境变量两处
+          #     都要同步改写，容易写歪；一次全量检出的代价只有约 3MB。
           #   退路：若非 cone 模式在下游（git checkout 单文件等）出问题，改回 cone 模式并把范围
-          #   换成 jumpserver-docs（74.8MB）即可，功能等价（代价是多传 74MB 图片）。
+          #   换成各 <product>-docs（约 150MB+）即可，功能等价（代价是多传图片）。
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /.github/
-            /jumpserver-docs/*.md
-            /jumpserver-docs/**/*.md
+            /*-docs/*.md
+            /*-docs/**/*.md
 
       # 重试循环：actions/checkout 自身没有重试参数，失败后在这里重跑它。
       # 重跑方式：直接执行 runner _tool 目录里已下载的 checkout 入口脚本
@@ -250,10 +333,12 @@ jobs:
           INPUT_FETCH_DEPTH: 1
           INPUT_FILTER: blob:none
           INPUT_SPARSE_CHECKOUT_CONE_MODE: "false"
+          # ⚠️ 必须与上面 Checkout 步骤的 sparse-checkout 逐字一致（同样的通配集合），
+          #    否则重试成功后会检出「另一套」文件，第二轮读文档原文时就少文件了。
           INPUT_SPARSE_CHECKOUT: |
             /.github/
-            /jumpserver-docs/*.md
-            /jumpserver-docs/**/*.md
+            /*-docs/*.md
+            /*-docs/**/*.md
         run: |
           set -e
           # 定位已下载的 actions/checkout（尝试 v4 下所有已缓存版本，取最新）
@@ -296,9 +381,24 @@ jobs:
           exit 1
 
       # 配置自检：缺东西就立刻失败并指明缺哪一项，避免跑到取数阶段才报错
+      # 同时把当前矩阵产品的配置（文档目录 / 固定分支 / FAQ 页面）解析出来供后续步骤复用，
+      # 避免 workflow 里再抄一份产品参数（单一事实来源是脚本的 PRODUCTS 表）。
       - name: Preflight
+        id: preflight
+        env:
+          # 步骤级 env 才能引用 matrix（job 级 env 不支持表达式）
+          PRODUCT: ${{ matrix.product }}
         run: |
           set -e
+          cfg=$(python3 "${SCRIPT}" --product "${{ matrix.product }}" --print-config)
+          echo "产品配置：${cfg}"
+          DOCS_DIR=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["docs"])' "${cfg}")
+          BRANCH=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["branch"])' "${cfg}")
+          MIN_MD=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["min_md"])' "${cfg}")
+          FAQ_REL=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["faq_rel"])' "${cfg}")
+          # FAQ 页面路径同样取自 PRODUCTS 表（docs + faq_rel），workflow 不另抄一份
+          FAQ_PAGE="${DOCS_DIR}/${FAQ_REL}"
+          echo "产品=${PRODUCT} / 文档目录=${DOCS_DIR} / FAQ 页面=${FAQ_PAGE} / 固定分支=${BRANCH} / md 下限=${MIN_MD}"
           missing=""
           for name in ZHIMA_BASE_URL ZHIMA_ACCOUNT ZHIMA_PASSWORD LLM_API_KEY; do
             if [ -z "${!name}" ]; then
@@ -323,12 +423,31 @@ jobs:
             echo "::error::runner 上的 python3 不可用或版本过低（需 >= 3.7）：$(python3 -V 2>&1)"
             exit 1
           fi
-          # 稀疏检出防呆：第二轮成稿要读 jumpserver-docs 下被引用文档的原文，若 md 数量异常偏少
+          # 稀疏检出防呆：第二轮成稿要读该产品文档目录下被引用文档的原文，若 md 数量异常偏少
           # （例如 sparse 范围误写成只含 faq/），脚本会静默拿不到依据 —— 这里提前拦下。
-          md_count=$(find jumpserver-docs -name '*.md' 2>/dev/null | wc -l)
-          echo "检出文档：jumpserver-docs 下 ${md_count} 个 md"
-          if [ "${md_count}" -lt 50 ]; then
-            echo "::error::只检出 ${md_count} 个 md（预期约 192 个）—— 稀疏检出范围可能不对，第二轮读文档原文会失败。"
+          # 阈值取 PRODUCTS[key]['min_md']：各产品文档体量差异很大（jumpserver 198 vs cordys 57），
+          # 统一写 50 会让小产品误报（cordys 正常也只有 57）。
+          md_count=$(find "${DOCS_DIR}" -name '*.md' 2>/dev/null | wc -l)
+          echo "检出文档：${DOCS_DIR} 下 ${md_count} 个 md"
+          if [ "${md_count}" -lt "${MIN_MD}" ]; then
+            echo "::error::${DOCS_DIR} 只检出 ${md_count} 个 md（该产品下限 ${MIN_MD}）—— 稀疏检出范围可能不对，第二轮读文档原文会失败。"
+            exit 1
+          fi
+          {
+            echo "docs_dir=${DOCS_DIR}"
+            echo "branch=${BRANCH}"
+            echo "page=${FAQ_PAGE}"
+          } >> "$GITHUB_OUTPUT"
+          # 导出到 GITHUB_ENV：后续所有步骤就能像从前一样直接用 ${BRANCH} / ${FAQ_PAGE}，
+          # 不必把这两个变量改成 `${{ steps.preflight.outputs.xxx }}` 逐处替换（改动面更小）。
+          {
+            echo "BRANCH=${BRANCH}"
+            echo "FAQ_PAGE=${FAQ_PAGE}"
+            echo "DOCS_DIR=${DOCS_DIR}"
+          } >> "$GITHUB_ENV"
+          # 校验页面文件确实存在：稀疏检出错时在这里报错，比在「写回页面」时才炸清楚得多
+          if [ ! -f "${FAQ_PAGE}" ]; then
+            echo "::error::FAQ 页面 ${FAQ_PAGE} 不存在 —— 该产品可能还没建页面（先合入页面骨架 PR），或稀疏检出范围不对。"
             exit 1
           fi
 
@@ -459,6 +578,7 @@ jobs:
           PREV_PAGE: ${{ steps.base.outputs.prev_page }}
         run: |
           set -e
+          # BRANCH / FAQ_PAGE / DOCS_DIR 已由 Preflight 导出到 GITHUB_ENV，随产品变化
           APPLY_FLAG="--apply"
           if [ "${DRY_RUN}" = "true" ]; then
             echo "dry_run=true：只预览，不写回页面、不推送、不开 PR"
@@ -480,7 +600,8 @@ jobs:
           esac
 
           set +e
-          python3 .github/scripts/community_faq.py \
+          python3 "${SCRIPT}" \
+            --product "${{ matrix.product }}" \
             --days "${{ github.event.inputs.days || '8' }}" \
             --max-items "${{ github.event.inputs.max_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
@@ -501,7 +622,7 @@ jobs:
             3) echo "本周没有合格的新条目，无需提 PR。" ;;
             1) echo "::error::取数失败（退出码 1）：芝麻会话登录失败、接口异常，或所有群都没取到消息。请检查 ZHIMA_BASE_URL / 账号，以及 runner 能否访问该地址。"
                exit 1 ;;
-            2) echo "::error::配置或参数错误（退出码 2）：请核对 Secrets/Variables，以及 jumpserver-docs/faq/community_faq.md 是否存在。"
+            2) echo "::error::配置或参数错误（退出码 2）[${{ matrix.product }}]：请核对 Secrets/Variables，以及 ${FAQ_PAGE} 是否存在。"
                exit 2 ;;
             4) echo "::error::大模型环节失败（退出码 4）：无法访问模型网关 ${LLM_BASE_URL}、LLM_API_KEY 无效，或模型无返回。"
                echo "::error::若该网关仅在国内网络可达，跑在 GitHub 托管 runner（境外）上必然连接超时 —— 把仓库 Variables 的 RUNNER_LABELS 设为 [\"self-hosted\",\"f2c\"]，让本任务落到国内自托管 runner；或用 LLM_BASE_URL 指向公网可达的网关。"
@@ -525,11 +646,13 @@ jobs:
 
       # 诊断产物：问答对 + 生成报告，便于排查「模型没选中任何问题」与
       # 「选中了但逐条被拒」两种情形（需 `if: always()`，失败时也要落盘）。
+      # ⚠️ 产物名必须带产品：矩阵 job 并发上传时，同名 artifact 会直接 409 冲突，
+      #    导致后到的 job 上传失败（早期单产品版本写死 community-faq-diagnostics 就是这个原因）。
       - name: Upload diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: community-faq-diagnostics
+          name: community-faq-diagnostics-${{ matrix.product }}
           if-no-files-found: ignore
           retention-days: 14
           path: |
@@ -576,9 +699,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DAYS: ${{ github.event.inputs.days || '8' }}
           DRAFT: ${{ github.event.inputs.draft || 'true' }}
+          # 产品名（与脚本 PRODUCTS[key]['name'] 同源）——用于 PR 标题/描述区分开六个产品的 PR
+          PRODUCT: ${{ matrix.product }}
         run: |
           set -e
-          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}（draft=${DRAFT}）"
+          echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}（draft=${DRAFT}，product=${PRODUCT}）"
           python3 - <<'PY'
           import datetime, json, os, sys, urllib.error, urllib.request
 
@@ -589,6 +714,7 @@ jobs:
           BRANCH = os.environ["BRANCH"]
           PAGE = os.environ["FAQ_PAGE"]
           DAYS = os.environ.get("DAYS") or "8"
+          PRODUCT = (os.environ.get("PRODUCT") or "").strip() or "jumpserver"
           DRAFT = (os.environ.get("DRAFT") or "true").strip().lower() == "true"
           OWNER = REPO.split("/")[0]
 
@@ -615,7 +741,8 @@ jobs:
           lines = [
               "自动从社区交流群沉淀的本周常见问题，**请人工核对内容与措辞后再合并**。",
               "",
-              "- 数据来源：芝麻会话（JumpServer 交流群）、最近 %s 天" % DAYS,
+              "- 产品：`%s`" % PRODUCT,
+              "- 数据来源：芝麻会话（该产品交流群）、最近 %s 天" % DAYS,
               "- 生成方式：`.github/scripts/community_faq.py` 依据官方文档改写后追加",
               "- 目标文件：`%s`" % PAGE,
               "- 提交分支：`%s`" % BRANCH,
@@ -626,8 +753,10 @@ jobs:
           ]
           body = "\n".join(lines)
 
-          # 按北京时间取日期（job 级 TZ=Asia/Shanghai）
-          title = "docs(faq): 补充社区常见问题（%s）" % datetime.date.today().isoformat()
+          # 按北京时间取日期（job 级 TZ=Asia/Shanghai）；标题前缀带产品，
+          # 六个产品同时开 PR 时一眼能从列表里分清哪条是哪个产品的。
+          title = "docs(faq): 补充社区常见问题（%s %s）" % (
+              PRODUCT, datetime.date.today().isoformat())
 
           # ---- 查是否已有开启中的 PR：列 open PR 后按 head 自行过滤 ----
           # 不用 ?head=owner:branch（分支名带 / 时参数转义容易出岔子），自己比 head.ref 更稳
@@ -679,12 +808,14 @@ jobs:
         if: always()
         run: |
           {
-            echo "### Auto Community FAQ (JumpServer)"
+            echo "### Auto Community FAQ (${{ matrix.product }})"
             echo ""
             echo "- 仓库: \`${GITHUB_REPOSITORY}\`"
+            echo "- 产品: \`${{ matrix.product }}\`"
             echo "- 窗口: 最近 \`${{ github.event.inputs.days || '8' }}\` 天（含今天，按北京时间）"
             echo "- 工作基线: \`${{ steps.base.outputs.base_ref || '-' }}\`"
-            echo "- 固定分支: \`${BRANCH}\`"
+            echo "- FAQ 页面: \`${{ steps.preflight.outputs.page || '-' }}\`"
+            echo "- 固定分支: \`${{ steps.preflight.outputs.branch || '-' }}\`"
             echo "- 脚本退出码: \`${{ steps.gen.outputs.exit_code || '-' }}\`（0=完成，1=取数失败，2=配置或参数错误，3=无合格新条目，4=大模型环节失败，5=MDX 安全护栏拦截）"
             echo "- 本轮推送: \`${{ steps.commit.outputs.pushed || 'false' }}\`"
             echo "- 本轮 PR: ${{ steps.pr.outputs.pr_url || '-' }}"

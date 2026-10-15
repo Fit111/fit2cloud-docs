@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
+多产品社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
+
+产品范围由文件里的 PRODUCTS 表驱动，默认 jumpserver（保持历史行为不变）：
+    jumpserver / dataease / maxkb / 1panel / sqlbot / cordys
 
 数据流:
-    芝麻会话（社区小助手名下 JumpServer 交流群）
+    芝麻会话（社区小助手名下该产品的交流群）
       -> 最近 N 天的「客户提问 → 部门同事解答」问答对
       -> 大模型把近义问题归组，挑出**可复用（别人也会问）且有明确答案**的问题
       -> 再按官方文档原文或官方人员答复成稿（读了正文后才裁决「文档是否已能直接回答」）
       -> 校验引用路径真实存在（模糊纠错后仍找不到只当没有文档依据）、问题未与页面已有条目重复
-      -> 追加到 jumpserver-docs/faq/community_faq.md 对应小节
+      -> 追加到 <product>-docs/faq/community_faq.md 对应小节
 
 窗口说明:
     days 默认 8 天（今天含在内，即 today-7 … today）。
@@ -19,10 +22,12 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
     相邻两周因此有约一天重叠，重叠带来的重复问题由页面标题去重拦截。
 
 用法:
-    python .github/scripts/community_faq.py --days 8 --skip-llm     # 只取数+配对，不调模型
-    python .github/scripts/community_faq.py --days 8               # 预览（默认不写回）
-    python .github/scripts/community_faq.py --days 8 --apply --max-items 3
-    python .github/scripts/community_faq.py --pairs-json pairs.json
+    python .github/scripts/community_faq.py --list                  # 列出已启用产品
+    python .github/scripts/community_faq.py --matrix                # 输出产品名 JSON（供 workflow matrix）
+    python .github/scripts/community_faq.py --product dataease --days 8 --skip-llm
+    python .github/scripts/community_faq.py --product dataease --days 8    # 预览（默认不写回）
+    python .github/scripts/community_faq.py --product maxkb --days 8 --apply --max-items 3
+    python .github/scripts/community_faq.py --pairs-json pairs.json --product cordys
 
 环境变量:
     ZHIMA_BASE_URL             芝麻会话管理端地址（无尾斜杠），如 http://host:8002
@@ -35,7 +40,9 @@ JumpServer 社区常见问题自动生成脚本（Docusaurus / fit2cloud-docs）
     LLM_BASE_URL               模型网关（OpenAI 兼容），默认 https://ai.fit2cloud.cn/gateway/v1
     LLM_API_KEY                模型 Key
     LLM_MODEL                  模型名，默认 f2c-auto（飞致云 AI 网关自动路由）；置空则列出网关可用模型
-    PRODUCT_KEYWORD            群名过滤关键词，默认 jumpserver
+    PRODUCT_KEYWORD            群名过滤关键词**覆盖项**：只对 jumpserver 生效（历史兼容）；
+                               其它产品的关键词一律取自 PRODUCTS 表。传 --product 时，
+                               若 PRODUCT_KEYWORD 与该产品的默认关键词不同，则仍以环境变量为准
 
 退出码: 0=完成, 1=取数失败, 2=配置/参数错误, 3=无合格新条目（不需要提 PR）,
         4=大模型环节失败（网关不可达 / 鉴权失败 / 模型无返回）,
@@ -71,11 +78,139 @@ from datetime import date, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DOCS_ROOT = REPO_ROOT / "jumpserver-docs"
-FAQ_PAGE = DOCS_ROOT / "faq" / "community_faq.md"
 NODE_MODULES = REPO_ROOT / "node_modules"
 # 本文件只有标准库依赖，但模块级会读取 package.json 判定 MDX 校验可用性
 PACKAGE_JSON = REPO_ROOT / "package.json"
+
+# ---------------------------------------------------------------- 产品配置
+#
+# 一个产品一条记录，脚本与 workflow 都由它驱动（对齐 gen_changelog_multi.py 的做法）：
+#   docs            文档目录名（相对仓库根）
+#   faq_rel         FAQ 页面在文档目录下的相对路径
+#   name            展示给模型的完整产品名（进提示词，影响措辞）
+#   keyword         群名过滤关键词（小写比对）
+#   exclude         群名里命中任一子串就排除（大小写不敏感）
+#                    —— 1Panel 的「1Panel VIP 交流群8」也被 '1panel' 命中，须按此剔除
+#   version_scope   提示词里的版本口径；空串表示该产品没有「只收某个大版本」的约束
+#   enabled         是否纳入自动流程（--list / --matrix 只输出启用的）
+#   branch          该产品的固定分支名（每个产品独立，互不覆盖）
+#   min_md          Preflight 的稀疏检出防呆阈值（该产品文档目录下期望的 md 数量下限）
+#
+# ⚠️ version_scope 需人工确认：它决定模型「哪些版本的提问该收」，写错会静默漏收或误收。
+#    取值依据是各产品 changelog 的当前主线（见 <product>-docs/changelog.md 最新版本标题）。
+PRODUCTS: dict[str, dict] = {
+    "jumpserver": {
+        "docs": "jumpserver-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "JumpServer（飞致云开源堡垒机）",
+        # 兼容旧行为：未传 --product 时的默认产品就是它，关键词回落到 PRODUCT_KEYWORD
+        "keyword": "jumpserver",
+        "exclude": [],
+        "version_scope": "V5",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq",
+        "min_md": 50,
+    },
+    "dataease": {
+        "docs": "dataease-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "DataEase（飞致云开源 BI 工具）",
+        "keyword": "dataease",
+        "exclude": [],
+        "version_scope": "v3",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq-dataease",
+        "min_md": 50,
+    },
+    "maxkb": {
+        "docs": "maxkb-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "MaxKB（飞致云开源大模型知识库问答系统）",
+        "keyword": "maxkb",
+        "exclude": [],
+        "version_scope": "v2",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq-maxkb",
+        "min_md": 50,
+    },
+    "1panel": {
+        "docs": "1panel-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "1Panel（飞致云开源 Linux 运维管理面板）",
+        "keyword": "1panel",
+        # 「1Panel VIP 交流群8/7/9」不是普通用户交流群，剔除
+        "exclude": ["vip"],
+        "version_scope": "v2",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq-1panel",
+        "min_md": 50,
+    },
+    "sqlbot": {
+        "docs": "sqlbot-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "SQLBot（飞致云开源智能问数系统）",
+        "keyword": "sqlbot",
+        "exclude": [],
+        "version_scope": "v1",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq-sqlbot",
+        "min_md": 30,
+    },
+    "cordys": {
+        "docs": "cordys-docs",
+        "faq_rel": "faq/community_faq.md",
+        "name": "Cordys CRM（飞致云开源 AI CRM）",
+        "keyword": "cordys",
+        "exclude": [],
+        "version_scope": "v1",
+        "enabled": True,
+        "branch": "chore/weekly-community-faq-cordys",
+        "min_md": 30,
+    },
+}
+
+DEFAULT_PRODUCT = "jumpserver"
+
+# 由 resolve_product() 在 main() 里按 --product 重绑；模块级先给默认值，
+# 目的是让所有既有函数（read_page / doc_index / rel_link / compose_entry ...）
+# 保持原样——它们直接引用这两个全局名，不需要改成收参数。
+DOCS_ROOT = REPO_ROOT / PRODUCTS[DEFAULT_PRODUCT]["docs"]
+FAQ_PAGE = DOCS_ROOT / PRODUCTS[DEFAULT_PRODUCT]["faq_rel"]
+
+# 当前生效的产品配置（main() 里随 --product 更新），供提示词与群过滤使用
+ACTIVE: dict = dict(PRODUCTS[DEFAULT_PRODUCT], key=DEFAULT_PRODUCT)
+
+
+def resolve_product(name: str) -> dict:
+    """按产品 key 取配置；未知名或已停用一律报参数错误（退出码 2）。"""
+    key = (name or "").strip().lower()
+    if not key:
+        key = DEFAULT_PRODUCT
+    conf = PRODUCTS.get(key)
+    if not conf:
+        raise fail(2, "未知产品 {0!r}，可用：{1}".format(
+            key, "、".join(k for k, v in PRODUCTS.items() if v.get("enabled", True))))
+    if not conf.get("enabled", True):
+        raise fail(2, "产品 {0!r} 已在 PRODUCTS 里停用".format(key))
+    return dict(conf, key=key)
+
+
+def use_product(name: str) -> dict:
+    """切换当前产品：重绑 DOCS_ROOT / FAQ_PAGE / ACTIVE 三个模块级变量。
+
+    用 global 重绑而不是把配置对象层层传参：脚本里 16 处都直接读这两个全局名，
+    传参要动 6 个函数签名（read_page/doc_index/rel_link/compose_entry/...），
+    改动面大、回归风险高；而本脚本是单次运行的单进程脚本，不存在并发切换。
+    """
+    global DOCS_ROOT, FAQ_PAGE, ACTIVE
+    conf = resolve_product(name)
+    ACTIVE = conf
+    DOCS_ROOT = REPO_ROOT / conf["docs"]
+    FAQ_PAGE = DOCS_ROOT / conf["faq_rel"]
+    log("[community_faq] 产品 {0} / 文档目录 {1} / FAQ 页面 {2}".format(
+        conf["key"], conf["docs"], FAQ_PAGE.relative_to(REPO_ROOT).as_posix()))
+    return conf
+
 
 # ---------------------------------------------------------------- 常量
 
@@ -288,12 +423,52 @@ def zhima_groups(token: str) -> list[dict]:
     return out
 
 
+def group_label(name: str, keyword: str) -> str:
+    """把群名清洗成短标签，用于日志与「来源」字段。
+
+    原实现只写死剥掉字面量 "JumpServer "，换成别的产品就完全不起作用（标签仍是
+    「DataEase 交流群 5」这种带产品名与前缀的长串，日志里挤成一团）。这里按
+    「剥离产品关键词 → 去掉空白与分隔符 → 去掉结尾的编号」的顺序generic 清洗：
+        JumpServer 交流群 5        -> 交流群 5   -> 交流群 5 -> 交流群 5（编号保留）
+        DataEase 交流群            -> 交流群
+        1Panel VIP 交流群8         -> VIP 交流群8
+        JumpServer 学习班交流群     -> 学习班交流群
+    """
+    label = name
+    # 按关键词整串剥离（大小写不敏感），关键词可能出现在开头或中间
+    idx = label.lower().find(keyword.lower())
+    if idx >= 0:
+        label = label[:idx] + label[idx + len(keyword):]
+    label = label.strip(" -_·|/、").strip()
+    label = re.sub(r"\s+", " ", label)
+    return label or "交流群"
+
+
 def product_groups(groups: list[dict], keyword: str) -> list[dict]:
-    kw = keyword.lower()
-    kept = [g for g in groups if kw in g["name"].lower()]
-    for g in kept:
-        g["label"] = g["name"].replace("JumpServer ", "").strip() or "交流群"
-    log(f"[community_faq] 命中关键词 {keyword!r} 的群 {len(kept)} 个")
+    """按关键词挑出该产品的交流群，剔除排除项，并清洗出短标签。
+
+    排除项来自 PRODUCTS[key]['exclude']：1Panel 的「1Panel VIP 交流群8」同样命中
+    '1panel'，但那是付费客户群而非普通交流群，混进来会污染选题口径。
+    """
+    kw = (keyword or "").lower()
+    if not kw:
+        raise fail(2, "群名过滤关键词为空，无法定位交流群")
+    excludes = [str(x).lower() for x in (ACTIVE.get("exclude") or []) if str(x).strip()]
+    kept: list[dict] = []
+    skipped: list[str] = []
+    for g in groups:
+        low = g["name"].lower()
+        if kw not in low:
+            continue
+        if any(x in low for x in excludes):
+            skipped.append(g["name"])
+            continue
+        g["label"] = group_label(g["name"], kw)
+        kept.append(g)
+    log("[community_faq] 命中关键词 {0!r} 的群 {1} 个".format(keyword, len(kept)))
+    if skipped:
+        log("[community_faq] 已排除 {0} 个群（命中 {1}）：{2}".format(
+            len(skipped), "/".join(excludes), "、".join(skipped)))
     return kept
 
 
@@ -554,7 +729,7 @@ def collect_pairs(days: int, keyword: str) -> tuple[list[dict], list[dict], dict
     token = zhima_login()
     groups = product_groups(zhima_groups(token), keyword)
     if not groups:
-        raise fail(1, "没有匹配到任何交流群，请检查 PRODUCT_KEYWORD")
+        raise fail(1, "没有匹配到任何交流群，请检查关键词 {0!r}（PRODUCTS 表或 PRODUCT_KEYWORD）".format(keyword))
     official, names = staff_roster(token)
     if official:
         log("[community_faq] 官方人员 {0} 人：其答复标记为高信任来源，名单外同事的答复仍保留（低信任来源）".format(len(official)))
@@ -774,7 +949,9 @@ def resolve_doc_path(raw: str, index: list[str]) -> str:
     if not p:
         return ""
     low = p.lower()
-    for pref in ("docs/", "jumpserver-docs/", "/"):
+    # 前缀剥离必须按**当前产品**的文档目录名来：写死 "jumpserver-docs/" 时，
+    # dataease 的模型输出若带上 "dataease-docs/" 前缀就剥不掉，路径直接匹配失败。
+    for pref in ("docs/", ACTIVE["docs"].lower() + "/", "/"):
         if low.startswith(pref):
             p, low = p[len(pref):], low[len(pref):]
     p = p.lstrip("./")
@@ -889,7 +1066,34 @@ def json_block(text: str):
     return json.loads(candidate[start:end + 1])
 
 
-PASS1_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的维护者。
+def version_rule() -> str:
+    """把当前产品的版本口径写成一句提示词约束（无版本口径时返回空串）。
+
+    ⚠️ 原实现把「只收 JumpServer V5 相关…未标注版本一律按 V5 处理」写死在提示词里，
+    换成别的产品会让模型按错误的大版本口径筛问题（DataEase 的 v3 提问会被当成
+    「旧版本特性」漏收）。这里的文案随 PRODUCTS[key]['version_scope'] 生成。
+    """
+    scope = str(ACTIVE.get("version_scope") or "").strip()
+    if not scope:
+        return ("  - 不限大版本：群聊里各版本的提问都可收；只有明确属于**已停止维护的旧版本**"
+                "（且当前主线已不适用）的问题才不选。\n")
+    return (
+        "  - 只收 {0} 相关。群聊多数不写版本，**未标注版本的一律按当前主线 {0} 处理**，\n"
+        "    不要因「没写版本」就排除；只有明确指向旧版本特性（明说「老版本/升级前」、\n"
+        "    或该特性在当前主线已废弃）才不选。\n"
+    ).format(scope)
+
+
+def product_prompt_vars() -> dict:
+    """提示词模板变量：产品名 + 产品 key + 该产品的版本口径约束。"""
+    return {
+        "product": ACTIVE["name"],
+        "product_key": ACTIVE["key"],
+        "version_rule": version_rule(),
+    }
+
+
+PASS1_SYSTEM = """你是 {product} 官方文档的维护者。
 下面给你社区交流群最近一周的全部提问清单（形如 `[编号] 日期 群 | 问题`）。
 任务：先把语义相同的问题归为同一主题，再判断每个主题**是否值得沉淀进官方「社区常见问题」页**。
 
@@ -945,9 +1149,7 @@ PASS1_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的
   - 「我们内网环境部署时连不上外网」→ 一次性环境个案 → **淘汰**。
 
 ■ 其它硬性约束：
-  - 只收 JumpServer V5 相关。群聊多数不写版本，**未标注版本的一律按当前主线 V5 处理**，
-    不要因「没写版本」就排除；只有明确指向旧版本特性（v3/v4 独有、明说「老版本/升级前」）才不选。
-  - 出现次数是参考而非门槛：有复用价值的主题哪怕只出现 1 次也可选；凑数、无复用价值的高频问题不要选。
+{version_rule}  - 出现次数是参考而非门槛：有复用价值的主题哪怕只出现 1 次也可选；凑数、无复用价值的高频问题不要选。
     question_ids 里编号个数即出现次数，如实填。
   - 事实来源优先级（判断能否核实时遵循）：官方文档 > 官方 FAQ > 官方人员明确答复 > 普通同事答复
     > 用户描述 > 你自身知识。doc_paths 尽量给出官方文档依据；确实找不到可留空数组，
@@ -971,7 +1173,7 @@ PASS1_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的
 "section":"现有小节标题或null","new_section":"新小节标题或null","kind":"A或C",
 "doc_paths":["installation/xxx.md"],"value":"可复用在哪 + 答案来自哪里"}}]}}"""
 
-PASS2_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的撰写者。
+PASS2_SYSTEM = """你是 {product} 官方文档的撰写者。
 任务：基于给定的官方文档原文与群内答复，写一条「社区常见问题」条目，直接进官方文档。
 要求事实准确、表述简洁，不追求长篇——把问题说清楚就够了。
 
@@ -1054,7 +1256,8 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
         "## 最近提问清单\n" + digest
     )
     raw = llm_chat(
-        [{"role": "system", "content": PASS1_SYSTEM.format(max_items=max_items)},
+        [{"role": "system", "content": PASS1_SYSTEM.format(
+            max_items=max_items, **product_prompt_vars())},
          {"role": "user", "content": user}],
         temperature=0.1, max_tokens=4000,
     )
@@ -1138,7 +1341,8 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         + "\n\n## 官方文档原文\n" + doc_block + trunc_note
     )
     raw = llm_chat(
-        [{"role": "system", "content": PASS2_SYSTEM.format(placeholder=CITATION_PLACEHOLDER)},
+        [{"role": "system", "content": PASS2_SYSTEM.format(
+            placeholder=CITATION_PLACEHOLDER, **product_prompt_vars())},
          {"role": "user", "content": user}],
         temperature=0.2, max_tokens=2500,
     )
@@ -1501,7 +1705,7 @@ def entries_from_page(text: str) -> list[dict]:
     return out
 
 
-REUSE_DEDUP_SYSTEM = """你是 JumpServer（飞致云开源堡垒机）官方文档的编辑，正在做「入库前查重」。
+REUSE_DEDUP_SYSTEM = """你是 {product} 官方文档的编辑，正在做「入库前查重」。
 
 下面给你两组条目：
 - 【待入库条目】：上一期已入选、但因 PR 尚未合并而需要顺延到本期的条目；
@@ -1560,7 +1764,7 @@ def _llm_dedup_chunks(page: str, titles: list[str], chunk: int = 8) -> dict[str,
                 + "\n".join("- {0}".format(t) for t in batch)
                 + "\n\n## 页面已有条目\n" + existing)
         try:
-            raw = llm_chat([{"role": "system", "content": REUSE_DEDUP_SYSTEM},
+            raw = llm_chat([{"role": "system", "content": REUSE_DEDUP_SYSTEM.format(**product_prompt_vars())},
                             {"role": "user", "content": user}],
                            temperature=0.0, max_tokens=2000)
             verdict.update(_parse_dedup_reply(raw, batch))
@@ -1992,8 +2196,38 @@ def load_pairs_from_json(path: str) -> tuple[list[dict], list[dict]]:
 
 # ---------------------------------------------------------------- 入口
 
+def enabled_products() -> list[str]:
+    """已启用的产品 key（保持 PRODUCTS 的声明顺序，与 gen_changelog_multi.py 一致）。"""
+    return [k for k, v in PRODUCTS.items() if v.get("enabled", True)]
+
+
+def emit_matrix(raw: str) -> int:
+    """输出产品名 JSON 数组（供 workflow 的 matrix 使用）。
+
+    带参数时按逗号分隔的白名单过滤；不带参数输出全部启用产品。
+    与 gen_changelog_multi.py --matrix 行为一致，便于两个 workflow 用同一套写法。
+    """
+    enabled = enabled_products()
+    items = [x.strip().lower() for x in raw.split(",") if x.strip()] if raw.strip() else enabled
+    bad = [x for x in items if x not in enabled]
+    if bad:
+        log("[community_faq] 未知或已停用的产品：{0}（可用：{1}）".format(
+            "、".join(bad), "、".join(enabled)))
+        return 2
+    print(json.dumps(items, ensure_ascii=False))
+    return 0
+
+
 def main() -> int:
-    ap = argparse.ArgumentParser(description="从芝麻会话沉淀 JumpServer 社区常见问题")
+    ap = argparse.ArgumentParser(
+        description="从芝麻会话沉淀指定产品的社区常见问题到官方文档")
+    ap.add_argument("--product", default="",
+                    help="产品 key（{0}）；留空=jumpserver".format("/".join(PRODUCTS)))
+    ap.add_argument("--list", action="store_true", help="只列出已启用产品后退出")
+    ap.add_argument("--matrix", nargs="?", const="", default=None, metavar="PRODUCTS",
+                    help="输出产品名 JSON 数组后退出（可带逗号分隔的白名单，留空=全部启用产品）")
+    ap.add_argument("--print-config", action="store_true",
+                    help="按 --product 解析并输出该产品的配置 JSON 后退出（供 workflow 取分支名/目录）")
     ap.add_argument("--days", type=int, default=8,
                     help="回看天数（含今天），默认 8：多留一天以补回上次运行漏掉的那半天")
     ap.add_argument("--max-items", type=int, default=3, help="本期最多新增条目数，默认 3")
@@ -2008,7 +2242,26 @@ def main() -> int:
                     help="上期固定分支的页面文件：只取其中多出来的条目续接进来（**整份文件永不覆盖当前页面**）")
     args = ap.parse_args()
 
-    keyword = cfg("PRODUCT_KEYWORD", "jumpserver")
+    # 这两个开关不依赖产品配置，先处理（workflow 的 list job 用 --matrix）
+    if args.list:
+        print("\n".join(enabled_products()))
+        return 0
+    if args.matrix is not None:
+        return emit_matrix(args.matrix)
+    if args.print_config:
+        conf = resolve_product(args.product)
+        print(json.dumps({k: conf[k] for k in ("key", "docs", "faq_rel", "branch", "min_md")},
+                         ensure_ascii=False))
+        return 0
+
+    conf = use_product(args.product)
+
+    # 群名关键词：PRODUCTS 表是默认值，PRODUCT_KEYWORD 环境变量可覆盖（历史兼容）。
+    # 保留这个覆盖口是因为线上 JumpServer 任务一直靠 env 传值，改配置表不能让老任务行为漂移。
+    env_keyword = cfg("PRODUCT_KEYWORD")
+    keyword = env_keyword or conf["keyword"]
+    log("[community_faq] 群名关键词 {0!r}（来源：{1}）".format(
+        keyword, "PRODUCT_KEYWORD 环境变量" if env_keyword else "PRODUCTS 表"))
     stats: dict | None = None
     if args.pairs_json:
         pairs, by_day = load_pairs_from_json(args.pairs_json)
