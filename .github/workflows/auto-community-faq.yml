@@ -37,8 +37,18 @@
 #     2. 同一页勾选 "Allow GitHub Actions to create and approve pull requests"
 #        —— 不勾选时 GITHUB_TOKEN 无法创建 PR，会直接报错；
 #     3. Secrets: ZHIMA_BASE_URL / ZHIMA_ACCOUNT / ZHIMA_PASSWORD / LLM_API_KEY
-#        （以上四项**都是必填**；另可选 ZHIMA_DEPT_STAFF / LLM_MODEL；
+#        （以上四项**都是必填**；另可选 ZHIMA_DEPT_STAFF；
 #          公司仓库建议配成组织级 Secret）。
+#        LLM_API_KEY = 百度千帆的 Bearer Token（形如 bce-v3/ALTAK-xxxx/yyyy），
+#        直接配在 Secret 里即可，**不要写进本文件**；
+#        ⚠️ 这是本工作流**唯一**需要配置的模型相关项：网关
+#        https://qianfan.baidubce.com/v2 与模型名 deepseek-v4.1-flash 已在下方 env 里
+#        写死，不再读仓库 Variables（历史配过同名 Variables 会静默覆盖默认值、排查困难）。
+#        ⚠️ deepseek-v4.1-flash 是**推理型模型**：思维链 token 与正文共享 max_tokens 预算，
+#        实测开启思考时 600 预算里 582 都被 reasoning 吃掉、content 直接为空。
+#        本任务的调用都是「按固定格式吐 JSON」，思维链无收益，因此脚本默认发
+#        thinking={"type": "disabled"} 把它关掉（实测同样请求：600 → 38 token）。
+#        如需临时打开，把仓库 Variables 的 LLM_DISABLE_REASONING 设为 0 即可。
 #        ZHIMA_DEPT_STAFF = 官方人员名单 JSON，如 [{"name":"张三"},{"name":"李四","aliases":["小李"]}]。
 #        ⚠️ 它**不是过滤白名单**，而是「官方人员」身份标记：名单内的人的答复被标为高信任来源，
 #        名单外同事的答复一样保留（标为低信任），两级都交给模型按分级标准审核。
@@ -54,15 +64,18 @@
 #
 # 运行环境（重要）:
 #   - `ubuntu-latest` = **GitHub 托管 runner，机房在境外**。
-#     ⚠️ 境外 runner **访问不了「仅国内可达」的外部服务**：2026-09-23 实测，
-#     芝麻平台可达（取数 288 次请求 / 0 失败 / 321 条问答对），但模型网关
-#     ai.fit2cloud.cn（解析到国内电信公网 IP 119.147.33.142）**TCP 连接超时**（Errno 110）。
-#   - 该限制与脚本、账号、负载、请求大小都无关，也**不是偶发**：同一地址在国内本机
+#     ⚠️ 境外 runner **访问不了「仅国内可达」的外部服务**：2026-09-23 实测，芝麻平台可达
+#     （取数 288 次请求 / 0 失败 / 321 条问答对），但当时用的模型网关 ai.fit2cloud.cn
+#     （解析到国内电信公网 IP 119.147.33.142）**TCP 连接超时**（Errno 110）。
+#     该限制与脚本、账号、负载、请求大小都无关，也**不是偶发**：同一地址在国内本机
 #     TCP/TLS/HTTP 全通（HTTP 401 = 服务活着），而在 runner 上三次尝试全部连不上；
 #     **加大超时无效**（是 TCP 连接建不起来，不是响应慢）。
+#     ✅ 因此默认网关已改为**公网可达**的百度千帆 v2（qianfan.baidubce.com），
+#     托管 runner 不再需要为「模型网关跨境不通」而切到国内自托管 runner。
+#     ⚠️ 若把下方 env 里的 LLM_BASE_URL 换回国内自建网关，上面这段跨境限制会重新生效。
 #   - Preflight 里的连通性自检会把「芝麻」与「模型网关」**分别**探明并打印解析到的 IP，
 #     15 秒内给出结论，不必等取数跑完。
-#   - **国内自托管 runner（跨不过跨境链路时用）**：不要改本文件，只在仓库 Variables 里设
+#   - **国内自托管 runner（跨不过跨境链路时用）**：不要改本文件的 env 网关地址，只在仓库 Variables 里设
 #     RUNNER_LABELS = ["self-hosted","f2c"]，本任务就会落到那台机器上；不设则用托管 runner。
 #     ⚠️ 该机需 Python ≥ 3.7（脚本用了 3.7+ 语法，3.6 会语法报错），且 glibc 需 2.28+
 #     （actions/checkout 等 node20 action 的要求）→ 老系统（如 CentOS 7 / glibc 2.17）
@@ -169,7 +182,11 @@ on:
         required: false
         default: '8'
       max_items:
-        description: '本期最多新增条目数'
+        description: '一个 PR 里条目总数的上限（含上期续接，超过 5 会被压到 5）'
+        required: false
+        default: '5'
+      min_items:
+        description: '引导模型至少选几条（只作引导，不够格时照实少选）'
         required: false
         default: '3'
       min_count:
@@ -193,9 +210,13 @@ permissions:
   pull-requests: write
 
 concurrency:
-  # 按产品分组：不同产品互不阻塞（用同一个组会把 6 个产品的矩阵 job 串成一条队列），
-  # 同一产品的重复触发仍保持串行（不取消前一次，避免打断在跑的 PR 生成）。
-  group: community-faq-${{ github.event.inputs.product || 'all' }}
+  # 全局单组：任何两次触发（定时全量 vs 手动单产品）都串行执行。
+  # ⚠️ 不能按 product 分组（旧写法 community-faq-${{ product }}）：定时全量跑出
+  # community-faq-all 组、手动单产品跑出 community-faq-jumpserver 组，两组互不阻塞，
+  # 两个 run 会对同一产品的固定分支同时 push --force-with-lease，后推者静默覆盖先推者。
+  # 串行的代价是多等一轮（单次 run 约 10-20 分钟），可接受。
+  # matrix 内部的并发已由 strategy.max-parallel: 2 控制，不受本组影响。
+  group: community-faq
   cancel-in-progress: false
 
 env:
@@ -214,10 +235,15 @@ env:
   ZHIMA_PASSWORD: ${{ secrets.ZHIMA_PASSWORD }}
   ZHIMA_DEPT_STAFF: ${{ secrets.ZHIMA_DEPT_STAFF }}
   ZHIMA_SCOPE_STAFF_USERID: ${{ vars.ZHIMA_SCOPE_STAFF_USERID || 'SheQuXiaoZhuShou' }}
-  LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://ai.fit2cloud.cn/gateway/v1' }}
+  # 网关与模型名直接写死，不复用仓库 Variables —— 避免历史 Variables 静默覆盖默认值。
+  # 改网关/换模型时改这里，同时把脚本里的 DEFAULT_LLM_BASE_URL / DEFAULT_LLM_MODEL 一起改。
+  LLM_BASE_URL: https://qianfan.baidubce.com/v2
   LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-  # 未配置 Variables 时用 f2c-auto（脚本内置默认值同此）
-  LLM_MODEL: ${{ vars.LLM_MODEL || 'f2c-auto' }}
+  LLM_MODEL: deepseek-v4.1-flash
+  # 默认关闭推理型模型的思维链（1=关闭）。reasoning token 计入 max_tokens，
+  # 本任务只需固定格式的 JSON，思考纯属浪费预算。设 0 可临时打开（见文件头说明）。
+  # 此项保留 Variables 覆盖能力，方便不改代码就能临时打开思考。
+  LLM_DISABLE_REASONING: ${{ vars.LLM_DISABLE_REASONING || '1' }}
   # 群名过滤关键词覆盖项；**留空**即每个产品各自用 PRODUCTS 表里的 keyword。
   # 仅当需要临时改口径时（如某产品群名带了额外前缀）才把仓库变量 PRODUCT_KEYWORD 配上。
   PRODUCT_KEYWORD: ${{ vars.PRODUCT_KEYWORD || '' }}
@@ -264,8 +290,9 @@ jobs:
     # 各自仓库按需配置（不配即为默认值，行为与从前完全相同）：
     #   未配置 RUNNER_LABELS            -> ["ubuntu-latest"]（GitHub 托管，境外）
     #   RUNNER_LABELS=["self-hosted","f2c"] -> 落到国内自托管 runner（见文件头「运行环境」）
-    # 托管 runner 访问不了**仅国内可达**的外部服务：2026-09-23 实测芝麻可达、
-    # 模型网关 ai.fit2cloud.cn（国内电信 IP）连接超时。
+    # 默认模型网关是公网可达的百度千帆 v2（已写死在 env 里，不受 Variables 影响），
+    # 托管 runner 可直接用；只有把 env 里的 LLM_BASE_URL 换成**仅国内可达**的自建网关
+    # （如 ai.fit2cloud.cn，国内电信 IP）时，托管 runner 才会连不上，届时再切国内自托管 runner。
     runs-on: ${{ fromJSON(vars.RUNNER_LABELS || '["ubuntu-latest"]') }}
     timeout-minutes: 40
     strategy:
@@ -319,6 +346,7 @@ jobs:
             /.github/
             /*-docs/*.md
             /*-docs/**/*.md
+            /*-docs/faq/community_faq.pending.json
 
       # 重试循环：actions/checkout 自身没有重试参数，失败后在这里重跑它。
       # 重跑方式：直接执行 runner _tool 目录里已下载的 checkout 入口脚本
@@ -339,6 +367,7 @@ jobs:
             /.github/
             /*-docs/*.md
             /*-docs/**/*.md
+            /*-docs/faq/community_faq.pending.json
         run: |
           set -e
           # 定位已下载的 actions/checkout（尝试 v4 下所有已缓存版本，取最新）
@@ -396,9 +425,14 @@ jobs:
           BRANCH=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["branch"])' "${cfg}")
           MIN_MD=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["min_md"])' "${cfg}")
           FAQ_REL=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["faq_rel"])' "${cfg}")
+          # 双复核责任人：产品负责人（各产品固定）+ 当周社区值班人（按周轮换，见脚本 ONCALL_ROTA）。
+          # 两者都取自 PRODUCTS 表 / 轮换表，workflow 不另抄一份名单。
+          OWNER_LOGIN=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1]).get("owner",""))' "${cfg}")
+          ONCALL_LOGIN=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1]).get("oncall",""))' "${cfg}")
           # FAQ 页面路径同样取自 PRODUCTS 表（docs + faq_rel），workflow 不另抄一份
           FAQ_PAGE="${DOCS_DIR}/${FAQ_REL}"
           echo "产品=${PRODUCT} / 文档目录=${DOCS_DIR} / FAQ 页面=${FAQ_PAGE} / 固定分支=${BRANCH} / md 下限=${MIN_MD}"
+          echo "双复核：产品负责人=${OWNER_LOGIN:-未配置} / 当周社区值班人=${ONCALL_LOGIN:-未配置}"
           missing=""
           for name in ZHIMA_BASE_URL ZHIMA_ACCOUNT ZHIMA_PASSWORD LLM_API_KEY; do
             if [ -z "${!name}" ]; then
@@ -444,6 +478,8 @@ jobs:
             echo "BRANCH=${BRANCH}"
             echo "FAQ_PAGE=${FAQ_PAGE}"
             echo "DOCS_DIR=${DOCS_DIR}"
+            echo "OWNER_LOGIN=${OWNER_LOGIN}"
+            echo "ONCALL_LOGIN=${ONCALL_LOGIN}"
           } >> "$GITHUB_ENV"
           # 校验页面文件确实存在：稀疏检出错时在这里报错，比在「写回页面」时才炸清楚得多
           if [ ! -f "${FAQ_PAGE}" ]; then
@@ -494,9 +530,11 @@ jobs:
               print("::error::芝麻与模型网关都不可达 —— runner 自身出网可能有问题，或两个地址都只在特定网络内可达。")
               sys.exit(1)
           if not l_ok:
-              print("::error::只有模型网关不可达（芝麻正常）→ 属「该网关对境外来源不通 / 跨境链路问题」，"
-                    "与脚本、账号、负载、请求大小都无关，加大超时也不会变好。")
-              print("::error::出路：用仓库 Variables 覆盖 LLM_BASE_URL 指向公网可达的网关，或把 workflow 放到国内机器上运行。")
+              print("::error::只有模型网关不可达（芝麻正常）→ 默认网关是公网可达的百度千帆 v2"
+                    "（https://qianfan.baidubce.com/v2，已写死在 workflow env 里，不受 Variables 影响），"
+                    "连不上多为 runner 出网/DNS 问题，与脚本、账号、负载无关，加大超时也不会变好。")
+              print("::error::若你改过 env 里的 LLM_BASE_URL 指向仅特定网络内可达的地址，"
+                    "请改回默认值，或设 RUNNER_LABELS=[\"self-hosted\",\"f2c\"] 把本任务落到能访问它的自托管 runner。")
               sys.exit(1)
           if not z_ok:
               print("::error::只有芝麻会话不可达（模型网关正常）—— 请检查 ZHIMA_BASE_URL 与 runner 到该地址的网络。")
@@ -549,6 +587,13 @@ jobs:
           PREV_PAGE_FILE="${RUNNER_TEMP}/community-faq-prev-page.md"
           rm -f "${PREV_PAGE_FILE}"
           echo "prev_page=${PREV_PAGE_FILE}" >> "$GITHUB_OUTPUT"
+          # 待续接清单：上期被名额截断的条目（固定分支每轮从 main 重建，页面里没有它们，
+          # 这份 sidecar 文件是截断条目唯一的存续通道）。与本轮要写的清单同路径。
+          PENDING_FILE="${DOCS_DIR}/faq/community_faq.pending.json"
+          echo "pending_file=${PENDING_FILE}" >> "$GITHUB_OUTPUT"
+          # 提交步骤（Commit and push）也要用同一路径，导出到 GITHUB_ENV
+          echo "PENDING_FILE=${PENDING_FILE}" >> "$GITHUB_ENV"
+          echo "pending_prev=" >> "$GITHUB_OUTPUT"
           if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
             echo "固定分支 ${BRANCH} 已存在，导出其上期页面用于条目级续接（main 上的人工修改不受影响）"
             if git fetch --no-tags --depth=1 --force origin \
@@ -558,6 +603,16 @@ jobs:
             else
               rm -f "${PREV_PAGE_FILE}"
               echo "::warning::取回上期分支失败，退化为仅在 ${BASE_REF} 上新增（本期将不含上期未合并条目）"
+            fi
+            # 顺带导出上期待续接清单（若有）；导不出不影响主流程
+            PENDING_PREV="${RUNNER_TEMP}/community-faq-pending-prev.json"
+            rm -f "${PENDING_PREV}"
+            if git show "refs/remotes/origin/${BRANCH}:${PENDING_FILE}" > "${PENDING_PREV}" 2>/dev/null \
+               && [ -s "${PENDING_PREV}" ]; then
+              echo "pending_prev=${PENDING_PREV}" >> "$GITHUB_OUTPUT"
+              echo "已导出上期待续接清单：$(wc -c < "${PENDING_PREV}") 字节"
+            else
+              echo "上期无待续接清单（或为空）：本轮无被截断的顺延条目"
             fi
           else
             # 远端没有该分支：首跑，或上期 PR 合并后分支被「自动删除分支」清掉了。
@@ -576,6 +631,9 @@ jobs:
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           # 上期固定分支页面（仅用于条目级续接，**绝不覆盖当前页面**，见 Prepare fixed branch）
           PREV_PAGE: ${{ steps.base.outputs.prev_page }}
+          # 待续接清单（截断条目 sidecar）：上期输入 / 本轮输出，见 Prepare fixed branch
+          PENDING_FILE: ${{ steps.base.outputs.pending_file }}
+          PENDING_PREV: ${{ steps.base.outputs.pending_prev }}
         run: |
           set -e
           # BRANCH / FAQ_PAGE / DOCS_DIR 已由 Preflight 导出到 GITHUB_ENV，随产品变化
@@ -592,6 +650,12 @@ jobs:
           else
             echo "无上期页面可比对（首跑或上期分支已删除），本期按全新生成处理"
           fi
+          # 上期待续接清单 + 本轮清单输出（被名额截断的条目落盘，随固定分支提交）
+          PENDING_FLAGS="--pending-out ${PENDING_FILE}"
+          if [ -n "${PENDING_PREV}" ] && [ -f "${PENDING_PREV}" ]; then
+            echo "发现上期待续接清单 ${PENDING_PREV}，本轮优先续接其中条目"
+            PENDING_FLAGS="--pending-reuse ${PENDING_PREV} --pending-out ${PENDING_FILE}"
+          fi
           # ${REUSE_FLAG} 是按空格拆分的，路径里出现空白字符会拆错参数 —— 先挡住
           case "${PREV_PAGE}" in
             *[[:space:]]*)
@@ -603,11 +667,12 @@ jobs:
           python3 "${SCRIPT}" \
             --product "${{ matrix.product }}" \
             --days "${{ github.event.inputs.days || '8' }}" \
-            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --max-items "${{ github.event.inputs.max_items || '5' }}" \
+            --min-items "${{ github.event.inputs.min_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
             --report "${REPORT}" \
             --dump-pairs "${PAIRS}" \
-            ${REUSE_FLAG} \
+            ${REUSE_FLAG} ${PENDING_FLAGS} \
             ${APPLY_FLAG}
           code=$?
           set -e
@@ -625,7 +690,9 @@ jobs:
             2) echo "::error::配置或参数错误（退出码 2）[${{ matrix.product }}]：请核对 Secrets/Variables，以及 ${FAQ_PAGE} 是否存在。"
                exit 2 ;;
             4) echo "::error::大模型环节失败（退出码 4）：无法访问模型网关 ${LLM_BASE_URL}、LLM_API_KEY 无效，或模型无返回。"
-               echo "::error::若该网关仅在国内网络可达，跑在 GitHub 托管 runner（境外）上必然连接超时 —— 把仓库 Variables 的 RUNNER_LABELS 设为 [\"self-hosted\",\"f2c\"]，让本任务落到国内自托管 runner；或用 LLM_BASE_URL 指向公网可达的网关。"
+               echo "::error::网关与模型名已写死在 workflow env 里，不受仓库 Variables 影响 —— 优先核对 LLM_API_KEY 是否为有效的千帆 API Key（形如 bce-v3/ALTAK-xxxx/yyyy）。"
+               echo "::error::若错误信息里含 thinking / HTTP 400，检查 LLM_DISABLE_REASONING 是否被设成了 0（本模型默认必须关闭思维链，否则预算被 reasoning 吃光、正文为空）。"
+               echo "::error::若报 TCP 连接超时且你改过 env 里的 LLM_BASE_URL（如换成仅国内可达的自建网关），把 RUNNER_LABELS 设为 [\"self-hosted\",\"f2c\"] 落到国内自托管 runner。"
                exit 4 ;;
             5) echo "::error::MDX 安全护栏拦截（退出码 5）：生成的条目经转义后仍无法通过 MDX 编译，页面**未被修改**。"
                echo "::error::这意味着模型写出了护栏尚未覆盖的 MDX 危险写法，请查看上面的「整页 MDX 校验」日志定位具体报错，"
@@ -664,12 +731,16 @@ jobs:
         if: ${{ steps.gen.outputs.changed == 'true' }}
         run: |
           set -e
-          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}")" ]; then
-            echo "页面无变化，跳过提交"
+          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}" "${PENDING_FILE}")" ]; then
+            echo "页面与待续接清单均无变化，跳过提交"
             exit 0
           fi
 
           git add "${FAQ_PAGE}"
+          # 待续接清单：被名额截断的条目的存续通道（页面无变化时也可能只有清单变化）
+          if git status --porcelain -- "${PENDING_FILE}" | grep -q .; then
+            git add "${PENDING_FILE}"
+          fi
           git commit -m "docs(faq): 补充本周社区常见问题"
 
           # 推送：显式给出租约的「期望值」，不用裸 --force-with-lease。
@@ -701,6 +772,9 @@ jobs:
           DRAFT: ${{ github.event.inputs.draft || 'true' }}
           # 产品名（与脚本 PRODUCTS[key]['name'] 同源）——用于 PR 标题/描述区分开六个产品的 PR
           PRODUCT: ${{ matrix.product }}
+          # 双复核责任人（Preflight 解析自 PRODUCTS 表 / 轮换表）
+          OWNER_LOGIN: ${{ env.OWNER_LOGIN }}
+          ONCALL_LOGIN: ${{ env.ONCALL_LOGIN }}
         run: |
           set -e
           echo "PR 目标: ${GITHUB_REPOSITORY}  ${BASE_BRANCH} <- ${BRANCH}（draft=${DRAFT}，product=${PRODUCT}）"
@@ -717,6 +791,15 @@ jobs:
           PRODUCT = (os.environ.get("PRODUCT") or "").strip() or "jumpserver"
           DRAFT = (os.environ.get("DRAFT") or "true").strip().lower() == "true"
           OWNER = REPO.split("/")[0]
+          # 双复核：产品负责人（各产品固定）+ 当周社区值班人（按周轮换）
+          OWNER_LOGIN = (os.environ.get("OWNER_LOGIN") or "").strip().lstrip("@")
+          ONCALL_LOGIN = (os.environ.get("ONCALL_LOGIN") or "").strip().lstrip("@")
+          # 去重：本周值班人恰好就是产品负责人时只挂一位（否则 API 会因重复而报 422）
+          REVIEWERS = []
+          for who in (OWNER_LOGIN, ONCALL_LOGIN):
+              if who and who not in REVIEWERS:
+                  REVIEWERS.append(who)
+          SAME_PERSON = bool(OWNER_LOGIN) and OWNER_LOGIN == ONCALL_LOGIN
 
 
           def api(method, path, payload=None):
@@ -750,7 +833,20 @@ jobs:
               "本期新增条目见右侧「文件改动」diff；选题依据、质量警告等生成细节见本次运行的 "
               "Actions 摘要（Summary），此处不再重复。",
               "",
+              "### 双复核（两人 Approve 后任意一人可合并）",
+              "",
           ]
+          if OWNER_LOGIN:
+              lines.append("- [ ] 产品负责人 @%s 复核" % OWNER_LOGIN)
+          else:
+              lines.append("- [ ] 产品负责人复核（⚠️ PRODUCTS 表未配置 owner，请补）")
+          if SAME_PERSON:
+              lines.append("- [x] 当周社区值班人：本周值班人与产品负责人同为 @%s，无需二次挂人" % OWNER_LOGIN)
+          elif ONCALL_LOGIN:
+              lines.append("- [ ] 当周社区值班人 @%s 复核" % ONCALL_LOGIN)
+          else:
+              lines.append("- [ ] 当周社区值班人复核（⚠️ ONCALL_ROTA 未覆盖本周，请补充轮换表）")
+          lines.append("")
           body = "\n".join(lines)
 
           # 按北京时间取日期（job 级 TZ=Asia/Shanghai）；标题前缀带产品，
@@ -776,11 +872,19 @@ jobs:
               print("已有开启中的 PR #%d，更新标题与描述" % num)
               status, res = api("PATCH", "/repos/%s/pulls/%d" % (REPO, num),
                                 {"title": title, "body": body})
+              # 已开 PR 的 reviewer 只能单独请求；重复请求已挂的人会被忽略，不影响流程
+              if REVIEWERS and status in (200, 201):
+                  st2, r2 = api("POST", "/repos/%s/pulls/%d/requested_reviewers" % (REPO, num),
+                                {"reviewers": REVIEWERS})
+                  if st2 not in (200, 201):
+                      print("::warning::挂 reviewer 失败（HTTP %s）：%s" % (st2, r2))
           else:
               print("新建 PR（draft=%s）" % DRAFT)
-              status, res = api("POST", "/repos/%s/pulls" % REPO,
-                                {"title": title, "body": body, "head": BRANCH,
-                                 "base": BASE, "draft": DRAFT})
+              payload = {"title": title, "body": body, "head": BRANCH,
+                         "base": BASE, "draft": DRAFT}
+              if REVIEWERS:
+                  payload["requested_reviewers"] = REVIEWERS
+              status, res = api("POST", "/repos/%s/pulls" % REPO, payload)
 
           if status not in (200, 201):
               print("::error::创建/更新 PR 失败（HTTP %s）：%s" % (status, res))
@@ -791,7 +895,7 @@ jobs:
 
           num = res["number"]
           url = res["html_url"]
-          print("PR #%d %s" % (num, url))
+          print("PR #%d %s（reviewers=%s）" % (num, url, ",".join(REVIEWERS) or "无"))
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write("pr_number=%d\npr_url=%s\n" % (num, url))
 
