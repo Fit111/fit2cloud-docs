@@ -346,6 +346,14 @@ LLM_SEED = 20261015
 # 而空数组是合法 JSON、解析不报错，直接采信会把「本期无货」这个错误结论写进报告。
 PASS1_ATTEMPTS = 3
 
+# 一个 PR 里条目总数的上限（续接的条目也占名额）。超过就会被截断，目的是让每次
+# 评审的量可控；续接多的时候会相应地少选新的，极端情况下本轮一条新的都不加。
+MAX_ITEMS_CEILING = 5
+
+# 模型自选条数的下限，仅用于 prompt 引导。**不强制凑够**：模型判断只有 2 条够格时
+# 就给 2 条，脚本照实上报（宁缺毋滥），不会硬塞劣质条目来满足下限。
+MIN_ITEMS = 3
+
 # 模糊/不确定表述：提示词已明令禁止，这里做机械兜底，命中只记警告、不阻断
 VAGUE_PHRASES = ("可能", "大概", "也许", "或许", "似乎", "估计", "不确定",
                  "建议试试", "应该可以", "应该是", "好像是", "听说")
@@ -1270,8 +1278,11 @@ PASS1_SYSTEM = """你是 {product} 官方文档的维护者。
 
 ■ 输出要求：
 1. question_ids 只能用清单里**原样出现过**的编号，不得编造；语义相同才算一组。
-2. 最多选 {max_items} 条，每条都要给 score（0-100 整数）。排序由脚本按 score 做，
-   你**只需把 score 打准**，不必操心数组顺序；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
+2. 选 **{min_items} 到 {max_items} 条**，每条都要给 score（0-100 整数）。**条数由你按质量判断**：
+   够格的主题多就选满 {max_items} 条，只有 {min_items} 条够格就只给 {min_items} 条——
+   不要为了凑数把「勉强沾边」的塞进来，也不要为了保守把明明够格的压下去。
+   排序由脚本按 score 做，你**只需把 score 打准**，不必操心数组顺序；
+   确实一条都不值得沉淀时返回空数组（脚本会照实上报，不会硬凑）。
 3. doc_paths 尽量从给定文档索引里挑**原样存在**的相对路径，一条优先给一个依据；
    **不确定的路径宁可留空数组，也不要编造**（留空不影响收录，见下面的来源分级）。
 4. section 填现有小节标题原文；确实不属于任何现有小节时才填 new_section。
@@ -1431,8 +1442,12 @@ def rank_candidates(candidates: list[dict]) -> list[dict]:
 
 
 def screen_questions(pairs: list[dict], page: str, index: list[str],
-                     max_items: int) -> list[dict]:
-    """第一轮：模型归组并按「长期复用价值」挑选值得沉淀的问题，同时给出文档依据。"""
+                     max_items: int, min_items: int = MIN_ITEMS) -> list[dict]:
+    """第一轮：模型归组并按「长期复用价值」挑选值得沉淀的问题，同时给出文档依据。
+
+    max_items 是**允许模型自己决定的条数上限**，min_items 是给模型的引导下限。条数交给
+    模型判断（够格的多就多选），脚本不再写死「取前 3」，只在超上限时按 score 截断。
+    """
     digest = build_question_digest(pairs)
     if not digest:
         return []
@@ -1448,7 +1463,8 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
     )
     messages = [
         {"role": "system", "content": PASS1_SYSTEM.format(
-            max_items=max_items, **product_prompt_vars())},
+            max_items=max_items, min_items=min(min_items, max_items),
+            **product_prompt_vars())},
         {"role": "user", "content": user},
     ]
     # 千帆 v2 上 deepseek-v4.1-flash 对**完全相同的请求**会随机返回 `{"items":[]}`
@@ -1552,16 +1568,21 @@ def compose_entry(item: dict, pairs: list[dict], index: list[str]) -> dict | Non
         + official_note + "\n" + answer_block
         + "\n\n## 官方文档原文\n" + doc_block + trunc_note
     )
-    raw = llm_chat(
-        [{"role": "system", "content": PASS2_SYSTEM.format(
-            placeholder=CITATION_PLACEHOLDER, **product_prompt_vars())},
-         {"role": "user", "content": user}],
-        temperature=0.2, max_tokens=2500,
-    )
-    try:
-        payload = json_block(raw)
-    except (ValueError, json.JSONDecodeError) as err:
-        log(f"[community_faq] 第二轮成稿输出无法解析: {err}")
+    messages = [{"role": "system", "content": PASS2_SYSTEM.format(
+        placeholder=CITATION_PLACEHOLDER, **product_prompt_vars())},
+        {"role": "user", "content": user}]
+    payload = None
+    # 与 PASS1 同一个网关（对相同请求随机返回空/坏 JSON），重试防护不能只有 PASS1 有：
+    # 这里失败一条就丢一条候选，防护不对称会把「网关抖动」误伤成「本期没货」。
+    for attempt in range(1, PASS1_ATTEMPTS + 1):
+        raw = llm_chat(messages, temperature=0.2, max_tokens=2500)
+        try:
+            payload = json_block(raw)
+            break
+        except (ValueError, json.JSONDecodeError) as err:
+            log(f"[community_faq] 第二轮成稿输出无法解析（第 {attempt}/{PASS1_ATTEMPTS} 次）: {err}")
+    if payload is None:
+        log(f"[community_faq] 第二轮成稿连续 {PASS1_ATTEMPTS} 次无法解析，放弃该条: {item.get('title')}")
         return None
 
     title = str(payload.get("title") or item.get("title") or "").strip()
@@ -1992,15 +2013,23 @@ def _llm_dedup_chunks(page: str, titles: list[str], chunk: int = 8) -> dict[str,
         user = ("## 待入库条目（上一期已入选，尚未合并）\n"
                 + "\n".join("- {0}".format(t) for t in batch)
                 + "\n\n## 页面已有条目\n" + existing)
+        messages = [{"role": "system", "content": REUSE_DEDUP_SYSTEM.format(**product_prompt_vars())},
+                    {"role": "user", "content": user}]
         try:
-            raw = llm_chat([{"role": "system", "content": REUSE_DEDUP_SYSTEM.format(**product_prompt_vars())},
-                            {"role": "user", "content": user}],
-                           temperature=0.0, max_tokens=2000)
+            raw = llm_chat(messages, temperature=0.0, max_tokens=2000)
             verdict.update(_parse_dedup_reply(raw, batch))
         except SystemExit:
             raise
-        except Exception as err:      # 网络/解析异常时保守放行，交由人工在 PR 里核对
-            log("[community_faq] 续接条目语义判重失败（放行待人工核对）: {0}".format(err))
+        except Exception as err:      # 网关随机抖动：重试一次再降级
+            log("[community_faq] 续接条目语义判重第 1 次失败，重试: {0}".format(err))
+            try:
+                raw = llm_chat(messages, temperature=0.0, max_tokens=2000)
+                verdict.update(_parse_dedup_reply(raw, batch))
+            except SystemExit:
+                raise
+            except Exception as err2:
+                # 仍失败则保守放行，交由人工在 PR 里核对
+                log("[community_faq] 续接条目语义判重连续失败（放行待人工核对）: {0}".format(err2))
     return verdict
 
 
@@ -2046,7 +2075,11 @@ def reuse_entries_from_page(path: Path, page: str) -> tuple[list[dict], list[dic
         if dup:
             dropped.append({"title": title, "reason": "上期条目已并入页面，不再重复追加（{0}）".format(dup)})
             continue
+        # 与 existing_entry_keys 一致：标题 + 问题描述双 key，防「问法不同、同一件事」漏网
         keys.add(probe_of(entry))
+        q_probe = normalize_text(question)[:40]
+        if q_probe:
+            keys.add(q_probe)
         kept.append(entry)
 
     # 语义判重：机械比对抓不住「换说法的同一件事」
@@ -2065,6 +2098,69 @@ def reuse_entries_from_page(path: Path, page: str) -> tuple[list[dict], list[dic
             survivors.append(entry)
         kept = survivors
     return kept, dropped
+
+
+def load_pending_reuse(path: str, keys: set[str]) -> tuple[list[dict], list[dict]]:
+    """读取上期「待续接清单」（被名额截断的条目，JSON 数组），返回 (可续接, 已丢弃)。
+
+    ⚠️ 固定分支每轮从 main 重建，被截断的条目**不会**留在分支页面上 —— 旧实现
+    「留在固定分支上下轮再续接」的说法是错的，截断即永久丢失（2026-10-15 复核确认）。
+    这份清单由脚本自己写、随固定分支提交，是截断条目唯一的存续通道。
+    """
+    if not path:
+        return [], []
+    try:
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as err:
+        log("[community_faq] 读取待续接清单失败（按无待续接处理）: {0}".format(err))
+        return [], []
+    if not isinstance(data, list):
+        log("[community_faq] 待续接清单格式异常（应为 JSON 数组），忽略")
+        return [], []
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    for entry in data:
+        if not isinstance(entry, dict):
+            continue
+        title = str(entry.get("title") or "")
+        question = str(entry.get("question") or "")
+        body = str(entry.get("body") or "").strip()
+        if not title or not question or not body:
+            dropped.append({"title": title or "（无标题）",
+                            "reason": "待续接条目字段缺失（title/question/body），已丢弃"})
+            continue
+        dup = False
+        for probe_src in (title, question):
+            probe = normalize_text(probe_src)[:40]
+            if probe and probe in keys:
+                dup = True
+                break
+        if dup:
+            dropped.append({"title": title, "reason": "待续接条目已并入当前页面，不再续接"})
+            continue
+        entry.setdefault("evidence", "上期待续接（曾被名额截断）")
+        entry.setdefault("reason", "上期因名额截断顺延，本期优先续接")
+        entry["reused"] = True
+        keys.add(normalize_text(title)[:40])
+        keys.add(normalize_text(question)[:40])
+        kept.append(entry)
+    if kept:
+        log("[community_faq] 从待续接清单载入 {0} 条（已等待至少一轮，本轮优先续接）".format(len(kept)))
+    return kept, dropped
+
+
+def write_pending_out(path: str, entries: list[dict]) -> None:
+    """把本轮被名额截断的条目写成待续接清单（随固定分支提交，下轮 load_pending_reuse 优先续接）。"""
+    # 保留成稿所需的全部字段 + 报告要用的元数据（count/sources/...），下轮续接进
+    # insert_entries/write_report 时字段齐全；missing 字段报告侧都有 .get() 兜底
+    keep = ("section", "new_section", "title", "question", "body",
+            "see_also", "doc_path", "evidence", "reason",
+            "count", "sources", "answerers", "official",
+            "score", "confidence", "warnings")
+    slim = [{k: e.get(k) for k in keep if e.get(k)} for e in entries]
+    Path(path).write_text(json.dumps(slim, ensure_ascii=False, indent=1) + "\n",
+                          encoding="utf-8")
+    log("[community_faq] 待续接清单已写出：{0}（{1} 条）".format(path, len(slim)))
 
 
 # ---------------------------------------------------------------- 报告
@@ -2105,7 +2201,8 @@ def funnel_stats(stats: dict | None, pairs: list[dict], candidates: list[dict],
 def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                  skipped: list[dict], by_day: list[dict], days: int, applied: bool,
                  fetch_note: str = "", note: str = "", funnel: dict | None = None,
-                 candidates: list[dict] | None = None) -> None:
+                 candidates: list[dict] | None = None,
+                 cap: int = MAX_ITEMS_CEILING, reused_n: int = 0) -> None:
     per_day = ", ".join("{0}={1}".format(d["date"], d["pairs"]) for d in by_day)
     warn_total = sum(len(r["entry"].get("warnings") or []) for r in placed)
     lines = [
@@ -2133,6 +2230,8 @@ def write_report(path: str, *, pairs: list[dict], placed: list[dict],
             len(placed) + len(skipped), len(placed), len(skipped)))
     lines += [
         "- 本次新增：{0} 条（{1}）".format(len(placed), "已写回页面" if applied else "仅预览，未写回"),
+        "- 名额占用：{0}/{1} 条（上期续接 {2} + 本期新增 {3}；`max_items` 上限 {4}）".format(
+            len(placed), cap, reused_n, max(0, len(placed) - reused_n), cap),
         "- 质量检查：{0}".format("无警告" if not warn_total else "{0} 条警告（见下方 ⚠️）".format(warn_total)),
         "",
     ]
@@ -2152,8 +2251,8 @@ def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                 f"- 依据类型：{evidence}",
                 f"- 依据文档：{doc_shown}",
                 answerer_line,
-                f"- 社区出现次数：{e['count']}",
-                f"- 来源：{'；'.join(e['sources']) or '-'}",
+                f"- 社区出现次数：{e.get('count', '-')}",
+                f"- 来源：{'；'.join(e.get('sources') or []) or '-'}",
                 f"- 入选理由：{e['reason'] or '-'}",
                 f"- 评分：{e.get('score', '-')}（confidence={e.get('confidence', '-')}）",
             ]
@@ -2497,7 +2596,12 @@ def main() -> int:
                     help="按 --product 解析并输出该产品的配置 JSON 后退出（供 workflow 取分支名/目录）")
     ap.add_argument("--days", type=int, default=8,
                     help="回看天数（含今天），默认 8：多留一天以补回上次运行漏掉的那半天")
-    ap.add_argument("--max-items", type=int, default=3, help="本期最多新增条目数，默认 3")
+    ap.add_argument("--max-items", type=int, default=MAX_ITEMS_CEILING,
+                    help="一个 PR 里条目总数的上限（含上期续接的条目），默认 {0}，"
+                         "再大也会被 MAX_ITEMS_CEILING 压到 {0}".format(MAX_ITEMS_CEILING))
+    ap.add_argument("--min-items", type=int, default=MIN_ITEMS,
+                    help="引导模型至少选几条，默认 {0}。**只作 prompt 引导**：模型判断"
+                         "够格的不够时会照实少选，不会硬凑".format(MIN_ITEMS))
     ap.add_argument("--min-count", type=int, default=2,
                     help="（已弱化）出现次数仅作参考，选题以长期复用价值为准；保留仅为兼容")
     ap.add_argument("--apply", action="store_true", help="写回页面（默认只预览）")
@@ -2505,6 +2609,11 @@ def main() -> int:
     ap.add_argument("--pairs-json", default="", help="改用本地问答对 JSON，跳过取数")
     ap.add_argument("--dump-pairs", default="", help="把问答对写入该 JSON，便于排查")
     ap.add_argument("--report", default="", help="变更报告输出路径（markdown）")
+    ap.add_argument("--pending-reuse", default="",
+                    help="上期待续接清单 JSON（被名额截断的条目，本轮优先续接）")
+    ap.add_argument("--pending-out", default="",
+                    help="本轮被名额截断的条目写入该 JSON（随固定分支提交；传了且 --apply 时"
+                         "无截断也会写空清单以清掉旧条目）")
     ap.add_argument("--reuse-page", default="",
                     help="上期固定分支的页面文件：只取其中多出来的条目续接进来（**整份文件永不覆盖当前页面**）")
     args = ap.parse_args()
@@ -2579,7 +2688,7 @@ def main() -> int:
             write_report(report, pairs=pairs, placed=[], skipped=skipped,
                          by_day=by_day, days=args.days, applied=False,
                          fetch_note=fetch_summary(stats), note=note, funnel=funnel,
-                         candidates=candidates)
+                         candidates=candidates, cap=total_cap, reused_n=len(reused))
             set_action_output(False, 0, report)
             log("[community_faq] 已写出报告：{0}".format(report))
         except OSError as err:
@@ -2589,31 +2698,68 @@ def main() -> int:
     index = doc_index()
     keys = existing_entry_keys(page)
 
+    # 一个 PR 里的**条目总数**上限（含上期续接）。超过说明调用方传了过大的值，
+    # 压回 CEILING；下限至少 1，否则什么都加不了。
+    total_cap = max(1, min(args.max_items, MAX_ITEMS_CEILING))
+    min_items = max(1, min(args.min_items, total_cap))
+
     entries: list[dict] = []
     skipped: list[dict] = []
     reused: list[dict] = []
+    # 先把上期未合并的条目续接进来，再跑本期模型选题，避免同一问题本期重复入选
     if args.reuse_page:
-        # 先把上期未合并的条目续接进来，再跑本期模型选题，避免同一问题本期重复入选
         reused, reused_skipped = reuse_entries_from_page(Path(args.reuse_page), page)
         skipped.extend(reused_skipped)
-        for entry in reused:
-            keys.add(normalize_text(entry["title"])[:40])
-        log("[community_faq] 从上期页面续接条目 {0} 条".format(len(reused)))
-    candidates = screen_questions(pairs, page, index, args.max_items * 2)
+    # 待续接清单的条目等了至少一轮，排在页面续接前面，优先占名额
+    pending_prev, pending_skipped = load_pending_reuse(args.pending_reuse, keys)
+    skipped.extend(pending_skipped)
+    reused = pending_prev + reused
+    # 续接条目**也占名额**：超出的写进待续接清单（pending-out），随固定分支提交、
+    # 下轮优先续接 —— 固定分支每轮从 main 重建，不落盘就是永久丢失（2026-10-15 复核确认）。
+    overflow = reused[total_cap:]
+    if overflow:
+        for entry in overflow:
+            skipped.append({"title": entry.get("title"),
+                            "reason": "续接条目超出本 PR 名额（上限 {0} 条），"
+                                      "已写入待续接清单，下轮优先续接".format(total_cap)})
+        log("[community_faq] 续接候选 {0} 条超出名额上限 {1}，本轮取前 {1} 条，"
+            "其余 {2} 条写入待续接清单".format(len(reused), total_cap, len(overflow)))
+        reused = reused[:total_cap]
+    for entry in reused:
+        keys.add(normalize_text(entry["title"])[:40])
+        q_probe = normalize_text(str(entry.get("question") or ""))[:40]
+        if q_probe:
+            keys.add(q_probe)
+    if reused or pending_prev:
+        log("[community_faq] 续接条目 {0} 条（占名额 {0}/{1}；其中待续接清单 {2} 条）".format(
+            len(reused), total_cap, len(pending_prev)))
+
+    # 留给「本期新增」的名额 = 总数上限 - 已续接。续接满额时这里为 0，
+    # 本轮就不选新的（但报告仍会给出候选排序，方便人工判断该不该调大 --max-items）。
+    remaining = max(0, total_cap - len(reused))
+    log("[community_faq] 本期新增名额 {0} 条（总数上限 {1} - 续接 {2}）".format(
+        remaining, total_cap, len(reused)))
+    candidates = screen_questions(pairs, page, index, remaining, min_items) if remaining else []
     log("[community_faq] 模型初选 {0} 条".format(len(candidates)))
     for item in candidates:
         log("[community_faq]   候选 kind={0} conf={1} score={2} ｜ {3}".format(
             str(item.get("kind") or "?").upper(), item.get("confidence"),
             item.get("score"), item.get("title")))
+    # 名额被续接占满（remaining==0 → 模型未被调用）时 reused 必非空，直接走下面的
+    # 入库路径提交续接条目即可；这里只处理「续接与初选都为空」的真·无货场景。
     if not candidates and not reused:
         log("[community_faq] 模型没有选出合格问题")
         emit_empty_report("模型初选为 0：本期没有值得沉淀的主题（全部被判为一次性个案/无结论/重复）。",
                           funnel_stats(stats, pairs, [], 0, 0))
         print(json.dumps({"changed": False, "count": 0}, ensure_ascii=False))
+        # 被否决/判重的 pending 条目不再留在清单里（否则下轮原样复活）；
+        # overflow 为空时写空清单同样起到「清旧」作用
+        if args.apply and args.pending_out:
+            write_pending_out(args.pending_out, overflow)
         return 3
     limit = digest_limit(len(pairs))
     for item in candidates:
-        if len(entries) >= args.max_items:
+        if len(entries) >= remaining:
             break
         kind = str(item.get("kind") or "").strip().upper()
         if kind in ("B", "D"):
@@ -2666,8 +2812,8 @@ def main() -> int:
 
     if reused:
         entries = reused + entries
-        log("[community_faq] 入库 {0} 条（其中上期续接 {1} 条，本期新增 {2} 条）".format(
-            len(entries), len(reused), len(entries) - len(reused)))
+        log("[community_faq] 入库 {0} 条（其中上期续接 {1} 条，本期新增 {2} 条；总数上限 {3}）"
+            .format(len(entries), len(reused), len(entries) - len(reused), total_cap))
         new_page, placed = insert_entries(page, entries)
         if new_page == page:
             log("[community_faq] 页面无变化")
@@ -2683,9 +2829,12 @@ def main() -> int:
                      by_day=by_day, days=args.days, applied=args.apply,
                      fetch_note=fetch_summary(stats),
                      funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
-                     candidates=candidates)
+                     candidates=candidates, cap=total_cap, reused_n=len(reused))
         if args.apply:
             FAQ_PAGE.write_text(new_page, encoding="utf-8")
+            # 截断条目落盘为待续接清单；无截断时也要写空清单，把已续接走的旧条目清掉
+            if args.pending_out:
+                write_pending_out(args.pending_out, overflow)
             log("[community_faq] 已写回 {0}（新增/续接 {1} 条）".format(FAQ_PAGE, len(placed)))
         else:
             log("[community_faq] 预览模式，未写回（新增/续接 {0} 条）".format(len(placed)))
@@ -2703,9 +2852,13 @@ def main() -> int:
                      note="模型初选 {0} 个主题，但全部在成稿环节被否决（逐条原因见下方「未采纳的候选」）。"
                           .format(len(candidates)),
                      funnel=funnel_stats(stats, pairs, candidates, 0, len(skipped)),
+                     cap=total_cap, reused_n=len(reused),
                      candidates=candidates)
         set_action_output(False, 0, report)
         print(json.dumps({"changed": False, "count": 0, "report": report}, ensure_ascii=False))
+        if args.apply and args.pending_out:
+            # pending 条目全部被否决/判重时，清空清单避免下轮原样复活
+            write_pending_out(args.pending_out, [])
         return 3
 
     new_page, placed = insert_entries(page, entries)
@@ -2726,10 +2879,13 @@ def main() -> int:
                  by_day=by_day, days=args.days, applied=args.apply,
                  fetch_note=fetch_summary(stats),
                  funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
-                 candidates=candidates)
+                 candidates=candidates, cap=total_cap, reused_n=len(reused))
 
     if args.apply:
         FAQ_PAGE.write_text(new_page, encoding="utf-8")
+        # 无续接路径同样要写待续接清单（清空旧 pending，避免已消费条目下轮复活）
+        if args.pending_out:
+            write_pending_out(args.pending_out, overflow)
         log(f"[community_faq] 已写回 {FAQ_PAGE}")
     else:
         log("[community_faq] 预览模式，未写回页面。新增内容：")

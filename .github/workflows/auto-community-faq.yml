@@ -182,7 +182,11 @@ on:
         required: false
         default: '8'
       max_items:
-        description: '本期最多新增条目数'
+        description: '一个 PR 里条目总数的上限（含上期续接，超过 5 会被压到 5）'
+        required: false
+        default: '5'
+      min_items:
+        description: '引导模型至少选几条（只作引导，不够格时照实少选）'
         required: false
         default: '3'
       min_count:
@@ -206,9 +210,13 @@ permissions:
   pull-requests: write
 
 concurrency:
-  # 按产品分组：不同产品互不阻塞（用同一个组会把 6 个产品的矩阵 job 串成一条队列），
-  # 同一产品的重复触发仍保持串行（不取消前一次，避免打断在跑的 PR 生成）。
-  group: community-faq-${{ github.event.inputs.product || 'all' }}
+  # 全局单组：任何两次触发（定时全量 vs 手动单产品）都串行执行。
+  # ⚠️ 不能按 product 分组（旧写法 community-faq-${{ product }}）：定时全量跑出
+  # community-faq-all 组、手动单产品跑出 community-faq-jumpserver 组，两组互不阻塞，
+  # 两个 run 会对同一产品的固定分支同时 push --force-with-lease，后推者静默覆盖先推者。
+  # 串行的代价是多等一轮（单次 run 约 10-20 分钟），可接受。
+  # matrix 内部的并发已由 strategy.max-parallel: 2 控制，不受本组影响。
+  group: community-faq
   cancel-in-progress: false
 
 env:
@@ -338,6 +346,7 @@ jobs:
             /.github/
             /*-docs/*.md
             /*-docs/**/*.md
+            /*-docs/faq/community_faq.pending.json
 
       # 重试循环：actions/checkout 自身没有重试参数，失败后在这里重跑它。
       # 重跑方式：直接执行 runner _tool 目录里已下载的 checkout 入口脚本
@@ -358,6 +367,7 @@ jobs:
             /.github/
             /*-docs/*.md
             /*-docs/**/*.md
+            /*-docs/faq/community_faq.pending.json
         run: |
           set -e
           # 定位已下载的 actions/checkout（尝试 v4 下所有已缓存版本，取最新）
@@ -577,6 +587,13 @@ jobs:
           PREV_PAGE_FILE="${RUNNER_TEMP}/community-faq-prev-page.md"
           rm -f "${PREV_PAGE_FILE}"
           echo "prev_page=${PREV_PAGE_FILE}" >> "$GITHUB_OUTPUT"
+          # 待续接清单：上期被名额截断的条目（固定分支每轮从 main 重建，页面里没有它们，
+          # 这份 sidecar 文件是截断条目唯一的存续通道）。与本轮要写的清单同路径。
+          PENDING_FILE="${DOCS_DIR}/faq/community_faq.pending.json"
+          echo "pending_file=${PENDING_FILE}" >> "$GITHUB_OUTPUT"
+          # 提交步骤（Commit and push）也要用同一路径，导出到 GITHUB_ENV
+          echo "PENDING_FILE=${PENDING_FILE}" >> "$GITHUB_ENV"
+          echo "pending_prev=" >> "$GITHUB_OUTPUT"
           if git ls-remote --exit-code --heads origin "${BRANCH}" >/dev/null 2>&1; then
             echo "固定分支 ${BRANCH} 已存在，导出其上期页面用于条目级续接（main 上的人工修改不受影响）"
             if git fetch --no-tags --depth=1 --force origin \
@@ -586,6 +603,16 @@ jobs:
             else
               rm -f "${PREV_PAGE_FILE}"
               echo "::warning::取回上期分支失败，退化为仅在 ${BASE_REF} 上新增（本期将不含上期未合并条目）"
+            fi
+            # 顺带导出上期待续接清单（若有）；导不出不影响主流程
+            PENDING_PREV="${RUNNER_TEMP}/community-faq-pending-prev.json"
+            rm -f "${PENDING_PREV}"
+            if git show "refs/remotes/origin/${BRANCH}:${PENDING_FILE}" > "${PENDING_PREV}" 2>/dev/null \
+               && [ -s "${PENDING_PREV}" ]; then
+              echo "pending_prev=${PENDING_PREV}" >> "$GITHUB_OUTPUT"
+              echo "已导出上期待续接清单：$(wc -c < "${PENDING_PREV}") 字节"
+            else
+              echo "上期无待续接清单（或为空）：本轮无被截断的顺延条目"
             fi
           else
             # 远端没有该分支：首跑，或上期 PR 合并后分支被「自动删除分支」清掉了。
@@ -604,6 +631,9 @@ jobs:
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           # 上期固定分支页面（仅用于条目级续接，**绝不覆盖当前页面**，见 Prepare fixed branch）
           PREV_PAGE: ${{ steps.base.outputs.prev_page }}
+          # 待续接清单（截断条目 sidecar）：上期输入 / 本轮输出，见 Prepare fixed branch
+          PENDING_FILE: ${{ steps.base.outputs.pending_file }}
+          PENDING_PREV: ${{ steps.base.outputs.pending_prev }}
         run: |
           set -e
           # BRANCH / FAQ_PAGE / DOCS_DIR 已由 Preflight 导出到 GITHUB_ENV，随产品变化
@@ -620,6 +650,12 @@ jobs:
           else
             echo "无上期页面可比对（首跑或上期分支已删除），本期按全新生成处理"
           fi
+          # 上期待续接清单 + 本轮清单输出（被名额截断的条目落盘，随固定分支提交）
+          PENDING_FLAGS="--pending-out ${PENDING_FILE}"
+          if [ -n "${PENDING_PREV}" ] && [ -f "${PENDING_PREV}" ]; then
+            echo "发现上期待续接清单 ${PENDING_PREV}，本轮优先续接其中条目"
+            PENDING_FLAGS="--pending-reuse ${PENDING_PREV} --pending-out ${PENDING_FILE}"
+          fi
           # ${REUSE_FLAG} 是按空格拆分的，路径里出现空白字符会拆错参数 —— 先挡住
           case "${PREV_PAGE}" in
             *[[:space:]]*)
@@ -631,11 +667,12 @@ jobs:
           python3 "${SCRIPT}" \
             --product "${{ matrix.product }}" \
             --days "${{ github.event.inputs.days || '8' }}" \
-            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --max-items "${{ github.event.inputs.max_items || '5' }}" \
+            --min-items "${{ github.event.inputs.min_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
             --report "${REPORT}" \
             --dump-pairs "${PAIRS}" \
-            ${REUSE_FLAG} \
+            ${REUSE_FLAG} ${PENDING_FLAGS} \
             ${APPLY_FLAG}
           code=$?
           set -e
@@ -694,12 +731,16 @@ jobs:
         if: ${{ steps.gen.outputs.changed == 'true' }}
         run: |
           set -e
-          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}")" ]; then
-            echo "页面无变化，跳过提交"
+          if [ -z "$(git status --porcelain -- "${FAQ_PAGE}" "${PENDING_FILE}")" ]; then
+            echo "页面与待续接清单均无变化，跳过提交"
             exit 0
           fi
 
           git add "${FAQ_PAGE}"
+          # 待续接清单：被名额截断的条目的存续通道（页面无变化时也可能只有清单变化）
+          if git status --porcelain -- "${PENDING_FILE}" | grep -q .; then
+            git add "${PENDING_FILE}"
+          fi
           git commit -m "docs(faq): 补充本周社区常见问题"
 
           # 推送：显式给出租约的「期望值」，不用裸 --force-with-lease。
