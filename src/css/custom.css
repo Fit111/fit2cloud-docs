@@ -503,6 +503,24 @@ aside.theme-doc-sidebar-container {
   }
 }
 
+/* ===== 文档侧栏: 一级分类标题加粗 =====
+   用户要求: 所有文档页面侧边栏的一级分类标题加粗。
+   Docusaurus 给一级分类的 <li> 挂 theme-doc-sidebar-item-category-level-1,
+   用直接子选择器只加粗「一级分类标题」本身, 不会级联到二级/三级文档项。
+   特异性 (0,4,0) 高于 media 查询里 .menu__list-item-collapsible 的 (0,3,0)
+   (font-weight:400), 故全局单条即可同时作用于桌面与移动端侧边栏。 */
+.theme-doc-sidebar-container .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  font-weight: 700;
+}
+
+/* ===== 文档侧栏: 一级目录(顶层直接为文档链接)加粗 =====
+   部分产品侧边栏顶层是一级文档链接(而非一级分类), 如「产品介绍 / API 接口 / 联系我们」。
+   同样加粗到 700, 与上面的一级分类保持一致;
+   theme-doc-sidebar-item-link-level-1 挂在对应 <li> 上, 直接子选择器只作用于该项本身。 */
+.theme-doc-sidebar-container .theme-doc-sidebar-item-link-level-1 > .menu__link {
+  font-weight: 700;
+}
+
 /* ===== 右侧标题导航(TOC): 跟随三栏布局断点, 仅 ≥998px 显示 =====
    三栏断点已从 1272px 降到 998px(贴合 Docusaurus 的 996px 桌面阈值),
    使右侧 TOC 与 JS useWindowSize 的 desktop/mobile 判定保持一致:
