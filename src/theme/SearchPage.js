@@ -37,6 +37,7 @@ const COPY = {
     searchPlaceholder: '请输入关键词回车检索，例如：1Panel 如何安装',
     searchBtn: '搜索',
     allResults: '全部结果',
+    quickBack: '快速返回上一页',
     empty: '未找到相关文档，换个关键词试试',
     prev: '上一页',
     next: '下一页',
@@ -46,6 +47,7 @@ const COPY = {
     searchPlaceholder: 'Type keywords and press Enter, e.g. FIT2CLOUD',
     searchBtn: 'Search',
     allResults: 'All results',
+    quickBack: 'Back',
     empty: 'No docs found, try another keyword',
     prev: 'Prev',
     next: 'Next',
@@ -112,6 +114,15 @@ export default function SearchPage() {
 
   const goPage = (p) => setPage(Math.max(1, Math.min(p, totalPages)));
 
+  // 快速返回上一页: 有历史则返回, 否则回首页
+  const goBack = () => {
+    if (window.history && window.history.length > 1) {
+      history.back();
+    } else {
+      history.push('/');
+    }
+  };
+
   // 生成页码(含首尾与当前附近, 间隔用省略号)
   const pageList = (() => {
     const set = new Set([1, totalPages]);
@@ -139,6 +150,12 @@ export default function SearchPage() {
           {/* hero 盒子: 左 全部结果+搜索框, 右 插画 */}
           <div className={styles.heroBox}>
             <div className={styles.heroBody}>
+              <button
+                type="button"
+                className={styles.quickBack}
+                onClick={goBack}>
+                <span aria-hidden="true">←</span> {t.quickBack}
+              </button>
               <h1 className={styles.heroTitle}>
                 {t.allResults}
               </h1>
@@ -171,7 +188,10 @@ export default function SearchPage() {
                 <span className={styles.rowBody}>
                   <span className={styles.rowTitleRow}>
                     <span className={styles.rowTitle}>{highlightText(item.title, query)}</span>
-                    <span className={styles.rowTag}>{item.product}</span>
+                    <span className={styles.rowTag}>
+                      {item.product}
+                      {item.isLast ? '' : ` · ${item.versionLabel || ''}`}
+                    </span>
                   </span>
                   <span className={styles.rowDesc}>{highlightText(item.desc, query)}</span>
                 </span>

@@ -32,6 +32,28 @@
   flex: 1;
 }
 
+/* 「快速返回上一页」幽灵胶囊按钮 */
+.quickBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 20px;
+  padding: 6px 14px;
+  border: 1px solid #d7dde8;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #323535;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.quickBack:hover {
+  border-color: #0c7be0;
+  color: #0c7be0;
+}
+
 /* 「全部结果」标题 */
 .heroTitle {
   margin: 0 0 20px;
