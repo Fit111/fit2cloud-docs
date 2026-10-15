@@ -192,12 +192,6 @@ const sidebars = {
           "id": "installation/backup_recovery",
           "label": "数据备份以及恢复指南",
           "key": "doc:安装部署/数据备份以及恢复指南"
-        },
-        {
-          "type": "doc",
-          "id": "manual/env",
-          "label": "参数说明",
-          "key": "doc:安装部署/参数说明"
         }
       ],
       "key": "cat:安装部署"
@@ -1062,6 +1056,12 @@ const sidebars = {
           "id": "manual/ops/system_params",
           "label": "系统参数设置",
           "key": "doc:运维指南/系统参数设置"
+        },
+        {
+          "type": "doc",
+          "id": "manual/ops/env",
+          "label": "参数说明",
+          "key": "doc:运维指南/参数说明"
         },
         {
           "type": "doc",
