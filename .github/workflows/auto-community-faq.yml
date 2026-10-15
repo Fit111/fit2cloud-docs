@@ -182,7 +182,11 @@ on:
         required: false
         default: '8'
       max_items:
-        description: '本期最多新增条目数'
+        description: '一个 PR 里条目总数的上限（含上期续接，超过 5 会被压到 5）'
+        required: false
+        default: '5'
+      min_items:
+        description: '引导模型至少选几条（只作引导，不够格时照实少选）'
         required: false
         default: '3'
       min_count:
@@ -631,7 +635,8 @@ jobs:
           python3 "${SCRIPT}" \
             --product "${{ matrix.product }}" \
             --days "${{ github.event.inputs.days || '8' }}" \
-            --max-items "${{ github.event.inputs.max_items || '3' }}" \
+            --max-items "${{ github.event.inputs.max_items || '5' }}" \
+            --min-items "${{ github.event.inputs.min_items || '3' }}" \
             --min-count "${{ github.event.inputs.min_count || '2' }}" \
             --report "${REPORT}" \
             --dump-pairs "${PAIRS}" \

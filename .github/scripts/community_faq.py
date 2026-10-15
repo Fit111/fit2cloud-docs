@@ -346,6 +346,14 @@ LLM_SEED = 20261015
 # 而空数组是合法 JSON、解析不报错，直接采信会把「本期无货」这个错误结论写进报告。
 PASS1_ATTEMPTS = 3
 
+# 一个 PR 里条目总数的上限（续接的条目也占名额）。超过就会被截断，目的是让每次
+# 评审的量可控；续接多的时候会相应地少选新的，极端情况下本轮一条新的都不加。
+MAX_ITEMS_CEILING = 5
+
+# 模型自选条数的下限，仅用于 prompt 引导。**不强制凑够**：模型判断只有 2 条够格时
+# 就给 2 条，脚本照实上报（宁缺毋滥），不会硬塞劣质条目来满足下限。
+MIN_ITEMS = 3
+
 # 模糊/不确定表述：提示词已明令禁止，这里做机械兜底，命中只记警告、不阻断
 VAGUE_PHRASES = ("可能", "大概", "也许", "或许", "似乎", "估计", "不确定",
                  "建议试试", "应该可以", "应该是", "好像是", "听说")
@@ -1270,8 +1278,11 @@ PASS1_SYSTEM = """你是 {product} 官方文档的维护者。
 
 ■ 输出要求：
 1. question_ids 只能用清单里**原样出现过**的编号，不得编造；语义相同才算一组。
-2. 最多选 {max_items} 条，每条都要给 score（0-100 整数）。排序由脚本按 score 做，
-   你**只需把 score 打准**，不必操心数组顺序；宁缺毋滥，确实一条都不值得沉淀时返回空数组。
+2. 选 **{min_items} 到 {max_items} 条**，每条都要给 score（0-100 整数）。**条数由你按质量判断**：
+   够格的主题多就选满 {max_items} 条，只有 {min_items} 条够格就只给 {min_items} 条——
+   不要为了凑数把「勉强沾边」的塞进来，也不要为了保守把明明够格的压下去。
+   排序由脚本按 score 做，你**只需把 score 打准**，不必操心数组顺序；
+   确实一条都不值得沉淀时返回空数组（脚本会照实上报，不会硬凑）。
 3. doc_paths 尽量从给定文档索引里挑**原样存在**的相对路径，一条优先给一个依据；
    **不确定的路径宁可留空数组，也不要编造**（留空不影响收录，见下面的来源分级）。
 4. section 填现有小节标题原文；确实不属于任何现有小节时才填 new_section。
@@ -1431,8 +1442,12 @@ def rank_candidates(candidates: list[dict]) -> list[dict]:
 
 
 def screen_questions(pairs: list[dict], page: str, index: list[str],
-                     max_items: int) -> list[dict]:
-    """第一轮：模型归组并按「长期复用价值」挑选值得沉淀的问题，同时给出文档依据。"""
+                     max_items: int, min_items: int = MIN_ITEMS) -> list[dict]:
+    """第一轮：模型归组并按「长期复用价值」挑选值得沉淀的问题，同时给出文档依据。
+
+    max_items 是**允许模型自己决定的条数上限**，min_items 是给模型的引导下限。条数交给
+    模型判断（够格的多就多选），脚本不再写死「取前 3」，只在超上限时按 score 截断。
+    """
     digest = build_question_digest(pairs)
     if not digest:
         return []
@@ -1448,7 +1463,8 @@ def screen_questions(pairs: list[dict], page: str, index: list[str],
     )
     messages = [
         {"role": "system", "content": PASS1_SYSTEM.format(
-            max_items=max_items, **product_prompt_vars())},
+            max_items=max_items, min_items=min(min_items, max_items),
+            **product_prompt_vars())},
         {"role": "user", "content": user},
     ]
     # 千帆 v2 上 deepseek-v4.1-flash 对**完全相同的请求**会随机返回 `{"items":[]}`
@@ -2105,7 +2121,8 @@ def funnel_stats(stats: dict | None, pairs: list[dict], candidates: list[dict],
 def write_report(path: str, *, pairs: list[dict], placed: list[dict],
                  skipped: list[dict], by_day: list[dict], days: int, applied: bool,
                  fetch_note: str = "", note: str = "", funnel: dict | None = None,
-                 candidates: list[dict] | None = None) -> None:
+                 candidates: list[dict] | None = None,
+                 cap: int = MAX_ITEMS_CEILING, reused_n: int = 0) -> None:
     per_day = ", ".join("{0}={1}".format(d["date"], d["pairs"]) for d in by_day)
     warn_total = sum(len(r["entry"].get("warnings") or []) for r in placed)
     lines = [
@@ -2133,6 +2150,8 @@ def write_report(path: str, *, pairs: list[dict], placed: list[dict],
             len(placed) + len(skipped), len(placed), len(skipped)))
     lines += [
         "- 本次新增：{0} 条（{1}）".format(len(placed), "已写回页面" if applied else "仅预览，未写回"),
+        "- 名额占用：{0}/{1} 条（上期续接 {2} + 本期新增 {3}；`max_items` 上限 {4}）".format(
+            len(placed), cap, reused_n, max(0, len(placed) - reused_n), cap),
         "- 质量检查：{0}".format("无警告" if not warn_total else "{0} 条警告（见下方 ⚠️）".format(warn_total)),
         "",
     ]
@@ -2497,7 +2516,12 @@ def main() -> int:
                     help="按 --product 解析并输出该产品的配置 JSON 后退出（供 workflow 取分支名/目录）")
     ap.add_argument("--days", type=int, default=8,
                     help="回看天数（含今天），默认 8：多留一天以补回上次运行漏掉的那半天")
-    ap.add_argument("--max-items", type=int, default=3, help="本期最多新增条目数，默认 3")
+    ap.add_argument("--max-items", type=int, default=MAX_ITEMS_CEILING,
+                    help="一个 PR 里条目总数的上限（含上期续接的条目），默认 {0}，"
+                         "再大也会被 MAX_ITEMS_CEILING 压到 {0}".format(MAX_ITEMS_CEILING))
+    ap.add_argument("--min-items", type=int, default=MIN_ITEMS,
+                    help="引导模型至少选几条，默认 {0}。**只作 prompt 引导**：模型判断"
+                         "够格的不够时会照实少选，不会硬凑".format(MIN_ITEMS))
     ap.add_argument("--min-count", type=int, default=2,
                     help="（已弱化）出现次数仅作参考，选题以长期复用价值为准；保留仅为兼容")
     ap.add_argument("--apply", action="store_true", help="写回页面（默认只预览）")
@@ -2579,7 +2603,7 @@ def main() -> int:
             write_report(report, pairs=pairs, placed=[], skipped=skipped,
                          by_day=by_day, days=args.days, applied=False,
                          fetch_note=fetch_summary(stats), note=note, funnel=funnel,
-                         candidates=candidates)
+                         candidates=candidates, cap=total_cap, reused_n=len(reused))
             set_action_output(False, 0, report)
             log("[community_faq] 已写出报告：{0}".format(report))
         except OSError as err:
@@ -2589,23 +2613,53 @@ def main() -> int:
     index = doc_index()
     keys = existing_entry_keys(page)
 
+    # 一个 PR 里的**条目总数**上限（含上期续接）。超过说明调用方传了过大的值，
+    # 压回 CEILING；下限至少 1，否则什么都加不了。
+    total_cap = max(1, min(args.max_items, MAX_ITEMS_CEILING))
+    min_items = max(1, min(args.min_items, total_cap))
+
     entries: list[dict] = []
     skipped: list[dict] = []
     reused: list[dict] = []
     if args.reuse_page:
         # 先把上期未合并的条目续接进来，再跑本期模型选题，避免同一问题本期重复入选
         reused, reused_skipped = reuse_entries_from_page(Path(args.reuse_page), page)
+        # 续接条目**也占名额**：上期选多了，本轮就相应地少选新的。
+        # 被截掉的那些仍留在固定分支上，下一轮（PR 合并前）还会再被续接回来，不会丢。
+        if len(reused) > total_cap:
+            for entry in reused[total_cap:]:
+                skipped.append({"title": entry.get("title"),
+                                "reason": "上期续接条目超出本 PR 名额（上限 {0} 条），"
+                                          "留在固定分支上下轮再续接".format(total_cap)})
+            log("[community_faq] 上期续接 {0} 条超出名额上限 {1}，只取前 {1} 条".format(
+                len(reused), total_cap))
+            reused = reused[:total_cap]
         skipped.extend(reused_skipped)
         for entry in reused:
             keys.add(normalize_text(entry["title"])[:40])
-        log("[community_faq] 从上期页面续接条目 {0} 条".format(len(reused)))
-    candidates = screen_questions(pairs, page, index, args.max_items * 2)
+        log("[community_faq] 从上期页面续接条目 {0} 条（占名额 {0}/{1}）".format(
+            len(reused), total_cap))
+
+    # 留给「本期新增」的名额 = 总数上限 - 已续接。续接满额时这里为 0，
+    # 本轮就不选新的（但报告仍会给出候选排序，方便人工判断该不该调大 --max-items）。
+    remaining = max(0, total_cap - len(reused))
+    log("[community_faq] 本期新增名额 {0} 条（总数上限 {1} - 续接 {2}）".format(
+        remaining, total_cap, len(reused)))
+    candidates = screen_questions(pairs, page, index, remaining, min_items) if remaining else []
     log("[community_faq] 模型初选 {0} 条".format(len(candidates)))
     for item in candidates:
         log("[community_faq]   候选 kind={0} conf={1} score={2} ｜ {3}".format(
             str(item.get("kind") or "?").upper(), item.get("confidence"),
             item.get("score"), item.get("title")))
     if not candidates and not reused:
+        if remaining == 0:
+            # 名额被续接占满：连模型都没调，不能说「本期没有值得沉淀的主题」
+            log("[community_faq] 本期新增名额为 0（名额已被上期续接占满）")
+            emit_empty_report("本期新增名额为 0：本 PR 的 {0} 条名额已被上期未合并的续接条目占满，"
+                              "本轮不新增条目。如需多带新的，请调大 `max_items`（上限 {1}）。".format(
+                                  total_cap, MAX_ITEMS_CEILING))
+            print(json.dumps({"changed": False, "count": 0}, ensure_ascii=False))
+            return 3
         log("[community_faq] 模型没有选出合格问题")
         emit_empty_report("模型初选为 0：本期没有值得沉淀的主题（全部被判为一次性个案/无结论/重复）。",
                           funnel_stats(stats, pairs, [], 0, 0))
@@ -2613,7 +2667,7 @@ def main() -> int:
         return 3
     limit = digest_limit(len(pairs))
     for item in candidates:
-        if len(entries) >= args.max_items:
+        if len(entries) >= remaining:
             break
         kind = str(item.get("kind") or "").strip().upper()
         if kind in ("B", "D"):
@@ -2666,8 +2720,8 @@ def main() -> int:
 
     if reused:
         entries = reused + entries
-        log("[community_faq] 入库 {0} 条（其中上期续接 {1} 条，本期新增 {2} 条）".format(
-            len(entries), len(reused), len(entries) - len(reused)))
+        log("[community_faq] 入库 {0} 条（其中上期续接 {1} 条，本期新增 {2} 条；总数上限 {3}）"
+            .format(len(entries), len(reused), len(entries) - len(reused), total_cap))
         new_page, placed = insert_entries(page, entries)
         if new_page == page:
             log("[community_faq] 页面无变化")
@@ -2683,7 +2737,7 @@ def main() -> int:
                      by_day=by_day, days=args.days, applied=args.apply,
                      fetch_note=fetch_summary(stats),
                      funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
-                     candidates=candidates)
+                     candidates=candidates, cap=total_cap, reused_n=len(reused))
         if args.apply:
             FAQ_PAGE.write_text(new_page, encoding="utf-8")
             log("[community_faq] 已写回 {0}（新增/续接 {1} 条）".format(FAQ_PAGE, len(placed)))
@@ -2703,6 +2757,7 @@ def main() -> int:
                      note="模型初选 {0} 个主题，但全部在成稿环节被否决（逐条原因见下方「未采纳的候选」）。"
                           .format(len(candidates)),
                      funnel=funnel_stats(stats, pairs, candidates, 0, len(skipped)),
+                     cap=total_cap, reused_n=len(reused),
                      candidates=candidates)
         set_action_output(False, 0, report)
         print(json.dumps({"changed": False, "count": 0, "report": report}, ensure_ascii=False))
@@ -2726,7 +2781,7 @@ def main() -> int:
                  by_day=by_day, days=args.days, applied=args.apply,
                  fetch_note=fetch_summary(stats),
                  funnel=funnel_stats(stats, pairs, candidates, len(placed), len(skipped)),
-                 candidates=candidates)
+                 candidates=candidates, cap=total_cap, reused_n=len(reused))
 
     if args.apply:
         FAQ_PAGE.write_text(new_page, encoding="utf-8")
