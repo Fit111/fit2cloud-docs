@@ -14,11 +14,15 @@ description: 介绍 1Panel AI 网关安装部署的说明
 默认运行参数如下：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  1Panel AI 网关默认运行参数</div>
-
-| 项目 | 默认值 | 说明 |
-| --- | --- | --- |
-| 监听地址 | 0.0.0.0 | 监听全部 IPv4 接口。 |
-| HTTP 端口 | 8080 | Web 管理界面和数据面 API 共用。 |
-| 数据库 | SQLite | 默认数据库文件位于 /opt/ai-gateway/data/db/ai-gateway.db。 |
-| 凭据密钥 | 自动管理 | SQLite 首次启动时生成 /opt/ai-gateway/data/security/credential.key。 |
-| 优雅退出 | 60 秒 | 接收终止信号后等待请求退出。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>项目</th><th style={{width:'15%', padding:'8px'}}>默认值</th><th style={{width:'65%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>监听地址</td><td style={{padding:'8px'}}>0.0.0.0</td><td style={{padding:'8px'}}>监听全部 IPv4 接口。</td></tr>
+<tr><td style={{padding:'8px'}}>HTTP 端口</td><td style={{padding:'8px'}}>8080</td><td style={{padding:'8px'}}>Web 管理界面和数据面 API 共用。</td></tr>
+<tr><td style={{padding:'8px'}}>数据库</td><td style={{padding:'8px'}}>SQLite</td><td style={{padding:'8px'}}>默认数据库文件位于 /opt/ai-gateway/data/db/ai-gateway.db。</td></tr>
+<tr><td style={{padding:'8px'}}>凭据密钥</td><td style={{padding:'8px'}}>自动管理</td><td style={{padding:'8px'}}>SQLite 首次启动时生成 /opt/ai-gateway/data/security/credential.key。</td></tr>
+<tr><td style={{padding:'8px'}}>优雅退出</td><td style={{padding:'8px'}}>60 秒</td><td style={{padding:'8px'}}>接收终止信号后等待请求退出。</td></tr>
+</tbody>
+</table>

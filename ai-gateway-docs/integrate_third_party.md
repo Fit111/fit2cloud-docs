@@ -651,13 +651,17 @@ Hermes Tool Configuration 列出 24 类可选工具（Browser Automation、Compu
 逐项选择时按下表即可：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  opencode 安装向导逐项推荐选择</div>
-
-| 工具项 | 推荐选择 | 说明 |
-| --- | --- | --- |
-| Browser Automation | `1. Local Browser` | 本机 Headless Chromium，无需 API Key |
-| Image Generation | `11. Skip – keep defaults / configure later` | 本教程不演示生图 |
-| Text-to-Speech | `1. Microsoft Edge TTS` | 系统自带、质量好、无需 API Key |
-| Web Search & Extract | `16. Skip – keep defaults / configure later` | Hermes 自带免费 DuckDuckGo 搜索技能，足够日常使用 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px'}}>工具项</th><th style={{width:'45%', padding:'8px'}}>推荐选择</th><th style={{width:'30%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>Browser Automation</td><td style={{padding:'8px'}}><code>1. Local Browser</code></td><td style={{padding:'8px'}}>本机 Headless Chromium，无需 API Key</td></tr>
+<tr><td style={{padding:'8px'}}>Image Generation</td><td style={{padding:'8px'}}><code>11. Skip – keep defaults / configure later</code></td><td style={{padding:'8px'}}>本教程不演示生图</td></tr>
+<tr><td style={{padding:'8px'}}>Text-to-Speech</td><td style={{padding:'8px'}}><code>1. Microsoft Edge TTS</code></td><td style={{padding:'8px'}}>系统自带、质量好、无需 API Key</td></tr>
+<tr><td style={{padding:'8px'}}>Web Search &amp; Extract</td><td style={{padding:'8px'}}><code>16. Skip – keep defaults / configure later</code></td><td style={{padding:'8px'}}>Hermes 自带免费 DuckDuckGo 搜索技能，足够日常使用</td></tr>
+</tbody>
+</table>
 
 分别对应下面四张截图，依次按回车确认即可完成。
 
@@ -725,14 +729,18 @@ hermes
 配置完成后测试如果不通，按下面的对照表排查，基本都能解决：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  常见报错排查对照表</div>
-
-| 报错现象                        | 大概率原因                                                    | 解决办法                                            |
-| --------------------------- | -------------------------------------------------------- | ----------------------------------------------- |
-| 401 / 403                   | API Key 无效、复制不完整（少了开头或结尾字符）、已过期                         | 回管理端确认 Key 有效，重新复制粘贴一遍，注意不要带空格                  |
-| 404                         | 接口地址或模型名称填错                                              | 检查 Base URL 末尾是否有 `/v1`；模型名称与管理员开通的是否一字不差       |
-| 连接超时 / 无法访问                 | 网络不通、地址不对                                                | 换个浏览器访问 Base URL 确认可达；确认电脑没有开启拦截流量的代理软件         |
-| 能连通但没有回复 / 模型列表为空           | 该模型未分配给你的账号                                              | 联系管理员确认模型已加入你的用户组                               |
-| Claude Code 报错连不上 / 走的是官方接口 | CC Switch 供应商未启用，或上游格式未选「OpenAI Chat Completions（需开启路由）」 | 回到 CC Switch 确认网关供应商处于「启用」状态，并在高级选项中检查上游格式与模型映射 |
-| OpenCode 启动后状态栏未显示网关         | opencode.json 路径不对、SDK 未安装成功或 JSON 语法错误                  | 确认文件位于 `~/.config/opencode/opencode.json`；在该目录下重新执行 `npm install @ai-sdk/openai-compatible`；用 JSON 校验工具检查语法 |
-| Hermes Agent 启动后模型未调用 / 报 401 / 报错连不上网关 | Custom endpoint 配置未生效、API base URL 末尾漏写 `/v1`、API Key 复制错误 | 重新执行 `hermes setup`，在 Provider 列表选 `40 Custom endpoint`；确认 `~/.config/hermes/env` 里 `HERMES_CUSTOM_1ROUTER_1PANEL_CN_API_KEY` 已正确写入，Base URL 以 `/v1` 结尾；之后 `hermes doctor` 自检应全部 `✓` |
-| Hermes Gateway 自启失败 / Windows 登录后无服务 | 安装时勾选了 "Start automatically on Windows login" 但权限不足，或计划任务被清理 | 重新执行 `hermes setup gateway`，按提示选择「是」注册 Scheduled Task；或手动在「任务计划程序」里查看 `HermesGateway` 任务是否还在 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'15%', padding:'8px'}}>报错现象</th><th style={{width:'30%', padding:'8px'}}>大概率原因</th><th style={{width:'55%', padding:'8px'}}>解决办法</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>401 / 403</td><td style={{padding:'8px'}}>API Key 无效、复制不完整（少了开头或结尾字符）、已过期</td><td style={{padding:'8px'}}>回管理端确认 Key 有效，重新复制粘贴一遍，注意不要带空格</td></tr>
+<tr><td style={{padding:'8px'}}>404</td><td style={{padding:'8px'}}>接口地址或模型名称填错</td><td style={{padding:'8px'}}>检查 Base URL 末尾是否有 <code>/v1</code>；模型名称与管理员开通的是否一字不差</td></tr>
+<tr><td style={{padding:'8px'}}>连接超时 / 无法访问</td><td style={{padding:'8px'}}>网络不通、地址不对</td><td style={{padding:'8px'}}>换个浏览器访问 Base URL 确认可达；确认电脑没有开启拦截流量的代理软件</td></tr>
+<tr><td style={{padding:'8px'}}>能连通但没有回复 / 模型列表为空</td><td style={{padding:'8px'}}>该模型未分配给你的账号</td><td style={{padding:'8px'}}>联系管理员确认模型已加入你的用户组</td></tr>
+<tr><td style={{padding:'8px'}}>Claude Code 报错连不上 / 走的是官方接口</td><td style={{padding:'8px'}}>CC Switch 供应商未启用，或上游格式未选「OpenAI Chat Completions（需开启路由）」</td><td style={{padding:'8px'}}>回到 CC Switch 确认网关供应商处于「启用」状态，并在高级选项中检查上游格式与模型映射</td></tr>
+<tr><td style={{padding:'8px'}}>OpenCode 启动后状态栏未显示网关</td><td style={{padding:'8px'}}>opencode.json 路径不对、SDK 未安装成功或 JSON 语法错误</td><td style={{padding:'8px'}}>确认文件位于 <code>&#126;/.config/opencode/opencode.json</code>；在该目录下重新执行 <code>npm install @ai-sdk/openai-compatible</code>；用 JSON 校验工具检查语法</td></tr>
+<tr><td style={{padding:'8px'}}>Hermes Agent 启动后模型未调用 / 报 401 / 报错连不上网关</td><td style={{padding:'8px'}}>Custom endpoint 配置未生效、API base URL 末尾漏写 <code>/v1</code>、API Key 复制错误</td><td style={{padding:'8px'}}>重新执行 <code>hermes setup</code>，在 Provider 列表选 <code>40 Custom endpoint</code>；确认 <code>&#126;/.config/hermes/env</code> 里 <code>HERMES_CUSTOM_1ROUTER_1PANEL_CN_API_KEY</code> 已正确写入，Base URL 以 <code>/v1</code> 结尾；之后 <code>hermes doctor</code> 自检应全部 <code>✓</code></td></tr>
+<tr><td style={{padding:'8px'}}>Hermes Gateway 自启失败 / Windows 登录后无服务</td><td style={{padding:'8px'}}>安装时勾选了 "Start automatically on Windows login" 但权限不足，或计划任务被清理</td><td style={{padding:'8px'}}>重新执行 <code>hermes setup gateway</code>，按提示选择「是」注册 Scheduled Task；或手动在「任务计划程序」里查看 <code>HermesGateway</code> 任务是否还在</td></tr>
+</tbody>
+</table>

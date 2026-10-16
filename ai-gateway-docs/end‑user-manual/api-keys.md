@@ -27,14 +27,18 @@ title: API Keys
 ### 3.1 列表字段说明
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  API Keys 列表字段说明</div>
-
-| 字段          | 说明             | 详细描述                                    |
-| ----------- | -------------- | --------------------------------------- |
-| **名称**      | API Key 的自定义名称 | 给这把「工牌」起个方便你辨认的名字，如「智能客服小程序」            |
-| **API Key** | 密钥内容           | 列表中**默认脱敏**，只显示前 4 位 + 后 4 位。完整内容仅创建时可见 |
-| **创建时间**    | 该密钥的创建时间       | 用来判断这把 Key 用了多久                         |
-| **最新使用日期**  | 最近一次被调用的时间     | 长期没动静的 Key 可以考虑删掉。从未使用过则显示「-」           |
-| **操作**      | 该行的可执行动作       | 支持**启用/禁用开关**（暂停或恢复调用）、**编辑**（改名称）和**删除**（彻底移除）  |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'15%', padding:'8px'}}>字段</th><th style={{width:'25%', padding:'8px'}}>说明</th><th style={{width:'60%', padding:'8px'}}>详细描述</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>名称</strong></td><td style={{padding:'8px'}}>API Key 的自定义名称</td><td style={{padding:'8px'}}>给这把「工牌」起个方便你辨认的名字，如「智能客服小程序」</td></tr>
+<tr><td style={{padding:'8px'}}><strong>API Key</strong></td><td style={{padding:'8px'}}>密钥内容</td><td style={{padding:'8px'}}>列表中<strong>默认脱敏</strong>，只显示前 4 位 + 后 4 位。完整内容仅创建时可见</td></tr>
+<tr><td style={{padding:'8px'}}><strong>创建时间</strong></td><td style={{padding:'8px'}}>该密钥的创建时间</td><td style={{padding:'8px'}}>用来判断这把 Key 用了多久</td></tr>
+<tr><td style={{padding:'8px'}}><strong>最新使用日期</strong></td><td style={{padding:'8px'}}>最近一次被调用的时间</td><td style={{padding:'8px'}}>长期没动静的 Key 可以考虑删掉。从未使用过则显示「-」</td></tr>
+<tr><td style={{padding:'8px'}}><strong>操作</strong></td><td style={{padding:'8px'}}>该行的可执行动作</td><td style={{padding:'8px'}}>支持<strong>启用/禁用开关</strong>（暂停或恢复调用）、<strong>编辑</strong>（改名称）和<strong>删除</strong>（彻底移除）</td></tr>
+</tbody>
+</table>
 
 
 

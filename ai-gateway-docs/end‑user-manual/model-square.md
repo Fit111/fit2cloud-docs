@@ -113,15 +113,19 @@ title: 模型广场
 下表列出了所有可调用的接口。把它们理解成「**API 提供的功能菜单**」即可——你的应用要做什么，就调对应的接口。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  支持的接口一览</div>
-
-| 请求方法 | 接口地址                                              | 用途                 | 何时使用                      |
-| ---- | ------------------------------------------------- | ------------------ | ------------------------- |
-| GET  | `https://1router.1panel.cn/v1/models`             | 获取可用模型列表           | 想用程序自动发现支持哪些模型时           |
-| POST | `https://1router.1panel.cn/v1/chat/completions`   | OpenAI 聊天补全        | **最常用**，所有聊天类模型都走这里       |
-| POST | `https://1router.1panel.cn/v1/responses`          | OpenAI Responses   | OpenAI 新版 Responses 接口    |
-| POST | `https://1router.1panel.cn/v1/messages`           | Anthropic Messages | 调 Anthropic 系模型（Claude）专用 |
-| POST | `https://1router.1panel.cn/v1/images/generations` | 文生图                | 根据文字描述生成图片                |
-| POST | `https://1router.1panel.cn/v1/embeddings`         | 向量嵌入               | 把文字转成向量（用于 RAG、相似度）       |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'15%', padding:'8px'}}>请求方法</th><th style={{width:'40%', padding:'8px'}}>接口地址</th><th style={{width:'20%', padding:'8px'}}>用途</th><th style={{width:'25%', padding:'8px'}}>何时使用</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>GET</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/models</code></td><td style={{padding:'8px'}}>获取可用模型列表</td><td style={{padding:'8px'}}>想用程序自动发现支持哪些模型时</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/chat/completions</code></td><td style={{padding:'8px'}}>OpenAI 聊天补全</td><td style={{padding:'8px'}}><strong>最常用</strong>，所有聊天类模型都走这里</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/responses</code></td><td style={{padding:'8px'}}>OpenAI Responses</td><td style={{padding:'8px'}}>OpenAI 新版 Responses 接口</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/messages</code></td><td style={{padding:'8px'}}>Anthropic Messages</td><td style={{padding:'8px'}}>调 Anthropic 系模型（Claude）专用</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/images/generations</code></td><td style={{padding:'8px'}}>文生图</td><td style={{padding:'8px'}}>根据文字描述生成图片</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>https://1router.1panel.cn/v1/embeddings</code></td><td style={{padding:'8px'}}>向量嵌入</td><td style={{padding:'8px'}}>把文字转成向量（用于 RAG、相似度）</td></tr>
+</tbody>
+</table>
 
 ### 3.5.4 认证方式
 
@@ -132,7 +136,7 @@ title: 模型广场
 - `Authorization: Bearer <API Key>` — **通用方式**，所有接口都支持
 - `x-api-key: <API Key>` — **仅** Anthropic Messages 接口（`/v1/messages`）需要这样写  
 
-`<API Key>` 需要替换为你在 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 页面创建的实际密钥。
+`<API Key>` 需要替换为你在 [API Keys](./api-keys.md) 页面创建的实际密钥。
 
 ## 4 第一个调用示例（复制即用）
 
@@ -154,7 +158,7 @@ curl https://1router.1panel.cn/v1/chat/completions \
 
 ## 5 注意事项
 
-- 调用接口提示 `401 Unauthorized` 时，通常是 API Key 未填写正确或已被删除，可回到 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 页面核对。
+- 调用接口提示 `401 Unauthorized` 时，通常是 API Key 未填写正确或已被删除，可回到 [API Keys](./api-keys.md) 页面核对。
 - 调用接口提示 `404 model_not_found` 时，通常是模型名称拼写有误，建议通过模型广场卡片的复制按钮获取准确名称，避免手动输入。
 - 不确定选用哪个模型时，可选择带「智能路由」标签的模型（如 `1Panel-Auto`），由网关自动调度；有明确模型需求时直接使用对应的普通模型。
 - 模型列表、接入地址等信息随网关配置动态变化，以模型广场页面实际展示为准。

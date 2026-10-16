@@ -17,23 +17,27 @@ slug: /user_manual/ai_gateway/call_logs
 列表每行对应一次调用记录，主要字段说明如下。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  调用日志列表字段</div>
-
-| 字段 | 说明 |
-|---|---|
-| Request ID | 本次调用的唯一标识，可单击右侧图标复制。 |
-| 供应商 / 账号 | 本次调用使用的供应商及上游账号。 |
-| 请求模型 | 客户端请求的模型名称。 |
-| 上游模型 | 实际转发到上游的模型名称。 |
-| 用户 / 用户组 | 发起本次调用的用户及其所属用户组。 |
-| API Key | 本次调用使用的 API Key 名称。 |
-| 来源 IP | 发起调用的客户端来源 IP（v1.4.0 起提供）。 |
-| 输入 Token / 输出 Token / 总 Token / 缓存 Token | 本次调用各阶段的 Token 用量。 |
-| 结果 | 调用结果，如「成功」「客户端错误」「上游错误」。 |
-| 状态码 | 本次调用的响应状态码，如 200、403。 |
-| 总耗时 | 本次调用的整体耗时。 |
-| 上游累计耗时 | 上游各次尝试的累计耗时。 |
-| 调用时间 | 本次调用发生的时间。 |
-| 操作 | 单击 **查看** 打开调用详情。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'30%', padding:'8px'}}>字段</th><th style={{width:'70%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>Request ID</td><td style={{padding:'8px'}}>本次调用的唯一标识，可单击右侧图标复制。</td></tr>
+<tr><td style={{padding:'8px'}}>供应商 / 账号</td><td style={{padding:'8px'}}>本次调用使用的供应商及上游账号。</td></tr>
+<tr><td style={{padding:'8px'}}>请求模型</td><td style={{padding:'8px'}}>客户端请求的模型名称。</td></tr>
+<tr><td style={{padding:'8px'}}>上游模型</td><td style={{padding:'8px'}}>实际转发到上游的模型名称。</td></tr>
+<tr><td style={{padding:'8px'}}>用户 / 用户组</td><td style={{padding:'8px'}}>发起本次调用的用户及其所属用户组。</td></tr>
+<tr><td style={{padding:'8px'}}>API Key</td><td style={{padding:'8px'}}>本次调用使用的 API Key 名称。</td></tr>
+<tr><td style={{padding:'8px'}}>来源 IP</td><td style={{padding:'8px'}}>发起调用的客户端来源 IP（v1.4.0 起提供）。</td></tr>
+<tr><td style={{padding:'8px'}}>输入 Token / 输出 Token / 总 Token / 缓存 Token</td><td style={{padding:'8px'}}>本次调用各阶段的 Token 用量。</td></tr>
+<tr><td style={{padding:'8px'}}>结果</td><td style={{padding:'8px'}}>调用结果，如「成功」「客户端错误」「上游错误」。</td></tr>
+<tr><td style={{padding:'8px'}}>状态码</td><td style={{padding:'8px'}}>本次调用的响应状态码，如 200、403。</td></tr>
+<tr><td style={{padding:'8px'}}>总耗时</td><td style={{padding:'8px'}}>本次调用的整体耗时。</td></tr>
+<tr><td style={{padding:'8px'}}>上游累计耗时</td><td style={{padding:'8px'}}>上游各次尝试的累计耗时。</td></tr>
+<tr><td style={{padding:'8px'}}>调用时间</td><td style={{padding:'8px'}}>本次调用发生的时间。</td></tr>
+<tr><td style={{padding:'8px'}}>操作</td><td style={{padding:'8px'}}>单击 <strong>查看</strong> 打开调用详情。</td></tr>
+</tbody>
+</table>
 
 **数据为空的字段**：部分调用（如上游返回异常）可能无法采集到 Token 用量，对应字段显示「未知」。
 

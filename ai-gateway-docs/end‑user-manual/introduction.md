@@ -7,12 +7,16 @@ title: 功能介绍
 控制台提供 **三个核心功能模块**：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  控制台三大核心功能模块</div>
-
-| 模块           | 主要用途                      | 何时使用                          |
-| ------------ | ------------------------- | ----------------------------- |
-| **模型广场**     | 浏览网关已接入的全部模型，获取接入地址       | 第一次接入前，先到这里查支持哪些模型、接入地址是什么    |
-| **API Keys** | 创建和管理调用网关的「门禁卡」           | 业务应用调用任何模型前，都需要先在这里生成一个 Key   |
-| **用量统计**     | 按时间、Key、模型查看调用量与 Token 消耗 | 想看「这个月谁用了多少」「哪个模型最烧 Token」时来查 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'15%', padding:'8px'}}>模块</th><th style={{width:'35%', padding:'8px'}}>主要用途</th><th style={{width:'50%', padding:'8px'}}>何时使用</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>模型广场</strong></td><td style={{padding:'8px'}}>浏览网关已接入的全部模型，获取接入地址</td><td style={{padding:'8px'}}>第一次接入前，先到这里查支持哪些模型、接入地址是什么</td></tr>
+<tr><td style={{padding:'8px'}}><strong>API Keys</strong></td><td style={{padding:'8px'}}>创建和管理调用网关的「门禁卡」</td><td style={{padding:'8px'}}>业务应用调用任何模型前，都需要先在这里生成一个 Key</td></tr>
+<tr><td style={{padding:'8px'}}><strong>用量统计</strong></td><td style={{padding:'8px'}}>按时间、Key、模型查看调用量与 Token 消耗</td><td style={{padding:'8px'}}>想看「这个月谁用了多少」「哪个模型最烧 Token」时来查</td></tr>
+</tbody>
+</table>
 
 ## 2 新手必读：概念速查
 
