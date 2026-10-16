@@ -81,14 +81,18 @@ Token Plan 用于定义**周期内的 Token 用量上限**，用户组通过绑�
 **列表字段**
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  Token Plan 列表字段</div>
-
-| 字段 | 说明 |
-|---|---|
-| 名称 | Token Plan 的方案名称。 |
-| 额度刷新周期 | 用量额度的刷新周期，如「月（30 天）」。 |
-| 周期 Token 上限 | 每个刷新周期内允许消耗的 Token 上限，如 1B、10B。 |
-| 关联用户组数 | 当前绑定该方案的用户组数量。 |
-| 操作 | 单击 **编辑** 修改方案，或 **删除** 移除方案。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>Token Plan 的方案名称。</td></tr>
+<tr><td style={{padding:'8px'}}>额度刷新周期</td><td style={{padding:'8px'}}>用量额度的刷新周期，如「月（30 天）」。</td></tr>
+<tr><td style={{padding:'8px'}}>周期 Token 上限</td><td style={{padding:'8px'}}>每个刷新周期内允许消耗的 Token 上限，如 1B、10B。</td></tr>
+<tr><td style={{padding:'8px'}}>关联用户组数</td><td style={{padding:'8px'}}>当前绑定该方案的用户组数量。</td></tr>
+<tr><td style={{padding:'8px'}}>操作</td><td style={{padding:'8px'}}>单击 <strong>编辑</strong> 修改方案，或 <strong>删除</strong> 移除方案。</td></tr>
+</tbody>
+</table>
 
 **字段说明**
 

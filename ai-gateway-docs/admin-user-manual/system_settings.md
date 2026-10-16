@@ -62,15 +62,21 @@ slug: /user_manual/ai_gateway/system_settings
 
 凭证列表展示每条凭证的以下信息，可对单条凭证进行**编辑**与**删除**：
 
-| 列 | 说明 |
-| --- | --- |
-| 名称 | 凭证用途标识 |
-| 凭证 | 以 `agw_at_` 为前缀的凭证串（列表中以省略形式展示） |
-| 来源限制 | 允许调用的来源地址范围，未设置时显示"不限来源" |
-| 状态 | 有效 / 失效 |
-| 有效期 | 到期时间，或"永不过期" |
-| 请求次数 | 该凭证累计调用次数 |
-| 最新使用日期 | 最近一次调用的时间与来源 IP |
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  开放 API 凭证列表字段</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'30%', padding:'8px'}}>列</th><th style={{width:'70%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>凭证用途标识</td></tr>
+<tr><td style={{padding:'8px'}}>凭证</td><td style={{padding:'8px'}}>以 <code>agw_at_</code> 为前缀的凭证串（列表中以省略形式展示）</td></tr>
+<tr><td style={{padding:'8px'}}>来源限制</td><td style={{padding:'8px'}}>允许调用的来源地址范围，未设置时显示"不限来源"</td></tr>
+<tr><td style={{padding:'8px'}}>状态</td><td style={{padding:'8px'}}>有效 / 失效</td></tr>
+<tr><td style={{padding:'8px'}}>有效期</td><td style={{padding:'8px'}}>到期时间，或"永不过期"</td></tr>
+<tr><td style={{padding:'8px'}}>请求次数</td><td style={{padding:'8px'}}>该凭证累计调用次数</td></tr>
+<tr><td style={{padding:'8px'}}>最新使用日期</td><td style={{padding:'8px'}}>最近一次调用的时间与来源 IP</td></tr>
+</tbody>
+</table>
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image1-Open-API.png" alt="开放 API 凭证列表与操作审计"/>
 

@@ -29,15 +29,19 @@ title: 用量统计
 页面顶部有 **6 个筛选项**，所有筛选都是「**组合生效**」的——多选条件会同时应用，互不影响。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  筛选项说明</div>
-
-| 筛选项         | 作用           | 默认值    | 典型用法                               |
-| ----------- | ------------ | ------ | ---------------------------------- |
-| **用户**      | 按指定用户过滤      | 全部     | 想看「小李这个月用了多少」时选他                   |
-| **供应商**     | 按上游供应商过滤     | 全部     | 想知道「DeepSeek 类模型 vs OpenAI 类」哪个用得多 |
-| **API 类型**  | 按 API 类型过滤   | 全部     | 对比「聊天接口 vs Embedding 接口」的消耗        |
-| **时间维度**    | 选择时间范围       | 近 30 天 | 「近 7 天 / 近 30 天 / 自定义」三档           |
-| **请求模型**    | 输入模型名精确过滤    | 空      | 排查某个具体模型的调用情况                      |
-| **API Key** | 按 API Key 过滤 | 全部     | 按业务/团队核算成本时用                       |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>筛选项</th><th style={{width:'20%', padding:'8px'}}>作用</th><th style={{width:'15%', padding:'8px'}}>默认值</th><th style={{width:'45%', padding:'8px'}}>典型用法</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>用户</strong></td><td style={{padding:'8px'}}>按指定用户过滤</td><td style={{padding:'8px'}}>全部</td><td style={{padding:'8px'}}>想看「小李这个月用了多少」时选他</td></tr>
+<tr><td style={{padding:'8px'}}><strong>供应商</strong></td><td style={{padding:'8px'}}>按上游供应商过滤</td><td style={{padding:'8px'}}>全部</td><td style={{padding:'8px'}}>想知道「DeepSeek 类模型 vs OpenAI 类」哪个用得多</td></tr>
+<tr><td style={{padding:'8px'}}><strong>API 类型</strong></td><td style={{padding:'8px'}}>按 API 类型过滤</td><td style={{padding:'8px'}}>全部</td><td style={{padding:'8px'}}>对比「聊天接口 vs Embedding 接口」的消耗</td></tr>
+<tr><td style={{padding:'8px'}}><strong>时间维度</strong></td><td style={{padding:'8px'}}>选择时间范围</td><td style={{padding:'8px'}}>近 30 天</td><td style={{padding:'8px'}}>「近 7 天 / 近 30 天 / 自定义」三档</td></tr>
+<tr><td style={{padding:'8px'}}><strong>请求模型</strong></td><td style={{padding:'8px'}}>输入模型名精确过滤</td><td style={{padding:'8px'}}>空</td><td style={{padding:'8px'}}>排查某个具体模型的调用情况</td></tr>
+<tr><td style={{padding:'8px'}}><strong>API Key</strong></td><td style={{padding:'8px'}}>按 API Key 过滤</td><td style={{padding:'8px'}}>全部</td><td style={{padding:'8px'}}>按业务/团队核算成本时用</td></tr>
+</tbody>
+</table>
 
 > ✅ **预期结果**：任意筛选项变化后，下面的指标卡和趋势图会**立即刷新**，所有数字只反映「所有筛选条件同时满足」的请求。
 
@@ -58,14 +62,18 @@ title: 用量统计
 筛选区下方是 **5 张指标卡**，每张卡显示一个核心数字。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  核心指标卡说明</div>
-
-| 指标           | 含义                       | 单位说明         | 怎么用                  |
-| ------------ | ------------------------ | ------------ | -------------------- |
-| **请求量**      | 所选范围内的**模型调用总次数**        | 整数次          | 衡量调用频次，1 次问答 = 1 次请求 |
-| **输入 Token** | 所有请求里**用户输入**累计的 Token 数 | K = 千，M = 百万 | 用户发问累计消耗             |
-| **输出 Token** | 所有请求里**模型回复**累计的 Token 数 | K = 千，M = 百万 | 模型生成累计消耗，通常输出比输入贵    |
-| **总 Token**  | 输入 + 输出 Token 之和         | K = 千，M = 百万 | 总消耗，决定账单金额的核心指标      |
-| **缓存 Token** | 命中**缓存**的 Token 数        | K = 千，M = 百万 | 越高代表成本越低（缓存命中走优惠计费）  |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>指标</th><th style={{width:'30%', padding:'8px'}}>含义</th><th style={{width:'20%', padding:'8px'}}>单位说明</th><th style={{width:'30%', padding:'8px'}}>怎么用</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>请求量</strong></td><td style={{padding:'8px'}}>所选范围内的<strong>模型调用总次数</strong></td><td style={{padding:'8px'}}>整数次</td><td style={{padding:'8px'}}>衡量调用频次，1 次问答 = 1 次请求</td></tr>
+<tr><td style={{padding:'8px'}}><strong>输入 Token</strong></td><td style={{padding:'8px'}}>所有请求里<strong>用户输入</strong>累计的 Token 数</td><td style={{padding:'8px'}}>K = 千，M = 百万</td><td style={{padding:'8px'}}>用户发问累计消耗</td></tr>
+<tr><td style={{padding:'8px'}}><strong>输出 Token</strong></td><td style={{padding:'8px'}}>所有请求里<strong>模型回复</strong>累计的 Token 数</td><td style={{padding:'8px'}}>K = 千，M = 百万</td><td style={{padding:'8px'}}>模型生成累计消耗，通常输出比输入贵</td></tr>
+<tr><td style={{padding:'8px'}}><strong>总 Token</strong></td><td style={{padding:'8px'}}>输入 + 输出 Token 之和</td><td style={{padding:'8px'}}>K = 千，M = 百万</td><td style={{padding:'8px'}}>总消耗，决定账单金额的核心指标</td></tr>
+<tr><td style={{padding:'8px'}}><strong>缓存 Token</strong></td><td style={{padding:'8px'}}>命中<strong>缓存</strong>的 Token 数</td><td style={{padding:'8px'}}>K = 千，M = 百万</td><td style={{padding:'8px'}}>越高代表成本越低（缓存命中走优惠计费）</td></tr>
+</tbody>
+</table>
 
 > 💡 **Token 单位怎么看？** 系统会自动用 K（千）和 M（百万）显示大数字：`25.5K` = 25,500，`2.5M` = 2,500,000。
 
@@ -97,15 +105,19 @@ title: 用量统计
 可用的分布维度有 **6 个**：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  分布维度说明</div>
-
-| 分布维度        | 看什么            | 典型场景                         |
-| ----------- | -------------- | ---------------------------- |
-| **按供应商分布**  | 哪个上游厂商用得最多     | 评估「用 DeepSeek 还是 OpenAI 更划算」 |
-| **按模型分布**   | 哪个具体模型最烧 Token | 发现「某个模型用得特别多」时考虑换更便宜的        |
-| **按模型组分布**  | 哪个模型组的总消耗      | 模型组是后台对模型的归类汇总               |
-| **按上游账号分布** | 哪个供应商账号产生的调用   | 排查某个供应商账号的异常用量               |
-| **按用户组分布**  | 哪个用户组消耗最多      | 团队成本核算                       |
-| **按用户分布**   | 哪个用户用得最多       | 个人用量追踪、识别滥用                  |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'30%', padding:'8px'}}>分布维度</th><th style={{width:'30%', padding:'8px'}}>看什么</th><th style={{width:'40%', padding:'8px'}}>典型场景</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>按供应商分布</strong></td><td style={{padding:'8px'}}>哪个上游厂商用得最多</td><td style={{padding:'8px'}}>评估「用 DeepSeek 还是 OpenAI 更划算」</td></tr>
+<tr><td style={{padding:'8px'}}><strong>按模型分布</strong></td><td style={{padding:'8px'}}>哪个具体模型最烧 Token</td><td style={{padding:'8px'}}>发现「某个模型用得特别多」时考虑换更便宜的</td></tr>
+<tr><td style={{padding:'8px'}}><strong>按模型组分布</strong></td><td style={{padding:'8px'}}>哪个模型组的总消耗</td><td style={{padding:'8px'}}>模型组是后台对模型的归类汇总</td></tr>
+<tr><td style={{padding:'8px'}}><strong>按上游账号分布</strong></td><td style={{padding:'8px'}}>哪个供应商账号产生的调用</td><td style={{padding:'8px'}}>排查某个供应商账号的异常用量</td></tr>
+<tr><td style={{padding:'8px'}}><strong>按用户组分布</strong></td><td style={{padding:'8px'}}>哪个用户组消耗最多</td><td style={{padding:'8px'}}>团队成本核算</td></tr>
+<tr><td style={{padding:'8px'}}><strong>按用户分布</strong></td><td style={{padding:'8px'}}>哪个用户用得最多</td><td style={{padding:'8px'}}>个人用量追踪、识别滥用</td></tr>
+</tbody>
+</table>
 
 :::tip[快速对比两个模型]
 

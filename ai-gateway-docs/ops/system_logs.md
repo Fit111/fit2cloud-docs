@@ -16,7 +16,6 @@ description: 介绍 1Panel AI 网关通过 Docker 容器查看运行日志的方
 ## 3 容器与数据目录
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  容器与数据目录</div>
-
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'28%', padding:'8px', textAlign:'left'}}>组件</th><th style={{width:'32%', padding:'8px', textAlign:'left'}}>容器名（默认）</th><th style={{width:'40%', padding:'8px', textAlign:'left'}}>数据目录（默认）</th></tr>

@@ -17,16 +17,20 @@ slug: /user_manual/ai_gateway/tasks
 列表每行对应一次任务执行记录，主要字段说明如下。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  任务中心列表字段</div>
-
-| 字段 | 说明 |
-|---|---|
-| ID | 任务序号，随任务创建递增。 |
-| 任务类型 | 任务的类别，如「自动日志清理」「日志导出」。 |
-| 触发方式 | 任务的发起方式，如「自动触发」。 |
-| 状态 | 任务的执行结果，如「执行成功」「执行中」「执行失败」。 |
-| 创建时间 | 任务发起的时间。 |
-| 处理进度 | 任务当前的处理进度，形如「8 / — 记录」。 |
-| 操作 | 单击 **详情** 查看任务的详细信息。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>ID</td><td style={{padding:'8px'}}>任务序号，随任务创建递增。</td></tr>
+<tr><td style={{padding:'8px'}}>任务类型</td><td style={{padding:'8px'}}>任务的类别，如「自动日志清理」「日志导出」。</td></tr>
+<tr><td style={{padding:'8px'}}>触发方式</td><td style={{padding:'8px'}}>任务的发起方式，如「自动触发」。</td></tr>
+<tr><td style={{padding:'8px'}}>状态</td><td style={{padding:'8px'}}>任务的执行结果，如「执行成功」「执行中」「执行失败」。</td></tr>
+<tr><td style={{padding:'8px'}}>创建时间</td><td style={{padding:'8px'}}>任务发起的时间。</td></tr>
+<tr><td style={{padding:'8px'}}>处理进度</td><td style={{padding:'8px'}}>任务当前的处理进度，形如「8 / — 记录」。</td></tr>
+<tr><td style={{padding:'8px'}}>操作</td><td style={{padding:'8px'}}>单击 <strong>详情</strong> 查看任务的详细信息。</td></tr>
+</tbody>
+</table>
 
 ## 3 任务筛查
 

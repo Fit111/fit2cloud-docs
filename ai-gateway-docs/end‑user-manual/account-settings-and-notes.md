@@ -7,14 +7,18 @@ title: 账号与系统设置
 控制台右上角和左下角集中了**账号管理**与**系统设置**的所有入口，主要包括 5 类操作：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  账号与系统设置入口一览</div>
-
-| 操作            | 在哪里     | 何时使用            |
-| ------------- | ------- | --------------- |
-| **提交反馈**      | 右上角「反馈」 | 遇到缺陷、有功能建议时     |
-| **修改密码**      | 左下角用户菜单 | 定期更换密码、怀疑密码泄露时  |
-| **退出登录**      | 左下角用户菜单 | 离开电脑前、切换账号时     |
-| **切换语言 / 主题** | 右上角     | 习惯用其他语言、看久了换换眼睛 |
-| **查看版本信息**    | 右上角「关于」 | 出问题时确认版本、获取支持入口 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'30%', padding:'8px'}}>操作</th><th style={{width:'25%', padding:'8px'}}>在哪里</th><th style={{width:'45%', padding:'8px'}}>何时使用</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>提交反馈</strong></td><td style={{padding:'8px'}}>右上角「反馈」</td><td style={{padding:'8px'}}>遇到缺陷、有功能建议时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>修改密码</strong></td><td style={{padding:'8px'}}>左下角用户菜单</td><td style={{padding:'8px'}}>定期更换密码、怀疑密码泄露时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>退出登录</strong></td><td style={{padding:'8px'}}>左下角用户菜单</td><td style={{padding:'8px'}}>离开电脑前、切换账号时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>切换语言 / 主题</strong></td><td style={{padding:'8px'}}>右上角</td><td style={{padding:'8px'}}>习惯用其他语言、看久了换换眼睛</td></tr>
+<tr><td style={{padding:'8px'}}><strong>查看版本信息</strong></td><td style={{padding:'8px'}}>右上角「关于」</td><td style={{padding:'8px'}}>出问题时确认版本、获取支持入口</td></tr>
+</tbody>
+</table>
 
 ## 2 修改密码与退出登录
 
