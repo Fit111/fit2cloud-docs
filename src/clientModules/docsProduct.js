@@ -34,7 +34,7 @@ function setDocsSection(pathname) {
   let section = '';
   if (/\/jumpserver\/installation(\/|$)/.test(p)) {
     section = 'installation';
-  } else if (/\/jumpserver\/manual\/env(\/|$)/.test(p)) {
+  } else if (/\/jumpserver\/manual\/ops\/env(\/|$)/.test(p)) {
     section = 'env';
   }
   if (section) {
