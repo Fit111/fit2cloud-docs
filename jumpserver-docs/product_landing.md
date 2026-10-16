@@ -23,21 +23,24 @@ import styles from './product_landing.module.css';
       Web 站点以及 Remote App 等多种资产类型。
     </p>
     <div className={styles.heroBtns}>
+      {/* 顺序按设计稿：产品动态 → 下载安装 → 快速体验 → 如何购买 */}
       <Link className={styles.heroBtn} to="/jumpserver/change_log">产品动态</Link>
-      <Link className={styles.heroBtn} to="https://jumpserver.org/enterprise.html">如何购买</Link>
       <Link className={styles.heroBtn} to="https://community.fit2cloud.com/#/products/jumpserver/downloads">下载安装</Link>
+      <Link className={styles.heroBtn} to="https://demo.jumpserver.org/">快速体验</Link>
+      <Link className={styles.heroBtn} to="https://jumpserver.org/enterprise.html">如何购买</Link>
     </div>
   </div>
-  {/* 产品介绍视频：直接使用视频原始封面，点击跳转飞致云社区 B 站科普视频 */}
+  {/* 产品介绍视频：封面为纯 CSS 绿底（沿用视频原海报的绿）+ 白色镂空 logo + 主题词，
+      点击跳转飞致云社区 B 站科普视频 */}
   <Link className={styles.videoCard} to="https://www.bilibili.com/video/BV1hErPYrEsn/">
     <span className={styles.videoCover}>
       <img
-        className={styles.videoCoverImg}
-        src="/img/jumpserver/video/bastion_intro.jpg"
-        alt="JumpServer 科普视频《堡垒机到底是什么？》封面"
+        className={styles.videoCoverLogo}
+        src="/img/jumpserver/video/jumpserver-logo-white.png"
+        alt="JumpServer"
       />
+      <span className={styles.videoCoverText}>堡垒机是什么</span>
     </span>
-    <span className={styles.videoTitle}>【科普】堡垒机到底是什么？</span>
     <span className={styles.videoHint}>飞致云开源社区 · 05:22</span>
   </Link>
 </div>
@@ -182,7 +185,7 @@ import styles from './product_landing.module.css';
     <div className={styles.linkGridSingle}>
       <div className={styles.linkGroup}>
         <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=53">JumpServer 登录密码忘记及用户锁定如何处理</Link>
-        <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=288bcfe2-c7f6-4954-984c-55c115b524e9">JumpServer 组件相关的常见问题</Link>
+        <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=98f1d391-fb98-4651-8051-9083a48934cf">通过 SSL 证书访问 JumpServer 的配置方案</Link>
         <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=a1828b09-cad5-4ef4-bbc5-a494874f5224">JumpServer 存储目录迁移</Link>
         <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=199">如何限制某个资产只允许通过某个 IP 登录 JumpServer 之后进行连接？</Link>
         <Link className={styles.subLink} to="https://kb.fit2cloud.com/?p=157">如何修改 JumpServer 的上传文件大小的限制并修改上传文件的超时时间？</Link>

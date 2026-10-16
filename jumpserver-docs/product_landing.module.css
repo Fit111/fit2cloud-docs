@@ -32,10 +32,14 @@
   color: var(--ifm-color-emphasis-800);
   margin: 0 0 24px;
   max-width: 720px;
-  /* 锁住最少 4 行高度（不限制宽度，段落撑满左侧可用宽度，与卡片只隔 hero 的 36px gap）：
-     视口变宽时段落即使收成 3 行，行盒仍占 4 行高，文案块高度稳定，
-     右侧视频卡片底边对齐时不会超出段落首行。+6px 是为 14px 字号下卡片高度的余量。 */
-  min-height: calc(4 * 1.9em + 6px);
+  /* 高度完全交给内容，不再锁「最少 N 行」：
+     原实现写了 min-height: calc(4 * 1.9em + 6px)，本意是让文案块高度稳定、视频卡片底边对齐时
+     不越过段落首行。但本段受 max-width:720px 限制，**宽度足够时只排 3 行**（约 1700px 视口就是这样），
+     锁 4 行会凭空多出一整行空行（26.6px）+ 下边距 24px ≈ 50px 的空白，
+     视觉上像是「段落和按钮之间留了一大块」。去掉后段落与按钮的间距恒为 24px。
+     代价：整块文案高度随行数变化（3 行时左列 213.8px、4 行时 240.4px），
+     卡片（148px）始终更矮，`align-items:flex-end` 底边对齐不受影响，
+     最坏情况（3 行）卡片顶边只比段落盒顶高约 8px，肉眼无感。 */
 }
 
 .heroBtns {
@@ -69,8 +73,8 @@
 }
 
 /* ===== 产品介绍视频卡片（点击跳转 B 站） =====
-   尺寸约束：卡片为列布局（封面 + 标题 + 副标题），宽 200px 时实测总高 166px
-   （封面 198×111 + 文字区 53 + 边框 2）。必须 ≤ 左侧文案块高度（4 行段落 115.5 + 24 + 按钮 36 ≈ 175px），
+   尺寸约束：卡片为列布局（封面 + 副标题），宽 200px 时实测总高 148px
+   （封面 198×111 + 文字区 35 + 边框 2）。必须 ≤ 左侧文案块高度（4 行段落 115.5 + 24 + 按钮 36 ≈ 175px），
    否则底边对齐时顶边会高出段落首行。改宽度/字号/间距前请重新核对这个不等式。 */
 .videoCard {
   flex: 0 0 200px;
@@ -92,34 +96,46 @@
   text-decoration: none;
 }
 
-/* 视频封面：直接展示视频原始封面，不裁切、不叠加播放按钮 */
+/* 视频封面：不再使用视频原始海报（图上烘死的标题「堡垒机的前世今生」与卡片文案不一致），
+   改为纯 CSS 封面 —— 沿用原海报的绿色底 + 白色镂空 JumpServer logo + 白色主题词。
+   底色 #189E7B 取自原海报平色区实测（原图 1318×741：中下部各带中位数均在
+   rgb(22~34, 152~161, 122~123)，左上角略浅为 #2B937C，整体非白像素中位数 #1E9B7B）。
+   高度按原海报比例锁定：卡片内宽 198 × 741/1318 ≈ 111px。 */
 .videoCover {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 111px;
   overflow: hidden;
-  /* 兜底底色：封面图加载前避免闪白 */
-  background: #12314f;
+  background: #189e7b;
 }
 
-/* 视频封面图：按原图比例（1318×741）完整铺满卡片宽度 */
-.videoCoverImg {
+/* 白色镂空 logo（由 static/img/JumpServer-黑色.png 保留 alpha、前景改白后导出，
+   480×96，放到 jumpserver-docs/static/img/jumpserver/video/ 下）。
+   宽 150px → 高 30px（原比例 5:1），与下方主题词合计约 56px，在 111px 封面色块内居中。 */
+.videoCoverLogo {
   display: block;
-  width: 100%;
+  width: 150px;
   height: auto;
 }
 
-.videoTitle {
-  display: block;
-  padding: 8px 10px 0;
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--ifm-color-emphasis-900);
+.videoCoverText {
+  padding: 0 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.6px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
 }
 
-/* 占位提示文字 */
+/* 副标题（视频来源 + 时长）：封面已是「logo + 主题词」，不再重复视频标题 */
 .videoHint {
   display: block;
-  padding: 2px 10px 6px;
+  padding: 8px 10px 9px;
   font-size: 0.75rem;
   line-height: 1.5;
   color: var(--ifm-color-emphasis-600);
@@ -138,26 +154,29 @@
   padding-bottom: 8px;
 }
 
-/* 左侧图标列：图标与分区标题「横排成一行」，整块在分区内垂直居中。
-   —— 原来是「图标在上、标题在下」的竖排（高 40+6+24 ≈ 70px），比它所标注的正文还高
-   （「了解 JumpServer」区正文只有一行 ≈45px），且顶部对齐 → 标题的垂直中心比正文低近 30px，看着"飘"。
-   改成横排后整块只有一行高，与正文处于同一水平线。
+/* 左侧图标列：图标在上、分区标题在下的竖排，整块在分区内水平 + 垂直居中。
    列宽固定且 min-width:0，保证四个分区的正文左边缘与竖分隔线严格对齐。
-   宽度 = 图标 24 + gap 10 + 最长标签「了解 JumpServer」单行宽（16px 下 31.2 + 空格 + 95.2 ≈ 131px）。 */
+   竖排后列内最宽元素是标题（最长「了解 JumpServer」16px 下单行 ≈ 131px），
+   图标方块 32px，故列宽按标题取值并留余量 → 168px（沿用横排时的实测值，
+   保证竖分隔线位置不变、右侧正文列宽不跳）。 */
 .sectionHead {
   flex: 0 0 168px;
   min-width: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
 }
 
+/* 图标方块：32px 圆角方块 + 18px 线性图形。
+   放大后按老尺寸加高 8px，若需要压回 24px 需同步改这里的两个数值
+   （方块 < svg 的 18px 内边距），并复核下方 .sectionIcon svg。 */
 .sectionIcon {
   flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,8 +186,8 @@
 }
 
 .sectionIcon svg {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   display: block;
 }
 
@@ -295,9 +314,8 @@
   }
 
   .sectionHead {
+    /* 窄屏下分区改为上下堆叠，图标列不再需要固定宽度与居中；竖排方向沿用桌面端 */
     flex: none;
-    flex-direction: row;
-    gap: 10px;
   }
 
   .sectionBody {
