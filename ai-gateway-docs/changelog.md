@@ -13,7 +13,7 @@ sidebar_position: 3
 - v1.0.1 是 v1.0.0 之后的 Bug 修复版本
 - v1.1.0 是 v1.0.0 之后的功能版本
 
-本页面内容与 [GitHub Releases](https://github.com/1Panel-dev/1Panel-Gateway/releases) 同步，按版本发布日期倒序排列。功能建议与缺陷反馈请在 [GitHub Issues](https://github.com/1Panel-dev/1Panel-Gateway/issues) 提交。
+本页面内容与 [GitHub Releases](https://github.com/1Panel-dev/1Panel-Gateway/releases) 同步，按版本发布日期倒序排列。功能建议与缺陷反馈请在 [GitHub Issues](https://github.com/1Panel-dev/1Panel/issues) 提交。
 
 ## 2 更新内容
 

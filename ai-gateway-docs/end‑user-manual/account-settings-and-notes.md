@@ -2,49 +2,95 @@
 title: 账号与系统设置
 ---
 
-## 1 账号与系统设置总览
+## 1 功能简介
 
-控制台右上角和左下角集中了**账号管理**与**系统设置**的所有入口，主要包括 5 类操作：
+控制台把**账号自助管理**与**系统设置**的入口集中在两处：页面**左下角**的**用户菜单**，以及页面**右上角**的**顶部工具栏**。
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  账号与系统设置入口一览</div>
+这些功能**不区分管理员与普通用户**，任何登录账号都可以使用；菜单中显示的条目会随账号权限略有差异。
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  左下角用户菜单入口一览</div>
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
-<tr><th style={{width:'30%', padding:'8px'}}>操作</th><th style={{width:'25%', padding:'8px'}}>在哪里</th><th style={{width:'45%', padding:'8px'}}>何时使用</th></tr>
+<tr><th style={{width:'24%', padding:'8px'}}>入口</th><th style={{width:'24%', padding:'8px'}}>作用</th><th style={{width:'52%', padding:'8px'}}>何时使用</th></tr>
 </thead>
 <tbody>
-<tr><td style={{padding:'8px'}}><strong>提交反馈</strong></td><td style={{padding:'8px'}}>右上角「反馈」</td><td style={{padding:'8px'}}>遇到缺陷、有功能建议时</td></tr>
-<tr><td style={{padding:'8px'}}><strong>修改密码</strong></td><td style={{padding:'8px'}}>左下角用户菜单</td><td style={{padding:'8px'}}>定期更换密码、怀疑密码泄露时</td></tr>
-<tr><td style={{padding:'8px'}}><strong>退出登录</strong></td><td style={{padding:'8px'}}>左下角用户菜单</td><td style={{padding:'8px'}}>离开电脑前、切换账号时</td></tr>
-<tr><td style={{padding:'8px'}}><strong>切换语言 / 主题</strong></td><td style={{padding:'8px'}}>右上角</td><td style={{padding:'8px'}}>习惯用其他语言、看久了换换眼睛</td></tr>
-<tr><td style={{padding:'8px'}}><strong>查看版本信息</strong></td><td style={{padding:'8px'}}>右上角「关于」</td><td style={{padding:'8px'}}>出问题时确认版本、获取支持入口</td></tr>
+<tr><td style={{padding:'8px'}}><strong>管理中心</strong></td><td style={{padding:'8px'}}>切换到管理后台</td><td style={{padding:'8px'}}>需要配置网关、管理用户与用户组时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>用户中心</strong></td><td style={{padding:'8px'}}>切换到用户中心</td><td style={{padding:'8px'}}>查看模型广场、管理自己的 API Key 时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>身份绑定</strong></td><td style={{padding:'8px'}}>关联第三方账号</td><td style={{padding:'8px'}}>希望用企业微信扫码登录、免输密码时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>双因素认证</strong></td><td style={{padding:'8px'}}>开启 MFA</td><td style={{padding:'8px'}}>希望密码之外再加一道校验时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>修改密码</strong></td><td style={{padding:'8px'}}>更换登录密码</td><td style={{padding:'8px'}}>定期更换密码、怀疑密码泄露时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>退出登录</strong></td><td style={{padding:'8px'}}>结束当前会话</td><td style={{padding:'8px'}}>离开电脑前、切换账号时</td></tr>
 </tbody>
 </table>
 
-## 2 修改密码与退出登录
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  右上角顶部工具栏入口一览</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'24%', padding:'8px'}}>入口</th><th style={{width:'24%', padding:'8px'}}>作用</th><th style={{width:'52%', padding:'8px'}}>何时使用</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}><strong>提交反馈</strong></td><td style={{padding:'8px'}}>反馈缺陷与建议</td><td style={{padding:'8px'}}>遇到功能异常、有改进想法时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>切换语言 / 主题</strong></td><td style={{padding:'8px'}}>调整界面外观</td><td style={{padding:'8px'}}>习惯使用其他语言、夜间使用电脑时</td></tr>
+<tr><td style={{padding:'8px'}}><strong>查看版本信息</strong></td><td style={{padding:'8px'}}>确认版本号</td><td style={{padding:'8px'}}>联系支持前确认当前版本时</td></tr>
+</tbody>
+</table>
 
-**位置**：页面**左下角**的「用户名」（如 `admin`）旁边。
+## 2 左下角用户菜单
+
+**位置**：页面**左下角**的「用户名」（如 `admin`）旁边。菜单自上而下分为三组：工作区操作、账号安全操作、退出登录。
 
 ### 2.1 打开用户菜单
 
 1. 用鼠标**单击**左下角的用户名（如 `admin`），会从用户名上方**弹出一个菜单**。
-2. 菜单里有「**管理后台**」「**用户中心**」「**修改密码**」「**退出登录**」 4 个选项。
+2. 菜单顶部以灰色小字标注「**切换工作区**」，其下依次为「**管理中心**」「**用户中心**」「**身份绑定**」「**双因素认证**」「**修改密码**」「**退出登录**」。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image1-user-menu.png" alt="用户菜单"/>
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  单击左下角用户名弹出的菜单</div>
 
-### 2.2 修改密码
+### 2.2 身份绑定
+
+**身份绑定**用于把当前账号与第三方账号关联，绑定后可使用第三方应用扫码登录，免去手动输入密码。
+
+1. 按 2.1 步打开用户菜单，单击「**身份绑定**」，页面**右侧滑出身份绑定抽屉**。
+2. 抽屉中列出可绑定的第三方平台，目前提供 **企业微信**：单击卡片右侧的「**绑定**」按钮，按页面提示完成授权即可。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image4-identity-binding.png" alt="身份绑定"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  身份绑定抽屉</div>
+
+> 💡 **绑定前请确认**该第三方账号确为本人所有，避免绑定到他人账号；绑定后如需更换或解绑，请联系管理员协助处理。
+
+### 2.3 双因素认证
+
+**双因素认证**（MFA）在密码之外再加一道校验：即使密码被他人知道，没有第二重凭证也无法登录，适合对账号安全要求较高的场景。
+
+1. 按 2.1 步打开用户菜单，单击「**双因素认证**」，页面**右侧滑出双因素认证抽屉**。
+2. 抽屉中提供「**启用 MFA**」开关，用于开启或关闭当前账号的双因素认证。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image5-two-factor.png" alt="双因素认证"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  双因素认证抽屉</div>
+
+> 💡 **开启前请先确认**：用于接收动态口令的设备（手机或验证器 App）就在手边，并确保能够完整走完一次登录验证，避免把自己挡在系统之外。
+
+### 2.4 修改密码
 
 > 💡 **为什么要定期改密码？** 密码用得越久、登录过的设备越多，被泄露的风险就越大。**建议每 3 个月换一次**。
 
-1. 按 2.1 步打开用户菜单，单击「**修改密码**」。
-2. 弹出**修改密码**对话框，按提示填入：
-- **旧密码**（当前密码，用来验证是你本人在改）
+1. 按 2.1 步打开用户菜单，单击「**修改密码**」，页面**右侧滑出修改密码抽屉**。
+2. 依次填写三项内容：
+- **当前密码**（正在使用的密码，用来验证是你本人在改）
 - **新密码**（建议 12 位以上，包含大小写字母 + 数字 + 特殊字符）
 - **确认新密码**（再输一遍新密码，防止手误）
-3. 单击「**确定**」完成修改，**立刻用新密码重新登录**一次确认生效。
+3. 单击抽屉右下角的「**修改密码**」按钮提交；需要放弃修改时单击「**取消**」。
+4. 修改成功后，**立刻用新密码重新登录**一次确认生效。
 
-### 2.3 退出登录
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image6-change-password.png" alt="修改密码"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  修改密码抽屉</div>
+
+### 2.5 退出登录
 
 > 💡 **什么时候应该退出登录？** 离开座位前、与他人共用电脑时、切换到其他账号时。
 
@@ -53,43 +99,37 @@ title: 账号与系统设置
 
 > ✅ **预期结果**：再次访问受保护的页面会被重定向到登录页。
 
-## 3 提交反馈
+## 3 右上角顶部工具栏
 
-v1.0.2 起，控制台**右上角**新增「**反馈**」入口，与「关于」并列。
+**位置**：页面**右上角**，从左到右依次为「**反馈**」「**关于**」「**语言**」「**主题**」。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image2-feedback-entry.png" alt="顶部工具栏"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  右上角「反馈」「关于」「语言」「主题」入口</div>
+
+### 3.1 提交反馈
 
 1. 单击页面**右上角**的「**反馈**」链接。
-2. 浏览器新标签页打开 1Panel 项目的 GitHub Issues 页面，按模板填写问题描述或功能建议后提交。
+2. 浏览器新标签页打开 **1Panel** 项目的 GitHub Issues 页面，按模板填写问题描述或功能建议后提交。
+
+> 💡 **为什么反馈到 1Panel 仓库？** AI 网关仓库不单独接收 Issue，相关缺陷与建议统一汇总到 1Panel 项目下处理。
 
 > 💡 **遇到什么问题该提反馈？** 功能异常、页面报错、体验建议都可以。提交前先看一下已有 Issue，避免重复；涉及安全漏洞请通过官方渠道私下反馈，不要公开发布。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image2-feedback-entry.png" alt="反馈入口"/>
+### 3.2 切换语言与主题
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  右上角「反馈」与「关于」入口</div>
-
-## 4 切换语言与主题
-
-**位置**：页面**右上角**。
-
-### 4.1 切换语言
-
-1. 单击右上角的**语言下拉**（默认显示「简体中文」）。
-2. 在下拉菜单中选**目标语言**。
-3. 整个界面会**立即刷新**为目标语言。
-
-### 4.2 切换主题
-
-1. 单击右上角**主题图标**（太阳/月亮图案）。
-2. 界面在「**浅色**」和「**深色**」之间切换。
+1. **切换语言**：单击右上角的**语言下拉**（默认显示「简体中文」），在菜单中选**目标语言**，整个界面会**立即刷新**为目标语言。
+2. **切换主题**：单击右上角**主题图标**（太阳/月亮图案），界面在「**浅色**」和「**深色**」之间切换。
 
 > 💡 **推荐**：长时间看屏幕时使用「**深色主题**」，对眼睛更友好；做截图、写文档时用「**浅色主题**」，更清晰。
 
-## 5 查看版本信息
+### 3.3 查看版本信息
 
 当出现问题需要联系支持时，第一件事往往是**确认当前版本号**。
 
 1. 单击页面**右上角**的「**关于**」链接。
 2. 弹出「**关于**」弹窗，顶部展示 1Panel AI 网关的 Logo，下方显示：
-- **当前版本**：形如 `v1.2.3` 或 `dev`（内测版）
+- **版本**：以「**社区版** *版本号*」的形式展示，版本号形如 `v1.2.3`，内测版本显示为 `dev`
 - **三个支持入口链接**：
   - **使用文档**：跳转回当前文档
   - **论坛求助**：去社区提问
@@ -99,13 +139,13 @@ v1.0.2 起，控制台**右上角**新增「**反馈**」入口，与「关于�
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/account-settings-and-notes/image3-about.png" alt="关于弹窗"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  关于弹窗（含版本号和支持入口）</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  关于弹窗（含版本号和支持入口）</div>
 
-> 💡 **报问题时怎么用「关于」页？** 把弹窗里的**当前版本**和**复现步骤**一起发给技术支持，可以大大加快排查速度。
+> 💡 **报问题时怎么用「关于」页？** 把弹窗里的**版本号**和**复现步骤**一起发给技术支持，可以大大加快排查速度。
 
-## 6 注意事项
+## 4 注意事项
 
-- **请妥善保管 API Key**，**不要**把它硬编码到前端代码、提交到公开代码仓库、贴在群公告里。详见 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 章节。
+- **请妥善保管 API Key**，**不要**把它硬编码到前端代码、提交到公开代码仓库、贴在群公告里。详见 [API Keys](./api-keys.md) 章节。
 - **接入地址**（如 `https://1router.1panel.cn/v1`）以**模型广场页面实际展示**为准，不要凭记忆填写。
 - **控制台账号、密码**及网关服务信息，**请联系管理员**获取或变更，不要在群里索要。
 - **离开座位前一定退出登录**或锁屏，避免他人误操作或看到敏感信息。

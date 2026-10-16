@@ -136,7 +136,7 @@ title: 模型广场
 - `Authorization: Bearer <API Key>` — **通用方式**，所有接口都支持
 - `x-api-key: <API Key>` — **仅** Anthropic Messages 接口（`/v1/messages`）需要这样写  
 
-`<API Key>` 需要替换为你在 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 页面创建的实际密钥。
+`<API Key>` 需要替换为你在 [API Keys](./api-keys.md) 页面创建的实际密钥。
 
 ## 4 第一个调用示例（复制即用）
 
@@ -158,7 +158,7 @@ curl https://1router.1panel.cn/v1/chat/completions \
 
 ## 5 注意事项
 
-- 调用接口提示 `401 Unauthorized` 时，通常是 API Key 未填写正确或已被删除，可回到 [API Keys](pathname:///user_manual/ai_gateway/api_keys) 页面核对。
+- 调用接口提示 `401 Unauthorized` 时，通常是 API Key 未填写正确或已被删除，可回到 [API Keys](./api-keys.md) 页面核对。
 - 调用接口提示 `404 model_not_found` 时，通常是模型名称拼写有误，建议通过模型广场卡片的复制按钮获取准确名称，避免手动输入。
 - 不确定选用哪个模型时，可选择带「智能路由」标签的模型（如 `1Panel-Auto`），由网关自动调度；有明确模型需求时直接使用对应的普通模型。
 - 模型列表、接入地址等信息随网关配置动态变化，以模型广场页面实际展示为准。
