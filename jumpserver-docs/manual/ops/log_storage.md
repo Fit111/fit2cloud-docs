@@ -21,7 +21,7 @@ JumpServer 的日志与审计数据分几类存放，运维时需分开配置：
 
 ## 3 应用日志
 
-默认日志目录为 `/data/jumpserver/core/logs`，级别由 `LOG_LEVEL` 控制（如 `INFO`、`DEBUG`）。
+默认日志目录为 `/data/jumpserver/core/data/logs`，级别由 `LOG_LEVEL` 控制（如 `INFO`、`DEBUG`）。
 
 在安装目录查看指定组件日志：
 
