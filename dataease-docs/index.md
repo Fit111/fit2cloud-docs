@@ -1,5 +1,6 @@
 ---
 title: 产品介绍
+slug: product-intro
 ---
 
 🎉 **DataEase 荣获 Gitee 年度开源项目评选「大数据与云计算赛道」第一名**  
