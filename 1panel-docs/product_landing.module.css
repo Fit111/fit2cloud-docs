@@ -95,6 +95,7 @@
    非透明像素分色统计：亮面 #0058E8 占比最高，暗面 #0850C0 次之）。
    高度按 16:9 锁定：卡片内宽 198 × 9/16 ≈ 111px。 */
 .videoCover {
+  position: relative; /* 播放标识的定位容器 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,12 +106,15 @@
   background: #0058e8;
 }
 
-/* 白色镂空 logo（static/img/1panel/logo-white.png，421×486，透明边距 4/5px，
-   有效图形约 413×476，近似正方）。宽 44px → 高约 51px，
-   与下方主题词（约 20px）+ gap 7px 合计约 78px，在 111px 封面色块内居中。 */
+/* 白色镂空横向字标（做法与 JumpServer 封面一致：取 static/img/1panel-03.png 保留 alpha、
+   前景改白后导出，480×130，放到 1panel-docs/static/img/1panel/video/ 下）。
+   宽度按「字标文字与 JumpServer 视觉等高」反算：1Panel 字标文字占图高 68%，
+   150px 宽时文字高 27.5px，比 JumpServer 的 21.2px 高 30%，故取 116px
+   （→ 高约 31px、文字高 21.3px）。与下方主题词（约 20px）+ gap 7px 合计约 58px，
+   在 111px 封面色块内居中。 */
 .videoCoverLogo {
   display: block;
-  width: 44px;
+  width: 116px;
   height: auto;
 }
 
@@ -123,6 +127,36 @@
   color: #fff;
   text-align: center;
   white-space: nowrap;
+}
+
+/* 播放标识：封面右下角的白底圆形播放键，三角取封面同色（品牌蓝），
+   让「这是一段视频」在缩略图层面即可辨识。26px + 距边 6px，
+   横向落在封面文字右缘（约 x=162）之外，不与 logo / 主题词重叠。 */
+.videoCoverPlay {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0058e8;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.videoCoverPlay svg {
+  display: block;
+  width: 18px;
+  height: 18px; /* 三角视觉高度约 9px = 圆直径的 35%，与常见播放键比例一致 */
+}
+
+.videoCard:hover .videoCoverPlay {
+  transform: scale(1.08);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.28);
 }
 
 /* 副标题（视频来源 + 时长）：封面已是「logo + 主题词」，不再重复视频标题 */
