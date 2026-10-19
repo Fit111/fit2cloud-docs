@@ -31,7 +31,7 @@ import styles from './product_landing.module.css';
     </div>
   </div>
   {/* 产品介绍视频：封面为纯 CSS 绿底（沿用视频原海报的绿）+ 白色镂空 logo + 主题词，
-      点击跳转飞致云社区 B 站科普视频 */}
+      右下角叠加播放标识（白底 + 品牌色三角），点击跳转飞致云社区 B 站科普视频 */}
   <Link className={styles.videoCard} to="https://www.bilibili.com/video/BV1hErPYrEsn/">
     <span className={styles.videoCover}>
       <img
@@ -40,6 +40,11 @@ import styles from './product_landing.module.css';
         alt="JumpServer"
       />
       <span className={styles.videoCoverText}>堡垒机是什么</span>
+      <span className={styles.videoCoverPlay} aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 5.8v12.4c0 .5.55.8.97.53l9.9-6.2a.62.62 0 0 0 0-1.06l-9.9-6.2A.62.62 0 0 0 7 5.8z" />
+        </svg>
+      </span>
     </span>
     <span className={styles.videoHint}>飞致云开源社区 · 05:22</span>
   </Link>
