@@ -13,9 +13,40 @@ sidebar_position: 3
 - v1.0.1 是 v1.0.0 之后的 Bug 修复版本
 - v1.1.0 是 v1.0.0 之后的功能版本
 
-本页面内容与 [GitHub Releases](https://github.com/1Panel-dev/1Panel-Gateway/releases) 同步，按版本发布日期倒序排列。功能建议与缺陷反馈请在 [GitHub Issues](https://github.com/1Panel-dev/1Panel-Gateway/issues) 提交。
+本页面内容与 [GitHub Releases](https://github.com/1Panel-dev/1Panel-Gateway/releases) 同步，按版本发布日期倒序排列。功能建议与缺陷反馈请在 [GitHub Issues](https://github.com/1Panel-dev/1Panel/issues) 提交。
 
 ## 2 更新内容
+
+### v1.4.0
+
+2026年10月15日
+
+**新增功能**
+
+- 新增日志导出
+- 新增任务中心
+- 调用日志增加来源 IP
+- 增加 Token Plan 功能
+- 支持 PostgreSQL
+- 支持导入企业版 License
+
+**功能优化**
+
+- 优化 JEV 决策逻辑
+- 优化调用日志请求码逻辑
+- 优化用量统计显示
+- 优化调用日志错误信息显示
+- 适配 Zcode
+- 优化系统样式
+- 提升接口性能
+
+**问题修复**
+
+- 修复高并发场景下出现 503 的问题
+- 修复 OpenAI Image 接口报错
+- 修复 Anthropic Responses 格式转换问题
+- 修复使用 `x-api-key` 获取模型失败的问题
+- 修复应用升级失败的问题
 
 ### v1.3.0
 

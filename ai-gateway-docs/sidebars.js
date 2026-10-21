@@ -21,42 +21,62 @@ const sidebars = {
       collapsed: false,
       items: [
         { type: "doc", id: "installation/deployment_instructions", label: "部署说明", key: "installation-deployment" },
+        { type: "doc", id: "installation/offline_installation", label: "离线安装", className: "sidebar-item-badge-rec" },
         { type: "doc", id: "installation/online_installation", label: "在线安装" },
         { type: "doc", id: "installation/1panel_installation", label: "1Panel安装" },
+        { type: "doc", id: "installation/cli", label: "1gctl 命令行工具" },
       ],
     },
     
-    // ── admin-user-manual：管理员手册功能页 ──
+    // ── 使用手册：通用功能 + 管理员手册 + 普通用户手册 ──
     {
       type: "category",
-      label: "管理员手册",
+      label: "使用手册",
       collapsed: false,
       items: [
-        { type: "doc", id: "admin-user-manual/overview", label: "概览", key: "doc-overview" },
-        { type: "doc", id: "admin-user-manual/account_pool", label: "账号池" },
-        { type: "doc", id: "admin-user-manual/model_group", label: "模型组" },
-        { type: "doc", id: "admin-user-manual/user", label: "用户" },
-        { type: "doc", id: "admin-user-manual/user_group", label: "用户组" },
-        { type: "doc", id: "admin-user-manual/smart_route", label: "智能路由" },
-        { type: "doc", id: "admin-user-manual/content_compliance", label: "内容合规" },
-        { type: "doc", id: "admin-user-manual/call-logs", label: "调用日志" },
-        { type: "doc", id: "admin-user-manual/usage-statistics", label: "用量统计", key: "admin-manual-usage-statistics" },
-        { type: "doc", id: "admin-user-manual/settings", label: "网关设置" },
-        { type: "doc", id: "admin-user-manual/system_settings", label: "系统设置" },
-      ],
-    },
+      // ── 通用功能：不区分管理员与普通用户的公共功能 ──
+      {
+        type: "category",
+        label: "通用功能",
+        collapsed: false,
+        items: [
+          { type: "doc", id: "end‑user-manual/account-settings-and-notes", label: "账号与系统设置" },
+        ],
+      },
 
-    // ── end‑user-manual：普通用户手册功能页（注意：目录名第一段连字符是 U+2011 不换行连字符，非普通 -，勿改）──
-    {
-      type: "category",
-      label: "普通用户手册",
-      collapsed: false,
-      items: [
-        { type: "doc", id: "end‑user-manual/introduction", label: "功能介绍" },
-        { type: "doc", id: "end‑user-manual/model-square", label: "模型广场" },
-        { type: "doc", id: "end‑user-manual/api-keys", label: "API Keys" },
-        { type: "doc", id: "end‑user-manual/usage-statistics", label: "用量统计", key: "user-manual-usage-statistics" },
-        { type: "doc", id: "end‑user-manual/account-settings-and-notes", label: "账号与系统设置" },
+      // ── admin-user-manual：管理员手册功能页 ──
+      {
+        type: "category",
+        label: "管理员手册",
+        collapsed: false,
+        items: [
+          { type: "doc", id: "admin-user-manual/overview", label: "概览", key: "doc-overview" },
+          { type: "doc", id: "admin-user-manual/account_pool", label: "账号池" },
+          { type: "doc", id: "admin-user-manual/model_group", label: "模型组" },
+          { type: "doc", id: "admin-user-manual/user", label: "用户" },
+          { type: "doc", id: "admin-user-manual/user_group", label: "用户组" },
+          { type: "doc", id: "admin-user-manual/smart_route", label: "智能路由" },
+          { type: "doc", id: "admin-user-manual/content_compliance", label: "内容合规" },
+          { type: "doc", id: "admin-user-manual/call-logs", label: "调用日志" },
+          { type: "doc", id: "admin-user-manual/tasks", label: "任务中心" },
+          { type: "doc", id: "admin-user-manual/usage-statistics", label: "用量统计", key: "admin-manual-usage-statistics" },
+          { type: "doc", id: "admin-user-manual/settings", label: "网关设置" },
+          { type: "doc", id: "admin-user-manual/system_settings", label: "系统设置" },
+        ],
+      },
+
+      // ── end‑user-manual：普通用户手册功能页（注意：目录名第一段连字符是 U+2011 不换行连字符，非普通 -，勿改）──
+      {
+        type: "category",
+        label: "普通用户手册",
+        collapsed: false,
+        items: [
+          { type: "doc", id: "end‑user-manual/introduction", label: "功能介绍" },
+          { type: "doc", id: "end‑user-manual/model-square", label: "模型广场" },
+          { type: "doc", id: "end‑user-manual/api-keys", label: "API Keys" },
+          { type: "doc", id: "end‑user-manual/usage-statistics", label: "用量统计", key: "user-manual-usage-statistics" },
+        ],
+      },
       ],
     },
 

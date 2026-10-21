@@ -1,11 +1,11 @@
 ---
 title: 用户组
-description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包括并发上限、Token 配额与授权模型组。
+description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包括并发上限、Token Plan 与授权模型组。
 ---
 
 ## 1 概述
 
-用户组用于将用户归类，以便统一进行权限与资源分配。系统通过用户组对组内成员施加统一的访问控制，包括并发数限制、Token 配额与可用模型范围等，从而实现对系统资源的精细化管理。通过本页面，操作者可以查看系统现有用户组、添加新的用户组、编辑组内配置，以及启用或停用不再需要的用户组。
+用户组用于将用户归类，以便统一进行权限与资源分配。系统通过用户组对组内成员施加统一的访问控制，包括并发数限制、Token Plan（周期 Token 上限）与可用模型范围等，从而实现对系统资源的精细化管理。通过本页面，操作者可以查看系统现有用户组、添加新的用户组、编辑组内配置，以及启用或停用不再需要的用户组。
 
 用户组与用户相互配合：**用户**指具体的登录账号，**用户组**则用于将用户归类，从而确定其权限与资源范围。用户在创建或被编辑时需归属到某个用户组，其可用能力由所属用户组的配置决定。
 
@@ -17,9 +17,9 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 ### 2.1 用户组添加
 
-单击用户组页面左上角的 **添加用户组** 按钮，系统会从右侧滑出添加用户组抽屉。抽屉中依次包含名称、组最大并发、单 API Key 最大并发、Token 配额（含单位）、授权模型组、状态、备注等字段。
+单击用户组页面左上角的 **添加用户组** 按钮，系统会从右侧滑出添加用户组抽屉。抽屉中依次包含名称、组最大并发、单 API Key 最大并发、Token Plan、授权模型组、状态、备注等字段。
 
-**2.1.1设置名称与并发上限**
+**2.1.1 设置名称与并发上限**
 
 填写以下基础字段：
 
@@ -33,15 +33,15 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 **注意**：单 API Key 最大并发的有效上限不会超过组最大并发；若先填了单 API Key 上限，再把组上限调到比它更小，最终会按组上限封顶。
 
-**2.1.2设置 Token 配额**
+**2.1.2 选择 Token Plan**
 
-**Token 配额** 用于按已知 Token 用量控制该用户组在统计周期内的消耗总量。填写数值后，可从右侧单位下拉中选择配额单位。可选单位包括 Token、万、百万、千万、亿、百亿和万亿；0 表示不限已知 Token。
+**Token Plan** 用于为该用户组设定周期内的 Token 用量上限，从而控制其在刷新周期内的消耗总量。单击下拉框可选择已创建的 Token Plan 方案（下拉中显示方案名称、刷新周期与周期 Token 上限）；留空表示不限制 Token 用量。Token Plan 方案在用户组页面的「Token Plan」标签中统一维护，参见本文第 3 节。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image3_token_unit.png" alt="Token 配额单位下拉"/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image3_token_plan.png" alt="选择 Token Plan"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Token 配额单位下拉</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  选择 Token Plan</div>
 
-**2.1.3选择授权模型组**
+**2.1.3 选择授权模型组**
 
 **授权模型组** 用于限定该用户组可访问的模型范围。单击下拉框展开已创建的模型组列表，可选择 1 ~ 100 个模型组；多选时表现为下拉中的多个选项同时打勾。
 
@@ -51,7 +51,7 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  授权模型组多选下拉</div>
 
-**2.1.4其他设置**
+**2.1.4 其他设置**
 
 - **状态**：开关控制用户组是否启用；关闭后该组不再参与调度，已有成员会回落到默认组。
 - **备注**：可选，0 ~ 255 字符，用于记录用途、负责人等说明信息。
@@ -62,7 +62,7 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 在用户组列表的操作列，可以对每个用户组执行以下操作：
 
-- **编辑**：在对应行的操作入口点击编辑，可修改用户组的名称、并发限制、Token 配额、授权模型组、状态及备注等配置。
+- **编辑**：在对应行的操作入口点击编辑，可修改用户组的名称、并发限制、Token Plan、授权模型组、状态及备注等配置。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image5_edit_user_group.png" alt="编辑用户组 - 已填值"/>
 
@@ -72,7 +72,41 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 
 - **删除**：单击删除并确认后，用户组及其配置将被移除；仍有成员的用户组不能删除。
 
-## 3 用户组管理约束
+## 3 Token Plan
+
+Token Plan 用于定义**周期内的 Token 用量上限**，用户组通过绑定 Token Plan 来控制组内成员在刷新周期内的 Token 消耗总量。一个 Token Plan 可关联多个用户组。
+
+用户组页面顶部以标签页划分 **用户组** 与 **Token Plan** 两个标签，单击「**Token Plan**」标签进入方案列表。该标签页展示所有已创建的 Token Plan，单击左上角 **添加 Token Plan** 可新建方案。
+
+**列表字段**
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  Token Plan 列表字段</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>Token Plan 的方案名称。</td></tr>
+<tr><td style={{padding:'8px'}}>额度刷新周期</td><td style={{padding:'8px'}}>用量额度的刷新周期，如「月（30 天）」。</td></tr>
+<tr><td style={{padding:'8px'}}>周期 Token 上限</td><td style={{padding:'8px'}}>每个刷新周期内允许消耗的 Token 上限，如 1B、10B。</td></tr>
+<tr><td style={{padding:'8px'}}>关联用户组数</td><td style={{padding:'8px'}}>当前绑定该方案的用户组数量。</td></tr>
+<tr><td style={{padding:'8px'}}>操作</td><td style={{padding:'8px'}}>单击 <strong>编辑</strong> 修改方案，或 <strong>删除</strong> 移除方案。</td></tr>
+</tbody>
+</table>
+
+**字段说明**
+
+- **名称**：方案的显示名称，便于在用户组中识别与选择。
+- **额度刷新周期**：额度重置的时间周期，可选按天、月等；示例中为「月（30 天）」。
+- **周期 Token 上限**：单个刷新周期内允许使用的 Token 总数，支持 B（十亿）、M（百万）等计量单位。达到上限后，绑定该方案的用户组在周期内将无法继续消耗或按规则限制，需等待下一个周期刷新。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image6_token_plan.png" alt="Token Plan 列表"/>
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  Token Plan 列表</div>
+
+**关联用户组**：在用户组的添加 / 编辑抽屉中，通过 **Token Plan** 下拉选择方案即可完成绑定；同一方案可被多个用户组引用。删除仍被引用的方案前，请先解除相应用户组的绑定。
+
+## 4 用户组管理约束
 
 用户组具有以下系统级规则，了解这些规则有助于避免误操作和配置冲突：
 
@@ -81,15 +115,15 @@ description: 介绍 1Panel AI 网关用户组的创建、配置与规则，包�
 - **并发封顶**：单 API Key 最大并发的有效上限不会超过组最大并发；
 - **模型授权**：未选择任何模型组时，授权范围为全部模型；选择后只允许调用所选模型组内的模型。
 
-<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image6_default_group.png" alt="用户组列表 - 默认组规则"/>
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/user_group/image7_default_group.png" alt="用户组列表 - 默认组规则"/>
 
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  用户组列表 - 默认组规则</div>
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  用户组列表 - 默认组规则</div>
 
-图 6 中，Default 行带有 **默认** 徽标，且操作列只有 **编辑** 按钮，没有 **删除** 按钮，正对应「默认用户组不能被禁用或删除」以及「默认组不可删除」这两条规则。
+图 7 中，Default 行带有 **默认** 徽标，且操作列只有 **编辑** 按钮，没有 **删除** 按钮，正对应「默认用户组不能被禁用或删除」以及「默认组不可删除」这两条规则。
 
-## 4 注意事项
+## 5 注意事项
 
-- **配置改动即时生效**：并发限制、Token 配额及授权模型组的改动会影响组内所有用户，修改前请确认影响范围。
+- **配置改动即时生效**：并发限制、Token Plan 及授权模型组的改动会影响组内所有用户，修改前请确认影响范围。
 
 - **谨慎停用**：停用为影响面较大的操作，停用前请确认该组用户不再需要使用系统资源。
 

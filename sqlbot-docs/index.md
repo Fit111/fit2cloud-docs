@@ -1,5 +1,6 @@
 ---
 title: 产品介绍
+slug: product-intro
 ---
 
 ## 1 工作原理

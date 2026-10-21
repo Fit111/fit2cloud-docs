@@ -12,7 +12,6 @@ AI 网关的业务配置（上游账号、模型组、密钥等）在管理界�
 默认数据目录为 `/opt/ai-gateway`，容器名示例为 `1panel-ai-gateway`。主要路径如下：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  主要文件与目录</div>
-
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'28%', padding:'8px', textAlign:'left'}}>文件 / 目录</th><th style={{width:'42%', padding:'8px', textAlign:'left'}}>默认路径</th><th style={{width:'30%', padding:'8px', textAlign:'left'}}>说明</th></tr>
@@ -54,7 +53,6 @@ docker run --pull always -d \
 部署相关参数如下（业务侧配置在管理界面维护）：
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  参数说明</div>
-
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead>
 <tr><th style={{width:'32%', padding:'8px', textAlign:'left'}}>参数名称</th><th style={{width:'14%', padding:'8px', textAlign:'left'}}>默认值</th><th style={{width:'14%', padding:'8px', textAlign:'left'}}>可选项</th><th style={{width:'40%', padding:'8px', textAlign:'left'}}>说明</th></tr>

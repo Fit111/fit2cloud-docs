@@ -62,12 +62,14 @@ docker logs 1panel-ai-gateway
 - **用户组**：作为权限管控核心模块，主要用于配置用户组的模型访问授权、接口并发上限以及 Token 使用配额，统一承载组内所有用户的权限与资源使用限制。
 - **智能路由**：依托虚拟模型名称对用户请求进行分类，区分简单请求与复杂请求，并根据预设规则智能匹配、调度对应的模型组完成请求处理，优化调用效率。
 - **内容合规**：部署于模型调用前置环节，在请求正式发起前对用户输入内容进行合规检测，支持敏感词匹配、语义识别等校验方式，规避违规内容调用风险。
-- **用量统计**：支持多维度数据统计分析，可按照用户、模型供应商、通信协议以及自定义时间范围，精准统计接口请求量与 Token 消耗用量，为资源管控与数据复盘提供依据。
 - **调用日志**：完整记录每一次模型调用的全链路信息，包含调用链路轨迹、请求状态、接口耗时、Token 用量等核心数据，便于问题排查、链路追溯与业务复盘。
-- **设置**：提供系统全局参数配置能力，支持自定义协议转换规则、性能运行参数、日志留存时长以及正文审计规则，适配不同场景的系统运行需求。
+- **任务中心**：集中记录后台异步任务（如按策略自动清理日志、导出调用日志）的类型、触发方式、状态与处理进度，便于确认任务执行情况、排查异常并获取导出文件。
+- **用量统计**：支持多维度数据统计分析，可按照用户、模型供应商、通信协议以及自定义时间范围，精准统计接口请求量与 Token 消耗用量，为资源管控与数据复盘提供依据。
+- **网关设置**：提供网关运行参数的统一配置能力，页面以标签页划分为基础设置、性能设置、向量服务、智能路由、内容合规与 Elasticsearch，覆盖接入地址、协议转换、并发与队列、请求超时、日志保留时长以及向量服务等运行参数，适配不同场景的系统运行需求。
+- **系统设置**：管理平台级配置，包括登录会话、多因素认证（MFA）与任务数据保留策略，并提供开放 API 凭证管理与企业认证（钉钉、飞书、企业微信、LDAP、OIDC）等企业账号登录配置。
 
 
-**用户中心**：普通用户登录后进入用户中心，可访问「API Keys」「用量统计」和「设置」。管理员可在用户菜单中切换到用户中心，管理自己的 API Key。Web 界面支持简体中文、繁体中文和 English，右上角可切换语言，主题按钮可在亮色与暗色之间切换。
+**用户中心**：普通用户登录后进入用户中心，可访问「模型广场」「API Keys」和「用量统计」。管理员可在用户菜单中切换到用户中心，管理自己的 API Key。Web 界面支持简体中文、繁体中文和 English，右上角可切换语言，主题按钮可在亮色与暗色之间切换。
 
 ## 3 快速上手
 
@@ -97,14 +99,18 @@ docker logs 1panel-ai-gateway
 上游账号主要字段如下表所示。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  上游账号主要字段说明</div>
-
-| 字段 | 取值 | 说明 |
-| --- | --- | --- |
-| 供应商 | 内置或自定义 | 内置供应商包含 OpenAI、Anthropic、DeepSeek、阿里云百炼、vLLM 等。 |
-| 协议类型 | 文本 / 文生图 / 向量 | 编辑已有账号时不可直接改变。 |
-| 优先级 | 0-1000 | 网关优先选择优先级更高的可用账号。 |
-| 最大并发 | 0-100000 | 限制该账号同时处理的请求数，0 表示不额外设置。 |
-| 健康状态 | 可用 / 冷却 / 不可用 | 由连接验证和运行时调用结果维护。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'20%', padding:'8px'}}>字段</th><th style={{width:'25%', padding:'8px'}}>取值</th><th style={{width:'55%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>供应商</td><td style={{padding:'8px'}}>内置或自定义</td><td style={{padding:'8px'}}>内置供应商包含 OpenAI、Anthropic、DeepSeek、阿里云百炼、vLLM 等。</td></tr>
+<tr><td style={{padding:'8px'}}>协议类型</td><td style={{padding:'8px'}}>文本 / 文生图 / 向量</td><td style={{padding:'8px'}}>编辑已有账号时不可直接改变。</td></tr>
+<tr><td style={{padding:'8px'}}>优先级</td><td style={{padding:'8px'}}>0-1000</td><td style={{padding:'8px'}}>网关优先选择优先级更高的可用账号。</td></tr>
+<tr><td style={{padding:'8px'}}>最大并发</td><td style={{padding:'8px'}}>0-100000</td><td style={{padding:'8px'}}>限制该账号同时处理的请求数，0 表示不额外设置。</td></tr>
+<tr><td style={{padding:'8px'}}>健康状态</td><td style={{padding:'8px'}}>可用 / 冷却 / 不可用</td><td style={{padding:'8px'}}>由连接验证和运行时调用结果维护。</td></tr>
+</tbody>
+</table>
 
 :::warning[保存校验]
 文本和向量账号在创建或关键连接信息变更时，会执行一次最小调用验证；文生图账号保存时不会实际生成图片。凭据编辑时留空表示沿用已保存的 API Key。
@@ -128,11 +134,11 @@ docker logs 1panel-ai-gateway
 
 ### 3.3 配置用户组
 
-用户组承载模型权限、并发上限和 Token 配额。将用户加入用户组后，用户即可访问该用户组授权的模型。
+用户组承载模型权限、并发上限和 Token Plan。将用户加入用户组后，用户即可访问该用户组授权的模型。
 
 1. 选择 **用户组**，单击 **添加用户组**。
 2. 输入名称，设置组最大并发和单 API Key 最大并发（0 表示不额外限制，继承上一级有效上限）。
-3. 设置 Token 配额，可选择 Token、万、百万、千万、亿、百亿或万亿单位（0 表示不限已知 Token）。
+3. 选择 **Token Plan**（可选），用于限制该组在刷新周期内的 Token 用量上限；留空表示不限制。Token Plan 方案可在用户组页面的「Token Plan」标签中维护。
 4. 在 **授权模型组** 中选择允许访问的模型组；未选择任何模型组时，该用户组可访问全部模型。
 5. 设置启用状态和备注，单击 **保存**。
 
@@ -152,17 +158,17 @@ docker logs 1panel-ai-gateway
 
 智能路由的目标是「简单问题走便宜模型，复杂问题走强模型」。它对外只暴露一个虚拟模型名称，接收请求后结合本地规则、上下文路由和向量样本，把请求判定为「简单」或「复杂」：简单请求落到简单请求模型组（便宜、响应快），复杂请求落到复杂请求模型组（能力更强）。这样普通用户只需使用同一个模型名称，无需自己判断该用哪个模型。
 
-启用与参数配置在 **设置** 页的 **智能路由/内容合规** 标签完成，样本管理、决策预览、决策日志和统计在 **智能路由** 页完成。配置前，需先在账号池中创建协议类型为「向量」的可用上游账号，并准备好简单、复杂两个模型组。
+启用与参数配置在 **网关设置** 页的 **智能路由** 标签完成，样本管理、决策预览、决策日志和统计在 **智能路由** 页完成。配置前，需先在账号池中创建协议类型为「向量」的可用上游账号，并准备好简单、复杂两个模型组。
 
-1. 选择 **设置**，打开 **智能路由/内容合规** 标签，在「智能路由」卡片中将 **状态** 设为启用。
+1. 选择 **网关设置**，打开 **智能路由** 标签，将 **状态** 设为启用。
 2. 输入虚拟模型名称（本示例为 `1Panel-Auto`，客户端使用该名称触发智能路由）。
 3. 分别选择 **简单请求模型组** 和 **复杂请求模型组**（本示例为「简单模型」「复杂模型」）。
 4. 按需调整分类阈值（默认 0.72）、置信差阈值（默认 0.00）和 Top K（默认 5），单击 **保存**，确认卡片右上角显示「运行时已生效」。
 5. 在同页「向量服务」中选择一个向量账号及其真实模型，单击 **测试连接**，确认返回向量维度。
 
-<img src="/img/ai-gateway/settings.png" alt="设置页的智能路由配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
+<img src="/img/ai-gateway/settings.png" alt="网关设置页的智能路由配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
-<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 9  设置页的智能路由配置</div>
+<div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 9  网关设置页的智能路由配置</div>
 
 
 选择 **智能路由**，在 **样本管理** 中可查看样本的标签、样本文本和向量维度。
@@ -239,15 +245,19 @@ curl https://gateway.example.com/v1/chat/completions \
 常用数据面接口如下表所示。
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  数据面接口说明</div>
-
-| 方法 | 路径 | 用途 |
-| --- | --- | --- |
-| GET | `/v1/models` | 列出当前 API Key 可访问的文本模型。 |
-| POST | `/v1/chat/completions` | OpenAI Chat Completions 兼容调用。 |
-| POST | `/v1/responses` | OpenAI Responses 兼容调用。 |
-| POST | `/v1/messages` | Anthropic Messages 兼容调用。 |
-| POST | `/v1/embeddings` | OpenAI Embeddings 兼容调用。 |
-| POST | `/v1/images/generations` | OpenAI Images 兼容文生图调用。 |
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'15%', padding:'8px'}}>方法</th><th style={{width:'35%', padding:'8px'}}>路径</th><th style={{width:'50%', padding:'8px'}}>用途</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>GET</td><td style={{padding:'8px'}}><code>/v1/models</code></td><td style={{padding:'8px'}}>列出当前 API Key 可访问的文本模型。</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>/v1/chat/completions</code></td><td style={{padding:'8px'}}>OpenAI Chat Completions 兼容调用。</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>/v1/responses</code></td><td style={{padding:'8px'}}>OpenAI Responses 兼容调用。</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>/v1/messages</code></td><td style={{padding:'8px'}}>Anthropic Messages 兼容调用。</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>/v1/embeddings</code></td><td style={{padding:'8px'}}>OpenAI Embeddings 兼容调用。</td></tr>
+<tr><td style={{padding:'8px'}}>POST</td><td style={{padding:'8px'}}><code>/v1/images/generations</code></td><td style={{padding:'8px'}}>OpenAI Images 兼容文生图调用。</td></tr>
+</tbody>
+</table>
 
 **认证方式**：通用方式是在 `Authorization` 请求头中使用 Bearer Token。Anthropic Messages 接口也接受 `x-api-key`，使用 `x-api-key` 时不要同时发送 `Authorization`。API Key 前后不能包含空白字符。
 

@@ -30,6 +30,19 @@ description: 介绍 1Panel AI 网关 1Panel 安装的说明
     - **内存限制**：1Panel AI 网关应用可以使用的内存大小。    
     - **端口外部访问**：1Panel AI 网关应用可以使用 IP:PORT 进行访问（1Panel AI 网关应用必须勾选外部端口访问）。   
 
+:::note[数据库版本与 1Panel 版本要求]
+
+1Panel AI 网关应用提供两个版本，请在 **版本** 下拉框中按需选择：
+
+- **1.4.0**：使用 SQLite，适合单机部署，已有 SQLite 实例可沿此版本线升级。
+- **1.4.0-postgres**：使用 PostgreSQL，需要 **1Panel v2.4.0 及以上版本** 和 **PostgreSQL 18**。1Panel 版本低于 v2.4.0 时，版本下拉框中不会显示该版本。安装时选择已在 1Panel 中配置的 PostgreSQL 服务，由面板创建并关联应用数据库。
+
+两个版本均使用 `1panel/ai-gateway:v1.4.0` 镜像，通过数据库配置区分。应用目录保存配置等持久化数据；PostgreSQL 版的数据库由所选 PostgreSQL 服务保存，备份请使用 1Panel 的应用备份功能以包含关联数据库。
+
+SQLite 与 PostgreSQL 版本之间不能直接升级或交叉恢复备份，切换数据库类型需要单独迁移数据。
+
+:::
+
 <img src="/img/ai-gateway/ai_gateway_settting.png" alt="1Panel AI 网关应用配置" style={{display:'block',margin:'16px auto',maxWidth:'100%'}}/>
 
 <div style={{textAlign:'center',color:'#8a8f99',fontSize:'13px',margin:'6px 0 20px'}}>图 3  1Panel AI 网关应用配置</div>

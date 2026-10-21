@@ -164,12 +164,18 @@ description: 介绍 1Panel AI 网关智能路由的样本管理、决策日志�
 
 模型决策的路由目标数量为 **2–10 个**。在「路由目标」列表中点击添加，每个路由目标包含以下字段：
 
-| 字段 | 说明 |
-| --- | --- |
-| 目标名称 | 直观命名，例如「简单问答与基础处理」「复杂推理与代码分析」 |
-| 关联模型组 | 该目标对应的模型组，命中后请求由该模型组承接 |
-| 适用说明 | 描述应进入该目标的任务类型、难度和场景 |
-| 排除说明 | 重点写容易混淆、但不应进入该目标的情况 |
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  路由目标字段</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'25%', padding:'8px'}}>字段</th><th style={{width:'75%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>目标名称</td><td style={{padding:'8px'}}>直观命名，例如「简单问答与基础处理」「复杂推理与代码分析」</td></tr>
+<tr><td style={{padding:'8px'}}>关联模型组</td><td style={{padding:'8px'}}>该目标对应的模型组，命中后请求由该模型组承接</td></tr>
+<tr><td style={{padding:'8px'}}>适用说明</td><td style={{padding:'8px'}}>描述应进入该目标的任务类型、难度和场景</td></tr>
+<tr><td style={{padding:'8px'}}>排除说明</td><td style={{padding:'8px'}}>重点写容易混淆、但不应进入该目标的情况</td></tr>
+</tbody>
+</table>
 
 **示例**：目标「简单问答与基础处理」关联"简单模型"，适用说明填写"适用于不需要复杂推理的请求，包括日常寒暄、闲聊、事实问答、简单解释、翻译、改写、摘要、格式转换和基础代码说明"，排除说明填写"不适用于系统设计、多方案比较、复杂代码修改、跨模块排错、数学证明、长上下文分析或需要多步推理的请求"。目标「复杂推理与代码分析」则关联"复杂模型"，适用与排除说明与之互补。
 

@@ -6,18 +6,41 @@ slug: /user_manual/ai_gateway/system_settings
 
 ## 1 概述
 
-系统设置用于管理网关的平台级配置，页面上方以标签页划分为**开放 API** 与**企业认证**两个标签：
+系统设置用于管理网关的平台级配置，页面以标签页划分为**基础设置**、**开放 API** 与**企业认证**三个标签：
 
+- **基础设置**：配置登录会话、多因素认证（MFA）与任务数据保留策略等全局选项。
 - **开放 API**（v1.3.0 起）：管理 API 凭证，让外部系统以凭证拥有者的管理员身份维护网关资源，并记录管理 API 的操作审计。
 - **企业认证**（v1.1.0 起）：接入**钉钉、飞书、企业微信、LDAP 与 OIDC** 五种企业登录方式。启用后，登录页下方会出现「企业账号登录」区块，成员单击对应按钮即可使用企业身份登录网关。
 
-## 2 开放 API
+## 2 基础设置
+
+基础设置用于配置网关的全局登录与数据保留策略，包括会话空闲超时、多因素认证（MFA）以及任务数据的保留时长。
+
+### 2.1 会话设置
+
+- **会话空闲超时时间**：用户在指定时间内没有发起会续期的认证请求时，会话将失效，单位为分钟。自动状态轮询不会续期，活动时间最多每分钟记录一次，会话最长有效 24 小时。
+
+### 2.2 MFA
+
+- **全局策略**：多因素认证的全局策略，如「用户自行选择」。策略从每个用户的下一次交互式登录开始生效。
+- **企业登录后继续验证 MFA**：开启后，通过企业账号登录的用户在登录后仍需完成 MFA 验证。
+
+### 2.3 任务保留设置
+
+用于控制任务数据（任务中心的记录与导出文件）的保留时长，避免历史数据长期堆积：
+
+- **任务记录保留天数**：任务中心记录在被清理前的保留时长。
+- **导出文件保留天数**：日志导出等任务所生成文件的保留时长。
+
+记录期限须覆盖文件期限。新设置作用于后续完成的任务，不缩短已有到期时间。任务中心的使用参见[任务中心](./tasks)。
+
+## 3 开放 API
 
 开放 API 用于让外部系统（如计费、运维自动化平台）以编程方式维护网关资源。管理 API 凭证让外部系统以**凭证拥有者的管理员身份**维护网关资源，因此凭证权限等同于创建者的管理权限，需妥善保管。
 
 页面顶部提供两个操作：**创建凭证**（新建一条 API 凭证）与**下载接口文档**（下载管理 API 的接口说明，供外部系统对接时查阅）。
 
-### 2.1 创建凭证
+### 3.1 创建凭证
 
 单击「**创建凭证**」，在右侧抽屉中填写：
 
@@ -35,29 +58,35 @@ slug: /user_manual/ai_gateway/system_settings
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建开放 API 凭证抽屉</div>
 
-### 2.2 凭证列表
+### 3.2 凭证列表
 
 凭证列表展示每条凭证的以下信息，可对单条凭证进行**编辑**与**删除**：
 
-| 列 | 说明 |
-| --- | --- |
-| 名称 | 凭证用途标识 |
-| 凭证 | 以 `agw_at_` 为前缀的凭证串（列表中以省略形式展示） |
-| 来源限制 | 允许调用的来源地址范围，未设置时显示"不限来源" |
-| 状态 | 有效 / 失效 |
-| 有效期 | 到期时间，或"永不过期" |
-| 请求次数 | 该凭证累计调用次数 |
-| 最新使用日期 | 最近一次调用的时间与来源 IP |
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  开放 API 凭证列表字段</div>
+<table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
+<thead>
+<tr><th style={{width:'30%', padding:'8px'}}>列</th><th style={{width:'70%', padding:'8px'}}>说明</th></tr>
+</thead>
+<tbody>
+<tr><td style={{padding:'8px'}}>名称</td><td style={{padding:'8px'}}>凭证用途标识</td></tr>
+<tr><td style={{padding:'8px'}}>凭证</td><td style={{padding:'8px'}}>以 <code>agw_at_</code> 为前缀的凭证串（列表中以省略形式展示）</td></tr>
+<tr><td style={{padding:'8px'}}>来源限制</td><td style={{padding:'8px'}}>允许调用的来源地址范围，未设置时显示"不限来源"</td></tr>
+<tr><td style={{padding:'8px'}}>状态</td><td style={{padding:'8px'}}>有效 / 失效</td></tr>
+<tr><td style={{padding:'8px'}}>有效期</td><td style={{padding:'8px'}}>到期时间，或"永不过期"</td></tr>
+<tr><td style={{padding:'8px'}}>请求次数</td><td style={{padding:'8px'}}>该凭证累计调用次数</td></tr>
+<tr><td style={{padding:'8px'}}>最新使用日期</td><td style={{padding:'8px'}}>最近一次调用的时间与来源 IP</td></tr>
+</tbody>
+</table>
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image1-Open-API.png" alt="开放 API 凭证列表与操作审计"/>
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  开放 API：凭证列表与操作审计</div>
 
-### 2.3 操作审计
+### 3.3 操作审计
 
 凭证列表下方的「**操作审计**」记录最近 30 天的管理 API **写操作与安全事件**（查询请求不逐条记录）。每条记录包含发生时间、凭证、操作名称、执行结果（如"执行成功""执行失败"）、来源与请求（方法与路径）。可按**凭证、操作名称、执行结果**筛选，用于追溯外部系统对网关的变更行为、排查异常调用。
 
-## 3 企业认证
+## 4 企业认证
 
 企业认证页面以卡片形式列出五种认证方式，每张卡片展示当前**启用状态**、**首次登录用户组**与**密钥配置状态**，并提供以下操作：
 
@@ -69,7 +98,7 @@ slug: /user_manual/ai_gateway/system_settings
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  企业认证</div>
 
-## 4 钉钉与飞书
+## 5 钉钉与飞书
 
 ### 钉钉
 
@@ -88,7 +117,7 @@ slug: /user_manual/ai_gateway/system_settings
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  应用凭证页查看 AgentId、AppKey 与 AppSecret</div>
 
-4. 在「安全设置」中配置服务器出口 IP 与回调地址：将网关配置抽屉中显示的**授权回调地址**填入（详见[第 8 节](#8-通用配置说明)）。
+4. 在「安全设置」中配置服务器出口 IP 与回调地址：将网关配置抽屉中显示的**授权回调地址**填入（详见[第 9 节](#9-通用配置说明)）。
 5. 完成配置后**发布应用**，钉钉的配置需在应用发布成功后才生效。
 
 **网关侧配置**
@@ -96,7 +125,7 @@ slug: /user_manual/ai_gateway/system_settings
 - **企业 ID / Tenant ID**：钉钉管理后台「企业信息」页的企业标识。
 - **应用 ID / Client ID**：自建应用的 Client ID（即 AppKey）。
 - **应用密钥 / Client Secret**：自建应用的 Client Secret（即 AppSecret）。
-- **授权回调地址**：网关生成的回调地址，填写到钉钉应用的回调配置中（格式见[第 8 节](#8-通用配置说明)）。
+- **授权回调地址**：网关生成的回调地址，填写到钉钉应用的回调配置中（格式见[第 9 节](#9-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image2-dingtalk-drawer.png" alt="钉钉配置"/>
 
@@ -126,13 +155,13 @@ slug: /user_manual/ai_gateway/system_settings
 - **企业 ID / Tenant ID**：飞书开放平台可查看的企业标识。
 - **应用 ID / Client ID**：企业自建应用的 App ID。
 - **应用密钥 / Client Secret**：企业自建应用的 App Secret。
-- **授权回调地址**：网关生成的回调地址，填写到飞书应用的重定向 URL 中（格式见[第 8 节](#8-通用配置说明)）。
+- **授权回调地址**：网关生成的回调地址，填写到飞书应用的重定向 URL 中（格式见[第 9 节](#9-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image3-feishu-drawer.png" alt="飞书配置"/>
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  网关侧飞书配置抽屉</div>
 
-## 5 企业微信
+## 6 企业微信
 
 ### 平台侧配置
 
@@ -175,13 +204,13 @@ slug: /user_manual/ai_gateway/system_settings
 - **CorpID**：企业微信「我的企业 → 企业信息」页的企业唯一标识。
 - **应用 AgentID（正整数）**：自建应用的 AgentID。
 - **应用密钥 / Client Secret**：自建应用的应用密钥（Secret）。
-- **授权回调地址**：网关生成的回调地址，对应自建应用的网页授权可信域名配置（格式见[第 8 节](#8-通用配置说明)）。
+- **授权回调地址**：网关生成的回调地址，对应自建应用的网页授权可信域名配置（格式见[第 9 节](#9-通用配置说明)）。
 
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/system_settings/image4-wecom-drawer.png" alt="企业微信配置"/>
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14  企业微信配置</div>
 
-## 6 LDAP
+## 7 LDAP
 
 LDAP 用于对接企业已有的目录服务（如 OpenLDAP、Active Directory）。相关参数由企业目录服务的管理员提供，无需在企业微信、钉钉等外部平台创建应用：
 
@@ -198,13 +227,13 @@ LDAP 用于对接企业已有的目录服务（如 OpenLDAP、Active Directory�
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  LDAP 配置</div>
 
-## 7 OIDC
+## 8 OIDC
 
 OIDC 用于对接支持 OpenID Connect 协议的身份认证服务（如 Keycloak、Authing、Okta 等）。配置前需先在身份提供商（IdP）管理界面创建一个客户端（Client），将网关显示的**授权回调地址**登记为该客户端的回调地址，并确认 IdP 的 Issuer 地址可用，再回到网关填写：
 
 - **应用 ID / Client ID**：在身份提供商（IdP）注册的客户端标识。
 - **应用密钥 / Client Secret**：客户端对应的密钥。
-- **授权回调地址**：网关的认证回调地址，需配置到 IdP 的客户端回调设置中（格式见[第 8 节](#8-通用配置说明)）。
+- **授权回调地址**：网关的认证回调地址，需配置到 IdP 的客户端回调设置中（格式见[第 9 节](#9-通用配置说明)）。
 - **OIDC Issuer**：身份提供商的 Issuer 标识地址。
 - **附加信任 CA 证书（PEM）**：IdP 使用自签名证书时上传。
 
@@ -212,7 +241,7 @@ OIDC 用于对接支持 OpenID Connect 协议的身份认证服务（如 Keycloa
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16  OIDC 配置</div>
 
-## 8 通用配置说明
+## 9 通用配置说明
 
 以下配置项在各认证方式的抽屉中通用：
 
@@ -236,7 +265,7 @@ OIDC 用于对接支持 OpenID Connect 协议的身份认证服务（如 Keycloa
 授权回调地址的协议与主机取自网关的实际访问地址：以 `https://ip:端口` 访问即为 https，以内网 http 访问则为 http。若平台登记的地址与网关显示存在任何差异（多 / 少斜杠、http 与 https 不符、端口不同），登录跳转都会失败。LDAP 为目录服务直连，不涉及回调地址。
 :::
 
-## 9 注意事项
+## 10 注意事项
 
 - 启用任一认证方式前，请先在对应平台完成应用创建，并正确配置授权回调地址，否则登录跳转会失败。
 - 多种认证方式可同时启用，登录页将并列展示已启用的企业登录方式，用户可任选其一。

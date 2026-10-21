@@ -40,7 +40,7 @@ cat config-example.txt
 # JumpServer configuration file example.
 #
 # If you don't understand the purpose, you can skip modifying this configuration file, the system will automatically fill in
-# Complete parameter documentation /jumpserver/manual/env
+# Complete parameter documentation /jumpserver/manual/ops/env
 
 ################################# Image Configuration #################################
 #
