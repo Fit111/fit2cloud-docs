@@ -3,19 +3,23 @@
 
 /* ===== Hero 区 ===== */
 .hero {
-  display: flex;
-  gap: 36px;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  column-gap: 36px;
+  row-gap: 0;
+  align-items: start;
   padding: 8px 0 36px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.heroLeft {
-  flex: 1;
+/* 简介 + 按钮：与视频卡同在网格第 2 行的第 1 列，卡片顶边因此与简介首行顶边齐平 */
+.heroBody {
+  grid-column: 1;
   min-width: 0;
 }
 
 .heroTitle {
+  grid-column: 1 / -1;
   /* 与文档页标题同号：Infima 对 `.markdown h1:first-child` 设 --ifm-h1-font-size: 3rem */
   font-size: 3rem;
   font-weight: 700;
@@ -69,12 +73,10 @@
    需 ≤ 左侧文案块高度（段落 3 行 80 + 24 + 按钮 36 ≈ 140px 起步），
    否则底边对齐时顶边会高出段落首行。改宽度/字号/间距前请重新核对这个不等式。 */
 .videoCard {
-  flex: 0 0 200px;
+  grid-column: 2;
+  align-self: start;
+  width: 200px;
   display: block;
-  /* 上移卡片：hero 为 align-items:flex-end（底边对齐左列），
-     加 margin-bottom 等于把卡片从底边往上抬 28px，使卡片顶部与标题区更齐平。
-     卡片 148px + 28px < 左列高度（约 214px），不影响 hero 整体高度。 */
-  margin-bottom: 28px;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
   overflow: hidden;
@@ -338,17 +340,17 @@
 
 /* ===== 响应式 ===== */
 @media (max-width: 996px) {
+  /* 窄屏回到普通纵向流：标题 → 简介+按钮 → 视频卡 */
   .hero {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .videoCard {
-    flex: none;
+    grid-column: auto;
     width: 100%;
     max-width: 420px;
-    /* 窄屏为上下堆叠布局，无需再上移（否则会与下方分区贴得太近） */
-    margin-bottom: 0;
   }
 
   .section {

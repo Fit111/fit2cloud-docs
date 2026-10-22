@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>SQLBot 智能问数系统</h1>
+  <h1 className={styles.heroTitle}>SQLBot 智能问数系统</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       SQLBot 是一款基于大语言模型（LLM）和 RAG（检索增强生成）的智能问数系统。用户以自然语言提问即可获得
       数据答案、SQL 语句与可视化图表，并可将结果组织成仪表板；借助工作空间实现资源隔离与细粒度数据权限，
