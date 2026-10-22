@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>MaxKB 智能体平台</h1>
+  <h1 className={styles.heroTitle}>MaxKB 智能体平台</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       MaxKB = Max Knowledge Brain，是一款强大易用的企业级智能体平台，致力于解决企业 AI
       落地面临的技术门槛高、部署成本高、迭代周期长等问题。秉承“开箱即用，伴随成长”的设计理念，
