@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>Cordys CRM</h1>
+  <h1 className={styles.heroTitle}>Cordys CRM</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       Cordys CRM 是新一代开源 AI CRM，集信息化、数字化、智能化于一体，
       帮助企业实现从线索到回款（L2C）的全流程精细化管理，

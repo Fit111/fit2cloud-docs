@@ -5,6 +5,12 @@ const sidebars = {
   "cordys": [
     {
       "type": "doc",
+      "id": "product_landing",
+      "label": "概览",
+      "key": "doc:product_landing"
+    },
+    {
+      "type": "doc",
       "id": "index",
       "label": "产品介绍",
       "key": "doc:产品介绍"
