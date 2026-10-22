@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>1Panel 面板</h1>
+  <h1 className={styles.heroTitle}>1Panel 面板</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       1Panel 是一款现代化、开源的 Linux 服务器运维管理面板，同时也是轻量级的 AI 管理平台。
       通过直观易用的 Web 界面，帮助你轻松掌控服务器全局：无论是 AI 智能体与本地大模型，
