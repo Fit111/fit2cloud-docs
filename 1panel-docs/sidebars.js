@@ -867,7 +867,7 @@ const sidebars = {
         {
           "type": "doc",
           "id": "faq/runtime-security-upgrade",
-          "label": "PHP漏洞修复",
+          "label": "PHP 漏洞修复",
           "className": "sidebar-item-badge-hot"
         },
         {
