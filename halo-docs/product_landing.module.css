@@ -131,7 +131,7 @@
    与下方主题词（约 20px）+ gap 7px 合计 72px，在 111px 封面色块内居中。 */
 .videoCoverLogo {
   display: block;
-  width: 110px;
+  width: 89px; /* 图标 + 字标组合，视觉高度与 JumpServer 封面字标一致（约 28px） */
   height: auto;
 }
 
