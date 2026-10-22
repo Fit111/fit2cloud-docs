@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>DataEase 开源 BI 工具</h1>
+  <h1 className={styles.heroTitle}>DataEase 开源 BI 工具</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       DataEase 是开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势，从而实现业务的改进与优化。
       支持丰富的数据源连接，通过拖拉拽即可快速制作仪表板与数据大屏，并提供电子表格、数据填报、模板市场与嵌入式 BI
