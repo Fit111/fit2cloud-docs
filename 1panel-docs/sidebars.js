@@ -866,6 +866,12 @@ const sidebars = {
         },
         {
           "type": "doc",
+          "id": "faq/runtime-security-upgrade",
+          "label": "PHP 漏洞修复",
+          "className": "sidebar-item-badge-hot"
+        },
+        {
+          "type": "doc",
           "id": "faq/faq",
           "label": "产品 FAQ"
         },

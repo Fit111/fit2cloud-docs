@@ -4,7 +4,6 @@ title: 常见问题
 
 本页汇总 MaxKB 技术交流群中用户咨询频率较高的常见问题及处理方式，内容持续更新。
 
-
 ## 1 知识库与模型
 
 ### 1.1 标题内容检索不出来怎么办？
@@ -40,3 +39,11 @@ Ollama 和 llama.cpp 的重排模型校验接口不一样，因此选择 Ollama 
 **处理方式**：
 
 WorkBuddy 账号与 MaxKB 账号相互独立，通过 MaxKB 的个人 API Key 对接。安装 Skills 后，在技能中配置 MaxKB 的个人 API Key，WorkBuddy 即基于该 MaxKB 个人账号的权限访问对应知识库；首次使用时 AI 会向你索要登录所需的凭证（即 MaxKB 的个人认证信息）。
+
+### 2.2 MaxKB 对接WorkBuddy 的 Skills 在哪里下载？
+
+**问题**：MaxKB Skills 技能包从哪里获取？下载后 WorkBuddy 不识别怎么办？
+
+**处理方式**：
+
+MaxKB Skills 可在论坛帖子（https://bbs.fit2cloud.com/t/topic/19883）中获取下载链接。下载后把安装包直接拖入 WorkBuddy 的输入框，让 WorkBuddy 自行安装即可。
