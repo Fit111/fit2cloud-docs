@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>1Panel AI 网关</h1>
+  <h1 className={styles.heroTitle}>1Panel AI 网关</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       1Panel AI 网关是面向企业 AI 应用的一站式统一接入与治理平台。业务系统只需配置统一的
       Base URL 与网关发放的 API Key，即可调用 OpenAI、Anthropic 及本地化部署的各类模型；

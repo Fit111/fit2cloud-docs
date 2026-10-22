@@ -6,19 +6,23 @@
 
 /* ===== Hero 区 ===== */
 .hero {
-  display: flex;
-  gap: 36px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  column-gap: 36px;
+  row-gap: 0;
+  align-items: start;
   padding: 8px 0 36px;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.heroLeft {
-  flex: 1;
+/* 简介 + 按钮：与视频卡同在网格第 2 行的第 1 列，卡片顶边因此与简介首行顶边齐平 */
+.heroBody {
+  grid-column: 1;
   min-width: 0;
 }
 
 .heroTitle {
+  grid-column: 1 / -1;
   /* 与文档页标题同号：Infima 对 `.markdown h1:first-child` 设 --ifm-h1-font-size: 3rem */
   font-size: 3rem;
   font-weight: 700;
@@ -73,8 +77,9 @@
    margin-top = 标题行高（3rem × 1.25 = 60px）+ 标题下外边距 14px = 74px，
    改 .heroTitle 的字号或下边距后必须同步这里。 */
 .videoCard {
-  flex: 0 0 200px;
-  margin-top: calc(3rem * 1.25 + 14px);
+  grid-column: 2;
+  align-self: start;
+  width: 200px;
   display: block;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 8px;
@@ -330,17 +335,17 @@
 
 /* ===== 响应式 ===== */
 @media (max-width: 996px) {
+  /* 窄屏回到普通纵向流：标题 → 简介+按钮 → 视频卡 */
   .hero {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .videoCard {
-    flex: none;
+    grid-column: auto;
     width: 100%;
     max-width: 420px;
-    /* 窄屏改为上下堆叠，取消与正文首行对齐的缩进 */
-    margin-top: 0;
   }
 
   .section {

@@ -3,6 +3,7 @@
 const sidebars = {
   aiGateway: [
     // ── 根目录：部署与账号接入 ──
+    { type: "doc", id: "product_landing", label: "概览", key: "doc:product_landing" },
     { type: "doc", id: "index", label: "产品介绍" },
     { type: "doc", id: "quick_start", label: "快速入门" },
 
