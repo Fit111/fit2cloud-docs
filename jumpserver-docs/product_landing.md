@@ -15,8 +15,8 @@ import styles from './product_landing.module.css';
 
 {/* ===== Hero 区：左侧标题/简介/按钮，右侧视频卡片 ===== */}
 <div className={styles.hero}>
-  <div className={styles.heroLeft}>
-    <h1 className={styles.heroTitle}>JumpServer 堡垒机</h1>
+  <h1 className={styles.heroTitle}>JumpServer 堡垒机</h1>
+  <div className={styles.heroBody}>
     <p className={styles.heroDesc}>
       JumpServer 是广受欢迎的开源堡垒机，是符合 4A 规范的专业运维安全审计系统。帮助企业以更安全的方式管控和登录所有类型的资产，
       实现事前授权、事中监察、事后审计，满足等保合规要求。支持 SSH、Windows、数据库、云服务（Kubernetes / VMware）、
