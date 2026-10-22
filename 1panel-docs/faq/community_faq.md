@@ -16,6 +16,31 @@ title: 常见问题
 
 ## 2 主机与系统管理
 
+### 2.1 1Panel 服务无法启动，报 GODEBUG "tlskyber" 错误怎么办？
+
+**问题**：1Panel 服务无法启动，直接执行 `/usr/local/bin/1panel-core` 时报错：
+
+```text
+fatal error: removed GODEBUG "tlskyber" set to old value "0" in environment (https://go.dev/doc/godebug#go-124)
+```
+
+**处理方式**：
+
+在 `/etc/systemd/system` 目录下的 `1panel-core.service` 与 `1panel-agent.service` 中，分别为 `[Service]` 段补充一行：
+
+```ini
+UnsetEnvironment=GODEBUG
+```
+
+保存后执行：
+
+```bash
+systemctl daemon-reload
+systemctl restart 1panel
+```
+
+该错误由环境中残留的 `GODEBUG` 变量与新版 Go 运行时不兼容引起，补齐 `UnsetEnvironment=GODEBUG` 后，服务启动时不再把该变量传入 1Panel 进程。
+
 ## 3 应用商店与容器
 
 ### 3.1 应用安装拉取镜像失败怎么办？
