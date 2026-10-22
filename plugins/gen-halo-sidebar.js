@@ -206,7 +206,10 @@ if (missing.size) {
 }
 
 const sidebars = {halo: [
-  // 首项: 产品介绍(与 cordys/sqlbot 一致, /halo/ 直接打开它)
+  // 首项「概览」: 指回二级页 /halo/(product_landing.md, slug: /)
+  // 用 doc 而非 link, 这样停在落地页时左侧会高亮该项; doc 的侧栏 label 覆盖文档标题。
+  {type: 'doc', id: 'product_landing', label: '概览', key: 'doc:product_landing'},
+  // 次项: 产品介绍(与 cordys/sqlbot 一致, /halo/product-intro)
   docEntry('', 'index', '产品介绍'),
   guide,
   dev,

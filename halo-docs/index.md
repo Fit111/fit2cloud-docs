@@ -1,6 +1,7 @@
 ---
 title: 产品介绍
 description: Halo 开源建站工具的完整文档入口，涵盖安装部署、站点使用、以及核心、主题、插件和 RESTful API 开发指南。
+slug: product-intro
 ---
 
 Halo 是一款强大易用的开源建站工具，可以通过丰富的主题和插件搭建任何类型的网站。
