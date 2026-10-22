@@ -5,6 +5,12 @@ const sidebars = {
   "halo": [
     {
       "type": "doc",
+      "id": "product_landing",
+      "label": "概览",
+      "key": "doc:product_landing"
+    },
+    {
+      "type": "doc",
       "id": "index",
       "label": "产品介绍",
       "key": "doc:index"
@@ -35,7 +41,6 @@ const sidebars = {
               "label": "快速安装",
               "key": "cat:guide/install",
               "collapsed": true,
-              "link": { "type": "doc", "id": "guide/install/index" },
               "items": [
                 {
                   "type": "doc",
@@ -707,14 +712,12 @@ const sidebars = {
                   "label": "扩展点和定制化",
                   "key": "cat:developer-guide/plugin/extension-points",
                   "collapsed": true,
-                  "link": { "type": "doc", "id": "developer-guide/plugin/extension-points/index" },
                   "items": [
                     {
                       "type": "category",
                       "label": "服务端",
                       "key": "cat:developer-guide/plugin/extension-points/server",
                       "collapsed": true,
-                      "link": { "type": "doc", "id": "developer-guide/plugin/extension-points/server/index" },
                       "items": [
                         {
                           "type": "doc",
@@ -803,7 +806,6 @@ const sidebars = {
                       "label": "UI",
                       "key": "cat:developer-guide/plugin/extension-points/ui",
                       "collapsed": true,
-                      "link": { "type": "doc", "id": "developer-guide/plugin/extension-points/ui/index" },
                       "items": [
                         {
                           "type": "doc",
@@ -934,7 +936,6 @@ const sidebars = {
                   "label": "与其他插件交互",
                   "key": "cat:developer-guide/plugin/interaction",
                   "collapsed": true,
-                  "link": { "type": "doc", "id": "developer-guide/plugin/interaction/index" },
                   "items": [
                     {
                       "type": "doc",
@@ -1103,7 +1104,6 @@ const sidebars = {
                   "label": "页面模板与变量",
                   "key": "cat:developer-guide/theme/template-variables",
                   "collapsed": true,
-                  "link": { "type": "doc", "id": "developer-guide/theme/template-variables/index" },
                   "items": [
                     {
                       "type": "doc",
@@ -1167,7 +1167,6 @@ const sidebars = {
                   "label": "Finder API",
                   "key": "cat:developer-guide/theme/finder-apis",
                   "collapsed": true,
-                  "link": { "type": "doc", "id": "developer-guide/theme/finder-apis/index" },
                   "items": [
                     {
                       "type": "doc",
