@@ -14,6 +14,10 @@ keywords: [1Panel 首页, 服务器状态, 快捷入口, 已安装应用, 多节
 
 CPU、内存、负载和磁盘属于不同维度。负载表示等待运行或不可中断任务的数量，不等同于 CPU 使用率；排查异常时应结合进程管理和系统监控查看。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/dashboard/dashboard-status.png" alt="图 1 服务器状态与监控" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 服务器状态与监控</div>
+
 ## 2 快捷入口
 
 快捷入口根据当前账号可访问的菜单生成，可用于快速进入应用商店、网站、数据库、容器、文件、计划任务等页面。无权限的菜单不会作为可用入口显示。
@@ -21,6 +25,10 @@ CPU、内存、负载和磁盘属于不同维度。负载表示等待运行或�
 ## 3 已安装应用
 
 应用区域展示部分已安装应用及其运行状态。应用存在可访问端口时，可以从页面跳转到应用服务；实际访问地址取决于 **面板设置 -> 面板 -> 默认访问地址** 和应用端口配置。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/dashboard/dashboard-apps.png" alt="图 2 已安装应用" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 已安装应用</div>
 
 ## 4 多节点说明
 
