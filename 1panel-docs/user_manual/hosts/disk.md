@@ -19,6 +19,10 @@ keywords: [1Panel 磁盘管理, 磁盘分区, 磁盘挂载, ext4, xfs, 自动挂
 - **未分区磁盘**：未创建分区且未挂载的磁盘，可以从页面执行分区。
 - **普通磁盘**：展示现有分区及挂载状态，可以执行挂载或卸载。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/hosts/disk-list.png" alt="图 1 磁盘列表与分区信息" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 磁盘列表与分区信息</div>
+
 ## 2 分区并挂载
 
 1. 在未分区磁盘卡片中点击 **分区**。
