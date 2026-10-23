@@ -130,7 +130,11 @@
 
 .videoCoverText {
   padding: 0 8px;
-  font-size: 0.9375rem;
+  /* 比 JumpServer / 1Panel 的 0.9375rem 小一档（与 DataEase 同口径）：
+     主题词「企业级智能体平台」8 字在 15px 字号下宽约 131px、居中后右缘 ≈ 164px，
+     会贴住播放键左缘（171px）。降到 14px 后宽约 122px、右缘 ≈ 160px，
+     与播放键留出 11px 间隙。改字号或文案后请用 getBoundingClientRect 重新核对这个不等式。 */
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0.6px;
@@ -140,16 +144,15 @@
 }
 
 /* 播放标识：封面右下角的白底圆形播放键，三角取封面同色（MaxKB 品牌紫蓝），
-   让「这是一段视频」在缩略图层面即可辨识。「企业级智能体」6 字在 15px 字号下
-   宽约 94px（含 0.6px 字距，居中后右缘 ≈ 146px），26px 圆 + 距边 6px 的左缘为 166px，
-   余量约 20px，不与主题词重叠。若要加长主题词须用 getBoundingClientRect 复核这个 gap：
-   「企业级智能体平台」8 字时右缘 ≈ 161px，余量仅 5px，观感偏挤。 */
+   让「这是一段视频」在缩略图层面即可辨识。主题词加长为「企业级智能体平台」后
+   沿用 DataEase 的 8 字方案：圆径 26px 收到 22px、距边 6px 收到 5px，
+   播放键左缘 = 198 − 5 − 22 = 171px，与主题词右缘（≈160px）留出约 11px 间隙。 */
 .videoCoverPlay {
   position: absolute;
-  right: 6px;
-  bottom: 6px;
-  width: 26px;
-  height: 26px;
+  right: 5px;
+  bottom: 5px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -162,8 +165,8 @@
 
 .videoCoverPlay svg {
   display: block;
-  width: 18px;
-  height: 18px; /* 三角视觉高度约 9px = 圆直径的 35%，与常见播放键比例一致 */
+  width: 15px;
+  height: 15px; /* 三角视觉高度约 7.5px ≈ 圆直径的 34%，与常见播放键比例一致 */
 }
 
 .videoCard:hover .videoCoverPlay {

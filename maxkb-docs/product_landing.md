@@ -41,7 +41,7 @@ import styles from './product_landing.module.css';
         src="/img/maxkb/video/maxkb-logo-white.png"
         alt="MaxKB"
       />
-      <span className={styles.videoCoverText}>企业级智能体</span>
+      <span className={styles.videoCoverText}>企业级智能体平台</span>
       <span className={styles.videoCoverPlay} aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M7 5.8v12.4c0 .5.55.8.97.53l9.9-6.2a.62.62 0 0 0 0-1.06l-9.9-6.2A.62.62 0 0 0 7 5.8z" />
