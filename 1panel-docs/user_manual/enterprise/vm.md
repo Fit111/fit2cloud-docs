@@ -17,6 +17,10 @@ keywords: [1Panel 虚拟机, KVM, libvirt, 虚拟机管理, ISO, 存储池, 企�
 
 首次进入时，系统会检查虚拟化能力、KVM 辅助服务以及相关依赖。页面提示缺少可安装依赖时，可按引导安装；硬件虚拟化未开启、内核模块不可用或平台不受支持时，需要先在宿主机或固件中处理。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-overview.png" alt="图 1 概览与环境检查" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 概览与环境检查</div>
+
 ## 2 页面结构
 
 - **概览**：查看虚拟机、资源和存储摘要，并扫描孤立资源；
@@ -26,6 +30,10 @@ keywords: [1Panel 虚拟机, KVM, libvirt, 虚拟机管理, ISO, 存储池, 企�
 - **网络**：管理 NAT 或桥接网络；
 - **存储池**：管理虚拟磁盘存放位置和容量。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-list.png" alt="图 2 虚拟机列表" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 虚拟机列表</div>
+
 ## 3 创建虚拟机
 
 1. 准备可用 ISO 或模板、网络和存储池。
@@ -34,12 +42,24 @@ keywords: [1Panel 虚拟机, KVM, libvirt, 虚拟机管理, ISO, 存储池, 企�
 4. 选择网络及其他启动参数，确认后提交。
 5. 虚拟机启动后，通过控制台完成操作系统安装。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-create.png" alt="图 3 创建虚拟机" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 创建虚拟机</div>
+
 ## 4 网络与存储
 
 - NAT 网络需要配置网段、网关和 DHCP 地址范围；
 - 桥接网络需要选择宿主机现有桥接接口；
 - 存储池创建时填写名称、类型、路径和描述；
 - 删除网络或存储池前，应确认没有虚拟机或磁盘仍在使用。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-network.png" alt="图 4 网络" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 网络</div>
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-storage.png" alt="图 5 存储池" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 存储池</div>
 
 :::danger[宿主机风险]
     虚拟机占用宿主机 CPU、内存、磁盘和网络。过量分配、错误桥接或删除虚拟磁盘都可能影响宿主机和业务，生产环境操作前应完成容量评估和备份。
@@ -48,3 +68,7 @@ keywords: [1Panel 虚拟机, KVM, libvirt, 虚拟机管理, ISO, 存储池, 企�
 ## 5 孤立资源清理
 
 概览中的孤立资源扫描用于查找未被虚拟机引用的磁盘等资源。清理前必须人工确认资源确实不再使用；删除后不能通过 1Panel 自动恢复。
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/enterprise/vm/vm-orphan.png" alt="图 6 孤立数据清理" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 孤立数据清理</div>

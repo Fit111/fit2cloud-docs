@@ -58,6 +58,10 @@ keywords: [1Panel 日志审计, 操作日志, 访问日志, 网站日志, 登录
 
 后台任务会记录任务名称、状态、开始时间等信息。可按任务状态筛选，并打开详情查看实时或已完成日志。应用安装、升级、备份、模型下载等异步操作失败时，应根据页面提示进入对应任务详情。
 
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/logs/panel-task-logs.png" alt="图 7 任务日志" />
+
+<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 任务日志</div>
+
 :::caution[敏感信息]
     日志可能包含主机地址、路径、用户名或接口参数。下载或提交日志前应移除密码、令牌、Cookie、私钥和其他敏感信息。
 
