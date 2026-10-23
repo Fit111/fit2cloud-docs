@@ -12,7 +12,7 @@ title: 产品 FAQ
 
 - [Linux 常见高危命令汇总](https://kb.fit2cloud.com/?p=173)
 - [JumpServer 存储目录迁移](https://kb.fit2cloud.com/?p=d2555b92-6992-4c8d-9282-20ed06f10add)
-- [JumpServer 如何使用自己的 SSL 证书进行访问？](https://kb.fit2cloud.com/?p=152)
+- [JumpServer 如何使用自己的 SSL 证书进行访问？](https://kb.fit2cloud.com/?p=98f1d391-fb98-4651-8051-9083a48934cf)
 - [JumpServer 登录密码忘记及用户锁定如何处理](https://kb.fit2cloud.com/?p=53)
 - [JumpServer 堡垒机对接 Elasticsearch 集群存储命令](https://kb.fit2cloud.com/?p=220)
 - [资产列表中的”可连接“与”硬件信息“如何获取？](https://kb.fit2cloud.com/?p=216)
