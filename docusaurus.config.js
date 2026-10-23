@@ -238,10 +238,10 @@ const config = {
           '**/*.test.{js,jsx,ts,tsx}',
           '**/__tests__/**',
         ],
-        // 版本化: current = v1, 暂无历史版本(同 SQLBot/Cordys)
+        // 版本化: current = v2, 暂无历史版本(同 SQLBot/Cordys)
         lastVersion: 'current',
         versions: {
-          current: { label: 'v1', badge: false, banner: 'none' },
+          current: { label: 'v2', badge: false, banner: 'none' },
         },
       },
     ],
