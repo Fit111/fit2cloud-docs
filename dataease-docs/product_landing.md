@@ -23,9 +23,10 @@ import styles from './product_landing.module.css';
       等能力，让数据在团队内部安全、便捷地流转。
     </p>
     <div className={styles.heroBtns}>
-      {/* 顺序按设计稿：产品动态 → 下载安装 → 如何购买（DataEase 无公开在线体验入口，已去掉「快速体验」） */}
+      {/* 顺序按设计稿：产品动态 → 下载安装 → 快速体验 → 如何购买 */}
       <Link className={styles.heroBtn} to="/dataease/changelog">产品动态</Link>
       <Link className={styles.heroBtn} to="https://community.fit2cloud.com/#/products/dataease/downloads">下载安装</Link>
+      <Link className={styles.heroBtn} to="https://demo.dataease.cn/">快速体验</Link>
       <Link className={styles.heroBtn} to="https://dataease.cn/enterprise.html">如何购买</Link>
     </div>
   </div>
