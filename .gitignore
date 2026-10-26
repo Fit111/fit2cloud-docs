@@ -3,10 +3,13 @@
 
 # Production
 /build
+/pdf-output
 
 # Generated files
 .docusaurus
 .cache-loader
+__pycache__/
+*.py[cod]
 
 # Local env / IDE
 .venv/
