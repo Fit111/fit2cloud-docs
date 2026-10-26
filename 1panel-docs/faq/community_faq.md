@@ -125,7 +125,7 @@ sudo systemctl show-environment | grep '^GODEBUG='
 
 **处理方式**：
 
-需等待 PHP 官方镜像推送至 Docker Hub 后再升级 PHP 运行环境。官方已发布 PHP 与 Node.js 运行环境安全升级说明，请用户尽快升级 PHP 环境。
+官方已发布单独的 PHP 与 Node.js 运行环境安全升级说明，请用户尽快升级 PHP 环境。完整升级说明请参阅[PHP 漏洞修复](../faq/runtime-security-upgrade.md)。
 
 ### 4.2 网站如何切换 PHP 版本？
 
