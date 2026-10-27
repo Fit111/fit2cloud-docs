@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Prepare a Docusaurus documentation directory for MkDocs PDF rendering."""
 
 from __future__ import annotations
 
@@ -13,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable
 from urllib.parse import unquote, urlparse
@@ -24,6 +24,11 @@ try:
 except ImportError:  # Dependency is installed by the composite action.
     Image = None
 
+
+
+def _notify(message: str) -> None:
+    """Emit a GitHub Actions ::notice:: log line so progress is visible live."""
+    print(f'::notice::{message}', flush=True)
 
 PRODUCT_TITLES = {
     '1panel': '1Panel 文档',
@@ -727,6 +732,7 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
 
     work_dir = Path(args.work_dir).resolve()
     _clean_work_dir(work_dir, repo_root)
+    t0 = time.monotonic()
     docs_output = work_dir / 'docs'
     docs_output.mkdir(parents=True, exist_ok=True)
 
@@ -771,9 +777,12 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
     asset_collector = AssetCollector(repo_root, docs_root, docs_output, args.image_max_width)
     link_rewriter = LinkRewriter(repo_root, docs_root, copied)
 
-    for source in source_files:
+    total_files = len(source_files)
+    for index, source in enumerate(source_files, start=1):
         source = source.resolve()
         output = copied[source]
+        if index % 25 == 0 or index == total_files:
+            _notify(f'处理中 {index}/{total_files}: {source.relative_to(docs_root).as_posix()}')
         text = source.read_text(encoding='utf-8')
         if source.suffix.lower() == '.mdx':
             text = _strip_mdx_module_lines(text)
@@ -864,6 +873,8 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         f'准备完成: {len(source_files)} 个 Markdown，'
         f'{metadata["nav_entries"]} 个导航页面，{metadata["assets_copied"]} 个资源'
     )
+    _notify(f'资源统计: 转换 {len(asset_collector.converted)} 个，复制 {len(asset_collector.by_source)} 个，缺失 {len(asset_collector.missing)} 个')
+    _notify(f'prepare 阶段耗时 {time.monotonic() - t0:.1f} 秒')
     return metadata
 
 

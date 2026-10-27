@@ -63,19 +63,27 @@ runs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         set -euo pipefail
+        # WeasyPrint 需要的 C 库。中文字体改用仓库内置字体（见下一步），
+        # 避免每次从 apt 拉取巨大的 fonts-noto-cjk（曾耗时 21 分钟）。
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends \
           fontconfig \
-          fonts-noto-cjk \
-          fonts-noto-color-emoji \
           libcairo2 \
-          libharfbuzz-subset0 \
           libharfbuzz0b \
           libjpeg-dev \
           libopenjp2-7 \
           libpango-1.0-0 \
           libpangoft2-1.0-0
-        sudo fc-cache -f
+    - name: Install bundled CJK fonts
+      shell: bash
+      run: |
+        set -euo pipefail
+        # 内置 Alibaba PuHuiTi，与 CSS font-family 直接匹配，覆盖中文渲染。
+        FONT_DIR="/usr/share/fonts/truetype/alibaba-puhuiti"
+        sudo mkdir -p "$FONT_DIR"
+        sudo cp "$GITHUB_ACTION_PATH"/fonts/*.ttf "$FONT_DIR/"
+        sudo chmod 644 "$FONT_DIR"/*.ttf
+        sudo fc-cache -f "$FONT_DIR"
 
     - name: Install Python dependencies and local plugin
       shell: bash
