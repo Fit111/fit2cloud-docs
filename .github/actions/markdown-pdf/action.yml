@@ -21,6 +21,10 @@ inputs:
     description: Resize wider images to this pixel width; 0 disables resizing.
     required: false
     default: '1600'
+  exclude:
+    description: Comma/newline separated docs-relative files or globs to skip, e.g. product_landing.md.
+    required: false
+    default: ''
   output_dir:
     description: Output directory relative to GITHUB_WORKSPACE, or an absolute path under the workspace/runner temp.
     required: false
@@ -99,6 +103,7 @@ runs:
         PDF_TITLE: ${{ inputs.title }}
         TOC_DEPTH: ${{ inputs.toc_depth }}
         IMAGE_MAX_WIDTH: ${{ inputs.image_max_width }}
+        EXCLUDE: ${{ inputs.exclude }}
         WORK_DIR: ${{ runner.temp }}/docs-pdf-work
         METADATA_PATH: ${{ runner.temp }}/docs-pdf-metadata.json
         PYTHONUTF8: '1'
@@ -112,7 +117,8 @@ runs:
           --title "$PDF_TITLE" \
           --output-name "$OUTPUT_NAME" \
           --toc-depth "$TOC_DEPTH" \
-          --image-max-width "$IMAGE_MAX_WIDTH"
+          --image-max-width "$IMAGE_MAX_WIDTH" \
+          --exclude "$EXCLUDE"
 
     - name: Build PDF
       shell: bash

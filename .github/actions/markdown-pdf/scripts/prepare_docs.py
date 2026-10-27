@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import hashlib
 import json
 import os
@@ -12,7 +13,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any, Callable
 from urllib.parse import unquote, urlparse
 
@@ -66,6 +67,16 @@ HTML_IMAGE_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 FRONT_MATTER_RE = re.compile(r'\A---\s*\n(.*?)\n---\s*(?:\n|\Z)', re.DOTALL)
+JSX_COMMENT_RE = re.compile(r'\{/\*.*?\*/\}', re.DOTALL)
+MDX_LINK_RE = re.compile(
+    r'<Link\b(?P<attrs>[^>]*?\bto\s*=\s*["\'](?P<href>[^"\']+)["\'][^>]*?)>'
+    r'(?P<inner>.*?)</Link>',
+    re.DOTALL,
+)
+UNSUPPORTED_MDX_RE = re.compile(
+    r'<(?P<tag>Link|Tabs|TabItem|DocCardList|Admonition)\b|className=\{'
+)
+FENCE_LINE_RE = re.compile(r'^[ \t]*(?P<fence>`{3,}|~{3,})')
 
 
 class PrepareError(RuntimeError):
@@ -155,6 +166,68 @@ def _strip_mdx_module_lines(text: str) -> str:
             continue
         break
     return front_matter + ''.join(lines[index:])
+
+
+def _compile_excludes(raw: str) -> list[str]:
+    """Split a comma/newline separated exclusion list into glob patterns."""
+    patterns: list[str] = []
+    for token in re.split(r'[\n,]+', raw or ''):
+        token = token.strip().replace('\\', '/')
+        if token:
+            patterns.append(token)
+    return patterns
+
+
+def _is_excluded(relative: PurePosixPath, patterns: list[str]) -> str | None:
+    """Return the pattern that matches a docs-relative path, or None."""
+    posix = relative.as_posix()
+    name = relative.name
+    for pattern in patterns:
+        if fnmatch.fnmatch(posix, pattern):
+            return pattern
+        if '/' not in pattern and fnmatch.fnmatch(name, pattern):
+            return pattern
+    return None
+
+
+def _outside_fence_lines(text: str) -> list[str]:
+    """Yield only the lines that are not inside fenced code blocks."""
+    lines = text.splitlines()
+    result: list[str] = []
+    fence: str | None = None
+    for line in lines:
+        match = FENCE_LINE_RE.match(line)
+        if fence is None and match:
+            fence = match.group('fence')
+            continue
+        if fence is not None:
+            if line.lstrip().startswith(fence):
+                fence = None
+            continue
+        result.append(line)
+    return result
+
+
+def degrade_mdx(text: str) -> str:
+    """Best-effort downgrade of JSX-only syntax that raw HTML cannot render."""
+    def _link(match: re.Match[str]) -> str:
+        return f'<a href="{match.group("href")}">{match.group("inner")}</a>'
+
+    text = JSX_COMMENT_RE.sub('', text)
+    text = _apply_outside_fences(text, lambda s: MDX_LINK_RE.sub(_link, s))
+    return text
+
+
+def scan_unsupported_mdx(text: str) -> list[str]:
+    """Report JSX component tags / object-props that survived, outside code fences."""
+    found: list[str] = []
+    for line in _outside_fence_lines(text):
+        match = UNSUPPORTED_MDX_RE.search(line)
+        if match:
+            token = match.group('tag') or 'className={'
+            if token not in found:
+                found.append(token)
+    return found
 
 
 def convert_admonitions(text: str) -> str:
@@ -659,6 +732,22 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
     if not source_files:
         raise PrepareError(f'目录中没有 Markdown 文件: {args.docs_dir}')
 
+    exclude_patterns = _compile_excludes(getattr(args, 'exclude', ''))
+    excluded_count = 0
+    if exclude_patterns:
+        kept: list[Path] = []
+        for path in source_files:
+            relative = PurePosixPath(path.relative_to(docs_root).as_posix())
+            hit = _is_excluded(relative, exclude_patterns)
+            if hit:
+                excluded_count += 1
+                print(f'::notice::已排除文档: {relative.as_posix()} (匹配 {hit})')
+            else:
+                kept.append(path)
+        source_files = kept
+        if not source_files:
+            raise PrepareError('排除后没有可生成的 Markdown 文件')
+
     copied: dict[Path, Path] = {}
     title_map: dict[Path, str] = {}
     for source in source_files:
@@ -671,6 +760,7 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         if title:
             title_map[source] = title
 
+    jsx_fallback_files: list[str] = []
     asset_collector = AssetCollector(repo_root, docs_root, docs_output, args.image_max_width)
     link_rewriter = LinkRewriter(repo_root, docs_root, copied)
 
@@ -680,6 +770,12 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         text = source.read_text(encoding='utf-8')
         if source.suffix.lower() == '.mdx':
             text = _strip_mdx_module_lines(text)
+        text = degrade_mdx(text)
+        residual = scan_unsupported_mdx(text)
+        if residual:
+            jsx_fallback_files.append(
+                f"{source.relative_to(docs_root).as_posix()}: {', '.join(residual)}"
+            )
         text = convert_admonitions(text)
         text = rewrite_images(text, source, output, asset_collector)
         text = link_rewriter.rewrite(text, source, output)
@@ -719,6 +815,13 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
     config_path = work_dir / 'mkdocs.yml'
     write_mkdocs_config(config_path, title, nav, args.toc_depth)
 
+    if jsx_fallback_files:
+        print(
+            f'::warning::有 {len(jsx_fallback_files)} 个文件仍含无法还原的 JSX '
+            f'（建议用 exclude 排除）: '
+            + ' | '.join(jsx_fallback_files[:5])
+        )
+
     if asset_collector.missing:
         samples = ', '.join(str(path) for path in sorted(asset_collector.missing)[:5])
         print(
@@ -740,6 +843,8 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         'assets_copied': len(asset_collector.by_source),
         'assets_converted': len(asset_collector.converted),
         'missing_assets': len(asset_collector.missing),
+        'excluded_files': excluded_count,
+        'jsx_fallback_files': jsx_fallback_files,
         'sidebar': str(sidebar) if sidebar else None,
     }
     metadata_path = Path(args.metadata).resolve()
@@ -774,6 +879,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument('--output-name', default='')
     parser.add_argument('--toc-depth', type=int, default=3)
     parser.add_argument('--image-max-width', type=int, default=1600)
+    parser.add_argument(
+        '--exclude',
+        default='',
+        help="Comma/newline separated docs-relative paths or globs to skip (e.g. 'product_landing.md').",
+    )
     return parser
 
 

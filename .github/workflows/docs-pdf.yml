@@ -34,6 +34,11 @@ on:
         required: true
         type: string
         default: '1600'
+      exclude:
+        description: '需排除的文档（相对 docs_dir，逗号或换行分隔，支持通配）。如新版首页页 product_landing.md'
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -61,6 +66,7 @@ jobs:
           title: ${{ inputs.title }}
           toc_depth: ${{ inputs.toc_depth }}
           image_max_width: ${{ inputs.image_max_width }}
+          exclude: ${{ inputs.exclude }}
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
