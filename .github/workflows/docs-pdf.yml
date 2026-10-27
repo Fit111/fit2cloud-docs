@@ -21,14 +21,13 @@ on:
         type: string
         default: ''
       toc_depth:
-        description: '目录层级'
+        description: 'PDF 目录最大层级（不是文档版本，建议选 3）'
         required: true
         type: choice
         default: '3'
         options:
           - '2'
           - '3'
-          - '4'
       image_max_width:
         description: '图片最大宽度（像素），0 表示不缩放'
         required: true
