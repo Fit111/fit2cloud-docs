@@ -105,7 +105,14 @@ def _clean_work_dir(work_dir: Path, repo_root: Path) -> None:
     resolved = work_dir.resolve()
     if resolved == repo_root.resolve() or resolved.parent == resolved:
         raise PrepareError(f'拒绝清理不安全的临时目录: {resolved}')
-    if not (_is_within(resolved, repo_root) or _is_within(resolved, Path(tempfile.gettempdir()))):
+    temp_roots = [Path(tempfile.gettempdir())]
+    runner_temp = os.environ.get('RUNNER_TEMP')
+    if runner_temp:
+        temp_roots.append(Path(runner_temp))
+    temp_roots = [path.resolve() for path in temp_roots]
+    if resolved in temp_roots:
+        raise PrepareError(f'拒绝清理系统临时目录本身: {resolved}')
+    if not (_is_within(resolved, repo_root) or any(_is_within(resolved, root) for root in temp_roots)):
         raise PrepareError(f'work_dir 必须位于仓库或系统临时目录内: {resolved}')
     if resolved.exists():
         shutil.rmtree(resolved)
