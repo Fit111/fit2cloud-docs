@@ -1,6 +1,6 @@
 name: Generate Documentation PDF
 
-run-name: Generate PDF - ${{ inputs.docs_dir }}
+run-name: Generate PDF - ${{ inputs.docs_dir || 'dataease-docs' }}
 
 on:
   workflow_dispatch:
@@ -38,6 +38,9 @@ on:
         required: false
         type: string
         default: ''
+  push:
+    branches:
+      - ci/test-pdf-action
 
 permissions:
   contents: read
@@ -60,12 +63,12 @@ jobs:
         id: pdf
         uses: ./.github/actions/markdown-pdf
         with:
-          docs_dir: ${{ inputs.docs_dir }}
+          docs_dir: ${{ inputs.docs_dir || 'dataease-docs' }}
           output_name: ${{ inputs.output_name }}
           title: ${{ inputs.title }}
-          toc_depth: ${{ inputs.toc_depth }}
-          image_max_width: ${{ inputs.image_max_width }}
-          exclude: ${{ inputs.exclude }}
+          toc_depth: ${{ inputs.toc_depth || '3' }}
+          image_max_width: ${{ inputs.image_max_width || '1600' }}
+          exclude: ${{ inputs.exclude || 'product_landing.md' }}
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -78,7 +81,7 @@ jobs:
       - name: Write job summary
         shell: bash
         env:
-          DOCS_DIR: ${{ inputs.docs_dir }}
+          DOCS_DIR: ${{ inputs.docs_dir || 'dataease-docs' }}
           PDF_NAME: ${{ steps.pdf.outputs.pdf_name }}
           PDF_SIZE_BYTES: ${{ steps.pdf.outputs.pdf_size }}
           PDF_SHA256: ${{ steps.pdf.outputs.pdf_sha256 }}
