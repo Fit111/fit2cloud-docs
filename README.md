@@ -19,6 +19,7 @@
 | DataEase | 人人可用的开源 BI 数据分析工具 | https://docs.fit2cloud.com/dataease/ |
 | SQLBot | 基于大模型的智能问数系统 | https://docs.fit2cloud.com/sqlbot/ |
 | Cordys CRM | 新一代开源 AI CRM 客户管理系统 | https://docs.fit2cloud.com/cordys/ |
+| MeterSphere | 新一代的开源持续测试工具 | https://docs.fit2cloud.com/metersphere/ |
 | Halo | 强大易用的开源建站工具 | https://docs.fit2cloud.com/halo/ |
 
 ## 技术栈
@@ -38,6 +39,7 @@ fit2cloud-docs/
 ├── maxkb-docs/            # MaxKB 文档
 ├── dataease-docs/         # DataEase 文档
 ├── sqlbot-docs/           # SQLBot 文档
+├── metersphere-docs/      # MeterSphere 文档
 ├── cordys-docs/           # CordysCRM 文档
 ├── halo-docs/             # Halo 文档
 ├── i18n/                  # 国际化内容（中/英）

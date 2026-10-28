@@ -18,7 +18,7 @@ const HOME_PRODUCTS = sortProducts([
   {id: 'maxkb', name: 'MaxKB', to: '/maxkb/', desc: '强大易用的企业级智能体平台', logo: 'MaxKB-03.png'},
   {id: 'dataease', name: 'DataEase', to: '/dataease/', desc: '人人可用的开源 BI 工具', logo: 'DataEase-07-蓝色.png'},
   {id: 'sqlbot', name: 'SQLBot', to: '/sqlbot/', desc: '基于大模型的智能问数系统', logo: '【辅助图形】SQLBot.png'},
-  {id: 'metersphere', name: 'MeterSphere', link: 'https://metersphere.io/docs/v3.x/', desc: '新一代的开源持续测试工具', logo: 'MeterSphere-辅助图形-紫色.png'},
+  {id: 'metersphere', name: 'MeterSphere', to: '/metersphere/', desc: '新一代的开源持续测试工具', logo: 'MeterSphere-辅助图形-紫色.png'},
   {id: 'halo', name: 'Halo', to: '/halo/', desc: '强大易用的开源建站工具', logo: 'Halo-03.png'},
   {id: 'cordys', name: 'Cordys CRM', to: '/cordys/', desc: '新一代的开源 AI CRM 系统', logo: 'CORDYS-辅助图形.png'},
 ]);

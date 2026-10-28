@@ -1,0 +1,236 @@
+---
+title: MeterSphere
+description: MeterSphere 产品文档导航页 —— 了解产品、快速上手、功能手册、运维开发与常见问题入口。
+slug: /
+hide_title: true
+displayed_sidebar: metersphere
+toc_min_heading_level: 2
+toc_max_heading_level: 2
+pagination_prev: null
+pagination_next: null
+---
+
+import Link from '@docusaurus/Link';
+import styles from './product_landing.module.css';
+
+{/* ===== Hero 区：左侧标题/简介/按钮，右侧教学视频卡片 ===== */}
+<div className={styles.hero}>
+  <h1 className={styles.heroTitle}>MeterSphere</h1>
+  <div className={styles.heroBody}>
+    <p className={styles.heroDesc}>
+      MeterSphere 是新一代的开源持续测试工具，内置基于大模型的 AI 助手，覆盖测试用例管理、
+      测试计划执行、缺陷管理、接口测试与接口自动化，集 Postman 的易用与 JMeter 的灵活于一体，
+      并以「系统-组织-项目」分层设计支撑团队协作，让软件测试工作更简单、更高效，
+      不再成为持续交付的瓶颈。
+    </p>
+    <div className={styles.heroBtns}>
+      <Link className={styles.heroBtn} to="/metersphere/about/changelog">产品动态</Link>
+      <Link className={styles.heroBtn} to="https://community.fit2cloud.com/#/products/metersphere/downloads">下载安装</Link>
+      <Link className={styles.heroBtn} to="https://metersphere.io/v3/pricing.html">如何购买</Link>
+    </div>
+  </div>
+  {/* 教学视频卡片：封面用品牌紫底 + 纯文字，点击直接跳 B 站课程
+      「MeterSphere 四大核心能力」，其余课程清单见侧边栏「教学视频」页。 */}
+  <Link className={styles.videoCard} to="https://www.bilibili.com/video/BV1Ab421J7K1/">
+    <span className={styles.videoCover}>
+      <span className={styles.videoCoverLogo}>MeterSphere</span>
+      <span className={styles.videoCoverText}>开源持续测试平台</span>
+      <span className={styles.videoCoverPlay} aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 5.8v12.4c0 .5.55.8.97.53l9.9-6.2a.62.62 0 0 0 0-1.06l-9.9-6.2A.62.62 0 0 0 7 5.8z" />
+        </svg>
+      </span>
+    </span>
+    <span className={styles.videoHint}>B 站 · 四大核心能力</span>
+  </Link>
+</div>
+
+{/* ===== 分区 1：了解 MeterSphere ===== */}
+<div className={styles.section}>
+  <div className={styles.sectionHead}>
+    <span className={styles.sectionIcon}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+      </svg>
+    </span>
+
+## 了解 MeterSphere
+
+  </div>
+  <div className={styles.sectionBody}>
+    <div className={styles.linkGridSingle}>
+      <div className={styles.linkGroup}>
+        <Link className={styles.groupTitle} to="/metersphere/product-intro">产品介绍</Link>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/product-intro">MeterSphere 介绍</Link>
+          <Link className={styles.subLink} to="/metersphere/system_arch">系统架构</Link>
+          <Link className={styles.subLink} to="/metersphere/plugin">插件列表</Link>
+          <Link className={styles.subLink} to="/metersphere/video_index">教学视频</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ===== 分区 2：快速上手 ===== */}
+<div className={styles.section}>
+  <div className={styles.sectionHead}>
+    <span className={styles.sectionIcon}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+      </svg>
+    </span>
+
+## 快速上手
+
+  </div>
+  <div className={styles.sectionBody}>
+    <div className={styles.linkGridSingle}>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>安装部署</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/installation/offline_installation">离线安装</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/online_installation">在线安装</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/1Panel">1Panel 安装</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/network_port">网络端口要求</Link>
+        </div>
+      </div>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>快速开始</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/quick_start/test_case">使用用例管理</Link>
+          <Link className={styles.subLink} to="/metersphere/quick_start/api_test">使用接口测试</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ===== 分区 3：功能手册 ===== */}
+<div className={styles.section}>
+  <div className={styles.sectionHead}>
+    <span className={styles.sectionIcon}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </svg>
+    </span>
+
+## 功能手册
+
+  </div>
+  <div className={styles.sectionBody}>
+    <div className={styles.linkGridSingle}>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>测试管理</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/user_manual/test_case/intro">测试用例</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/test_plan/intro">测试计划</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/defect_management/overview">缺陷管理</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/test_case/test_case_review">用例评审</Link>
+        </div>
+      </div>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>接口测试</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/intro">功能概述</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/debug">接口调试</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/api_definition">接口定义</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/api_automation">场景管理</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/request_params">请求参数</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/functions">内置函数</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/api_test/test_report">接口报告</Link>
+        </div>
+      </div>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>平台管理</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/user_manual/general">通用功能</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/workstation/index">工作台</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/project_management/overview">项目管理</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/system_management/intro">系统设置</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/personal_center/information">个人中心</Link>
+          <Link className={styles.subLink} to="/metersphere/user_manual/x-pack/intro">X-Pack</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ===== 分区 4：运维与开发 ===== */}
+<div className={styles.section}>
+  <div className={styles.sectionHead}>
+    <span className={styles.sectionIcon}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    </span>
+
+## 运维与开发
+
+  </div>
+  <div className={styles.sectionBody}>
+    <div className={styles.linkGridSingle}>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>运维与扩展</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/installation/cli">命令行工具</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/backup_data">数据备份与还原</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/task_runner">Task Runner 部署</Link>
+          <Link className={styles.subLink} to="/metersphere/installation/installation_k8s">Kubernetes 部署</Link>
+        </div>
+      </div>
+      <div className={styles.linkGroup}>
+        <span className={styles.groupLabel}>开发者</span>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/dev_manual/dev_manual">开发环境搭建</Link>
+          <Link className={styles.subLink} to="/metersphere/dev_manual/api_plugin_dev">接口自动化插件开发</Link>
+          <Link className={styles.subLink} to="/metersphere/dev_manual/platform_plugin_dev">第三方平台插件开发</Link>
+          <Link className={styles.subLink} to="/metersphere/dev_manual/script_json">插件脚本示例</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ===== 分区 5：热门问题 ===== */}
+<div className={styles.section}>
+  <div className={styles.sectionHead}>
+    <span className={styles.sectionIcon}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+        <line x1="12" y1="17" x2="12.01" y2="17" />
+      </svg>
+    </span>
+
+## 热门问题
+
+  </div>
+  <div className={styles.sectionBody}>
+    <div className={styles.linkGridSingle}>
+      <div className={styles.linkGroup}>
+        <div className={styles.subLinkRowWide}>
+          <Link className={styles.subLink} to="/metersphere/ask_question/install_question">安装部署常见问题</Link>
+          <Link className={styles.subLink} to="/metersphere/ask_question/api_question">接口测试常见问题</Link>
+          <Link className={styles.subLink} to="/metersphere/ask_question/ai_service">如何接入 AI 大模型？</Link>
+          <Link className={styles.subLink} to="/metersphere/case_studies/user_cases">客户案例</Link>
+        </div>
+      </div>
+      <div className={styles.linkGroup}>
+        <Link className={styles.groupTitle} to="/metersphere/about/contact">联系我们</Link>
+        <div className={styles.subLinkRow}>
+          <Link className={styles.subLink} to="/metersphere/enterprise">申请企业版试用</Link>
+          <Link className={styles.subLink} to="https://bbs.fit2cloud.com/c/ms/8">社区论坛</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
