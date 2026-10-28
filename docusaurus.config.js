@@ -49,6 +49,8 @@ const config = {
     'cordys-docs/static',
     'ai-gateway-docs/static',
     'halo-docs/static',
+    'metersphere-docs/static',
+    'metersphere_versioned_docs/version-v2/static',
   ],
 
   // 客户端模块: 路由更新时给 <html data-docs-product> 打上当前产品标记,
@@ -242,6 +244,23 @@ const config = {
         lastVersion: 'current',
         versions: {
           current: { label: 'v2', badge: false, banner: 'none' },
+        },
+      },
+    ],
+    // MeterSphere 官方文档(从 MkDocs 的 metersphere/docs v3.x 分支迁移), namespace=metersphere
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'metersphere',
+        path: 'metersphere-docs',
+        routeBasePath: 'metersphere',
+        sidebarPath: 'metersphere-docs/sidebars.js',
+        // 版本化: current(metersphere-docs) = v3, 历史版本 v2
+        // （v2 快照在 metersphere_versioned_docs/version-v2，侧栏在 metersphere_versioned_sidebars）
+        lastVersion: 'current',
+        versions: {
+          current: { label: 'v3', badge: false, banner: 'none' },
+          v2: { label: 'v2', badge: false, banner: 'none' },
         },
       },
     ],
