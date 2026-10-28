@@ -1,0 +1,748 @@
+{
+  "metersphere": [
+    {
+      "type": "doc",
+      "id": "index",
+      "label": "项目介绍",
+      "key": "v2-doc:index"
+    },
+    {
+      "type": "doc",
+      "id": "system_arch",
+      "label": "系统架构",
+      "key": "v2-doc:system_arch"
+    },
+    {
+      "type": "doc",
+      "id": "about/changelog",
+      "label": "更新日志",
+      "key": "v2-doc:about/changelog"
+    },
+    {
+      "type": "category",
+      "label": "安装部署",
+      "collapsed": false,
+      "key": "v2-cat:安装部署",
+      "items": [
+        {
+          "type": "doc",
+          "id": "installation/network_port",
+          "label": "网络端口要求",
+          "key": "v2-doc:installation/network_port"
+        },
+        {
+          "type": "doc",
+          "id": "installation/pre_work",
+          "label": "前置准备",
+          "key": "v2-doc:installation/pre_work"
+        },
+        {
+          "type": "category",
+          "label": "Linux 单机部署",
+          "collapsed": false,
+          "key": "v2-cat:Linux 单机部署",
+          "items": [
+            {
+              "type": "doc",
+              "id": "installation/offline_installation",
+              "label": "离线安装",
+              "key": "v2-doc:installation/offline_installation"
+            },
+            {
+              "type": "doc",
+              "id": "installation/offline_upgrade",
+              "label": "离线升级",
+              "key": "v2-doc:installation/offline_upgrade"
+            },
+            {
+              "type": "doc",
+              "id": "installation/online_installation",
+              "label": "在线安装",
+              "key": "v2-doc:installation/online_installation"
+            },
+            {
+              "type": "doc",
+              "id": "installation/online_upgrade",
+              "label": "在线升级",
+              "key": "v2-doc:installation/online_upgrade"
+            },
+            {
+              "type": "doc",
+              "id": "installation/offline_installation_windows",
+              "label": "Windows 离线安装",
+              "key": "v2-doc:installation/offline_installation_windows"
+            },
+            {
+              "type": "doc",
+              "id": "installation/offline_installation_mac",
+              "label": "Mac 离线安装",
+              "key": "v2-doc:installation/offline_installation_mac"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "installation/kubernetes_installation",
+          "label": "Kubernetes 部署",
+          "key": "v2-doc:installation/kubernetes_installation"
+        },
+        {
+          "type": "doc",
+          "id": "installation/backup_data",
+          "label": "数据备份与还原",
+          "key": "v2-doc:installation/backup_data"
+        },
+        {
+          "type": "doc",
+          "id": "installation/cli",
+          "label": "命令行工具",
+          "key": "v2-doc:installation/cli"
+        },
+        {
+          "type": "category",
+          "label": "组件构建",
+          "collapsed": false,
+          "key": "v2-cat:组件构建",
+          "items": [
+            {
+              "type": "doc",
+              "id": "installation/build_kafka",
+              "label": "Kafka 构建",
+              "key": "v2-doc:installation/build_kafka"
+            },
+            {
+              "type": "doc",
+              "id": "installation/build_node_controller",
+              "label": "Node Controller 构建",
+              "key": "v2-doc:installation/build_node_controller"
+            },
+            {
+              "type": "doc",
+              "id": "installation/build_data_streaming",
+              "label": "数据流构建",
+              "key": "v2-doc:installation/build_data_streaming"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "快速开始",
+      "collapsed": false,
+      "key": "v2-cat:快速开始",
+      "items": [
+        {
+          "type": "doc",
+          "id": "quick_start/quick_start",
+          "label": "一键部署",
+          "key": "v2-doc:quick_start/quick_start"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/create_project",
+          "label": "创建项目",
+          "key": "v2-doc:quick_start/create_project"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/test_track",
+          "label": "使用测试跟踪",
+          "key": "v2-doc:quick_start/test_track"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/api_test",
+          "label": "使用接口测试",
+          "key": "v2-doc:quick_start/api_test"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/ui_test",
+          "label": "使用 UI 测试",
+          "key": "v2-doc:quick_start/ui_test"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/load_test",
+          "label": "使用性能测试",
+          "key": "v2-doc:quick_start/load_test"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "用户手册",
+      "collapsed": false,
+      "key": "v2-cat:用户手册",
+      "items": [
+        {
+          "type": "doc",
+          "id": "user_manual/general",
+          "label": "通用功能",
+          "key": "v2-doc:user_manual/general"
+        },
+        {
+          "type": "doc",
+          "id": "user_manual/access_matrix",
+          "label": "权限矩阵",
+          "key": "v2-doc:user_manual/access_matrix"
+        },
+        {
+          "type": "category",
+          "label": "我的工作台",
+          "collapsed": false,
+          "key": "v2-cat:我的工作台",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/my_desk/dashboard",
+              "label": "我的仪表盘",
+              "key": "v2-doc:user_manual/my_desk/dashboard"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/my_desk/todo",
+              "label": "我的待办",
+              "key": "v2-doc:user_manual/my_desk/todo"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/my_desk/attention",
+              "label": "我的关注",
+              "key": "v2-doc:user_manual/my_desk/attention"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/my_desk/created",
+              "label": "我创建的",
+              "key": "v2-doc:user_manual/my_desk/created"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "测试跟踪",
+          "collapsed": false,
+          "key": "v2-cat:测试跟踪",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/test_track/intro",
+              "label": "概述",
+              "key": "v2-doc:user_manual/test_track/intro"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/test_track/home",
+              "label": "首页",
+              "key": "v2-doc:user_manual/test_track/home"
+            },
+            {
+              "type": "category",
+              "label": "功能用例",
+              "collapsed": false,
+              "key": "v2-cat:功能用例",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_case/test_case_module",
+                  "label": "模块树管理",
+                  "key": "v2-doc:user_manual/test_track/test_case/test_case_module"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_case/test_case",
+                  "label": "用例管理",
+                  "key": "v2-doc:user_manual/test_track/test_case/test_case"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_case/public_test_case",
+                  "label": "公共用例库",
+                  "key": "v2-doc:user_manual/test_track/test_case/public_test_case"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_case/switch_project",
+                  "label": "切换工作空间",
+                  "key": "v2-doc:user_manual/test_track/test_case/switch_project"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/test_track/test_case_review",
+              "label": "用例评审",
+              "key": "v2-doc:user_manual/test_track/test_case_review"
+            },
+            {
+              "type": "category",
+              "label": "测试计划",
+              "collapsed": false,
+              "key": "v2-cat:测试计划",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_plan/test_plan_list",
+                  "label": "计划列表",
+                  "key": "v2-doc:user_manual/test_track/test_plan/test_plan_list"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_plan/test_plan_manage",
+                  "label": "管理计划",
+                  "key": "v2-doc:user_manual/test_track/test_plan/test_plan_manage"
+                },
+                {
+                  "type": "doc",
+                  "id": "user_manual/test_track/test_plan/test_plan_batch",
+                  "label": "批量操作",
+                  "key": "v2-doc:user_manual/test_track/test_plan/test_plan_batch"
+                }
+              ]
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/test_track/test_defect",
+              "label": "缺陷管理",
+              "key": "v2-doc:user_manual/test_track/test_defect"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/test_track/test_report",
+              "label": "测试跟踪报告",
+              "key": "v2-doc:user_manual/test_track/test_report"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "接口测试",
+          "collapsed": false,
+          "key": "v2-cat:接口测试",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/intro",
+              "label": "概述",
+              "key": "v2-doc:user_manual/api_test/intro"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/home",
+              "label": "首页",
+              "key": "v2-doc:user_manual/api_test/home"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/api_definition",
+              "label": "接口定义",
+              "key": "v2-doc:user_manual/api_test/api_definition"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/api_automation",
+              "label": "接口自动化",
+              "key": "v2-doc:user_manual/api_test/api_automation"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/test_report",
+              "label": "接口测试报告",
+              "key": "v2-doc:user_manual/api_test/test_report"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/api_step",
+              "label": "接口用例操作",
+              "key": "v2-doc:user_manual/api_test/api_step"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/api_scenario",
+              "label": "接口场景编排",
+              "key": "v2-doc:user_manual/api_test/api_scenario"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test/functions",
+              "label": "内置函数",
+              "key": "v2-doc:user_manual/api_test/functions"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/api_test",
+              "label": "接口测试（旧版）",
+              "key": "v2-doc:user_manual/api_test"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "UI 测试",
+          "collapsed": false,
+          "key": "v2-cat:UI 测试",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/ui_test/intro",
+              "label": "概述",
+              "key": "v2-doc:user_manual/ui_test/intro"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/ui_test/ui_element_store",
+              "label": "元素库",
+              "key": "v2-doc:user_manual/ui_test/ui_element_store"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/ui_test/ui_automation",
+              "label": "UI 自动化",
+              "key": "v2-doc:user_manual/ui_test/ui_automation"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/ui_test/ui_test_report",
+              "label": "UI 测试报告",
+              "key": "v2-doc:user_manual/ui_test/ui_test_report"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/ui_test/info",
+              "label": "环境说明",
+              "key": "v2-doc:user_manual/ui_test/info"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "性能测试",
+          "collapsed": false,
+          "key": "v2-cat:性能测试",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/load_test/intro",
+              "label": "概述",
+              "key": "v2-doc:user_manual/load_test/intro"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/load_test/home",
+              "label": "首页",
+              "key": "v2-doc:user_manual/load_test/home"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/load_test/load_test",
+              "label": "性能测试",
+              "key": "v2-doc:user_manual/load_test/load_test"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/load_test/test_report",
+              "label": "性能测试报告",
+              "key": "v2-doc:user_manual/load_test/test_report"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "报表统计",
+          "collapsed": false,
+          "key": "v2-cat:报表统计",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/report_statistics/project_statistics",
+              "label": "项目报表",
+              "key": "v2-doc:user_manual/report_statistics/project_statistics"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/report_statistics/report",
+              "label": "项目报告",
+              "key": "v2-doc:user_manual/report_statistics/report"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "项目设置",
+          "collapsed": false,
+          "key": "v2-cat:项目设置",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/project_info",
+              "label": "项目信息",
+              "key": "v2-doc:user_manual/project_management/project_info"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/project_user",
+              "label": "项目成员",
+              "key": "v2-doc:user_manual/project_management/project_user"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/usergroup_permission",
+              "label": "用户组与权限",
+              "key": "v2-doc:user_manual/project_management/usergroup_permission"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/project_environment",
+              "label": "项目环境",
+              "key": "v2-doc:user_manual/project_management/project_environment"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/file_management",
+              "label": "文件管理",
+              "key": "v2-doc:user_manual/project_management/file_management"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/false_library",
+              "label": "误报库",
+              "key": "v2-doc:user_manual/project_management/false_library"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/template_management",
+              "label": "模版管理",
+              "key": "v2-doc:user_manual/project_management/template_management"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/notice_management",
+              "label": "消息设置",
+              "key": "v2-doc:user_manual/project_management/notice_management"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/operation_log",
+              "label": "操作日志",
+              "key": "v2-doc:user_manual/project_management/operation_log"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/version_management",
+              "label": "版本管理",
+              "key": "v2-doc:user_manual/project_management/version_management"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/application_management",
+              "label": "应用管理",
+              "key": "v2-doc:user_manual/project_management/application_management"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/project_management/customcode_snippets",
+              "label": "自定义代码片段",
+              "key": "v2-doc:user_manual/project_management/customcode_snippets"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "系统设置",
+          "collapsed": false,
+          "key": "v2-cat:系统设置",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/system_management/intro",
+              "label": "概述",
+              "key": "v2-doc:user_manual/system_management/intro"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/system_management/system",
+              "label": "系统",
+              "key": "v2-doc:user_manual/system_management/system"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/system_management/workspace",
+              "label": "工作空间",
+              "key": "v2-doc:user_manual/system_management/workspace"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "插件使用",
+          "collapsed": false,
+          "key": "v2-cat:插件使用",
+          "items": [
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/api_test_plugin",
+              "label": "接口测试插件",
+              "key": "v2-doc:user_manual/plugin_use/api_test_plugin"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/chrome_plugin",
+              "label": "Chrome 插件",
+              "key": "v2-doc:user_manual/plugin_use/chrome_plugin"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/idea_plugin",
+              "label": "IDEA 插件",
+              "key": "v2-doc:user_manual/plugin_use/idea_plugin"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/jenkins_plugin",
+              "label": "Jenkins 插件",
+              "key": "v2-doc:user_manual/plugin_use/jenkins_plugin"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/selenium_ide_plugin",
+              "label": "Selenium IDE 插件",
+              "key": "v2-doc:user_manual/plugin_use/selenium_ide_plugin"
+            },
+            {
+              "type": "doc",
+              "id": "user_manual/plugin_use/service_integration_plugin",
+              "label": "服务集成插件",
+              "key": "v2-doc:user_manual/plugin_use/service_integration_plugin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "tutorial/use_tutorial",
+      "label": "使用教程",
+      "key": "v2-doc:tutorial/use_tutorial"
+    },
+    {
+      "type": "doc",
+      "id": "teach_video/video_index",
+      "label": "教学视频",
+      "key": "v2-doc:teach_video/video_index"
+    },
+    {
+      "type": "category",
+      "label": "常见问题",
+      "collapsed": false,
+      "key": "v2-cat:常见问题",
+      "items": [
+        {
+          "type": "doc",
+          "id": "faq/installation",
+          "label": "安装部署相关",
+          "key": "v2-doc:faq/installation"
+        },
+        {
+          "type": "doc",
+          "id": "faq/test_track",
+          "label": "测试跟踪相关",
+          "key": "v2-doc:faq/test_track"
+        },
+        {
+          "type": "doc",
+          "id": "faq/api_test",
+          "label": "接口测试相关",
+          "key": "v2-doc:faq/api_test"
+        },
+        {
+          "type": "doc",
+          "id": "faq/ui_test",
+          "label": "UI 测试相关",
+          "key": "v2-doc:faq/ui_test"
+        },
+        {
+          "type": "doc",
+          "id": "faq/load_test",
+          "label": "性能测试相关",
+          "key": "v2-doc:faq/load_test"
+        },
+        {
+          "type": "doc",
+          "id": "faq/report_statistics",
+          "label": "报表统计相关",
+          "key": "v2-doc:faq/report_statistics"
+        },
+        {
+          "type": "doc",
+          "id": "faq/system_management",
+          "label": "系统设置相关",
+          "key": "v2-doc:faq/system_management"
+        },
+        {
+          "type": "doc",
+          "id": "faq/service_integration",
+          "label": "服务集成相关",
+          "key": "v2-doc:faq/service_integration"
+        },
+        {
+          "type": "doc",
+          "id": "faq/enterprise",
+          "label": "企业版相关",
+          "key": "v2-doc:faq/enterprise"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "开发文档",
+      "collapsed": false,
+      "key": "v2-cat:开发文档",
+      "items": [
+        {
+          "type": "doc",
+          "id": "dev_manual",
+          "label": "开发环境搭建",
+          "key": "v2-doc:dev_manual"
+        },
+        {
+          "type": "doc",
+          "id": "automation_plugin_dev",
+          "label": "接口自动化插件开发",
+          "key": "v2-doc:automation_plugin_dev"
+        },
+        {
+          "type": "doc",
+          "id": "awesome-jmeter",
+          "label": "JMeter 学习资源",
+          "key": "v2-doc:awesome-jmeter"
+        }
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "case_studies/user_cases",
+      "label": "用户案例",
+      "key": "v2-doc:case_studies/user_cases"
+    },
+    {
+      "type": "doc",
+      "id": "about/security_bulletins",
+      "label": "安全公告",
+      "key": "v2-doc:about/security_bulletins"
+    },
+    {
+      "type": "doc",
+      "id": "about/contact",
+      "label": "联系我们",
+      "key": "v2-doc:about/contact"
+    },
+    {
+      "type": "doc",
+      "id": "enterprise",
+      "label": "申请企业版试用",
+      "key": "v2-doc:enterprise"
+    }
+  ]
+}
