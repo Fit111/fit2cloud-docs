@@ -129,15 +129,49 @@ html[data-docs-product='jumpserver'] .alert--warning {
   --ifm-alert-border-color: #e1ad26;
   background-color: var(--ifm-alert-background-color) !important;
 }
+/* MeterSphere：提示框去掉全部视觉样式（用户要求"只要文字"）——v3/v2 文档大量使用
+   :::note（v3 863 处、v2 1273 处）+ v2 1 处 :::info，背景/左边线/内边距全部清掉，
+   内容按普通正文段落渲染（margin 保留保证与前后文的段距）。 */
+html[data-docs-product='metersphere'] .alert--secondary,
+html[data-docs-product='metersphere'] .alert--info {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  /* Infima 的 .alert 会把链接改成「alert 前景色 + 下划线」(黑字下划线),
+     恢复全局默认: 蓝色链接、无下划线(与其他产品正文链接一致)。 */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-dark);
+  --ifm-link-decoration: none;
+}
+/* 标题行(如 :::note[组件说明])的 ⓘ 图标也去掉, 只留标题文字。
+   图标 span 的类名是 CSS Module 哈希(admonitionIcon_xxx), 用属性前缀匹配。 */
+html[data-docs-product='metersphere'] .alert--secondary [class*='admonitionIcon'],
+html[data-docs-product='metersphere'] .alert--info [class*='admonitionIcon'] {
+  display: none;
+}
 
 
-/* DataEase / SQLBot：图用 Markdown ![alt](src)，水平居中且不超过正文栏。
-   表拉满正文栏，表题与表同宽对齐。DataEase 的 note 蓝边已按 SQLBot 方式在正文里拆掉 :::note。 */
+/* DataEase / SQLBot / MeterSphere：图用 Markdown ![alt](src)，水平居中且不超过正文栏。
+   表拉满正文栏，表题与表同宽对齐。DataEase 的 note 蓝边已按 SQLBot 方式在正文里拆掉 :::note。
+   MeterSphere 的表为内嵌 HTML 且带手写 width 属性(plugin.md 等), display:block 下列宽失衡
+   (10px 列被压成竖排), display:table + width:100% 后 auto 布局保证各列不窄于内容宽度。 */
 html[data-docs-product='dataease'] .theme-doc-markdown table,
-html[data-docs-product='sqlbot'] .theme-doc-markdown table {
+html[data-docs-product='sqlbot'] .theme-doc-markdown table,
+html[data-docs-product='metersphere'] .theme-doc-markdown table {
   display: table;
   width: 100%;
   max-width: 100%;
+}
+/* MeterSphere 表格里的手写 width 属性(如 width="10px")会作为 presentational hint
+   继续主导列宽(10px 列被压成竖排), 显式覆盖为 auto 让浏览器按内容自适应分配。 */
+html[data-docs-product='metersphere'] .theme-doc-markdown th[width],
+html[data-docs-product='metersphere'] .theme-doc-markdown td[width] {
+  width: auto !important;
+}
+/* 表头短语不换行, 列宽随表头撑开; 剩余宽度自然流向长文本列(描述/说明)。 */
+html[data-docs-product='metersphere'] .theme-doc-markdown th {
+  white-space: nowrap;
 }
 /* 正文截图居中；列表徽章、链接封面、联系我们二维码不走这套。 */
 html[data-docs-product='dataease'] .theme-doc-markdown p > img:only-child,
@@ -257,6 +291,26 @@ html[data-docs-product='sqlbot'] .theme-doc-markdown p:has(+ table) {
   font-weight: 600;
   line-height: 1.5;
   color: var(--ifm-font-color-base, #1c1e21);
+}
+
+/* ===== MeterSphere 教学视频卡片(与 de-video-grid 同款 5 列布局) =====
+   结构由 metersphere-docs/video_index.md 内的 .ms-video-grid 提供,
+   卡片/封面/角标/标题均复用 .de-video-* 的样式, 仅一处覆盖:
+   标题取消两行 line-clamp、完整展示。MeterSphere 课程标题更长
+   (如「1.1 课程简介 - MeterSphere 四大核心能力」21 字), 158px 窄卡片
+   下两行放不下, 允许自然换到第三行, 行内卡片仍由 grid 拉伸等高。 */
+.ms-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: 18px 14px;
+  margin: 8px 0 24px;
+}
+.ms-video-grid .de-video-title {
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: initial;
+  overflow: visible;
+  min-height: 0;
 }
 
 /* navbar 只显示 logo, 隐藏 logo 旁的文字标题(navbar.title 留空时 Docusaurus 会 fallback 站点标题, 这里一并隐藏) */

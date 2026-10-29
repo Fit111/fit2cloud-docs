@@ -5,7 +5,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::note[温馨提示]
 
-MeterSphere V2 社区版已经停止维护，建议使用 [MeterSphere V3 版本](https://metersphere.io/docs/v3.x/)。
+MeterSphere V2 社区版已经停止维护，建议使用 MeterSphere V3 版本。
 
 :::
 

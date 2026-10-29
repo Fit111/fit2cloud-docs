@@ -29,7 +29,7 @@ const DOCS_PRODUCTS = sortProducts([
   {name: 'MaxKB 智能体平台', id: 'maxkb', routeBasePath: 'maxkb'},
   {name: 'DataEase BI 工具', id: 'dataease', routeBasePath: 'dataease'},
   {name: 'SQLBot 智能问数', id: 'sqlbot', routeBasePath: 'sqlbot'},
-  {name: 'MeterSphere 持续测试', id: 'metersphere', routeBasePath: 'metersphere'},
+  {name: 'MeterSphere 测试工具', id: 'metersphere', routeBasePath: 'metersphere'},
   {name: 'Cordys CRM', id: 'cordys', routeBasePath: 'cordys'},
 ]);
 
