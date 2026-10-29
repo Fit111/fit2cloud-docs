@@ -10,7 +10,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用例评审](/img/metersphere-v2/track/用例评审1.png)\{ width="900px" \}
+![!用例评审](/img/metersphere-v2/track/用例评审1.png)
 
 :::note
 
@@ -18,7 +18,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用例评审](/img/metersphere-v2/track/用例评审2.png)\{ width="900px" \}
+![!用例评审](/img/metersphere-v2/track/用例评审2.png)
 
 :::note
 
@@ -26,10 +26,10 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用例评审](/img/metersphere-v2/track/用例评审3.png)\{ width="900px" \}
+![!用例评审](/img/metersphere-v2/track/用例评审3.png)
 
 ## 1 创建用例评审任务
-![!用例评审](/img/metersphere-v2/track/用例评审首页.png)\{ width="900px" \}
+![!用例评审](/img/metersphere-v2/track/用例评审首页.png)
 
 :::note
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用例评审](/img/metersphere-v2/track/创建用例评审.png)\{ width="900px" \}
+![!用例评审](/img/metersphere-v2/track/创建用例评审.png)
 
 :::note[评审通过标准]
 
@@ -52,7 +52,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!选择测试用例](/img/metersphere-v2/track/关联测试用例1.png)\{ width="900px" \}
+![!选择测试用例](/img/metersphere-v2/track/关联测试用例1.png)
 
 :::note
 
@@ -60,7 +60,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!选择测试用例](/img/metersphere-v2/track/关联测试用例2.png)\{ width="900px" \}
+![!选择测试用例](/img/metersphere-v2/track/关联测试用例2.png)
 
 ## 2 编辑评审
 
@@ -70,9 +70,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑评审](/img/metersphere-v2/track/编辑评审1.png)\{ width="900px" \}
+![!编辑评审](/img/metersphere-v2/track/编辑评审1.png)
 
-![!编辑评审](/img/metersphere-v2/track/编辑评审2.png)\{ width="900px" \}
+![!编辑评审](/img/metersphere-v2/track/编辑评审2.png)
 
 ### 2.1 关联用例
 
@@ -82,9 +82,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联用例](/img/metersphere-v2/track/关联用例1.png)\{ width="900px" \}
+![!关联用例](/img/metersphere-v2/track/关联用例1.png)
 
-![!关联用例](/img/metersphere-v2/track/关联用例2.png)\{ width="900px" \}
+![!关联用例](/img/metersphere-v2/track/关联用例2.png)
 
 :::note
 
@@ -92,7 +92,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联用例](/img/metersphere-v2/track/关联用例3.png)\{ width="900px" \}
+![!关联用例](/img/metersphere-v2/track/关联用例3.png)
 
 :::note
 
@@ -108,7 +108,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!取消关联](/img/metersphere-v2/track/取消关联.png)\{ width="900px" \}
+![!取消关联](/img/metersphere-v2/track/取消关联.png)
 
 ## 3 开始评审
 
@@ -126,7 +126,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例评审执行主页.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例评审执行主页.png)
 
 :::note
 
@@ -134,7 +134,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例评审执行详情页.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例评审执行详情页.png)
 
 :::note
 
@@ -143,7 +143,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例评审关联缺陷.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例评审关联缺陷.png)
 
 :::note
 
@@ -152,7 +152,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/批量更改评审结果.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/批量更改评审结果.png)
 
 ### 3.2 指定用例评审
 
@@ -162,7 +162,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/指定用例评审1.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/指定用例评审1.png)
 
 ### 3.3 脑图模式评审用例
 
@@ -172,7 +172,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!脑图评审测试用例](/img/metersphere-v2/track/脑图评审测试用例.png)\{ width="900px" \}
+![!脑图评审测试用例](/img/metersphere-v2/track/脑图评审测试用例.png)
 
 ## 4 重新提审
 
@@ -182,7 +182,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!开启重新提审](/img/metersphere-v2/track/开启重新提审.png)\{ width="900px" \}
+![!开启重新提审](/img/metersphere-v2/track/开启重新提审.png)
 
 :::note
 
@@ -190,7 +190,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!筛选重新提审](/img/metersphere-v2/track/筛选重新提审.png)\{ width="900px" \}
+![!筛选重新提审](/img/metersphere-v2/track/筛选重新提审.png)
 
 :::note[开启重新提审]
 
@@ -206,7 +206,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量操作](/img/metersphere-v2/track/批量操作1.png)\{ width="900px" \}
+![!批量操作](/img/metersphere-v2/track/批量操作1.png)
 
 ### 5.1 批量编辑
 
@@ -216,7 +216,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量编辑](/img/metersphere-v2/track/批量编辑2.png)\{ width="900px" \}
+![!批量编辑](/img/metersphere-v2/track/批量编辑2.png)
 
 ### 5.2 批量取消关联
 
@@ -227,4 +227,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量取消关联](/img/metersphere-v2/track/批量取消关联.png)\{ width="900px" \}
+![!批量取消关联](/img/metersphere-v2/track/批量取消关联.png)

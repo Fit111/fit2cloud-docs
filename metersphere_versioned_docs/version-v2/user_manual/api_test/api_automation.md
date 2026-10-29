@@ -28,7 +28,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景快捷功能00.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景快捷功能00.png)
 
 ### 2.2 快速创建
 
@@ -38,9 +38,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/创建场景00.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/创建场景00.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/创建场景01.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/创建场景01.png)
 
 ### 2.3 编辑详情
 
@@ -50,8 +50,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/编辑场景.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/编辑场景详情.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/编辑场景.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/编辑场景详情.png)
 
 ### 2.4 场景变量配置
 
@@ -61,9 +61,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景变量00.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景变量00.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景变量01.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景变量01.png)
 
 :::note[参数说明]
 
@@ -120,7 +120,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加步骤展开.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加步骤展开.png)
 
 :::note
 
@@ -128,7 +128,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加步骤点开.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加步骤点开.png)
 
 :::note
 
@@ -141,9 +141,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加前置.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加后置.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加断言.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加前置.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加后置.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加断言.png)
 
 :::note
 
@@ -152,9 +152,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/拖拽.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/拖拽.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/子步骤.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/子步骤.png)
 
 :::note
 
@@ -168,7 +168,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/步骤其他说明.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/步骤其他说明.png)
 
 :::note
 
@@ -188,9 +188,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景其他操作.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景其他操作.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景批量操作.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景批量操作.png)
 
 ### 2.6 调试指定场景
 
@@ -200,7 +200,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试及状态.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试及状态.png)
 
 :::note
 
@@ -208,9 +208,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试报告.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试报告.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试报告1.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/调试报告1.png)
 
 ### 2.7 执行指定场景
 
@@ -220,9 +220,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/执行.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/执行.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/执行报告.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/执行报告.png)
 
 ### 2.8 批量执行场景
 
@@ -237,9 +237,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量执行.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量执行.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量执行配置.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量执行配置.png)
 
 ### 2.9 批量编辑场景
 
@@ -249,9 +249,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量编辑.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量编辑.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量编辑详情.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量编辑详情.png)
 
 ### 2.10 批量移动场景
 
@@ -261,8 +261,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移送.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移动.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移送.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移动.png)
 
 ### 2.11 批量复制场景
 
@@ -272,9 +272,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量复制.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量复制.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移动.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量移动.png)
 
 ### 2.12 批量删除场景
 
@@ -284,7 +284,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量删除.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量删除.png)
 
 ### 2.13 生成依赖关系
 
@@ -294,9 +294,9 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/生成依赖.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/生成依赖.png)
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/生成依赖关系.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/生成依赖关系.png)
 
 ### 2.14 批量添加测试计划
 
@@ -306,7 +306,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加到测试计划.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加到测试计划.png)
 
 :::note
 
@@ -314,7 +314,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加测试计划配置.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/添加测试计划配置.png)
 
 ### 2.15 批量创建性能测试
 
@@ -324,8 +324,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量创建性能测试.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/跳转性能测试.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/批量创建性能测试.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/跳转性能测试.png)
 
 ### 2.16 场景定时任务
 
@@ -335,8 +335,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/定时任务.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/定时任务配置.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/定时任务.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/定时任务配置.png)
 
 ### 2.17 场景导出 导入
 
@@ -346,7 +346,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入.png)
 
 :::note
 
@@ -354,8 +354,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入1.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入选择.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入1.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/导入选择.png)
 
 :::note
 
@@ -363,7 +363,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景列表导入005.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/场景列表导入005.png)
 
 ### 2.18 场景查看引用
 
@@ -373,8 +373,8 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/查看引用.png)\{ width="900px" \}
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/查看引用详情.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/查看引用.png)
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/查看引用详情.png)
 
 ### 2.19 将场景移入回收站
 
@@ -384,7 +384,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/回收站.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/回收站.png)
 
 ### 2.20 回收站操作
 
@@ -394,7 +394,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/回收站操作.png)\{ width="900px" \}
+![!快速创建场景](/img/metersphere-v2/api/接口自动化模块/回收站操作.png)
 
 ### 2.21 MQTT协议 (X-Pack)
 
@@ -404,7 +404,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_上传插件.png)\{ width="900px" \}
+![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_上传插件.png)
 
 :::note
 
@@ -412,7 +412,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_1.png)\{ width="900px" \}
+![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_1.png)
 
 :::note
 
@@ -420,7 +420,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_2.png)\{ width="900px" \}
+![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_2.png)
 
 ### 2.22 Websocket协议 (X-Pack)
 
@@ -430,7 +430,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_上传插件.png)\{ width="900px" \}
+![!MQTT创建场景](/img/metersphere-v2/api/接口自动化模块/MQTT_上传插件.png)
 
 :::note
 
@@ -438,7 +438,7 @@ MeterSphere 支持导入接口通过拖拽的方式对上述场景进行用例/�
 
 :::
 
-![!Websocket创建场景](/img/metersphere-v2/api/接口自动化模块/webSocket.png)\{ width="900px" \}
+![!Websocket创建场景](/img/metersphere-v2/api/接口自动化模块/webSocket.png)
 
 ### 2.23 Thrift协议 (X-Pack)
 

@@ -17,7 +17,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/创建代码片段1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/创建代码片段1.png)
 
 :::note
 
@@ -25,7 +25,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/创建代码片段2.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/创建代码片段2.png)
 
 :::note
 
@@ -33,7 +33,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/创建代码片段3.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/创建代码片段3.png)
 
 :::note
 
@@ -41,7 +41,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/代码列表操作.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/代码列表操作.png)
 
 ## 2 自定义代码片段使用
 
@@ -51,6 +51,6 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/插入自定义代码片段.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/插入自定义代码片段.png)
 
-![!项目设置](/img/metersphere-v2/project_management/插入自定义代码片段_1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/插入自定义代码片段_1.png)

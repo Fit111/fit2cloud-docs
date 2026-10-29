@@ -17,7 +17,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/误报库.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/误报库.png)
 
 :::note
 
@@ -25,7 +25,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/误报库_2.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/误报库_2.png)
 
 :::note
 
@@ -33,7 +33,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/误报库_3.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/误报库_3.png)
 
 :::note
 
@@ -41,7 +41,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/误报库_4.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/误报库_4.png)
 
 :::note
 
@@ -49,4 +49,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/误报库_5.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/误报库_5.png)

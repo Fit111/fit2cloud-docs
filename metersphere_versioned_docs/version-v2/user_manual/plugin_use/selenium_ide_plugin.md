@@ -17,7 +17,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_install.png)\{ width="900px" \}
+![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_install.png)
 
 ## 2 插件使用
 
@@ -44,8 +44,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_newproject.png)\{ width="900px" \}
-![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_baseurl.png)\{ width="900px" \}
+![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_newproject.png)
+![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_baseurl.png)
 
 :::note
 
@@ -53,7 +53,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_record.png)\{ width="900px" \}
+![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_record.png)
 
 :::note
 
@@ -61,4 +61,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/add_selenium_ide_7.png)\{ width="900px" \}
+![selenium_ide](/img/metersphere-v2/user_manual/plugin_use/selenium_ide_plugin/add_selenium_ide_7.png)

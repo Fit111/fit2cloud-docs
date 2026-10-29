@@ -13,7 +13,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景1.png)
 
 :::note
 
@@ -21,7 +21,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景2.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景2.png)
 
 ### 1.2 场景参数
 
@@ -31,8 +31,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景3.png)\{ width="900px" \}
-![创建场景](/img/metersphere-v2/ui_test/创建场景4.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景3.png)
+![创建场景](/img/metersphere-v2/ui_test/创建场景4.png)
 
 :::note
 
@@ -40,7 +40,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景5.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景5.png)
 
 :::note
 
@@ -48,7 +48,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景6.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景6.png)
 
 :::note
 
@@ -56,7 +56,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景7.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景7.png)
 
 ### 1.3 添加步骤
 
@@ -66,7 +66,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景8.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景8.png)
 
 :::note
 
@@ -74,7 +74,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景9.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景9.png)
 
 :::note
 
@@ -82,7 +82,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景10.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景10.png)
 
 :::note
 
@@ -90,7 +90,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景11.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景11.png)
 
 :::note
 
@@ -102,7 +102,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景12.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景12.png)
 
 :::note
 
@@ -113,7 +113,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景13.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景13.png)
 
 :::note
 
@@ -121,7 +121,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/鼠标点击.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/鼠标点击.png)
 
 :::note
 
@@ -129,7 +129,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/鼠标点击1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/鼠标点击1.png)
 
 :::note
 
@@ -137,7 +137,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/鼠标移动.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/鼠标移动.png)
 
 :::note
 
@@ -145,7 +145,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/鼠标拖拽.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/鼠标拖拽.png)
 
 :::note
 
@@ -153,7 +153,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景14.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景14.png)
 
 :::note
 
@@ -168,7 +168,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景15.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景15.png)
 
 :::note
 
@@ -176,7 +176,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景16.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景16.png)
 
 :::note
 
@@ -184,7 +184,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景17.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景17.png)
 
 ### 1.4 高级设置
 
@@ -194,8 +194,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景18.png)\{ width="900px" \}
-![创建场景](/img/metersphere-v2/ui_test/创建场景18_1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景18.png)
+![创建场景](/img/metersphere-v2/ui_test/创建场景18_1.png)
 
 :::note
 
@@ -203,7 +203,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景19.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景19.png)
 
 :::note
 
@@ -211,7 +211,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景20.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景20.png)
 
 :::note
 
@@ -219,7 +219,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景21.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景21.png)
 
 :::note
 
@@ -227,7 +227,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景22.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景22.png)
 
 :::note
 
@@ -235,7 +235,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景23.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景23.png)
 
 :::note
 
@@ -243,7 +243,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景24.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景24.png)
 
 :::note
 
@@ -251,7 +251,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景25.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景25.png)
 
 :::note
 
@@ -259,7 +259,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景26.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景26.png)
 
 :::note
 
@@ -267,7 +267,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景27.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景27.png)
 
 :::note
 
@@ -275,7 +275,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景28.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景28.png)
 
 :::note
 
@@ -285,7 +285,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景29.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景29.png)
 
 ### 1.5 步骤列表
 
@@ -295,7 +295,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景30.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景30.png)
 
 :::note
 
@@ -303,7 +303,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景31.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景31.png)
 
 :::note
 
@@ -311,7 +311,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景32.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景32.png)
 
 :::note
 
@@ -319,7 +319,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景33.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景33.png)
 
 :::note
 
@@ -327,7 +327,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景34.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景34.png)
 
 ## 2 导入导出
 ### 2.1 导出场景
@@ -338,7 +338,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景35.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景35.png)
 
 ### 2.2 导入场景
 
@@ -348,7 +348,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景36.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景36.png)
 
 :::note
 
@@ -356,7 +356,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景37.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景37.png)
 
 ## 3 基础操作
 ### 3.1 场景列表
@@ -367,7 +367,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景38.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景38.png)
 
 ### 3.2 执行场景
 
@@ -377,7 +377,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景39.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景39.png)
 
 :::note
 
@@ -385,13 +385,13 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景40.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景40.png)
 
 ### 3.3 编辑场景
-![创建场景](/img/metersphere-v2/ui_test/创建场景41.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景41.png)
 
 ### 3.4 复制场景
-![创建场景](/img/metersphere-v2/ui_test/创建场景42.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景42.png)
 
 ### 3.5 删除场景
 
@@ -401,7 +401,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景43.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景43.png)
 
 :::note
 
@@ -409,7 +409,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景44.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景44.png)
 
 ## 4 批量操作
 ### 4.1 批量编辑
@@ -420,7 +420,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景45.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景45.png)
 
 :::note
 
@@ -428,7 +428,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景46.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景46.png)
 
 ### 4.2 批量移动
 
@@ -438,7 +438,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景47.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景47.png)
 
 :::note
 
@@ -446,7 +446,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景48.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景48.png)
 
 ### 4.3 批量复制
 
@@ -456,7 +456,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景49.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景49.png)
 
 :::note
 
@@ -464,7 +464,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景50.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景50.png)
 
 ### 4.4 批量删除
 
@@ -474,7 +474,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景51.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景51.png)
 
 :::note
 
@@ -482,7 +482,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建场景52.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建场景52.png)
 
 ## 5 创建指令
 ### 5.1 基本信息
@@ -493,7 +493,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建指令1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建指令1.png)
 
 :::note
 
@@ -501,7 +501,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/创建指令2.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/创建指令2.png)
 
 ### 5.2 指令步骤
 
@@ -511,7 +511,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/指令步骤1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/指令步骤1.png)
 
 :::note
 
@@ -519,7 +519,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/指令步骤11.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/指令步骤11.png)
 
 :::note
 
@@ -527,7 +527,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/快捷创建指令.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/快捷创建指令.png)
 
 ### 5.3 指令列表
 
@@ -537,7 +537,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/指令列表1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/指令列表1.png)
 
 :::note
 
@@ -545,4 +545,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/指令列表2.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/指令列表2.png)

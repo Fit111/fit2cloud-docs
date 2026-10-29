@@ -15,7 +15,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建计划](/img/metersphere-v2/track/创建测试计划1.png)\{ width="900px" \}
+![!创建计划](/img/metersphere-v2/track/创建测试计划1.png)
 
 :::note
 
@@ -24,7 +24,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建计划](/img/metersphere-v2/track/创建测试计划3.png)\{ width="900px" \}
+![!创建计划](/img/metersphere-v2/track/创建测试计划3.png)
 
 ## 2 执行测试计划
 
@@ -39,7 +39,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建计划](/img/metersphere-v2/track/执行测试计划.png)\{ width="900px" \}
+![!创建计划](/img/metersphere-v2/track/执行测试计划.png)
 
 ## 3 失败重试
 
@@ -49,7 +49,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建计划](/img/metersphere-v2/track/查看失败重试请求.png)\{ width="900px" \}
+![!创建计划](/img/metersphere-v2/track/查看失败重试请求.png)
 
 ## 4 维护测试计划
 
@@ -59,7 +59,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!维护计划](/img/metersphere-v2/track/维护计划1.png)\{ width="900px" \}
+![!维护计划](/img/metersphere-v2/track/维护计划1.png)
 
 :::note
 
@@ -67,7 +67,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!维护计划](/img/metersphere-v2/track/维护计划2.png)\{ width="900px" \}
+![!维护计划](/img/metersphere-v2/track/维护计划2.png)
 
 :::note
 
@@ -78,7 +78,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!维护计划](/img/metersphere-v2/track/维护计划4.png)\{ width="900px" \}
+![!维护计划](/img/metersphere-v2/track/维护计划4.png)
 
 :::note
 
@@ -86,7 +86,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!维护计划](/img/metersphere-v2/track/维护计划5.png)\{ width="900px" \}
+![!维护计划](/img/metersphere-v2/track/维护计划5.png)
 
 :::note[当前状态说明：]
 
@@ -109,7 +109,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/跨页选择进行导入.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/跨页选择进行导入.png)
 
 ### 5.1 关联功能测试用例
 
@@ -119,7 +119,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/切换用例列表.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/切换用例列表.png)
 
 :::note
 
@@ -128,7 +128,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!更新用例执行结果](/img/metersphere-v2/track/更新用例执行结果.png)\{ width="900px" \}
+![!更新用例执行结果](/img/metersphere-v2/track/更新用例执行结果.png)
 
 :::note
 
@@ -137,7 +137,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!脑图记录用例结果](/img/metersphere-v2/track/脑图记录用例结果.png)\{ width="900px" \}
+![!脑图记录用例结果](/img/metersphere-v2/track/脑图记录用例结果.png)
 
 ### 5.2 关联接口测试用例
 
@@ -147,7 +147,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联接口用例1.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联接口用例1.png)
 
 :::note
 
@@ -156,7 +156,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联接口用例2.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联接口用例2.png)
 
 :::note
 
@@ -164,9 +164,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联接口用例4.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联接口用例4.png)
 
-![!关联接口用例](/img/metersphere-v2/track/关联接口用例5.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联接口用例5.png)
 
 ### 5.3 关联 UI 测试用例 (X-Pack)
 
@@ -176,7 +176,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例1.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例1.png)
 
 :::note
 
@@ -184,7 +184,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例2.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例2.png)
 
 :::note
 
@@ -192,7 +192,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例3.png)\{ width="900px" \}
+![!关联接口用例](/img/metersphere-v2/track/关联UI测试用例3.png)
 
 ### 5.4 关联性能测试用例
 
@@ -202,7 +202,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划关联性能用例.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划关联性能用例.png)
 
 ### 5.5 报告统计
 
@@ -212,8 +212,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计.png)\{ width="900px" \}
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计编写总结.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计.png)
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计编写总结.png)
 
 :::note
 
@@ -221,7 +221,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告分享链接.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告分享链接.png)
 
 :::note
 
@@ -229,7 +229,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计配置.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告统计配置.png)
 
 :::note
 
@@ -237,7 +237,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告保存导出.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告保存导出.png)
 
 :::note
 
@@ -245,4 +245,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!新建测试计划](/img/metersphere-v2/track/测试计划报告目录.png)\{ width="900px" \}
+![!新建测试计划](/img/metersphere-v2/track/测试计划报告目录.png)

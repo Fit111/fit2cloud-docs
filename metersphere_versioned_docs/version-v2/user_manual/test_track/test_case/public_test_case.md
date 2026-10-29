@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!公共用例库入口](/img/metersphere-v2/track/公共用例库入口.png)\{ width="900px" \}
+![!公共用例库入口](/img/metersphere-v2/track/公共用例库入口.png)
 
 :::note
 
@@ -17,7 +17,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!公共用例库页面](/img/metersphere-v2/track/公共用例库页面.png)\{ width="900px" \}
+![!公共用例库页面](/img/metersphere-v2/track/公共用例库页面.png)
 
 ## 1 启动公共用例库
 
@@ -27,7 +27,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!公共用例库选择数据](/img/metersphere-v2/track/启动公共用例库.png)\{ width="900px" \}
+![!公共用例库选择数据](/img/metersphere-v2/track/启动公共用例库.png)
 
 ## 2 添加用例至公共用例库
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!公共用例库批量处理](/img/metersphere-v2/track/添加用例至公共用例库.png)\{ width="900px" \}
+![!公共用例库批量处理](/img/metersphere-v2/track/添加用例至公共用例库.png)
 
 ## 3 从公共用例库中复制用例
 
@@ -47,4 +47,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!公共用例库批量处理](/img/metersphere-v2/track/复制公共用例库中的用例.png)\{ width="900px" \}
+![!公共用例库批量处理](/img/metersphere-v2/track/复制公共用例库中的用例.png)

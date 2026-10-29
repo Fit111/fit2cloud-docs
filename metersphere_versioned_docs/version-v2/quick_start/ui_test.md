@@ -27,7 +27,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/快速ui模块.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/快速ui模块.png)
 
 ## 2 创建元素
 
@@ -37,9 +37,9 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试2.png)\{ width="900px" \}
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试3.png)\{ width="900px" \}
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试4.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试2.png)
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试3.png)
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试4.png)
 
 ## 3 创建场景
 
@@ -51,8 +51,8 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 ### 3.1 导入 Selenium IDE 脚本
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试5.png)\{ width="900px" \}
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试6.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试5.png)
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试6.png)
 
 ### 3.2 手动创建场景
 
@@ -62,7 +62,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试7.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试7.png)
 
 :::note
 
@@ -70,7 +70,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试8.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试8.png)
 
 :::note
 
@@ -81,7 +81,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试9.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试9.png)
 
 :::note
 
@@ -89,7 +89,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试10.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试10.png)
 
 :::note
 
@@ -97,7 +97,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试11.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试11.png)
 
 :::note
 
@@ -105,7 +105,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试12.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试12.png)
 
 :::note
 
@@ -113,7 +113,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试13.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试13.png)
 
 ## 4 在场景步骤中添加高级设置
 
@@ -123,8 +123,8 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试14.png)\{ width="900px" \}
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试15.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试14.png)
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试15.png)
 
 ## 5 调试 UI 自动化场景
 
@@ -135,7 +135,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试16.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试16.png)
 
 ## 6 生成测试报告
 
@@ -145,7 +145,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试17.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试17.png)
 
 :::note
 
@@ -153,7 +153,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试18.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试18.png)
 
 :::note
 
@@ -161,4 +161,4 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 :::
 
-![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试19.png)\{ width="900px" \}
+![!使用UI测试](/img/metersphere-v2/quick_start/ui_test/使用UI测试19.png)

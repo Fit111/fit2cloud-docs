@@ -47,7 +47,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/表单生成器.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/表单生成器.png)
 
 :::note
 
@@ -55,7 +55,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/表单生成器右上角.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/表单生成器右上角.png)
 
 ### 2.3 初始化插件资源
 
@@ -65,7 +65,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/初始化插件资源.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/初始化插件资源.png)
 
 ### 2.4 转换生成 JMeter HashTree
 
@@ -75,9 +75,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree.png)
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree_1.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree_1.png)
 
 :::note
 
@@ -85,7 +85,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree_2.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/转换生成JMeter_HashTree_2.png)
 
 ### 2.5 打包
 
@@ -95,7 +95,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/收尾打包.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/收尾打包.png)
 
 ### 2.6 上传测试
 
@@ -105,6 +105,6 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/上传测试.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/上传测试.png)
 
-![表单生成器](/img/metersphere-v2/automation_plugin_dev/上传测试_1.png)\{ width="900px" \}
+![表单生成器](/img/metersphere-v2/automation_plugin_dev/上传测试_1.png)

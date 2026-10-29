@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建元素](/img/metersphere-v2/ui_test/创建元素.png)\{ width="900px" \}
+![创建元素](/img/metersphere-v2/ui_test/创建元素.png)
 
 ## 2 元素定位
 
@@ -21,7 +21,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![元素定位](/img/metersphere-v2/ui_test/元素定位1.png)\{ width="900px" \}
+![元素定位](/img/metersphere-v2/ui_test/元素定位1.png)
 
 :::note
 
@@ -29,7 +29,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![元素定位](/img/metersphere-v2/ui_test/元素定位2.png)\{ width="900px" \}
+![元素定位](/img/metersphere-v2/ui_test/元素定位2.png)
 
 :::note
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![元素定位](/img/metersphere-v2/ui_test/元素定位3.png)\{ width="900px" \}
+![元素定位](/img/metersphere-v2/ui_test/元素定位3.png)
 
 ## 3 编辑元素
 
@@ -47,10 +47,10 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![编辑元素](/img/metersphere-v2/ui_test/编辑元素.png)\{ width="900px" \}
+![编辑元素](/img/metersphere-v2/ui_test/编辑元素.png)
 
 ## 4 复制元素
-![复制元素](/img/metersphere-v2/ui_test/复制元素.png)\{ width="900px" \}
+![复制元素](/img/metersphere-v2/ui_test/复制元素.png)
 
 ## 5 删除元素
-![删除元素](/img/metersphere-v2/ui_test/删除元素.png)\{ width="900px" \}
+![删除元素](/img/metersphere-v2/ui_test/删除元素.png)

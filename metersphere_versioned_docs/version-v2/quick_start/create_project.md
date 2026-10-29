@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目管理](/img/metersphere-v2/system_management/创建项目快速.png)\{ width="900px" \}
+![!项目管理](/img/metersphere-v2/system_management/创建项目快速.png)
 
 :::note
 
@@ -19,4 +19,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目管理](/img/metersphere-v2/system_management/快速创建项目1.png)\{ width="900px" \}
+![!项目管理](/img/metersphere-v2/system_management/快速创建项目1.png)

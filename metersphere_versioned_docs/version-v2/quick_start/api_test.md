@@ -10,7 +10,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!接口测试首页](/img/metersphere-v2/quick_start/api/接口测试首页.png)\{ width="900px" \}
+![!接口测试首页](/img/metersphere-v2/quick_start/api/接口测试首页.png)
 
 ## 1 接口定义管理
 
@@ -20,7 +20,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!接口定义](/img/metersphere-v2/quick_start/api/接口定义.png)\{ width="900px" \}
+![!接口定义](/img/metersphere-v2/quick_start/api/接口定义.png)
 
 ### 1.1 导入 Swagger 接口文档
 
@@ -30,7 +30,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!导入swagger文件](/img/metersphere-v2/quick_start/api/导入swagger文件1.png)\{ width="900px" \}
+![!导入swagger文件](/img/metersphere-v2/quick_start/api/导入swagger文件1.png)
 
 :::note
 
@@ -40,7 +40,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!导入swagger文件](/img/metersphere-v2/quick_start/api/导入swagger文件2.png)\{ width="900px" \}
+![!导入swagger文件](/img/metersphere-v2/quick_start/api/导入swagger文件2.png)
 
 ### 1.2 查看接口定义
 
@@ -50,9 +50,9 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!编辑接口详情](/img/metersphere-v2/quick_start/api/编辑接口详情1.png)\{ width="900px" \}
+![!编辑接口详情](/img/metersphere-v2/quick_start/api/编辑接口详情1.png)
 
-![!编辑接口详情](/img/metersphere-v2/quick_start/api/编辑接口详情2.png)\{ width="900px" \}
+![!编辑接口详情](/img/metersphere-v2/quick_start/api/编辑接口详情2.png)
 
 ### 1.3 添加测试环境
 
@@ -63,9 +63,9 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!项目管理](/img/metersphere-v2/quick_start/api/环境管理.png)\{ width="900px" \}
+![!项目管理](/img/metersphere-v2/quick_start/api/环境管理.png)
 
-![!添加环境](/img/metersphere-v2/quick_start/api/添加环境2.png)\{ width="900px" \}
+![!添加环境](/img/metersphere-v2/quick_start/api/添加环境2.png)
 
 ### 1.4 调试单个接口
 
@@ -77,7 +77,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!调试单个接口](/img/metersphere-v2/quick_start/api/调试单个接口2.png)\{ width="900px" \}
+![!调试单个接口](/img/metersphere-v2/quick_start/api/调试单个接口2.png)
 
 :::note
 
@@ -85,7 +85,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!调试单个接口](/img/metersphere-v2/quick_start/api/调试单个接口3.png)\{ width="900px" \}
+![!调试单个接口](/img/metersphere-v2/quick_start/api/调试单个接口3.png)
 
 ## 2 创建单接口用例
 
@@ -95,7 +95,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!接口定义](/img/metersphere-v2/quick_start/api/接口定义.png)\{ width="900px" \}
+![!接口定义](/img/metersphere-v2/quick_start/api/接口定义.png)
 
 ### 2.1 新建单接口用例
 
@@ -105,7 +105,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!新建单接口用例](/img/metersphere-v2/quick_start/api/新建单接口用例1.png)\{ width="900px" \}
+![!新建单接口用例](/img/metersphere-v2/quick_start/api/新建单接口用例1.png)
 
 :::note
 
@@ -113,7 +113,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!新建单接口用例](/img/metersphere-v2/quick_start/api/新建单接口用例3.png)\{ width="900px" \}
+![!新建单接口用例](/img/metersphere-v2/quick_start/api/新建单接口用例3.png)
 
 ### 2.2 测试单接口用例
 
@@ -123,7 +123,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!测试单接口用例](/img/metersphere-v2/quick_start/api/测试单接口用例1.png)\{ width="900px" \}
+![!测试单接口用例](/img/metersphere-v2/quick_start/api/测试单接口用例1.png)
 
 ## 3 创建场景用例
 
@@ -133,7 +133,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!接口自动化](/img/metersphere-v2/quick_start/api/接口自动化.png)\{ width="900px" \}
+![!接口自动化](/img/metersphere-v2/quick_start/api/接口自动化.png)
 
 ### 3.1 新建场景用例
 
@@ -145,11 +145,11 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!新建场景用例](/img/metersphere-v2/quick_start/api/新建场景用例1.png)\{ width="900px" \}
+![!新建场景用例](/img/metersphere-v2/quick_start/api/新建场景用例1.png)
 
-![!新建场景用例](/img/metersphere-v2/quick_start/api/接口自动化.png)\{ width="900px" \}
+![!新建场景用例](/img/metersphere-v2/quick_start/api/接口自动化.png)
 
-![!新建场景用例](/img/metersphere-v2/quick_start/api/新建场景用例3.png)\{ width="900px" \}
+![!新建场景用例](/img/metersphere-v2/quick_start/api/新建场景用例3.png)
 
 ### 3.2 添加场景步骤
 
@@ -159,7 +159,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤1.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤1.png)
 
 :::note
 
@@ -167,7 +167,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤2.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤2.png)
 
 :::note
 
@@ -175,7 +175,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤3.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤3.png)
 
 :::note
 
@@ -183,7 +183,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤4.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤4.png)
 
 :::note[注意]
 
@@ -191,11 +191,11 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤5.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤5.png)
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤6.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤6.png)
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤7.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤7.png)
 
 :::note
 
@@ -203,7 +203,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤8.png)\{ width="900px" \}
+![!在场景用例中添加步骤](/img/metersphere-v2/quick_start/api/在场景用例中添加步骤8.png)
 
 ## 3 场景调试
 
@@ -213,7 +213,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景1.png)\{ width="900px" \}
+![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景1.png)
 
 :::note
 
@@ -221,9 +221,9 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景2.png)\{ width="900px" \}
+![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景2.png)
 
-![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景3.png)\{ width="900px" \}
+![!执行场景并查看结果](/img/metersphere-v2/quick_start/api/调试场景3.png)
 
 ## 4 测试报告生成和查看
 
@@ -233,9 +233,9 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告1.png)\{ width="900px" \}
+![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告1.png)
 
-![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告2.png)\{ width="900px" \}
+![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告2.png)
 
 :::note
 
@@ -243,7 +243,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告3.png)\{ width="900px" \}
+![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告3.png)
 
 :::note
 
@@ -251,4 +251,4 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 :::
 
-![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告4.png)\{ width="900px" \}
+![!保存测试报告](/img/metersphere-v2/quick_start/api/生成报告4.png)
