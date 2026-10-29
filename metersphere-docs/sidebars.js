@@ -2,10 +2,22 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   metersphere: [
-    // ── 根目录：概览 / 产品介绍 / 架构 / 更新日志 ──
+    // ── 根目录：概览 / 产品介绍 / 架构 / 快速入门 / 更新日志 ──
     { type: "doc", id: "product_landing", label: "概览" },
     { type: "doc", id: "index", label: "产品介绍" },
     { type: "doc", id: "system_arch", label: "系统架构" },
+
+    // ── quick_start：快速入门 ──
+    {
+      type: "category",
+      label: "快速入门",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "quick_start/test_case", label: "使用用例管理" },
+        { type: "doc", id: "quick_start/api_test", label: "使用接口测试" },
+      ],
+    },
+
     { type: "doc", id: "about/changelog", label: "更新日志" },
     {
       type: "link",
@@ -32,23 +44,13 @@ const sidebars = {
       ],
     },
 
-    // ── quick_start：快速开始 ──
-    {
-      type: "category",
-      label: "快速开始",
-      collapsed: false,
-      items: [
-        { type: "doc", id: "quick_start/test_case", label: "使用用例管理" },
-        { type: "doc", id: "quick_start/api_test", label: "使用接口测试" },
-      ],
-    },
-
     // ── user_manual：功能手册 ──
     {
       type: "category",
       label: "功能手册",
       collapsed: false,
       items: [
+        { type: "doc", id: "video_index", label: "教学视频" },
         { type: "doc", id: "user_manual/general", label: "通用功能" },
 
         {
@@ -163,9 +165,8 @@ const sidebars = {
       ],
     },
 
-    // ── 插件与视频 ──
+    // ── 插件 ──
     { type: "doc", id: "plugin", label: "插件列表" },
-    { type: "doc", id: "video_index", label: "教学视频" },
 
     // ── ask_question：常见问题 ──
     {
@@ -192,17 +193,9 @@ const sidebars = {
       ],
     },
 
-    // ── 更多：案例 / 联系我们 ──
-    {
-      type: "category",
-      label: "更多",
-      collapsed: false,
-      items: [
-        { type: "doc", id: "case_studies/user_cases", label: "客户案例" },
-        { type: "doc", id: "about/contact", label: "联系我们" },
-        { type: "doc", id: "enterprise", label: "申请企业版试用" },
-      ],
-    },
+    // ── 最佳实践 / 联系我们（顶层）──
+    { type: "doc", id: "case_studies/user_cases", label: "最佳实践" },
+    { type: "doc", id: "about/contact", label: "联系我们" },
   ],
 };
 
