@@ -77,7 +77,8 @@ runs:
           libjpeg-dev \
           libopenjp2-7 \
           libpango-1.0-0 \
-          libpangoft2-1.0-0
+          libpangoft2-1.0-0 \
+          librsvg2-bin
     - name: Install bundled CJK fonts
       shell: bash
       run: |

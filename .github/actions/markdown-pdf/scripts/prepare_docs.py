@@ -313,6 +313,8 @@ class AssetCollector:
         self.by_source: dict[Path, str] = {}
         self.missing: set[Path] = set()
         self.converted: list[Path] = []
+        # librsvg 可把 SVG 连同中文文本一起渲染成位图；Pillow 无法读取 SVG。
+        self.rsvg = shutil.which('rsvg-convert')
 
     def resolve(self, token: str, markdown_file: Path) -> Path | None:
         raw = _strip_target_token(token)
@@ -351,15 +353,31 @@ class AssetCollector:
 
         digest = hashlib.sha1(str(source).encode('utf-8')).hexdigest()
         suffix = source.suffix.lower()
+        is_svg = suffix == '.svg'
         convert_format = suffix in {'.gif', '.webp'}
         should_resize = self.max_width > 0 and Image is not None
         output_name = _safe_asset_name(source, digest)
-        if convert_format:
+        if convert_format or is_svg:
             output_name = str(Path(output_name).with_suffix('.png'))
 
         output_path = self.assets_output / output_name
         copied = False
-        if Image is not None and (convert_format or should_resize):
+        if is_svg and self.rsvg:
+            try:
+                args = [self.rsvg, '-f', 'png']
+                target_width = self._svg_target_width(source)
+                if target_width:
+                    args += ['-w', str(target_width)]
+                args += ['-o', str(output_path), str(source)]
+                subprocess.run(args, check=True, capture_output=True, text=True)
+                copied = True
+                self.converted.append(source)
+            except subprocess.CalledProcessError as exc:
+                detail = (exc.stderr or '').strip() or str(exc)
+                print(f'::warning file={source}::SVG 转 PNG 失败，将复制原文件: {detail}')
+            except Exception as exc:
+                print(f'::warning file={source}::SVG 转 PNG 失败，将复制原文件: {exc}')
+        elif Image is not None and not is_svg and (convert_format or should_resize):
             try:
                 with Image.open(source) as image:
                     if getattr(image, 'is_animated', False):
@@ -380,6 +398,27 @@ class AssetCollector:
             shutil.copy2(source, output_path)
         self.by_source[source] = output_name
         return output_name
+
+    def _svg_target_width(self, source: Path) -> int | None:
+        """Pick a crisp PNG width for an SVG, capped by max_width."""
+        if self.max_width <= 0:
+            return None
+        try:
+            head = source.read_text(encoding='utf-8', errors='ignore')[:4000]
+        except OSError:
+            return self.max_width
+        match = re.search(r'\bwidth\s*=\s*["\']\s*([0-9.]+)', head)
+        if match:
+            intrinsic = float(match.group(1))
+        else:
+            match = re.search(
+                r'\bviewBox\s*=\s*["\']\s*[-0-9.]+\s+[-0-9.]+\s+([0-9.]+)', head
+            )
+            if not match:
+                return self.max_width
+            intrinsic = float(match.group(1))
+        # 2x 渲染保证打印清晰度，再用 max_width 封顶。
+        return max(1, min(self.max_width, int(round(intrinsic * 2))))
 
 
 def rewrite_images(
