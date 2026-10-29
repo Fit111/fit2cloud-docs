@@ -129,7 +129,7 @@ runs:
           --output-name "$OUTPUT_NAME" \
           --toc-depth "$TOC_DEPTH" \
           --image-max-width "$IMAGE_MAX_WIDTH" \
-          --exclude "$EXCLUDE"
+          --exclude "$EXCLUDE" \
           --cover-subtitle "$COVER_SUBTITLE"
 
     - name: Build PDF
