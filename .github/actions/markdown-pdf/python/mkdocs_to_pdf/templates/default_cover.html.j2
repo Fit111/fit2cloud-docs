@@ -8,7 +8,9 @@
     {% endif %}
     <div class="wrapper">
         <h1>{{ cover_title | e }}</h1>
+        {% if cover_subtitle is defined and cover_subtitle %}
         <h2>{{ cover_subtitle | e }}</h2>
+        {% endif %}
     </div>
     <div class="properties">
         <address>

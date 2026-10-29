@@ -1,15 +1,28 @@
 name: Generate Documentation PDF
 
-run-name: Generate PDF - ${{ inputs.docs_dir || 'dataease-docs' }}
+run-name: Generate PDF - ${{ inputs.custom_docs_dir || inputs.docs_dir || 'dataease-docs' }}
 
 on:
   workflow_dispatch:
     inputs:
       docs_dir:
-        description: '仓库内文档目录，例如 dataease-docs 或 dataease_versioned_docs/version-v2'
+        description: '选择要导出的产品文档目录'
         required: true
-        type: string
+        type: choice
         default: dataease-docs
+        options:
+          - dataease-docs
+          - jumpserver-docs
+          - maxkb-docs
+          - 1panel-docs
+          - ai-gateway-docs
+          - cordys-docs
+          - sqlbot-docs
+      custom_docs_dir:
+        description: '自定义文档目录（如旧版 dataease_versioned_docs/version-v2 等未列出目录），填写后覆盖上方选择'
+        required: false
+        type: string
+        default: ''
       output_name:
         description: 'PDF 文件名；留空则按目录自动生成，可省略 .pdf'
         required: false
@@ -38,6 +51,11 @@ on:
         required: false
         type: string
         default: ''
+      cover_subtitle:
+        description: '封面副标题；留空则不显示（默认不再显示“自动生成”字样）'
+        required: false
+        type: string
+        default: ''
   push:
     branches:
       - ci/test-pdf-action
@@ -54,6 +72,8 @@ jobs:
     name: Build PDF Artifact
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    env:
+      DOCS_DIR_EFF: ${{ inputs.custom_docs_dir || inputs.docs_dir || 'dataease-docs' }}
 
     steps:
       - name: Checkout
@@ -63,12 +83,13 @@ jobs:
         id: pdf
         uses: ./.github/actions/markdown-pdf
         with:
-          docs_dir: ${{ inputs.docs_dir || 'dataease-docs' }}
+          docs_dir: ${{ env.DOCS_DIR_EFF }}
           output_name: ${{ inputs.output_name }}
           title: ${{ inputs.title }}
           toc_depth: ${{ inputs.toc_depth || '3' }}
           image_max_width: ${{ inputs.image_max_width || '1600' }}
           exclude: ${{ inputs.exclude || 'product_landing.md' }}
+          cover_subtitle: ${{ inputs.cover_subtitle || '' }}
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -81,7 +102,7 @@ jobs:
       - name: Write job summary
         shell: bash
         env:
-          DOCS_DIR: ${{ inputs.docs_dir || 'dataease-docs' }}
+          DOCS_DIR: ${{ env.DOCS_DIR_EFF }}
           PDF_NAME: ${{ steps.pdf.outputs.pdf_name }}
           PDF_SIZE_BYTES: ${{ steps.pdf.outputs.pdf_size }}
           PDF_SHA256: ${{ steps.pdf.outputs.pdf_sha256 }}

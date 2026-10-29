@@ -663,6 +663,7 @@ def write_mkdocs_config(
     title: str,
     nav: list[dict[str, Any]],
     toc_depth: int,
+    cover_subtitle: str = '',
 ) -> None:
     config: dict[str, Any] = {
         'site_name': title,
@@ -699,7 +700,7 @@ def write_mkdocs_config(
                 'to-pdf': {
                     'cover': True,
                     'cover_title': title,
-                    'cover_subtitle': 'GitHub Actions 自动生成',
+                    'cover_subtitle': cover_subtitle,
                     'toc_title': '目录',
                     'toc_level': toc_depth,
                     'ordered_chapter_level': 3,
@@ -829,7 +830,9 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         raise PrepareError('生成的 MkDocs 导航为空')
 
     config_path = work_dir / 'mkdocs.yml'
-    write_mkdocs_config(config_path, title, nav, args.toc_depth)
+    write_mkdocs_config(
+        config_path, title, nav, toc_depth=args.toc_depth, cover_subtitle=args.cover_subtitle
+    )
 
     if jsx_fallback_files:
         print(
@@ -897,6 +900,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument('--output-name', default='')
     parser.add_argument('--toc-depth', type=int, default=3)
     parser.add_argument('--image-max-width', type=int, default=1600)
+    parser.add_argument('--cover-subtitle', default='')
     parser.add_argument(
         '--exclude',
         default='',

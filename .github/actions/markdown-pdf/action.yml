@@ -25,6 +25,10 @@ inputs:
     description: Comma/newline separated docs-relative files or globs to skip, e.g. product_landing.md.
     required: false
     default: ''
+  cover_subtitle:
+    description: Optional subtitle shown on the cover page. Leave empty to hide it.
+    required: false
+    default: ''
   output_dir:
     description: Output directory relative to GITHUB_WORKSPACE, or an absolute path under the workspace/runner temp.
     required: false
@@ -110,6 +114,7 @@ runs:
         TOC_DEPTH: ${{ inputs.toc_depth }}
         IMAGE_MAX_WIDTH: ${{ inputs.image_max_width }}
         EXCLUDE: ${{ inputs.exclude }}
+        COVER_SUBTITLE: ${{ inputs.cover_subtitle }}
         WORK_DIR: ${{ runner.temp }}/docs-pdf-work
         METADATA_PATH: ${{ runner.temp }}/docs-pdf-metadata.json
         PYTHONUTF8: '1'
@@ -125,6 +130,7 @@ runs:
           --toc-depth "$TOC_DEPTH" \
           --image-max-width "$IMAGE_MAX_WIDTH" \
           --exclude "$EXCLUDE"
+          --cover-subtitle "$COVER_SUBTITLE"
 
     - name: Build PDF
       shell: bash
