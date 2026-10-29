@@ -10,7 +10,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 :::
 
 ## 1 新增用户组
-![!项目设置](/img/metersphere-v2/project_management/创建用户组.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/创建用户组.png)
 
 :::note
 
@@ -19,7 +19,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 :::
 
 ## 2 设置用户组权限
-![!项目设置](/img/metersphere-v2/project_management/设置用户组权限.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/设置用户组权限.png)
 
 :::note
 
@@ -28,7 +28,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 :::
 
 ## 3 设置用户组成员
-![!项目设置](/img/metersphere-v2/project_management/设置用户组成员.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/设置用户组成员.png)
 
 :::note
 

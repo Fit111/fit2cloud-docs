@@ -21,7 +21,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用户管理](/img/metersphere-v2/system_management/系统用户首页.png)\{ width="900px" \}
+![!用户管理](/img/metersphere-v2/system_management/系统用户首页.png)
 
 :::note[说明]
 
@@ -36,7 +36,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建用户](/img/metersphere-v2/system_management/系统创建用户.png)\{ width="900px" \}
+![!创建用户](/img/metersphere-v2/system_management/系统创建用户.png)
 
 :::note
 
@@ -44,7 +44,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建用户](/img/metersphere-v2/system_management/系统导入用户.png)\{ width="900px" \}
+![!创建用户](/img/metersphere-v2/system_management/系统导入用户.png)
 
 :::note
 
@@ -53,7 +53,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!设置用户角色](/img/metersphere-v2/system_management/系统下添加用户组.png)\{ width="900px" \}
+![!设置用户角色](/img/metersphere-v2/system_management/系统下添加用户组.png)
 
 :::note
 
@@ -62,7 +62,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![针对用户的其他操作](/img/metersphere-v2/system_management/查询用户.png)\{ width="900px" \}
+![针对用户的其他操作](/img/metersphere-v2/system_management/查询用户.png)
 
 :::note
 
@@ -71,7 +71,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![针对用户的其他操作](/img/metersphere-v2/system_management/针对用户的其他操作.png)\{ width="900px" \}
+![针对用户的其他操作](/img/metersphere-v2/system_management/针对用户的其他操作.png)
 
 ## 2 工作空间
 
@@ -81,7 +81,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!工作空间管理](/img/metersphere-v2/system_management/系统工作空间首页.png)\{ width="900px" \}
+![!工作空间管理](/img/metersphere-v2/system_management/系统工作空间首页.png)
 
 :::note
 
@@ -90,7 +90,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建工作空间](/img/metersphere-v2/system_management/创建工作空间.png)\{ width="900px" \}
+![!创建工作空间](/img/metersphere-v2/system_management/创建工作空间.png)
 
 :::note
 
@@ -99,7 +99,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑工作空间](/img/metersphere-v2/system_management/编辑工作空间.png)\{ width="900px" \}
+![!编辑工作空间](/img/metersphere-v2/system_management/编辑工作空间.png)
 
 :::note
 
@@ -108,7 +108,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!删除工作空间](/img/metersphere-v2/system_management/删除工作空间.png)\{ width="900px" \}
+![!删除工作空间](/img/metersphere-v2/system_management/删除工作空间.png)
 
 ## 3 用户组与权限
 
@@ -118,7 +118,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![系统用户组首页](/img/metersphere-v2/system_management/系统用户组首页3.png)\{ width="900px" \}
+![系统用户组首页](/img/metersphere-v2/system_management/系统用户组首页3.png)
 
 :::note
 
@@ -127,7 +127,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建用户组](/img/metersphere-v2/system_management/创建用户组.png)\{ width="900px" \}
+![创建用户组](/img/metersphere-v2/system_management/创建用户组.png)
 
 :::note
 
@@ -136,7 +136,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![为用户组配置权限](/img/metersphere-v2/system_management/为用户组配置权限4.png)\{ width="900px" \}
+![为用户组配置权限](/img/metersphere-v2/system_management/为用户组配置权限4.png)
 
 :::note
 
@@ -145,7 +145,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![编辑用户组信息](/img/metersphere-v2/system_management/编辑用户组信息.png)\{ width="900px" \}
+![编辑用户组信息](/img/metersphere-v2/system_management/编辑用户组信息.png)
 
 :::note
 
@@ -154,7 +154,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![编辑用户组信息](/img/metersphere-v2/system_management/查询用户组信息.png)\{ width="900px" \}
+![编辑用户组信息](/img/metersphere-v2/system_management/查询用户组信息.png)
 
 :::note
 
@@ -163,7 +163,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![编辑用户组信息](/img/metersphere-v2/system_management/删除用户组信息.png)\{ width="900px" \}
+![编辑用户组信息](/img/metersphere-v2/system_management/删除用户组信息.png)
 
 ## 4 测试资源池管理
 
@@ -173,7 +173,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试资源池管理](/img/metersphere-v2/system_management/系统测试资源池首页.png)\{ width="900px" \}
+![!测试资源池管理](/img/metersphere-v2/system_management/系统测试资源池首页.png)
 
 ### 4.1 创建 Node 资源池
 
@@ -183,7 +183,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建资源池](/img/metersphere-v2/system_management/系统下创建资源池.png)\{ width="900px" \}
+![!创建资源池](/img/metersphere-v2/system_management/系统下创建资源池.png)
 
 ### 4.2 创建 Kubernetes 资源池 (X-Pack)
 
@@ -193,7 +193,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建K8S资源池](/img/metersphere-v2/system_management/系统下创建K8S资源池.png)\{ width="900px" \}
+![!创建K8S资源池](/img/metersphere-v2/system_management/系统下创建K8S资源池.png)
 
 :::note
 
@@ -234,7 +234,7 @@ kubectl get all -n ms-pool
 
 :::
 
-![!创建K8S资源池](/img/metersphere-v2/system_management/下载yaml文件.png)\{ width="900px" \}
+![!创建K8S资源池](/img/metersphere-v2/system_management/下载yaml文件.png)
 
 :::note
 
@@ -243,9 +243,9 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!创建K8S资源池](/img/metersphere-v2/system_management/k8s资源池配置完成.png)\{ width="900px" \}
+![!创建K8S资源池](/img/metersphere-v2/system_management/k8s资源池配置完成.png)
 
-![!创建K8S资源池](/img/metersphere-v2/system_management/k8s列表显示.png)\{ width="900px" \}
+![!创建K8S资源池](/img/metersphere-v2/system_management/k8s列表显示.png)
 
 :::note
 
@@ -269,7 +269,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![系统参数设置首页](/img/metersphere-v2/system_management/系统参数设置首页.png)\{ width="900px" \}
+![系统参数设置首页](/img/metersphere-v2/system_management/系统参数设置首页.png)
 
 ### 5.1 基本配置
 
@@ -279,7 +279,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!当前站点URL](/img/metersphere-v2/system_management/系统参数设置首页_1.png)\{ width="900px" \}
+![!当前站点URL](/img/metersphere-v2/system_management/系统参数设置首页_1.png)
 
 :::note[选项]
 
@@ -298,7 +298,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!编辑SMTP信息](/img/metersphere-v2/system_management/编辑smtp信息.png)\{ width="900px" \}
+![!编辑SMTP信息](/img/metersphere-v2/system_management/编辑smtp信息.png)
 
 ### 5.3 LDAP 设置
 
@@ -308,7 +308,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![配置ldap](/img/metersphere-v2/system_management/配置ldap.png)\{ width="900px" \}
+![配置ldap](/img/metersphere-v2/system_management/配置ldap.png)
 
 :::note[选项]
 
@@ -341,7 +341,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![ldap登录](/img/metersphere-v2/system_management/ldap登录.png)\{ width="900px" \}
+![ldap登录](/img/metersphere-v2/system_management/ldap登录.png)
 
 ### 5.4 显示设置 (X-Pack)
 
@@ -351,7 +351,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![显示设置](/img/metersphere-v2/system_management/显示设置.png)\{ width="900px" \}
+![显示设置](/img/metersphere-v2/system_management/显示设置.png)
 
 ### 5.5 认证设置 (X-Pack)
 
@@ -361,7 +361,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![认证配置](/img/metersphere-v2/system_management/认证配置_2.png)\{ width="900px" \}
+![认证配置](/img/metersphere-v2/system_management/认证配置_2.png)
 
 :::note
 
@@ -369,9 +369,9 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![认证配置](/img/metersphere-v2/system_management/认证配置.png)\{ width="900px" \}
+![认证配置](/img/metersphere-v2/system_management/认证配置.png)
 
-![认证配置](/img/metersphere-v2/system_management/认证配置_1.png)\{ width="900px" \}
+![认证配置](/img/metersphere-v2/system_management/认证配置_1.png)
 
 ### 5.6 模块管理 (X-Pack)
 
@@ -381,7 +381,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![模块管理](/img/metersphere-v2/system_management/模块管理.png)\{ width="900px" \}
+![模块管理](/img/metersphere-v2/system_management/模块管理.png)
 
 ### 5.7 扫码登录 (X-Pack)
 
@@ -391,7 +391,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/扫码登录.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/扫码登录.png)
 
 :::note[企业微信]
 
@@ -399,7 +399,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/企业微信获取企业ID.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/企业微信获取企业ID.png)
 
 :::note
 
@@ -407,7 +407,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/企业微信后台创建应用.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/企业微信后台创建应用.png)
 
 :::note
 
@@ -415,7 +415,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/获取应用ID和应用秘钥.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/获取应用ID和应用秘钥.png)
 
 :::note
 
@@ -423,7 +423,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/配置回调地址.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/配置回调地址.png)
 
 :::note
 
@@ -431,7 +431,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/配置可信IP.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/配置可信IP.png)
 
 :::note
 
@@ -439,7 +439,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/配置企业微信连接成功.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/配置企业微信连接成功.png)
 
 :::note
 
@@ -447,9 +447,9 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/企业微信登录页.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/企业微信登录页.png)
 
-![扫码登录](/img/metersphere-v2/system_management/企业微信扫码进行登录.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/企业微信扫码进行登录.png)
 
 :::note[钉钉]
 
@@ -457,7 +457,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/创建钉钉应用.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/创建钉钉应用.png)
 
 :::note
 
@@ -465,7 +465,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/获取钉钉应用ID.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/获取钉钉应用ID.png)
 
 :::note
 
@@ -473,7 +473,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/钉钉设置回调地址.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/钉钉设置回调地址.png)
 
 :::note
 
@@ -481,7 +481,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/钉钉出口配置.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/钉钉出口配置.png)
 
 :::note
 
@@ -489,7 +489,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/钉钉个人信息权限.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/钉钉个人信息权限.png)
 
 :::note
 
@@ -497,7 +497,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/配置钉钉连接成功.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/配置钉钉连接成功.png)
 
 :::note
 
@@ -505,7 +505,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/钉钉扫码登录.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/钉钉扫码登录.png)
 
 :::note[飞书]
 
@@ -513,7 +513,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/飞书创建应用.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/飞书创建应用.png)
 
 :::note
 
@@ -521,7 +521,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/飞书应用名称.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/飞书应用名称.png)
 
 :::note
 
@@ -529,7 +529,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/添加机器人能力.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/添加机器人能力.png)
 
 :::note
 
@@ -537,7 +537,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/飞书配置回调地址.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/飞书配置回调地址.png)
 
 :::note
 
@@ -545,7 +545,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/飞书配置域名地址.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/飞书配置域名地址.png)
 
 :::note
 
@@ -553,7 +553,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/批量开通权限.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/批量开通权限.png)
 
 :::note
 
@@ -561,7 +561,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/创建版本发布.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/创建版本发布.png)
 
 :::note
 
@@ -569,7 +569,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/确认发布.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/确认发布.png)
 
 :::note
 
@@ -577,7 +577,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/获取飞书的凭证.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/获取飞书的凭证.png)
 
 :::note
 
@@ -585,7 +585,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/配置飞书连接成功.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/配置飞书连接成功.png)
 
 :::note
 
@@ -593,7 +593,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![扫码登录](/img/metersphere-v2/system_management/飞书扫码登录.png)\{ width="900px" \}
+![扫码登录](/img/metersphere-v2/system_management/飞书扫码登录.png)
 
 ## 6 配额管理 (X-Pack)
 
@@ -603,9 +603,9 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理编辑.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理编辑.png)
 
-![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理默认配额.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理默认配额.png)
 
 :::note
 
@@ -613,7 +613,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/单个工作空间配额管理.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/单个工作空间配额管理.png)
 
 :::note
 
@@ -621,7 +621,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理删除.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/工作空间配额管理删除.png)
 
 ## 7 授权管理
 
@@ -631,7 +631,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![授权管理首页](/img/metersphere-v2/system_management/授权管理首页.png)\{ width="900px" \}
+![授权管理首页](/img/metersphere-v2/system_management/授权管理首页.png)
 
 ## 8 操作日志
 
@@ -641,7 +641,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![操作日志首页](/img/metersphere-v2/system_management/操作日志首页.png)\{ width="900px" \}
+![操作日志首页](/img/metersphere-v2/system_management/操作日志首页.png)
 
 ## 9 插件管理
 ### 9.1 WebSocket 插件 (X-Pack)
@@ -652,7 +652,7 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![jenkins-plugin](/img/metersphere-v2/system_management/插件管理1.png)\{ width="900px" \}
+![jenkins-plugin](/img/metersphere-v2/system_management/插件管理1.png)
 
 :::note
 
@@ -660,6 +660,6 @@ Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br />
 
 :::
 
-![jenkins-plugin](/img/metersphere-v2/system_management/插件管理2.png)\{ width="900px" \}
+![jenkins-plugin](/img/metersphere-v2/system_management/插件管理2.png)
 
-![jenkins-plugin](/img/metersphere-v2/system_management/插件管理3.png)\{ width="900px" \}
+![jenkins-plugin](/img/metersphere-v2/system_management/插件管理3.png)

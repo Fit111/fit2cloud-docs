@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![测试报告模板](/img/metersphere-v2/system_management/测试报告模板.png)\{ width="900px" \}
+![测试报告模板](/img/metersphere-v2/system_management/测试报告模板.png)
 
 ## 1 模板字段
 
@@ -19,7 +19,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![自定义字段](/img/metersphere-v2/project_management/自定义字段列表.png)\{ width="900px" \}
+![自定义字段](/img/metersphere-v2/project_management/自定义字段列表.png)
 
 :::note
 
@@ -28,7 +28,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![自定义字段](/img/metersphere-v2/system_management/自定义字段.png)\{ width="900px" \}
+![自定义字段](/img/metersphere-v2/system_management/自定义字段.png)
 
 :::note[个别字段说明]
 
@@ -44,7 +44,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护字段](/img/metersphere-v2/system_management/维护字段.png)\{ width="900px" \}
+![维护字段](/img/metersphere-v2/system_management/维护字段.png)
 
 ## 2 用例模版
 
@@ -54,7 +54,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![用例模版](/img/metersphere-v2/system_management/用例模版.png)\{ width="900px" \}
+![用例模版](/img/metersphere-v2/system_management/用例模版.png)
 
 :::note
 
@@ -63,9 +63,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建模板](/img/metersphere-v2/system_management/创建模板.png)\{ width="900px" \}
+![创建模板](/img/metersphere-v2/system_management/创建模板.png)
 
-![填写模板](/img/metersphere-v2/system_management/填写模板.png)\{ width="900px" \}
+![填写模板](/img/metersphere-v2/system_management/填写模板.png)
 
 :::note
 
@@ -74,7 +74,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/维护模板.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/维护模板.png)
 
 :::note
 
@@ -83,7 +83,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/引用用例模板.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/引用用例模板.png)
 
 ## 3 缺陷模版
 
@@ -93,7 +93,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![用例模版](/img/metersphere-v2/system_management/缺陷模版.png)\{ width="900px" \}
+![用例模版](/img/metersphere-v2/system_management/缺陷模版.png)
 
 :::note
 
@@ -102,7 +102,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建缺陷模板](/img/metersphere-v2/system_management/创建缺陷模板.png)\{ width="900px" \}
+![创建缺陷模板](/img/metersphere-v2/system_management/创建缺陷模板.png)
 
 :::note
 
@@ -111,7 +111,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护缺陷模板](/img/metersphere-v2/system_management/维护缺陷模板.png)\{ width="900px" \}
+![维护缺陷模板](/img/metersphere-v2/system_management/维护缺陷模板.png)
 
 :::note
 
@@ -120,7 +120,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/引用缺陷模板.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/引用缺陷模板.png)
 
 ## 4 接口模板
 
@@ -130,7 +130,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![用例模版](/img/metersphere-v2/system_management/接口模版.png)\{ width="900px" \}
+![用例模版](/img/metersphere-v2/system_management/接口模版.png)
 
 :::note
 
@@ -139,7 +139,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建缺陷模板](/img/metersphere-v2/system_management/创建接口模版.png)\{ width="900px" \}
+![创建缺陷模板](/img/metersphere-v2/system_management/创建接口模版.png)
 
 :::note
 
@@ -148,7 +148,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/维护接口模板.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/维护接口模板.png)
 
 :::note
 
@@ -157,7 +157,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/引用接口模板.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/引用接口模板.png)
 
 :::note
 
@@ -165,4 +165,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![维护模板](/img/metersphere-v2/system_management/引用接口模板1.png)\{ width="900px" \}
+![维护模板](/img/metersphere-v2/system_management/引用接口模板1.png)

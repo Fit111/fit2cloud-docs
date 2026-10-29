@@ -10,7 +10,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试用例首页](/img/metersphere-v2/track/测试用例首页.png)\{ width="900px" \}
+![!测试用例首页](/img/metersphere-v2/track/测试用例首页.png)
 
 ## 1 切换工作空间
 
@@ -20,7 +20,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试用例首页](/img/metersphere-v2/track/功能测试_切换工作空间.png)\{ width="900px" \}
+![!测试用例首页](/img/metersphere-v2/track/功能测试_切换工作空间.png)
 
 ## 2 切换项目
 
@@ -30,7 +30,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试用例首页](/img/metersphere-v2/track/功能测试_切换项目.png)\{ width="900px" \}
+![!测试用例首页](/img/metersphere-v2/track/功能测试_切换项目.png)
 
 :::note[说明]
 

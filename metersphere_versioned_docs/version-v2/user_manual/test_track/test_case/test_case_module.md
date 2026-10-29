@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加模块](/img/metersphere-v2/track/添加模块.png)\{ width="900px" \}
+![!添加模块](/img/metersphere-v2/track/添加模块.png)
 
 ## 1 创建子模块
 
@@ -19,10 +19,10 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建一级模块](/img/metersphere-v2/track/添加模块.png)\{ width="900px" \}
+![!创建一级模块](/img/metersphere-v2/track/添加模块.png)
 
 ## 2 模块操作
-![!模块操作](/img/metersphere-v2/track/模块操作.png)\{ width="900px" \}
+![!模块操作](/img/metersphere-v2/track/模块操作.png)
 
 :::note[操作说明]
 
@@ -39,4 +39,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!模块操作](/img/metersphere-v2/track/模块拖拽.png)\{ width="900px" \}
+![!模块操作](/img/metersphere-v2/track/模块拖拽.png)

@@ -13,6 +13,50 @@
       "key": "v2-doc:system_arch"
     },
     {
+      "type": "category",
+      "label": "快速入口",
+      "collapsed": false,
+      "key": "v2-cat:快速入口",
+      "items": [
+        {
+          "type": "doc",
+          "id": "quick_start/quick_start",
+          "label": "一键部署",
+          "key": "v2-doc:quick_start/quick_start"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/create_project",
+          "label": "创建项目",
+          "key": "v2-doc:quick_start/create_project"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/test_track",
+          "label": "使用测试跟踪",
+          "key": "v2-doc:quick_start/test_track"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/api_test",
+          "label": "使用接口测试",
+          "key": "v2-doc:quick_start/api_test"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/ui_test",
+          "label": "使用 UI 测试",
+          "key": "v2-doc:quick_start/ui_test"
+        },
+        {
+          "type": "doc",
+          "id": "quick_start/load_test",
+          "label": "使用性能测试",
+          "key": "v2-doc:quick_start/load_test"
+        }
+      ]
+    },
+    {
       "type": "doc",
       "id": "about/changelog",
       "label": "更新日志",
@@ -128,54 +172,16 @@
     },
     {
       "type": "category",
-      "label": "快速开始",
-      "collapsed": false,
-      "key": "v2-cat:快速开始",
-      "items": [
-        {
-          "type": "doc",
-          "id": "quick_start/quick_start",
-          "label": "一键部署",
-          "key": "v2-doc:quick_start/quick_start"
-        },
-        {
-          "type": "doc",
-          "id": "quick_start/create_project",
-          "label": "创建项目",
-          "key": "v2-doc:quick_start/create_project"
-        },
-        {
-          "type": "doc",
-          "id": "quick_start/test_track",
-          "label": "使用测试跟踪",
-          "key": "v2-doc:quick_start/test_track"
-        },
-        {
-          "type": "doc",
-          "id": "quick_start/api_test",
-          "label": "使用接口测试",
-          "key": "v2-doc:quick_start/api_test"
-        },
-        {
-          "type": "doc",
-          "id": "quick_start/ui_test",
-          "label": "使用 UI 测试",
-          "key": "v2-doc:quick_start/ui_test"
-        },
-        {
-          "type": "doc",
-          "id": "quick_start/load_test",
-          "label": "使用性能测试",
-          "key": "v2-doc:quick_start/load_test"
-        }
-      ]
-    },
-    {
-      "type": "category",
       "label": "用户手册",
       "collapsed": false,
       "key": "v2-cat:用户手册",
       "items": [
+        {
+          "type": "doc",
+          "id": "teach_video/video_index",
+          "label": "教学视频",
+          "key": "v2-doc:teach_video/video_index"
+        },
         {
           "type": "doc",
           "id": "user_manual/general",
@@ -627,12 +633,6 @@
       "key": "v2-doc:tutorial/use_tutorial"
     },
     {
-      "type": "doc",
-      "id": "teach_video/video_index",
-      "label": "教学视频",
-      "key": "v2-doc:teach_video/video_index"
-    },
-    {
       "type": "category",
       "label": "常见问题",
       "collapsed": false,
@@ -737,12 +737,6 @@
       "id": "about/contact",
       "label": "联系我们",
       "key": "v2-doc:about/contact"
-    },
-    {
-      "type": "doc",
-      "id": "enterprise",
-      "label": "申请企业版试用",
-      "key": "v2-doc:enterprise"
     }
   ]
 }

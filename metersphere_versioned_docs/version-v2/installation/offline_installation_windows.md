@@ -55,7 +55,7 @@ wsl --set-default-version 2
 
 :::
 
-![安装Ubuntu](/img/metersphere-v2/installation/windows-install-ubuntu.png)\{ width="900px" \}
+![安装Ubuntu](/img/metersphere-v2/installation/windows-install-ubuntu.png)
 
 ### 2.3 检测 Ubuntu WSL 版本
 
@@ -67,7 +67,7 @@ wsl.exe -l -v
 
 :::
 
-![WSL版本1](/img/metersphere-v2/installation/check-version-1.png)\{ width="900px" \}
+![WSL版本1](/img/metersphere-v2/installation/check-version-1.png)
 
 :::note
 
@@ -80,7 +80,7 @@ wsl.exe --set-version Ubuntu 2
 
 :::
 
-![WSL版本2](/img/metersphere-v2/installation/check-version-2.png)\{ width="900px" \}
+![WSL版本2](/img/metersphere-v2/installation/check-version-2.png)
 
 ### 2.4 Docker 安装与配置
 
@@ -92,7 +92,7 @@ Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜�
 
 :::
 
-![docker设置](/img/metersphere-v2/installation/docker-settings.png)\{ width="900px" \}
+![docker设置](/img/metersphere-v2/installation/docker-settings.png)
 
 ### 2.5 启动 Ubuntu
 
@@ -103,7 +103,7 @@ Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜�
 :::
 
 `
-![启动Ubuntu](/img/metersphere-v2/installation/launch-ubuntu.png)\{ width="600px" \}
+![启动Ubuntu](/img/metersphere-v2/installation/launch-ubuntu.png)
 
 ### 2.6 检查 Docker 环境
 
@@ -113,7 +113,7 @@ Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜�
 
 :::
 
-![docker检测](/img/metersphere-v2/installation/check-docker.png)\{ width="600px" \}
+![docker检测](/img/metersphere-v2/installation/check-docker.png)
 
 ### 2.7 下载安装包
 
@@ -166,6 +166,6 @@ cd metersphere-offline-installer-v2.10.0
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/windows-install.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/windows-install.png)
 
-![安装MeterSphere](/img/metersphere-v2/installation/常见问题7.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/常见问题7.png)

@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!不同版本号](/img/metersphere-v2/track/不同版本号.png)\{ width="900px" \}
+![!不同版本号](/img/metersphere-v2/track/不同版本号.png)
 
 ## 2 切换用例视图
 
@@ -21,9 +21,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!切换用例视图](/img/metersphere-v2/track/用例列表视图.png)\{ width="900px" \}
+![!切换用例视图](/img/metersphere-v2/track/用例列表视图.png)
 
-![!切换用例视图](/img/metersphere-v2/track/用例脑图视图.png)\{ width="900px" \}
+![!切换用例视图](/img/metersphere-v2/track/用例脑图视图.png)
 
 ## 3 基于列表视图新建用例
 
@@ -33,7 +33,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!基于列表视图新建用例](/img/metersphere-v2/track/新建测试用例.png)\{ width="900px" \}
+![!基于列表视图新建用例](/img/metersphere-v2/track/新建测试用例.png)
 
 :::note
 
@@ -41,7 +41,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!表单新建测试用例](/img/metersphere-v2/track/编辑新用例详情.png)\{ width="900px" \}
+![!表单新建测试用例](/img/metersphere-v2/track/编辑新用例详情.png)
 
 :::note
 
@@ -49,7 +49,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!表单新建测试用例](/img/metersphere-v2/track/新建用例展示.png)\{ width="900px" \}
+![!表单新建测试用例](/img/metersphere-v2/track/新建用例展示.png)
 
 ### 3.1 为用例关联测试
 
@@ -59,7 +59,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例关联测试.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例关联测试.png)
 
 :::note
 
@@ -67,7 +67,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例关联接口测试用例.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例关联接口测试用例.png)
 
 :::note
 
@@ -75,7 +75,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例取消关联测试用例.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例取消关联测试用例.png)
 
 ### 3.2 为用例关联需求
 
@@ -85,7 +85,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例关联需求.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例关联需求.png)
 
 ### 3.3 为用例关联缺陷
 
@@ -95,7 +95,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关联测试用例](/img/metersphere-v2/track/用例关联缺陷.png)\{ width="900px" \}
+![!关联测试用例](/img/metersphere-v2/track/用例关联缺陷.png)
 
 ### 3.4 为用例创建依赖关系
 
@@ -107,7 +107,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!依赖关系设置](/img/metersphere-v2/track/依赖关系设置.png)\{ width="900px" \}
+![!依赖关系设置](/img/metersphere-v2/track/依赖关系设置.png)
 
 :::note
 
@@ -116,7 +116,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!依赖关系图](/img/metersphere-v2/track/依赖关系图.png)\{ width="900px" \}
+![!依赖关系图](/img/metersphere-v2/track/依赖关系图.png)
 
 ## 4 基于脑图视图新建用例
 
@@ -126,7 +126,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!基于脑图视图新建用例](/img/metersphere-v2/track/脑图创建测试用例.png)\{ width="900px" \}
+![!基于脑图视图新建用例](/img/metersphere-v2/track/脑图创建测试用例.png)
 
 :::note
 
@@ -134,7 +134,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!基于脑图视图新建用例](/img/metersphere-v2/track/脑图用例编辑.png)\{ width="900px" \}
+![!基于脑图视图新建用例](/img/metersphere-v2/track/脑图用例编辑.png)
 
 :::note[操作说明]
 
@@ -159,7 +159,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量操作](/img/metersphere-v2/track/功能批量处理操作.png)\{ width="900px" \}
+![!批量操作](/img/metersphere-v2/track/功能批量处理操作.png)
 
 ## 6 导入用例
 
@@ -169,7 +169,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导入测试用例](/img/metersphere-v2/track/导入测试用例.png)\{ width="900px" \}
+![!导入测试用例](/img/metersphere-v2/track/导入测试用例.png)
 
 :::note
 
@@ -177,7 +177,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导入测试用例](/img/metersphere-v2/track/导入测试用例_1.png)\{ width="900px" \}
+![!导入测试用例](/img/metersphere-v2/track/导入测试用例_1.png)
 
 :::note[操作说明]
 
@@ -194,7 +194,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导出测试用例](/img/metersphere-v2/track/导出功能用例.png)\{ width="900px" \}
+![!导出测试用例](/img/metersphere-v2/track/导出功能用例.png)
 
 ## 8 回收站
 
@@ -204,7 +204,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!回收站](/img/metersphere-v2/track/回收站1.png)\{ width="900px" \}
+![!回收站](/img/metersphere-v2/track/回收站1.png)
 
 :::note
 
@@ -212,7 +212,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!回收站](/img/metersphere-v2/track/回收站2.png)\{ width="900px" \}
+![!回收站](/img/metersphere-v2/track/回收站2.png)
 
 ## 9 查看变更记录
 
@@ -222,7 +222,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!用例日志](/img/metersphere-v2/track/用例日志1.png)\{ width="900px" \}
+![!用例日志](/img/metersphere-v2/track/用例日志1.png)
 
 ## 10 版本管理
 
@@ -232,4 +232,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!版本管理](/img/metersphere-v2/track/版本管理.png)\{ width="900px" \}
+![!版本管理](/img/metersphere-v2/track/版本管理.png)

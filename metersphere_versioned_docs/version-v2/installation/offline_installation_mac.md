@@ -30,7 +30,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装docker](/img/metersphere-v2/installation/mac-install-docker.png)\{ width="900px" \}
+![安装docker](/img/metersphere-v2/installation/mac-install-docker.png)
 
 ### 2.3 安装 MeterSphere
 
@@ -40,7 +40,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/mac-install-metersphere.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/mac-install-metersphere.png)
 
 :::note
 
@@ -48,7 +48,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/mac-install-tar.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/mac-install-tar.png)
 
 :::note
 
@@ -56,7 +56,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/cd-mac-install.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/cd-mac-install.png)
 
 :::note
 
@@ -64,7 +64,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/mac-install-sh.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/mac-install-sh.png)
 
 :::note
 
@@ -77,6 +77,6 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![安装MeterSphere](/img/metersphere-v2/installation/mac-install-server.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/mac-install-server.png)
 
-![安装MeterSphere](/img/metersphere-v2/installation/mac-install-localhost.png)\{ width="900px" \}
+![安装MeterSphere](/img/metersphere-v2/installation/mac-install-localhost.png)

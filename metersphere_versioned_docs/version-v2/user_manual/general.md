@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!切换语言](/img/metersphere-v2/general/切换语言.png)\{ width="900px" \}
+![!切换语言](/img/metersphere-v2/general/切换语言.png)
 
 ## 2 切换工作空间
 
@@ -22,7 +22,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!切换工作空间](/img/metersphere-v2/general/切换工作空间.png)\{ width="900px" \}
+![!切换工作空间](/img/metersphere-v2/general/切换工作空间.png)
 
 ## 3 切换项目
 
@@ -33,7 +33,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!切换项目](/img/metersphere-v2/general/切换项目.png)\{ width="900px" \}
+![!切换项目](/img/metersphere-v2/general/切换项目.png)
 
 ## 4 批量操作
 
@@ -43,7 +43,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!批量操作](/img/metersphere-v2/general/批量操作1.png)\{ width="900px" \}
+![!批量操作](/img/metersphere-v2/general/批量操作1.png)
 
 :::note
 
@@ -51,7 +51,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!全选操作](/img/metersphere-v2/general/全选操作.png)\{ width="900px" \}
+![!全选操作](/img/metersphere-v2/general/全选操作.png)
 
 :::note[说明]
 
@@ -67,7 +67,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!查询管理](/img/metersphere-v2/general/查询管理.png)\{ width="900px" \}
+![!查询管理](/img/metersphere-v2/general/查询管理.png)
 
 ### 5.1 单一查询
 
@@ -77,7 +77,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!查询管理](/img/metersphere-v2/general/单一查询.png)\{ width="900px" \}
+![!查询管理](/img/metersphere-v2/general/单一查询.png)
 
 ### 5.2 高级查询
 
@@ -88,7 +88,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!高级查询](/img/metersphere-v2/general/高级查询2.png)\{ width="900px" \}
+![!高级查询](/img/metersphere-v2/general/高级查询2.png)
 
 ## 6 表头功能
 
@@ -98,7 +98,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!表头功能](/img/metersphere-v2/general/表头功能.png)\{ width="900px" \}
+![!表头功能](/img/metersphere-v2/general/表头功能.png)
 
 ### 6.1 复选框功能
 
@@ -108,7 +108,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!复选框功能](/img/metersphere-v2/general/复选框功能.png)\{ width="900px" \}
+![!复选框功能](/img/metersphere-v2/general/复选框功能.png)
 
 ### 6.2 列表内查询
 
@@ -118,7 +118,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!列表内查询](/img/metersphere-v2/general/列表内查询1.png)\{ width="900px" \}
+![!列表内查询](/img/metersphere-v2/general/列表内查询1.png)
 
 ### 6.3 排序功能
 
@@ -128,7 +128,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!排序功能](/img/metersphere-v2/general/排序功能.png)\{ width="900px" \}
+![!排序功能](/img/metersphere-v2/general/排序功能.png)
 
 ### 6.4 自定义列表显示
 
@@ -139,7 +139,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!自定义列表显示](/img/metersphere-v2/general/自定义列表展示1.png)\{ width="900px" \}
+![!自定义列表显示](/img/metersphere-v2/general/自定义列表展示1.png)
 
 :::note
 
@@ -148,7 +148,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!自定义列表显示](/img/metersphere-v2/general/自定义列表展示2.png)\{ width="900px" \}
+![!自定义列表显示](/img/metersphere-v2/general/自定义列表展示2.png)
 
 :::note
 
@@ -164,7 +164,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/调整列表宽度.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/调整列表宽度.png)
 
 ## 7 个人信息
 
@@ -174,9 +174,9 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/个人信息.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/个人信息.png)
 
-![!调整列表宽度](/img/metersphere-v2/general/个人信息_1.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/个人信息_1.png)
 
 ## 8 查看版本信息
 
@@ -186,7 +186,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/版本信息.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/版本信息.png)
 
 ## 9 查看帮助文档
 
@@ -196,7 +196,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/帮助文档.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/帮助文档.png)
 
 ## 10 查看 API 文档
 
@@ -206,7 +206,7 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/API文档.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/API文档.png)
 
 ## 11 退出系统
 
@@ -216,4 +216,4 @@ MeterSphere 中的测试用例、接口定义、性能测试等资源均使用�
 
 :::
 
-![!调整列表宽度](/img/metersphere-v2/general/退出系统.png)\{ width="900px" \}
+![!调整列表宽度](/img/metersphere-v2/general/退出系统.png)

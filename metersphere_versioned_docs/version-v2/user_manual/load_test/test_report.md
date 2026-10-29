@@ -23,7 +23,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试报告](/img/metersphere-v2/performance/性能测试_报告.png)\{ width="900px" \}
+![!性能测试报告](/img/metersphere-v2/performance/性能测试_报告.png)
 
 :::note
 
@@ -31,7 +31,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_测试概览](/img/metersphere-v2/performance/性能_测试概览.png)\{ width="900px" \}
+![!性能_测试概览](/img/metersphere-v2/performance/性能_测试概览.png)
 
 :::note
 
@@ -39,7 +39,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试_测试详情](/img/metersphere-v2/performance/性能测试_测试详情.png)\{ width="900px" \}
+![!性能测试_测试详情](/img/metersphere-v2/performance/性能测试_测试详情.png)
 
 :::note
 
@@ -47,7 +47,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_请求统计](/img/metersphere-v2/performance/性能_请求统计.png)\{ width="900px" \}
+![!性能_请求统计](/img/metersphere-v2/performance/性能_请求统计.png)
 
 :::note
 
@@ -55,7 +55,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_错误记录](/img/metersphere-v2/performance/性能_错误记录.png)\{ width="900px" \}
+![!性能_错误记录](/img/metersphere-v2/performance/性能_错误记录.png)
 
 :::note
 
@@ -63,7 +63,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_日志详情](/img/metersphere-v2/performance/性能_日志详情.png)\{ width="900px" \}
+![!性能_日志详情](/img/metersphere-v2/performance/性能_日志详情.png)
 
 :::note
 
@@ -71,7 +71,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_监控详情](/img/metersphere-v2/performance/性能_监控详情.png)\{ width="900px" \}
+![!性能_监控详情](/img/metersphere-v2/performance/性能_监控详情.png)
 
 :::note
 
@@ -79,7 +79,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_测试配置](/img/metersphere-v2/performance/性能_测试配置.png)\{ width="900px" \}
+![!性能_测试配置](/img/metersphere-v2/performance/性能_测试配置.png)
 
 :::note
 
@@ -87,7 +87,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_立即停止](/img/metersphere-v2/performance/性能_立即停止.png)\{ width="900px" \}
+![!性能_立即停止](/img/metersphere-v2/performance/性能_立即停止.png)
 
 :::note
 
@@ -95,7 +95,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_再次执行](/img/metersphere-v2/performance/性能_再次执行.png)\{ width="900px" \}
+![!性能_再次执行](/img/metersphere-v2/performance/性能_再次执行.png)
 
 :::note
 
@@ -103,7 +103,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_导出报告](/img/metersphere-v2/performance/性能_导出报告.png)\{ width="900px" \}
+![!性能_导出报告](/img/metersphere-v2/performance/性能_导出报告.png)
 
 :::note
 
@@ -111,7 +111,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_分享报告](/img/metersphere-v2/performance/性能_分享报告.png)\{ width="900px" \}
+![!性能_分享报告](/img/metersphere-v2/performance/性能_分享报告.png)
 
 :::note
 
@@ -119,7 +119,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_分享报告_设置时长](/img/metersphere-v2/performance/性能_分享报告_设置时长.png)\{ width="900px" \}
+![!性能_分享报告_设置时长](/img/metersphere-v2/performance/性能_分享报告_设置时长.png)
 
 :::note
 
@@ -127,7 +127,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_报告对比](/img/metersphere-v2/performance/性能_报告对比.png)\{ width="900px" \}
+![!性能_报告对比](/img/metersphere-v2/performance/性能_报告对比.png)
 
 :::note
 
@@ -135,7 +135,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_下载JTL文件](/img/metersphere-v2/performance/性能_下载JTL文件.png)\{ width="900px" \}
+![!性能_下载JTL文件](/img/metersphere-v2/performance/性能_下载JTL文件.png)
 
 :::note
 
@@ -143,7 +143,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_下载执行文件](/img/metersphere-v2/performance/性能_下载执行文件.png)\{ width="900px" \}
+![!性能_下载执行文件](/img/metersphere-v2/performance/性能_下载执行文件.png)
 
 ## 2 测试报告管理
 
@@ -153,7 +153,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试_报告列表](/img/metersphere-v2/performance/性能测试_报告列表.png)\{ width="900px" \}
+![!性能测试_报告列表](/img/metersphere-v2/performance/性能测试_报告列表.png)
 
 :::note
 
@@ -161,7 +161,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试_报告详情](/img/metersphere-v2/performance/性能测试_报告详情.png)\{ width="900px" \}
+![!性能测试_报告详情](/img/metersphere-v2/performance/性能测试_报告详情.png)
 
 :::note
 
@@ -169,8 +169,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_报告对比](/img/metersphere-v2/performance/性能_测试报告对比.png)\{ width="900px" \}
-![!性能_报告对比](/img/metersphere-v2/performance/性能_测试报告对比2.png)\{ width="900px" \}
+![!性能_报告对比](/img/metersphere-v2/performance/性能_测试报告对比.png)
+![!性能_报告对比](/img/metersphere-v2/performance/性能_测试报告对比2.png)
 
 :::note
 
@@ -178,7 +178,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试_删除报告](/img/metersphere-v2/performance/性能测试_删除报告.png)\{ width="900px" \}
+![!性能测试_删除报告](/img/metersphere-v2/performance/性能测试_删除报告.png)
 
 :::note
 
@@ -186,4 +186,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能_批量删除](/img/metersphere-v2/performance/性能_批量删除.png)\{ width="900px" \}
+![!性能_批量删除](/img/metersphere-v2/performance/性能_批量删除.png)

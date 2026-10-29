@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告1.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告1.png)
 
 :::note
 
@@ -19,7 +19,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告2.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告2.png)
 
 ## 2 重命名报告
 
@@ -29,7 +29,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告3.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告3.png)
 
 ## 3 报告详情
 
@@ -39,7 +39,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告4.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告4.png)
 
 :::note
 
@@ -47,7 +47,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告5.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告5.png)
 
 :::note
 
@@ -55,7 +55,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告6.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告6.png)
 
 :::note
 
@@ -63,7 +63,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告7.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告7.png)
 
 :::note
 
@@ -71,7 +71,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告8.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告8.png)
 
 :::note
 
@@ -79,7 +79,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告9.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告9.png)
 
 ## 4 删除报告
 
@@ -89,5 +89,5 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![创建场景](/img/metersphere-v2/ui_test/测试报告10.png)\{ width="900px" \}
-![创建场景](/img/metersphere-v2/ui_test/测试报告11.png)\{ width="900px" \}
+![创建场景](/img/metersphere-v2/ui_test/测试报告10.png)
+![创建场景](/img/metersphere-v2/ui_test/测试报告11.png)

@@ -4,7 +4,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 ---
 
 ## 1 应用管理权限
-![!项目设置](/img/metersphere-v2/project_management/应用管理权限1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/应用管理权限1.png)
 
 :::note
 
@@ -12,7 +12,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/应用管理权限2.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/应用管理权限2.png)
 
 :::note
 
@@ -20,7 +20,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/应用管理权限3.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/应用管理权限3.png)
 
 ## 2 应用管理设置
 
@@ -30,7 +30,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/应用管理1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/应用管理1.png)
 
 ### 2.1 工作台
 
@@ -40,9 +40,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/工作台.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/工作台.png)
 
-![!项目设置](/img/metersphere-v2/project_management/工作台_1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/工作台_1.png)
 
 ### 2.2 测试跟踪设置
 
@@ -52,7 +52,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置.png)
 
 :::note
 
@@ -60,7 +60,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置5.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置5.png)
 
 :::note
 
@@ -69,7 +69,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置2.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置2.png)
 
 :::note
 
@@ -77,7 +77,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置3.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置3.png)
 
 :::note
 
@@ -85,7 +85,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置4.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/测试跟踪设置4.png)
 
 ### 2.3 接口测试设置
 
@@ -95,7 +95,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置1.png)
 
 :::note
 
@@ -104,7 +104,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置2.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置2.png)
 
 :::note
 
@@ -113,7 +113,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置3.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置3.png)
 
 :::note
 
@@ -122,7 +122,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置4.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置4.png)
 
 :::note
 
@@ -130,7 +130,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置5.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置5.png)
 
 :::note
 
@@ -138,7 +138,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置6.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置6.png)
 
 :::note
 
@@ -146,7 +146,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置7.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置7.png)
 
 :::note
 
@@ -154,14 +154,14 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置8.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置8.png)
 
-![!项目设置](/img/metersphere-v2/project_management/接口测试设置9.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/接口测试设置9.png)
 
 ### 2.4 UI测试设置
-![!项目设置](/img/metersphere-v2/project_management/UI测试.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/UI测试.png)
 
-![!项目设置](/img/metersphere-v2/project_management/UI测试_1.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/UI测试_1.png)
 
 ### 2.5 性能测试设置
 
@@ -171,4 +171,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/性能测试设置.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/性能测试设置.png)
