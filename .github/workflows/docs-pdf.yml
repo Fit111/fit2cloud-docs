@@ -91,35 +91,6 @@ jobs:
           exclude: ${{ inputs.exclude || 'product_landing.md' }}
           cover_subtitle: ${{ inputs.cover_subtitle || '' }}
 
-      - name: Debug prepared assets
-        if: always()
-        shell: bash
-        env:
-          WORK_DIR: ${{ runner.temp }}/docs-pdf-work
-        run: |
-          set -euo pipefail
-          echo "== find ai_coding =="
-          find "$WORK_DIR" -iname '*ai_coding*' -printf '%p\t%s bytes\n' 2>/dev/null || true
-          find "$WORK_DIR" -iname '*ai_coding*' -exec file {} \; 2>/dev/null || true
-          python - <<'PY'
-          import glob, os
-          from PIL import Image
-          root = os.environ["WORK_DIR"]
-          paths = glob.glob(root + "/**/*ai_coding*", recursive=True)
-          if not paths: print("NO ai_coding FILES FOUND")
-          for p in paths:
-              print(p, os.path.getsize(p), "bytes")
-              try:
-                  with Image.open(p) as im:
-                      print("   PIL OK", im.size, im.mode, im.format)
-              except Exception as e:
-                  print("   PIL FAIL:", repr(e))
-          PY
-          echo "== md =="
-          grep -R "ai_coding_gateway" "$WORK_DIR"/docs 2>/dev/null || true
-          echo "== html =="
-          grep -R -o '<img[^>]*ai_coding_gateway[^>]*>' "$WORK_DIR"/site 2>/dev/null || true
-
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:

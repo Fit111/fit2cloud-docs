@@ -73,6 +73,10 @@ HTML_IMAGE_RE = re.compile(
 )
 FRONT_MATTER_RE = re.compile(r'\A---\s*\n(.*?)\n---\s*(?:\n|\Z)', re.DOTALL)
 JSX_COMMENT_RE = re.compile(r'\{/\*.*?\*/\}', re.DOTALL)
+JSX_STYLE_RE = re.compile(
+    r'style\s*=\s*\{\{(?P<body>.*?)\}\}',
+    re.IGNORECASE | re.DOTALL,
+)
 MDX_LINK_RE = re.compile(
     r'<Link\b(?P<attrs>[^>]*?\bto\s*=\s*["\'](?P<href>[^"\']+)["\'][^>]*?)>'
     r'(?P<inner>.*?)</Link>',
@@ -220,13 +224,36 @@ def _outside_fence_lines(text: str) -> list[str]:
     return result
 
 
+def _jsx_style_to_css(body: str) -> str:
+    """Turn a Docusaurus style={{...}} object literal into valid CSS."""
+    props: list[str] = []
+    for part in body.split(','):
+        if ':' not in part:
+            continue
+        key, _, value = part.partition(':')
+        key = key.strip()
+        value = value.strip().strip('"\'')
+        if not key or not value:
+            continue
+        css_key = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', key).lower()
+        props.append(f'{css_key}:{value}')
+    return '; '.join(props)
+
+
+def _normalize_jsx_style(text: str) -> str:
+    def _repl(match: re.Match[str]) -> str:
+        css = _jsx_style_to_css(match.group('body'))
+        return f'style="{css}"' if css else ''
+    return _apply_outside_fences(text, lambda s: JSX_STYLE_RE.sub(_repl, s))
+
+
 def degrade_mdx(text: str) -> str:
     """Best-effort downgrade of JSX-only syntax that raw HTML cannot render."""
     def _link(match: re.Match[str]) -> str:
         return f'<a href="{match.group("href")}">{match.group("inner")}</a>'
 
     text = JSX_COMMENT_RE.sub('', text)
-    text = _apply_outside_fences(text, lambda s: MDX_LINK_RE.sub(_link, s))
+    text = _normalize_jsx_style(text)
     return text
 
 
@@ -710,7 +737,7 @@ def write_mkdocs_config(
         'copyright': 'Copyright © 杭州飞致云信息科技有限公司',
         'docs_dir': 'docs',
         'site_dir': 'site',
-        'use_directory_urls': True,
+        'use_directory_urls': False,
         'theme': {
             'name': 'material',
             'language': 'zh',
