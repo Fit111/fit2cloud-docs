@@ -56,10 +56,6 @@ on:
         required: false
         type: string
         default: ''
-  push:
-    branches:
-      - ci/test-pdf-action
-
 permissions:
   contents: read
 
