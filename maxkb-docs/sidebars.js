@@ -22,6 +22,12 @@ const sidebars = {
       "key": "doc:更新日志"
     },
     {
+      "type": "link",
+      "label": "购买指南",
+      "href": "https://maxkb.cn/price",
+      "key": "link:购买指南"
+    },
+    {
       "type": "doc",
       "id": "system_arch",
       "label": "系统架构",
@@ -35,8 +41,9 @@ const sidebars = {
         {
           "type": "doc",
           "id": "installation/offline_installtion",
-          "label": "离线安装（生产环境推荐）",
-          "key": "doc:安装部署/离线安装（生产环境推荐）"
+          "label": "离线安装",
+          "className": "sidebar-item-badge-rec",
+          "key": "doc:安装部署/离线安装"
         },
         {
           "type": "doc",
@@ -535,9 +542,29 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "运维指南",
+      "collapsed": true,
+      "items": [
+        {
+          "type": "doc",
+          "id": "ops/system_logs",
+          "label": "查看系统日志",
+          "key": "doc:运维指南/查看系统日志"
+        }
+      ],
+      "key": "cat:运维指南"
+    },
+    {
+      "type": "category",
       "label": "常见问题",
       "collapsed": true,
       "items": [
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题",
+          "key": "doc:常见问题/常见问题"
+        },
         {
           "type": "doc",
           "id": "faq/install_configuration",

@@ -12,7 +12,8 @@ Docker Volume 是由 Docker 管理的持久化存储，可挂载到容器中保�
 
 点击 **创建**，填写名称、驱动和驱动参数。默认驱动为 `local`；使用其他驱动前，应先在当前节点安装并配置对应 Docker 插件。
 
-![创建存储卷](/img/1panel/containers/volume_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/volume_create.png" alt="图 1 创建存储卷界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建存储卷界面</div>
 
 ## 2 查看和删除

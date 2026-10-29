@@ -8,7 +8,7 @@ title: 成员管理
 
 用 **组织管理员** 登录后，顶部一级菜单会出现【组织管理中心】，其下为：成员管理、权限配置、同步管理、Webhook 管理。
 
-![组织管理中心成员列表](/img/dataease/newimg/xpack/组织管理中心界面.png)
+![组织管理中心成员列表](/img/dataease/newimg/xpack/zuzhiguanlizhongxinjiemian.png)
 
 图 1  组织管理中心界面
 
@@ -47,7 +47,7 @@ title: 成员管理
 
 页面顶部有【成员】【角色】两个页签。
 
-![组织管理中心成员列表](/img/dataease/newimg/xpack/进入组织管理中心.png)
+![组织管理中心成员列表](/img/dataease/newimg/xpack/jinruzuzhiguanlizhongxin.png)
 
 图 2  进入组织管理中心
 
@@ -65,7 +65,7 @@ title: 成员管理
 
 此页 **没有** 添加用户、批量导入、移出组织按钮。成员必须先由系统管理员加入本组织，才会出现在列表中。
 
-![组织管理中心成员列表](/img/dataease/newimg/xpack/成员界面功能展示.png)
+![组织管理中心成员列表](/img/dataease/newimg/xpack/chengyuanjiemiangongnengzhanshi.png)
 
 图 3  成员界面功能展示
 
@@ -85,11 +85,11 @@ title: 成员管理
 - 创建时需指定角色类型（组织管理员 / 数据分析师 / 普通用户），权限不得超出该类型；
 - 自定义角色可编辑、删除。
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/角色管理界面.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/jueseguanlijiemian.png)
 
 图 4  角色管理界面
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/创建自定义角色.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/chuangjianzidingyijuese.png)
 
 图 5  创建自定义角色
 
@@ -97,15 +97,15 @@ title: 成员管理
 
 选中角色后，右侧点击【添加成员】，可将 **已在本组织内** 且尚未拥有该角色的成员加入该角色。
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员1.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/juesetianjiachengyuan1.png)
 
 图 6  角色添加成员
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员2.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/juesetianjiachengyuan2.png)
 
 图 7  角色添加成员
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/角色添加成员3.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/juesetianjiachengyuan3.png)
 
 图 8  角色添加成员
 
@@ -113,6 +113,6 @@ title: 成员管理
 
 将成员从当前角色中移除后，成员仍保留在组织内。若这是其在本组织内的唯一角色，该成员可能暂时没有可用角色，需重新分配。
 
-![组织管理中心角色列表](/img/dataease/newimg/xpack/自定义角色编辑与删除.png)
+![组织管理中心角色列表](/img/dataease/newimg/xpack/zidingyijuesebianjiyushanchu.png)
 
 图 9  自定义角色编辑与删除

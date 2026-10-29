@@ -33,12 +33,14 @@ title: 对接百度千帆
 
 
 千帆大模型 v2-向量模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_embedding.png" alt="图 3  千帆大模型 v2 向量模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  千帆大模型 v2 向量模型 配置样例图</div>
 
 
 千帆大模型-重排模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/qianfan_reranker.png" alt="图 4  千帆大模型 重排模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  千帆大模型 重排模型 配置样例图</div>

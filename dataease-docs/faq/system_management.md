@@ -7,11 +7,11 @@ title: 系统管理
 登录后，查看界面右上角。 点击用户图标（通常是您的个人头像或一个头像图标）以打开用户菜单，点击【修改密码】选项，系统会将跳转到修改密码页面。  
 **注意：如果忘记原始密码（当前密码），则需要到数据库重置密码**
 
-![调整超时时间](/img/dataease/newimg/修改密码入口.png)
+![调整超时时间](/img/dataease/newimg/xiugaimimarukou.png)
 
 图 1  修改密码入口
 
-![调整超时时间](/img/dataease/newimg/修改密码界面.png)
+![调整超时时间](/img/dataease/newimg/xiugaimimajiemian.png)
 
 图 2  修改密码界面
 
@@ -29,11 +29,11 @@ update per_user set pwd='504c8c8dfcbbe5b50d676ad65ef43909' where account='admin'
 
 **如遇网络不通畅，系统报 ”timeout of xxx exceeded“ 等相关超时错误，则可在【系统管理】【系统参数】的基础设置增大超时时间，同时支持在数据源的【高级设置】修改查询超时时间。**
 
-![调整超时时间](/img/dataease/newimg/调整超时时间.png)
+![调整超时时间](/img/dataease/newimg/tiaozhengchaoshishijian.png)
 
 图 3  调整超时时间
 
-![调整超时时间](/img/dataease/newimg/设置超时时间2.png)
+![调整超时时间](/img/dataease/newimg/shezhichaoshishijian2.png)
 
 图 4  设置超时时间
 

@@ -50,6 +50,7 @@ description: 介绍 JumpServer 个人设置中的个人信息、生物特征、�
 多因子认证在密码之外增加第二重验证，账号可同时启用多种方式，登录时任选其一完成验证。各验证方式的说明与启用条件如下表所示。
 
 **支持的验证方式：**
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  多因子认证方式及启用条件</div>
 <table style={{display:'table', width:'100%', maxWidth:'100%', tableLayout:'fixed', borderCollapse:'collapse', borderSpacing:'0', border:'1px solid #d9dee8'}}>
 <thead><tr><th style={{width:'16%', padding:'8px'}}>验证方式</th><th style={{width:'42%', padding:'8px'}}>说明</th><th style={{width:'42%', padding:'8px'}}>启用条件</th></tr></thead>

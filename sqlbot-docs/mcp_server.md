@@ -290,7 +290,7 @@ SQLBot 的 MCP Server 对外提供以下工具：
 
 步骤二： 在「基本信息」里添加两个用户输入，分别是 username 和 password，添加两个会话变量，分别是 sqlbot_token 和 sqlbot_chat_id。如需指定工作空间，可再增加用户输入 oid。
 
-步骤三： 添加条件判断，在开始节点后添加条件分支（IF）。判断条件：会话变量>sqlbot_token 是否为空。为空：执行登录逻辑，添加 MCP 调用，调用 MCP 工具 access_token。
+步骤三： 添加条件判断，在开始节点后添加条件分支（IF）。判断条件：会话变量 > sqlbot_token 是否为空。为空：执行登录并创建会话（步骤四至步骤八）；不为空：跳过登录与建会话，直接进入问数调用（步骤九）。
 
 步骤四： 配置 MCP 登录：
 
@@ -306,42 +306,52 @@ SQLBot 的 MCP Server 对外提供以下工具：
     }
     ```
 - 工具配置：
-    点击「获取工具」，选择 access_token
+    单击「获取工具」，选择 access_token
 - 工具参数配置：
     username 从全局变量里选择 username；password 从全局变量里选择 password。
 
 步骤五： 解析登录结果：
 
-- MCP 调用后添加「自定义工具」。
-`access_token` 工具返回包含 access_token 的 JSON。添加输入参数，将 MCP 调用结果赋值给参数“arg1”。添加工具节点（Python）来解析 JSON，工具内容：
+MCP 调用后添加「自定义工具」。`access_token` 的返回值通常是 JSON 字符串组成的列表，需要先取出首个元素再解析。添加输入参数，将 MCP 调用结果赋值给参数 `response`。工具内容：
 ```python
 import json
-def main1(arg1):
-    json_obj = json.loads(arg1[0])
-    return {"token": json_obj["data"]["access_token"]}
+
+def extract_token(response):
+    # MCP result 是 ["{json}"] 这种列表
+    if isinstance(response, list):
+        response = response[0]
+    if isinstance(response, str):
+        response = json.loads(response)
+    return response["data"]["access_token"]
 ```
 
-步骤六： 变量赋值
-添加变量赋值节点，将 token 存储为会话变量 sqlbot_token。
+将该自定义工具的输出作为下一步 `mcp_start` 的 `token` 参数。
 
-步骤七： 创建问数会话
+步骤六： 创建问数会话
 添加 MCP 调用节点，调用 mcp_start：
 
 - MCP Server Config 服务配置与步骤四相同
-- 工具配置：点击「获取工具」，选择 mcp_start
-- 工具参数配置：token 选择「会话变量>sqlbot_token」；如需指定工作空间，将 oid 绑定到开始节点的 oid 输入
+- 工具配置：单击「获取工具」，选择 mcp_start
+- 工具参数配置：
+    - token：选择上一步自定义工具 `extract_token` 的输出
+    - username：选择开始节点的 username
+    - password：选择开始节点的 password
+    - oid：如需指定工作空间，绑定到开始节点的 oid 输入
 
-步骤八： 解析会话结果并赋值
-MCP 工具返回包含 chat_id 的 JSON。用自定义工具解析后，将 chat_id 存储为会话变量 sqlbot_chat_id：
+步骤七： 解析会话结果
+`mcp_start` 返回的 JSON 同时包含 `access_token` 和 `chat_id`。添加「自定义工具」，输入参数将 MCP 调用结果赋值给 `arg1`，工具内容：
 ```python
 import json
 def main1(arg1):
     json_obj = json.loads(arg1[0])
-    return {"sqlbot_chat_id": json_obj["data"]["chat_id"]}
+    return {"token":json_obj["data"]["access_token"], "chat_id":json_obj["data"]["chat_id"]}
 ```
 
+步骤八： 变量赋值
+添加变量赋值节点，将上一步输出的 token 存储为会话变量 sqlbot_token，将 chat_id 存储为会话变量 sqlbot_chat_id。一次对话只登录一次、只创建一次会话。
+
 步骤九： 问数 MCP 调用配置
-添加 MCP 调用节点，配置问数调用
+条件分支的两条路径在此处汇合。添加 MCP 调用节点，配置问数调用
 
 - MCP Server Config 服务配置：
 ```
@@ -353,11 +363,22 @@ def main1(arg1):
 }
 ```
 - 工具配置：
-点击「获取工具」，选择 mcp_question
+单击「获取工具」，选择 mcp_question
 - 工具参数配置：
-question 选择「开始>用户问题」，chat_id 选择「会话变量>sqlbot_chat_id」，token 选择「会话变量>sqlbot_token」。可按需绑定 datasource_id、custom_model。
+question 选择「开始 > 用户问题」，chat_id 选择「会话变量 > sqlbot_chat_id」，token 选择「会话变量 > sqlbot_token」。可按需绑定 datasource_id、custom_model。
 
-步骤十：在流程末尾添加指定回复节点，将 MCP 的输出结果作为回复内容。输入有效的 username 与 password 测试登录及 MCP 功能调用是否正常。
+步骤十： 清洗问数结果
+`mcp_question` 的返回值通常是列表，且文本中可能包含零宽空格（`\u200b`）。添加「自定义工具」，将 MCP 调用结果赋值给参数 `input_text`，工具内容：
+```python
+def main(input_text):
+    # input_text 是一个 list
+    result = []
+    for item in input_text:
+        result.append(item.replace('\u200b', ''))
+    return '\n'.join(result)
+```
+
+步骤十一：在流程末尾添加指定回复节点，将上一步清洗后的结果作为回复内容。输入有效的 username 与 password 测试登录及 MCP 功能调用是否正常。
 
 
 ![集成示例](/img/sqlbot/mcp/sqlbot_mk_mcp.png)

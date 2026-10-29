@@ -12,7 +12,8 @@ keywords: [1Panel Docker, Docker Compose, 编排模板, Compose 模板, 容器�
 
 点击 **创建**，填写模板名称、描述和 Compose 内容后保存。模板只保存配置文本，不会自动创建容器、网络或存储卷。
 
-![创建编排模板](/img/1panel/containers/compose_template_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/compose_template_create.png" alt="图 1 创建模板界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建模板界面</div>
 
 :::caution[模板中的敏感信息]

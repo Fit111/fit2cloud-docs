@@ -100,6 +100,7 @@ WinRM 是微软推出的一种远程管理服务，可使用管理员账号在 P
 
 - 创建应用发布机后需手动执行应用发布机部署，安装 Chrome、DBeaver 或其他远程应用。
 - 点击 **应用发布机名称** 按钮进入应用发布机详情页中，选择 **发布机部署** 页签，点击快速更新模块的 **初始化部署** 按钮，初始化应用发布机。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_RemoteApp5.png" alt="图 6  发布机部署" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  发布机部署</div>
 
@@ -107,6 +108,7 @@ WinRM 是微软推出的一种远程管理服务，可使用管理员账号在 P
 
 - 点击 **应用发布机名称** 进入应用发布机详情页中。
 - 此页面包含应用发布机详情信息，包括：远程应用发布机帐号列表、远程应用、发布机部署记录等。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_RemoteApp6.png" alt="图 7  应用发布机详情" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  应用发布机详情</div>
 

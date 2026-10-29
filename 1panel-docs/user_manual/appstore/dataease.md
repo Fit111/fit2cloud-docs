@@ -10,14 +10,16 @@ title: DataEase
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 DataEase 并安装
 
 在右上角搜索框输入 **DataEase**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251021164523104](/img/1panel/app/dataease.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/dataease.png" alt="图 2 搜索 DataEase 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 DataEase 并安装</div>
 
 ## 3. 配置安装参数
@@ -37,7 +39,8 @@ title: DataEase
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251021164616512](/img/1panel/app/dataease_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/dataease_install.png" alt="图 3 配置安装参数——安装 DataEase 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 DataEase 的参数配置</div>
 
 等待安装完成即可
@@ -46,15 +49,18 @@ title: DataEase
 
 安装完成后，确认 1Panel 配置默认访问地址，已配置过可忽略
 
-![image-20251016172322315](/img/1panel/app/setting_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/setting_ip.png" alt="图 4 访问 DataEase 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 DataEase 服务界面</div>
 
 返回应用商店，点击 **跳转** 即可访问 DataEase 服务
 
-![image-20251021164804606](/img/1panel/app/dataease_jump.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/dataease_jump.png" alt="图 5 访问 DataEase 服务——打开 DataEase 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 DataEase 服务——打开 DataEase 服务地址</div>
 
 使用默认用户名: `admin`  密码: `DataEase@123456`登录即可
 
-![image-20251021165236307](/img/1panel/app/dataease_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/dataease_view.png" alt="图 6 访问 DataEase 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 DataEase 服务界面</div>

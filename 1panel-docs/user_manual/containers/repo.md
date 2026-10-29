@@ -12,7 +12,8 @@ keywords: [1Panel 镜像仓库, Docker Registry, 镜像仓库认证, Harbor, Doc
 
 点击 **创建**，填写名称、协议、下载地址，以及是否认证、用户名和密码。启用认证后，1Panel 会使用所填凭证执行 Docker 登录。
 
-![创建镜像仓库](/img/1panel/containers/repo_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/repo_create.png" alt="图 1 创建仓库界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建仓库界面</div>
 
 :::caution

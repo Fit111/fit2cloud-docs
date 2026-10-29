@@ -8,12 +8,14 @@ title: 自签证书
 
 1Panel 默认创建了名为 `1Panel` 的证书颁发机构，如果没有特殊要求，用户可以使用该颁发机构快速创建自签证书。
 
-![img.png](/img/1panel/websites/certificate_self_sign_1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_self_sign_1.png" alt="图 1 证书颁发机构界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 证书颁发机构界面</div>
 
 ## 2 签发证书
 
 在证书颁发机构列表中，点击【签发证书】按钮，弹出签发证书页面。在该页面中可以创建自签证书。
 
-![img.png](/img/1panel/websites/certificate_self_sign_2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/certificate_self_sign_2.png" alt="图 2 签发证书" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 签发证书</div>

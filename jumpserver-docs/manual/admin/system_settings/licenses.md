@@ -8,5 +8,6 @@ title: 许可证
 - 非企业版安装包，不能导入 License。
 
 - 可以通过按钮 **上传许可证文件** 导入许可证。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_lisence_01.png" alt="图 1  许可证页面" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  许可证页面</div>

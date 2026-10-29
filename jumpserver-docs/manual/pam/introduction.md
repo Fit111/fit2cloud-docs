@@ -14,6 +14,7 @@ description: 介绍 JumpServer PAM（特权访问管理）模块的定位、功�
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v5_pam_introduction.png" alt="图 1  PAM 模块仪表盘" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  PAM 模块仪表盘</div>
+
 ## 2 功能构成
 
 PAM 模块的左侧导航包含六个部分，构成"看数据 → 管账号 → 做自动化 → 控安全 → 对外集成 → 查活动"的完整闭环。

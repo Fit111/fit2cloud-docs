@@ -39,10 +39,12 @@ https://huggingface.co/models?other=text-embedding
 
 本地模型-向量模型配置样例图示如下：
 :::
+
 <img alt="本地向量模型" src="/img/maxkb-v1/model/local_embed.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 本地模型-重排模型配置样例图示如下：
 :::
+
 <img alt="本地重排模型" src="/img/maxkb-v1/model/local_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

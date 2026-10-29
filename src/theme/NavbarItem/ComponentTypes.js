@@ -11,6 +11,7 @@ import DocSidebarNavbarItem from '@theme/NavbarItem/DocSidebarNavbarItem';
 import DocsVersionNavbarItem from '@theme/NavbarItem/DocsVersionNavbarItem';
 import DocsVersionDropdownNavbarItem from '@theme/NavbarItem/DocsVersionDropdownNavbarItem';
 import ProductDocs from '@theme/NavbarItem/ProductDocs';
+import Appliance from '@theme/NavbarItem/Appliance';
 import HomeNavbarSearch from '@theme/NavbarItem/HomeNavbarSearch';
 
 const ComponentTypes = {
@@ -24,6 +25,7 @@ const ComponentTypes = {
   docsVersion: DocsVersionNavbarItem,
   docsVersionDropdown: DocsVersionDropdownNavbarItem,
   'custom-ProductDocs': ProductDocs,
+  'custom-Appliance': Appliance,
   'custom-HomeNavbarSearch': HomeNavbarSearch,
 };
 

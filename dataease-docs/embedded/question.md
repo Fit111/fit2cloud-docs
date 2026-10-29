@@ -6,13 +6,13 @@ title: 嵌入式常见问题
 
 如下所示：
 
-![4. 嵌入式常见问题（1）.png](/img/dataease/embedded/4.%20嵌入式常见问题（1）.png)
+![4. 嵌入式常见问题（1）.png](/img/dataease/embedded/4-qianrushichangjianwenti-1.png)
 
 图 1  嵌入式常见问题
 
 解决方案：检查嵌入式应用的跨域设置，与提示报错的 origin 是否相同。
 
-![4. 嵌入式常见问题（2）.png](/img/dataease/embedded/4.%20嵌入式常见问题（2）.png)
+![4. 嵌入式常见问题（2）.png](/img/dataease/embedded/4-qianrushichangjianwenti-2.png)
 
 图 2  嵌入式常见问题
 
@@ -20,7 +20,7 @@ title: 嵌入式常见问题
 
 如下所示：
 
-![4. 嵌入式常见问题（3）.png](/img/dataease/embedded/4.%20嵌入式常见问题（3）.png)
+![4. 嵌入式常见问题（3）.png](/img/dataease/embedded/4-qianrushichangjianwenti-3.png)
 
 图 3  嵌入式常见问题
 
@@ -35,7 +35,7 @@ origin-list: http://localhost:8000，访问 DataEase 地址1（9080）,访问 Da
 dectl restart
 ```
 
-![4. 嵌入式常见问题（4）.png](/img/dataease/embedded/4.%20嵌入式常见问题（4）.png)
+![4. 嵌入式常见问题（4）.png](/img/dataease/embedded/4-qianrushichangjianwenti-4.png)
 
 图 4  嵌入式常见问题
 
@@ -46,7 +46,7 @@ dectl restart
 
 如下所示：
 
-![4. 嵌入式常见问题（5）.png](/img/dataease/embedded/4.%20嵌入式常见问题（5）.png)
+![4. 嵌入式常见问题（5）.png](/img/dataease/embedded/4-qianrushichangjianwenti-5.png)
 
 图 5  嵌入式常见问题
 
@@ -56,7 +56,7 @@ dectl restart
 
 情况一：DataEase JS 未正确引入，如下所示，打开浏览器控制台，在 Network 页签选择 JS ，搜索 dataease 查看是否存在相关 JS 即可判断。
 
-![4. 嵌入式常见问题（6）.png](/img/dataease/embedded/4.%20嵌入式常见问题（6）.png)
+![4. 嵌入式常见问题（6）.png](/img/dataease/embedded/4-qianrushichangjianwenti-6.png)
 
 图 6  嵌入式常见问题
 
@@ -66,11 +66,11 @@ dectl restart
 
 如下所示：
 
-![4. 嵌入式常见问题（7）.png](/img/dataease/embedded/4.%20嵌入式常见问题（7）.png)
+![4. 嵌入式常见问题（7）.png](/img/dataease/embedded/4-qianrushichangjianwenti-7.png)
 
 图 7  嵌入式常见问题
 
-![4. 嵌入式常见问题（8）.png](/img/dataease/embedded/4.%20嵌入式常见问题（8）.png)
+![4. 嵌入式常见问题（8）.png](/img/dataease/embedded/4-qianrushichangjianwenti-8.png)
 
 图 8  嵌入式常见问题
 
@@ -80,7 +80,7 @@ dectl restart
 
 如下所示：
 
-![4. 嵌入式常见问题（9）.png](/img/dataease/embedded/4.%20嵌入式常见问题（9）.png)
+![4. 嵌入式常见问题（9）.png](/img/dataease/embedded/4-qianrushichangjianwenti-9.png)
 
 图 9  嵌入式常见问题
 
@@ -90,7 +90,7 @@ dectl restart
 
 如下所示：
 
-![4. 嵌入式常见问题（10）.png](/img/dataease/embedded/4.%20嵌入式常见问题（10）.png)
+![4. 嵌入式常见问题（10）.png](/img/dataease/embedded/4-qianrushichangjianwenti-10.png)
 
 图 10  嵌入式常见问题
 
@@ -103,7 +103,7 @@ dectl restart
 
 如下所示：
 
-![4. 嵌入式常见问题（11）.png](/img/dataease/embedded/4.%20嵌入式常见问题（11）.png)
+![4. 嵌入式常见问题（11）.png](/img/dataease/embedded/4-qianrushichangjianwenti-11.png)
 
 图 11  嵌入式常见问题
 
@@ -115,7 +115,7 @@ dectl restart
 
 DIV 嵌入时页面白屏，或列表为空，浏览器控制台查看网络请求状态有 401 状态码
 
-![4. 嵌入式常见问题（12）.png](/img/dataease/embedded/4.%20嵌入式常见问题（12）.png)
+![4. 嵌入式常见问题（12）.png](/img/dataease/embedded/4-qianrushichangjianwenti-12.png)
 
 图 12  嵌入式常见问题
 
@@ -123,7 +123,7 @@ iFrame 嵌入时提示 Request failed with status code 400
 
 网络请求返回异常：Request processing failed: com.auth0.jwt.exceptions.InvalidClaimException: The Token can't be used before Wed Jan 08 13:42:29 CST 2025.
 
-![4. 嵌入式常见问题（13）.png](/img/dataease/embedded/4.%20嵌入式常见问题（13）.png)
+![4. 嵌入式常见问题（13）.png](/img/dataease/embedded/4-qianrushichangjianwenti-13.png)
 
 图 13  嵌入式常见问题
 

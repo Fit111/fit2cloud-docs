@@ -19,7 +19,7 @@ title: 快速入门
 
 进入 DataEase 主界面后可以看到界面上方导航栏，有【工作台】【仪表板】【数据大屏】【数据准备】【电子表格】五大模块。
 
-![界面介绍](/img/dataease/newimg/product_acceptance/首页.png)
+![界面介绍](/img/dataease/newimg/product_acceptance/shouye.png)
 
 图 1  界面介绍
 
@@ -32,7 +32,7 @@ title: 快速入门
 - 模板中心：根据自身的业务需求和使用场景选择对应的模板，并在优质模板的基础上轻松制作自己的仪表板或数据大屏。
 - 近期动态：可以查看最近使用、我的收藏、我的分享的最新操作使用记录。
 
-![工作台](/img/dataease/newimg/product_acceptance/工作台.png)
+![工作台](/img/dataease/newimg/product_acceptance/gongzuotai.png)
 
 图 2  工作台
 
@@ -45,7 +45,7 @@ title: 快速入门
 
  详细功能请参考本文档使用手册[仪表板](./user_manual/dashboard_description)。
 
-![仪表板](/img/dataease/newimg/product_acceptance/仪表板.png)
+![仪表板](/img/dataease/newimg/product_acceptance/yibiaoban.png)
 
 图 3  仪表板
 
@@ -58,7 +58,7 @@ title: 快速入门
 
  详细功能请参考本文档使用手册[数据大屏](./user_manual/panel_description)。
 
-![数据大屏](/img/dataease/newimg/product_acceptance/数据大屏.png)
+![数据大屏](/img/dataease/newimg/product_acceptance/shujudaping.png)
 
 图 4  数据大屏
 
@@ -71,11 +71,11 @@ title: 快速入门
 
  详细功能请参考本文档使用手册【数据准备】。
 
-![数据源](/img/dataease/newimg/product_acceptance/数据源.png)
+![数据源](/img/dataease/newimg/product_acceptance/shujuyuan.png)
 
 图 5  数据源
 
-![数据集](/img/dataease/newimg/product_acceptance/数据集.png)
+![数据集](/img/dataease/newimg/product_acceptance/shujuji.png)
 
 图 6  数据集
 
@@ -88,7 +88,7 @@ title: 快速入门
 
 详细功能请参考 [电子表格](./xpack/spreadsheet_description)。
 
-![电子表格](/img/dataease/newimg/product_acceptance/电子表格.png)
+![电子表格](/img/dataease/newimg/product_acceptance/dianzibiaoge.png)
 
 图 7  电子表格
 
@@ -101,7 +101,7 @@ title: 快速入门
 
 在数据准备模块，切换到数据源菜单，新建一个数据源链接，名称为 "销售额分析"，类型选择 "MySQL"，主机名 "mysql-de"，端口号 "3306"，数据库名 "dataease"，用户名 "root"，密码 "Password123@mysql" 检验通过后点击保存即可。
 
-![添加数据源](/img/dataease/newimg/product_acceptance/连接数据源.png)
+![添加数据源](/img/dataease/newimg/product_acceptance/lianjieshujuyuan.png)
 
 图 8  连接数据源
 
@@ -109,17 +109,17 @@ title: 快速入门
 
 在数据准备模块，切换到数据集菜单，在目标目录下新建数据库数据集。
 
-![添加数据集](/img/dataease/newimg/product_acceptance/新建数据集.png)
+![添加数据集](/img/dataease/newimg/product_acceptance/xinjianshujuji.png)
 
 图 9  新建数据集
 
 选择上一步创建的数据源 "销售额分析"，勾选数据表 "各市实际销售额" 点击确认即可。
 
-![创建数据库数据集](/img/dataease/newimg/product_acceptance/创建数据库数据集.png)
+![创建数据库数据集](/img/dataease/newimg/product_acceptance/chuangjianshujukushujuji.png)
 
 图 10  创建数据库数据集
 
-![数据集创建成功](/img/dataease/newimg/product_acceptance/数据集创建成功.png)
+![数据集创建成功](/img/dataease/newimg/product_acceptance/shujujichuangjianchenggong.png)
 
 图 11  数据集创建成功
 
@@ -127,13 +127,13 @@ title: 快速入门
 
 切换到仪表板菜单，点击空白新建创建仪表板【2021 年全国GDP数据】。
 
-![新建仪表板](/img/dataease/newimg/product_acceptance/新建仪表板.png)
+![新建仪表板](/img/dataease/newimg/product_acceptance/xinjianyibiaoban.png)
 
 图 12  新建仪表板
 
 在此步骤选择地图图表，点击确认。
 
-![选择地图视图](/img/dataease/newimg/product_acceptance/选择地图视图.png)
+![选择地图视图](/img/dataease/newimg/product_acceptance/xuanzeditushitu.png)
 
 图 13  选择地图视图
 
@@ -142,19 +142,19 @@ title: 快速入门
 同样，从右侧【指标】列表中拖动"销售额"到图形区【指标】选择框；  
 设置钻取目录，分别拖拽钻取字段"省份""城市"字段至图形区【钻取/维度】选择框，如下图所示，下钻目录与拖入的字段顺序有关，自上而下依次下钻。
 
-![创建地图视图](/img/dataease/newimg/product_acceptance/创建地图视图.png)
+![创建地图视图](/img/dataease/newimg/product_acceptance/chuangjianditushitu.png)
 
 图 14  创建地图视图
 
 下钻结果展示，如下图所示，展示广东省地图，如果想返回上一级，点击下图中【全部】，返回全国地图。
 
-![地图下钻](/img/dataease/newimg/product_acceptance/地图下钻.png)
+![地图下钻](/img/dataease/newimg/product_acceptance/dituxiazuan.png)
 
 图 15  地图下钻
 
 调整地图配色，在样式 Tap 页，在基础样式中选择系统配色方案，系统自动根据各省份 GDP 值的大小在地图中着色，GDP 值较小的省份，颜色偏浅；GDP 值较大的省份，颜色偏深，最后点击保存。
 
-![地图替换颜色](/img/dataease/newimg/product_acceptance/地图替换颜色.png)
+![地图替换颜色](/img/dataease/newimg/product_acceptance/ditutihuanyanse.png)
 
 图 16  地图替换颜色
 
@@ -162,18 +162,18 @@ title: 快速入门
 
 如下图所示，点击展开功能菜单，创建公共链接。
 
-![仪表板分享](/img/dataease/newimg/product_acceptance/仪表板分享.png)
+![仪表板分享](/img/dataease/newimg/product_acceptance/yibiaobanfenxiang.png)
 
 图 17  仪表板分享
 
 如下图所示，打开链接分享，并点击复制链接。
 
-![创建分享链接](/img/dataease/newimg/product_acceptance/创建分享链接.png)
+![创建分享链接](/img/dataease/newimg/product_acceptance/chuangjianfenxianglianjie.png)
 
 图 18  创建分享链接
 
 分享复制的链接，其他人可查看你创建的仪表板。
 
-![访问公共链接](/img/dataease/newimg/product_acceptance/访问公共连接.png)
+![访问公共链接](/img/dataease/newimg/product_acceptance/fangwengonggonglianjie.png)
 
 图 19  访问公共链接

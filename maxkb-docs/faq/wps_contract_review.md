@@ -53,9 +53,9 @@ MaxKB WPS合同审核助手的实现采用前后端分离的架构，前端负�
 
 
 打开终端，执行以下命令：
-'''
+```bash
 curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
-'''
+```
 
 该脚本会自动下载并安装插件至WPS的插件目录：~/Library/Containers/com.kingsoft.wpsoffice.mac/Data/.kingsoft/wps/jsaddons。
 
@@ -66,7 +66,7 @@ curl -sSL https://east.dataease.cn/maxkb_wps_quick_start.sh | bash
 ### 2.2 Windows操作系统
 
 
-在网页中下载插件：https://maxkb-tools-1323865188.cos.ap-guangzhou.myqcloud.com/maxkb-wps.exe。
+在网页中下载插件：[https://maxkb-tools-1323865188.cos.ap-guangzhou.myqcloud.com/maxkb-wps.exe](https://maxkb-tools-1323865188.cos.ap-guangzhou.myqcloud.com/maxkb-wps.exe)。
 
 运行后，插件将被自动安装至：C:\Users\$\{Your_Name\}\AppData\Roaming\kingsoft\wps\jsaddons。
 

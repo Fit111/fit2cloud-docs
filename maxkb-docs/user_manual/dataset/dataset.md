@@ -11,6 +11,7 @@ title: 知识库
 知识库通过文件夹进行管理，根目录下可建立最多三级的子文件夹。每一级文件夹内均可创建相应的知识库。文件夹支持资源授权，普通用户仅可查看被授权的文件夹，授权文件夹时支持授权文件夹下已有的子资源。
 
 **注意**：共享资源为企业版 X-Pack 功能。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset.png" alt="图 1  知识库列表" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  知识库列表</div>
@@ -27,6 +28,7 @@ title: 知识库
 * 工作流知识库：允许用户通过拖拽节点的方式自主编排从不同数据源到知识库写入的全流程，满足企业个性化知识管理需求。
 
 **注意**：飞书知识库 X-Pack 功能，具体使用可参考[**飞书文档**](../X-Pack/feishu_doc)。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_dataeset.png" alt="图 2  新建知识库-选择知识库类型" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  新建知识库-选择知识库类型</div>
@@ -117,12 +119,14 @@ title: 知识库
 
 
 **导入时添加分段标题为关联问题:** 勾选后会把所有分段的标题设置为分段的关联问题。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/titel_set_question.png" alt="图 8  设置标题为关联问题" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  设置标题为关联问题</div>
 
 
 点击【开始导入】后，系统后台会对文档进行自动分段 -&gt; 存储 -&gt; 向量化操作，处理结束后，文件状态将显示为完成。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/processing.png" alt="图 9  编辑分段" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  编辑分段</div>
@@ -203,6 +207,7 @@ title: 知识库
         * QA 问答对分段：提取“问题-答案”对进行入库。
     * 不分段入库：删除“文档分段”节点实现不分段入库。
     * 自主引入第三方分段工具，适配复杂内容拆分需求。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/docsegmente_workflow_dataset.png" alt="图 17  文档分段工作流知识库" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 17  文档分段工作流知识库</div>
@@ -276,6 +281,7 @@ title: 知识库
 **执行记录**
 
 每次导入文档的操作会记录在工作流的【执行记录】中，用户可按发起人或状态，搜索指定执行记录，实现对所有导入操作的全链路追溯。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/record_workflow_dataset.png" alt="图 25  执行记录工作流知识库" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 25  执行记录工作流知识库</div>
@@ -284,6 +290,7 @@ title: 知识库
 **发布历史**
 
 工作流知识库中，支持查看发布历史版本的工作流、时间和用户等信息。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/release_history.png" alt="图 26  发布历史" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 26  发布历史</div>
@@ -370,6 +377,7 @@ MaxKB 知识库支持同步、重新向量化、生成问题、资源授权、�
 
 
 在知识库列表，点击知识库面板的【设置】进入知识库设置页面，可修改知识库基本信息（名称、描述、向量模型）及上传规则：每次上传最多文件数与单个文档大小上限值（MB）。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_setting.png" alt="图 35  知识库设置页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 35  知识库设置页面</div>
@@ -417,6 +425,7 @@ MaxKB 知识库支持同步、重新向量化、生成问题、资源授权、�
 在知识库列表，点击知识库面板的【删除】对知识库进行删除操作。
 
 **注意**：知识库删除后无法恢复，请谨慎操作。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/dataset_del.png" alt="图 41  知识库删除" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 41  知识库删除</div>

@@ -7,7 +7,7 @@ title: 进程守护
 
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 **1、安装 epel 源**
 
 ```bash
@@ -37,10 +37,10 @@ systemctl enable supervisord
 ```bash
 systemctl status supervisord
 ```
-
+:::
 
 #### "Ubuntu / Debian"
-!!! note ""
+:::note
 **安装 supervisor**
 
 ```bash
@@ -48,6 +48,7 @@ sudo apt-get install supervisor
 ```
 
 > 安装成功后，supervisor 会默认启动。
+:::
 
 ## 2 初始化
 

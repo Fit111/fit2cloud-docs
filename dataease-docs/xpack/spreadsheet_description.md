@@ -30,7 +30,7 @@ title: 电子表格概述
 - 支持手动 / 自动刷新绑定数据；
 - 编辑区支持预览、保存、发布全流程。
 
-**与 Excel 的关系**：单元格编辑能力基于 Univer 引擎，与 Excel 重合度约 90%。DataEase 独有数据集绑定、发布共享、查询控件、明细表 / 透视表对象、数据集替换等。通用编辑见 [电子表格功能详解](./spreadsheet_features)，特有能力见 [电子表格特殊功能](./spreadsheet_special)，对照表见 [与 Excel / Univer 的关系](./spreadsheet_features#5-与-excel-univer-的关系)。
+**与 Excel 的关系**：单元格编辑能力基于 Univer 引擎，与 Excel 重合度约 90%。DataEase 独有数据集绑定、发布共享、查询控件、明细表 / 透视表对象、数据集替换等。通用编辑见 [电子表格功能详解](./spreadsheet_features)，特有能力见 [电子表格特殊功能](./spreadsheet_special)，对照表见 [与 Excel / Univer 的关系](./spreadsheet_features#5-与-excel--univer-的关系)。
 
 **术语说明**
 
@@ -45,7 +45,7 @@ title: 电子表格概述
 
 - 在工作台顶部一级菜单点击【电子表格】。
 
-![功能入口](/img/dataease/newimg/xpack/00_功能入口_工作台顶部菜单.png)
+![功能入口](/img/dataease/newimg/xpack/00-gongnengrukou-gongzuotaidingbucaidan.png)
 
 图 1  电子表格入口
 
@@ -54,11 +54,11 @@ title: 电子表格概述
 - 在左侧标题【电子表格】旁点击【新建文件夹】或【新建表格】图标；
 - 也可在文件夹行的【+】菜单中选择【新建表格】/【新建文件夹】。
 
-![电子表格模块首页](/img/dataease/newimg/xpack/01_电子表格模块首页.png)
+![电子表格模块首页](/img/dataease/newimg/xpack/01-dianzibiaogemokuaishouye.png)
 
 图 2  选择数据源
 
-![电子表格模块首页](/img/dataease/newimg/xpack/进入电子表格编辑界面.png)
+![电子表格模块首页](/img/dataease/newimg/xpack/jinrudianzibiaogebianjijiemian.png)
 
 图 3  选择数据源
 
@@ -69,15 +69,15 @@ title: 电子表格概述
 - 在右侧配置区选择数据集并拖拽字段；
 - 点击下方的刷新图表数据按钮即可展示数据。
 
-![电子表格模块](/img/dataease/newimg/xpack/插入数据对象1.png)
+![电子表格模块](/img/dataease/newimg/xpack/charushujuduixiang1.png)
 
 图 4  插入数据对象
 
-![电子表格模块](/img/dataease/newimg/xpack/插入数据对象2.png)
+![电子表格模块](/img/dataease/newimg/xpack/charushujuduixiang2.png)
 
 图 5  插入数据对象
 
-![电子表格模块](/img/dataease/newimg/xpack/插入透视表.png)
+![电子表格模块](/img/dataease/newimg/xpack/charutoushibiao.png)
 
 图 6  插入透视表
 
@@ -86,7 +86,7 @@ title: 电子表格概述
 - 可设置表头、单元格样式、边框、合并、数字格式等；
 - 长表使用【冻结】固定表头。
 
-![电子表格模块](/img/dataease/newimg/xpack/图表样式.png)
+![电子表格模块](/img/dataease/newimg/xpack/tubiaoyangshi.png)
 
 图 7  图表样式
 
@@ -95,15 +95,15 @@ title: 电子表格概述
 - 点击工具栏【查询控件】→【+ 添加查询条件】；
 - 为条件关联明细表 / 透视表字段，实现联动过滤（详见 [查询控件](./spreadsheet_special#5-查询控件)）。
 
-![电子表格模块](/img/dataease/newimg/xpack/添加查询组件1.png)
+![电子表格模块](/img/dataease/newimg/xpack/tianjiachaxunzujian1.png)
 
 图 8  添加查询组件
 
-![电子表格模块](/img/dataease/newimg/xpack/添加查询组件2.png)
+![电子表格模块](/img/dataease/newimg/xpack/tianjiachaxunzujian2.png)
 
 图 9  添加查询组件
 
-![电子表格模块](/img/dataease/newimg/xpack/添加查询组件3.png)
+![电子表格模块](/img/dataease/newimg/xpack/tianjiachaxunzujian3.png)
 
 图 10  添加查询组件
 
@@ -111,7 +111,7 @@ title: 电子表格概述
 
 - 【预览】确认效果 →【保存】→【发布】上线。
 
-![电子表格模块](/img/dataease/newimg/xpack/电子表格保存发布.png)
+![电子表格模块](/img/dataease/newimg/xpack/dianzibiaogebaocunfabu.png)
 
 图 11  电子表格保存发布
 

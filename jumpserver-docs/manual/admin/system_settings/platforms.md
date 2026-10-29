@@ -9,11 +9,14 @@ title: 平台列表
 - 通过点击页面右上角小齿轮进入 **系统设置** 页面，点击 **平台列表** ，进入平台列表页面。
 - 平台列表在创建资产时供选择，用户可以在创建资产时为资产选择不同的系统类型，如Linux、Windows 等。
 - 同时可以新建平台类型，并选择指定的基础平台，就可以在创建资产中指定新建的平台类型。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_platforms_1.png" alt="图 1  平台列表页面" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  平台列表页面</div>
+
 ## 2 资产平台的创建
 
 - 点击平台列表页面的 **创建** 按钮，填写资产平台的信息即可创建新的资产平台，以 Linux 为例。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_platforms_2.png" alt="图 2  创建资产平台" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  创建资产平台</div>
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_platforms_3.png" alt="图 3  资产平台详细信息" />
@@ -83,6 +86,7 @@ title: 平台列表
 - SFTP 目录的默认路径为 `/tmp` ，支持自定义该目录。
 - 点击平台列表页面的 **创建** 按钮，增加SFTP协议后点击配置后方的 **齿轮** 按钮。
 - 自定义修改 SFTP 根目录即可。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_platforms_4.png" alt="图 4  自定义 SFTP 目录" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  自定义 SFTP 目录</div>
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_platforms_5.png" alt="图 5  SFTP 根目录配置" />

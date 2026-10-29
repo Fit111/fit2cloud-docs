@@ -63,6 +63,7 @@ title: 概览
 ### 5.2 统计指标、趋势图表
 
 #### 核心指标卡片
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  核心指标字段说明</div>
 
 | 指标 | 说明 |
@@ -93,6 +94,7 @@ title: 概览
 
 
 支持按智能体筛选统计数据，查看特定智能体的运营情况。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/agent.png" alt="图 5  按智能体筛选" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  按智能体筛选</div>
@@ -148,6 +150,7 @@ title: 概览
 | 排名列表 | 按 Tokens 消耗量降序排列的用户 |
 | 消耗数值 | 每个用户的 Tokens 消耗总量 |
 | 趋势标识 | 环比增减趋势指示 |
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/first/user.png" alt="图 9  Tokens 消耗 - TOP 用户" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  Tokens 消耗 - TOP 用户</div>

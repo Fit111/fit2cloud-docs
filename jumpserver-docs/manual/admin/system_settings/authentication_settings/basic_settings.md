@@ -25,12 +25,14 @@ title: 基本设置
 
 
 - 当用户点击登录页面上的 **忘记密码** 时，他们将被重定向到此 URL。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_Basic3.png" alt="图 2  忘记密码链接设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  忘记密码链接设置</div>
 
 ## 3 登录重定向
 
 - 当未经身份验证的用户访问 JumpServer 时，如果选中，系统将提示他们取消并返回默认登录页面或确认以继续进行第三方身份验证。如果未选中，它们将直接重定向到第三方身份验证页面。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/V4_Basic5.png" alt="图 3  登录重定向设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  登录重定向设置</div>
 

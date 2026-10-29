@@ -55,36 +55,42 @@ title: 对接火山引擎
 
 火山引擎-大语言模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 LLM模型" src="/img/maxkb-v1/model/huoshan_llm.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 火山引擎-向量模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 向量模型" src="/img/maxkb-v1/model/huoshan_embedding.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 火山引擎-语音识别模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 语音识别模型" src="/img/maxkb-v1/model/huoshan_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 火山引擎-语音合成模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 语音合成模型" src="/img/maxkb-v1/model/huoshan_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 火山引擎-视觉模型模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 视觉模型" src="/img/maxkb-v1/model/doubao_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 火山引擎-图片生成模型配置样例图示如下：
 :::
+
 <img alt="火山引擎 图片生成" src="/img/maxkb-v1/model/doubao_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 <img alt="火山引擎 图片生成" src="/img/maxkb-v1/model/doubao_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

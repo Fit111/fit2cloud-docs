@@ -10,14 +10,16 @@ title: Gitea
 
 进入 1Panel 控制台后，点击左侧菜单的 **「应用商店」**。
 
-![image-20251016110510084](/img/1panel/app/appstores.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/appstores.png" alt="图 1 打开应用商店" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 打开应用商店</div>
 
 ## 2. 搜索 Gitea 并安装
 
 在右上角搜索框输入 **Gitea**，点击应用卡片进入详情页，选择 **安装**。
 
-![image-20251017152422217](/img/1panel/app/gitea.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/gitea.png" alt="图 2 搜索 Gitea 并安装" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 搜索 Gitea 并安装</div>
 
 ## 3. 配置安装参数
@@ -36,7 +38,8 @@ title: Gitea
 
 确认设置无误后，点击 **确认** 按钮开始安装。
 
-![image-20251017152504426](/img/1panel/app/gitea_install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/gitea_install.png" alt="图 3 配置安装参数——安装 Gitea 的参数配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置安装参数——安装 Gitea 的参数配置</div>
 
 等待安装完成即可
@@ -45,20 +48,24 @@ title: Gitea
 
 配置默认访问地址，已配置则忽略此步骤
 
-![image-20251016172322315](/img/1panel/app/setting_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/setting_ip.png" alt="图 4 访问 Gitea 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 访问 Gitea 服务界面</div>
 
 返回应用商店，点击 **跳转** 即可访问 Gitea 服务
 
-![image-20251017152732221](/img/1panel/app/jump_gitea.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/jump_gitea.png" alt="图 5 访问 Gitea 服务——打开 Gitea 服务地址" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 访问 Gitea 服务——打开 Gitea 服务地址</div>
 
 填写初始配置，安装服务
 
-![image-20251017152844763](/img/1panel/app/gitea_info.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/gitea_info.png" alt="图 6 访问 Gitea 服务——查看 Gitea 服务参数信息" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 访问 Gitea 服务——查看 Gitea 服务参数信息</div>
 
 安装完成后，即可使用
 
-![image-20251017153119824](/img/1panel/app/gitea_view.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/gitea_view.png" alt="图 7 访问 Gitea 服务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 访问 Gitea 服务界面</div>

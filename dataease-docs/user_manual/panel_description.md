@@ -16,6 +16,6 @@ title: 数据大屏概述
 - 【序号 4】数据大屏操作区，可对数据大屏分享、预览、数据刷新、导出为 PDF 和图片；
 - 【序号 5】查看数据大屏信息，在数据大屏预览界面点击此感叹号，数据大屏信息则弹出提示。
 
-![大屏概览](/img/dataease/panel_generation/大屏概览.png)
+![大屏概览](/img/dataease/panel_generation/dapinggailan.png)
 
 图 1  大屏概览

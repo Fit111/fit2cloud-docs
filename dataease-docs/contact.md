@@ -5,7 +5,7 @@ wrapperClassName: de-contact
 
 ## 1 微信公众号
 
-<img alt="微信公众号" src="/img/dataease/wechat-official.jpg" width="280" style={{maxWidth:'100%', height:'auto'}}/>
+<img alt="微信公众号" src="/img/dataease/wechat-official.jpg" width="170" style={{maxWidth:'100%', height:'auto', marginLeft:'-8px'}}/>
 
 ## 2 开源社区论坛
 
@@ -14,7 +14,7 @@ wrapperClassName: de-contact
 
 ## 3 学习认证
 
-<img alt="学习认证" src="/img/dataease/学习认证.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
+<img alt="学习认证" src="/img/dataease/xuexirenzheng.jpg" width="156" style={{maxWidth:'100%', height:'auto'}}/>
 
 ## 4 项目地址
 

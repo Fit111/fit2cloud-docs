@@ -14,13 +14,13 @@ title: 系统 API
 
 用户可通过【创建】获取到 API Key，可供调试的接口如下图所示。
 
-![组件置底_基础功能](/img/dataease/xpack/API查看.png)
+![组件置底_基础功能](/img/dataease/xpack/apichakan.png)
 
 图 2  查看 API
 
 支持查看 API 文档，如下图所示。
 
-![组件置底_基础功能](/img/dataease/xpack/API文档.png)
+![组件置底_基础功能](/img/dataease/xpack/apiwendang.png)
 
 图 3  API 文档
 
@@ -159,19 +159,19 @@ public class Main {
 
 图 6  获取接口信息界面
 
-![API key Postman-2.png](/img/dataease/xpack/API%20key%20Postman-2.png)
+![API key Postman-2.png](/img/dataease/xpack/api-key-postman-2.png)
 
 图 7  Postman 调用示例
 
 方式二：通过浏览器控制台查看网络请求。
 
-![API key Postman浏览器.png](/img/dataease/xpack/API%20key%20Postman浏览器.png)
+![API key Postman浏览器.png](/img/dataease/xpack/api-key-postmanliulanqi.png)
 
 图 8  浏览器调用 API Key
 
 ### 5.2 配置 Pre-script
 
-![Postman 配置 Pre-script.png](/img/dataease/xpack/Postman%20配置%20Pre-script.png)
+![Postman 配置 Pre-script.png](/img/dataease/xpack/postman-peizhi-pre-script.png)
 
 图 9  Postman Pre-script
 
@@ -238,7 +238,7 @@ pm.environment.set("x-de-ask-token", token);
 
 Headers 按照图示配置，无需修改
 
-![Postman 配置 Headers.png](/img/dataease/xpack/Postman%20配置%20Headers.png)
+![Postman 配置 Headers.png](/img/dataease/xpack/postman-peizhi-headers.png)
 
 图 10  Postman Headers
 
@@ -252,12 +252,12 @@ x-de-ask-token: {{x-de-ask-token}}
 
 Body 按照 API 请求要求填写，此处以获取仪表板列表树为例
 
-![Postmax 配置请求体.png](/img/dataease/xpack/Postmax%20配置请求体.png)
+![Postmax 配置请求体.png](/img/dataease/xpack/postmax-peizhiqingqiuti.png)
 
 图 11  Postmax 配置请求体
 
 ### 5.5 测试验证
 
-![Postman 测试验证.png](/img/dataease/xpack/Postman%20测试验证.png)
+![Postman 测试验证.png](/img/dataease/xpack/postman-ceshiyanzheng.png)
 
 图 12  Postman 测试验证

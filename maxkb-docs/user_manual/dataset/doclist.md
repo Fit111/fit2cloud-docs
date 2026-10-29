@@ -219,6 +219,7 @@ Web 站点知识库支持对选中文档进行同步操作。同步时会先删�
 ### 12.4 移动位置
 
 在分段面板中可以对选中分段进行移动到头部、末尾、上移或下移操作。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/upanddown_segmentation.png" alt="图 27  移动位置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 27  移动位置</div>

@@ -48,14 +48,17 @@ const config = {
     'maxkb_versioned_docs/version-v1/static',
     'cordys-docs/static',
     'ai-gateway-docs/static',
+    'halo-docs/static',
   ],
 
   // 客户端模块: 路由更新时给 <html data-docs-product> 打上当前产品标记,
   // 供 custom.css 按产品定制文档页样式(见 src/clientModules/docsProduct.js)。
   // navbarGaps: 注入导航栏左右两侧的空白遮挡元素(见 src/clientModules/navbarGaps.js)。
+  // maxkbEmbed: 全站注入 MaxKB 智能小助手浮窗(见 src/clientModules/maxkbEmbed.js)。
   clientModules: [
     './src/clientModules/docsProduct.js',
     './src/clientModules/navbarGaps.js',
+    './src/clientModules/maxkbEmbed.js',
   ],
 
   url: 'https://docs.fit2cloud.com',
@@ -210,6 +213,36 @@ const config = {
         path: 'ai-gateway-docs',
         routeBasePath: 'ai-gateway',
         sidebarPath: 'ai-gateway-docs/sidebars.js',
+        // 版本化: current = v1, 暂无历史版本(若不声明 versions, Docusaurus 默认
+        // 当前版本名为 "current"/标签 "next", 侧栏版本控件会显示 next)。
+        // 统一声明为 v1, 与 SQLBot/Cordys 等单版本产品一致。
+        lastVersion: 'current',
+        versions: {
+          current: { label: 'v1', badge: false, banner: 'none' },
+        },
+      },
+    ],
+    // Halo 官方文档(从 halo-dev/docs 的 Rspress 迁移), namespace=halo
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'halo',
+        path: 'halo-docs',
+        routeBasePath: 'halo',
+        sidebarPath: 'halo-docs/sidebars.js',
+        // Rspress 的 `_` 前缀片段(_XxxVo.md / _docker-*.md)作为 MDX 组件被父页 import,
+        // 不应独立成路由, 用 Docusaurus 默认 exclude 排除即可。
+        exclude: [
+          '**/_*.{js,jsx,ts,tsx,md,mdx}',
+          '**/_*/**',
+          '**/*.test.{js,jsx,ts,tsx}',
+          '**/__tests__/**',
+        ],
+        // 版本化: current = v1, 暂无历史版本(同 SQLBot/Cordys)
+        lastVersion: 'current',
+        versions: {
+          current: { label: 'v1', badge: false, banner: 'none' },
+        },
       },
     ],
   ],
@@ -273,6 +306,16 @@ const config = {
             type: 'custom-ProductDocs',
             position: 'left',
           },
+          {
+            // 一体机: 仿 fit2cloud 官网顶部「一体机」菜单(4 项, 均跳官网外链)。
+            // 产品/链接/图标集中维护在 src/theme/NavbarItem/Appliance.js 的 APPLIANCES 表。
+            // 注意: 该组件是 src/theme 下的新文件, @theme/* 别名表在 dev server 启动时生成,
+            //       新增文件后需重启 docusaurus start 才会生效(生产构建不受影响)。
+            type: 'custom-Appliance',
+            position: 'left',
+          },
+          // 如何购买: 对齐官网顶部同名入口(官网该处为平级普通链接, 非下拉菜单)。
+          {href: 'https://www.fit2cloud.com/purchase/index.html', label: '如何购买', position: 'left'},
           // 以下官网/论坛/培训认证/关于我们/合作伙伴 对齐 Figma 设计稿: 全部放在左侧(logo 之后),
           // 与"首页/产品文档"同一行, 右侧只留 搜索 + 中英文切换。
           // 版本切换已移入文档页左侧「文档选择」一体盒子(见 src/theme/DocsSwitcher)。
@@ -313,7 +356,7 @@ const config = {
               {label: '400-052-0755', to: 'tel:400-052-0755'},
               {label: '客户支持门户', to: 'https://support.fit2cloud.com/'},
               {label: '产品预约演示', to: 'https://jsj.top/f/UFPJsq'},
-              {label: '合作伙伴', to: 'https://fit2cloud.com/partners/index.html'},
+              {label: '申请成为合作伙伴', to: 'https://jsj.top/f/vKGHRP'},
             ],
           },
           {

@@ -77,7 +77,7 @@ https://open.weixin.qq.com/connect/oauth2/authorize?appid=CORPID&redirect_uri=RE
 详细说明如下：
 
 - CORPID - 企业 ID
-- REDIRECT_URI - 回调地址，例如 https://dataease.fit2cloud.com/#/de-auto-login?type=wecom，调整域名部分即可
+- REDIRECT_URI - 回调地址，例如 `https://dataease.fit2cloud.com/#/de-auto-login?type=wecom`，调整域名部分即可
 - SCOPE - 填 snsapi_base 即可
 - AGENTID - 应用 ID
 
@@ -101,7 +101,7 @@ DataEase 对接钉钉，需要填写以下信息：
 - 应用密钥
 - 回调域名
 
-获取应用 ID 和应用密钥，需要在钉钉工作台的【应用管理】中创建一个对应的应用，可以先登录工作台 https://oa.dingtalk.com/index.htm#/microApp/microAppList；  
+获取应用 ID 和应用密钥，需要在钉钉工作台的【应用管理】中创建一个对应的应用，可以先登录工作台 [https://oa.dingtalk.com/index.htm#/microApp/microAppList](https://oa.dingtalk.com/index.htm#/microApp/microAppList)；  
 创建应用，需要在【应用管理】中，滚动到页面最下方，点击【自建应用】。
 
 ![对接钉钉平台](/img/dataease-v2/xpack/创建钉钉应用.png)
@@ -238,7 +238,7 @@ DataEase 对接国际飞书，需要填写以下信息：
 - 回调域名
 
 对接信息的获取，需要以管理员权限登录国际飞书后台；  
-获取回调域名，回调域名填写 DataEase 的访问域名即可，例如 https://dataease.fit2cloud.com，此处域名根据自己的实际情况进行修改；  
+获取回调域名，回调域名填写 DataEase 的访问域名即可，例如 `https://dataease.fit2cloud.com`，此处域名根据自己的实际情况进行修改；  
 注意此处的回调域名在后续的应用设置中需要用到。
 
 获取应用 Key 和应用密钥，需要登录国际飞书管理后台，在【工作台】的【应用管理】中创建一个对应的应用。
@@ -259,9 +259,9 @@ DataEase 对接国际飞书，需要填写以下信息：
 
 ### 4.2 应用权限设置
 
-【安全设置】中设置回调 URL 和 IP 白名单，假设 DataEase 服务器的域名为 https://dataease.fit2cloud.com，对应的 IP 为111.222.111.222，则在【Security Settings】的【Redirect URLs】里，添加两条记录：  
-https://dataease.fit2cloud.com/?client=lark，即 http(s)://域名/?client=lark；  
-https://dataease.fit2cloud.com/，即 http(s)://域名/；
+【安全设置】中设置回调 URL 和 IP 白名单，假设 DataEase 服务器的域名为 `https://dataease.fit2cloud.com`，对应的 IP 为111.222.111.222，则在【Security Settings】的【Redirect URLs】里，添加两条记录：  
+`https://dataease.fit2cloud.com/?client=lark`，即 http(s)://域名/?client=lark；  
+`https://dataease.fit2cloud.com/`，即 http(s)://域名/；
 
 ![对接国际飞书平台](/img/dataease-v2/xpack/lark安全设置.png)
 

@@ -19,7 +19,7 @@ title: 前言
 
 ## 获取帮助
 
-当您在使用JumpServer过程中遇到任何问题，请联系企业微信群中的支持人员、QQ群中的在线支持人员或者登录飞致云支持门户`https://support.fit2cloud.com/` 提交工单、拨打400-052-0755寻求帮助。 
+当您在使用JumpServer过程中遇到任何问题，请联系企业微信群中的支持人员、QQ群中的在线支持人员或者登录飞致云支持门户 [https://support.fit2cloud.com/](https://support.fit2cloud.com/) 提交工单、拨打400-052-0755寻求帮助。 
 
 公司各区域联系地址： 
 

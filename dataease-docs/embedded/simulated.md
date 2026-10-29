@@ -22,7 +22,7 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 
 ### 2.1 流程描述
 
-![同域.pic.jpg](/img/dataease/embedded/同域.pic.jpg)
+![同域.pic.jpg](/img/dataease/embedded/tongyu-pic.jpg)
 
 图 1  同域.pic
 
@@ -39,11 +39,11 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 
  参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 
-![模拟登录（2）](/img/dataease/embedded/模拟登录（2）.png)
+![模拟登录（2）](/img/dataease/embedded/monidenglu-2.png)
 
 图 2  模拟登录
 
-![模拟登录（3）](/img/dataease/embedded/模拟登录（3）.png)
+![模拟登录（3）](/img/dataease/embedded/monidenglu-3.png)
 
 图 3  模拟登录
 
@@ -51,7 +51,7 @@ DataEase 的认证 token 是放在 LocalStorage 里面的，调用 /de2api/login
 
 ### 3.1 流程描述
 
-![跨域.pic.jpg](/img/dataease/embedded/跨域.pic.jpg)
+![跨域.pic.jpg](/img/dataease/embedded/kuayu-pic.jpg)
 
 图 4  跨域.pic
 
@@ -71,11 +71,11 @@ Nginx 通过特定路径拦截到请求重定向至自定义的 HTML 页面，�
    
 参考示例代码：[dataease-login-adpter-demo](https://github.com/liuboF2c/dataease-login-adpter-demo/tree/dev_v2)
 
-![模拟登录（5）](/img/dataease/embedded/模拟登录（5）.png)
+![模拟登录（5）](/img/dataease/embedded/monidenglu-5.png)
 
 图 5  模拟登录
 
-![模拟登录（6）](/img/dataease/embedded/模拟登录（6）.png)
+![模拟登录（6）](/img/dataease/embedded/monidenglu-6.png)
 
 图 6  模拟登录
 

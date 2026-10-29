@@ -9,7 +9,7 @@ title: 同步管理
 - 当前支持同步的源数据库：Db2、MySQL、Oracle、SQL Server、Elasticsearch
 - 当前支持的目标数据库：Apache Doris（v1.2 及以上版本）
 
-![同步管理首页](/img/dataease/xpack/同步管理首页.png)
+![同步管理首页](/img/dataease/xpack/tongbuguanlishouye.png)
 
 图 1  同步管理首页
 
@@ -17,23 +17,23 @@ title: 同步管理
 
 数据连接管理页面：源数据源管理与目标数据源管理。
 
-![数据连接页面](/img/dataease/xpack/数据连接页面.png)
+![数据连接页面](/img/dataease/xpack/shujulianjieyemian.png)
 
 图 2  数据连接页面
 
 Doris 类型的目标数据源的 BE 节点设置为可选非必选项，并允许配置副本数，但 BE 副本数必须小于等于 BE 节点数。
 
-![Doris 忽略 BE 节点](/img/dataease/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数1.png)
+![Doris 忽略 BE 节点](/img/dataease/newimg/doris-leixingdemubiaoshujuyuanzhichihulve-be-jiedianshezhi-bingyunxupeiz-7317bc.png)
 
 图 3  Doris 忽略 BE 节点
 
-![Doris 配置副本数](/img/dataease/newimg/Doris%20类型的目标数据源支持忽略%20BE%20节点设置，并允许配置副本数2.png)
+![Doris 配置副本数](/img/dataease/newimg/doris-leixingdemubiaoshujuyuanzhichihulve-be-jiedianshezhi-bingyunxupeiz-ce4678.png)
 
 图 4  Doris 配置副本数
 
 任务管理页面：任务列表管理、任务日志管理 。
 
-![任务管理页面](/img/dataease/xpack/任务管理页面.png)
+![任务管理页面](/img/dataease/xpack/renwuguanliyemian.png)
 
 图 5  任务管理页面
 
@@ -41,19 +41,19 @@ Doris 类型的目标数据源的 BE 节点设置为可选非必选项，并允�
 
 创建任务流程：填写基本信息-选择源数据库-选择目标数据库。先填写和选择同步管理的相关内容。
 
-![数据管理1](/img/dataease/xpack/数据管理1.png)
+![数据管理1](/img/dataease/xpack/shujuguanli1.png)
 
 图 6  数据管理
 
 选择源目标数据库和查询方式。
 
-![数据管理2](/img/dataease/xpack/数据管理2.png)
+![数据管理2](/img/dataease/xpack/shujuguanli2.png)
 
 图 7  数据管理
 
 选择目标数据库，进行字段映射。
 
-![数据管理3](/img/dataease/xpack/数据管理3.png)
+![数据管理3](/img/dataease/xpack/shujuguanli3.png)
 
 图 8  数据管理
 
@@ -67,12 +67,12 @@ Doris 类型的目标数据源的 BE 节点设置为可选非必选项，并允�
 偏移量：用于调整增量判定基准，负数为前向偏移，正数为后向偏移。
 容错率：数据同步过程中，允许的数据错误占比阈值。
 
-![增量同步](/img/dataease/newimg/增量同步.png)
+![增量同步](/img/dataease/newimg/zengliangtongbu.png)
 
 图 9  添加任务
 
 支持手动终止执行中的任务。
 
-![终止任务](/img/dataease/newimg/终止任务.png)
+![终止任务](/img/dataease/newimg/zhongzhirenwu.png)
 
 图 10  添加任务

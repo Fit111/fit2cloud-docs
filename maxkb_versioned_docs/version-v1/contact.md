@@ -24,5 +24,7 @@ title: 联系我们
 - 邮箱：support@fit2cloud.com
 - 电话：400-052-0755
 - 微信交流群：     
+
 <img alt="企业微信" src="/img/maxkb-v1/index/wechat.jpg" width="135" style={{maxWidth:'100%', height:'auto'}}/>
+
 :::

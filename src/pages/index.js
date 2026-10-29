@@ -133,6 +133,7 @@ export default function Home() {
 
   // 给 body 挂 home-page: 让顶部(navbar 悬浮卡外围)背景色与 Hero 的 #eaf1ff 一致。
   // 对应 custom.css 的 body.home-page(作为 body:has(.portalPage) 的旧浏览器兜底)。
+  // MaxKB 浮窗已改为全站注入, 见 src/clientModules/maxkbEmbed.js, 不在此处处理。
   useEffect(() => {
     document.body.classList.add('home-page');
     return () => document.body.classList.remove('home-page');

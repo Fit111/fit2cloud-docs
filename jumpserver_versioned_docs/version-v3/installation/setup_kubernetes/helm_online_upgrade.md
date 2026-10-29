@@ -10,7 +10,7 @@ title: 在线升级
 
 
 - 请先手动备份好数据库, 然后继续操作。
-- values.yaml 从 `https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml` 获取。
+- values.yaml 从 [https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml](https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml) 获取。
 
 ```sh
 helm repo update

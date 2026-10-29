@@ -13,5 +13,6 @@ title: 快速设置
 - 系统时区
 - 服务器时间
 
-![img.png](/img/1panel/toolbox/quick_settings.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/toolbox/quick_settings.png" alt="图 1 应用商店设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 应用商店设置</div>

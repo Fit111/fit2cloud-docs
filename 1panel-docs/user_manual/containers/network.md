@@ -7,7 +7,8 @@ title: 网络
 
 [了解更多容器网络相关的知识](https://docs.docker.com/network)
 
-![img.png](/img/1panel/containers/network_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/network_create.png" alt="图 1 容器网络列表与创建网络" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 容器网络列表与创建网络</div>
 
 **模式：Docker中的网络驱动（network driver）是可插拔的，1Panel 提供几种网络驱动以提供核心的网络功能，包括：**

@@ -40,7 +40,8 @@ DeepSeek Harness 采用插件化架构，可按任务组合网页检索、Skills
 - **Web 访问密码**：设置至少 12 位的强密码
 - **高级设置**：一般保持默认即可
 
-![安装 DeepSeek Harness](/img/1panel/app/deepseek-harness-install.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/deepseek-harness-install.png" alt="图 1 安装 DeepSeek Harness界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 安装 DeepSeek Harness界面</div>
 
 1Panel 应用商店中的 DeepSeek Harness 集成了 Caddy HTTPS 和用户名密码认证。Harness 仅监听容器回环地址，外部请求需要先经过 Caddy 鉴权和解密，再转发到 Harness 服务。
@@ -65,7 +66,8 @@ https://<访问地址>:<HTTPS 端口>
 
 也可以点击 **稍后配置**，进入页面后再打开左下角的 **设置**，在 **模型** 页面中完成配置。
 
-![配置 DeepSeek API Key](/img/1panel/app/deepseek-harness-api-key.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/deepseek-harness-api-key.png" alt="图 2 配置 DeepSeek 官方模型界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 配置 DeepSeek 官方模型界面</div>
 
 ## 4. 配置第三方模型提供方
@@ -77,7 +79,8 @@ DeepSeek Harness 也支持配置第三方模型提供方。以 OpenCode Go 为�
 3. 选择 `opencode-go`，填写 API Key。
 4. 按需配置 API 地址和模型，确认无误后点击 **保存**。
 
-![配置第三方模型提供方](/img/1panel/app/deepseek-harness-provider.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/deepseek-harness-provider.png" alt="图 3 配置第三方模型提供方界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 配置第三方模型提供方界面</div>
 
 ## 5. 开始第一个任务
@@ -86,7 +89,8 @@ DeepSeek Harness 也支持配置第三方模型提供方。以 OpenCode Go 为�
 
 首次体验建议选择 **标准模式**，并使用不包含敏感数据的测试项目。
 
-![开始 DeepSeek Harness 任务](/img/1panel/app/deepseek-harness-task.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/app/deepseek-harness-task.png" alt="图 4 开始第一个任务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 开始第一个任务界面</div>
 
 ## 6. 安全与升级建议

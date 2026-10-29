@@ -4,7 +4,8 @@ title: AI 编程接入指南
 
 ## 1 AI 编程工具如何接入 1Panel AI 网关？
 
-![AI 编程接入 1Panel AI 网关示意图](/img/1panel/ai/ai_coding_gateway.svg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_coding_gateway.svg" alt="图 1 AI 编程工具如何接入 1Panel AI 网关？界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 AI 编程工具如何接入 1Panel AI 网关？界面</div>
 
 大多数 AI 编程工具只要支持 OpenAI 兼容接口，就可以接入 1Panel AI 网关。接入时主要填写三个参数：

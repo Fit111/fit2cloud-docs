@@ -16,13 +16,13 @@ title: 配置 MariaDB 数据源
 
 步骤二：按照以下步骤，选择 MariaDB 图标。
 
-![MariaDB](/img/dataease/datasource_configuration/选择MariaDB.png)
+![MariaDB](/img/dataease/datasource_configuration/xuanzemariadb.png)
 
 图 1  选择MariaDB数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![MariaDB](/img/dataease/datasource_configuration/MariaDB信息.png)
+![MariaDB](/img/dataease/datasource_configuration/mariadbxinxi.png)
 
 图 2  MariaDB连接信息
 
@@ -44,6 +44,6 @@ title: 配置 MariaDB 数据源
 
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
 
-![MariaDB校验成功](/img/dataease/datasource_configuration/MariaDB校验成功.png)
+![MariaDB校验成功](/img/dataease/datasource_configuration/mariadbjiaoyanchenggong.png)
 
 图 3  MariaDB校验成功

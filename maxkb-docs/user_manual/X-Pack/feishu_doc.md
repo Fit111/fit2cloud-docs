@@ -19,6 +19,7 @@ title: 飞书文档知识库
 
 
 点击【添加应用能力】，选择 【按能力添加-机器人】，点击【添加】
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_add_robot.png" alt="图 2  飞书添加机器人" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  飞书添加机器人</div>
@@ -41,6 +42,7 @@ docs:document:export,docx:document:readonly,drive:drive,space:document:retrieve
 
 获取APP ID、APP Secret和 Folder Token。
 进入创建好的飞书应用，打开【凭证与基础信息】页面，获取APP ID和APP Secret。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/feishu_app_info.png" alt="图 4  飞书应用信息i" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  飞书应用信息i</div>

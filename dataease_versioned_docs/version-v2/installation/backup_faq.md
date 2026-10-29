@@ -13,6 +13,8 @@ title: 备份还原指南
 
 **综上所述，备份 DataEase 主要需要备份运行路径，如 /opt/dataease2.0 目录即可。还原步骤如下：**
 
+**注意：使用内置数据库时，库数据位于运行目录的 data/mysql，会随目录一并备份。若安装时使用了外部 MySQL（DE_EXTERNAL_MYSQL=true），该库不在运行目录内，目录拷贝和 dectl backup 都不会备份它，需要单独备份并还原外部数据库。**
+
 - **该方式适用于相同版本 DataEase 的迁移，请在新环境里安装同一个版本的 DataEase，安装时请选择相同的配置参数**
 - 停止两个环境里的 DataEase 服务，执行命令： service dataease stop
 - 把原环境里的运行目录 /opt/dataease2.0 整个目录覆盖掉新环境里的 /opt/dataease2.0 目录

@@ -27,7 +27,7 @@ tar -xf lina-v3.10.21.tar.gz -C /opt/lina-v3.10.21 --strip-components 1
 ```
 
 - 安装 Node。
-- 从 [Node][node] 官方网站参考文档部署 Node.js，请根据 [环境要求](#_6)，通过命令行中判断是否安装完成：
+- 从 [Node][node] 官方网站参考文档部署 Node.js，请根据 [环境要求](#11-环境要求)，通过命令行中判断是否安装完成：
         ### Ubuntu 20.04
 
 ```bash

@@ -31,24 +31,28 @@ title: 对接腾讯混元
 
 
 腾讯混元-向量模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/hunyuan_embed.png" alt="图 3  腾讯混元 向量模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  腾讯混元 向量模型 配置样例图</div>
 
 
 腾讯混元-语音识别配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/hunyuan_asr.png" alt="图 4  腾讯混元 语音识别 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  腾讯混元 语音识别 配置样例图</div>
 
 
 腾讯混元-视觉模型模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/hunyuan_vision.png" alt="图 5  腾讯混元 视觉模型模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  腾讯混元 视觉模型模型 配置样例图</div>
 
 
 腾讯混元-图片生成模型默认图像尺寸为 768 * 768，图片数量 1 张，风格为201，即日系动漫风格，默认配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/hunyuan_vision_gen1.png" alt="图 6  腾讯混元 图片生成模型默认图像尺寸为 768 * 768，图片数量 1 张，风格为201，即日系动漫风格，默认 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  腾讯混元 图片生成模型默认图像尺寸为 768 * 768，图片数量 1 张，风格为201，即日系动漫风格，默认 配置样例图</div>

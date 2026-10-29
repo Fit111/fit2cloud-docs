@@ -13,11 +13,13 @@ title: 角色列表
 
 - 点击 **角色列表** 页面左侧上方的 **创建** 按钮，进入角色创建页面。
 - 系统角色与组织角色均可新建。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_01.png" alt="图 1  创建角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建角色</div>
 
 - 创建角色成功后，进入新创建的角色详情页，可以对该角色进行权限设置。
 - 如下图，右边部分为角色的权限设置。根据需求的权限更新设置后，点击 **更新** 按钮提交。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_02.png" alt="图 2  角色权限设置" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  角色权限设置</div>
 
@@ -25,6 +27,7 @@ title: 角色列表
 
 - 在 **角色列表** 页面点击角色名称，进入角色详情页面。
 - 角色详情页包含的信息包括角色基本信息、角色权限、授权用户以及角色活动记录。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_04.png" alt="图 4  角色详情" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  角色详情</div>
 
@@ -44,12 +47,14 @@ title: 角色列表
 ## 4 更新角色
 
 - 当需求对某个角色的信息进行更新时，可在 **角色列表** 页面中，点击角色后方的 **编辑** 按钮进行角色信息更新。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_05.png" alt="图 5  更新角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  更新角色</div>
 
 ## 5 克隆角色
 
 - 点击角色后方的 **...** 按钮选择 **副本** 按钮，进入角色创建界面，修改相关信息后，提交后修改角色权限即克隆完成。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_06.png" alt="图 6  克隆角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  克隆角色</div>
 
@@ -57,5 +62,6 @@ title: 角色列表
 
 - 系统默认角色不允许删除，非内置角色可进行删除。
 - 点击角色后方的 **删除** 按钮，删除角色。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/jumpserver/v4_role_list_07.png" alt="图 7  删除角色" />
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  删除角色</div>

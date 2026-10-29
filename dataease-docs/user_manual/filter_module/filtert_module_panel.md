@@ -11,31 +11,31 @@ title: 查询组件概览
 - 【序号 3】：设置查询组件的样式，包括标题、边框、展示按钮、标签位置等；
 - 【序号 4】：选择数据集，并将数据集的字段拖拽至查询组件中。
 
-![查询组件_标题设置](/img/dataease/dashboard_generation/数据大屏查询组件.png)
+![查询组件_标题设置](/img/dataease/dashboard_generation/shujudapingchaxunzujian.png)
 
 图 1  数据大屏查询组件
 
 支持在【展示按钮】处去掉【查询】的勾选，在不展示【查询】按钮的情况下，选择完下拉选项后会立即触发数据查询。
 
-![查询组件无查询按钮直接查询](/img/dataease/newimg/查询组件支持无查询按钮直接查询.png)
+![查询组件无查询按钮直接查询](/img/dataease/newimg/chaxunzujianzhichiwuchaxunanniuzhijiechaxun.png)
 
 图 2  查询组件无查询按钮直接查询
 
 如下图所示，选择数据集，并将数据集中的区域字段拖拽至查询组件中。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/添加过滤字段.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/tianjiaguolvziduan.png)
 
 图 3  添加过滤字段
 
 如下图所示，点击查询组件的编辑按钮，设置查询条件。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/点击添加查询条件.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/dianjitianjiachaxuntiaojian.png)
 
 图 4  点击添加查询条件
 
 查询组件支持下拉选项设置为必填。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/必选项和默认值.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/bixuanxianghemorenzhi.png)
 
 图 5  必选项和默认值
 
@@ -50,11 +50,11 @@ title: 查询组件概览
 
 当绑定参数时，选项值来源不能为自动，否则选项值为空。因此当绑定了图表的参数时，将选项值来源的「自动」选项置灰，为不可用状态。
 
-![查询组件绑定参数](/img/dataease/newimg/数据大屏查询组件绑定参数的方式优化.png)
+![查询组件绑定参数](/img/dataease/newimg/shujudapingchaxunzujianbangdingcanshudefangshiyouhua.png)
 
 图 6  查询组件绑定参数
 
-![查询组件绑定参数](/img/dataease/newimg/数据大屏查询组件绑定参数的方式优化2.png)
+![查询组件绑定参数](/img/dataease/newimg/shujudapingchaxunzujianbangdingcanshudefangshiyouhua2.png)
 
 图 7  查询组件绑定参数
 
@@ -62,11 +62,11 @@ title: 查询组件概览
 
 进行选项选择，并点击【查询】后，被关联的图表中只显示选中的区域的数据。如果是多选，在勾选完点击【确认】后，再点击【查询】。
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/数据大屏过滤组件勾选值.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/shujudapingguolvzujiangouxuanzhi.png)
 
 图 8  数据大屏过滤组件勾选值
 
-![查询组件_位置调整](/img/dataease/dashboard_generation/数据大屏过滤查询.png)
+![查询组件_位置调整](/img/dataease/dashboard_generation/shujudapingguolvchaxun.png)
 
 图 9  数据大屏过滤查询
 
@@ -76,7 +76,7 @@ title: 查询组件概览
 - 选项值来源为数据集；
 - 支持跨源级联，目前初版仅支持 2 级级联。
 
-![查询组件支持级联设置1](/img/dataease/newimg/查询组件支持级联设置1.png)
+![查询组件支持级联设置1](/img/dataease/newimg/chaxunzujianzhichijilianshezhi1.png)
 
 图 10  查询组件级联设置
 
@@ -86,30 +86,30 @@ title: 查询组件概览
 - 可以设置【查询】、【清空】、【重置】的展示按钮（【查询】不可取消）。
 - 支持标签位置设置为上或者左。
 
-![查询组件_输入框](/img/dataease/dashboard_generation/数据大屏过滤组件样式.png)
+![查询组件_输入框](/img/dataease/dashboard_generation/shujudapingguolvzujianyangshi.png)
 
 图 11  数据大屏过滤组件样式
 
 查询组件支持自定义背景图片。
 
-![数据大屏查询组件自定义背景图片](/img/dataease/newimg/数据大屏查询组件支持自定义背景图片.png)
+![数据大屏查询组件自定义背景图片](/img/dataease/newimg/shujudapingchaxunzujianzhichizidingyibeijingtupian.png)
 
 图 12  数据大屏查询组件自定义背景图片
 
 查询组件支持配置清空和重置按钮的颜色。
 
-![清空与重置按钮](/img/dataease/newimg/数据大屏查询组件支持配置清空和重置按钮的颜色.png)
+![清空与重置按钮](/img/dataease/newimg/shujudapingchaxunzujianzhichipeizhiqingkonghezhongzhianniudeyanse.png)
 
 图 13  清空与重置按钮
 
 查询组件支持自定义提示词内容设置。可以针对每个查询条件设置不同的提示词，同时支持文字颜色和大小的自定义设置。
 
-![自定义提示词](/img/dataease/newimg/数据大屏查询组件支持自定义提示词内容设置.png)
+![自定义提示词](/img/dataease/newimg/shujudapingchaxunzujianzhichizidingyitishicineirongshezhi.png)
 
 图 14  自定义提示词
 
 查询条件支持单独设置宽度。允许为每个查询条件单独设置宽度，实现更灵活的布局调整。
 
-![数据大屏查询条件单独设置宽度](/img/dataease/newimg/数据大屏查询条件支持单独设置宽度.png)
+![数据大屏查询条件单独设置宽度](/img/dataease/newimg/shujudapingchaxuntiaojianzhichidandushezhikuandu.png)
 
 图 15  数据大屏查询条件单独设置宽度

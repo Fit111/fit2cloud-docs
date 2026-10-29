@@ -12,54 +12,62 @@ keywords: [1Panel 网站配置, 网站域名, HTTPS, 反向代理, 负载均衡,
 
 域名设置页面允许用户管理网站的域名和端口配置。
 
-![img.png](/img/1panel/websites/config_basic_domain.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/config_basic_domain.png" alt="图 1 域名设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 域名设置</div>
 
 ## 2 网站目录
 
 网站目录页面支持查看网站的根目录，设置运行目录，以及配置运行用户和用户组等选项。
 
-![img.png](/img/1panel/websites/config_basic_folder.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/config_basic_folder.png" alt="图 2 网站目录界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 网站目录界面</div>
 
 ## 3 默认文档
 
 配置默认文档，以便在用户访问网站根目录时自动加载指定的文件。
 
-![img_1.png](/img/1panel/websites/basic_config_default.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_default.png" alt="图 3 默认文档界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 默认文档界面</div>
 
 ## 4 流量限制
 
 允许用户配置流量限制，通过选择不同的限制方案，控制网站的带宽和访问流量。
 
-![img.png](/img/1panel/websites/basic_config_limit.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_limit.png" alt="图 4 流量限制界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 流量限制界面</div>
 
 ## 5 反向代理
 
 反向代理功能允许将网站请求转发到后端服务器，以实现负载均衡、安全控制和内容分发。
 
-![img.png](/img/1panel/websites/basic_config_proxy.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_proxy.png" alt="图 5 反向代理列表" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 反向代理列表</div>
 
 用户也可以在当前页面开启并配置反向代理缓存规则，或者清除当前缓存。
 
-![img.png](/img/1panel/websites/basic_config_proxy_cache.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_proxy_cache.png" alt="图 6 反向代理界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 反向代理界面</div>
 
 ## 6 负载均衡
 
 创建负载均衡规则，用于将当前网站请求转发到多个后端服务。当前页面仅创建负载均衡规则，使用负载均衡规则需要在创建反向代理时使用 `http://&lt;负载均衡名称&gt;`。
 
-![img.png](/img/1panel/websites/basic_config_upstream.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_upstream.png" alt="图 7 负载均衡界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 负载均衡界面</div>
 
 ## 7 密码访问
 
 密码访问功能允许用户为网站设置访问密码，以增强网站的安全性，限制未经授权的访问。支持创建全局配置或按路径配置。
 
-![img.png](/img/1panel/websites/basic_config_password.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_password.png" alt="图 8 密码访问界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 密码访问界面</div>
 
 ## 8 CORS
@@ -87,56 +95,64 @@ keywords: [1Panel 网站配置, 网站域名, HTTPS, 反向代理, 负载均衡,
 
 通过以上配置，用户可以有效提升网站的安全性和访问性能。
 
-![img.png](/img/1panel/websites/basic_config_https.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_https.png" alt="图 9 开启 HTTPS 访问" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 开启 HTTPS 访问</div>
 
 ## 10 真实 IP
 
 配置客户端 IP 获取方式及可信的 IP 来源，OpenResty 会分析 HTTP Header 中的 IP 信息，准确识别并记录访客的真实 IP 地址，包括在访问日志中。
 
-![img.png](/img/1panel/websites/basic_config_real_ip.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_real_ip.png" alt="图 10 真实 IP界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10 真实 IP界面</div>
 
 ## 11 伪静态
 
 伪静态功能通过将动态 URL 转换为更友好的静态 URL，提高网站的可读性和搜索引擎优化效果。
 
-![img.png](/img/1panel/websites/basic_config_static.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_static.png" alt="图 11 伪静态界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11 伪静态界面</div>
 
 ## 12 防盗链
 
 防盗链功能通过验证请求来源，阻止非授权用户直接链接和下载网站资源，以保护网站内容安全。
 
-![img.png](/img/1panel/websites/basic_config_protection.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_protection.png" alt="图 12 防盗链界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 12 防盗链界面</div>
 
 ## 13 重定向
 
 重定向功能允许将访问特定URL的请求自动转发到另一个URL，以实现链接管理和流量引导。
 
-![img.png](/img/1panel/websites/basic_config_redirect.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_redirect.png" alt="图 13 重定向界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13 重定向界面</div>
 
 ## 14 PHP
 
 静态页面类型的网站可以在此选择 PHP 运行环境切换为 PHP 类型网站，PHP 类型的网站可以切换不同的 PHP 运行环境。
 
-![img.png](/img/1panel/websites/basic_config_php.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_php.png" alt="图 14 PHP界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 14 PHP界面</div>
 
 ## 15 资源
 
 将当前网站与某一个数据库进行关联，备份网站时将同时备份关联的数据库。切换其他数据库会导致以前的备份无法恢复。
 
-![img.png](/img/1panel/websites/basic_config_resource.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_resource.png" alt="图 15 资源界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15 资源界面</div>
 
 ## 16 其他
 
 支持更改主域名、切换分组以及更新备注信息等操作。
 
-![img.png](/img/1panel/websites/basic_config_other.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/basic_config_other.png" alt="图 16 其他界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 16 其他界面</div>
 
 ## 17 TCP/UDP 配置

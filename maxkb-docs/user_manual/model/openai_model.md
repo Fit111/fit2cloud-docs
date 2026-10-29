@@ -17,36 +17,42 @@ title: 对接OpenAI
 
 
 OpenAI-大语言模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_llm.png" alt="图 1  OpenAI 大语言模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  OpenAI 大语言模型 配置样例图</div>
 
 
 OpenAI-向量模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_embed.png" alt="图 2  OpenAI 向量模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  OpenAI 向量模型 配置样例图</div>
 
 
 OpenAI-语音识别模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_asr.png" alt="图 3  OpenAI 语音识别模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  OpenAI 语音识别模型 配置样例图</div>
 
 
 OpenAI-语音合成配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_tts.png" alt="图 4  OpenAI 语音合成 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  OpenAI 语音合成 配置样例图</div>
 
 
 OpenAI-视觉模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_vision.png" alt="图 5  OpenAI 视觉模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  OpenAI 视觉模型 配置样例图</div>
 
 
 OpenAI-图片生成模型配置样例图示：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/openai_verison_gen.png" alt="图 6  OpenAI 图片生成模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  OpenAI 图片生成模型 配置样例图</div>

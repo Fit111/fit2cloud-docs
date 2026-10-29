@@ -10,12 +10,6 @@ const sidebars = {
       "key": "doc:产品介绍"
     },
     {
-      "type": "link",
-      "label": "版本对比",
-      "href": "https://jumpserver.org/features.html",
-      "key": "link:版本对比"
-    },
-    {
       "type": "doc",
       "id": "quick_start",
       "label": "快速入门",
@@ -28,10 +22,24 @@ const sidebars = {
       "key": "doc:更新日志"
     },
     {
-      "type": "link",
+      "type": "category",
       "label": "购买指南",
-      "href": "https://jumpserver.org/enterprise.html",
-      "key": "doc:购买指南"
+      "collapsed": true,
+      "items": [
+        {
+          "type": "link",
+          "label": "如何购买",
+          "href": "https://jumpserver.org/enterprise.html",
+          "key": "link:购买指南/如何购买"
+        },
+        {
+          "type": "link",
+          "label": "版本对比",
+          "href": "https://jumpserver.org/features.html",
+          "key": "link:购买指南/版本对比"
+        }
+      ],
+      "key": "cat:购买指南"
     },
     {
       "type": "category",
@@ -1063,6 +1071,12 @@ const sidebars = {
         },
         {
           "type": "doc",
+          "id": "manual/ops/system_logs",
+          "label": "查看系统日志",
+          "key": "doc:运维指南/查看系统日志"
+        },
+        {
+          "type": "doc",
           "id": "manual/ops/cli_tools",
           "label": "命令行工具",
           "key": "doc:运维指南/命令行工具"
@@ -1086,6 +1100,12 @@ const sidebars = {
           "id": "faq/faq",
           "label": "产品 FAQ",
           "key": "doc:常见问题/产品 FAQ"
+        },
+        {
+          "type": "doc",
+          "id": "faq/community_faq",
+          "label": "常见问题",
+          "key": "doc:常见问题/常见问题"
         }
       ],
       "key": "cat:常见问题"

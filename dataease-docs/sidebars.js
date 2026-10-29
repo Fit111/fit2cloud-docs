@@ -6,23 +6,46 @@
  * @param {string} id
  * @param {string} label
  * @param {string} key
+ * @param {string} [className] 可选，侧栏条目附加类名（如 "sidebar-item-badge-rec" 显示「推荐」角标）
  */
-function doc(id, label, key) {
-  return { type: /** @type {const} */ ("doc"), id, label, key };
+function doc(id, label, key, className) {
+  return {
+    type: /** @type {const} */ ("doc"),
+    id,
+    label,
+    key,
+    ...(className ? { className } : {}),
+  };
 }
 
 /**
  * @param {string} label
- * @param {import('@docusaurus/plugin-content-docs').PropSidebarItem[]} items
+ * @param {string} href
  * @param {string} key
  */
-function cat(label, items, key) {
+function linkItem(label, href, key) {
+  return {
+    type: /** @type {const} */ ("link"),
+    label,
+    href,
+    key,
+  };
+}
+
+/**
+ * @param {string} label
+ * @param {any[]} items
+ * @param {string} key
+ * @param {string} [className] 可选，侧栏条目附加类名（如 "sidebar-item-badge-hot" 显示「HOT」角标）
+ */
+function cat(label, items, key, className) {
   return {
     type: /** @type {const} */ ("category"),
     label,
     collapsed: true,
     items,
     key,
+    ...(className ? { className } : {}),
   };
 }
 
@@ -39,6 +62,7 @@ const 数据源 = cat(
     doc("user_manual/datasource_configuration/Oracle_datasource_configuration", "配置 Oracle 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 Oracle 数据源"),
     doc("user_manual/datasource_configuration/PostgreSQL_datasource_configuration", "配置 PostgreSQL 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 PostgreSQL 数据源"),
     doc("user_manual/datasource_configuration/Kingbase_datasource_configuration", "配置 Kingbase 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 Kingbase 数据源"),
+    doc("user_manual/datasource_configuration/GaussDB_datasource_configuration", "配置 GaussDB 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 GaussDB 数据源"),
     doc("user_manual/datasource_configuration/SQL_Server_datasource_configuration", "配置 SQL Server 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 SQL Server 数据源"),
     doc("user_manual/datasource_configuration/StarRocks_datasource_configuration", "配置 StarRocks 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 StarRocks 数据源"),
     doc("user_manual/datasource_configuration/TiDB_datasource_configuration", "配置 TiDB 数据源", "doc:使用手册/用户使用手册/数据准备/数据源/配置 TiDB 数据源"),
@@ -139,7 +163,8 @@ const 电子表格 = cat(
     doc("xpack/spreadsheet_special", "电子表格特殊功能", "doc:使用手册/用户使用手册/电子表格/电子表格特殊功能"),
     doc("xpack/spreadsheet_publish", "发布运维", "doc:使用手册/用户使用手册/电子表格/发布运维"),
   ],
-  "cat:使用手册/用户使用手册/电子表格"
+  "cat:使用手册/用户使用手册/电子表格",
+  "sidebar-item-badge-new"
 );
 
 const sidebars = {
@@ -159,39 +184,49 @@ const sidebars = {
         doc("changelog", "日志详情", "doc:更新日志/日志详情"),
         cat(
           "更新说明",
-          [doc("change-v3-0-0", "v3.0.0", "doc:更新日志/更新说明/v3.0.0")],
+          [
+            doc("change-v3-1-0", "v3.1.0", "doc:更新日志/更新说明/v3.1.0"),
+            doc("change-v3-0-0", "v3.0.0", "doc:更新日志/更新说明/v3.0.0"),
+          ],
           "cat:更新日志/更新说明"
         ),
       ],
       "cat:最新动态"
     ),
-    doc("purchase", "购买指南", "doc:购买指南"),
+    // 「购买指南」为纯目录，子项均指向 DataEase 官网
+    cat(
+      "购买指南",
+      [
+        linkItem("版本对比", "https://dataease.cn/versions.html", "link:购买指南/版本对比"),
+        linkItem("DataEase 专业版", "https://dataease.cn/pro.html", "link:购买指南/DataEase 专业版"),
+        linkItem("DataEase 嵌入式版", "https://dataease.cn/embedded-bi.html", "link:购买指南/DataEase 嵌入式版"),
+        linkItem("DataEase 企业版", "https://dataease.cn/enterprise.html", "link:购买指南/DataEase 企业版"),
+      ],
+      "cat:购买指南"
+    ),
     cat(
       "安装部署",
       [
-        doc("installation/offline_INSTL_and_UPG", "安装指南", "doc:安装部署/安装指南"),
+        doc("installation/offline_INSTL_and_UPG", "离线安装指南", "doc:安装部署/离线安装指南", "sidebar-item-badge-rec"),
         doc("installation/online_INSTL_and_UPG", "在线安装指南", "doc:安装部署/在线安装指南"),
+        doc("installation/1panel_installation", "1Panel 安装指南", "doc:安装部署/1Panel 安装指南"),
         doc("installation/multi_database_deployment", "外部数据库部署", "doc:安装部署/外部数据库部署"),
         doc("installation/offline_upgrade", "升级指南", "doc:安装部署/升级指南"),
         doc("installation/online_upgrade", "在线升级", "doc:安装部署/在线升级"),
         doc("installation/deployment_installation", "源码部署", "doc:安装部署/源码部署"),
-        doc("installation/data_migration", "数据迁移", "doc:安装部署/数据迁移"),
+        doc("installation/data_migration", "V2 - V3 数据迁移", "doc:安装部署/数据迁移", "sidebar-item-badge-hot"),
       ],
       "cat:安装部署"
     ),
     cat(
       "使用手册",
       [
+        doc("instructional_video", "教学视频", "doc:使用手册/教学视频"),
         cat(
           "通用功能",
           [
             doc("user_manual/homepage", "工作台", "doc:使用手册/通用功能/工作台"),
             doc("user_manual/template_market", "模板市场", "doc:使用手册/通用功能/模板市场"),
-            cat(
-              "帮助",
-              [doc("instructional_video", "教学视频", "doc:使用手册/通用功能/帮助/教学视频")],
-              "cat:使用手册/通用功能/帮助"
-            ),
             cat(
               "工具箱",
               [
@@ -208,7 +243,7 @@ const sidebars = {
           "cat:使用手册/通用功能"
         ),
         cat(
-          "管理员使用手册",
+          "管理员手册",
           [
             doc("xpack/user_management_user", "用户管理", "doc:使用手册/管理员使用手册/用户管理"),
             doc("xpack/sys_management_organization", "组织管理", "doc:使用手册/管理员使用手册/组织管理"),
@@ -234,7 +269,7 @@ const sidebars = {
           "cat:使用手册/管理员使用手册"
         ),
         cat(
-          "组织管理员使用手册",
+          "组织管理员手册",
           [
             doc("xpack/org_center_member", "成员管理", "doc:使用手册/组织管理员使用手册/成员管理"),
             doc("xpack/org_center_permission", "权限配置", "doc:使用手册/组织管理员使用手册/权限配置"),
@@ -244,7 +279,7 @@ const sidebars = {
           "cat:使用手册/组织管理员使用手册"
         ),
         cat(
-          "用户使用手册",
+          "用户手册",
           [
             cat("数据准备", [数据源, 数据集], "cat:使用手册/用户使用手册/数据准备"),
             cat(
@@ -283,7 +318,7 @@ const sidebars = {
           "cat:使用手册/用户使用手册"
         ),
         cat(
-          "嵌入式 BI 使用手册",
+          "嵌入式 BI 手册",
           [
             doc("embedded/summary", "嵌入式概述", "doc:使用手册/嵌入式 BI 使用手册/嵌入式概述"),
             doc("embedded/process", "嵌入式流程", "doc:使用手册/嵌入式 BI 使用手册/嵌入式流程"),
@@ -291,7 +326,8 @@ const sidebars = {
             doc("embedded/question", "嵌入式常见问题", "doc:使用手册/嵌入式 BI 使用手册/嵌入式常见问题"),
             嵌入式附加,
           ],
-          "cat:使用手册/嵌入式 BI 使用手册"
+          "cat:使用手册/嵌入式 BI 使用手册",
+          "sidebar-item-badge-hot"
         ),
         cat(
           "第三方集成",
@@ -302,7 +338,6 @@ const sidebars = {
       "cat:使用手册"
     ),
     doc("desktop/index", "桌面版说明", "doc:桌面版说明"),
-    doc("faq/enterprise_faq", "企业版功能", "doc:企业版功能"),
     cat(
       "API 文档",
       [doc("xpack/sys_management_develop", "系统 API", "doc:API 文档/系统 API")],
@@ -310,12 +345,19 @@ const sidebars = {
     ),
     cat(
       "运维指南",
-      [doc("installation/cli", "命令行工具", "doc:运维指南/命令行工具")],
+      [
+        doc("installation/cli", "命令行工具", "doc:运维指南/命令行工具"),
+        doc("installation/config_files", "配置文件说明", "doc:运维指南/配置文件说明"),
+        doc("installation/system_logs", "查看系统日志", "doc:运维指南/查看系统日志"),
+      ],
       "cat:运维指南"
     ),
     cat(
       "常见问题",
-      [doc("faq/system_management", "系统管理", "doc:常见问题/系统管理")],
+      [
+        doc("faq/community_faq", "常见问题", "doc:常见问题/常见问题"),
+        doc("faq/system_management", "系统管理", "doc:常见问题/系统管理"),
+      ],
       "cat:常见问题"
     ),
     cat(

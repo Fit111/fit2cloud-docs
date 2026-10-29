@@ -34,6 +34,7 @@ title: 自定义分词
 
 
 点击「创建词语」按钮，输入需要保留的专业术语，支持快速创建多个词语（一行一个）。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/create_word.png" alt="图 1  创建词语" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  创建词语</div>
@@ -42,6 +43,7 @@ title: 自定义分词
 
 
 添加术语后，点击「分词索引」按钮，系统将重新生成文档的分词索引。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/dataset/word_index.png" alt="图 2  执行分词索引" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  执行分词索引</div>
@@ -59,6 +61,7 @@ title: 自定义分词
 用户提问 → 读取术语库 → 配置分词器 → 分词处理 → 匹配检索
 
 ### 4.2 适用检索模式
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  分词器适用检索模式说明</div>
 
 | 检索模式 | 是否生效 | 说明 |

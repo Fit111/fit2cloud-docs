@@ -21,7 +21,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 右键菜单 | 复制粘贴、插入删除、冻结、排序、粘贴数据集等 |
 | 底部状态区 | 工作表标签、缩放、十字高亮、网格线显隐 |
 
-![编辑器全貌](/img/dataease/newimg/xpack/编辑器全貌.png)
+![编辑器全貌](/img/dataease/newimg/xpack/bianjiqiquanmao.png)
 
 图 1  编辑器全貌
 
@@ -66,7 +66,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 辅助 | 表格、快捷键面板、查找替换 |
 | 查询控件 | 【查询控件】（详见 [电子表格特殊功能 - 查询控件](./spreadsheet_special#5-查询控件)） |
 
-![工具栏](/img/dataease/newimg/xpack/工具栏分组总览.png)
+![工具栏](/img/dataease/newimg/xpack/gongjulanfenzuzonglan.png)
 
 图 2  工具栏分组总览
 
@@ -81,7 +81,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 链接 | 插入超链接 |
 | 批注 | 单元格批注 |
 
-![插入下拉菜单](/img/dataease/newimg/xpack/插入1.png)
+![插入下拉菜单](/img/dataease/newimg/xpack/charu1.png)
 
 图 3  插入
 
@@ -98,7 +98,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 格式刷 | 复制单元格格式到其他区域 |
 | 清除 | 清除选中区域内容 / 格式 |
 
-![历史菜单](/img/dataease/newimg/xpack/历史1.gif)
+![历史菜单](/img/dataease/newimg/xpack/lishi1.gif)
 
 图 4  历史
 
@@ -114,7 +114,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 边框 | 设置单元格边框 |
 | 斜线单元格 | 二分 / 三分斜线表头，可取消 |
 
-![历史菜单](/img/dataease/newimg/xpack/字体1.png)
+![历史菜单](/img/dataease/newimg/xpack/ziti1.png)
 
 图 5  字体
 
@@ -129,7 +129,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 自动换行 | 单元格文本换行 |
 | 合并单元格 | 合并 / 取消合并（带下拉） |
 
-![布局菜单](/img/dataease/newimg/xpack/布局1.png)
+![布局菜单](/img/dataease/newimg/xpack/buju1.png)
 
 图 6  布局
 
@@ -144,7 +144,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 货币 | 快捷设为货币 |
 | 增加小数位 / 减少小数位 | 调整小数位数 |
 
-![数字格式菜单](/img/dataease/newimg/xpack/数字格式.png)
+![数字格式菜单](/img/dataease/newimg/xpack/shuzigeshi.png)
 
 图 7  数字格式
 
@@ -161,7 +161,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 条件格式 | 按规则美化单元格显示：突出显示、最前/最后/平均值、自定义公式、色阶、数据条、图标集； |
 | 函数 | 常用函数及分类函数列表（SUM、AVERAGE、IF 等） |
 
-![数据菜单](/img/dataease/newimg/xpack/数据1.png)
+![数据菜单](/img/dataease/newimg/xpack/shuju1.png)
 
 图 8  校验成功
 
@@ -176,7 +176,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 查找替换 | 在表格内查找 / 替换 |
 | 查询控件 | 打开 / 关闭查询栏，详见 [查询控件](./spreadsheet_special#5-查询控件) |
 
-![辅助菜单](/img/dataease/newimg/xpack/辅助1.png)
+![辅助菜单](/img/dataease/newimg/xpack/fuzhu1.png)
 
 图 9  辅助
 
@@ -193,7 +193,7 @@ DataEase 特有能力的详细说明见 [电子表格特殊功能](./spreadsheet
 | 缩放 | 调整显示比例 |
 | 切换网格 | 控制工作表单元格的网格显隐 |
 
-![公式栏](/img/dataease/newimg/xpack/公式栏.png)
+![公式栏](/img/dataease/newimg/xpack/gongshilan.png)
 
 图 10  公式栏
 

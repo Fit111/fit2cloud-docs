@@ -7,7 +7,8 @@ title: 配置
 - 支持查看 Docker 运行状态，并执行重启服务等操作
 - 配置文件默认为：/etc/docker/daemon.json
 
-![img.png](/img/1panel/containers/setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/setting.png" alt="图 1 配置——应用商店设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 配置——应用商店设置</div>
 
 - 镜像加速：应用安装失败，镜像拉取超时，此时可以配置镜像加速器进行优化
@@ -36,15 +37,21 @@ title: 配置
     ```
 
 - 面板设置中开启 IPv6，其中 fixed-cidr-v6 是上一步获取到的 IPv6 网段的子网（配置默认网络，前缀长度最大为 /80）
-    ![img.png](/img/1panel/containers/ipv6-01.png)
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 使用 IPv6界面</div>
+
+    <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/ipv6-01.png" alt="图 2 使用 IPv6界面" />
+
+    <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 使用 IPv6界面</div>
 
 - 通过【网络】-【详情】检查是否生效。若生效，则 EnableIPv6 值为 true，IPAM.Config[1].Subnet 是上一步配置的 fixed-cidr-v6
-    ![img.png](/img/1panel/containers/ipv6-02.png)
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 使用 IPv6界面（续）</div>
+
+    <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/ipv6-02.png" alt="图 3 使用 IPv6界面（续）" />
+
+    <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 使用 IPv6界面（续）</div>
 
 - 创建 IPv6 网络
-    ![img.png](/img/1panel/containers/ipv6-03.png)
-<div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 使用 IPv6界面</div>
+
+    <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/ipv6-03.png" alt="图 4 使用 IPv6界面" />
+
+    <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 使用 IPv6界面</div>
 
 - 使用创建的 IPv6 网络创建容器

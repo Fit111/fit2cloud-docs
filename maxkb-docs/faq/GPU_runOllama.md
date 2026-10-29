@@ -46,6 +46,7 @@ docker exec -it ollama ollama run qwen:7b
 
 
 下载完成并运行模型服务后，即可在 MaxKB 中添加对应的模型并使用。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/FAQ/addmodel.png" alt="图 1  添加模型" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  添加模型</div>

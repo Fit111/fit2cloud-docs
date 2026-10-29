@@ -7,7 +7,7 @@ title: 升级指南
 :::
 
 - 请先手动备份好数据库, 然后继续操作。
-- values.yaml 从 `https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml` 获取指定版本的配置文件。
+- values.yaml 从 [https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml](https://github.com/jumpserver/helm-charts/blob/main/charts/jumpserver/values.yaml) 获取指定版本的配置文件。
 - 不想使用 values.yaml 可以使用 --set key=value 的方式传参
 
 

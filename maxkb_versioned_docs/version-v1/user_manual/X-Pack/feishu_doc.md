@@ -85,6 +85,7 @@ docs:document:export,docx:document:readonly,drive:drive,space:document:retrieve
 :::
 
 ![飞书文件夹](/img/maxkb-v1/app/feishu_folder_token.png)
+
 <img alt="飞书知识库创建" src="/img/maxkb-v1/app/feishu_kb_create.png" width="800" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note

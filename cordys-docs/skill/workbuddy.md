@@ -11,7 +11,7 @@ Cordys CRM Skills + WorkBuddy，可快速构建你的私人 AI 助理，
 
 打开 WorkBuddy 官网，点击下载 WorkBuddy，浏览器会自动匹配当前操作系统，下载合适的安装包。
 
-![WorkBuddy](/img/cordys/workbuddy/img.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img.png" alt="图 1  安装WorkBuddy" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  安装WorkBuddy</div>
 
@@ -23,41 +23,43 @@ Cordys CRM Skills + WorkBuddy，可快速构建你的私人 AI 助理，
 
 在 WorkBuddy 技能市场，搜索 Cordys，直接安装。
 
-![WorkBuddy](/img/cordys/workbuddy/img_0.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_0.png" alt="图 2  Cordys CRM Skills 安装" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  Cordys CRM Skills 安装</div>
 
 
 安装完成后，新建任务，选择 CordysCRM，发送初始化命令。
 
-![WorkBuddy](/img/cordys/workbuddy/img_1.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_1.png" alt="图 3  初始化" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  初始化</div>
 
 
 根据提示，填入 API Key：
 
-![WorkBuddy](/img/cordys/workbuddy/img_3.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_3.png" alt="图 4  填入 API Key" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  填入 API Key</div>
 
 
 登录 Cordys CRM，从左下角【个人中心 - API Keys】中获取 Access Key 和 Secret Key。
 
-![APIKeys](/img/cordys/index/api_keys.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/index/api_keys.png" alt="图 5  获取 API Key" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  获取 API Key</div>
 
 
 输入相关连接信息后，Cordys CRM Skills 会自动加载用户信息，匹配用户角色，加载角色上下文。
 
-![WorkBuddy](/img/cordys/workbuddy/img_5.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_5.png" alt="图 6  初始化" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  初始化</div>
 
 
 不同角色对应着不同的使用偏好，Cordys CRM Skills 内置了五种角色，对应的查询偏好如下所示：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  五种角色说明</div>
+
 | 角色 | 关注 | 数据范围 | 主动预警 | 输出风格 |
 |------|------|----------|----------|----------|
 | 销售 | 我接下来该做什么？ | 我的客户 / 线索 / 商机 | 超期未跟、商机卡顿 | 优先级行动清单 |
@@ -70,7 +72,9 @@ Cordys CRM Skills + WorkBuddy，可快速构建你的私人 AI 助理，
 
 
 技能覆盖 Cordys CRM 的 L2C（Lead-to-Cash，从线索到现金）全链路。核心模块如下：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 2  模块说明</div>
+
 | 模块 | 自然语言叫法 | 说明 |
 |------|-------------|------|
 | `lead` | 线索 | 销售线索的查询、跟进、转换 |
@@ -82,7 +86,9 @@ Cordys CRM Skills + WorkBuddy，可快速构建你的私人 AI 助理，
 
 
 `contract`（合同）还带一组二级资源，用于追踪资金流：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 3  二级资源说明</div>
+
 | 二级资源 | 说明 |
 |----------|------|
 | `contract/payment-plan` | 回款计划 |
@@ -95,24 +101,24 @@ Cordys CRM Skills + WorkBuddy，可快速构建你的私人 AI 助理，
 
 ### 4.1 查询个人名下线索/客户/商机
 
-![WorkBuddy](/img/cordys/workbuddy/img_6.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_6.png" alt="图 7  WorkBuddy 查询" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  WorkBuddy 查询</div>
 
 ### 4.2 查询团队所有线索/客户/商机
 
-![WorkBuddy](/img/cordys/workbuddy/img_7.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_7.png" alt="图 8  WorkBuddy 查询" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  WorkBuddy 查询</div>
 
 ### 4.3 查询团队线索转化漏斗
 
-![WorkBuddy](/img/cordys/workbuddy/img_8.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_8.png" alt="图 9  WorkBuddy 查询" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  WorkBuddy 查询</div>
 
 ### 4.4 查询团队跟进情况
 
-![WorkBuddy](/img/cordys/workbuddy/img_9.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/workbuddy/img_9.png" alt="图 10  WorkBuddy 查询" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  WorkBuddy 查询</div>

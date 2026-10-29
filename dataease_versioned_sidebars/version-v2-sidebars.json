@@ -19,6 +19,12 @@
       "items": [
         {
           "type": "doc",
+          "id": "lifecycle",
+          "label": "生命周期",
+          "key": "doc:产品迭代/生命周期"
+        },
+        {
+          "type": "doc",
           "id": "changelog",
           "label": "更新日志",
           "key": "doc:产品迭代/更新日志"

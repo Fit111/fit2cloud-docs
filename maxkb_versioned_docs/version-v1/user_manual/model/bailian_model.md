@@ -38,30 +38,35 @@ title: 对接阿里云百炼
 
 阿里云百炼-重排模型配置样例图示如下：
 :::
+
 <img alt="阿里云百炼 重排模型配置" src="/img/maxkb-v1/model/bailian_reranker.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 阿里云百炼-语音识别模型配置样例图示如下：
 :::
+
 <img alt="阿里云百炼 语音识别模型配置" src="/img/maxkb-v1/model/bailian_asr.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 阿里云百炼-语音合成模型配置样例图示如下：
 :::
+
 <img alt="阿里云百炼 语音合成模型配置" src="/img/maxkb-v1/model/bailian_tts.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 阿里云百炼-视觉模型模型配置样例图示如下：
 :::
+
 <img alt="阿里云百炼 视觉模型模型配置" src="/img/maxkb-v1/model/bailian_vision.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 :::note
 
 阿里云百炼-图片生成模型默认图像尺寸为 1024 * 1024，图片数量 1 张，风格为 &lt;auto&gt;，即由模型随机输出图像风格，配置样例图示如下：
 :::
+
 <img alt="阿里云百炼 图片生成模型配置" src="/img/maxkb-v1/model/bailian_vision_gen1.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>
 
 <img alt="阿里云百炼 图片生成模型配置" src="/img/maxkb-v1/model/bailian_vision_gen2.png" width="500" style={{maxWidth:'100%', height:'auto'}}/>

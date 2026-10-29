@@ -1,0 +1,147 @@
+# JumpServer 更新日志自动生成并提 PR
+#
+# 来源: 从社区发布 API 取指定版本(默认最新版)的发布说明，生成 change_log.md 的
+#       新版本区块，通过 PR 提交，不直接改动 main。
+#
+# 移植自旧 mkdocs 仓库 jumpserver/docs 的 .github/workflows/auto-changelog.yml，
+# 主要差异:
+#   - 目标文件不再是固定的 docs/change_log.md，而是按主版本号路由到
+#     jumpserver-docs/ 或 jumpserver_versioned_docs/version-v{3,4}/ (见 gen_changelog.py)
+#   - PR 的 base 固定为 main（旧仓库是 v{major}.0，本仓库没有这种分支）
+#   - 输出格式改为 Docusaurus 的平铺列表，不再使用 mkdocs 的 !!! admonition
+#
+# 注意:
+#   - schedule 触发器只在仓库默认分支(main)上生效。放在功能分支上时，
+#     只能用 workflow_dispatch 手动运行（Actions 页面选择本分支后 Run workflow）。
+#   - 需要仓库 Settings -> Actions -> General -> Workflow permissions 设为
+#     "Read and write permissions"，否则最后一步创建 PR 会 403。
+#   - "Generate changelog entry" 步骤若退出码为 3，表示脚本的 sanity check 判定
+#     "版本" 与 "目标文件" 不匹配（通常是新大版本做快照后 TARGET_MAP 未同步更新），
+#     此时不会生成 PR，需人工修正 TARGET_MAP 后重跑。
+
+name: Auto Changelog (JumpServer)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '指定版本号(如 v5.0.1 / v4.10.20-lts)；留空则自动取社区 API 最新版本'
+        required: false
+        default: ''
+  schedule:
+    # 每日 20:05 UTC（北京时间次日 04:05）
+    - cron: '5 20 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  RELEASES_API: https://community.fit2cloud.com/v1/products/jumpserver/releases
+  BASE_BRANCH: main
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Detect version and target file
+        id: detect
+        run: |
+          set -e
+
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            raw="${{ github.event.inputs.version }}"
+            echo "Source: manual input"
+          else
+            raw=$(curl -sS --max-time 30 "${RELEASES_API}" | jq -r '.[0].version')
+            echo "Source: community API (latest)"
+          fi
+
+          echo "Raw version: ${raw}"
+          if [ -z "${raw}" ] || [ "${raw}" = "null" ]; then
+            echo "No version found (API error / empty list?), aborting."
+            exit 1
+          fi
+
+          # 去掉 -lts 后缀: v4.10.19-lts -> v4.10.19
+          version="${raw%-lts}"
+          case "${version}" in
+            v*) ;;
+            *) echo "Unexpected version format: ${version}"; exit 1 ;;
+          esac
+
+          # 与 gen_changelog.py 共用同一份 版本->文件 映射，避免两处硬编码漂移
+          target_file=$(python .github/scripts/gen_changelog.py "${version}" --print-target)
+          echo "Version: ${version}"
+          echo "Target file: ${target_file}"
+
+          if git show "origin/${BASE_BRANCH}:${target_file}" 2>/dev/null | grep -Fqx "${version}"; then
+            echo "Already present in changelog, nothing to do."
+            upd=false
+          else
+            upd=true
+          fi
+
+          {
+            echo "version=${version}"
+            echo "target_file=${target_file}"
+            echo "update=${upd}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Generate changelog entry
+        if: ${{ steps.detect.outputs.update == 'true' }}
+        run: |
+          set -e
+          python .github/scripts/gen_changelog.py "${{ steps.detect.outputs.version }}"
+          echo "----- preview (first 30 lines) -----"
+          head -n 30 "${{ steps.detect.outputs.target_file }}"
+          echo "------------------------------------"
+
+      - name: Create Pull Request
+        if: ${{ steps.detect.outputs.update == 'true' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/changelog-${{ steps.detect.outputs.version }}
+          base: ${{ env.BASE_BRANCH }}
+          title: "chore(changelog): add ${{ steps.detect.outputs.version }}"
+          commit-message: "chore(changelog): add ${{ steps.detect.outputs.version }}"
+          body: |
+            自动生成的更新日志条目：**${{ steps.detect.outputs.version }}**
+
+            - 数据来源：`${{ env.RELEASES_API }}`
+            - 目标文件：`${{ steps.detect.outputs.target_file }}`
+            - 基础分支：`${{ env.BASE_BRANCH }}`
+
+            内容由 `gen_changelog.py` 从社区发布说明生成，合并前请人工核对措辞与分类。
+          delete-branch: true
+          # 需要自动指定审核人时取消下面注释（用户名须为本仓库协作者）:
+          # reviewers: your-github-id
+          # assignees: your-github-id
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Auto Changelog (JumpServer)"
+            echo ""
+            echo "- 版本: \`${{ steps.detect.outputs.version || '(未检测到)' }}\`"
+            echo "- 目标文件: \`${{ steps.detect.outputs.target_file || '-' }}\`"
+            if [ "${{ steps.detect.outputs.update }}" = "true" ]; then
+              echo "- 结果: 已生成条目并提交 PR \`chore/changelog-${{ steps.detect.outputs.version }}\`"
+            else
+              echo "- 结果: 跳过（版本已存在或未检测到）"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -10,7 +10,8 @@ keywords: [1Panel 容器管理, Docker 概览, Docker 磁盘占用, Docker 配�
 
 页面展示容器及其运行状态、编排、编排模板、镜像、镜像仓库、网络和存储卷数量，点击数量可进入对应列表。
 
-![容器概览](/img/1panel/containers/container_overview.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/container_overview.png" alt="图 1 容器概览" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 容器概览</div>
 
 ## 磁盘占用

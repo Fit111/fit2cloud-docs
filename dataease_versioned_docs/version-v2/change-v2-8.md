@@ -19,7 +19,7 @@ title: v2.8.0
 
 ![更新1](/img/dataease-v2/newimg/1.2%20公共链接分享支持%20Ticket%20方式2.PNG)
 
-复制 Ticket 链接，那么，使用 Ticket 的公共链接格式为 https://example.dataease.com/link/bcg48L2W?ticket=xk59xiHJ。在此情况下，无需传递 Ticket 参数，DataEase 将从数据库自动获取 Ticket 相关参数。
+复制 Ticket 链接，那么，使用 Ticket 的公共链接格式为 `https://example.dataease.com/link/bcg48L2W?ticket=xk59xiHJ`。在此情况下，无需传递 Ticket 参数，DataEase 将从数据库自动获取 Ticket 相关参数。
 
 ![更新1](/img/dataease-v2/newimg/1.2%20公共链接分享支持%20Ticket%20方式3.PNG)
 

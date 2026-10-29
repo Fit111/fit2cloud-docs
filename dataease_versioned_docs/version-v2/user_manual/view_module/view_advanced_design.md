@@ -58,7 +58,7 @@ title: 图表高级设计
 
 如下图所示，切换至【高级】，点击【编辑】辅助线，弹出辅助线设置框，填写预警值名称及其他参数，点击【确定】即可。
 
-![高级设置_辅助线](/img/dataease-v2/view_generation/数据大屏设置2.0设置辅助线.png)
+![高级设置_辅助线](/img/dataease-v2/view_generation/数据大屏2.0设置辅助线.png)
 
 ![高级设置_辅助线显示效果](/img/dataease-v2/view_generation/数据大屏2.0设置辅助线效果.png)
 

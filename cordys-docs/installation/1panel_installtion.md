@@ -7,7 +7,7 @@ title: 1Panel 安装
 
 关于 1Panel 的安装部署与基础功能介绍，请参考 [**1Panel 官方文档**](/1panel/) 。完成 1Panel 的安装部署后，根据提示网址打开浏览器进入 1Panel，界面如下。
 
-![1panel](/img/cordys/installation/1panel_index2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/1panel_index2.png" alt="图 1  1panel" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  1panel</div>
 
@@ -27,14 +27,14 @@ title: 1Panel 安装
 
 **注意:** 如需修改 MySQL,Redis 相关配置参数请参考 [**在线一键安装**](./online_installtion) 文档。
 
-![安装 Cordys CRM](/img/cordys/installation/1p_install_crm2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/1p_install_crm2.png" alt="图 2  安装 Cordys CRM" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  安装 Cordys CRM</div>
 
 
 安装完成后，点击已安装应用列表中的 Cordys CRM 应用，进入应用详情页，可以看到 Cordys CRM 应用的相关信息。
 
-![Cordys CRM安装状态](/img/cordys/installation/crm_success2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/crm_success2.png" alt="图 3  Cordys CRM安装状态" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  Cordys CRM安装状态</div>
 
@@ -43,10 +43,10 @@ title: 1Panel 安装
 
 Cordys CRM 支持在线升级，点击已安装应用列表中的 Cordys CRM 应用，进入应用详情页，选择最新的版本进行升级。
 
-![在线升级](/img/cordys/installation/1p_upgrade2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/1p_upgrade2.png" alt="图 4  在线升级" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  在线升级</div>
-![在线升级](/img/cordys/installation/1p_upgrade_info2.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/1p_upgrade_info2.png" alt="图 5  在线升级" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  在线升级</div>
 
@@ -64,6 +64,6 @@ Cordys CRM 支持在线升级，点击已安装应用列表中的 Cordys CRM 应
 密码: CordysCRM
 ```
 
-![访问Cordys CRM](/img/cordys/installation/login.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/login.png" alt="图 6  访问Cordys CRM" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  访问Cordys CRM</div>

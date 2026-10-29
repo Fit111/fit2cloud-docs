@@ -10,7 +10,8 @@ title: 基准测试
 
 该功能属于 [1Panel 企业版](https://1panel.cn/enterprise.html)。
 
-![基准测试](/img/1panel/ai/ai_benchmark_list.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_benchmark_list.jpg" alt="图 1 基准测试界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 基准测试界面</div>
 
 ## 1 前置条件
@@ -31,7 +32,8 @@ title: 基准测试
 
 创建成功后，系统会启动后台任务执行基准测试，并可通过任务日志查看执行过程。
 
-![创建基准测试](/img/1panel/ai/ai_benchmark_create.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_benchmark_create.jpg" alt="图 2 创建测试任务界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 创建测试任务界面</div>
 
 :::tip[基础参数]
@@ -61,7 +63,8 @@ title: 基准测试
 
 点击任务名称可打开详情抽屉，查看基础信息、运行配置、结果指标、启动命令和原始结果。
 
-![基准测试详情](/img/1panel/ai/ai_benchmark_detail.jpg)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/ai_benchmark_detail.jpg" alt="图 3 查看测试结果界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 查看测试结果界面</div>
 
 :::tip[核心指标]

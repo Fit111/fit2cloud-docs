@@ -57,36 +57,42 @@ title: 对接火山引擎
 
 
 火山引擎-大语言模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_llm.png" alt="图 6  火山引擎 大语言模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  火山引擎 大语言模型 配置样例图</div>
 
 
 火山引擎-向量模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_embedding.png" alt="图 7  火山引擎 向量模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  火山引擎 向量模型 配置样例图</div>
 
 
 火山引擎-语音识别模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_asr.png" alt="图 8  火山引擎 语音识别模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8  火山引擎 语音识别模型 配置样例图</div>
 
 
 火山引擎-语音合成模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/huoshan_tts.png" alt="图 9  火山引擎 语音合成模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9  火山引擎 语音合成模型 配置样例图</div>
 
 
 火山引擎-视觉模型模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_vision.png" alt="图 10  火山引擎 视觉模型模型 配置样例图" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 10  火山引擎 视觉模型模型 配置样例图</div>
 
 
 火山引擎-图片生成模型需要在火山引擎【控制台-访问控制-API 访问密钥】新建密钥，样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_gen1.png" alt="图 11  火山引擎 图片生成模型参数配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 11  火山引擎 图片生成模型参数配置</div>
@@ -97,6 +103,7 @@ title: 对接火山引擎
 
 
 火山引擎-文生视频模型模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_text2video.png" alt="图 13  火山引擎 文生视频模型参数配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 13  火山引擎 文生视频模型参数配置</div>
@@ -107,6 +114,7 @@ title: 对接火山引擎
 
 
 火山引擎-图生视频模型模型配置样例图示如下：
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/model/doubao_picture2video.png" alt="图 15  火山引擎 图生视频模型参数配置" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 15  火山引擎 图生视频模型参数配置</div>

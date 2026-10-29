@@ -20,7 +20,7 @@ ClamAV 是一个开源（GPLv2许可）的反病毒工具包，专为邮件网�
 
 
 #### "RedHat / CentOS"
-!!! note ""
+:::note
 **1、安装 epel 源**
 
 ```bash
@@ -76,10 +76,10 @@ systemctl enable clamav-freshclam.service
 systemctl status clamd@scan.service
 systemctl status clamav-freshclam.service
 ```
-
+:::
 
 #### "Ubuntu / Debian"
-!!! note ""
+:::note
 **1、安装 ClamAV**
 
 ```bash
@@ -107,6 +107,7 @@ sudo systemctl enable clamav-freshclam.service
 sudo systemctl status clamav-daemon
 sudo systemctl status clamav-freshclam.service
 ```
+:::
 
 ## 4 扫描规则
 
@@ -119,7 +120,8 @@ sudo systemctl status clamav-freshclam.service
 
 点击操作列的 `执行` 可以手动执行该条扫描规则，点击 `报告` 即可查看该条扫描规则的执行记录和扫描结果。
 
-![img.png](/img/1panel/toolbox/clam_create_rule.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/toolbox/clam_create_rule.png" alt="图 1 扫描规则" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 扫描规则</div>
 
 ## 5 病毒类型说明

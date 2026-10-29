@@ -2,8 +2,9 @@
 title: 离线包安装
 ---
 
-!!! note "**<font color="blue">1Panel V2 离线版已正式发布！</font>** "    
-    - 1Panel V2 离线版已正式发布，[**点击查看详情**](https://1panel.cn/docs/v2/installation/package_installation/)。
+:::note[1Panel V2 离线版已正式发布！]
+- 1Panel V2 离线版已正式发布，[**点击查看详情**](/1panel/installation/package-installation)。
+:::
 
 ## 1 环境要求
 

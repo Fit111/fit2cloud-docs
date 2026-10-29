@@ -16,7 +16,8 @@ title: 镜像
 - 直接构建镜像，等价于 docker build 操作
 - 构建镜像将耗费一段时间，如果关闭抽屉后还想查看构建日志，则可以去【主机 - 文件】中，下载或查看 [安装目录]/1panel/tmp/docker_logs/image_build_[时间戳].log
 
-![img.png](/img/1panel/containers/image_build.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/containers/image_build.png" alt="图 1 构建镜像界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 构建镜像界面</div>
 
 - 编辑： 使用 Web 编辑器编辑 Dockerfile

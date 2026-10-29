@@ -9,14 +9,16 @@ title: OpenResty 设置
 
 可以通过按钮停止、启动或重启来管理 OpenResty 应用。
 
-![img.png](/img/1panel/websites/openresty_setting.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_setting.png" alt="图 1 停止 / 启动 / 重启——应用商店设置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 停止 / 启动 / 重启——应用商店设置</div>
 
 ## 2 重载
 
 允许用户在无需停机的情况下快速应用配置更改，确保网站服务的高可用性。
 
-![img.png](/img/1panel/websites/openresty_reload.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_reload.png" alt="图 2 重载界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 重载界面</div>
 
 ## 3 设置
@@ -25,7 +27,8 @@ title: OpenResty 设置
 
 查看当前网站状态，包括活动连接数、总连接数、总握手次数、总请求数、请求数、响应数及驻留进程等信息。
 
-![img.png](/img/1panel/websites/openresty_status.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_status.png" alt="图 3 当前状态界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 当前状态界面</div>
 
 ### 3.2 配置修改
@@ -33,21 +36,24 @@ title: OpenResty 设置
 - 配置 OpenResty 的配置文件
 - 点击【默认配置】按钮可将配置文件恢复到默认状态
 
-![img.png](/img/1panel/websites/openresty_conf.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_conf.png" alt="图 4 配置修改" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 配置修改</div>
 
 ### 3.3 性能调整
 
 调整 OpenResty 的相关配置参数。
 
-![img.png](/img/1panel/websites/openresty_performance.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_performance.png" alt="图 5 性能调整界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 性能调整界面</div>
 
 ### 3.4 日志
 
 查看 OpenResty 日志，支持实时追踪、下载、清空等操作，并可按指定时间段和行数筛选日志。
 
-![img.png](/img/1panel/websites/openresty_log.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_log.png" alt="图 6 日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 日志</div>
 
 ### 3.5 模块
@@ -64,5 +70,6 @@ title: OpenResty 设置
 参数类似 --add-module=/tmp/nginx-rtmp-module （必须是 /tmp）  
 脚本参考 unzip -o /tmp/nginx-rtmp-module.zip -d /tmp （必须是 /tmp）  
 
-![img.png](/img/1panel/websites/openresty_module.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/openresty_module.png" alt="图 7 模块界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 模块界面</div>

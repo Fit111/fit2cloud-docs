@@ -16,13 +16,13 @@ title: 配置 TiDB 数据源
 
 步骤二：按照以下步骤，选择 TiDB 图标。
 
-![TiDB](/img/dataease/datasource_configuration/选择TiDB.png)
+![TiDB](/img/dataease/datasource_configuration/xuanzetidb.png)
 
 图 1  选择TiDB数据源
 
 步骤三：填入收集的 IP 、端口、数据库等相关的信息。
 
-![TiDB](/img/dataease/datasource_configuration/TiDB链接信息.png)
+![TiDB](/img/dataease/datasource_configuration/tidblianjiexinxi.png)
 
 图 2  TiDB 连接信息
 
@@ -44,6 +44,6 @@ title: 配置 TiDB 数据源
 
 步骤四：数据源检验，校验成功后如下图所示，点击保存即可。
 
-![TiDB](/img/dataease/datasource_configuration/TiDB校验成功.png)
+![TiDB](/img/dataease/datasource_configuration/tidbjiaoyanchenggong.png)
 
 图 3  TiDB 校验成功

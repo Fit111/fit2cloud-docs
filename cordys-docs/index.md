@@ -2,16 +2,16 @@
 title: 产品介绍
 ---
 
-Cordys CRM 是新一代的开源 AI CRM 系统，是集信息化、数字化、智能化于一体的「客户关系管理系统」，由 [飞致云](https://fit2cloud.com/) 匠心出品。
+Cordys CRM 是新一代的开源 AI CRM 系统，是集信息化、数字化、智能化于一体的“客户关系管理系统”，由 [飞致云](https://fit2cloud.com/) 匠心出品。
 
 Cordys CRM 能够帮助企业实现从线索到回款（L2C）的全流程精细化管理，覆盖线索获取、智能分配、客户与联系人管理、商机跟进、合同签约及回款执行，构建端到端的销售运营闭环。
 
-关于 Cordys CRM 的理念和定位，可进一步阅读这篇文章： [中国 CRM 市场的前世今生，以及 Cordys CRM 如何以「开源+AI」改变游戏规则](https://cordys.cn/blog/china-crm-market-analysis.html)。
+关于 Cordys CRM 的理念和定位，可进一步阅读这篇文章： [中国 CRM 市场的前世今生，以及 Cordys CRM 如何以“开源+AI”改变游戏规则](https://cordys.cn/blog/china-crm-market-analysis.html)。
 
 关于 AI CRM 的落地，可进一步阅读这篇文章：[飞致云 AI CRM 实战：Cordys × WorkBuddy 赋能百人销售团队](https://cordys.cn/blog/fit2cloud-ai-crm-case-study.html)
 ## 1 整体架构 
 
-![功能架构](https://cordys.cn/images/cordyscrm-202607.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="https://cordys.cn/images/cordyscrm-202607.png" alt="图 1  功能架构" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  功能架构</div>
 
@@ -25,16 +25,22 @@ Cordys CRM 能够帮助企业实现从线索到回款（L2C）的全流程精细
 
 <table style={{borderCollapse:'collapse', border:'1px solid black'}}>
   <tr>
-    <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/setting.png" alt="Settings" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  模块设置</div></td>
+
+    <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/setting.png" alt="Settings" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  模块配置</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/rbac.png" alt="RBAC" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3  角色设置</div></td>
+
   </tr>
   <tr>
+
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/opportunity.png" alt="Opportunity List" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  商机列表</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/opportunity-detail.png" alt="Opportunity Detail" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5  商机详情</div></td>
+
   </tr>
   <tr>
+
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/bi.png" alt="BI" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  仪表板</div></td>
     <td style={{padding:'5px', backgroundColor:'#fff'}}><img src= "https://resource.fit2cloud.com/1panel/cordys-crm/img/ai.png" alt="AI" /><div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7  对接AI</div></td>
+
   </tr> 
 </table>
 
@@ -51,7 +57,7 @@ Cordys CRM 能够帮助企业实现从线索到回款（L2C）的全流程精细
 - 合同管理：用于管理合同履约与回款相关数据，涵盖回款计划、回款记录、工商抬头及发票记录等子模块，支持合同回款节点管理、资金回收跟踪及开票信息维护，确保合同执行过程在 CRM 中闭环、可追溯。
 - 订单管理：用于管理合同履约执行数据，关联合同信息，覆盖订单创建、交付、验收与收款环节，支持履约进度跟踪与状态同步，保障业务执行规范可追溯。
 - Skills 技能：开放 CRM Skills 接口，驱动 OpenClaw、WorkBuddy 等智能助手 7×24 小时在线，让 AI 深入销售每个环节。
-- 系统管理：包含组织架构、角色权限、模块设置、消息管理、企业设置以及系统日志功能。
+- 系统管理：包含组织架构、角色权限、模块配置、消息管理、企业设置以及系统日志功能。
 ## 6  了解更多
 
 - [了解飞致云](https://www.fit2cloud.com/) 

@@ -18,7 +18,7 @@ title: 在线安装指南
 
 请自行下载 DataEase 最新版本的在线安装包，并复制到目标机器的 `/tmp` 目录下。
 
-安装包下载链接：`https://github.com/dataease/dataease/releases`
+安装包下载链接：[https://github.com/dataease/dataease/releases](https://github.com/dataease/dataease/releases)
 
 ## 3 端口要求
 

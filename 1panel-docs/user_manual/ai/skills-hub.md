@@ -20,13 +20,16 @@ Skills Hub 用于在企业内部导入、审核、发布、安装和维护智能
 - 从 GitHub 仓库地址和分支或 Tag 导入；
 - 从可下载的 `.zip` 软件包 URL 导入。
 
-![上传 Skill](/img/1panel/ai/skills_hub_upload.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_upload.png" alt="图 1 导入 Skill界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 导入 Skill界面</div>
 
-![从 GitHub 仓库地址导入](/img/1panel/ai/skills_hub_import_github.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_import_github.png" alt="图 2 导入 Skill界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 导入 Skill界面（续）</div>
 
-![从压缩包 URL 导入](/img/1panel/ai/skills_hub_import_url.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_import_url.png" alt="图 3 导入 Skill界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 导入 Skill界面</div>
 
 
@@ -36,13 +39,16 @@ Skills Hub 用于在企业内部导入、审核、发布、安装和维护智能
 
 Skill 状态包括待审核、已审核、已上架、已下架、审核未通过和已删除。具备管理权限的用户可以执行审核通过、审核驳回、上架、下架和删除操作。
 
-![Skill 列表](/img/1panel/ai/skills_hub_list_pending.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_list_pending.png" alt="图 4 审核与发布界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 审核与发布界面</div>
 
 :::caution[风险检查]
     风险检查会展示风险等级、文件路径、规则类型、命中关键字和说明。发布前应人工复核 Skill 内容及其依赖，不应仅根据自动检查结果判断安全性。
 :::
-![风险等级说明](/img/1panel/ai/skills_hub_risk.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_risk.png" alt="图 5 审核与发布界面（续）" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 审核与发布界面（续）</div>
 
 
@@ -60,7 +66,8 @@ Skill 状态包括待审核、已审核、已上架、已下架、审核未通�
 - **安装后命令**：解压完成后执行的可选命令；
 - **描述和状态**：说明用途并控制目标是否可选。
 
-![自定义智能体列表](/img/1panel/ai/skills_hub_targets.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/skills_hub_targets.png" alt="图 6 自定义智能体界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 自定义智能体界面</div>
 
 

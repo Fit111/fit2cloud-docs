@@ -38,6 +38,7 @@ https://clawhub.ai/liuruibin/maxkb
 ```
 安装技能：git clone https://github.com/1Panel-dev/MaxKB-skills ~/.openclaw/workspace/skills/maxkb-agents
 ```
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/openclaw_chat.png" alt="图 1  在 OpenClaw 中安装 MaxKB Skills" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  在 OpenClaw 中安装 MaxKB Skills</div>
@@ -85,6 +86,7 @@ MAXKB_TOKEN=<Bearer Token>
 MAXKB_USERNAME=<用户名>
 MAXKB_PASSWORD=<密码>
 ```
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/Skills/get_apikey.png" alt="图 2  MaxKB 平台 API Key 管理页面" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  MaxKB 平台 API Key 管理页面</div>

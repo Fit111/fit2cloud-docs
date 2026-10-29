@@ -6,13 +6,13 @@ title: 数据大屏基础功能
 
 点击下图所示的位置或者新建数据大屏，进入数据大屏编辑界面。
 
-![点击编辑数据大屏](/img/dataease/panel_generation/点击编辑数据大屏.png)
+![点击编辑数据大屏](/img/dataease/panel_generation/dianjibianjishujudaping.png)
 
 图 1  点击编辑数据大屏
 
 在数据大屏中新建组件时，新组件将自动显示在屏幕中心位置，同时画布区域也会同步定位到屏幕中心。
 
-![新建图表定位到屏幕中心](/img/dataease/panel_generation/数据大屏新建图表后自动定位到屏幕中心.gif)
+![新建图表定位到屏幕中心](/img/dataease/panel_generation/shujudapingxinjiantubiaohouzidongdingweidaopingmuzhongxin.gif)
 
 图 2  新建图表定位到屏幕中心
 
@@ -26,13 +26,13 @@ title: 数据大屏基础功能
 - 【序号 6】属性配置，调整尺寸、背景等配置；
 - 【序号 7】比例的调整，来控制和调整画布的缩放比例；
 
-![数据大屏布局](/img/dataease/panel_generation/数据大屏布局.png)
+![数据大屏布局](/img/dataease/panel_generation/shujudapingbuju.png)
 
 图 3  数据大屏布局
 
 按住空格键并同时使用鼠标或者触摸板，可自由移动数据大屏的画布位置。
 
-![数据大屏按住空格键时拖动画布](/img/dataease/panel_generation/数据大屏支持按住空格键时拖动画布.gif)
+![数据大屏按住空格键时拖动画布](/img/dataease/panel_generation/shujudapingzhichianzhukonggejianshituodonghuabu.gif)
 
 图 4  数据大屏按住空格键时拖动画布
 
@@ -46,11 +46,11 @@ title: 数据大屏基础功能
 - 点击【取消发布】，则撤销已发布版本，使其变为草稿版本。
 - 若需要调整内容，可修改并【保存】，生成新的草稿版本。点击【恢复到已发布版本】，放弃当前修改，将草稿版本还原至已发布版本。
 
-![数据大屏发布](/img/dataease/newimg/数据大屏支持发布功能1.png)
+![数据大屏发布](/img/dataease/newimg/shujudapingzhichifabugongneng1.png)
 
 图 5  数据大屏发布
 
-![数据大屏发布](/img/dataease/newimg/数据大屏支持发布功能2.png)
+![数据大屏发布](/img/dataease/newimg/shujudapingzhichifabugongneng2.png)
 
 图 6  数据大屏发布
 
@@ -73,11 +73,11 @@ title: 数据大屏基础功能
     - 取消发布或者仅存在草稿版本在列表中置灰，不可查看、分享、收藏；
     - 已发布过的仪表板和数据大屏若取消发布后（即仅存在草稿版本），原先创建的分享链接和收藏记录不删除。通过分享链接访问时，将提示数据大屏未发布，同时在收藏栏中无法点击查看。
 
-![数据大屏发布](/img/dataease/newimg/数据大屏支持发布功能3.png)
+![数据大屏发布](/img/dataease/newimg/shujudapingzhichifabugongneng3.png)
 
 图 7  数据大屏发布
 
-![数据大屏发布](/img/dataease/newimg/数据大屏支持发布功能4.png)
+![数据大屏发布](/img/dataease/newimg/shujudapingzhichifabugongneng4.png)
 
 图 8  数据大屏发布
 
@@ -85,7 +85,7 @@ title: 数据大屏基础功能
 
 点击下图按钮，撤销上一步操作。
 
-![数据大屏撤销](/img/dataease/panel_generation/数据大屏撤销.png)
+![数据大屏撤销](/img/dataease/panel_generation/shujudapingchexiao.png)
 
 图 9  数据大屏撤销
 
@@ -93,7 +93,7 @@ title: 数据大屏基础功能
 
 点击下图按钮，可以对组件操作恢复。
 
-![数据大屏恢复](/img/dataease/panel_generation/数据大屏恢复.png)
+![数据大屏恢复](/img/dataease/panel_generation/shujudapinghuifu.png)
 
 图 10  数据大屏恢复
 
@@ -102,7 +102,7 @@ title: 数据大屏基础功能
 根据组件添加至画布区域的顺序，图层自下而上，即最先加入画布区域的组件，位于最底层。  
 图层管理分为弹窗区域、大屏区域。用户在图层管理或者点击图层右键，来调整组件的图层。
 
-![样式](/img/dataease/panel_generation/图层管理1.png)
+![样式](/img/dataease/panel_generation/tucengguanli1.png)
 
 图 11  图层管理
 
@@ -110,33 +110,33 @@ title: 数据大屏基础功能
 
 打开弹窗区域，可在弹窗区域中添加查询组件。
 
-![样式](/img/dataease/panel_generation/数据大屏新增弹窗区域.png)
+![样式](/img/dataease/panel_generation/shujudapingxinzengdanchuangquyu.png)
 
 图 12  数据大屏弹窗区域
 
 在全屏或预览的界面下，当设置了弹窗区时，数据大屏右下侧会出现查询按钮，点击可唤出弹窗区。弹窗区的查询组件功能同普通查询组件，同时也支持外部传参。
 
-![数据大屏新增弹窗区支持3](/img/dataease/newimg/数据大屏新增弹窗区支持3.gif)
+![数据大屏新增弹窗区支持3](/img/dataease/newimg/shujudapingxinzengdanchuangquzhichi3.gif)
 
 图 13  数据大屏弹窗区
 
 弹窗区查询按钮支持显示控制打开预览时弹窗区域的控制按钮，则支持用户预览数据大屏时动态调整弹窗区域的显隐。
 
-![弹窗区查询按钮支持显示控制1](/img/dataease/newimg/弹窗区查询按钮支持显示控制1.png)
+![弹窗区查询按钮支持显示控制1](/img/dataease/newimg/danchuangquchaxunanniuzhichixianshikongzhi1.png)
 
 图 14  弹窗区查询按钮显示控制
 
-![弹窗区查询按钮支持显示控制2](/img/dataease/newimg/弹窗区查询按钮支持显示控制2.gif)
+![弹窗区查询按钮支持显示控制2](/img/dataease/newimg/danchuangquchaxunanniuzhichixianshikongzhi2.gif)
 
 图 15  弹窗区查询按钮显示控制
 
 关闭预览时弹窗区域的控制按钮，则弹窗区域被完全隐藏，且用户无法在预览界面手动调出弹窗区域。
 
-![弹窗区查询按钮支持显示控制3](/img/dataease/newimg/弹窗区查询按钮支持显示控制3.png)
+![弹窗区查询按钮支持显示控制3](/img/dataease/newimg/danchuangquchaxunanniuzhichixianshikongzhi3.png)
 
 图 16  弹窗区查询按钮显示控制
 
-![弹窗区查询按钮支持显示控制4](/img/dataease/newimg/弹窗区查询按钮支持显示控制4.png)
+![弹窗区查询按钮支持显示控制4](/img/dataease/newimg/danchuangquchaxunanniuzhichixianshikongzhi4.png)
 
 图 17  弹窗区查询按钮显示控制
 
@@ -144,7 +144,7 @@ title: 数据大屏基础功能
 
 图层隐藏功能，可以迅速隐藏不需要显示的图层，以便更清晰地查看和编辑目标图层。
 
-![仪表板主题](/img/dataease/panel_generation/图层隐藏.png)
+![仪表板主题](/img/dataease/panel_generation/tucengyincang.png)
 
 图 18  图层隐藏
 
@@ -152,7 +152,7 @@ title: 数据大屏基础功能
 
 通过图层锁定功能，可以确保在设计过程中不会误操作或修改已经设置好的图层。
 
-![仪表板主题](/img/dataease/panel_generation/图层锁定.png)
+![仪表板主题](/img/dataease/panel_generation/tucengsuoding.png)
 
 图 19  图层锁定
 
@@ -165,35 +165,35 @@ title: 数据大屏基础功能
 - 在图层管理中，选中图层后进行组合；
 - 在画布区域选择图层后，右键选择组合。
 
-![仪表板主题](/img/dataease/panel_generation/图层组合2.png)
+![仪表板主题](/img/dataease/panel_generation/tucengzuhe2.png)
 
 图 20  图层组合
 
-![仪表板主题](/img/dataease/panel_generation/视图图层组合.png)
+![仪表板主题](/img/dataease/panel_generation/shitutucengzuhe.png)
 
 图 21  视图图层组合
 
 组件组合后，在图层管理中可以按照分组查看组件列表。
 
-![图层组合](/img/dataease/newimg/图层组合.png)
+![图层组合](/img/dataease/newimg/tucengzuhe.png)
 
 图 22  图层组合
 
 多个组件创建分组后，可以作为分组整体移动，如果需要单独调整分组内组件的位置，可以通过双击该组件，然后移动该组件的所在位置。
 
-![图层组合-1](/img/dataease/newimg/图层组合-1.png)
+![图层组合-1](/img/dataease/newimg/tucengzuhe-1.png)
 
 图 23  图层组合
 
 放大缩小组合时其内部组件同比放大缩小。
 
-![图层组合-2](/img/dataease/newimg/图层组合-2.png)
+![图层组合-2](/img/dataease/newimg/tucengzuhe-2.png)
 
 图 24  图层组合
 
 画布放大缩小其图表支持同比放大缩小。
 
-![图层组合-3](/img/dataease/newimg/图层组合-3.png)
+![图层组合-3](/img/dataease/newimg/tucengzuhe-3.png)
 
 图 25  图层组合
 
@@ -201,7 +201,7 @@ title: 数据大屏基础功能
 
 图层顺序：可以直接在图层管理中直接拖拽图层顺序。或者在图层操作通过点击【上移一层】、【下移一层】、【置于顶层】、【置于底层】这些操作，来调整组件。
 
-![仪表版_其他样式](/img/dataease/panel_generation/图层顺序设置.png)
+![仪表版_其他样式](/img/dataease/panel_generation/tucengshunxushezhi.png)
 
 图 26  图层顺序设置
 
@@ -209,7 +209,7 @@ title: 数据大屏基础功能
 
 选择多个组件后，可以快速对齐，支持左对齐、右对齐、上对齐、下对齐、水平居中、垂直居中。
 
-![仪表版_其他样式](/img/dataease/panel_generation/快速对齐.png)
+![仪表版_其他样式](/img/dataease/panel_generation/kuaisuduiqi.png)
 
 图 27  快速对齐
 
@@ -217,7 +217,7 @@ title: 数据大屏基础功能
 
 涵盖了图层重命名、复制、删除、剪贴等各种图层操作。
 
-![仪表版_其他样式](/img/dataease/panel_generation/图层其他操作.png)
+![仪表版_其他样式](/img/dataease/panel_generation/tucengqitacaozuo.png)
 
 图 28  图层其他操作
 
@@ -225,25 +225,25 @@ title: 数据大屏基础功能
 
 可通过鼠标框选或按住 Ctrl 点选的方式完成多选，可批量支持选择多个组件后批量移动。
 
-![数据大屏多个组件批量移动](/img/dataease/newimg/数据大屏支持多个组件批量移动.png)
+![数据大屏多个组件批量移动](/img/dataease/newimg/shujudapingzhichiduogezujianpiliangyidong.png)
 
 图 29  数据大屏多个组件批量移动
 
 选中后可整体调整组件大小。
 
-![数据大屏多选组件后](/img/dataease/newimg/数据大屏多选组件后，可在没有组合的情况下整体变更组件大小.png)
+![数据大屏多选组件后](/img/dataease/newimg/shujudapingduoxuanzujianhou-kezaimeiyouzuhedeqingkuangxiazhengtibiangeng-adb081.png)
 
 图 30  数据大屏多选组件后
 
 数据大屏支持批量设置样式。
 
-![数据大屏支持批量设置样式](/img/dataease/newimg/数据大屏支持批量设置样式.png)
+![数据大屏支持批量设置样式](/img/dataease/newimg/shujudapingzhichipiliangshezhiyangshi.png)
 
 图 31  数据大屏批量设置样式
 
 数据大屏在选中多个组件时支持按住 Ctrl 键取消已选中的组件。
 
-![多选组件后按住 Ctrl](/img/dataease/newimg/数据大屏在选中多个组件时支持按住%20Ctrl%20键取消已选中的组件.gif)
+![多选组件后按住 Ctrl](/img/dataease/newimg/shujudapingzaixuanzhongduogezujianshizhichianzhu-ctrl-jianquxiaoyixuanzh-22a744.gif)
 
 图 32  多选组件后按住 Ctrl
 
@@ -251,7 +251,7 @@ title: 数据大屏基础功能
 
 在大屏配置区域可以统一设置数据大屏的尺寸、基础配置、背景、配色、刷新配置、数字内容格式、高级样式设置。
 
-![仪表版_其他样式](/img/dataease/panel_generation/大屏配置.png)
+![仪表版_其他样式](/img/dataease/panel_generation/dapingpeizhi.png)
 
 图 33  大屏配置
 
@@ -267,15 +267,15 @@ title: 数据大屏基础功能
 - **不缩放**：保持设计时尺寸，窗口较小时可能出现滚动。
 - **保持比例填充**：按照相同比例缩放，保持比例并尽量填满屏幕。
 
-![仪表版_其他样式](/img/dataease/panel_generation/尺寸调整.png)
+![仪表版_其他样式](/img/dataease/panel_generation/chicuntiaozheng.png)
 
 图 34  尺寸调整
 
-![仪表版_其他样式](/img/dataease/panel_generation/尺寸超出.png)
+![仪表版_其他样式](/img/dataease/panel_generation/chicunchaochu.png)
 
 图 35  尺寸超出
 
-![仪表版_其他样式](/img/dataease/panel_generation/尺寸超出预览.png)
+![仪表版_其他样式](/img/dataease/panel_generation/chicunchaochuyulan.png)
 
 图 36  尺寸超出预览
 
@@ -283,13 +283,13 @@ title: 数据大屏基础功能
 
 数据大屏支持统一更换字体。选择字体后，画布中支持该配置的文本、图表及其他组件会按照新的字体显示；实际效果以组件自身的字体配置为准。
 
-![仪表版_其他样式](/img/dataease/newimg/仪表板和数据大屏支持字体更换2.png)
+![仪表版_其他样式](/img/dataease/newimg/yibiaobanheshujudapingzhichizitigenghuan2.png)
 
 图 37  仪表板和数据大屏字体更换
 
 设计面板支持开启辅助网格线。网格线仅用于编辑时对齐和定位组件，不会显示在预览或发布后的数据大屏中。
 
-![仪表版_其他样式](/img/dataease/newimg/数据大屏设计面板支持开启辅助网格线.PNG)
+![仪表版_其他样式](/img/dataease/newimg/shujudapingshejimianbanzhichikaiqifuzhuwanggexian.png)
 
 图 38  数据大屏设计面板开启辅助网格线
 
@@ -299,11 +299,11 @@ title: 数据大屏基础功能
 
 **注意：同时设置颜色背景和图片背景时，图片背景会覆盖颜色背景。**
 
-![仪表版_其他样式](/img/dataease/panel_generation/大屏配置背景颜色.png)
+![仪表版_其他样式](/img/dataease/panel_generation/dapingpeizhibeijingyanse.png)
 
 图 39  大屏配置背景颜色
 
-![仪表版_其他样式](/img/dataease/panel_generation/背景设置图片.png)
+![仪表版_其他样式](/img/dataease/panel_generation/beijingshezhitupian.png)
 
 图 40  背景设置图片
 
@@ -314,7 +314,7 @@ title: 数据大屏基础功能
 - **图表配色**：统一调整图表（表格除外）的颜色方案。
 - **表格配色**：统一设置表格的背景、字体、滚动条颜色等。
 
-![仪表版_其他样式](/img/dataease/panel_generation/大屏设置配色.png)
+![仪表版_其他样式](/img/dataease/panel_generation/dapingshezhipeise.png)
 
 图 41  大屏设置配色
 
@@ -324,7 +324,7 @@ title: 数据大屏基础功能
 
 完成配置后需要保存大屏，并在预览、全屏或发布后的访问页面中查看刷新效果。编辑画布时不执行自动刷新。
 
-![仪表版_其他样式](/img/dataease/panel_generation/数据大屏刷新频率.png)
+![仪表版_其他样式](/img/dataease/panel_generation/shujudapingshuaxinpinlv.png)
 
 图 42  数据大屏刷新频率
 
@@ -332,7 +332,7 @@ title: 数据大屏基础功能
 
 设计面板支持统一设置数字内容格式。。
 
-![仪表版_其他样式](/img/dataease/panel_generation/数据大屏数字内容格式.PNG)
+![仪表版_其他样式](/img/dataease/panel_generation/shujudapingshuzineironggeshi.png)
 
 图 43  数据大屏数字内容格式
 
@@ -340,7 +340,7 @@ title: 数据大屏基础功能
 
 数据大屏支持统一设置高级样式。
 
-![仪表版_其他样式](/img/dataease/panel_generation/数据大屏高级样式设置.PNG)
+![仪表版_其他样式](/img/dataease/panel_generation/shujudapinggaojiyangshishezhi.png)
 
 图 44  数据大屏高级样式设置
 
@@ -351,11 +351,11 @@ title: 数据大屏基础功能
 对关联组件做了分类，分为查询组件和图表两类。查询组件的关联需要选择关联条件。图表关联则可以通过数据集批量关联，减少重复操作。且图表的关联支持直接选择与数据集参数进行关联。  
 **注意：外部传参同时关联查询组件与图表时，以查询组件的优先级优先。**
 
-![数据大屏外部传参](/img/dataease/panel_generation/数据大屏外部传参.png)
+![数据大屏外部传参](/img/dataease/panel_generation/shujudapingwaibuchuancan.png)
 
 图 45  数据大屏外部传参
 
-![外部参数设置页面](/img/dataease/panel_generation/外部参数设置页面.png)
+![外部参数设置页面](/img/dataease/panel_generation/waibucanshushezhiyemian.png)
 
 图 46  外部参数设置页面
 
@@ -371,7 +371,7 @@ echo '{"省份":"北京市"}'|base64
 构建完整的 URL 为：&lt;数据大屏公共链接&gt;?attachParams=eyLnnIHku70iOiLljJfkuqzluIIifQo=
 以公共链接的形式访问数据大屏，关联的内容被过滤。
 
-![数据大屏_批量操作](/img/dataease/dashboard_generation/外部传参示例.png)
+![数据大屏_批量操作](/img/dataease/dashboard_generation/waibuchuancanshili.png)
 
 图 47  外部传参示例
 
@@ -390,7 +390,7 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 
 支持复用所有的组件，复用图表支持适配当前数据大屏板样式。
 
-![数据大屏复用组件](/img/dataease/panel_generation/数据大屏支持复用组件.png)
+![数据大屏复用组件](/img/dataease/panel_generation/shujudapingzhichifuyongzujian.png)
 
 图 48  数据大屏复用组件
 
@@ -398,7 +398,7 @@ echo '{"省份":"广东省","年份":"2023"}'|base64
 
 点击下图所示的返回按钮，关闭数据大屏。
 
-![数据大屏_关闭](/img/dataease/panel_generation/数据大屏返回.png)
+![数据大屏_关闭](/img/dataease/panel_generation/shujudapingfanhui.png)
 
 图 49  数据大屏返回
 

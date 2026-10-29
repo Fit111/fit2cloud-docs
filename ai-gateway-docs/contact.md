@@ -20,7 +20,7 @@ title: 联系我们
 
 ## 3 微信交流群
 
-<img alt="1Panel 微信交流群二维码" src="/img/contact/wechat-group.jpg" width="156" height="156"/>
+<img alt="1Panel 微信交流群二维码" src="https://resource.fit2cloud.com/1panel/img/wechat.png" width="156" height="156"/>
 
 ## 4 微信公众号
 

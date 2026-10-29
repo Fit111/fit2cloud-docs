@@ -22,7 +22,9 @@ title: 离线安装
 
 
 离线部署 Cordys CRM 需要开通的访问端口说明如下：
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"16px 0 8px"}}>表 1  端口说明</div>
+
 | 端口   | 作用              | 说明                        |
 |------|:----------------|:--------------------------|
 | 22   | SSH             | 安装、升级及管理使用                |
@@ -151,6 +153,6 @@ Cordys CRM 安装后，相关文件的分布路径如下：
 默认密码：CordysCRM
 ```
 
-![访问Cordys CRM](/img/cordys/installation/login.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/cordys/installation/login.png" alt="图 1  访问Cordys CRM" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  访问Cordys CRM</div>

@@ -12,24 +12,28 @@ title: PostgreSQL
 
 除应用商店安装的本地数据库以外，还可以添加已存在的数据库服务地址。点击列表上方的【远程服务器】按钮，即可进入远程服务器管理页面。
 
-![img.png](/img/1panel/databases/postgresql_remote.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_remote.png" alt="图 1 远程服务器——添加远程数据库" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 远程服务器——添加远程数据库</div>
 
-![img.png](/img/1panel/databases/postgresql_remote_add.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_remote_add.png" alt="图 2 远程服务器界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 远程服务器界面</div>
 
 ### 1.3 切换数据库实例
 
 点击数据库列表上方的下拉菜单，即可在不同的数据库实例间进行切换，管理不同数据库实例下的数据库及设置等。
 
-![img.png](/img/1panel/databases/postgresql_select.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_select.png" alt="图 3 切换数据库实例界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 切换数据库实例界面</div>
 
 ## 2 创建数据库
 
 创建一个新的数据库，输入数据库名称、用户名、密码，设置访问权限，即可成功创建一个数据库。
 
-![img.png](/img/1panel/databases/create_postgresql_db.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/create_postgresql_db.png" alt="图 4 创建数据库界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 创建数据库界面</div>
 
 - 数据库名：新建数据库的名称
@@ -41,7 +45,8 @@ title: PostgreSQL
 
 点击列表上方的【连接信息】按钮，即可查看数据库的地址、端口及管理员用户名和密码等连接信息，同时可以在这里修改管理员用户密码。
 
-![img.png](/img/1panel/databases/postgresql_connect.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_connect.png" alt="图 5 查看连接信息界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 查看连接信息界面</div>
 
 **注意**：应用商店部署的数据库采用容器化方式运行，不同的场景需要根据页面提示选择对应的连接信息。
@@ -58,7 +63,8 @@ title: PostgreSQL
 
 点击备份列表按钮，选择备份，即可备份当前数据库文件。
 
-![img.png](/img/1panel/databases/backup_postgresql_db.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/backup_postgresql_db.png" alt="图 6 备份" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6 备份</div>
 
 - 默认数据库路径为 /opt/1panel/backup/database/postgresql
@@ -68,7 +74,8 @@ title: PostgreSQL
 
 点击导入备份按钮，可以选择本地上传，或选择已备份的文件还原。
 
-![img.png](/img/1panel/databases/recover_postgresql_db.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/recover_postgresql_db.png" alt="图 7 恢复" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 7 恢复</div>
 
 - 如从上传文件恢复，则需要保证上传文件压缩包内存在 test.sql 文件，否则无法正确导入。
@@ -87,7 +94,8 @@ title: PostgreSQL
 点击状态栏设置按钮，即可进入数据库具体设置界面，具体包括配置修改、端口、日志查看。
 其中配置界面可对数据库配置进行手动调整。
 
-![img.png](/img/1panel/databases/postgresql_conf.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_conf.png" alt="图 8 数据库配置" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 8 数据库配置</div>
 
 - 系统 PostgreSQL 使用 Docker 安装，配置文件默认挂载在 /opt/1panel/apps/postgresql/[数据库名称]/data/postgresql.cnf
@@ -101,5 +109,6 @@ title: PostgreSQL
 
 - 系统 PostgreSQL 使用 Docker 安装，本处产生日志为对应 PostgreSQL 容器产生的日志。支持时间段筛选、追踪及下载操作
 
-![img.png](/img/1panel/databases/postgresql_log.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/databases/postgresql_log.png" alt="图 9 日志" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 9 日志</div>

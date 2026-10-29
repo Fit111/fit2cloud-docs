@@ -121,5 +121,6 @@ http://目标服务器 IP 地址:目标端口/安全入口
 
 登录 1Panel Web 控制台，在页面右下角点击 **【检查更新】** 进行在线升级。
 
-![在线升级检查更新](/img/1panel/installation/check-update.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/installation/check-update.png" alt="图 1 在线升级" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 在线升级</div>

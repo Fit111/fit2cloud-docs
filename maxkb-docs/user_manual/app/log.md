@@ -4,12 +4,14 @@ title: 对话日志
 
 
 在对话日志记录了所有用户会话中的问答详情，包括用户对AI 回答的反馈信息，维护人员可以通过查看对话日志详情并参考用户反馈进一步修正答案。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/log_select.png" alt="图 1  日志选择搜索" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1  日志选择搜索</div>
 
 
 对话日志中，支持按摘要或用户进行查询，也支持查询过去 7 天、30 天、90 天、过去半年以及自定义时间段的对话内容。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/loglist.png" alt="图 2  日志详情" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2  日志详情</div>
@@ -27,6 +29,7 @@ title: 对话日志
 
 
 运营人员可以根据用户提问、AI 回答以及用户的反馈来编辑和标注，并保存至知识库，进一步完善并提升效果。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/log_details_edit.png" alt="图 4  日志详情编辑标注" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4  日志详情编辑标注</div>
@@ -42,6 +45,7 @@ title: 对话日志
 ## 3 日志导出
 
 支持将对话日志导出，查看详细的对话情况。
+
 <img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/maxkb/app/export_log.png" alt="图 6  对话日志导出操作" />
 
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 6  对话日志导出操作</div>

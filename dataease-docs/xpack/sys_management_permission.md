@@ -19,11 +19,11 @@ title: 权限配置
 - 选中【用户】时，右侧同时有【资源权限】【菜单权限】；
 - 选中【角色】时，右侧只有【资源权限】，没有【菜单权限】。
 
-![按用户配置](/img/dataease/xpack/系统设置按用户配置.png)
+![按用户配置](/img/dataease/xpack/xitongshezhianyonghupeizhi.png)
 
 图 1  系统设置按用户配置
 
-![按资源配置](/img/dataease/xpack/系统设置按资源配置.png)
+![按资源配置](/img/dataease/xpack/xitongshezhianziyuanpeizhi.png)
 
 图 2  系统设置按资源配置
 
@@ -56,7 +56,7 @@ title: 权限配置
 - 系统设置
 - 工具箱
 
-![菜单权限](/img/dataease/xpack/系统设置菜单权限.png)
+![菜单权限](/img/dataease/xpack/xitongshezhicaidanquanxian.png)
 
 图 3  系统设置菜单权限
 
@@ -82,7 +82,7 @@ title: 权限配置
 - **授权**：用户或角色可以把权限范围以内的资源，再授权给其他用户或角色。
 - **管理**：可编辑管理该资源，同时拥有该资源全部权限（包括授权、导出、查看）。
 
-![系统设置资源权限](/img/dataease/xpack/系统设置资源权限.png)
+![系统设置资源权限](/img/dataease/xpack/xitongshezhiziyuanquanxian.png)
 
 图 4  系统设置资源权限
 
@@ -93,7 +93,7 @@ title: 权限配置
 - **资源权限**：授予具体资源；
 - **菜单权限**：直接授予个人功能菜单入口。
 
-![系统设置资源权限](/img/dataease/xpack/系统设置用户维度.png)
+![系统设置资源权限](/img/dataease/xpack/xitongshezhiyonghuweidu.png)
 
 图 5  系统设置用户维度
 
@@ -103,6 +103,6 @@ title: 权限配置
 - 系统设置下不能在角色维度分配菜单权限；且只能对组织默认角色进行资源权限调整。
 - 组织内自定义角色的资源/菜单授权请到【组织管理中心-权限配置】操作。
 
-![系统设置资源权限](/img/dataease/xpack/系统设置角色维度.png)
+![系统设置资源权限](/img/dataease/xpack/xitongshezhijueseweidu.png)
 
 图 6  系统设置角色维度

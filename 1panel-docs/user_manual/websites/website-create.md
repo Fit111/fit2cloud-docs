@@ -22,7 +22,8 @@ keywords: [1Panel 创建网站, 网站部署, 运行环境, 反向代理, 静态
 - **启用 HTTPS**：开启 HTTPS 并选择 SSL 证书 
 - **备注**：填写对该站点作用的描述 
 
-![img.png](/img/1panel/websites/auto_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/auto_create.png" alt="图 1 一键部署界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 一键部署界面</div>
 
 ## 2 运行环境
@@ -41,7 +42,8 @@ keywords: [1Panel 创建网站, 网站部署, 运行环境, 反向代理, 静态
 - **启用 HTTPS**：开启 HTTPS 并选择 SSL 证书 
 - **备注**：提供该站点的功能描述
 
-![img.png](/img/1panel/websites/website_runtime_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/website_runtime_create.png" alt="图 2 运行环境界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 运行环境界面</div>
 
 ## 3 反向代理
@@ -57,7 +59,8 @@ keywords: [1Panel 创建网站, 网站部署, 运行环境, 反向代理, 静态
 - **启用 HTTPS**：开启 HTTPS 并选择 SSL 证书 
 - **备注**：描述该站点的功能或用途
 
-![img.png](/img/1panel/websites/proxy_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/proxy_create.png" alt="图 3 反向代理界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 反向代理界面</div>
 
 ## 4 静态网站
@@ -73,7 +76,8 @@ keywords: [1Panel 创建网站, 网站部署, 运行环境, 反向代理, 静态
 - **启用 HTTPS**：开启 HTTPS 并选择 SSL 证书 
 - **备注**：简要描述该站点的功能或用途
 
-![img.png](/img/1panel/websites/static_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/static_create.png" alt="图 4 静态网站界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 4 静态网站界面</div>
 
 ## 5 子网站
@@ -90,7 +94,8 @@ keywords: [1Panel 创建网站, 网站部署, 运行环境, 反向代理, 静态
 - **启用 HTTPS**：开启 HTTPS 并选择 SSL 证书 
 - **备注**：简要描述该站点的功能或用途
 
-![img.png](/img/1panel/websites/subsite_create.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/websites/subsite_create.png" alt="图 5 子网站界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 5 子网站界面</div>
 
 ## 6 TCP/UDP 代理

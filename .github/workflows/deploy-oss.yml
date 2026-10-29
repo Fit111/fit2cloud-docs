@@ -46,7 +46,7 @@ jobs:
   build-and-deploy:
     name: Build & Deploy to OSS
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
 
     steps:
       - name: Checkout

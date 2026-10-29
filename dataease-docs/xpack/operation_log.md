@@ -9,7 +9,7 @@ title: 操作日志
 - **系统管理员**：可查看所有用户的操作日志；
 - **其他用户**（含组织管理员）：仅可查看自己的操作日志，包括该用户所在各组织下的操作记录。
 
-![操作日志](/img/dataease/newimg/xpack/操作日志.png)
+![操作日志](/img/dataease/newimg/xpack/caozuorizhi.png)
 
 图 1  操作日志
 
@@ -28,7 +28,7 @@ title: 操作日志
 | IP 地址 | 操作来源 IP |
 | 操作时间 | 操作发生时间 |
 
-![操作日志入口](/img/dataease/newimg/操作日志入口.png)
+![操作日志入口](/img/dataease/newimg/caozuorizhirukou.png)
 
 图 2  操作日志入口
 
@@ -43,11 +43,11 @@ title: 操作日志
 
 **提示：** 定时任务和消息通知中已有的相关记录，操作日志里不再重复记录。
 
-![操作日志筛选](/img/dataease/newimg/操作日志1.png)
+![操作日志筛选](/img/dataease/newimg/caozuorizhi1.png)
 
 图 3  操作日志
 
-![操作日志筛选](/img/dataease/newimg/操作日志2.png)
+![操作日志筛选](/img/dataease/newimg/caozuorizhi2.png)
 
 图 4  操作日志
 
@@ -55,6 +55,6 @@ title: 操作日志
 
 点击页面【导出】按钮，可将当前筛选结果导出为 Excel 文件，便于离线留存或二次分析。
 
-![导出操作日志](/img/dataease/system_management/导出操作日志.png)
+![导出操作日志](/img/dataease/system_management/daochucaozuorizhi.png)
 
 图 5  导出操作日志

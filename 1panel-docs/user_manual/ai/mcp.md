@@ -29,7 +29,9 @@ keywords: [1Panel MCP, MCP Server, MCP 管理, MCP 网站绑定, Model Context P
     - **环境变量 / 挂载**：向 MCP Server 传入凭证、配置或主机目录。
 
 :::
-![创建 MCP Server](/img/1panel/ai/create_mcp_server.png)
+
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/create_mcp_server.png" alt="图 1 创建 MCP Server界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 创建 MCP Server界面</div>
 
 :::caution[命令与挂载安全]
@@ -40,7 +42,8 @@ keywords: [1Panel MCP, MCP Server, MCP 管理, MCP 网站绑定, Model Context P
 
 创建任务完成后，可在列表中查看运行状态和连接信息，并执行编辑、启动、停止、重启、删除、查看日志和测试连接等操作。客户端连接地址由外部访问路径、端口和当前输出类型的路径共同组成，应直接使用页面提供的配置。
 
-![MCP Server 连接配置](/img/1panel/ai/mcp_server_config.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/mcp_server_config.png" alt="图 2 管理和连接" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 管理和连接</div>
 
 >如果实例无法连接，依次检查容器状态及日志、运行命令、访问路径、端口监听、防火墙和反向代理配置。
@@ -49,7 +52,8 @@ keywords: [1Panel MCP, MCP Server, MCP 管理, MCP 网站绑定, Model Context P
 
 点击 **绑定网站**，可以把所有已安装的 MCP Server 统一接入一个已有网站。绑定后，1Panel 会更新各实例的外部访问地址，并关闭端口外部访问；不同实例通过各自的 SSE 或 Streamable HTTP 路径区分。
 
-![绑定 MCP 网站](/img/1panel/ai/mcp_website.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/ai/mcp_website.png" alt="图 3 绑定网站界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 绑定网站界面</div>
 
 >网站侧可以继续配置 HTTPS 和访问限制。修改域名、证书或反向代理规则后，应重新测试每个 MCP Server 的连接。

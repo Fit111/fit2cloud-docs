@@ -52,12 +52,14 @@ mv 1panel-migrator-linux-amd64 /usr/local/bin/1panel-migrator
 
 （3）点击执行备份，查看备份结果。
 
-![img.png](/img/1panel/installation/master_backup.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/installation/master_backup.png" alt="图 1 从节点 -> 主节点——备份应用" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 1 从节点 -> 主节点——备份应用</div>
 
 （4）打开需要升级的从节点，通过安装好的 1panel-migrator 执行升级命令 `1panel-migrator promote` 。
 
-![img.png](/img/1panel/installation/promote.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/installation/promote.png" alt="图 2 从节点 -> 主节点界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 2 从节点 -> 主节点界面</div>
 
 ## 3 主节点 -> 从节点
@@ -68,5 +70,6 @@ mv 1panel-migrator-linux-amd64 /usr/local/bin/1panel-migrator
 
 打开需要降级的主节点，通过安装好的 1panel-migrator 执行降级命令 `1panel-migrator demote`。
 
-![img.png](/img/1panel/installation/demote.png)
+<img style={{display:"block",margin:"16px auto",maxWidth:"100%"}} src="/img/1panel/installation/demote.png" alt="图 3 主节点 -> 从节点界面" />
+
 <div style={{textAlign:"center",color:"#8a8f99",fontSize:"13px",margin:"6px 0 20px"}}>图 3 主节点 -> 从节点界面</div>

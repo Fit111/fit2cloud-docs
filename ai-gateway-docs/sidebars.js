@@ -8,6 +8,11 @@ const sidebars = {
 
     // ── 更新日志 ──
     { type: "doc", id: "changelog", label: "更新日志" },
+    {
+      type: "link",
+      label: "版本说明",
+      href: "https://1panel.cn/versions.html",
+    },
 
     // ── installation：安装部署页 ──
     {
@@ -56,6 +61,16 @@ const sidebars = {
     },
 
     { type: "doc", id: "integrate_third_party", label: "接入第三方" },
+
+    // ── ops：运维指南 ──
+    {
+      type: "category",
+      label: "运维指南",
+      collapsed: false,
+      items: [
+        { type: "doc", id: "ops/system_logs", label: "查看系统日志" },
+      ],
+    },
 
     // ── faq：常见问题 ──
     {

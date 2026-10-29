@@ -29,7 +29,7 @@ tar -xf koko-.tar.gz -C /opt/koko- --strip-components 1
 ```
 
 - 安装 Node。
-- 从 [Node][node] 官方网站参考文档部署 Node.js，请根据 [环境要求](#_10)，通过命令行中判断是否安装完成。
+- 从 [Node][node] 官方网站参考文档部署 Node.js，请根据 [环境要求](#11-环境要求)，通过命令行中判断是否安装完成。
 
 ```bash
 node -v
@@ -50,7 +50,7 @@ wget http://download.jumpserver.org/public/kubectl_aliases.tar.gz -O kubectl_ali
 tar -xf kubectl_aliases.tar.gz -C /opt/kubectl-aliases
 ```
         - 安装 Go。
-        - [Go][go] 官方网站参考文档部署 golang，请根据 [环境要求](#_14)，通过命令行中判断是否安装完成：
+        - [Go][go] 官方网站参考文档部署 golang，请根据 [环境要求](#11-环境要求)，通过命令行中判断是否安装完成：
 
         ### Ubuntu 20.04
 

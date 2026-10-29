@@ -3,7 +3,7 @@ title: 1Panel 运维技能
 ---
 
 本文档介绍如何使用 `1Panel-skills` 技能包，将 1Panel 的运维能力接入 OpenClaw 等智能体平台。  
-项目仓库地址：[[https://github.com/1Panel-dev/1Panel-skills](https://github.com/1Panel-dev/1Panel-skills)](https://github.com/1Panel-dev/1Panel-skills)
+项目仓库地址：[https://github.com/1Panel-dev/1Panel-skills](https://github.com/1Panel-dev/1Panel-skills)
 
 ## 1 功能概述
 

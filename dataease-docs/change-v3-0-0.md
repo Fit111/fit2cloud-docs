@@ -48,7 +48,7 @@ X-Pack 新增【电子表格】功能模块，支持在线创建、编辑、发�
 - 支持发布 / 下线 / 恢复发布等状态管理；
 - 数据来源支持连接各类已配置数据源。
 
-![电子表格](/img/dataease/newimg/电子表格门店数据展示.png)
+![电子表格](/img/dataease/newimg/dianzibiaogemendianshujuzhanshi.png)
 
 图 1  电子表格门店数据展示
 

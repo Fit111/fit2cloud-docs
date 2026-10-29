@@ -8,11 +8,16 @@
 
 /* 外层 .navbar__item 默认带 4px 上下 padding(--ifm-navbar-item-padding-vertical),
    导致本项比相邻纯文字菜单(.navbar__link)整体下沉 4px。
-   这里只去掉垂直 padding、保留水平方向, 让 trigger 与其他项对齐。 */
+   这里去掉**全部** padding:
+   - 垂直方向: 为了和其他菜单项对齐(见上);
+   - 水平方向: 内层 trigger <a> 同样带 .navbar__link 类, 已自带 12px 左右 padding,
+     外层再留一份会让本项左右各多 12px —— 表现为「开源产品 ↔ 一体机」这类
+     **两个自定义下拉相邻时间隙是别处的两倍**(实测 58px, 其余 34px)。
+   去掉外层水平 padding 后所有相邻间隙一致, 点击区域仍由内层 <a> 的 padding 保留。 */
 .container {
   display: flex;
   align-items: center; /* 让 trigger 文字在盒子中轴垂直居中(盒子父级也已 align-items:center) */
-  padding: 0 var(--ifm-navbar-item-padding-horizontal);
+  padding: 0;
 }
 
 /* 整条: 图标在左, 名+描述在右, 一行一个产品 */
@@ -78,4 +83,19 @@
   font-size: 12px;
   color: var(--ifm-color-emphasis-600);
   white-space: nowrap;
+}
+
+/* 「NEW」角标: 供同目录 Appliance(「一体机」下拉) 复用 —— 与官网该菜单的 NEW 标记一致,
+   跟 .name 同一行, 小号圆角、红底白字。 */
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #fff;
+  background: #ff4d4f;
+  border-radius: 4px;
+  vertical-align: middle;
 }
