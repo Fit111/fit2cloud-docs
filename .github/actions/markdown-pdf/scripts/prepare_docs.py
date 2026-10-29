@@ -730,6 +730,7 @@ def write_mkdocs_config(
     nav: list[dict[str, Any]],
     toc_depth: int,
     cover_subtitle: str = '',
+    brand: str = '',
 ) -> None:
     config: dict[str, Any] = {
         'site_name': title,
@@ -767,6 +768,7 @@ def write_mkdocs_config(
                     'cover': True,
                     'cover_title': title,
                     'cover_subtitle': cover_subtitle,
+                    'brand': brand,
                     'toc_title': '目录',
                     'toc_level': toc_depth,
                     'ordered_chapter_level': 3,
@@ -896,8 +898,10 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         raise PrepareError('生成的 MkDocs 导航为空')
 
     config_path = work_dir / 'mkdocs.yml'
+    brand = re.sub(r'\s*文[档檔]\s*$', '', title).strip() or title.strip()
     write_mkdocs_config(
-        config_path, title, nav, toc_depth=args.toc_depth, cover_subtitle=args.cover_subtitle
+        config_path, title, nav, toc_depth=args.toc_depth,
+        cover_subtitle=args.cover_subtitle, brand=brand,
     )
 
     if jsx_fallback_files:
