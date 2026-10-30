@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口定义](/img/metersphere-v2/api/definition/接口定义.png)\{ width="900px" \}
+![!接口定义](/img/metersphere-v2/api/definition/接口定义.png)
 
 ## 2 接口管理
 ### 2.1 接口协议
@@ -22,7 +22,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口协议](/img/metersphere-v2/api/definition/切换接口协议.png)\{ width="900px" \}
+![!接口协议](/img/metersphere-v2/api/definition/切换接口协议.png)
 
 ### 2.2 模块树管理
 
@@ -32,7 +32,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!模块管理](/img/metersphere-v2/api/definition/模块树木操作.png)\{ width="900px" \}
+![!模块管理](/img/metersphere-v2/api/definition/模块树木操作.png)
 
 ### 2.3 接口快捷调试
 
@@ -42,8 +42,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!快捷操作](/img/metersphere-v2/api/definition/接口快捷调试.png)\{ width="900px" \}
-![!快捷调试](/img/metersphere-v2/api/definition/快捷调试01.png)\{ width="900px" \}
+![!快捷操作](/img/metersphere-v2/api/definition/接口快捷调试.png)
+![!快捷调试](/img/metersphere-v2/api/definition/快捷调试01.png)
 
 ### 2.4 快速创建接口
 
@@ -57,7 +57,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建接口](/img/metersphere-v2/api/definition/创建接口01.png)\{ width="900px" \}
+![!创建接口](/img/metersphere-v2/api/definition/创建接口01.png)
 
 :::note
 
@@ -65,7 +65,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建接口](/img/metersphere-v2/api/definition/创建接口保存.png)\{ width="900px" \}
+![!创建接口](/img/metersphere-v2/api/definition/创建接口保存.png)
 
 ## 3 API
 ### 3.1 编辑 API
@@ -77,7 +77,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关注接口](/img/metersphere-v2/api/definition/修改API点击保存.png)\{ width="900px" \}
+![!关注接口](/img/metersphere-v2/api/definition/修改API点击保存.png)
 ### 3.2 关注接口
 
 :::note
@@ -86,7 +86,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!关注接口](/img/metersphere-v2/api/definition/点击关注.png)\{ width="900px" \}
+![!关注接口](/img/metersphere-v2/api/definition/点击关注.png)
 
 ### 3.3 接口变更记录
 
@@ -96,7 +96,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!变更历史](/img/metersphere-v2/api/definition/变更记录.png)\{ width="900px" \}
+![!变更历史](/img/metersphere-v2/api/definition/变更记录.png)
 
 ### 3.4 版本管理 (X-Pack)
 
@@ -106,7 +106,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!变更历史](/img/metersphere-v2/api/definition/版本管理.png)\{ width="900px" \}
+![!变更历史](/img/metersphere-v2/api/definition/版本管理.png)
 
 ### 3.5 HTTP 请求
 
@@ -121,9 +121,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!变更历史](/img/metersphere-v2/api/definition/请求头.png)\{ width="900px" \}
+![!变更历史](/img/metersphere-v2/api/definition/请求头.png)
 
-![!变更历史](/img/metersphere-v2/api/definition/mock_jmeter函数.png)\{ width="900px" \}
+![!变更历史](/img/metersphere-v2/api/definition/mock_jmeter函数.png)
 
 :::note
 
@@ -132,8 +132,8 @@ QUERY 参数是在接口地址栏中跟在？后面的参数，如 updateapi?id=
 
 :::
 
-![!QUERY参数](/img/metersphere-v2/api/query参数.png)\{ width="900px" \}
-![!QUERY参数](/img/metersphere-v2/api/批量添加参数.png)\{ width="900px" \}
+![!QUERY参数](/img/metersphere-v2/api/query参数.png)
+![!QUERY参数](/img/metersphere-v2/api/批量添加参数.png)
 
 :::note
 
@@ -142,7 +142,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!REST参数](/img/metersphere-v2/api/REST参数.png)\{ width="900px" \}
+![!REST参数](/img/metersphere-v2/api/REST参数.png)
 
 :::note
 
@@ -152,7 +152,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!HTTP请求体](/img/metersphere-v2/api/frxw.png)\{ width="900px" \}
+![!HTTP请求体](/img/metersphere-v2/api/frxw.png)
 
 :::note
 
@@ -160,8 +160,8 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!HTTP请求体](/img/metersphere-v2/api/json1.png)\{ width="900px" \}
-![!HTTP请求体](/img/metersphere-v2/api/json2.png)\{ width="900px" \}
+![!HTTP请求体](/img/metersphere-v2/api/json1.png)
+![!HTTP请求体](/img/metersphere-v2/api/json2.png)
 
 :::note
 
@@ -170,7 +170,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!认证配置](/img/metersphere-v2/api/认证配置.png)\{ width="900px" \}
+![!认证配置](/img/metersphere-v2/api/认证配置.png)
 
 :::note
 
@@ -179,7 +179,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!其他设置](/img/metersphere-v2/api/其他设置.png)\{ width="900px" \}
+![!其他设置](/img/metersphere-v2/api/其他设置.png)
 
 ### 3.6 TCP 请求
 
@@ -190,7 +190,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!TCP请求参数](/img/metersphere-v2/api/TCP请求参数.png)\{ width="900px" \}
+![!TCP请求参数](/img/metersphere-v2/api/TCP请求参数.png)
 
 :::note
 
@@ -199,7 +199,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!TCP请求参数](/img/metersphere-v2/api/tcpxml.png)\{ width="900px" \}
+![!TCP请求参数](/img/metersphere-v2/api/tcpxml.png)
 
 :::note
 
@@ -208,7 +208,7 @@ REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/\{id
 
 :::
 
-![!TCP请求参数](/img/metersphere-v2/api/tcp其他设置1.png)\{ width="900px" \}
+![!TCP请求参数](/img/metersphere-v2/api/tcp其他设置1.png)
 ### 3.7 SQL 请求
 
 :::note
@@ -219,7 +219,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!SQL请求参数](/img/metersphere-v2/api/sql请求.png)\{ width="900px" \}
+![!SQL请求参数](/img/metersphere-v2/api/sql请求.png)
 
 ### 3.8 DUBBO 请求
 
@@ -230,7 +230,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!ConfigCenter](/img/metersphere-v2/api/interface.png)\{ width="900px" \}
+![!ConfigCenter](/img/metersphere-v2/api/interface.png)
 
 :::note
 
@@ -239,7 +239,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!ConfigCenter](/img/metersphere-v2/api/ConfigCenter.png)\{ width="900px" \}
+![!ConfigCenter](/img/metersphere-v2/api/ConfigCenter.png)
 
 :::note
 
@@ -248,7 +248,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!RegistryCenter](/img/metersphere-v2/api/registrycenter.png)\{ width="900px" \}
+![!RegistryCenter](/img/metersphere-v2/api/registrycenter.png)
 
 :::note
 
@@ -257,7 +257,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!Consumer&Service](/img/metersphere-v2/api/comsumers.png)\{ width="900px" \}
+![!Consumer&Service](/img/metersphere-v2/api/comsumers.png)
 
 :::note
 
@@ -266,7 +266,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!Args](/img/metersphere-v2/api/Args.png)\{ width="900px" \}
+![!Args](/img/metersphere-v2/api/Args.png)
 
 :::note
 
@@ -275,7 +275,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!AttachmentArgs](/img/metersphere-v2/api/attachment.png)\{ width="900px" \}
+![!AttachmentArgs](/img/metersphere-v2/api/attachment.png)
 
 ### 3.9 依赖关系设置
 
@@ -285,7 +285,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!依赖关系](/img/metersphere-v2/api/依赖关系.png)\{ width="900px" \}
+![!依赖关系](/img/metersphere-v2/api/依赖关系.png)
 ### 3.10 API 列表功能
 
 :::note
@@ -301,7 +301,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!API列表](/img/metersphere-v2/api/接口定义列表操作.png)\{ width="900px" \}
+![!API列表](/img/metersphere-v2/api/接口定义列表操作.png)
 
 ## 4 TEST
 
@@ -320,7 +320,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!测试数据](/img/metersphere-v2/api/生成测试数据.png)\{ width="900px" \}
+![!测试数据](/img/metersphere-v2/api/生成测试数据.png)
 
 :::note
 
@@ -328,7 +328,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!测试数据](/img/metersphere-v2/api/设置生成规则.png)\{ width="900px" \}
+![!测试数据](/img/metersphere-v2/api/设置生成规则.png)
 
 ### 4.2 针对单个接口发起测试
 
@@ -339,7 +339,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!测试](/img/metersphere-v2/api/点击测试.png)\{ width="900px" \}
+![!测试](/img/metersphere-v2/api/点击测试.png)
 
 ### 4.3 其他功能
 
@@ -349,7 +349,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!其他管理功能](/img/metersphere-v2/api/test更多.png)\{ width="900px" \}
+![!其他管理功能](/img/metersphere-v2/api/test更多.png)
 
 :::note
 
@@ -357,7 +357,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!加载用例](/img/metersphere-v2/api/查看用例.png)\{ width="900px" \}
+![!加载用例](/img/metersphere-v2/api/查看用例.png)
 
 :::note
 
@@ -365,7 +365,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!另存为新用例](/img/metersphere-v2/api/存为新用例.png)\{ width="900px" \}
+![!另存为新用例](/img/metersphere-v2/api/存为新用例.png)
 
 :::note
 
@@ -373,7 +373,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!更新接口](/img/metersphere-v2/api/更新接口.png)\{ width="900px" \}
+![!更新接口](/img/metersphere-v2/api/更新接口.png)
 
 :::note
 
@@ -381,7 +381,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!另存为新的接口](/img/metersphere-v2/api/存为新接口.png)\{ width="900px" \}
+![!另存为新的接口](/img/metersphere-v2/api/存为新接口.png)
 
 ## 5 CASE
 
@@ -407,7 +407,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!CASE列表功能](/img/metersphere-v2/api/case列表功能.png)\{ width="900px" \}
+![!CASE列表功能](/img/metersphere-v2/api/case列表功能.png)
 
 ### 5.2 批量操作
 
@@ -422,7 +422,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!CASE批量操作](/img/metersphere-v2/api/CASE批量操作.png)\{ width="900px" \}
+![!CASE批量操作](/img/metersphere-v2/api/CASE批量操作.png)
 
 ### 5.3 新建接口用例
 
@@ -432,7 +432,7 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!CASE添加](/img/metersphere-v2/api/添加用例按钮.png)\{ width="900px" \}
+![!CASE添加](/img/metersphere-v2/api/添加用例按钮.png)
 
 ### 5.4 搜索
 
@@ -442,8 +442,8 @@ SQL 请求支持配置多个数据源，选择运行环境、数据源，编写s
 
 :::
 
-![!CASE搜索](/img/metersphere-v2/api/搜索操作.png)\{ width="900px" \}
-![!CASE搜索](/img/metersphere-v2/api/高级搜索.png)\{ width="900px" \}
+![!CASE搜索](/img/metersphere-v2/api/搜索操作.png)
+![!CASE搜索](/img/metersphere-v2/api/高级搜索.png)
 
 ## 6 MOCK
 
@@ -461,7 +461,7 @@ MeterSphere 提供的 Mock 功能可以根据用户输入的请求参数、返�
 
 :::
 
-![!新增Mock](/img/metersphere-v2/api/添加mock.png)\{ width="900px" \}
+![!新增Mock](/img/metersphere-v2/api/添加mock.png)
 
 :::note
 
@@ -469,7 +469,7 @@ MeterSphere 提供的 Mock 功能可以根据用户输入的请求参数、返�
 
 :::
 
-![!触发条件设置](/img/metersphere-v2/api/设置条件.png)\{ width="900px" \}
+![!触发条件设置](/img/metersphere-v2/api/设置条件.png)
 
 :::note
 
@@ -478,7 +478,7 @@ Mock 服务触发条件设置规则匹配及逻辑判断:<br />
 
 :::
 
-![!触发条件设置](/img/metersphere-v2/api/匹配条件.png)\{ width="900px" \}
+![!触发条件设置](/img/metersphere-v2/api/匹配条件.png)
 
 :::note
 
@@ -486,7 +486,7 @@ Mock 服务触发条件设置规则匹配及逻辑判断:<br />
 
 :::
 
-![!触发条件设置](/img/metersphere-v2/api/后置脚本.png)\{ width="900px" \}
+![!触发条件设置](/img/metersphere-v2/api/后置脚本.png)
 
 :::note
 
@@ -494,7 +494,7 @@ Mock 服务触发条件设置规则匹配及逻辑判断:<br />
 
 :::
 
-![!匹配触发条件](/img/metersphere-v2/api/mock执行.png)\{ width="900px" \}
+![!匹配触发条件](/img/metersphere-v2/api/mock执行.png)
 
 ### 6.2 TCP Mock设置
 
@@ -504,7 +504,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!开启TCP MOCK服务](/img/metersphere-v2/api/开启TCPMOCk.png)\{ width="900px" \}
+![!开启TCP MOCK服务](/img/metersphere-v2/api/开启TCPMOCk.png)
 
 ### 6.3 MOCK 列表功能
 
@@ -514,7 +514,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!MOCK管理功能](/img/metersphere-v2/api/MOCK管理功能.png)\{ width="900px" \}
+![!MOCK管理功能](/img/metersphere-v2/api/MOCK管理功能.png)
 
 ## 7 定时同步
 
@@ -524,7 +524,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!定时同步](/img/metersphere-v2/api/添加定时任务.png)\{ width="900px" \}
+![!定时同步](/img/metersphere-v2/api/添加定时任务.png)
 
 :::note
 
@@ -532,7 +532,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!定时同步](/img/metersphere-v2/api/设置定时任务.png)\{ width="900px" \}
+![!定时同步](/img/metersphere-v2/api/设置定时任务.png)
 
 :::note
 
@@ -540,7 +540,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!定时同步](/img/metersphere-v2/api/设置同步通知.png)\{ width="900px" \}
+![!定时同步](/img/metersphere-v2/api/设置同步通知.png)
 
 :::note
 
@@ -548,7 +548,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!定时同步](/img/metersphere-v2/api/定时任务操作.png)\{ width="900px" \}
+![!定时同步](/img/metersphere-v2/api/定时任务操作.png)
 
 ##  8 导入接口
 
@@ -558,9 +558,9 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!接口导入](/img/metersphere-v2/api/导入接口.png)\{ width="900px" \}
+![!接口导入](/img/metersphere-v2/api/导入接口.png)
 
-![!接口导入](/img/metersphere-v2/api/导入类型.png)\{ width="900px" \}
+![!接口导入](/img/metersphere-v2/api/导入类型.png)
 
 :::note
 
@@ -568,7 +568,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!接口导入](/img/metersphere-v2/api/导入swagger.png)\{ width="900px" \}
+![!接口导入](/img/metersphere-v2/api/导入swagger.png)
 
 ## 9 导出接口定义
 
@@ -578,7 +578,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!接口导出](/img/metersphere-v2/api/接口导出文件.png)\{ width="900px" \}
+![!接口导出](/img/metersphere-v2/api/接口导出文件.png)
 
 ## 10 批量操作
 
@@ -591,12 +591,12 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 - 批量移动：批量将接口移动到其他模块 <br />
 - 批量复制：批量将接口复制到其他模块 <br />
 - 复制版本数据(X-Pack)：随着版本的迭代，同一接口，当新版接口参数变更需要创建对应新版本的接口 CASE 和 Mock 数据。使用此功能可批量将历史版本的 CASE 和 Mock 数据快速复制到新版本，方便快速维护接口的用例数据。<br />
-  ![!API列表](/img/metersphere-v2/api/复制版本信息.png)\{ width="900px" \}
+  ![!API列表](/img/metersphere-v2/api/复制版本信息.png)
 - 生成依赖关系：批量接口之间的联系生成依赖关系拓扑图 <br />
 
 :::
 
-![!API列表](/img/metersphere-v2/api/接口定义批量操作.png)\{ width="900px" \}
+![!API列表](/img/metersphere-v2/api/接口定义批量操作.png)
 
 ## 11 搜索
 
@@ -606,8 +606,8 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!API列表](/img/metersphere-v2/api/接口定义搜索.png)\{ width="900px" \}
-![!API列表](/img/metersphere-v2/api/接口定义高级搜索.png)\{ width="900px" \}
+![!API列表](/img/metersphere-v2/api/接口定义搜索.png)
+![!API列表](/img/metersphere-v2/api/接口定义高级搜索.png)
 
 ## 12 回收站
 
@@ -617,7 +617,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!回收站](/img/metersphere-v2/api/回收站.png)\{ width="900px" \}
+![!回收站](/img/metersphere-v2/api/回收站.png)
 
 :::note
 
@@ -625,7 +625,7 @@ TCP Mock 服务需在【项目设置-应用管理-接口测试】中开启 TCP M
 
 :::
 
-![!回收站](/img/metersphere-v2/api/回收站批量操作的.png)\{ width="900px" \}
+![!回收站](/img/metersphere-v2/api/回收站批量操作的.png)
 
 ## 13 文档管理
 
@@ -637,7 +637,7 @@ API 接口支持以文档形式展示接口定义详细信息，页面右侧展�
 
 :::
 
-![!文档](/img/metersphere-v2/api/接口定义文档.png)\{ width="900px" \}
+![!文档](/img/metersphere-v2/api/接口定义文档.png)
 
 ## 14 版本管理 (X-Pack)
 
@@ -647,4 +647,4 @@ API 接口支持以文档形式展示接口定义详细信息，页面右侧展�
 
 :::
 
-![!变更历史](/img/metersphere-v2/api/definition/接口定义版本管理.png)\{ width="900px" \}
+![!变更历史](/img/metersphere-v2/api/definition/接口定义版本管理.png)

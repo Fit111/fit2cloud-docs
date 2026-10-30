@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!消息通知](/img/metersphere-v2/system_management/消息通知首页.png)\{ width="900px" \}
+![!消息通知](/img/metersphere-v2/system_management/消息通知首页.png)
 
 :::note
 
@@ -20,7 +20,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!消息设置-设置](/img/metersphere-v2/system_management/消息设置-设置.png)\{ width="900px" \}
+![!消息设置-设置](/img/metersphere-v2/system_management/消息设置-设置.png)
 
 :::note
 
@@ -28,7 +28,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试计划-新建](/img/metersphere-v2/system_management/测试计划-新建.png)\{ width="900px" \}
+![!测试计划-新建](/img/metersphere-v2/system_management/测试计划-新建.png)
 
 :::note
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口-首页](/img/metersphere-v2/system_management/接口-首页.png)\{ width="900px" \}
+![!接口-首页](/img/metersphere-v2/system_management/接口-首页.png)
 
 :::note
 
@@ -45,7 +45,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口-新建](/img/metersphere-v2/system_management/接口-新建.png)\{ width="900px" \}
+![!接口-新建](/img/metersphere-v2/system_management/接口-新建.png)
 
 :::note
 
@@ -54,7 +54,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试任务通知-首页](/img/metersphere-v2/system_management/性能测试任务通知-首页.png)\{ width="900px" \}
+![!性能测试任务通知-首页](/img/metersphere-v2/system_management/性能测试任务通知-首页.png)
 
 :::note
 
@@ -62,7 +62,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试任务通知-新建](/img/metersphere-v2/system_management/性能测试任务通知-新建.png)\{ width="900px" \}
+![!性能测试任务通知-新建](/img/metersphere-v2/system_management/性能测试任务通知-新建.png)
 
 :::note
 
@@ -71,7 +71,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!Jenkins任务通知-首页](/img/metersphere-v2/system_management/Jenkins任务通知-首页.png)\{ width="900px" \}
+![!Jenkins任务通知-首页](/img/metersphere-v2/system_management/Jenkins任务通知-首页.png)
 
 :::note
 
@@ -79,7 +79,7 @@ Jenkins 任务通知自动化通过 Jenkins 持续部署来启动 MeterSphere �
 
 :::
 
-![!Jenkins任务通知-新建](/img/metersphere-v2/system_management/Jenkins任务通知-新建.png)\{ width="900px" \}
+![!Jenkins任务通知-新建](/img/metersphere-v2/system_management/Jenkins任务通知-新建.png)
 
 ## 2 自定义消息模板 (X-Pack)
 
@@ -89,6 +89,6 @@ Jenkins 任务通知自动化通过 Jenkins 持续部署来启动 MeterSphere �
 
 :::
 
-![!自定义模板](/img/metersphere-v2/system_management/自定义消息模板.png)\{ width="900px" \}
+![!自定义模板](/img/metersphere-v2/system_management/自定义消息模板.png)
 
-![!自定义模板](/img/metersphere-v2/system_management/自定义模板页面.png)\{ width="900px" \}
+![!自定义模板](/img/metersphere-v2/system_management/自定义模板页面.png)

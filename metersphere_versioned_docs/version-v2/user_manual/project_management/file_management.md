@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/上传jar包.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/上传jar包.png)
 
 :::note
 
@@ -17,7 +17,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/上传文件大小调整.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/上传文件大小调整.png)
 
 ## 1 模块管理
 
@@ -27,7 +27,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/模块.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/模块.png)
 
 ## 2.上传文件
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/文件上传.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/文件上传.png)
 
 :::note
 
@@ -45,7 +45,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/开启开关.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/开启开关.png)
 
 :::note
 
@@ -53,7 +53,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/性能测试加载的文件.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/性能测试加载的文件.png)
 
 ## 3 查看文件
 
@@ -63,7 +63,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/文件查看.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/文件查看.png)
 
 :::note
 
@@ -71,7 +71,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/切换文件.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/切换文件.png)
 
 :::note
 
@@ -79,7 +79,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/文件重新上传.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/文件重新上传.png)
 
 ## 4 文件下载
 
@@ -89,7 +89,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/下载文件.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/下载文件.png)
 
 ## 5 文件删除
 
@@ -99,7 +99,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/文件删除.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/文件删除.png)
 
 ## 6 第三方仓库
 
@@ -109,7 +109,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/第三方仓库.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/第三方仓库.png)
 
 :::note
 
@@ -117,7 +117,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/第三方仓库上传.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/第三方仓库上传.png)
 
 :::note
 
@@ -125,7 +125,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/第三方仓库文件.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/第三方仓库文件.png)
 
 :::note
 
@@ -133,4 +133,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!项目设置](/img/metersphere-v2/project_management/第三方仓库其他.png)\{ width="900px" \}
+![!项目设置](/img/metersphere-v2/project_management/第三方仓库其他.png)

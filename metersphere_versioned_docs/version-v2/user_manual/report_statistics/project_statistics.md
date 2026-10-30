@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报表统计_首页](/img/metersphere-v2/report_statistics/报表统计_首页.png)\{ width="900px" \}
+![!报表统计_首页](/img/metersphere-v2/report_statistics/报表统计_首页.png)
 
 ## 1 测试用例统计
 
@@ -19,9 +19,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试用例统计](/img/metersphere-v2/report_statistics/测试用例统计.png)\{ width="900px" \}
+![!测试用例统计](/img/metersphere-v2/report_statistics/测试用例统计.png)
 
-![!测试用例统计](/img/metersphere-v2/report_statistics/测试用例统计_1.png)\{ width="900px" \}
+![!测试用例统计](/img/metersphere-v2/report_statistics/测试用例统计_1.png)
 
 - 创建新报表
 
@@ -39,7 +39,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!水平轴系列](/img/metersphere-v2/report_statistics/水平轴系列.png)\{ width="900px" \}
+![!水平轴系列](/img/metersphere-v2/report_statistics/水平轴系列.png)
 
 - 纵向轴系列
 
@@ -49,7 +49,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!纵向轴系列](/img/metersphere-v2/report_statistics/纵向轴系列.png)\{ width="900px" \}
+![!纵向轴系列](/img/metersphere-v2/report_statistics/纵向轴系列.png)
 
 - 创建时间
 
@@ -59,7 +59,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建时间](/img/metersphere-v2/report_statistics/创建时间.png)\{ width="900px" \}
+![!创建时间](/img/metersphere-v2/report_statistics/创建时间.png)
 
 - 更多选项
 
@@ -69,7 +69,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!更多选项](/img/metersphere-v2/report_statistics/更多选项.png)\{ width="900px" \}
+![!更多选项](/img/metersphere-v2/report_statistics/更多选项.png)
 
 - 保存
 
@@ -79,7 +79,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!保存](/img/metersphere-v2/report_statistics/保存.png)\{ width="900px" \}
+![!保存](/img/metersphere-v2/report_statistics/保存.png)
 
 - 另存为
 
@@ -89,7 +89,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!保存](/img/metersphere-v2/report_statistics/另存为.png)\{ width="900px" \}
+![!保存](/img/metersphere-v2/report_statistics/另存为.png)
 
 - 全部报表
 
@@ -99,7 +99,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!全部报表](/img/metersphere-v2/report_statistics/全部报表.png)\{ width="900px" \}
+![!全部报表](/img/metersphere-v2/report_statistics/全部报表.png)
 
 - 我的报表
 
@@ -109,7 +109,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!我的报表](/img/metersphere-v2/report_statistics/我的报表.png)\{ width="900px" \}
+![!我的报表](/img/metersphere-v2/report_statistics/我的报表.png)
 
 - 重命名报表
 
@@ -119,7 +119,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑](/img/metersphere-v2/report_statistics/编辑.png)\{ width="900px" \}
+![!编辑](/img/metersphere-v2/report_statistics/编辑.png)
 
 - 删除
 
@@ -129,7 +129,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑](/img/metersphere-v2/report_statistics/删除.png)\{ width="900px" \}
+![!编辑](/img/metersphere-v2/report_statistics/删除.png)
 
 - 导出
 
@@ -139,4 +139,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导出](/img/metersphere-v2/report_statistics/导出.png)\{ width="900px" \}
+![!导出](/img/metersphere-v2/report_statistics/导出.png)

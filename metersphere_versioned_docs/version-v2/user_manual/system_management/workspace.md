@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![工作空间](/img/metersphere-v2/system_management/工作空间.png)\{ width="900px" \}
+![工作空间](/img/metersphere-v2/system_management/工作空间.png)
 
 :::note
 
@@ -20,7 +20,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加成员](/img/metersphere-v2/system_management/添加成员.png)\{ width="900px" \}
+![!添加成员](/img/metersphere-v2/system_management/添加成员.png)
 
 :::note[参数说明]
 
@@ -37,7 +37,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑成员](/img/metersphere-v2/system_management/编辑成员.png)\{ width="900px" \}
+![!编辑成员](/img/metersphere-v2/system_management/编辑成员.png)
 
 :::note
 
@@ -46,7 +46,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![查询成员用户](/img/metersphere-v2/system_management/查询成员用户.png)\{ width="900px" \}
+![查询成员用户](/img/metersphere-v2/system_management/查询成员用户.png)
 
 ## 2 服务集成
 
@@ -66,7 +66,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!服务集成](/img/metersphere-v2/system_management/服务集成首页.png)\{ width="900px" \}
+![!服务集成](/img/metersphere-v2/system_management/服务集成首页.png)
 
 ### 2.1 与TAPD集成
 
@@ -76,7 +76,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-配置](/img/metersphere-v2/system_management/TAPD-配置.png)\{ width="900px" \}
+![!TAPD-配置](/img/metersphere-v2/system_management/TAPD-配置.png)
 
 :::note[参数说明]
 
@@ -91,7 +91,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-马上关联项目](/img/metersphere-v2/system_management/TAPD-马上关联项目.png)\{ width="900px" \}
+![!TAPD-马上关联项目](/img/metersphere-v2/system_management/TAPD-马上关联项目.png)
 
 :::note
 
@@ -99,7 +99,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-编辑信息](/img/metersphere-v2/system_management/TAPD-编辑信息.png)\{ width="900px" \}
+![!TAPD-编辑信息](/img/metersphere-v2/system_management/TAPD-编辑信息.png)
 
 :::note
 
@@ -107,7 +107,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-默认模板](/img/metersphere-v2/system_management/TAPD-默认模板.png)\{ width="900px" \}
+![!TAPD-默认模板](/img/metersphere-v2/system_management/TAPD-默认模板.png)
 
 :::note
 
@@ -116,7 +116,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-马上添加](/img/metersphere-v2/system_management/TAPD-马上添加.png)\{ width="900px" \}
+![!TAPD-马上添加](/img/metersphere-v2/system_management/TAPD-马上添加.png)
 
 :::note
 
@@ -125,7 +125,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-第三方平台账号](/img/metersphere-v2/system_management/TAPD-第三方平台账号.png)\{ width="900px" \}
+![!TAPD-第三方平台账号](/img/metersphere-v2/system_management/TAPD-第三方平台账号.png)
 
 :::note
 
@@ -133,7 +133,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-昵称](/img/metersphere-v2/system_management/TAPD-昵称.png)\{ width="900px" \}
+![!TAPD-昵称](/img/metersphere-v2/system_management/TAPD-昵称.png)
 
 :::note
 
@@ -141,7 +141,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-关联需求](/img/metersphere-v2/system_management/关联需求.png)\{ width="900px" \}
+![!TAPD-关联需求](/img/metersphere-v2/system_management/关联需求.png)
 
 :::note
 
@@ -149,7 +149,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-同步需求](/img/metersphere-v2/system_management/同步缺陷_TAPD.png)\{ width="900px" \}
+![!TAPD-同步需求](/img/metersphere-v2/system_management/同步缺陷_TAPD.png)
 
 :::note
 
@@ -157,7 +157,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!TAPD-查询需求](/img/metersphere-v2/system_management/TAPD-查询需求.png)\{ width="900px" \}
+![!TAPD-查询需求](/img/metersphere-v2/system_management/TAPD-查询需求.png)
 
 ### 2.2 与JIRA集成
 
@@ -175,7 +175,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!填写jira](/img/metersphere-v2/system_management/填写jira.png)\{ width="900px" \}
+![!填写jira](/img/metersphere-v2/system_management/填写jira.png)
 
 :::note[注意]
 
@@ -183,7 +183,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!备注](/img/metersphere-v2/system_management/备注.png)\{ width="900px" \}
+![!备注](/img/metersphere-v2/system_management/备注.png)
 
 :::note
 
@@ -198,7 +198,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!jira关联](/img/metersphere-v2/system_management/jira关联.png)\{ width="900px" \}
+![!jira关联](/img/metersphere-v2/system_management/jira关联.png)
 
 :::note
 
@@ -206,7 +206,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!jira关联项目](/img/metersphere-v2/system_management/jira关联项目.png)\{ width="900px" \}
+![!jira关联项目](/img/metersphere-v2/system_management/jira关联项目.png)
 
 :::note[参数说明]
 
@@ -217,7 +217,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!jira项目](/img/metersphere-v2/system_management/jira项目.png)\{ width="900px" \}
+![!jira项目](/img/metersphere-v2/system_management/jira项目.png)
 
 :::note
 
@@ -226,7 +226,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!jira关联第三方帐号](/img/metersphere-v2/system_management/jira关联第三方帐号.png)\{ width="900px" \}
+![!jira关联第三方帐号](/img/metersphere-v2/system_management/jira关联第三方帐号.png)
 
 :::note
 
@@ -234,7 +234,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!设置第三方信息](/img/metersphere-v2/system_management/设置第三方信息.png)\{ width="900px" \}
+![!设置第三方信息](/img/metersphere-v2/system_management/设置第三方信息.png)
 
 :::note
 
@@ -242,9 +242,9 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!关联需求](/img/metersphere-v2/system_management/关联需求.png)\{ width="900px" \}
+![!关联需求](/img/metersphere-v2/system_management/关联需求.png)
 
-![!同步缺陷](/img/metersphere-v2/system_management/同步缺陷_Jira.png)\{ width="900px" \}
+![!同步缺陷](/img/metersphere-v2/system_management/同步缺陷_Jira.png)
 
 ### 2.3 与禅道集成
 
@@ -254,7 +254,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-服务集成配置](/img/metersphere-v2/system_management/禅道-服务集成配置.png)\{ width="900px" \}
+![!禅道-服务集成配置](/img/metersphere-v2/system_management/禅道-服务集成配置.png)
 
 :::note
 
@@ -277,7 +277,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-马上关联项目](/img/metersphere-v2/system_management/禅道-马上关联项目.png)\{ width="900px" \}
+![!禅道-马上关联项目](/img/metersphere-v2/system_management/禅道-马上关联项目.png)
 
 :::note
 
@@ -285,7 +285,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-禅道项目ID](/img/metersphere-v2/system_management/禅道-禅道项目ID.png)\{ width="900px" \}
+![!禅道-禅道项目ID](/img/metersphere-v2/system_management/禅道-禅道项目ID.png)
 
 :::note[参数说明]
 
@@ -300,7 +300,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-马上添加](/img/metersphere-v2/system_management/禅道-马上添加.png)\{ width="900px" \}
+![!禅道-马上添加](/img/metersphere-v2/system_management/禅道-马上添加.png)
 
 :::note
 
@@ -309,7 +309,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-第三方平台账号](/img/metersphere-v2/system_management/禅道-第三方平台账号.png)\{ width="900px" \}
+![!禅道-第三方平台账号](/img/metersphere-v2/system_management/禅道-第三方平台账号.png)
 
 :::note
 
@@ -317,7 +317,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-相关需求](/img/metersphere-v2/system_management/关联需求.png)\{ width="900px" \}
+![!禅道-相关需求](/img/metersphere-v2/system_management/关联需求.png)
 
 :::note
 
@@ -325,7 +325,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-同步需求](/img/metersphere-v2/system_management/同步缺陷_禅道.png)\{ width="900px" \}
+![!禅道-同步需求](/img/metersphere-v2/system_management/同步缺陷_禅道.png)
 
 ### 2.4 与Azure Devops集成
 
@@ -336,7 +336,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-马上关联项目](/img/metersphere-v2/system_management/Azure配置项目.png)\{ width="900px" \}
+![!禅道-马上关联项目](/img/metersphere-v2/system_management/Azure配置项目.png)
 
 :::note
 
@@ -345,7 +345,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-马上关联项目](/img/metersphere-v2/system_management/Azure-马上关联项目.png)\{ width="900px" \}
+![!禅道-马上关联项目](/img/metersphere-v2/system_management/Azure-马上关联项目.png)
 
 :::note
 
@@ -353,7 +353,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-禅道项目ID](/img/metersphere-v2/system_management/Azure-Azure项目ID.png)\{ width="900px" \}
+![!禅道-禅道项目ID](/img/metersphere-v2/system_management/Azure-Azure项目ID.png)
 
 :::note
 
@@ -362,7 +362,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-马上添加](/img/metersphere-v2/system_management/Azure-马上添加.png)\{ width="900px" \}
+![!禅道-马上添加](/img/metersphere-v2/system_management/Azure-马上添加.png)
 
 :::note
 
@@ -370,7 +370,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-第三方平台账号](/img/metersphere-v2/system_management/Azure-第三方平台账号.png)\{ width="900px" \}
+![!禅道-第三方平台账号](/img/metersphere-v2/system_management/Azure-第三方平台账号.png)
 
 :::note
 
@@ -378,7 +378,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-相关需求](/img/metersphere-v2/system_management/Azure-关联需求.png)\{ width="900px" \}
+![!禅道-相关需求](/img/metersphere-v2/system_management/Azure-关联需求.png)
 
 :::note
 
@@ -386,7 +386,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!禅道-同步需求](/img/metersphere-v2/system_management/同步缺陷_Azure.png)\{ width="900px" \}
+![!禅道-同步需求](/img/metersphere-v2/system_management/同步缺陷_Azure.png)
 
 ## 3 项目管理
 
@@ -404,7 +404,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/项目管理创建环境.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/项目管理创建环境.png)
 
 :::note
 
@@ -412,7 +412,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/项目管理填写项目内容.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/项目管理填写项目内容.png)
 
 :::note[参数说明]
 
@@ -429,7 +429,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/创建项目JIRA平台.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/创建项目JIRA平台.png)
 
 :::note
 
@@ -438,7 +438,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/项目管理编辑.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/项目管理编辑.png)
 
 :::note
 
@@ -447,7 +447,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/项目管理删除.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/项目管理删除.png)
 
 :::note
 
@@ -456,7 +456,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建项目](/img/metersphere-v2/system_management/项目管理环境.png)\{ width="900px" \}
+![!创建项目](/img/metersphere-v2/system_management/项目管理环境.png)
 
 ## 4 配额管理 (X-Pack)
 
@@ -466,9 +466,9 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/配额管理编辑.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/配额管理编辑.png)
 
-![!配额管理](/img/metersphere-v2/system_management/配额管理默认配额.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/配额管理默认配额.png)
 
 :::note
 
@@ -476,7 +476,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/单个项目配额管理.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/单个项目配额管理.png)
 
 :::note
 
@@ -484,7 +484,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!配额管理](/img/metersphere-v2/system_management/配额管理删除.png)\{ width="900px" \}
+![!配额管理](/img/metersphere-v2/system_management/配额管理删除.png)
 
 ## 5 环境管理
 
@@ -504,7 +504,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/创建环境.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/创建环境.png)
 
 :::note
 
@@ -535,7 +535,7 @@ v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_通用配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_通用配置.png)
 
 :::note
 
@@ -543,7 +543,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_通用配置_1.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_通用配置_1.png)
 
 :::note
 
@@ -552,7 +552,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置.png)
 
 :::note
 
@@ -560,7 +560,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置_1.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置_1.png)
 
 :::note
 
@@ -568,7 +568,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置_2.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_HTTP配置_2.png)
 
 :::note
 
@@ -577,7 +577,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_数据库配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_数据库配置.png)
 
 :::note
 
@@ -585,7 +585,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_数据库配置_1.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_数据库配置_1.png)
 
 :::note
 
@@ -594,7 +594,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_TCP配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_TCP配置.png)
 
 :::note
 
@@ -603,7 +603,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_证书配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_证书配置.png)
 
 :::note
 
@@ -612,7 +612,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本.png)
 
 :::note
 
@@ -620,7 +620,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本_1.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本_1.png)
 
 :::note
 
@@ -628,7 +628,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本_2.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局前置脚本_2.png)
 
 :::note
 
@@ -644,7 +644,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局认证配置.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局认证配置.png)
 
 :::note
 
@@ -653,7 +653,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局断言.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局断言.png)
 
 :::note
 
@@ -661,7 +661,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!创建环境](/img/metersphere-v2/system_management/环境设置_全局断言_1.png)\{ width="900px" \}
+![!创建环境](/img/metersphere-v2/system_management/环境设置_全局断言_1.png)
 
 :::note
 
@@ -670,7 +670,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!导入环境](/img/metersphere-v2/system_management/导入环境.png)\{ width="900px" \}
+![!导入环境](/img/metersphere-v2/system_management/导入环境.png)
 
 :::note
 
@@ -685,7 +685,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!导出环境](/img/metersphere-v2/system_management/导出环境.png)\{ width="900px" \}
+![!导出环境](/img/metersphere-v2/system_management/导出环境.png)
 
 :::note
 
@@ -694,7 +694,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!编辑环境](/img/metersphere-v2/system_management/编辑环境.png)\{ width="900px" \}
+![!编辑环境](/img/metersphere-v2/system_management/编辑环境.png)
 
 :::note
 
@@ -703,7 +703,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!复制环境](/img/metersphere-v2/system_management/复制环境.png)\{ width="900px" \}
+![!复制环境](/img/metersphere-v2/system_management/复制环境.png)
 
 :::note
 
@@ -712,7 +712,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 :::
 
-![!删除环境](/img/metersphere-v2/system_management/删除环境.png)\{ width="900px" \}
+![!删除环境](/img/metersphere-v2/system_management/删除环境.png)
 
 ### 5.2 环境组
 
@@ -724,7 +724,7 @@ MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动�
 
 :::
 
-![!创建环境组](/img/metersphere-v2/system_management/创建环境组.png)\{ width="900px" \}
+![!创建环境组](/img/metersphere-v2/system_management/创建环境组.png)
 
 :::note
 
@@ -733,7 +733,7 @@ MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动�
 
 :::
 
-![!编辑环境组](/img/metersphere-v2/system_management/编辑环境组.png)\{ width="900px" \}
+![!编辑环境组](/img/metersphere-v2/system_management/编辑环境组.png)
 
 :::note
 
@@ -742,7 +742,7 @@ MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动�
 
 :::
 
-![!复制环境组](/img/metersphere-v2/system_management/复制环境组.png)\{ width="900px" \}
+![!复制环境组](/img/metersphere-v2/system_management/复制环境组.png)
 
 :::note
 
@@ -751,7 +751,7 @@ MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动�
 
 :::
 
-![!删除环境组](/img/metersphere-v2/system_management/删除环境组.png)\{ width="900px" \}
+![!删除环境组](/img/metersphere-v2/system_management/删除环境组.png)
 
 ## 6 操作日志
 
@@ -761,4 +761,4 @@ MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动�
 
 :::
 
-![操作日志](/img/metersphere-v2/system_management/操作日志.png)\{ width="900px" \}
+![操作日志](/img/metersphere-v2/system_management/操作日志.png)

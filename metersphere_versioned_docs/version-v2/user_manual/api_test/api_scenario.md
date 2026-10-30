@@ -20,8 +20,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导入接口](/img/metersphere-v2/api/接口导入lb.png)\{ width="900px" \}
-![!导入接口](/img/metersphere-v2/api/导入选择api.png)\{ width="900px" \}
+![!导入接口](/img/metersphere-v2/api/接口导入lb.png)
+![!导入接口](/img/metersphere-v2/api/导入选择api.png)
 
 ### 1.2 导入用例
 
@@ -34,8 +34,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导入用例](/img/metersphere-v2/api/导入复制引用.png)\{ width="900px" \}
-![!导入接口](/img/metersphere-v2/api/接口导入展示.png)\{ width="900px" \}
+![!导入用例](/img/metersphere-v2/api/导入复制引用.png)
+![!导入接口](/img/metersphere-v2/api/接口导入展示.png)
 
 ## 2 自定义请求
 
@@ -45,8 +45,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加自定义请求](/img/metersphere-v2/api/自定义请求.png)\{ width="900px" \}
-![!添加自定义请求](/img/metersphere-v2/api/场景自定义请求.png)\{ width="900px" \}
+![!添加自定义请求](/img/metersphere-v2/api/自定义请求.png)
+![!添加自定义请求](/img/metersphere-v2/api/场景自定义请求.png)
 
 ## 3 自定义脚本
 
@@ -56,7 +56,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加自定义脚本](/img/metersphere-v2/api/场景自定义脚本.png)\{ width="900px" \}
+![!添加自定义脚本](/img/metersphere-v2/api/场景自定义脚本.png)
 
 ## 4 场景导入
 
@@ -69,8 +69,8 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!场景导入](/img/metersphere-v2/api/场景导入.png)\{ width="900px" \}
-![!场景导入](/img/metersphere-v2/api/列表场景导入.png)\{ width="900px" \}
+![!场景导入](/img/metersphere-v2/api/场景导入.png)
+![!场景导入](/img/metersphere-v2/api/列表场景导入.png)
 
 ## 5 条件控制器
 
@@ -80,7 +80,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加条件控制器](/img/metersphere-v2/api/条件控制器使用.png)\{ width="900px" \}
+![!添加条件控制器](/img/metersphere-v2/api/条件控制器使用.png)
 
 ## 6 循环控制器
 
@@ -90,7 +90,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!添加循环控制器](/img/metersphere-v2/api/循环控制器.png)\{ width="900px" \}
+![!添加循环控制器](/img/metersphere-v2/api/循环控制器.png)
 
 ### 6.1 次数循环
 
@@ -104,15 +104,15 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!次数循环](/img/metersphere-v2/api/次数循环1.png)\{ width="900px" \}
+![!次数循环](/img/metersphere-v2/api/次数循环1.png)
 
 :::note[示例]
 
 开启【成功后继续循环】，循环总共执行了 5 次。
-![!开启成功后继续循环](/img/metersphere-v2/api/开启成功循环.png)\{ width="900px" \}
+![!开启成功后继续循环](/img/metersphere-v2/api/开启成功循环.png)
 
 关闭【成功后继续循环】，由于循环下的请求第一次便执行成功，循环仅执行了 1 次。
-![!关闭成功后继续循环](/img/metersphere-v2/api/关闭成功循环.png)\{ width="900px" \}
+![!关闭成功后继续循环](/img/metersphere-v2/api/关闭成功循环.png)
 
 :::
 
@@ -128,18 +128,18 @@ ForEach 循环一般配合列表变量使用，例如存在 `ID_1`，`ID_2`，`I
 
 :::
 
-![!ForEach循环](/img/metersphere-v2/api/foreach.png)\{ width="900px" \}
+![!ForEach循环](/img/metersphere-v2/api/foreach.png)
 
 :::note[示例]
 
 在场景变量中设置列表变量 id，列表值为`1`，`2`，`3`。
-![!ForEach循环](/img/metersphere-v2/api/添加变量.png)\{ width="900px" \}
+![!ForEach循环](/img/metersphere-v2/api/添加变量.png)
 
 遍历场景变量中的列表变量，在【前置脚本】中打印列表变量中的每个值。
-![!ForEach循环](/img/metersphere-v2/api/设置fe循环条件.png)\{ width="900px" \}
+![!ForEach循环](/img/metersphere-v2/api/设置fe循环条件.png)
 
 循环次数与列表长度相同，且输出列表变量中的每个值。
-![!ForEach循环](/img/metersphere-v2/api/循环结果.png)\{ width="900px" \}
+![!ForEach循环](/img/metersphere-v2/api/循环结果.png)
 
 :::
 
@@ -156,18 +156,18 @@ While 循环更为灵活，当配置的条件满足时循环会一直进行。
 
 :::
 
-![!While循环](/img/metersphere-v2/api/While循环.png)\{ width="900px" \}
+![!While循环](/img/metersphere-v2/api/While循环.png)
 
 :::note[示例]
 
   在场景变量中设置常量变量 NUM，值为5。
- ![!While循环](/img/metersphere-v2/api/While循环设置变量.png)\{ width="900px" \}
+ ![!While循环](/img/metersphere-v2/api/While循环设置变量.png)
 
  设置 While循环的条件，在前置脚本获取变量值并更改变量值
- ![!While循环](/img/metersphere-v2/api/While循环更改变量.png)\{ width="900px" \}
+ ![!While循环](/img/metersphere-v2/api/While循环更改变量.png)
 
  每次循环修改的值在控制台进行打印
- ![!While循环](/img/metersphere-v2/api/While循环打印变量.png)\{ width="900px" \}
+ ![!While循环](/img/metersphere-v2/api/While循环打印变量.png)
 
 :::
 
@@ -179,7 +179,7 @@ While 循环更为灵活，当配置的条件满足时循环会一直进行。
 
 :::
 
-![!添加等待控制器](/img/metersphere-v2/api/添加等待控制器.png)\{ width="900px" \}
+![!添加等待控制器](/img/metersphere-v2/api/添加等待控制器.png)
 
 ## 8 事务控制器
 
@@ -189,7 +189,7 @@ While 循环更为灵活，当配置的条件满足时循环会一直进行。
 
 :::
 
-![!事务控制器](/img/metersphere-v2/api/事务控制器.png)\{ width="900px" \}
+![!事务控制器](/img/metersphere-v2/api/事务控制器.png)
 
 ## 9 前置脚本
 

@@ -11,7 +11,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量开/关定时任务](/img/metersphere-v2/track/批量开关定时任务.png)\{ width="900px" \}
+![!批量开/关定时任务](/img/metersphere-v2/track/批量开关定时任务.png)
 
 ## 2 批量执行
 
@@ -21,7 +21,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量开/关定时任务](/img/metersphere-v2/track/批量执行.png)\{ width="900px" \}
+![!批量开/关定时任务](/img/metersphere-v2/track/批量执行.png)
 
 ## 3 批量删除
 
@@ -31,4 +31,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!批量开/关定时任务](/img/metersphere-v2/track/批量删除.png)\{ width="900px" \}
+![!批量开/关定时任务](/img/metersphere-v2/track/批量删除.png)

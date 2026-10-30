@@ -9,7 +9,7 @@ MeterSphere v2.4 版本实现了服务集成的插件化，目前已经支持禅
 
 :::
 
-![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_1.png)\{ width="900px" \}
+![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_1.png)
 
 :::note
 
@@ -17,7 +17,7 @@ MeterSphere v2.4 版本实现了服务集成的插件化，目前已经支持禅
 
 :::
 
-![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_3.png)\{ width="900px" \}
+![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_3.png)
 
 :::note
 
@@ -25,4 +25,4 @@ MeterSphere v2.4 版本实现了服务集成的插件化，目前已经支持禅
 
 :::
 
-![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_4.png)\{ width="900px" \}
+![录制](/img/metersphere-v2/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_4.png)

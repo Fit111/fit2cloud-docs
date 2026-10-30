@@ -15,7 +15,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 
 :::
 
-![!产品定位](/img/metersphere-v2/产品定位.png)\{ width="900px" \}
+![!产品定位](/img/metersphere-v2/产品定位.png)
 
 ## 1 产品优势
 
@@ -42,7 +42,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 
 ## 3 界面展示
 
-![!界面说明2](/img/metersphere-v2/api/接口测试首页.png)\{ width="900px" \}
+![!界面说明2](/img/metersphere-v2/api/接口测试首页.png)
 
 ## 4 了解更多
 

@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![切换](/img/metersphere-v2/user_manual/my_desk/todo/todo_2.png)\{ width="900px" \}
+![切换](/img/metersphere-v2/user_manual/my_desk/todo/todo_2.png)
 
 ## 1 待完成
 
@@ -19,7 +19,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_7.png)\{ width="900px" \}
+![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_7.png)
 
 ## 2 待更新
 
@@ -35,7 +35,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_4.png)\{ width="900px" \}
+![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_4.png)
 
 :::note
 
@@ -43,6 +43,6 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_5.png)\{ width="900px" \}
+![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_5.png)
 
-![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_6.png)\{ width="900px" \}
+![跳转](/img/metersphere-v2/user_manual/my_desk/todo/todo_6.png)

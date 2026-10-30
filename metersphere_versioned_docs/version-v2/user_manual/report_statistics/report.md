@@ -18,7 +18,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建报告](/img/metersphere-v2/report_statistics/创建报告_1.png)\{ width="900px" \}
+![!创建报告](/img/metersphere-v2/report_statistics/创建报告_1.png)
 
 :::note
 
@@ -26,7 +26,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建报告](/img/metersphere-v2/report_statistics/创建报告_2.png)\{ width="900px" \}
+![!创建报告](/img/metersphere-v2/report_statistics/创建报告_2.png)
 
 :::note
 
@@ -34,9 +34,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!创建报告](/img/metersphere-v2/report_statistics/创建报告_3.png)\{ width="900px" \}
+![!创建报告](/img/metersphere-v2/report_statistics/创建报告_3.png)
 
-![!创建报告](/img/metersphere-v2/report_statistics/创建报告_4.png)\{ width="900px" \}
+![!创建报告](/img/metersphere-v2/report_statistics/创建报告_4.png)
 
 - 预览报告
 
@@ -46,7 +46,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!预览报告](/img/metersphere-v2/report_statistics/预览.png)\{ width="900px" \}
+![!预览报告](/img/metersphere-v2/report_statistics/预览.png)
 
 - 复制报告
 
@@ -56,7 +56,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!复制报告](/img/metersphere-v2/report_statistics/复制.png)\{ width="900px" \}
+![!复制报告](/img/metersphere-v2/report_statistics/复制.png)
 
 - 编辑报告
 
@@ -66,7 +66,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!编辑报告](/img/metersphere-v2/report_statistics/编辑报告.png)\{ width="900px" \}
+![!编辑报告](/img/metersphere-v2/report_statistics/编辑报告.png)
 
 - 删除报告
 
@@ -76,7 +76,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!删除报告](/img/metersphere-v2/report_statistics/测试报告_删除.png)\{ width="900px" \}
+![!删除报告](/img/metersphere-v2/report_statistics/测试报告_删除.png)
 
 - 定时发送
 
@@ -86,6 +86,6 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!定时发送报告](/img/metersphere-v2/report_statistics/定时任务.png)\{ width="900px" \}
+![!定时发送报告](/img/metersphere-v2/report_statistics/定时任务.png)
 
-![!定时发送报告](/img/metersphere-v2/report_statistics/定时任务配置.png)\{ width="900px" \}
+![!定时发送报告](/img/metersphere-v2/report_statistics/定时任务配置.png)

@@ -17,9 +17,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!查看测试报告](/img/metersphere-v2/api/查看报告1.png)\{ width="900px" \}
-![!查看测试报告](/img/metersphere-v2/api/查看报告详情.png)\{ width="900px" \}
-![!重命名测试报告](/img/metersphere-v2/api/修改报告名称.png)\{ width="900px" \}
+![!查看测试报告](/img/metersphere-v2/api/查看报告1.png)
+![!查看测试报告](/img/metersphere-v2/api/查看报告详情.png)
+![!重命名测试报告](/img/metersphere-v2/api/修改报告名称.png)
 
 ## 2 导出和分享测试报告
 
@@ -29,7 +29,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!导出测试报告](/img/metersphere-v2/api/分享报告.png)\{ width="900px" \}
+![!导出测试报告](/img/metersphere-v2/api/分享报告.png)
 
 ## 3 删除测试报告
 
@@ -39,7 +39,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!删除测试报告](/img/metersphere-v2/api/删除报告.png)\{ width="900px" \}
+![!删除测试报告](/img/metersphere-v2/api/删除报告.png)
 
 :::note
 
@@ -48,4 +48,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试首页](/img/metersphere-v2/api/批量删除报告.png)\{ width="900px" \}
+![!接口测试首页](/img/metersphere-v2/api/批量删除报告.png)

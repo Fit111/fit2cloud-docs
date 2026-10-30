@@ -212,7 +212,7 @@ database: 1
 
 :::
 
-![server-start](/img/metersphere-v2/dev/project_package.png)\{ width="900px" \}
+![server-start](/img/metersphere-v2/dev/project_package.png)
 
 :::note
 
@@ -221,8 +221,8 @@ database: 1
 
 :::
 
-![server-start](/img/metersphere-v2/dev/eureka-gateway-start.png)\{ width="900px" \}<br />
-![server-start](/img/metersphere-v2/dev/eureka_gateway_success.png)\{ width="900px" \}
+![server-start](/img/metersphere-v2/dev/eureka-gateway-start.png)<br />
+![server-start](/img/metersphere-v2/dev/eureka_gateway_success.png)
 
 :::note
 
@@ -230,7 +230,7 @@ database: 1
 
 :::
 
-![server-start](/img/metersphere-v2/dev/gateway_success.png)\{ width="900px" \}
+![server-start](/img/metersphere-v2/dev/gateway_success.png)
 
 :::note
 

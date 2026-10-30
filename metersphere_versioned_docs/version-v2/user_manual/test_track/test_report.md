@@ -9,7 +9,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!测试报告](/img/metersphere-v2/track/测试报告.png)\{ width="900px" \}
+![!测试报告](/img/metersphere-v2/track/测试报告.png)
 
 ## 1 报告详情介绍
 
@@ -27,9 +27,9 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报告总结](/img/metersphere-v2/track/报告总结.png)\{ width="900px" \}
+![!报告总结](/img/metersphere-v2/track/报告总结.png)
 
-![!报告总结](/img/metersphere-v2/track/报告总结_1.png)\{ width="900px" \}
+![!报告总结](/img/metersphere-v2/track/报告总结_1.png)
 
 ### 1.2 功能测试部分
 
@@ -40,7 +40,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!功能测试](/img/metersphere-v2/track/功能测试1.png)\{ width="900px" \}
+![!功能测试](/img/metersphere-v2/track/功能测试1.png)
 
 :::note
 
@@ -48,7 +48,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!功能测试](/img/metersphere-v2/track/功能测试2.png)\{ width="900px" \}
+![!功能测试](/img/metersphere-v2/track/功能测试2.png)
 
 :::note
 
@@ -56,7 +56,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!功能测试](/img/metersphere-v2/track/功能测试3.png)\{ width="900px" \}
+![!功能测试](/img/metersphere-v2/track/功能测试3.png)
 
 ### 1.3 接口测试部分
 
@@ -67,7 +67,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试](/img/metersphere-v2/track/接口测试1.png)\{ width="900px" \}
+![!接口测试](/img/metersphere-v2/track/接口测试1.png)
 
 :::note
 
@@ -76,7 +76,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试](/img/metersphere-v2/track/接口测试2.png)\{ width="900px" \}
+![!接口测试](/img/metersphere-v2/track/接口测试2.png)
 
 :::note
 
@@ -84,7 +84,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试](/img/metersphere-v2/track/接口测试4.png)\{ width="900px" \}
+![!接口测试](/img/metersphere-v2/track/接口测试4.png)
 
 :::note
 
@@ -92,7 +92,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试](/img/metersphere-v2/track/接口测试3.png)\{ width="900px" \}
+![!接口测试](/img/metersphere-v2/track/接口测试3.png)
 
 ### 1.4 UI 测试部分
 
@@ -102,7 +102,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!UI测试](/img/metersphere-v2/track/UI测试部分.png)\{ width="900px" \}
+![!UI测试](/img/metersphere-v2/track/UI测试部分.png)
 
 :::note
 
@@ -110,7 +110,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!接口测试](/img/metersphere-v2/track/UI测试详细信息.png)\{ width="900px" \}
+![!接口测试](/img/metersphere-v2/track/UI测试详细信息.png)
 
 ### 1.5 性能测试部分
 
@@ -121,7 +121,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试](/img/metersphere-v2/track/性能测试1.png)\{ width="900px" \}
+![!性能测试](/img/metersphere-v2/track/性能测试1.png)
 
 :::note
 
@@ -130,7 +130,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!性能测试](/img/metersphere-v2/track/性能测试2.png)\{ width="900px" \}
+![!性能测试](/img/metersphere-v2/track/性能测试2.png)
 
 ## 2 报告目录
 
@@ -141,7 +141,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报告目录](/img/metersphere-v2/track/报告目录1.png)\{ width="900px" \}
+![!报告目录](/img/metersphere-v2/track/报告目录1.png)
 
 ## 3 报告免登陆分享
 
@@ -151,7 +151,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报告分享](/img/metersphere-v2/track/报告分享1.png)\{ width="900px" \}
+![!报告分享](/img/metersphere-v2/track/报告分享1.png)
 
 :::note
 
@@ -159,7 +159,7 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报告分享](/img/metersphere-v2/track/报告分享2.png)\{ width="900px" \}
+![!报告分享](/img/metersphere-v2/track/报告分享2.png)
 
 ## 4 报告导出
 
@@ -169,4 +169,4 @@ description: "MeterSphere 一站式开源持续测试平台官方文档。MeterS
 
 :::
 
-![!报告导出](/img/metersphere-v2/track/报告导出.png)\{ width="900px" \}
+![!报告导出](/img/metersphere-v2/track/报告导出.png)
