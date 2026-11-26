@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Prepare a Docusaurus documentation directory for MkDocs PDF rendering."""
 
 from __future__ import annotations
 
@@ -13,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable
 from urllib.parse import unquote, urlparse
@@ -24,6 +24,11 @@ try:
 except ImportError:  # Dependency is installed by the composite action.
     Image = None
 
+
+
+def _notify(message: str) -> None:
+    """Emit a GitHub Actions ::notice:: log line so progress is visible live."""
+    print(f'::notice::{message}', flush=True)
 
 PRODUCT_TITLES = {
     '1panel': '1Panel 文档',
@@ -68,6 +73,10 @@ HTML_IMAGE_RE = re.compile(
 )
 FRONT_MATTER_RE = re.compile(r'\A---\s*\n(.*?)\n---\s*(?:\n|\Z)', re.DOTALL)
 JSX_COMMENT_RE = re.compile(r'\{/\*.*?\*/\}', re.DOTALL)
+JSX_STYLE_RE = re.compile(
+    r'style\s*=\s*\{\{(?P<body>.*?)\}\}',
+    re.IGNORECASE | re.DOTALL,
+)
 MDX_LINK_RE = re.compile(
     r'<Link\b(?P<attrs>[^>]*?\bto\s*=\s*["\'](?P<href>[^"\']+)["\'][^>]*?)>'
     r'(?P<inner>.*?)</Link>',
@@ -215,13 +224,36 @@ def _outside_fence_lines(text: str) -> list[str]:
     return result
 
 
+def _jsx_style_to_css(body: str) -> str:
+    """Turn a Docusaurus style={{...}} object literal into valid CSS."""
+    props: list[str] = []
+    for part in body.split(','):
+        if ':' not in part:
+            continue
+        key, _, value = part.partition(':')
+        key = key.strip()
+        value = value.strip().strip('"\'')
+        if not key or not value:
+            continue
+        css_key = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', key).lower()
+        props.append(f'{css_key}:{value}')
+    return '; '.join(props)
+
+
+def _normalize_jsx_style(text: str) -> str:
+    def _repl(match: re.Match[str]) -> str:
+        css = _jsx_style_to_css(match.group('body'))
+        return f'style="{css}"' if css else ''
+    return _apply_outside_fences(text, lambda s: JSX_STYLE_RE.sub(_repl, s))
+
+
 def degrade_mdx(text: str) -> str:
     """Best-effort downgrade of JSX-only syntax that raw HTML cannot render."""
     def _link(match: re.Match[str]) -> str:
         return f'<a href="{match.group("href")}">{match.group("inner")}</a>'
 
     text = JSX_COMMENT_RE.sub('', text)
-    text = _apply_outside_fences(text, lambda s: MDX_LINK_RE.sub(_link, s))
+    text = _normalize_jsx_style(text)
     return text
 
 
@@ -308,6 +340,8 @@ class AssetCollector:
         self.by_source: dict[Path, str] = {}
         self.missing: set[Path] = set()
         self.converted: list[Path] = []
+        # librsvg 可把 SVG 连同中文文本一起渲染成位图；Pillow 无法读取 SVG。
+        self.rsvg = shutil.which('rsvg-convert')
 
     def resolve(self, token: str, markdown_file: Path) -> Path | None:
         raw = _strip_target_token(token)
@@ -346,15 +380,31 @@ class AssetCollector:
 
         digest = hashlib.sha1(str(source).encode('utf-8')).hexdigest()
         suffix = source.suffix.lower()
+        is_svg = suffix == '.svg'
         convert_format = suffix in {'.gif', '.webp'}
         should_resize = self.max_width > 0 and Image is not None
         output_name = _safe_asset_name(source, digest)
-        if convert_format:
+        if convert_format or is_svg:
             output_name = str(Path(output_name).with_suffix('.png'))
 
         output_path = self.assets_output / output_name
         copied = False
-        if Image is not None and (convert_format or should_resize):
+        if is_svg and self.rsvg:
+            try:
+                args = [self.rsvg, '-f', 'png']
+                target_width = self._svg_target_width(source)
+                if target_width:
+                    args += ['-w', str(target_width)]
+                args += ['-o', str(output_path), str(source)]
+                subprocess.run(args, check=True, capture_output=True, text=True)
+                copied = True
+                self.converted.append(source)
+            except subprocess.CalledProcessError as exc:
+                detail = (exc.stderr or '').strip() or str(exc)
+                print(f'::warning file={source}::SVG 转 PNG 失败，将复制原文件: {detail}')
+            except Exception as exc:
+                print(f'::warning file={source}::SVG 转 PNG 失败，将复制原文件: {exc}')
+        elif Image is not None and not is_svg and (convert_format or should_resize):
             try:
                 with Image.open(source) as image:
                     if getattr(image, 'is_animated', False):
@@ -375,6 +425,27 @@ class AssetCollector:
             shutil.copy2(source, output_path)
         self.by_source[source] = output_name
         return output_name
+
+    def _svg_target_width(self, source: Path) -> int | None:
+        """Pick a crisp PNG width for an SVG, capped by max_width."""
+        if self.max_width <= 0:
+            return None
+        try:
+            head = source.read_text(encoding='utf-8', errors='ignore')[:4000]
+        except OSError:
+            return self.max_width
+        match = re.search(r'\bwidth\s*=\s*["\']\s*([0-9.]+)', head)
+        if match:
+            intrinsic = float(match.group(1))
+        else:
+            match = re.search(
+                r'\bviewBox\s*=\s*["\']\s*[-0-9.]+\s+[-0-9.]+\s+([0-9.]+)', head
+            )
+            if not match:
+                return self.max_width
+            intrinsic = float(match.group(1))
+        # 2x 渲染保证打印清晰度，再用 max_width 封顶。
+        return max(1, min(self.max_width, int(round(intrinsic * 2))))
 
 
 def rewrite_images(
@@ -658,6 +729,8 @@ def write_mkdocs_config(
     title: str,
     nav: list[dict[str, Any]],
     toc_depth: int,
+    cover_subtitle: str = '',
+    brand: str = '',
 ) -> None:
     config: dict[str, Any] = {
         'site_name': title,
@@ -665,7 +738,7 @@ def write_mkdocs_config(
         'copyright': 'Copyright © 杭州飞致云信息科技有限公司',
         'docs_dir': 'docs',
         'site_dir': 'site',
-        'use_directory_urls': True,
+        'use_directory_urls': False,
         'theme': {
             'name': 'material',
             'language': 'zh',
@@ -694,7 +767,8 @@ def write_mkdocs_config(
                 'to-pdf': {
                     'cover': True,
                     'cover_title': title,
-                    'cover_subtitle': 'GitHub Actions 自动生成',
+                    'cover_subtitle': cover_subtitle,
+                    'brand': brand,
                     'toc_title': '目录',
                     'toc_level': toc_depth,
                     'ordered_chapter_level': 3,
@@ -727,6 +801,7 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
 
     work_dir = Path(args.work_dir).resolve()
     _clean_work_dir(work_dir, repo_root)
+    t0 = time.monotonic()
     docs_output = work_dir / 'docs'
     docs_output.mkdir(parents=True, exist_ok=True)
 
@@ -771,9 +846,12 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
     asset_collector = AssetCollector(repo_root, docs_root, docs_output, args.image_max_width)
     link_rewriter = LinkRewriter(repo_root, docs_root, copied)
 
-    for source in source_files:
+    total_files = len(source_files)
+    for index, source in enumerate(source_files, start=1):
         source = source.resolve()
         output = copied[source]
+        if index % 25 == 0 or index == total_files:
+            _notify(f'处理中 {index}/{total_files}: {source.relative_to(docs_root).as_posix()}')
         text = source.read_text(encoding='utf-8')
         if source.suffix.lower() == '.mdx':
             text = _strip_mdx_module_lines(text)
@@ -820,7 +898,11 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         raise PrepareError('生成的 MkDocs 导航为空')
 
     config_path = work_dir / 'mkdocs.yml'
-    write_mkdocs_config(config_path, title, nav, args.toc_depth)
+    brand = re.sub(r'\s*文[档檔]\s*$', '', title).strip() or title.strip()
+    write_mkdocs_config(
+        config_path, title, nav, toc_depth=args.toc_depth,
+        cover_subtitle=args.cover_subtitle, brand=brand,
+    )
 
     if jsx_fallback_files:
         print(
@@ -864,6 +946,8 @@ def prepare(args: argparse.Namespace) -> dict[str, Any]:
         f'准备完成: {len(source_files)} 个 Markdown，'
         f'{metadata["nav_entries"]} 个导航页面，{metadata["assets_copied"]} 个资源'
     )
+    _notify(f'资源统计: 转换 {len(asset_collector.converted)} 个，复制 {len(asset_collector.by_source)} 个，缺失 {len(asset_collector.missing)} 个')
+    _notify(f'prepare 阶段耗时 {time.monotonic() - t0:.1f} 秒')
     return metadata
 
 
@@ -886,6 +970,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument('--output-name', default='')
     parser.add_argument('--toc-depth', type=int, default=3)
     parser.add_argument('--image-max-width', type=int, default=1600)
+    parser.add_argument('--cover-subtitle', default='')
     parser.add_argument(
         '--exclude',
         default='',

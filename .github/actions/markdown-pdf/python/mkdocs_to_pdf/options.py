@@ -23,6 +23,7 @@ class Options(object):
 
         ('author', config_options.Type(str, default=None)),
         ('copyright', config_options.Type(str, default=None)),
+        ('brand', config_options.Type(str, default=None)),
 
         ('cover', config_options.Type(bool, default=True)),
         ('back_cover', config_options.Type(bool, default=False)),
@@ -73,6 +74,14 @@ class Options(object):
         self._copyright = local_config['copyright']
         if not self._copyright:
             self._copyright = config['copyright']
+
+        # Brand (short product name shown in the running page header).
+        brand = local_config['brand']
+        if not brand:
+            brand = self._cover_title or ''
+            if '\u6587\u6863' in brand:
+                brand = brand.split('\u6587\u6863')[0].strip()
+        self._brand = brand or (config['site_name'] or '')
 
         # Cover
         self.cover = local_config['cover']
@@ -164,6 +173,10 @@ class Options(object):
     @property
     def cover_logo(self) -> str:
         return self._cover_logo
+
+    @property
+    def brand(self) -> str:
+        return self._brand
 
     @property
     def logger(self) -> logging:

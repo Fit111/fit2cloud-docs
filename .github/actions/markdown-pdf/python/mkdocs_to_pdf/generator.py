@@ -216,9 +216,14 @@ class Generator(object):
                 cover_elements.append(child)
 
         content_articles = []
+        front_cover_article = root_soup.find('article', id='doc-cover')
+        back_cover_article = root_soup.find('article', id='doc-back_cover')
         for child in list(root_soup.body.contents):
-            if hasattr(child, 'name') and child.name == 'article' and child.get('id') != 'doc-toc':
-                content_articles.append(child)
+            if not (hasattr(child, 'name') and child.name == 'article'):
+                continue
+            if child.get('id') in ('doc-toc', 'doc-cover', 'doc-back_cover'):
+                continue
+            content_articles.append(child)
 
         self.logger.info(f'Found {len(cover_elements)} cover elements, {len(content_articles)} content articles')
 
@@ -230,6 +235,8 @@ class Generator(object):
         cover_toc_soup = self._create_chunk_soup()
         for cover_el in cover_elements:
             cover_toc_soup.body.append(clone_element(cover_el))
+        if front_cover_article is not None:
+            cover_toc_soup.body.append(clone_element(front_cover_article))
         if toc_article:
             cover_toc_soup.body.append(clone_element(toc_article))
 
@@ -266,6 +273,19 @@ class Generator(object):
             pages = self._render_chunk_pdf(html_string, chunk_path)
             chunk_files.append(chunk_path)
             self.logger.info(f'Chunk {chunk_idx + 1}/{len(chunks)} rendered: {pages} pages -> {chunk_path}')
+
+        if back_cover_article is not None:
+            back_soup = self._create_chunk_soup()
+            back_soup.body.append(clone_element(back_cover_article))
+            if self._options.relaxed_js:
+                back_html = str(back_soup)
+            else:
+                back_html = self._render_js(back_soup)
+            back_html = self._options.hook.pre_pdf_render(back_html)
+            back_path = os.path.join(temp_dir, 'back_cover.pdf')
+            pages = self._render_chunk_pdf(back_html, back_path)
+            chunk_files.append(back_path)
+            self.logger.info(f'Back cover rendered: {pages} pages -> {back_path}')
 
         self.logger.info(f'Merging {len(chunk_files)} chunks into final PDF...')
 
