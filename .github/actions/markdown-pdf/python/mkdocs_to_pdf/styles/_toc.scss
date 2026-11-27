@@ -47,10 +47,8 @@ article#doc-toc {
         padding-right: 0.5em;
       }
 
-      &::after {
-        // not support leader yet.
+      &>.pdf-toc-page {
         float: right;
-        content: target-counter(attr(href), page);
       }
     }
   }

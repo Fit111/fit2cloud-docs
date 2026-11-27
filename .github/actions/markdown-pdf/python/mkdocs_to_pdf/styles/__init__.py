@@ -32,6 +32,10 @@ def style_for_print(options: Options) -> str:
         string-set: chapter content();
     }}
     """
+    level = getattr(options, 'toc_level', 3) or 3
+    if level < 6:
+        hidden = ', '.join(f'h{n}' for n in range(int(level) + 1, 7))
+        scss += f'\n{hidden} {{ bookmark-level: none; }}\n'
     css = sass.compile(string=scss)
 
     base_path = os.path.abspath(os.path.dirname(__file__))

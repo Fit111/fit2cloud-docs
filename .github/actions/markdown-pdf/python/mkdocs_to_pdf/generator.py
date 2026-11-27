@@ -10,9 +10,18 @@ from datetime import datetime
 from bs4 import BeautifulSoup, PageElement
 from weasyprint import HTML, urls
 from PyPDF2 import PdfReader, PdfWriter
+from PyPDF2.generic import AnnotationBuilder
 
 from .cover import make_cover
 from .options import Options
+from .pdf_nav import (
+    anchor_positions,
+    css_rect_to_pdf,
+    fill_toc_page_numbers,
+    inject_style,
+    internal_link_rects,
+    page_start_css,
+)
 from .preprocessor import get_combined as prep_combined
 from .styles import style_for_print
 from .themes import generic as generic_theme
@@ -148,25 +157,30 @@ class Generator(object):
 
         return soup
 
-    def _render_chunk_pdf(self, html_string: str, chunk_path: str) -> int:
+    def _render_chunk_pdf(self, html_string: str, chunk_path: str, start_page: int = 1):
+        """Render one chunk. Returns the WeasyPrint document, or None for RelaxedJS."""
+        html_string = inject_style(html_string, page_start_css(start_page))
         max_retries = 3
         for attempt in range(max_retries):
             try:
                 if self._options.relaxed_js:
                     self._options.relaxed_js.write_pdf(html_string, chunk_path)
-                    return 0
-                else:
-                    html = HTML(string=html_string)
-                    render = html.render()
-                    page_count = len(render.pages)
-                    render.write_pdf(chunk_path)
-                    return page_count
+                    return None
+                html = HTML(string=html_string)
+                document = html.render()
+                document.write_pdf(chunk_path)
+                return document
             except Exception as e:
                 self.logger.error(f'Chunk rendering failed (attempt {attempt + 1}/{max_retries}): {e}')
                 if attempt < max_retries - 1:
                     time.sleep(2)
                 else:
                     raise
+
+    def _page_count(self, document, chunk_path: str) -> int:
+        if document is not None:
+            return len(document.pages)
+        return len(PdfReader(chunk_path).pages)
 
     def on_post_build(self, config, output_path):
         abs_pdf_path = os.path.join(config['site_dir'], output_path)
@@ -230,26 +244,30 @@ class Generator(object):
         temp_dir = os.path.join(config['site_dir'], 'pdf_chunks')
         os.makedirs(temp_dir, exist_ok=True)
 
+        def chunk_html(soup) -> str:
+            if self._options.relaxed_js:
+                html_string = str(soup)
+            else:
+                html_string = self._render_js(soup)
+            return self._options.hook.pre_pdf_render(html_string)
+
+        def front_soup():
+            soup = self._create_chunk_soup()
+            for cover_el in cover_elements:
+                soup.body.append(clone_element(cover_el))
+            if front_cover_article is not None:
+                soup.body.append(clone_element(front_cover_article))
+            if toc_article is not None:
+                soup.body.append(clone_element(toc_article))
+            return soup
+
         chunk_files = []
-
-        cover_toc_soup = self._create_chunk_soup()
-        for cover_el in cover_elements:
-            cover_toc_soup.body.append(clone_element(cover_el))
-        if front_cover_article is not None:
-            cover_toc_soup.body.append(clone_element(front_cover_article))
-        if toc_article:
-            cover_toc_soup.body.append(clone_element(toc_article))
-
-        if self._options.relaxed_js:
-            cover_toc_html = str(cover_toc_soup)
-        else:
-            cover_toc_html = self._render_js(cover_toc_soup)
-        cover_toc_html = self._options.hook.pre_pdf_render(cover_toc_html)
-
         cover_toc_path = os.path.join(temp_dir, 'cover_toc.pdf')
-        pages = self._render_chunk_pdf(cover_toc_html, cover_toc_path)
-        chunk_files.append(cover_toc_path)
-        self.logger.info(f'Cover+TOC rendered: {pages} pages -> {cover_toc_path}')
+        # Page count of the front matter is needed before the body is numbered.
+        # Filling in the TOC page numbers does not change how many lines it uses.
+        cover_doc = self._render_chunk_pdf(chunk_html(front_soup()), cover_toc_path, start_page=1)
+        front_pages = self._page_count(cover_doc, cover_toc_path)
+        self.logger.info(f'Cover+TOC measured: {front_pages} pages')
 
         chunk_size = 5
         chunks = []
@@ -258,42 +276,91 @@ class Generator(object):
 
         self.logger.info(f'Divided {len(content_articles)} articles into {len(chunks)} chunks')
 
+        content_paths = []
+        content_anchor_at = {}
+        next_printed = front_pages + 1
+        local_base = 0
         for chunk_idx, chunk in enumerate(chunks):
             chunk_soup = self._create_chunk_soup()
             for article in chunk:
                 chunk_soup.body.append(clone_element(article))
 
-            if self._options.relaxed_js:
-                html_string = str(chunk_soup)
-            else:
-                html_string = self._render_js(chunk_soup)
-            html_string = self._options.hook.pre_pdf_render(html_string)
-
             chunk_path = os.path.join(temp_dir, f'chunk_{chunk_idx + 1:03d}.pdf')
-            pages = self._render_chunk_pdf(html_string, chunk_path)
+            document = self._render_chunk_pdf(
+                chunk_html(chunk_soup), chunk_path, start_page=next_printed)
+            pages = self._page_count(document, chunk_path)
+            if document is not None:
+                for name, local in anchor_positions(document, local_base).items():
+                    content_anchor_at.setdefault(name, local)
+            content_paths.append(chunk_path)
             chunk_files.append(chunk_path)
-            self.logger.info(f'Chunk {chunk_idx + 1}/{len(chunks)} rendered: {pages} pages -> {chunk_path}')
+            next_printed += pages
+            local_base += pages
+            self.logger.info(
+                f'Chunk {chunk_idx + 1}/{len(chunks)} rendered: {pages} pages -> {chunk_path}')
 
+        printed_pages = {
+            name: front_pages + local + 1
+            for name, local in content_anchor_at.items()
+        }
+        filled, total = fill_toc_page_numbers(toc_article, printed_pages)
+        self.logger.info(f'TOC page numbers filled: {filled}/{total}')
+        if total and filled == 0:
+            self.logger.warning(
+                'TOC entries did not match any heading anchor, so page numbers were left blank.')
+
+        cover_doc = self._render_chunk_pdf(chunk_html(front_soup()), cover_toc_path, start_page=1)
+        second_front = self._page_count(cover_doc, cover_toc_path)
+        chunk_files.append(cover_toc_path)
+        self.logger.info(f'Cover+TOC rendered: {second_front} pages -> {cover_toc_path}')
+        if second_front != front_pages:
+            self.logger.warning(
+                f'Cover/TOC grew from {front_pages} to {second_front} pages after page numbers were added. '
+                'Footer numbers in the body were set from the first count.')
+
+        back_path = None
         if back_cover_article is not None:
             back_soup = self._create_chunk_soup()
             back_soup.body.append(clone_element(back_cover_article))
-            if self._options.relaxed_js:
-                back_html = str(back_soup)
-            else:
-                back_html = self._render_js(back_soup)
-            back_html = self._options.hook.pre_pdf_render(back_html)
             back_path = os.path.join(temp_dir, 'back_cover.pdf')
-            pages = self._render_chunk_pdf(back_html, back_path)
+            back_doc = self._render_chunk_pdf(
+                chunk_html(back_soup), back_path, start_page=next_printed)
+            pages = self._page_count(back_doc, back_path)
             chunk_files.append(back_path)
             self.logger.info(f'Back cover rendered: {pages} pages -> {back_path}')
 
-        self.logger.info(f'Merging {len(chunk_files)} chunks into final PDF...')
+        self.logger.info(f'Merging {1 + len(content_paths) + (1 if back_path else 0)} chunks into final PDF...')
 
         final_merger = PdfWriter()
-        for chunk_file in chunk_files:
-            reader = PdfReader(chunk_file)
-            for page in reader.pages:
-                final_merger.add_page(page)
+        final_merger.append(cover_toc_path)
+        toc_index = 0
+        if cover_doc is not None:
+            for index, page in enumerate(cover_doc.pages):
+                if 'doc-toc' in page.anchors:
+                    toc_index = index
+                    break
+        final_merger.add_outline_item(self._options.toc_title or '目录', toc_index)
+        for chunk_path in content_paths:
+            # append keeps each chunk's heading bookmarks and shifts them
+            # onto the combined page numbers. add_page dropped those bookmarks.
+            final_merger.append(chunk_path)
+        if back_path is not None:
+            final_merger.append(back_path)
+
+        linked = 0
+        if cover_doc is not None:
+            for page_index, anchor, rect, height in internal_link_rects(cover_doc):
+                local = content_anchor_at.get(anchor)
+                if local is None:
+                    continue
+                destination = second_front + local
+                annotation = AnnotationBuilder.link(
+                    rect=css_rect_to_pdf(rect, height),
+                    target_page_index=destination,
+                )
+                final_merger.add_annotation(page_index, annotation)
+                linked += 1
+        self.logger.info(f'TOC links added: {linked}')
 
         with open(abs_pdf_path, 'wb') as f:
             final_merger.write(f)

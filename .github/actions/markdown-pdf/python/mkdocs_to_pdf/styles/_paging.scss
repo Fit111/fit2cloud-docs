@@ -70,7 +70,6 @@ h6 {
 }
 
 article {
-  page-break-before: right;
   min-height: 100vh;
   overflow: visible;
 
@@ -198,6 +197,11 @@ article {
   * + div.tabbed-set {
     page-break-before: avoid;
   }
+}
+
+/* 下一节从新的一页开始。不要用 right：那会为了凑奇数页再插入一整张空白页。 */
+article + article {
+  page-break-before: always;
 }
 
 section.two-columns {

@@ -1,20 +1,7 @@
-// Cover page
-// !!! :note: do not working with named @page ???
-@page :first {
-  @top-right {
-    content: normal;
-  }
-
-  @bottom-center {
-    content: normal;
-  }
-
-  @bottom-right {
-    content: normal;
-  }
-}
-
+// 封面单独用命名页。不要用 @page :first：正文是分块渲染的，
+// 每一块的第一页都会被当成 :first，章首页会丢掉页眉和页码。
 article#doc-cover {
+  page: cover;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -40,6 +27,7 @@ article#doc-cover {
     h1 {
       font-size: 36pt;
       line-height: 1.4;
+      bookmark-level: none;
     }
 
     h2 {
@@ -91,6 +79,28 @@ article#doc-back_cover {
         height: auto;
       }
     }
+  }
+}
+
+@page cover {
+  @top-left {
+    content: none;
+  }
+
+  @top-center {
+    content: none;
+  }
+
+  @top-right {
+    content: none;
+  }
+
+  @bottom-center {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
   }
 }
 
